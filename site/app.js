@@ -1020,7 +1020,16 @@
     var open = (got.key in MAP_OPEN) ? MAP_OPEN[got.key] : (!!openByDefault && wide);
     return '<div class="secmap' + (open ? ' on' : '') + '">' +
       '<button class="secmap-t" type="button" data-mapkey="' + esc(got.key) + '">' +
-      '<span class="sm-ico">&#9635;</span>' +
+      '<svg class="sm-ico" viewBox="0 0 30 22" fill="none" aria-hidden="true">' +
+      '<path d="M9 11C13 11 13 5 17 5" stroke="var(--saffron)" stroke-width="1.3"/>' +
+      '<path d="M9 11h8" stroke="var(--blue)" stroke-width="1.3"/>' +
+      '<path d="M9 11C13 11 13 17 17 17" stroke="var(--green)" stroke-width="1.3"/>' +
+      '<rect x="1" y="7.5" width="8" height="7" rx="2" fill="var(--bg-raise)" ' +
+      'stroke="var(--accent)" stroke-width="1.4"/>' +
+      '<rect x="17" y="2" width="12" height="6" rx="2" stroke="var(--saffron)" stroke-width="1.3"/>' +
+      '<rect x="17" y="8" width="12" height="6" rx="2" stroke="var(--blue)" stroke-width="1.3"/>' +
+      '<rect x="17" y="14" width="12" height="6" rx="2" stroke="var(--green)" stroke-width="1.3"/>' +
+      '</svg>' +
       '<span class="sm-l"><b class="sm-verb">' +
       (open ? 'Hide the' : 'Click here for the') + '</b> mind map on ' + esc(got.label) +
       '</span>' +

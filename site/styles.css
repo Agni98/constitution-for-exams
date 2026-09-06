@@ -226,15 +226,16 @@ p  { margin: 0 0 12px; }
   display: inline-flex; align-items: center; gap: 5px;
   font-size: 11px; font-weight: 600; padding: 2px 9px;
   border-radius: 999px; border: 1px solid transparent; white-space: nowrap;
-  /* A pill carrying a Part title can be longer than a phone is wide - Part XXII
-     is "Short Title, Commencement, Authoritative Text in Hindi and Repeals" -
-     and nowrap then pushes the whole page sideways. Let a long one wrap and
-     keep the pill shape by squaring its corners once it does. */
   max-width: 100%;
 }
-@media (max-width: 620px) {
-  .pill { white-space: normal; border-radius: 12px; text-align: left; }
-}
+/* The Part pill carries the whole Part title, and Part XXII's is "Short Title,
+   Commencement, Authoritative Text in Hindi and Repeals" - 420px of it. What
+   it has to fit inside is the reading column, which is narrow whenever both
+   left panels are open, so a viewport breakpoint is the wrong tool: it wraps
+   at any width rather than below one. The short pills beside it keep nowrap,
+   because they are short and reading "Forty-Second" over two lines is worse
+   than not wrapping at all. */
+.pill.grey { white-space: normal; border-radius: 12px; text-align: left; }
 .pill.grey  { background: var(--bg-sunk); color: var(--ink-faint); border-color: var(--line); }
 .pill.green { background: var(--green-soft); color: var(--green); }
 .pill.blue  { background: var(--blue-soft); color: var(--blue); }

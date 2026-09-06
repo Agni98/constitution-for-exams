@@ -184,25 +184,29 @@
 /* ---------- the section map, folded to one line ---------- */
 
 .secmap { margin: 14px 0 18px; }
-/* Deliberately not a bordered pale box: that reads as a text field. This is a
-   line of type in the accent colour with a rule under it, which reads as a
-   thing to click. */
+/* Still not a pale bordered box - that is what made it read as a text field.
+   A tinted band carrying a drawing and accent type is a callout, and it has
+   enough presence to be noticed without pretending to be an input. */
 .secmap-t {
-  display: flex; align-items: center; gap: 9px; width: 100%;
+  display: flex; align-items: center; gap: 11px; width: 100%;
   font: inherit; text-align: left; cursor: pointer;
-  padding: 9px 2px;
-  border: 0; border-bottom: 1px dashed color-mix(in srgb, var(--accent) 45%, transparent);
-  border-radius: 0;
-  background: transparent; color: var(--accent);
+  padding: 10px 14px;
+  border: 0; border-radius: var(--radius);
+  background: var(--accent-soft); color: var(--accent);
 }
-.secmap-t:hover { border-bottom-style: solid; }
+.secmap-t:hover { background: color-mix(in srgb, var(--accent) 16%, transparent); }
 .secmap-t:hover .sm-l { text-decoration: underline; text-underline-offset: 3px; }
-.secmap.on .secmap-t { border-bottom-style: solid; }
-.sm-ico { flex: 0 0 auto; font-size: 15px; line-height: 1; opacity: .85; }
-.sm-l { flex: 1 1 auto; min-width: 0; font-size: 14px; }
+.secmap.on .secmap-t { border-radius: var(--radius) var(--radius) 0 0; }
+
+.sm-ico { flex: 0 0 auto; width: 30px; height: 22px; display: block; }
+.sm-l { flex: 1 1 auto; min-width: 0; font-size: 14.2px; }
 .sm-verb { font-weight: 650; }
 .sm-x { flex: 0 0 auto; font-size: 11px; }
-.secmap-body { padding: 4px 0 10px; }
+.secmap-body {
+  padding: 6px 14px 12px;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: color-mix(in srgb, var(--accent-soft) 45%, transparent);
+}
 .secmap-body .diagram { margin-top: 8px; }
 
 /* ---------- the Part description, folded away ---------- */
@@ -233,8 +237,9 @@
   .part-nav.in-article .pn-item:not(.on):not(.pn-all) { display: none; }
   .part-nav.in-article .pn-item.on { width: 100%; }
   .part-nav .pn-arts { width: 100%; margin-left: 2px; }
-  .secmap-body { padding: 4px 0 8px; }
+  .secmap-body { padding: 6px 8px 10px; }
   .sm-l { font-size: 13.2px; }
+  .secmap-t { padding: 9px 11px; gap: 9px; }
 }
 
 /* A Part with no chapters and no groups has no sections to indent under, so
