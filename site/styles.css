@@ -1,0 +1,477 @@
+/* ============================================================
+   The Constitution of India — bare act, explained
+   ============================================================ */
+
+:root {
+  --bg:        #f6f4ef;
+  --bg-raise:  #ffffff;
+  --bg-sunk:   #ece8df;
+  --ink:       #1d1c1a;
+  --ink-soft:  #55514a;
+  --ink-faint: #8b857b;
+  --line:      #ded8cc;
+  --line-soft: #ebe6db;
+
+  --accent:      #9a3412;   /* deep terracotta — headings, links */
+  --accent-soft: #f6e5dc;
+  --saffron:     #c2410c;
+  --green:       #15803d;
+  --green-soft:  #e3f2e7;
+  --blue:        #1d4ed8;
+  --blue-soft:   #e4eaff;
+  --amber:       #a16207;
+  --amber-soft:  #fbf0d4;
+
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans:  "Segoe UI", Inter, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono:  "Cascadia Mono", "SF Mono", Consolas, "Liberation Mono", monospace;
+
+  --topbar-h: 58px;
+  --side-w: 300px;
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(31,26,18,.05), 0 6px 22px rgba(31,26,18,.06);
+}
+
+[data-theme="dark"] {
+  --bg:        #16171a;
+  --bg-raise:  #1e2024;
+  --bg-sunk:   #121316;
+  --ink:       #e8e6e1;
+  --ink-soft:  #b3afa7;
+  --ink-faint: #7e7a72;
+  --line:      #2f3238;
+  --line-soft: #26282d;
+
+  --accent:      #f0a882;
+  --accent-soft: #38241c;
+  --saffron:     #f59e5e;
+  --green:       #6ee7a0;
+  --green-soft:  #12291d;
+  --blue:        #93b4ff;
+  --blue-soft:   #16203a;
+  --amber:       #f0c46a;
+  --amber-soft:  #2e2413;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 22px rgba(0,0,0,.28);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- top bar ---------- */
+
+.topbar {
+  position: sticky; top: 0; z-index: 40;
+  height: var(--topbar-h);
+  display: flex; align-items: center; gap: 12px;
+  padding: 0 14px;
+  background: color-mix(in srgb, var(--bg-raise) 88%, transparent);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand { display: flex; align-items: center; gap: 10px; color: inherit; flex: 0 0 auto; }
+.brand:hover { text-decoration: none; }
+.brand-mark {
+  width: 34px; height: 34px; display: grid; place-items: center;
+  border-radius: 9px; font-size: 18px;
+  background: linear-gradient(150deg, var(--saffron), var(--green));
+  color: #fff;
+}
+.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-text strong { font-size: 14.5px; letter-spacing: -.01em; }
+.brand-text small { font-size: 11px; color: var(--ink-faint); }
+
+.search-wrap {
+  /* min-width:0 lets this shrink past its min-content on a narrow phone.
+     Without it the flex item refuses to give way and pushes the theme
+     toggle off the right edge of the screen. */
+  flex: 1 1 auto; min-width: 0; max-width: 560px; margin-left: auto;
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 12px; height: 38px;
+  background: var(--bg-sunk);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-faint);
+}
+.search-wrap:focus-within { border-color: var(--accent); color: var(--accent); }
+.search-wrap input {
+  flex: 1; border: 0; outline: 0; background: transparent;
+  font: inherit; font-size: 14px; color: var(--ink); min-width: 0;
+}
+.kbd {
+  font-family: var(--mono); font-size: 11px; padding: 1px 6px;
+  border: 1px solid var(--line); border-radius: 5px; color: var(--ink-faint);
+}
+
+.icon-btn {
+  flex: 0 0 auto;
+  width: 36px; height: 36px; display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 9px;
+  background: var(--bg-raise); color: var(--ink-soft);
+  font-size: 16px; cursor: pointer;
+}
+.icon-btn:hover { color: var(--accent); border-color: var(--accent); }
+.menu-btn { display: grid; }
+
+/* ---------- layout ---------- */
+
+.shell { display: flex; align-items: flex-start; }
+
+.sidebar {
+  position: sticky; top: var(--topbar-h);
+  width: var(--side-w); flex: 0 0 var(--side-w);
+  height: calc(100vh - var(--topbar-h));
+  overflow-y: auto; overscroll-behavior: contain;
+  border-right: 1px solid var(--line);
+  padding: 14px 8px 60px 14px;
+  background: var(--bg);
+}
+
+main {
+  flex: 1 1 auto; min-width: 0;
+  padding: 26px clamp(16px, 4vw, 52px) 120px;
+  max-width: 1120px;
+  outline: none;
+}
+
+.scrim { display: none; }
+
+/* Folded away, the sidebar leaves its width to the reading column - which is
+   what a two-panel Part page and a wide mind map both want. */
+body.side-off .sidebar { display: none; }
+body.side-off main { max-width: 1320px; }
+
+@media (max-width: 900px) {
+  .menu-btn { display: grid; }
+  .brand-text { display: none; }
+  .sidebar {
+    position: fixed; left: 0; top: var(--topbar-h); z-index: 35;
+    transform: translateX(-102%); transition: transform .22s ease;
+    box-shadow: var(--shadow); width: min(320px, 86vw);
+  }
+  body.nav-open .sidebar { transform: none; }
+  body.nav-open .scrim {
+    display: block; position: fixed; inset: var(--topbar-h) 0 0 0;
+    background: rgba(0,0,0,.36); z-index: 30;
+  }
+}
+
+/* ---------- sidebar contents ---------- */
+
+.side-group { margin-bottom: 18px; }
+.side-label {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-faint);
+  padding: 0 8px 6px;
+}
+.side-link {
+  display: flex; align-items: baseline; gap: 8px;
+  padding: 6px 9px; border-radius: 7px;
+  color: var(--ink-soft); font-size: 13.5px; cursor: pointer;
+}
+.side-link:hover { background: var(--bg-sunk); color: var(--ink); text-decoration: none; }
+.side-link.on { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.side-link .rn {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-faint);
+  min-width: 36px; flex: 0 0 auto;
+}
+.side-link.on .rn { color: var(--accent); }
+.side-link .ct { margin-left: auto; font-size: 10.5px; color: var(--ink-faint); }
+
+/* ---------- generic blocks ---------- */
+
+.page-head { margin-bottom: 22px; }
+.eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px;
+}
+h1 { font-family: var(--serif); font-size: clamp(26px, 3.4vw, 38px); line-height: 1.15; margin: 0 0 8px; letter-spacing: -.015em; }
+h2 { font-family: var(--serif); font-size: 23px; margin: 34px 0 12px; letter-spacing: -.01em; }
+h3 { font-size: 15px; margin: 22px 0 8px; letter-spacing: .01em; }
+p  { margin: 0 0 12px; }
+.lede { font-size: 17px; color: var(--ink-soft); max-width: 66ch; }
+
+.card {
+  background: var(--bg-raise);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+
+.tile { display: block; color: inherit; }
+.tile:hover { text-decoration: none; border-color: var(--accent); transform: translateY(-1px); }
+.tile { transition: transform .12s ease, border-color .12s ease; }
+.tile .rn { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: .06em; }
+.tile h3 { margin: 4px 0 6px; font-family: var(--serif); font-size: 18px; font-weight: 600; }
+.tile p { font-size: 13px; color: var(--ink-soft); margin: 0; }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 600; padding: 2px 9px;
+  border-radius: 999px; border: 1px solid transparent; white-space: nowrap;
+}
+.pill.grey  { background: var(--bg-sunk); color: var(--ink-faint); border-color: var(--line); }
+.pill.green { background: var(--green-soft); color: var(--green); }
+.pill.blue  { background: var(--blue-soft); color: var(--blue); }
+.pill.amber { background: var(--amber-soft); color: var(--amber); }
+.pill.red   { background: var(--accent-soft); color: var(--accent); }
+
+.crumbs { font-size: 12.5px; color: var(--ink-faint); margin-bottom: 10px; }
+.crumbs a { color: var(--ink-soft); }
+.crumbs span { margin: 0 6px; opacity: .5; }
+
+/* ---------- article list ---------- */
+
+.art-row {
+  display: flex; gap: 14px; align-items: baseline;
+  padding: 11px 12px; border-radius: 9px;
+  border: 1px solid transparent; color: inherit; cursor: pointer;
+}
+.art-row:hover { background: var(--bg-raise); border-color: var(--line); text-decoration: none; }
+.art-row .num {
+  font-family: var(--mono); font-size: 12.5px; font-weight: 600;
+  color: var(--accent); flex: 0 0 62px;
+}
+.art-row .txt { min-width: 0; flex: 1; }
+.art-row .txt b { font-weight: 600; font-size: 14.5px; display: block; }
+.art-row .txt small { color: var(--ink-faint); font-size: 12.5px; display: block; margin-top: 2px; }
+.art-row.dim .num, .art-row.dim .txt b { color: var(--ink-faint); text-decoration: line-through; }
+
+.group-head {
+  margin: 24px 0 4px; padding: 0 12px;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--saffron);
+}
+
+/* ---------- article page ---------- */
+
+.art-head { border-bottom: 2px solid var(--line); padding-bottom: 16px; margin-bottom: 4px; }
+.art-head .tagline { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+
+.bare {
+  font-family: var(--serif); font-size: 17.2px; line-height: 1.72;
+  margin: 20px 0 8px;
+}
+.bare p { margin: 0 0 13px; }
+.bare .l1 { margin-left: 0; }
+.bare .l2 { margin-left: 26px; }
+.bare .l3 { margin-left: 52px; }
+.bare sup {
+  font-family: var(--sans); font-size: 10px; font-weight: 700;
+  color: var(--blue); cursor: help; padding: 0 1px;
+}
+.bare .om { color: var(--ink-faint); letter-spacing: .16em; }
+
+.section-tag {
+  display: flex; align-items: center; gap: 9px;
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-faint);
+  margin: 30px 0 10px;
+}
+.section-tag::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+.explain { display: grid; gap: 14px; }
+
+.panel {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--ink-faint);
+  border-radius: var(--radius);
+  padding: 15px 18px;
+  background: var(--bg-raise);
+}
+.panel h4 {
+  margin: 0 0 7px; font-size: 12px; letter-spacing: .1em;
+  text-transform: uppercase; display: flex; align-items: center; gap: 7px;
+}
+.panel p:last-child { margin-bottom: 0; }
+.panel.simple { border-left-color: var(--green); }
+.panel.simple h4 { color: var(--green); }
+.panel.catch  { border-left-color: var(--saffron); background: color-mix(in srgb, var(--amber-soft) 45%, var(--bg-raise)); }
+.panel.catch h4 { color: var(--saffron); }
+.panel.note   { border-left-color: var(--blue); }
+.panel.note h4 { color: var(--blue); }
+
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; font-size: 13.5px; }
+.kv dt { color: var(--ink-faint); }
+.kv dd { margin: 0; }
+
+.fn-list { font-size: 13px; color: var(--ink-soft); padding-left: 0; list-style: none; margin: 0; }
+.fn-list li { display: flex; gap: 9px; margin-bottom: 7px; }
+.fn-list .fn-n { font-family: var(--mono); font-size: 11px; color: var(--blue); flex: 0 0 18px; }
+
+.chiprow { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip {
+  font-size: 12.5px; padding: 4px 11px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--bg-raise);
+  color: var(--ink-soft); cursor: pointer;
+}
+.chip:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* breadcrumbs on the left, prev / next on the right, one row */
+.art-top {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 12px 20px; flex-wrap: wrap; margin-bottom: 10px;
+}
+.art-top .crumbs { margin-bottom: 0; min-width: 0; }
+
+.pager { display: flex; gap: 8px; flex: 0 0 auto; }
+.pager a, .pager .pager-end {
+  font-size: 12.5px; padding: 5px 11px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--bg-raise);
+  white-space: nowrap;
+}
+.pager a:hover { border-color: var(--accent); text-decoration: none; }
+.pager .pager-end {
+  color: var(--ink-faint); background: transparent; border-style: dashed;
+}
+
+@media (max-width: 560px) {
+  .art-top { flex-direction: column; align-items: stretch; }
+  .pager { justify-content: space-between; }
+}
+
+/* ---------- diagrams ---------- */
+
+.diagram {
+  background: var(--bg-raise); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 8px; overflow-x: auto;
+  box-shadow: var(--shadow);
+}
+/* A floor so a small diagram is not crushed on a phone. Kept low: a map wider
+   than its box scrolls, but one narrower than this floor is padded out to it,
+   and a compact section map is often narrower. */
+.diagram svg { display: block; min-width: 420px; }
+.diagram + .diagram { margin-top: 14px; }
+.dg-title { font-size: 13px; font-weight: 600; padding: 8px 10px 2px; color: var(--ink-soft); }
+.dg-cap { font-size: 12.5px; color: var(--ink-faint); padding: 6px 10px 4px; }
+
+.node-box { fill: var(--bg-raise); stroke: var(--line); }
+.node-txt { font-family: var(--sans); font-size: 12.5px; fill: var(--ink); }
+.node-sub { font-family: var(--sans); font-size: 11px; fill: var(--ink-faint); }
+.edge     { stroke: var(--ink-faint); fill: none; stroke-width: 1.4; }
+.edge-lbl { font-family: var(--sans); font-size: 10.5px; fill: var(--ink-faint); }
+
+/* ---------- search ---------- */
+
+.hit { display: block; padding: 12px 14px; border-radius: 9px; color: inherit; border: 1px solid transparent; }
+.hit:hover { background: var(--bg-raise); border-color: var(--line); text-decoration: none; }
+.hit b.h { color: var(--accent); }
+.hit .snip { font-size: 13px; color: var(--ink-soft); margin-top: 3px; }
+mark { background: var(--amber-soft); color: inherit; border-radius: 3px; padding: 0 2px; }
+
+.empty { color: var(--ink-faint); font-size: 14px; padding: 30px 0; }
+
+/* ---------- tables ---------- */
+
+table.sched { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.sched td { border-bottom: 1px solid var(--line-soft); padding: 8px 10px; vertical-align: top; }
+table.sched td.n { font-family: var(--mono); font-size: 12px; color: var(--accent); width: 52px; }
+
+.stat-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 4px; }
+.stat {
+  flex: 1 1 130px; padding: 12px 14px; border-radius: var(--radius);
+  background: var(--bg-raise); border: 1px solid var(--line);
+}
+.stat b { display: block; font-family: var(--serif); font-size: 24px; line-height: 1.1; }
+.stat small { font-size: 11.5px; color: var(--ink-faint); }
+
+details.acc { border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-raise); margin-bottom: 8px; }
+details.acc > summary { cursor: pointer; padding: 11px 15px; font-size: 14px; font-weight: 600; list-style: none; }
+details.acc > summary::-webkit-details-marker { display: none; }
+details.acc > summary::before { content: "\25B8"; display: inline-block; margin-right: 9px; color: var(--ink-faint); transition: transform .15s; }
+details.acc[open] > summary::before { transform: rotate(90deg); }
+details.acc > div { padding: 0 15px 14px; }
+
+footer.foot {
+  margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line);
+  font-size: 12.5px; color: var(--ink-faint);
+}
+footer.foot p { margin-bottom: 6px; }
+
+/* a "catch" panel with nothing to say still shows, but quietly */
+.panel.catch.quiet { background: var(--bg-raise); border-left-color: var(--ink-faint); }
+.panel.catch.quiet h4 { color: var(--ink-faint); }
+.panel.catch.quiet p { color: var(--ink-faint); font-size: 14px; }
+
+/* clickable mind-map node */
+.diagram g.hot { cursor: pointer; }
+.diagram g.hot rect { transition: fill .12s ease; }
+.diagram g.hot:hover rect { fill: var(--bg-sunk); }
+
+/* ---------- landmark judgments ---------- */
+
+.case {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--bg-raise);
+  padding: 16px 20px 14px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow);
+}
+.case > header {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: 8px 12px; margin-bottom: 4px;
+}
+.case h4 {
+  margin: 0; font-family: var(--serif); font-size: 19px;
+  font-weight: 600; letter-spacing: -.01em;
+}
+.case-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.case-full {
+  font-size: 12.5px; color: var(--ink-faint); font-style: italic;
+  margin: 0 0 10px;
+}
+.case-body { margin: 8px 0 0; display: grid; gap: 3px; }
+.case-body dt {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .11em;
+  text-transform: uppercase; color: var(--ink-faint);
+  margin-top: 9px;
+}
+.case-body dt:first-child { margin-top: 0; }
+.case-body dd { margin: 0; font-size: 14.8px; line-height: 1.62; }
+.case-body dd a { border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+
+}
+
+/* ---------- the landing page ----------
+   A board of doors and nothing else: the title sits close to the tiles, and a
+   tile carries a label, a name and one line of scale. */
+.home-head { margin-bottom: 18px; }
+.home-head h1 { margin-bottom: 0; }
+.home-grid { grid-template-columns: repeat(auto-fill, minmax(228px, 1fr)); }
+.home-grid .tile { padding: 14px 16px; }
+.home-grid .tile h3 { margin: 5px 0 5px; font-size: 17px; }
+.home-grid .tile p { font-size: 12.5px; color: var(--ink-faint); }
+.home-grid + .home-grid { margin-top: 14px; }   /* the same gap as inside a grid */
+/* The four ways in are always a balanced block - four across where there is
+   room, otherwise two by two. Left to auto-fill they land three across and the
+   fourth drops on its own beside two empty cells. The measurement that matters
+   is the grid own width, not the window: folding the sidebar away changes it. */
+.lead-wrap { container-type: inline-size; }
+.home-grid.lead { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@container (min-width: 900px) { .home-grid.lead { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@container (max-width: 380px) { .home-grid.lead { grid-template-columns: 1fr; } }
+
+/* Only the seven tiles that are not Parts are illustrated: twenty-six little
+   pictures would be wallpaper, and the drawing is what tells a reader at a
+   glance that this card leads somewhere other than a Part. */
+.tile .illus { display: block; width: 46px; height: 34px; margin-bottom: 9px; }
+.home-grid .tile.has-illus h3 { font-size: 17.5px; }

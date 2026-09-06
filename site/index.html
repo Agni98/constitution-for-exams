@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<title>The Constitution of India — bare act, explained</title>
+<meta name="description" content="The full bare text of the Constitution of India, part by part, with a plain-language explanation and the catch under every article.">
+<!-- Over http, stylesheet and data get a fresh timestamp each visit so an edited
+     file is never served from a stale browser cache. Over file:// the query
+     string is left off: some browsers treat "app.js?v=123" as a literal
+     filename there and fail to load it, which would leave a blank page. -->
+<script>
+  var COI_V = location.protocol === 'file:' ? '' : '?v=' + Date.now();
+  document.write('<link rel="stylesheet" href="styles.css' + COI_V + '">');
+  document.write('<link rel="stylesheet" href="cases.css' + COI_V + '">');
+  document.write('<link rel="stylesheet" href="exam.css' + COI_V + '">');
+  document.write('<link rel="stylesheet" href="about.css' + COI_V + '">');
+  document.write('<link rel="stylesheet" href="part.css' + COI_V + '">');
+</script>
+<noscript>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cases.css">
+  <link rel="stylesheet" href="exam.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="part.css">
+</noscript>
+</head>
+<body>
+
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Toggle menu">&#9776;</button>
+  <a class="brand" href="#/">
+    <span class="brand-mark">&#x2696;</span>
+    <span class="brand-text">
+      <strong>The Constitution of India</strong>
+      <small>Bare act &middot; indexed &middot; explained</small>
+    </span>
+  </a>
+  <div class="search-wrap">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+      <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path>
+    </svg>
+    <input id="search" type="search" placeholder="Article number, word, or idea — try 21, or &ldquo;habeas corpus&rdquo;" autocomplete="off" spellcheck="false">
+    <span class="kbd">/</span>
+  </div>
+  <button class="icon-btn" id="themeBtn" aria-label="Toggle light and dark" title="Toggle light / dark">&#9789;</button>
+</header>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar" aria-label="Contents"></nav>
+  <main id="main" tabindex="-1"></main>
+</div>
+
+<div class="scrim" id="scrim"></div>
+
+<script>
+  // cache-bust the data + logic the same way the stylesheet is bust
+  ['data/constitution.js', 'data/schedules.js', 'data/amendments.js',
+   'data/amendmeta.js', 'data/maps.js', 'data/maps-part.js',
+   'data/explain-1.js', 'data/explain-2.js', 'data/explain-3.js', 'data/explain-4.js',
+   'data/explain-5.js', 'data/explain-6.js', 'data/explain-7.js', 'data/explain-8.js',
+   'data/cases-1.js', 'data/cases-2.js', 'data/cases-3.js', 'data/cases-4.js',
+   'data/exam-1.js', 'data/exam-2.js', 'data/exam-3.js', 'data/exam-4.js',
+   'app.js']
+    .forEach(function (f) { document.write('<script src="' + f + COI_V + '"><\/script>'); });
+</script>
+
+<script>
+  // If the data or the app did not load, say so on the page. A blank screen
+  // gives the reader nothing to act on.
+  window.addEventListener('DOMContentLoaded', function () {
+    var main = document.getElementById('main');
+    if (window.COI && window.COI.articles && main.innerHTML.length > 100) return;
+    main.innerHTML =
+      '<div class="page-head"><div class="eyebrow">Could not load</div>' +
+      '<h1>The data files did not load</h1>' +
+      '<p class="lede">The page itself opened, but the Constitution data did not come with it. ' +
+      'Two things cause this.</p></div>' +
+      '<div class="card"><h3>The <code>data</code> folder is missing or was moved</h3>' +
+      '<p><code>index.html</code> needs the <code>data</code> folder, <code>app.js</code> and ' +
+      '<code>styles.css</code> sitting beside it. Keep the <code>site</code> folder together ' +
+      'and open <code>index.html</code> from inside it.</p></div>' +
+      '<div class="card" style="margin-top:14px"><h3>Your browser is blocking local scripts</h3>' +
+      '<p>Some browsers refuse to run scripts from <code>file://</code>. Serve the folder ' +
+      'instead — from the <code>site</code> folder, run:</p>' +
+      '<p><code>python serve.py</code></p>' +
+      '<p>then open <a href="http://localhost:8770">http://localhost:8770</a>.</p></div>';
+  });
+</script>
+
+</body>
+</html>

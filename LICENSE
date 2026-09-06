@@ -1,0 +1,122 @@
+This project contains three kinds of material, under three different terms.
+Read the part that applies to what you want to use.
+
+
+================================================================================
+1. THE TEXT OF THE CONSTITUTION OF INDIA
+================================================================================
+
+Files:  constitution/source/*
+        constitution/site/data/constitution.js
+        constitution/site/data/schedules.js
+        constitution/site/data/amendments.js
+        the "official text" sections of the website
+
+This is Government of India material. It is not mine to license, and no claim is
+made over it.
+
+Source
+    The Constitution of India, as on 1st May 2024
+    Legislative Department, Ministry of Law and Justice, Government of India
+    Updated to the Constitution (One Hundred and Sixth Amendment) Act, 2023
+    https://cdnbbsr.s3waas.gov.in/s380537a945c7aaa788ccfcdf1b99b5d8f/uploads/2024/07/20240716890312078.pdf
+
+It is reproduced here on two footings.
+
+    Section 52(1)(q)(ii) of the Copyright Act, 1957 provides that reproducing or
+    publishing an Act of a legislature is not an infringement of copyright, on
+    the condition that it is reproduced or published "together with any
+    commentary thereon or any other original matter". This project is
+    commentary-first: every article carries a plain-language reading, and much
+    of it carries judgment summaries, examination notes and diagrams besides.
+
+    The Government of India's standard website reproduction terms permit
+    material to be reproduced free of charge, provided it is reproduced
+    accurately, is not used in a derogatory manner or in a misleading context,
+    and the source is prominently acknowledged. The text here is reproduced
+    verbatim, including its footnote markers and its markings for omitted words;
+    the source is named on the overview page, on the About page, and in the
+    footer of every page of the site.
+
+If you reuse the text, those same conditions apply to you. They come from the
+statute and the government's terms, not from this project, and nothing here can
+widen or narrow them.
+
+
+================================================================================
+2. THE COMMENTARY WRITTEN FOR THIS PROJECT
+================================================================================
+
+Files:  constitution/site/data/explain-*.js     plain-language readings
+        constitution/site/data/cases-*.js       landmark judgment summaries
+        constitution/site/data/exam-*.js        examination notes
+        constitution/site/data/maps.js          diagrams
+        constitution/site/data/amendmeta.js     amendment descriptions
+        constitution/build/FACTCHECK.md         the audit record
+        constitution/README.md
+
+Licensed under the Creative Commons Attribution 4.0 International licence
+(CC BY 4.0).
+
+    https://creativecommons.org/licenses/by/4.0/
+
+You may share and adapt this material, including commercially, provided you give
+appropriate credit, link to the licence, and indicate if changes were made.
+
+Two things worth saying plainly, since this material concerns law:
+
+    It is commentary, not law, and not legal advice. Where it describes a
+    judgment it is paraphrasing, not quoting.
+
+    It has been audited but it is not certified correct. The record of that
+    audit, including 48 corrections and an honest account of what the audit does
+    not establish, is in constitution/build/FACTCHECK.md. If you republish this
+    material, do not represent it as more reliable than that record supports.
+
+
+================================================================================
+3. THE CODE
+================================================================================
+
+Files:  constitution/site/app.js
+        constitution/site/*.css
+        constitution/site/index.html
+        constitution/site/serve.py
+        constitution/build/*.py
+        constitution/Open the Constitution.bat
+
+MIT License
+
+Copyright (c) 2026 Lavnimesh Agnihotri
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+================================================================================
+NO AFFILIATION
+================================================================================
+
+This project is not produced by, endorsed by or affiliated with the Union Public
+Service Commission, the Uttar Pradesh Public Service Commission, any other State
+Public Service Commission, the Legislative Department, or any other government
+body. Those names appear here only to describe which examination has asked about
+a provision.
+
+Names of law reports, coaching publishers and other third parties, where they
+appear, are used descriptively. No endorsement is claimed or implied.

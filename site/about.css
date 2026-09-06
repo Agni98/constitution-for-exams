@@ -1,0 +1,84 @@
+/* ============================================================
+   Confidence markers, the standing footer, and the About page.
+   ============================================================ */
+
+/* ---------- the confidence marker on a section heading ---------- */
+
+/* .section-tag is a flex row whose ::after draws the rule, so a marker
+   inserted here sits between the label and the line. */
+.conf {
+  flex: 0 0 auto;
+  font-family: var(--sans);
+  font-size: 9.5px; font-weight: 700;
+  letter-spacing: .09em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: help;
+}
+.conf.src {
+  background: var(--green-soft); color: var(--green);
+  border-color: color-mix(in srgb, var(--green) 26%, transparent);
+}
+.conf.own {
+  background: var(--bg-sunk); color: var(--ink-faint);
+  border-color: var(--line);
+}
+
+/* ---------- the standing footer under every page ---------- */
+
+.sitefoot {
+  margin-top: 54px; padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-faint);
+  font-size: 12.8px; line-height: 1.65;
+  max-width: 78ch;
+}
+.sitefoot p { margin: 0 0 7px; }
+.sitefoot p:last-child { margin-bottom: 0; }
+.sitefoot strong { color: var(--ink-soft); }
+.sitefoot em { font-style: italic; }
+.sitefoot a { border-bottom: 1px solid color-mix(in srgb, var(--accent) 32%, transparent); }
+
+/* the overview page carries its own source note; keep the two from stacking */
+.foot { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--line);
+  color: var(--ink-soft); font-size: 13.6px; line-height: 1.68; max-width: 74ch; }
+.foot p { margin: 0 0 9px; }
+
+/* ---------- About page ---------- */
+
+.lede.sm, p.sm { font-size: 13.6px; }
+.card p.sm { color: var(--ink-faint); }
+
+.grid.two { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+.conf-key { display: grid; gap: 10px; margin-bottom: 18px; }
+.conf-row {
+  display: grid; grid-template-columns: 150px 1fr; gap: 4px 16px;
+  align-items: start;
+  padding: 13px 16px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg-raise);
+}
+.conf-row .conf { justify-self: start; margin-top: 2px; }
+.conf-row p { margin: 0; font-size: 14.2px; line-height: 1.6; }
+
+ul.tick { margin: 8px 0 10px; padding: 0; list-style: none; }
+ul.tick li {
+  position: relative; padding-left: 18px; margin-bottom: 5px;
+  font-size: 14.2px; line-height: 1.55;
+}
+ul.tick li::before {
+  content: "\2713"; position: absolute; left: 0; top: -1px;
+  color: var(--green); font-weight: 700;
+}
+
+@media (max-width: 620px) {
+  .conf-row { grid-template-columns: 1fr; }
+  .conf { font-size: 9px; letter-spacing: .07em; }
+}
+
+/* ---------- amendment commencement note ---------- */
+.wef-note {
+  display: block; margin-top: 5px;
+  font-size: 12.4px; line-height: 1.55; color: var(--ink-faint);
+}

@@ -1,0 +1,153 @@
+/* ============================================================
+   The landmark-judgment index: a card grid, and the overlay
+   that opens when you click one.
+   ============================================================ */
+
+/* ---------- filter + sort bar ---------- */
+
+.case-tools {
+  display: flex; flex-wrap: wrap; gap: 10px 14px;
+  align-items: center; margin: 4px 0 10px;
+}
+.case-tools input {
+  flex: 1 1 280px; min-width: 0;
+  height: 38px; padding: 0 14px;
+  font: inherit; font-size: 14px; color: var(--ink);
+  background: var(--bg-sunk);
+  border: 1px solid var(--line); border-radius: 999px; outline: 0;
+}
+.case-tools input:focus { border-color: var(--accent); }
+
+.case-sort { display: flex; gap: 0; flex: 0 0 auto; }
+.case-sort button {
+  font: inherit; font-size: 12.5px; padding: 8px 14px;
+  border: 1px solid var(--line); background: var(--bg-raise);
+  color: var(--ink-soft); cursor: pointer;
+}
+.case-sort button:first-child { border-radius: 8px 0 0 8px; }
+.case-sort button:last-child { border-radius: 0 8px 8px 0; border-left: 0; }
+.case-sort button:hover { color: var(--accent); }
+.case-sort button.on {
+  background: var(--accent-soft); color: var(--accent);
+  border-color: var(--accent); font-weight: 600;
+}
+.case-sort button.on + button { border-left-color: var(--accent); }
+
+.case-count {
+  font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  font-weight: 700; color: var(--ink-faint); margin: 0 0 12px;
+}
+
+/* ---------- the card grid ---------- */
+
+.case-grid {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  align-items: stretch;
+}
+
+.case-card {
+  display: flex; flex-direction: column; gap: 5px;
+  text-align: left; font: inherit; color: inherit; cursor: pointer;
+  padding: 15px 17px 16px;
+  background: var(--bg-raise);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+.case-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent); border-left-color: var(--accent);
+  box-shadow: 0 2px 4px rgba(31,26,18,.06), 0 10px 26px rgba(31,26,18,.10);
+}
+.case-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.case-card[hidden] { display: none; }
+
+.cc-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cc-where {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .04em;
+  color: var(--accent); white-space: nowrap;
+}
+.cc-name {
+  font-family: var(--serif); font-size: 18.5px; font-weight: 600;
+  line-height: 1.25; letter-spacing: -.01em; margin-top: 2px;
+}
+.cc-meta { font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint); }
+.cc-why {
+  font-size: 13.5px; line-height: 1.55; color: var(--ink-soft);
+  margin-top: 5px;
+}
+
+/* ---------- the overlay ---------- */
+
+body.sheet-open { overflow: hidden; }
+
+.sheet-back {
+  position: fixed; inset: 0; z-index: 60;
+  background: rgba(28, 22, 14, .48);
+  backdrop-filter: blur(2px);
+  animation: sheet-fade .16s ease;
+}
+.sheet {
+  position: fixed; z-index: 61;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: min(760px, calc(100vw - 32px));
+  max-height: min(86vh, 900px);
+  display: flex; flex-direction: column;
+  background: var(--bg-raise);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 24px 70px rgba(0,0,0,.32);
+  animation: sheet-rise .18s ease;
+}
+@keyframes sheet-fade { from { opacity: 0; } }
+@keyframes sheet-rise {
+  from { opacity: 0; transform: translate(-50%, calc(-50% + 14px)); }
+}
+
+.sheet-x {
+  position: absolute; top: 10px; right: 12px; z-index: 1;
+  width: 34px; height: 34px; display: grid; place-items: center;
+  font: inherit; font-size: 24px; line-height: 1;
+  border: 1px solid transparent; border-radius: 9px;
+  background: transparent; color: var(--ink-faint); cursor: pointer;
+}
+.sheet-x:hover { background: var(--bg-sunk); color: var(--accent); border-color: var(--line); }
+.sheet-x:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.sheet-body { overflow-y: auto; overscroll-behavior: contain; padding: 22px 26px 20px; }
+
+.sheet-head { padding-right: 34px; margin-bottom: 14px; }
+.sheet-head .cc-where { display: inline-block; margin-bottom: 6px; }
+.sheet-head h2 {
+  font-family: var(--serif); font-size: 26px; font-weight: 600;
+  line-height: 1.2; margin: 0 0 8px; letter-spacing: -.015em;
+}
+.sheet-head .case-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.sheet-head .case-full { margin: 9px 0 0; }
+
+.sheet .case-body dd { font-size: 15.2px; }
+
+.sheet-foot {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 20px; padding-top: 16px;
+  border-top: 1px solid var(--line-soft);
+}
+.sheet-foot .chip { font: inherit; font-size: 12.5px; cursor: pointer; }
+
+@media (max-width: 620px) {
+  .sheet {
+    top: auto; bottom: 0; transform: translate(-50%, 0);
+    width: 100vw; max-height: 92vh;
+    border-radius: 14px 14px 0 0; border-bottom: 0;
+  }
+  @keyframes sheet-rise { from { opacity: 0; transform: translate(-50%, 24px); } }
+  .sheet-body { padding: 20px 18px 18px; }
+  .sheet-head h2 { font-size: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-card, .sheet, .sheet-back { transition: none; animation: none; }
+}

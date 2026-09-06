@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "constitution",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["serve.py", "8770"],
+      "cwd": "site",
+      "port": 8770
+    }
+  ]
+}

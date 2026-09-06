@@ -1,0 +1,34 @@
+# ---------------------------------------------------------------------------
+# Third-party material. This is somebody else's copyrighted compilation. It was
+# a reference while the exam notes were being written; it is not this project's
+# to redistribute, and it must never be committed.
+# ---------------------------------------------------------------------------
+Mains Wallah PYQ*.pdf
+*.pdf.download
+
+# ---------------------------------------------------------------------------
+# Build output. Every file below is regenerated from source/coi-en.txt by the
+# pipeline in build/ - see "Rebuilding the data" in README.md.
+#
+# site/data/*.js is deliberately NOT treated as build output: the site is meant
+# to open straight from file:// with no build step, so those files are part of
+# the deliverable and are committed.
+# ---------------------------------------------------------------------------
+build/articles.json
+build/schedules.json
+build/amendments.json
+build/toc.json
+build/footnotes.json
+build/body_tagged.txt
+
+__pycache__/
+*.py[cod]
+
+# ---------------------------------------------------------------------------
+# OS and editor litter
+# ---------------------------------------------------------------------------
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*~

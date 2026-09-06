@@ -1,0 +1,6 @@
+# Line endings are normalised to LF in the repository and converted on checkout,
+# so the same clone is byte-identical on Windows, macOS and Linux. The batch
+# file is the exception: Windows wants CRLF in it.
+* text=auto
+*.bat text eol=crlf
+*.pdf binary

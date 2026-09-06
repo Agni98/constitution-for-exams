@@ -1,0 +1,286 @@
+/* ============================================================
+   Two-panel Part pages, and the peek panel that opens when a
+   cross-reference is clicked.
+   ============================================================ */
+
+/* ---------- peek: a referenced article or amendment, read in place ---------- */
+
+.chip.peek {
+  font: inherit; font-size: 12.5px; cursor: pointer;
+  border-style: dashed;
+}
+.chip.peek::after {
+  content: "\00a0\25BE"; font-size: 9px; color: var(--ink-faint);
+}
+.chip.peek.on {
+  border-style: solid; border-color: var(--accent);
+  background: var(--accent-soft); color: var(--accent);
+}
+.chip.peek.on::after { content: "\00a0\25B4"; color: var(--accent); }
+
+.peek-panel {
+  position: relative;
+  margin: 10px 0 14px;
+  padding: 16px 18px 14px;
+  border: 1px solid var(--accent);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--bg-raise);
+  box-shadow: var(--shadow);
+  animation: peek-in .14s ease;
+}
+@keyframes peek-in { from { opacity: 0; transform: translateY(-3px); } }
+
+.peek-x {
+  position: absolute; top: 8px; right: 10px;
+  width: 28px; height: 28px; display: grid; place-items: center;
+  font: inherit; font-size: 20px; line-height: 1;
+  border: 1px solid transparent; border-radius: 7px;
+  background: transparent; color: var(--ink-faint); cursor: pointer;
+}
+.peek-x:hover { background: var(--bg-sunk); color: var(--accent); border-color: var(--line); }
+
+.peek-head { padding-right: 34px; margin-bottom: 12px; }
+.peek-rn {
+  display: block;
+  font-family: var(--mono); font-size: 11.5px; font-weight: 700;
+  letter-spacing: .04em; color: var(--accent);
+}
+.peek-head b {
+  display: block; margin-top: 3px;
+  font-family: var(--serif); font-size: 19px; font-weight: 600;
+  line-height: 1.3; letter-spacing: -.01em;
+}
+.peek-where {
+  display: block; margin-top: 4px;
+  font-size: 12px; color: var(--ink-faint);
+}
+
+.peek-says, .peek-bare { margin-bottom: 12px; }
+.peek-says h5, .peek-bare h5 {
+  margin: 0 0 6px;
+  font-size: 10px; font-weight: 700; letter-spacing: .11em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+.peek-says p { margin: 0; font-size: 14.6px; line-height: 1.62; }
+.peek-bare p {
+  margin: 0 0 6px;
+  font-family: var(--serif); font-size: 14.6px; line-height: 1.66;
+  color: var(--ink-soft);
+}
+.peek-bare p:last-child { margin-bottom: 0; }
+.peek-foot { padding-top: 10px; border-top: 1px solid var(--line-soft); }
+
+/* ---------- two-panel Part page ---------- */
+
+.part-split {
+  display: grid;
+  grid-template-columns: 254px minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+.part-nav {
+  position: sticky; top: calc(var(--topbar-h) + 16px);
+  max-height: calc(100vh - var(--topbar-h) - 40px);
+  overflow-y: auto; overscroll-behavior: contain;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg-raise);
+  padding: 8px;
+}
+.pn-head {
+  font-size: 10px; font-weight: 700; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--ink-faint);
+  padding: 6px 9px 8px;
+}
+.pn-item {
+  display: block; width: 100%; text-align: left;
+  position: relative;
+  font: inherit; cursor: pointer;
+  padding: 8px 34px 8px 10px; margin-bottom: 2px;
+  border: 1px solid transparent; border-radius: 8px;
+  background: transparent; color: var(--ink-soft);
+}
+.pn-item:hover { background: var(--bg-sunk); color: var(--ink); }
+.pn-item.on {
+  background: var(--accent-soft); color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+}
+.pn-ch {
+  display: block;
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--ink-faint);
+  margin-bottom: 2px;
+}
+.pn-item.on .pn-ch { color: var(--accent); }
+.pn-t { display: block; font-size: 13.4px; line-height: 1.4; }
+.pn-item.on .pn-t { font-weight: 600; }
+.pn-n {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint);
+}
+.pn-all { margin-top: 6px; border-top: 1px solid var(--line-soft); border-radius: 0 0 8px 8px; }
+.pn-all .pn-t { color: var(--ink-faint); font-size: 12.5px; }
+
+.part-body { min-width: 0; }
+.ps-head { margin-bottom: 12px; }
+.ps-head h2 {
+  margin: 0; font-family: var(--serif); font-size: 24px; font-weight: 600;
+  letter-spacing: -.015em; line-height: 1.2;
+}
+.ps-head p.sm { margin: 4px 0 0; font-size: 12.5px; color: var(--ink-faint); }
+
+@media (max-width: 900px) {
+  .part-split { grid-template-columns: 1fr; gap: 16px; }
+  .part-nav {
+    /* Sixteen sections stacked on a phone push the articles two screens down.
+       Keep the list a box the reader scrolls inside instead. */
+    position: static; max-height: 44vh;
+    display: flex; flex-wrap: wrap; gap: 6px; padding: 10px;
+  }
+  .pn-head { width: 100%; padding: 0 2px 4px; }
+  .pn-item {
+    width: auto; margin-bottom: 0;
+    padding: 6px 30px 6px 10px;
+    border-color: var(--line);
+  }
+  .pn-all { margin-top: 0; border-top: 1px solid var(--line); border-radius: 8px; }
+}
+
+/* ---------- the rail while an article is open ---------- */
+
+/* The rail items are buttons on a Part page and links on an article page.
+   They have to look identical either way. */
+.pn-item { text-decoration: none; }
+
+.part-nav.in-article { max-height: calc(100vh - var(--topbar-h) - 40px); }
+
+/* the open section's own articles, listed under it */
+.pn-arts {
+  margin: 2px 0 6px 8px;
+  padding-left: 8px;
+  border-left: 2px solid var(--line);
+}
+.pn-art {
+  display: flex; align-items: baseline; gap: 7px;
+  padding: 5px 8px; margin-bottom: 1px;
+  border-radius: 6px;
+  color: var(--ink-soft); text-decoration: none;
+  font-size: 12.6px; line-height: 1.35;
+}
+.pn-art:hover { background: var(--bg-sunk); color: var(--ink); }
+.pn-art.cur {
+  background: var(--accent-soft); color: var(--accent); font-weight: 600;
+}
+.pn-art.dim { opacity: .5; }
+.pa-n {
+  flex: 0 0 auto; min-width: 30px;
+  font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint);
+}
+.pn-art.cur .pa-n { color: var(--accent); }
+.pa-t { flex: 1 1 auto; min-width: 0; }
+
+/* ---------- the section map, folded to one line ---------- */
+
+.secmap { margin: 14px 0 18px; }
+/* Deliberately not a bordered pale box: that reads as a text field. This is a
+   line of type in the accent colour with a rule under it, which reads as a
+   thing to click. */
+.secmap-t {
+  display: flex; align-items: center; gap: 9px; width: 100%;
+  font: inherit; text-align: left; cursor: pointer;
+  padding: 9px 2px;
+  border: 0; border-bottom: 1px dashed color-mix(in srgb, var(--accent) 45%, transparent);
+  border-radius: 0;
+  background: transparent; color: var(--accent);
+}
+.secmap-t:hover { border-bottom-style: solid; }
+.secmap-t:hover .sm-l { text-decoration: underline; text-underline-offset: 3px; }
+.secmap.on .secmap-t { border-bottom-style: solid; }
+.sm-ico { flex: 0 0 auto; font-size: 15px; line-height: 1; opacity: .85; }
+.sm-l { flex: 1 1 auto; min-width: 0; font-size: 14px; }
+.sm-verb { font-weight: 650; }
+.sm-x { flex: 0 0 auto; font-size: 11px; }
+.secmap-body { padding: 4px 0 10px; }
+.secmap-body .diagram { margin-top: 8px; }
+
+/* ---------- the Part description, folded away ---------- */
+
+.part-about { margin-top: 10px; }
+.part-about summary {
+  display: inline-flex; align-items: center; gap: 6px;
+  cursor: pointer; list-style: none;
+  font-size: 13px; color: var(--ink-faint);
+  padding: 3px 0;
+}
+.part-about summary::-webkit-details-marker { display: none; }
+.part-about summary::after { content: "\25BE"; font-size: 9px; }
+.part-about[open] summary::after { content: "\25B4"; }
+.part-about summary:hover { color: var(--accent); }
+.part-about p {
+  margin: 6px 0 0; max-width: 68ch;
+  font-size: 15px; line-height: 1.6; color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  /* On a phone the rail is a header, not a sidebar, so it has to stay short
+     enough that the article itself is still on the first screen. Sixteen
+     section names would not: while an article is open, show only the section
+     it belongs to and the articles in it. The breadcrumb above still leads
+     back to the Part for the rest. */
+  .part-nav.in-article { max-height: 30vh; }
+  .part-nav.in-article .pn-item:not(.on):not(.pn-all) { display: none; }
+  .part-nav.in-article .pn-item.on { width: 100%; }
+  .part-nav .pn-arts { width: 100%; margin-left: 2px; }
+  .secmap-body { padding: 4px 0 8px; }
+  .sm-l { font-size: 13.2px; }
+}
+
+/* A Part with no chapters and no groups has no sections to indent under, so
+   its rail lists the articles flush. */
+.pn-arts.open { margin-left: 0; padding-left: 0; border-left: 0; }
+
+/* ---------- previous / next at the foot of an article ---------- */
+
+.pager-foot {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  margin: 26px 0 6px; padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.pf {
+  display: block; min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg-raise); color: inherit; text-decoration: none;
+}
+a.pf:hover { border-color: var(--accent); text-decoration: none; }
+.pf.next { text-align: right; }
+.pf-d {
+  display: block;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+a.pf:hover .pf-d { color: var(--accent); }
+.pf-n {
+  display: block; margin-top: 5px;
+  font-family: var(--mono); font-size: 11.5px; color: var(--accent);
+}
+.pf-t {
+  /* a long marginal heading would make the two cards very tall for what they
+     are; two lines is enough to know where the link goes */
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-top: 2px;
+  font-family: var(--serif); font-size: 15px; line-height: 1.35;
+}
+.pf.empty {
+  display: grid; place-items: center;
+  border-style: dashed; background: transparent;
+  font-size: 12.5px; color: var(--ink-faint);
+}
+
+@media (max-width: 620px) {
+  .pager-foot { grid-template-columns: 1fr; }
+  .pf.next { text-align: left; }
+}
