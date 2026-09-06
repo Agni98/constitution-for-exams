@@ -340,15 +340,14 @@ p  { margin: 0 0 12px; }
 .art-top .crumbs { margin-bottom: 0; min-width: 0; }
 
 .pager { display: flex; gap: 8px; flex: 0 0 auto; }
-.pager a, .pager .pager-end {
+/* Both ends of this pager are links now: previous and next run through the
+   whole document, so there is no dead end for a .pager-end to style. */
+.pager a {
   font-size: 12.5px; padding: 5px 11px; border-radius: 8px;
   border: 1px solid var(--line); background: var(--bg-raise);
   white-space: nowrap;
 }
 .pager a:hover { border-color: var(--accent); text-decoration: none; }
-.pager .pager-end {
-  color: var(--ink-faint); background: transparent; border-style: dashed;
-}
 
 @media (max-width: 560px) {
   .art-top { flex-direction: column; align-items: stretch; }

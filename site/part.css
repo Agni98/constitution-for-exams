@@ -313,3 +313,12 @@ a.pf:hover .pf-d { color: var(--accent); }
 body.rail-off .part-nav { display: none; }
 body.rail-off .part-split { grid-template-columns: minmax(0, 1fr); }
 body.rail-off .rail-show { display: inline-flex; }
+
+/* A step that lands in another Part says so, and is marked so the change of
+   Part is visible before the click rather than after it. */
+.pf-p {
+  display: block; margin-top: 5px;
+  font-size: 11px; font-weight: 600; color: var(--accent);
+}
+.pf.cross { border-color: color-mix(in srgb, var(--accent) 30%, transparent); }
+.pf.cross .pf-n { color: var(--ink-faint); }

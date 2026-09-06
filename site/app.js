@@ -1176,18 +1176,8 @@
 
     // prev / next sits with the breadcrumbs, so it is reachable without
     // scrolling to the end of a long article
-    var sibs = artsOfPart(a.part);
-    var i = sibs.indexOf(a);
-    var pager = '<div class="pager">' +
-      (i > 0
-        ? '<a href="#/article/' + sibs[i - 1].num + '" title="' + esc(sibs[i - 1].heading) +
-          '">&larr; Art. ' + sibs[i - 1].num + '</a>'
-        : '<span class="pager-end">&larr; start of Part ' + esc(a.part) + '</span>') +
-      (i >= 0 && i < sibs.length - 1
-        ? '<a href="#/article/' + sibs[i + 1].num + '" title="' + esc(sibs[i + 1].heading) +
-          '">Art. ' + sibs[i + 1].num + ' &rarr;</a>'
-        : '<span class="pager-end">end of Part ' + esc(a.part) + ' &rarr;</span>') +
-      '</div>';
+    var nb = neighbours(a);
+    var pager = pagerTop(nb);
 
     var s = '<div class="art-top">' +
       '<div class="crumbs"><a href="#/parts">Parts</a><span>&rsaquo;</span>' +
@@ -1240,7 +1230,7 @@
       s += '</div>';
     }
 
-    s += pagerFoot(sibs, i, a.part);
+    s += pagerFoot(a, nb);
 
     // Inside a Part that has panels, the article is read in the same shell the
     // Part page uses - the rail on the left keeps the section, its articles and
@@ -1253,21 +1243,59 @@
     return s;
   }
 
-  // The pager at the top is a pair of buttons beside the breadcrumb, kept
-  // short. At the foot there is room to say where each one goes, which is
-  // where a reader who has read to the end actually decides.
-  function pagerFoot(sibs, i, part) {
-    function end(t) { return '<span class="pf empty">' + t + '</span>'; }
-    function link(a, dir) {
-      return '<a class="pf ' + dir + '" href="#/article/' + a.num + '">' +
+  /* What comes before and after an article in the document, which is not the
+     same as what comes before and after it in its Part. ARTS is in the order
+     the Constitution prints, so the two ends of it are the only real ends -
+     and each of those leads somewhere too: the Preamble precedes article 1,
+     and the Schedules follow article 395. */
+  function neighbours(a) {
+    var i = ARTS.indexOf(a);
+    return {
+      prev: i > 0 ? ARTS[i - 1] : null,
+      next: (i >= 0 && i < ARTS.length - 1) ? ARTS[i + 1] : null
+    };
+  }
+
+  // The pager beside the breadcrumb stays short: the article number, and the
+  // Part on hover. The two ends of the document read as what they are.
+  function pagerTop(nb) {
+    function art(x, dir) {
+      return '<a href="#/article/' + x.num + '" title="' +
+        esc(partLabel(x.part) + ' \u00b7 ' + x.heading) + '">' +
+        (dir === 'prev' ? '&larr; Art. ' + esc(x.num) : 'Art. ' + esc(x.num) + ' &rarr;') + '</a>';
+    }
+    return '<div class="pager">' +
+      (nb.prev ? art(nb.prev, 'prev')
+        : '<a href="#/preamble" title="The Preamble, which comes before article 1">' +
+          '&larr; Preamble</a>') +
+      (nb.next ? art(nb.next, 'next')
+        : '<a href="#/schedules" title="The twelve Schedules, which follow article 395">' +
+          'Schedules &rarr;</a>') +
+      '</div>';
+  }
+
+  // At the foot there is room to say where each one goes, which is where a
+  // reader who has read to the end actually decides. Landing in a different
+  // Part is worth naming rather than sliding past.
+  function pagerFoot(a, nb) {
+    function to(href, dir, kicker, name, sub) {
+      return '<a class="pf ' + dir + (kicker ? ' cross' : '') + '" href="' + href + '">' +
         '<span class="pf-d">' + (dir === 'prev' ? '&larr; Previous' : 'Next &rarr;') + '</span>' +
-        '<span class="pf-n">Article ' + esc(a.num) + '</span>' +
-        '<span class="pf-t">' + esc(a.heading) + '</span></a>';
+        (kicker ? '<span class="pf-p">' + esc(kicker) + '</span>' : '') +
+        '<span class="pf-n">' + esc(name) + '</span>' +
+        '<span class="pf-t">' + esc(sub) + '</span></a>';
+    }
+    function art(x, dir) {
+      return to('#/article/' + x.num, dir,
+        x.part !== a.part ? partLabel(x.part) : '', 'Article ' + x.num, x.heading);
     }
     return '<nav class="pager-foot" aria-label="Previous and next article">' +
-      (i > 0 ? link(sibs[i - 1], 'prev') : end('Start of Part ' + esc(part))) +
-      (i >= 0 && i < sibs.length - 1 ? link(sibs[i + 1], 'next')
-        : end('End of Part ' + esc(part))) +
+      (nb.prev ? art(nb.prev, 'prev')
+        : to('#/preamble', 'prev', 'Before Part I', 'The Preamble',
+             'The one paragraph the whole document rests on')) +
+      (nb.next ? art(nb.next, 'next')
+        : to('#/schedules', 'next', 'After Part XXII', 'The Schedules',
+             'The twelve lists the articles refer out to')) +
       '</nav>';
   }
 
