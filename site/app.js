@@ -923,7 +923,7 @@
     if (mode === 'article' && secs.length < 2) {
       return '<nav class="part-nav in-article flat" aria-label="Articles of Part ' +
         esc(num) + '">' +
-        '<div class="pn-head">Part ' + esc(num) + ' &middot; articles</div>' +
+        '<div class="pn-head">Part ' + esc(num) + ' &middot; articles' + foldBtn() + '</div>' +
         '<div class="pn-arts open">' + secs[0].arts.map(artLink).join('') + '</div>' +
         // on the Part page itself there is nowhere for an "overview" link to go
         (curNum ? '<a class="pn-item pn-all" href="#/part/' + esc(num) + '">' +
@@ -958,8 +958,20 @@
 
     return '<nav class="part-nav' + (mode === 'article' ? ' in-article' : '') +
       '" aria-label="Sections of Part ' + esc(num) + '">' +
-      '<div class="pn-head">Part ' + esc(num) + ' &middot; sections</div>' +
+      '<div class="pn-head">Part ' + esc(num) + ' &middot; sections' + foldBtn() + '</div>' +
       items + all + '</nav>';
+  }
+
+  // Folding the rail away, and the tab that brings it back. The tab lives in
+  // the body panel and is only visible while the rail is hidden, so there is
+  // always exactly one control on screen.
+  function foldBtn() {
+    return '<button class="pn-fold" type="button" data-rail="off" ' +
+      'aria-label="Hide the section list" title="Hide the section list">&#10094;</button>';
+  }
+  function railTab() {
+    return '<button class="rail-show" type="button" data-rail="on">' +
+      '&#10095; Sections</button>';
   }
 
   // Which section of its Part an article sits in, or -1.
@@ -995,10 +1007,17 @@
              label: 'Part ' + part + ' \u2014 ' + title(p ? p.title : '') };
   }
 
-  function sectionMap(part, g) {
+  // openByDefault: on a Part page the map is what the reader came for, so it
+  // starts open; beside an article it starts folded. Either way, once the
+  // reader has toggled it their choice is what counts.
+  function sectionMap(part, g, openByDefault) {
     var got = articleMap(part, g);
     if (!got) return '';
-    var open = !!MAP_OPEN[got.key];
+    // On a phone an open map puts the articles two screens down, so the Part
+    // page opens it only where there is room. Once the reader has toggled it,
+    // their choice wins on any width.
+    var wide = !window.matchMedia('(max-width: 900px)').matches;
+    var open = (got.key in MAP_OPEN) ? MAP_OPEN[got.key] : (!!openByDefault && wide);
     return '<div class="secmap' + (open ? ' on' : '') + '">' +
       '<button class="secmap-t" type="button" data-mapkey="' + esc(got.key) + '">' +
       '<span class="sm-ico">&#9635;</span>' +
@@ -1043,23 +1062,17 @@
     if (split) {
       var showAll = want === 'all';
       var active = showAll ? -1 : Math.min(Math.max(parseInt(want, 10) || 0, 0), secs.length - 1);
-      var whole = MAPS['part' + num];
-      if (whole) {
-        s += tag('Picture it', 'written') +
-          diagrams(whole);
-      }
       s += '<div class="part-split">';
       s += partRail(num, secs, showAll ? -1 : active, 'part');
 
-      s += '<div class="part-body">' + secs.map(function (g, i) {
-        var m = MAPS[g.mapKey];
+      s += '<div class="part-body">' + railTab() + secs.map(function (g, i) {
         return '<section class="part-sec" data-sec="' + i + '"' +
           (showAll || i === active ? '' : ' hidden') + '>' +
           '<div class="ps-head"><h2>' + esc(g.label) + '</h2>' +
           '<p class="sm">' + (g.chapLine ? esc(g.chapLine) + ' &middot; ' : '') +
           g.arts.length + ' article' + (g.arts.length === 1 ? '' : 's') +
           ' &middot; ' + esc(g.range) + '</p></div>' +
-          (m ? tag('Picture it', 'written') + diagrams(m, true) : '') +
+          sectionMap(num, g, true) +
           g.arts.map(artRow).join('') +
           '</section>';
       }).join('') + '</div></div>';
@@ -1072,12 +1085,16 @@
     // A Part with no sections still gets the two panels, so that moving from
     // The Union to Citizenship does not make the left column vanish. Its rail
     // lists articles rather than sections, which is all it has.
-    var flatRail = list.length >= 2 ? partRail(num, secs, 0, 'article', null) : '';
+    // Every Part page carries the rail, including the three that are one article
+    // long. A one-item rail looks thin, but a Part page that alone has no left
+    // column looks broken - and on this page the rail lists an article you are
+    // not on, which is not the same as the article page, where it would list
+    // back the one you are reading.
+    var flatRail = list.length ? partRail(num, secs, 0, 'article', null) : '';
     var body = '';
 
-    var map = MAPS['part' + num] || autoPartMap(num);
-    if (map) body += diagrams(map);
-
+    if (flatRail) body += railTab();
+    body += sectionMap(num, secs[0], true);
     body += tag('Articles');
     var lastGroup = null, lastChapter = null;
     list.forEach(function (a) {
@@ -1231,7 +1248,7 @@
     if (railed) {
       return '<div class="part-split art-split">' +
         partRail(a.part, secs, mySec, 'article', a.num) +
-        '<div class="part-body">' + s + '</div></div>';
+        '<div class="part-body">' + railTab() + s + '</div></div>';
     }
     return s;
   }
@@ -2094,6 +2111,13 @@
         });
         return;
       }
+      var railBtn = e.target.closest && e.target.closest('[data-rail]');
+      if (railBtn) {
+        var off = railBtn.getAttribute('data-rail') === 'off';
+        document.body.classList.toggle('rail-off', off);
+        try { localStorage.setItem('coi-rail', off ? 'off' : 'on'); } catch (err) { /* private mode */ }
+        return;
+      }
       var mapT = e.target.closest && e.target.closest('.secmap-t');
       if (mapT) {
         var key = mapT.getAttribute('data-mapkey');
@@ -2164,7 +2188,8 @@
 
     try {
       if (localStorage.getItem('coi-side') === 'off') document.body.classList.add('side-off');
-    } catch (err) { /* private mode - start with the sidebar showing */ }
+      if (localStorage.getItem('coi-rail') === 'off') document.body.classList.add('rail-off');
+    } catch (err) { /* private mode - start with both panels showing */ }
 
     var btn = $('#themeBtn');
     var saved = null;

@@ -35,7 +35,7 @@ of showing you nothing.
 | **Preamble** | Bare text, the 42nd Amendment footnotes, and a mind map of what it is doing |
 | **All Parts** | 26 Parts, I to XXII including IVA, IXA, IXB and XIVA — and VII, repealed whole |
 | **Article page** | *What it says* → **bare text as printed** → *The catch* → *Worth knowing* → diagram → landmark judgments → *What the examiners ask* → amendment footnotes → cross-links. The plain reading comes first, so you meet the provision already knowing roughly what it does |
-| **Part page** | Every Part with more than one article opens as two panels. Where the Part has chapters or group headings they fill the left panel and one section’s articles the right — The Union splits into the President, the Council of Ministers, Parliament, the ordinance power, the Supreme Court and the CAG. Where it has neither, the left panel lists its articles instead, so moving from The Union to Citizenship never makes the column vanish. A section has its own address: `#/part/V/13` opens the Union Judiciary, `#/part/V/all` opens the lot |
+| **Part page** | Every Part opens the same way: breadcrumb, title, two panels. Where the Part has chapters or group headings they fill the left rail and one section’s articles the right; where it has neither, the rail lists its articles. The mind map is a fold-away strip inside the panel — open on a wide screen, folded on a phone — so the shape of the page does not change from Part to Part. A section has its own address: `#/part/V/13` opens the Union Judiciary, `#/part/V/all` opens the lot |
 | **Reading an article** | Every article is read **in the same shell**. The rail stays on the left with its section open and every article in it listed, so you move article to article without leaving the section — and the mind map is a strip under the breadcrumb that stays open, once opened, for every article in that section. Previous and next sit at both ends: short buttons beside the breadcrumb, and at the foot two cards naming the article each one leads to |
 | **Cross-references** | Every article and amendment named on a page opens **in place**. Reading article 368 and hit the 24th Amendment? Click it and what it did, when it commenced and which articles it touched unfold under the line, without losing your place |
 | **Schedules** | All twelve, including the three legislative Lists and the 22 languages |
@@ -45,8 +45,9 @@ of showing you nothing.
 | **Mind maps & flows** | 46 hand-drawn diagrams. A short Part gets one map for the whole of it — Part III's six categories of rights fit on a page. A long one gets a map per section instead, drawn where that section is read, and carried into every article of that section. Every Part also gets one generated from the data |
 | **About & sources** | What the site is and is not, where the text came from, what has been verified, the licence, and how to report an error |
 
-The site sidebar folds away with the **☰** button in the top bar, at any width, and the
-choice is remembered — two panels and a wide diagram both want the room.
+Both left columns fold away and both remember the choice: the site sidebar with the **☰**
+button in the top bar, and the section rail with the chevron in its own header. Folding both
+gives the reading column the full width — 583px to 1163px at a 1280px window.
 
 Search (`/` to focus) covers article numbers and headings, the bare text, the Schedules, the
 plain-language explanations, the landmark judgments and the exam notes. Typing `21` jumps to

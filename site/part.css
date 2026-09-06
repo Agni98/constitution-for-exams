@@ -284,3 +284,32 @@ a.pf:hover .pf-d { color: var(--accent); }
   .pager-foot { grid-template-columns: 1fr; }
   .pf.next { text-align: left; }
 }
+
+/* ---------- folding the section rail away ----------
+   The site sidebar folds with the menu button; this is the same move one level
+   in. Exactly one control is on screen at a time: the chevron in the rail head
+   while the rail is open, the tab in the body panel while it is not. */
+
+.pn-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.pn-fold {
+  flex: 0 0 auto;
+  width: 22px; height: 22px; display: grid; place-items: center;
+  font: inherit; font-size: 10px; line-height: 1; cursor: pointer;
+  border: 1px solid transparent; border-radius: 6px;
+  background: transparent; color: var(--ink-faint);
+}
+.pn-fold:hover { background: var(--bg-sunk); color: var(--accent); border-color: var(--line); }
+
+.rail-show {
+  display: none;
+  align-items: center; gap: 6px;
+  margin-bottom: 14px; padding: 5px 11px;
+  font: inherit; font-size: 12px; cursor: pointer;
+  border: 1px dashed var(--line); border-radius: 999px;
+  background: transparent; color: var(--ink-faint);
+}
+.rail-show:hover { border-style: solid; border-color: var(--accent); color: var(--accent); }
+
+body.rail-off .part-nav { display: none; }
+body.rail-off .part-split { grid-template-columns: minmax(0, 1fr); }
+body.rail-off .rail-show { display: inline-flex; }
