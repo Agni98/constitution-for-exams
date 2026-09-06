@@ -11,6 +11,8 @@
   var AMETA     = window.COI_AMEND_META || {};
   var EXPLAIN   = window.COI_EXPLAIN || {};
   var MAPS      = window.COI_MAPS || {};
+  var PAPERS    = window.COI_PAPERS || {};
+  var PAPERS_URL = window.COI_PAPERS_INDEX || 'https://upsc.gov.in/';
   var CASES     = window.COI_CASES || {};
   var EXAM      = window.COI_EXAM || {};
 
@@ -1328,7 +1330,7 @@
     if (!x) return '';
     return [x.why, (x.concepts || []).map(function (c) {
       return typeof c === 'string' ? c : (c.t || '') + ' ' + (c.d || '');
-    }).join(' '), (x.seen || []).join(' '), x.trap,
+    }).join(' '), (x.seen || []).map(function (c) { return sighting(c).text; }).join(' '), x.trap,
       (x.papers || []).join(' ')].join(' ');
   }
 
@@ -1379,6 +1381,45 @@
     return s;
   }
 
+  /* A sighting is either a bare string, which is uncited, or
+     { s: text, p: paper key, q: question number }, which is cited. Everything
+     that reads the field goes through here so the two shapes never have to be
+     handled twice. */
+  function sighting(c) {
+    if (typeof c === 'string') return { text: c, cited: false };
+    var paper = c.p ? PAPERS[c.p] : null;
+    return {
+      text: c.s || '',
+      cited: !!c.p,
+      key: c.p || '',
+      q: c.q || '',
+      // a key with no entry in papers.js is a dangling reference: still shown,
+      // but not as a link, and check_citations.py fails on it
+      name: paper ? paper.name : (c.p || ''),
+      url: paper ? paper.url : ''
+    };
+  }
+
+  function sightingLI(c) {
+    var g = sighting(c);
+    var li = '<li>' + esc(g.text);
+    if (g.cited) {
+      var label = (g.q ? 'Q' + esc(g.q) + ' &middot; ' : '') + esc(g.name);
+      li += g.url
+        ? ' <a class="cite" href="' + esc(g.url) + '" target="_blank" rel="noopener" ' +
+          'title="Open the paper at upsc.gov.in">' + label + ' &#8599;</a>'
+        : ' <span class="cite pending" title="No URL for this paper in ' +
+          'site/data/papers.js yet">' + label + '</span>';
+    }
+    return li + '</li>';
+  }
+
+  // How many of a set of sightings carry a citation. Printed rather than
+  // claimed, so the page cannot drift from the data.
+  function citedCount(list) {
+    return (list || []).filter(function (c) { return sighting(c).cited; }).length;
+  }
+
   // A concept is { t: the point, d: what it means, explained }. A bare string
   // still renders, as the point with nothing after it.
   function conceptLI(c) {
@@ -1395,8 +1436,11 @@
         '<ul class="exam-list">' + entry.concepts.map(conceptLI).join('') + '</ul></div>';
     }
     if (entry.seen && entry.seen.length) {
-      s += '<div class="exam-sec"><h5>Seen in the papers</h5><ul class="exam-list seen">' +
-        entry.seen.map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('') +
+      var nc = citedCount(entry.seen);
+      s += '<div class="exam-sec"><h5>Seen in the papers' +
+        '<span class="cite-count' + (nc ? ' some' : '') + '">' + nc + ' of ' +
+        entry.seen.length + ' cited</span></h5>' +
+        '<ul class="exam-list seen">' + entry.seen.map(sightingLI).join('') +
         '</ul></div>';
     }
     if (entry.trap) s += '<div class="exam-trap"><h5>&#9888; Where the mark is lost</h5>' +
@@ -1505,8 +1549,26 @@
       'A sighting listed by year records that the year&rsquo;s paper carried a question on that ' +
       'subject — it is not a claim about a numbered question, and it is not quoted from one. ' +
       'For the questions themselves, go to the official papers on upsc.gov.in.</p>' +
+      '<p>A sighting can carry a citation — the paper, the question number and a link to it. ' +
+      'Right now <strong>' + examCited() + ' of ' + examSightings() + '</strong> do. That number ' +
+      'is counted from the data every time this page is drawn, so it cannot drift from the ' +
+      'truth: a citation appears here only once somebody has opened the actual paper and read ' +
+      'the question. <a href="' + esc(PAPERS_URL) + '" target="_blank" rel="noopener">' +
+      'Previous question papers at upsc.gov.in &rarr;</a></p>' +
       '</div>';
     return s;
+  }
+
+  // Totals across the whole exam dataset, counted rather than recorded.
+  function examSightings() {
+    return Object.keys(EXAM).reduce(function (n, k) {
+      return n + ((EXAM[k].seen || []).length);
+    }, 0);
+  }
+  function examCited() {
+    return Object.keys(EXAM).reduce(function (n, k) {
+      return n + citedCount(EXAM[k].seen);
+    }, 0);
   }
 
   function filterExam() {

@@ -41,7 +41,7 @@ of showing you nothing.
 | **Schedules** | All twelve, including the three legislative Lists and the 22 languages |
 | **Amendments** | All 106, each with what it did and which articles it touched |
 | **Landmark judgments** | 125 cases across 63 articles as a filterable card grid; click a card to read the judgment in an overlay without leaving the page |
-| **What the examiners ask** | 150 articles, the Preamble and eight Schedules ranked by exam weight, filterable by keyword and by tier; click a row to read the whole note in a panel without leaving the list |
+| **What the examiners ask** | 150 articles, the Preamble and eight Schedules ranked by exam weight, filterable by keyword and by tier; click a row to read the whole note in a panel without leaving the list. Each sighting can carry a citation — paper, question number, link — and every heading prints how many of its sightings actually do |
 | **Mind maps & flows** | 46 hand-drawn diagrams. A short Part gets one map for the whole of it — Part III's six categories of rights fit on a page. A long one gets a map per section instead, drawn where that section is read, and carried into every article of that section. Every Part also gets one generated from the data |
 | **About & sources** | What the site is and is not, where the text came from, what has been verified, the licence, and how to report an error |
 
@@ -183,6 +183,37 @@ page and in the sidebar de-duplicate by case name, so adding a cross-listing doe
 them. Any `Article 21`-style reference inside these fields is auto-linked, and the whole text
 is included in search.
 
+## Citing a question paper
+
+Every sighting under **Seen in the papers** is one of two shapes:
+
+```js
+"UPSC Pre 2021 — birth-based citizenship"                    // uncited
+{ s: "UPSC Pre 2021 — birth-based citizenship",              // cited
+  p: "CSP-2021-GS1", q: "42" }
+```
+
+`p` is a key in `site/data/papers.js`, which holds the paper's name and its URL once
+rather than on every sighting that mentions it. The heading of each block prints the
+count — *0 of 6 cited* — and the note at `#/exam` prints the total, both counted from the
+data as the page is drawn, so neither can drift from what is actually there.
+
+**The registry ships empty, and that is deliberate.** Every sighting in the dataset was
+written from recollection of the papers rather than transcribed from them. A citation
+generated from that same recollection would be worth nothing: it would make an unverified
+claim look verified, which is worse than leaving it plainly unverified. A citation belongs
+in the file once somebody has opened the actual paper and read the question. Papers are at
+<https://upsc.gov.in/examinations/previous-question-papers>.
+
+```bash
+python constitution/build/check_citations.py
+```
+
+reports coverage and **fails** on a citation nobody could follow — a paper key with no
+entry in the registry, an entry with no usable URL, or a cited sighting with no text. It
+does not check that a citation is *correct*; nothing automated can. A paper key that has
+no URL yet still renders, as plain text rather than a dead link.
+
 ## Editing what the examiners ask
 
 `site/data/exam-1.js` … `exam-4.js`, keyed by article number, or `preamble`, or `schX`. One
@@ -277,5 +308,6 @@ constitution/
   source/     the downloaded PDFs and the extracted plain text
   build/      the parsers, the intermediate JSON, and verify.py
   site/       the website — open index.html
-    data/     generated data + hand-written explanations, judgments, diagrams and exam notes
+    data/     generated data + hand-written explanations, judgments, diagrams and exam
+              notes; papers.js is the registry a citation points into
 ```

@@ -202,3 +202,37 @@
 .sheet .exam-why em,
 .sheet .exam-list em,
 .sheet .exam-trap em { font-style: normal; font-weight: 650; color: var(--accent); }
+
+/* ---------- citations on a sighting ----------
+   A sighting either points at a paper or it does not, and the heading says how
+   many of each. The count is the honest part: with none cited it reads
+   "0 of 3 cited", which is the state the dataset is actually in. */
+
+.exam-sec h5 { display: flex; align-items: baseline; gap: 10px; }
+.cite-count {
+  flex: 0 0 auto;
+  font-family: var(--mono); font-size: 9.5px; font-weight: 600;
+  letter-spacing: .04em; text-transform: none;
+  padding: 2px 7px; border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-faint); background: var(--bg-sunk);
+}
+.cite-count.some {
+  color: var(--green); border-color: color-mix(in srgb, var(--green) 40%, transparent);
+  background: var(--green-soft);
+}
+
+.cite {
+  display: inline-block; margin-left: 6px; white-space: nowrap;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .02em;
+  padding: 1px 7px; border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  background: var(--accent-soft); color: var(--accent);
+  text-decoration: none;
+}
+a.cite:hover { border-color: var(--accent); text-decoration: none; }
+/* a paper named on a sighting but missing from papers.js: shown, never linked */
+.cite.pending {
+  border-style: dashed; background: transparent; color: var(--ink-faint);
+  border-color: var(--line);
+}
