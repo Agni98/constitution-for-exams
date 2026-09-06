@@ -1007,17 +1007,15 @@
              label: 'Part ' + part + ' \u2014 ' + title(p ? p.title : '') };
   }
 
-  // openByDefault: on a Part page the map is what the reader came for, so it
-  // starts open; beside an article it starts folded. Either way, once the
-  // reader has toggled it their choice is what counts.
-  function sectionMap(part, g, openByDefault) {
+  /* The map is offered, not imposed. Opened by default it is 1040px of
+     diagram standing between a section heading and the two articles under it,
+     which made Part III's "General" look like a section with nothing in it.
+     It sits before the articles, as asked, but folded - and once opened it
+     stays open for that section, here and on every article inside it. */
+  function sectionMap(part, g) {
     var got = articleMap(part, g);
     if (!got) return '';
-    // On a phone an open map puts the articles two screens down, so the Part
-    // page opens it only where there is room. Once the reader has toggled it,
-    // their choice wins on any width.
-    var wide = !window.matchMedia('(max-width: 900px)').matches;
-    var open = (got.key in MAP_OPEN) ? MAP_OPEN[got.key] : (!!openByDefault && wide);
+    var open = !!MAP_OPEN[got.key];
     return '<div class="secmap' + (open ? ' on' : '') + '">' +
       '<button class="secmap-t" type="button" data-mapkey="' + esc(got.key) + '">' +
       '<svg class="sm-ico" viewBox="0 0 30 22" fill="none" aria-hidden="true">' +
@@ -1081,7 +1079,7 @@
           '<p class="sm">' + (g.chapLine ? esc(g.chapLine) + ' &middot; ' : '') +
           g.arts.length + ' article' + (g.arts.length === 1 ? '' : 's') +
           ' &middot; ' + esc(g.range) + '</p></div>' +
-          sectionMap(num, g, true) +
+          sectionMap(num, g) +
           g.arts.map(artRow).join('') +
           '</section>';
       }).join('') + '</div></div>';
@@ -1103,7 +1101,7 @@
     var body = '';
 
     if (flatRail) body += railTab();
-    body += sectionMap(num, secs[0], true);
+    body += sectionMap(num, secs[0]);
     body += tag('Articles');
     var lastGroup = null, lastChapter = null;
     list.forEach(function (a) {
