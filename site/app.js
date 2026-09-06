@@ -969,9 +969,18 @@
     return '<button class="pn-fold" type="button" data-rail="off" ' +
       'aria-label="Hide the section list" title="Hide the section list">&#10094;</button>';
   }
-  function railTab() {
-    return '<button class="rail-show" type="button" data-rail="on">' +
-      '&#10095; Sections</button>';
+  // What is behind the tab, and how much of it. A reader who folded the rail
+  // ten pages ago should not have to remember what "Sections" meant.
+  function railTab(kind, n, num) {
+    return '<button class="rail-show" type="button" data-rail="on" ' +
+      'title="Bring back the list on the left">' +
+      '<svg class="rt-ico" viewBox="0 0 18 14" fill="none" aria-hidden="true">' +
+      '<rect x=".75" y=".75" width="16.5" height="12.5" rx="2" stroke="currentColor" stroke-width="1.4"/>' +
+      '<path d="M6.5 1v12" stroke="currentColor" stroke-width="1.4"/>' +
+      '<path d="M2.7 4.3h1.9M2.7 7h1.9M2.7 9.7h1.9" stroke="currentColor" ' +
+      'stroke-width="1.2" stroke-linecap="round"/></svg>' +
+      '<span class="rt-t">Show all ' + n + ' ' + esc(kind) + ' of Part ' + esc(num) + '</span>' +
+      '<span class="rt-x">&#10095;</span></button>';
   }
 
   // Which section of its Part an article sits in, or -1.
@@ -1072,7 +1081,9 @@
       s += '<div class="part-split">';
       s += partRail(num, secs, showAll ? -1 : active, 'part');
 
-      s += '<div class="part-body">' + railTab() + secs.map(function (g, i) {
+      s += '<div class="part-body">' +
+        railTab(secs.length === 1 ? 'section' : 'sections', secs.length, num) +
+        secs.map(function (g, i) {
         return '<section class="part-sec" data-sec="' + i + '"' +
           (showAll || i === active ? '' : ' hidden') + '>' +
           '<div class="ps-head"><h2>' + esc(g.label) + '</h2>' +
@@ -1100,7 +1111,7 @@
     var flatRail = list.length ? partRail(num, secs, 0, 'article', null) : '';
     var body = '';
 
-    if (flatRail) body += railTab();
+    if (flatRail) body += railTab(list.length === 1 ? 'article' : 'articles', list.length, num);
     body += sectionMap(num, secs[0]);
     body += tag('Articles');
     var lastGroup = null, lastChapter = null;
@@ -1245,7 +1256,10 @@
     if (railed) {
       return '<div class="part-split art-split">' +
         partRail(a.part, secs, mySec, 'article', a.num) +
-        '<div class="part-body">' + railTab() + s + '</div></div>';
+        '<div class="part-body">' +
+        (secs.length > 1 ? railTab('sections', secs.length, a.part)
+          : railTab('articles', artsOfPart(a.part).length, a.part)) +
+        s + '</div></div>';
     }
     return s;
   }

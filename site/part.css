@@ -305,15 +305,25 @@ a.pf:hover .pf-d { color: var(--accent); }
 }
 .pn-fold:hover { background: var(--bg-sunk); color: var(--accent); border-color: var(--line); }
 
+/* The only way back to the folded rail, so it is the accent colour and it
+   names what it opens. Faint grey and the word "Sections" left a reader to
+   guess at both. */
 .rail-show {
   display: none;
-  align-items: center; gap: 6px;
-  margin-bottom: 14px; padding: 5px 11px;
-  font: inherit; font-size: 12px; cursor: pointer;
-  border: 1px dashed var(--line); border-radius: 999px;
-  background: transparent; color: var(--ink-faint);
+  align-items: center; gap: 9px;
+  margin-bottom: 16px; padding: 8px 14px;
+  font: inherit; font-size: 13px; cursor: pointer;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: var(--radius);
+  background: var(--accent-soft); color: var(--accent);
 }
-.rail-show:hover { border-style: solid; border-color: var(--accent); color: var(--accent); }
+.rail-show:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+}
+.rt-ico { flex: 0 0 auto; width: 18px; height: 14px; display: block; }
+.rt-t { font-weight: 600; }
+.rt-x { font-size: 10px; opacity: .7; }
 
 body.rail-off .part-nav { display: none; }
 body.rail-off .part-split { grid-template-columns: minmax(0, 1fr); }
