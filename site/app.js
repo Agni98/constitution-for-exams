@@ -2099,6 +2099,15 @@
     // the case grid: open a card, filter, re-sort — all by delegation, so it
     // survives every re-render of main
     document.addEventListener('click', function (e) {
+      // Any sidebar link gets out of the way on a narrow screen. route() used
+      // to be the only thing that closed the drawer, and route() runs on
+      // hashchange - which never fires when the link points at the hash you
+      // are already on. Tapping "The Union" while already on The Union left
+      // the drawer covering the whole page. Closing it here covers both cases,
+      // and on a wide screen the class is not in play at all.
+      if (e.target.closest && e.target.closest('.sidebar a')) {
+        document.body.classList.remove('nav-open');
+      }
       if (e.target.closest && e.target.closest('[data-close]')) { closeSheet(); return; }
       var card = e.target.closest && e.target.closest('.case-card');
       if (card) { openCase(+card.getAttribute('data-ci')); return; }
