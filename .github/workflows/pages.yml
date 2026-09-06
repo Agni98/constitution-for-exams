@@ -1,0 +1,45 @@
+# Publish the site to GitHub Pages.
+#
+# Pages can serve a branch only from its root or from /docs, and the site lives
+# in site/. Rather than move it and break every path in the repo, this uploads
+# site/ as the artifact and deploys that - which is also the only way to publish
+# a subdirectory without restructuring.
+#
+# There is no build step by design: every data file ships as a .js file so that
+# site/index.html opens straight from file://. So this copies, it does not
+# compile, and what is served is byte-for-byte what is in the repository.
+
+name: Deploy the site to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:        # so a deploy can be re-run without a commit
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it half-published.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
