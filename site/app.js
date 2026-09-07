@@ -2139,7 +2139,14 @@
     markActive(h);
     document.body.classList.remove('nav-open');
     if (!h.startsWith('#/search')) window.scrollTo(0, 0);
-    main.focus({ preventScroll: true });
+    // Moving focus to the new content is right when a link was followed and
+    // wrong while somebody is typing. The search box navigates on every
+    // keystroke, so focusing main here took the caret out of the box and the
+    // next letter went nowhere - you had to click back in for each character.
+    var ae = document.activeElement;
+    if (!(ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA' || ae.isContentEditable))) {
+      main.focus({ preventScroll: true });
+    }
     if (h === '#/cases') filterCases();
     if (h === '#/exam') filterExam();
 
