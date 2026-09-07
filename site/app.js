@@ -1255,7 +1255,7 @@
     });
     s += '</div></div>';
 
-    var bare = '<div class="bare">' +
+    var bare = tag('Bare text') + '<div class="bare">' +
       a.paras.map(function (p) {
         return '<p class="l' + (p.lvl || 0) + '">' + bareHTML(p.t, a.notes) + '</p>';
       }).join('') + '</div>';
