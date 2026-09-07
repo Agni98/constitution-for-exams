@@ -414,6 +414,45 @@
       esc(label) + '</span>' + (count ? '<span class="ct">' + count + '</span>' : '') + '</a>';
   }
 
+  /* The rail follows the page. With every section on screen at once the rail
+     is a table of contents, and a table of contents that does not say where
+     you are is a list of links. One observer per render, replaced rather than
+     stacked, because #main is rebuilt on every route. */
+  var SPY = null, SPY_LOCK = 0;
+  function markSection(i) {
+    document.querySelectorAll('.pn-item[data-goto]').forEach(function (b) {
+      b.classList.toggle('on', b.getAttribute('data-goto') === String(i));
+    });
+  }
+
+  function partSpy(hash) {
+    if (SPY) { SPY.disconnect(); SPY = null; }
+    var secs = document.querySelectorAll('#main .part-sec[id^="sec-"]');
+    if (!secs.length || !window.IntersectionObserver) return;
+
+    SPY = new IntersectionObserver(function (entries) {
+      // A click on the rail scrolls, and a smooth scroll crosses every section
+      // between here and there. Without this the marker chases the scroll and
+      // lands back on whatever the observer saw last, not on what was clicked.
+      if (Date.now() < SPY_LOCK) return;
+      entries.forEach(function (e) {
+        if (e.isIntersecting) markSection(e.target.getAttribute('data-sec'));
+      });
+    }, { rootMargin: '-70px 0px -70% 0px', threshold: 0 });
+    secs.forEach(function (sec) { SPY.observe(sec); });
+
+    // A section in the address is a place to start reading, not a filter.
+    var m = hash.match(/^#\/part\/[^\/]+\/(\d+)$/);
+    if (m) {
+      var target = document.getElementById('sec-' + m[1]);
+      if (target) {
+        SPY_LOCK = Date.now() + 400;
+        markSection(m[1]);
+        window.scrollTo(0, Math.max(0, target.getBoundingClientRect().top + window.scrollY - 74));
+      }
+    }
+  }
+
   function markActive(hash) {
     var best = null;
     // An article now reads inside its Part's shell, so the Part it belongs to
@@ -938,7 +977,7 @@
         '<span class="pn-t">' + esc(g.label) + '</span>' +
         '<span class="pn-n">' + g.arts.length + '</span>';
       var head = mode === 'part'
-        ? '<button class="pn-item' + (on ? ' on' : '') + '" type="button" data-sec="' + i +
+        ? '<button class="pn-item' + (on ? ' on' : '') + '" type="button" data-goto="' + i +
           '">' + inner + '</button>'
         : '<a class="pn-item' + (on ? ' on' : '') + '" href="#/part/' + esc(num) + '/' + i +
           '">' + inner + '</a>';
@@ -948,13 +987,13 @@
       return head;
     }).join('');
 
-    var all = mode === 'part'
-      ? '<button class="pn-item pn-all" type="button" data-sec="all">' +
-        '<span class="pn-t">Show every article</span><span class="pn-n">' + total +
-        '</span></button>'
-      : '<a class="pn-item pn-all" href="#/part/' + esc(num) + '/all">' +
-        '<span class="pn-t">Show every article</span><span class="pn-n">' + total +
-        '</span></a>';
+    // On a Part page every article is already on the page, so there is nothing
+    // for "show every article" to do. From an article, it is still the way back
+    // to the Part as a whole.
+    var all = mode === 'part' ? ''
+      : '<a class="pn-item pn-all" href="#/part/' + esc(num) + '">' +
+        '<span class="pn-t">The whole of Part ' + esc(num) + '</span>' +
+        '<span class="pn-n">' + total + '</span></a>';
 
     return '<nav class="part-nav' + (mode === 'article' ? ' in-article' : '') +
       '" aria-label="Sections of Part ' + esc(num) + '">' +
@@ -1076,27 +1115,25 @@
     // on the left, the articles of one section on the right. A short, flat
     // Part does not need that and gets the plain list.
     if (split) {
-      var showAll = want === 'all';
-      var active = showAll ? -1 : Math.min(Math.max(parseInt(want, 10) || 0, 0), secs.length - 1);
+      // Which section the rail starts on. Nothing is hidden either way: a
+      // section in the address is somewhere to scroll to, not a filter.
+      var active = want === 'all' ? 0
+        : Math.min(Math.max(parseInt(want, 10) || 0, 0), secs.length - 1);
       s += '<div class="part-split">';
-      s += partRail(num, secs, showAll ? -1 : active, 'part');
+      s += partRail(num, secs, active, 'part');
 
       s += '<div class="part-body">' +
         railTab(secs.length === 1 ? 'section' : 'sections', secs.length, num) +
         secs.map(function (g, i) {
-        return '<section class="part-sec" data-sec="' + i + '"' +
-          (showAll || i === active ? '' : ' hidden') + '>' +
-          '<div class="ps-head"><h2>' + esc(g.label) + '</h2>' +
-          '<p class="sm">' + (g.chapLine ? esc(g.chapLine) + ' &middot; ' : '') +
-          g.arts.length + ' article' + (g.arts.length === 1 ? '' : 's') +
-          ' &middot; ' + esc(g.range) + '</p></div>' +
-          sectionMap(num, g) +
-          g.arts.map(artRow).join('') +
-          '</section>';
-      }).join('') + '</div></div>';
-      if (showAll) {
-        s = s.replace('class="pn-item pn-all"', 'class="pn-item pn-all on"');
-      }
+          return '<section class="part-sec" id="sec-' + i + '" data-sec="' + i + '">' +
+            '<div class="ps-head"><h2>' + esc(g.label) + '</h2>' +
+            '<p class="sm">' + (g.chapLine ? esc(g.chapLine) + ' &middot; ' : '') +
+            g.arts.length + ' article' + (g.arts.length === 1 ? '' : 's') +
+            ' &middot; ' + esc(g.range) + '</p></div>' +
+            sectionMap(num, g) +
+            g.arts.map(artRow).join('') +
+            '</section>';
+        }).join('') + '</div></div>';
       return s;
     }
 
@@ -2104,6 +2141,8 @@
     if (h === '#/cases') filterCases();
     if (h === '#/exam') filterExam();
 
+    partSpy(h);
+
     // The rail scrolls independently of the page, so on a long section the
     // article being read can sit below its fold. Bring it into the rail
     // without moving the page itself.
@@ -2188,19 +2227,17 @@
         MAP_OPEN[key] = nowOpen;
         return;
       }
-      // Only a Part page's rail switches panels in place; on an article page
-      // the same items are ordinary links and must be left alone.
-      var pn = e.target.closest && e.target.closest('.pn-item[data-sec]');
+      // Only a Part page's rail scrolls the page; on an article page the same
+      // items are ordinary links and must be left alone.
+      var pn = e.target.closest && e.target.closest('.pn-item[data-goto]');
       if (pn) {
-        var want = pn.getAttribute('data-sec');
-        document.querySelectorAll('.pn-item').forEach(function (b) {
-          b.classList.toggle('on', b === pn);
-        });
-        document.querySelectorAll('.part-sec').forEach(function (sec) {
-          sec.hidden = !(want === 'all' || sec.getAttribute('data-sec') === want);
-        });
-        var body = document.querySelector('.part-body');
-        if (body) window.scrollTo(0, Math.max(0, body.getBoundingClientRect().top + window.scrollY - 80));
+        var sec = document.getElementById('sec-' + pn.getAttribute('data-goto'));
+        if (sec) {
+          SPY_LOCK = Date.now() + 900;
+          markSection(pn.getAttribute('data-goto'));
+          window.scrollTo({ top: Math.max(0, sec.getBoundingClientRect().top + window.scrollY - 74),
+                            behavior: 'smooth' });
+        }
         return;
       }
       var peekBtn = e.target.closest && e.target.closest('.chip.peek');
