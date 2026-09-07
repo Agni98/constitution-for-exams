@@ -237,6 +237,14 @@ p  { margin: 0 0 12px; }
    than not wrapping at all. */
 .pill.grey { white-space: normal; border-radius: 12px; text-align: left; }
 .pill.grey  { background: var(--bg-sunk); color: var(--ink-faint); border-color: var(--line); }
+/* In force, said with a dot. It is the state 471 of the 506 articles are in,
+   so spelling it out on every one of them was noise. */
+.live {
+  flex: 0 0 auto; align-self: center;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 18%, transparent);
+}
 .pill.green { background: var(--green-soft); color: var(--green); }
 .pill.blue  { background: var(--blue-soft); color: var(--blue); }
 .pill.amber { background: var(--amber-soft); color: var(--amber); }
@@ -296,6 +304,8 @@ p  { margin: 0 0 12px; }
 }
 .section-tag::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 
+/* No heading above it any more, so it spaces itself off the title. */
+.art-head + .explain { margin-top: 20px; }
 .explain { display: grid; gap: 14px; }
 
 .panel {

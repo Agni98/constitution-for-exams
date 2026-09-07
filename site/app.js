@@ -640,17 +640,19 @@
 
     /* ---- confidence key ---- */
     s += tag('How much to trust each part');
-    s += '<p class="lede sm">Every section heading on this site carries one of two ' +
-      'markers. They mean what they say.</p>';
+    s += '<p class="lede sm">Two kinds of writing sit on this site and they are not ' +
+      'worth the same. You can tell them apart by how they are set.</p>';
     s += '<div class="conf-key">' +
-      '<div class="conf-row"><span class="conf src">official text</span>' +
-      '<p>Reproduced from the official PDF and machine-checked against it. The bare ' +
-      'text of every article, the Schedules, and the amendment footnotes. This is the ' +
-      'strongest material on the site — see the verification figures below.</p></div>' +
-      '<div class="conf-row"><span class="conf own">written for this site</span>' +
-      '<p>Commentary: the plain-language readings, the landmark-judgment summaries, ' +
-      'the exam notes and the diagrams. Checked, but written by hand and therefore ' +
-      'capable of being wrong in a way the bare text is not.</p></div>' +
+      '<div class="conf-row"><span class="conf src">the bare text</span>' +
+      '<p>Set in serif, unboxed, and reproduced exactly as printed — footnote markers ' +
+      'and all. Every article, the Schedules and the amendment footnotes come straight ' +
+      'from the official PDF and are machine-checked against it. This is the strongest ' +
+      'material here; the verification figures are below.</p></div>' +
+      '<div class="conf-row"><span class="conf own">everything in a panel</span>' +
+      '<p>Commentary, written for this site: the plain-language readings, the catch, ' +
+      'the landmark-judgment summaries, the exam notes and the diagrams. Checked, but ' +
+      'written by hand and therefore capable of being wrong in a way the bare text is ' +
+      'not. When it matters, read the bare text and the source.</p></div>' +
       '</div>';
 
     /* ---- the source ---- */
@@ -734,16 +736,14 @@
 
   /* ---------- section headings, with a confidence marker ---------- */
 
-  // Two states, because that is the honest distinction: text taken from the
-  // official PDF and checked against it, versus commentary written here. The
-  // key is explained on the About page.
-  function tag(text, conf) {
-    var mark = '';
-    if (conf === 'source') mark = '<span class="conf src" title="Reproduced from the ' +
-      'official PDF and checked against it">official text</span>';
-    else if (conf === 'written') mark = '<span class="conf own" title="Commentary written ' +
-      'for this site. Explanation, not law.">written for this site</span>';
-    return '<div class="section-tag">' + esc(text) + mark + '</div>';
+  /* A section heading, and nothing else. These used to carry a badge on every
+     one - "official text" or "written for this site" - which said the same two
+     things several times per page. The distinction is real and still holds, but
+     it is carried by how the text is set: the bare text is serif and unboxed,
+     commentary sits in a panel. The About page says so, and the footer on every
+     page names the source. */
+  function tag(text) {
+    return '<div class="section-tag">' + esc(text) + '</div>';
   }
 
   /* ---------- pages ---------- */
@@ -923,14 +923,14 @@
       '<span class="pill red">Adopted 26 November 1949</span>' +
       '<span class="pill blue">Amended once — 42nd, 1976</span></div></div>';
 
-    s += tag('Bare text', 'source') + '<div class="bare">';
+    s += tag('Bare text') + '<div class="bare">';
     (pre.paras || []).forEach(function (p) {
       s += '<p class="l' + (p.lvl || 0) + '">' + bareHTML(p.t, pre.notes) + '</p>';
     });
     s += '</div>';
     s += notesBlock(pre.notes);
     if (ex) s += explainBlock(ex);
-    if (MAPS.preamble) s += tag('Picture it', 'written') + renderDiagram(MAPS.preamble);
+    if (MAPS.preamble) s += tag('Picture it') + renderDiagram(MAPS.preamble);
     s += caseBlock(CASES.preamble);
     s += examBlock(EXAM.preamble);
     return s;
@@ -1247,13 +1247,15 @@
       '<h1>' + esc(a.heading) + '</h1><div class="tagline">' +
       '<span class="pill grey">' + esc(partLabel(a.part)) + '</span>' +
       (a.omitted ? '<span class="pill red">Omitted / repealed</span>'
-                 : '<span class="pill green">In force</span>');
+        // In force is the ordinary case and needs no sentence. Repealed is the
+        // exception and does - so it keeps its words.
+        : '<span class="live" role="img" aria-label="In force" title="In force"></span>');
     (a.amendments || []).slice(0, 4).forEach(function (m) {
       s += '<span class="pill blue">' + esc(m) + '</span>';
     });
     s += '</div></div>';
 
-    var bare = tag('Bare text as printed', 'source') + '<div class="bare">' +
+    var bare = '<div class="bare">' +
       a.paras.map(function (p) {
         return '<p class="l' + (p.lvl || 0) + '">' + bareHTML(p.t, a.notes) + '</p>';
       }).join('') + '</div>';
@@ -1264,7 +1266,7 @@
       'and official.</p></div>';
 
     var map = MAPS[num];
-    if (map) s += tag('Picture it', 'written') +
+    if (map) s += tag('Picture it') +
       diagrams(map);
 
     s += caseBlock(CASES[num] || CASES[a.alias]);
@@ -1361,7 +1363,7 @@
   // reading of, then the qualifications — so a reader meets the provision
   // already knowing roughly what it does.
   function explainSays(ex) {
-    return tag('In plain language', 'written') + '<div class="explain">' +
+    return '<div class="explain">' +
       '<div class="panel simple"><h4>&#9673; What it says</h4><p>' + para(ex.simple) +
       '</p></div></div>';
   }
@@ -1401,7 +1403,7 @@
 
   function caseBlock(list, heading) {
     if (!list || !list.length) return '';
-    var s = tag(heading || 'Landmark judgments', 'written');
+    var s = tag(heading || 'Landmark judgments');
     list.forEach(function (c) {
       var st = STATUS[c.status] || STATUS.good;
       s += '<article class="case">' +
@@ -1553,7 +1555,7 @@
 
   function examBlock(entry) {
     if (!entry) return '';
-    return tag('What the examiners ask', 'written') +
+    return tag('For exams') +
       '<section class="exam"><header class="exam-head">' + examPills(entry) + '</header>' +
       examBody(entry) + '</section>';
   }
@@ -1701,7 +1703,7 @@
 
   function notesBlock(notes, amds) {
     if ((!notes || !notes.length) && (!amds || !amds.length)) return '';
-    var s = tag('Amendment history, as footnoted in the official text', 'source');
+    var s = tag('Amendment history, as footnoted in the official text');
     if (amds && amds.length) {
       s += '<div class="chiprow" style="margin-bottom:12px">';
       amds.forEach(function (m) {
@@ -1745,11 +1747,11 @@
       (sc.articles ? '<div class="tagline"><span class="pill grey">Attached to article ' + esc(sc.articles) + '</span></div>' : '') +
       '</div>';
     if (ex) s += explainBlock(ex);
-    if (MAPS['sch' + id]) s += tag('Picture it', 'written') + renderDiagram(MAPS['sch' + id]);
+    if (MAPS['sch' + id]) s += tag('Picture it') + renderDiagram(MAPS['sch' + id]);
 
     sc.sections.forEach(function (sec) {
-      if (sec.title) s += tag(sec.title, 'source');
-      else s += tag('Text', 'source');
+      if (sec.title) s += tag(sec.title);
+      else s += tag('Text');
       s += '<table class="sched">';
       sec.blocks.forEach(function (b) {
         s += '<tr><td class="n">' + esc(b.n || '') + '</td><td>' + bareHTML(b.t, sc.notes) + '</td></tr>';

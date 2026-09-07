@@ -56,12 +56,13 @@ finds the Tenth Schedule; `creamy layer` finds Articles 15, 16 and 340.
 
 ## What is verified, and what is written here
 
-Every section heading on the site carries one of two markers.
+Two kinds of writing sit on the site and they are not worth the same. They are told apart
+by how they are set, rather than by a badge on every heading.
 
-| Marker | Meaning |
+| How it is set | What it is |
 |---|---|
-| **official text** | Reproduced from the official PDF and machine-checked against it — the bare text of every article, the Schedules, and the amendment footnotes |
-| **written for this site** | Commentary — the plain-language readings, judgment summaries, exam notes and diagrams |
+| Serif, unboxed, footnote markers intact | Reproduced from the official PDF and machine-checked against it — the bare text of every article, the Schedules, and the amendment footnotes |
+| Anything in a panel | Commentary written for this site — the plain-language readings, the catch, judgment summaries, exam notes and diagrams |
 
 The distinction matters and the site states it rather than blurring it. The full
 account, including what the audit does **not** establish, is on the About page and in
