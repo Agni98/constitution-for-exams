@@ -589,26 +589,11 @@ footer.foot p { margin-bottom: 6px; }
 }
 
 /* ---------- the landing page ----------
-   A board of doors and nothing else: the title sits close to the tiles, and a
-   tile carries a label, a name and one line of scale. */
+   The Constitution in print order and nothing else: the title sits close to
+   the tiles, and a tile carries a label, a name and one line of scale. */
 .home-head { margin-bottom: 18px; }
 .home-head h1 { margin-bottom: 0; }
 .home-grid { grid-template-columns: repeat(auto-fill, minmax(228px, 1fr)); }
 .home-grid .tile { padding: 14px 16px; }
 .home-grid .tile h3 { margin: 5px 0 5px; font-size: 17px; }
 .home-grid .tile p { font-size: 12.5px; color: var(--ink-faint); }
-.home-grid + .home-grid { margin-top: 14px; }   /* the same gap as inside a grid */
-/* The four ways in are always a balanced block - four across where there is
-   room, otherwise two by two. Left to auto-fill they land three across and the
-   fourth drops on its own beside two empty cells. The measurement that matters
-   is the grid own width, not the window: folding the sidebar away changes it. */
-.lead-wrap { container-type: inline-size; }
-.home-grid.lead { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@container (min-width: 900px) { .home-grid.lead { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-@container (max-width: 380px) { .home-grid.lead { grid-template-columns: 1fr; } }
-
-/* Only the seven tiles that are not Parts are illustrated: twenty-six little
-   pictures would be wallpaper, and the drawing is what tells a reader at a
-   glance that this card leads somewhere other than a Part. */
-.tile .illus { display: block; width: 46px; height: 34px; margin-bottom: 9px; }
-.home-grid .tile.has-illus h3 { font-size: 17.5px; }

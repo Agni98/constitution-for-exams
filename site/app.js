@@ -739,99 +739,17 @@
 
   /* ---------- pages ---------- */
 
-  // A board of doors. Everything that used to sit above the tiles - the
-  // paragraph of prose, the row of six counts, the "Start here" pick of
-  // seven - was scenery between the reader and the thing they came for. The
-  // source note and the disclaimer are on every page already, in siteFooter().
-
-  /* Small line drawings for the tiles that are not Parts. Stroked in the
-     theme's own variables, so they follow light and dark without a second
-     copy. 46x34, and every one reads at that size - no fine detail. */
-  var ILLUS = {
-    preamble:
-      '<rect x="8" y="2.5" width="30" height="29" rx="3" stroke="var(--ink-faint)" stroke-width="1.4"/>' +
-      '<path d="M13 9h20" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round"/>' +
-      '<path d="M13 15h20M13 20h20M13 25h12" stroke="var(--ink-faint)" stroke-width="1.4" stroke-linecap="round"/>',
-
-    articles:
-      '<rect x="3" y="4" width="9" height="7" rx="2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.3"/>' +
-      '<path d="M16 7.5h27" stroke="var(--ink-faint)" stroke-width="1.5" stroke-linecap="round"/>' +
-      '<rect x="3" y="13.5" width="9" height="7" rx="2" stroke="var(--ink-faint)" stroke-width="1.3"/>' +
-      '<path d="M16 17h27" stroke="var(--ink-faint)" stroke-width="1.5" stroke-linecap="round"/>' +
-      '<rect x="3" y="23" width="9" height="7" rx="2" stroke="var(--ink-faint)" stroke-width="1.3"/>' +
-      '<path d="M16 26.5h20" stroke="var(--ink-faint)" stroke-width="1.5" stroke-linecap="round"/>',
-
-    exam:
-      '<rect x="3" y="3" width="26" height="28" rx="3" stroke="var(--ink-faint)" stroke-width="1.4"/>' +
-      '<path d="M8 10h16M8 15h16M8 26h9" stroke="var(--ink-faint)" stroke-width="1.4" stroke-linecap="round"/>' +
-      '<rect x="7" y="18.4" width="18" height="4" rx="2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.2"/>' +
-      '<g transform="translate(26.4 3) scale(0.8)">' +
-      '<path d="M12 2l2.9 6.3 6.8.8-5 4.6 1.3 6.8L12 17.2 5.9 20.5l1.3-6.8-5-4.6 6.8-.8z" ' +
-      'fill="var(--amber)" stroke="var(--amber)" stroke-width="1.6" stroke-linejoin="round"/></g>',
-
-    maps:
-      '<path d="M13 17C20 17 20 8 27 8" stroke="var(--saffron)" stroke-width="1.5"/>' +
-      '<path d="M13 17h14" stroke="var(--blue)" stroke-width="1.5"/>' +
-      '<path d="M13 17C20 17 20 26 27 26" stroke="var(--green)" stroke-width="1.5"/>' +
-      '<rect x="2" y="12" width="11" height="10" rx="2.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>' +
-      '<rect x="27" y="3.5" width="16" height="9" rx="2.5" stroke="var(--saffron)" stroke-width="1.5"/>' +
-      '<rect x="27" y="12.5" width="16" height="9" rx="2.5" stroke="var(--blue)" stroke-width="1.5"/>' +
-      '<rect x="27" y="21.5" width="16" height="9" rx="2.5" stroke="var(--green)" stroke-width="1.5"/>',
-
-    cases:
-      '<path d="M4 12L23 4l19 8" stroke="var(--accent)" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>' +
-      '<path d="M9 15.5v11M16 15.5v11M23 15.5v11M30 15.5v11M37 15.5v11" stroke="var(--ink-faint)" stroke-width="1.5" stroke-linecap="round"/>' +
-      '<path d="M5 29.5h36" stroke="var(--accent)" stroke-width="1.9" stroke-linecap="round"/>',
-
-    amendments:
-      '<path d="M4 17h38" stroke="var(--ink-faint)" stroke-width="1.4" stroke-linecap="round"/>' +
-      '<circle cx="8" cy="17" r="2.4" stroke="var(--ink-faint)" stroke-width="1.4"/>' +
-      '<circle cx="19" cy="17" r="2.4" stroke="var(--ink-faint)" stroke-width="1.4"/>' +
-      '<circle cx="30" cy="17" r="3.8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6"/>' +
-      '<circle cx="40" cy="17" r="2.4" stroke="var(--ink-faint)" stroke-width="1.4"/>' +
-      '<path d="M30 8v3.2M30 22.8v3.2" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round"/>',
-
-    about:
-      '<rect x="5" y="3" width="26" height="28" rx="3" stroke="var(--ink-faint)" stroke-width="1.4"/>' +
-      '<path d="M10 10h16M10 15h16M10 20h9" stroke="var(--ink-faint)" stroke-width="1.4" stroke-linecap="round"/>' +
-      '<circle cx="34" cy="23" r="8" fill="var(--bg-raise)" stroke="var(--green)" stroke-width="1.6"/>' +
-      '<path d="M30.4 23.2l2.6 2.5 4.6-5.1" stroke="var(--green)" stroke-width="1.8" ' +
-      'stroke-linecap="round" stroke-linejoin="round"/>',
-
-    schedules:
-      '<rect x="4" y="5" width="38" height="24" rx="3" stroke="var(--ink-faint)" stroke-width="1.4"/>' +
-      '<path d="M4 12.5h38" stroke="var(--accent)" stroke-width="1.7"/>' +
-      '<path d="M17.5 12.5V29M29 12.5V29" stroke="var(--ink-faint)" stroke-width="1.3"/>' +
-      '<path d="M4 20.8h38" stroke="var(--ink-faint)" stroke-width="1.3"/>'
-  };
-
-  function illus(k) {
-    return ILLUS[k]
-      ? '<svg class="illus" viewBox="0 0 46 34" fill="none" aria-hidden="true">' + ILLUS[k] + '</svg>'
-      : '';
-  }
-
+  // The home page is the Constitution itself, in the order it is printed:
+  // the Preamble, the Parts, the Schedules. The ways of studying it - the exam
+  // list, the mind maps, the judgments, the amendments - are in the menu bar
+  // on every page, and a tile for each of them here only said so twice. The
+  // source note and the disclaimer are on every page too, in siteFooter().
   function pageHome() {
     var s = '<div class="page-head home-head"><h1>The Constitution of India for Exams</h1></div>';
 
-    // The four ways in, then the Parts, then the three reference views. Three
-    // grids rather than one: an illustrated tile is taller than a Part tile,
-    // and in a single grid every Part sharing its row would be stretched to
-    // match. The gaps are equal, so it still reads as one board.
-    s += '<div class="lead-wrap"><div class="grid home-grid lead">' +
-      tile('#/preamble', 'THE OPENING', 'Preamble',
-        'One paragraph, and every word of it argued over', 'preamble') +
-      tile('#/parts', ARTS.length + ' ENTRIES', 'All articles',
-        LIVE.length + ' in force &middot; ' + (ARTS.length - LIVE.length) + ' omitted', 'articles') +
-      tile('#/exam', 'MOST ASKED', 'Important articles for exams',
-        Object.keys(EXAM).length + ' entries ranked by weight', 'exam') +
-      tile('#/maps', 'DRAWN BY HAND', 'Mind maps & flows',
-        diagramCount() + ' diagrams', 'maps') +
-      '</div></div>';
-
     s += '<div class="grid home-grid">' +
-      tile('#/cases', 'SUPREME COURT', 'Landmark judgments',
-        caseCount() + ' cases, summarised');
+      tile('#/preamble', 'THE OPENING', 'Preamble',
+        'One paragraph, and every word of it argued over');
     PARTS.forEach(function (p) {
       var list = artsOfPart(p.num);
       var live = list.filter(function (a) { return !a.omitted; });
@@ -843,30 +761,10 @@
           (list.length !== live.length ? ' &middot; ' + (list.length - live.length) + ' omitted' : '')
           : 'Repealed whole'));
     });
-
-    s += '</div>';
-
-    s += '<div class="grid home-grid">' +
-      tile('#/amendments', '1951\u20132023', 'Amendments',
-        '106 Acts, and what each one changed', 'amendments') +
-      tile('#/schedules', 'THE TWELVE', 'Schedules',
-        'The Lists, the languages, the defection rules', 'schedules') +
-      tile('#/about', 'PROVENANCE', 'About & sources',
-        'Where the text came from, and what has been checked', 'about') +
+    s += tile('#/schedules', 'THE TWELVE', 'Schedules',
+        'The Lists, the languages, the defection rules') +
       '</div>';
     return s;
-  }
-
-  // Distinct diagrams, not keys: one key is an alias of another, and a key may
-  // hold an array.
-  function diagramCount() {
-    var seen = [];
-    Object.keys(MAPS).forEach(function (k) {
-      (Array.isArray(MAPS[k]) ? MAPS[k] : [MAPS[k]]).forEach(function (spec) {
-        if (seen.indexOf(spec) < 0) seen.push(spec);
-      });
-    });
-    return seen.length;
   }
 
   function stat(n, label) {
@@ -874,9 +772,8 @@
   }
   // `sub` is written by this file, never by data, so it is inserted as markup
   // to allow a middot; everything from the data is escaped before it gets here.
-  function tile(href, eyebrow, h, sub, pic) {
-    return '<a class="card tile' + (pic ? ' has-illus' : '') + '" href="' + href + '">' +
-      (pic ? illus(pic) : '') +
+  function tile(href, eyebrow, h, sub) {
+    return '<a class="card tile" href="' + href + '">' +
       '<div class="rn">' + eyebrow + '</div>' +
       '<h3>' + esc(h) + '</h3><p>' + sub + '</p></a>';
   }
