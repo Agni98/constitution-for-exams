@@ -102,6 +102,9 @@ body.sheet-open { overflow: hidden; }
   box-shadow: 0 24px 70px rgba(0,0,0,.32);
   animation: sheet-rise .18s ease;
 }
+/* A diagram needs the room a judgment does not. */
+.sheet.wide { width: min(1120px, calc(100vw - 32px)); }
+@media (max-width: 620px) { .sheet.wide { width: 100vw; } }
 @keyframes sheet-fade { from { opacity: 0; } }
 @keyframes sheet-rise {
   from { opacity: 0; transform: translate(-50%, calc(-50% + 14px)); }

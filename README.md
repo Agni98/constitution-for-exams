@@ -32,6 +32,7 @@ of showing you nothing.
 | View | What it gives you |
 |---|---|
 | **Overview** | *The Constitution of India for Exams* — a board of doors and nothing else. Four illustrated ways in (Preamble, All articles, Important articles for exams, Mind maps), then Landmark judgments at the head of the 26 Parts, then Amendments, Schedules and About & sources. No prose, no counts row — the source note and the disclaimer sit in the footer of every page |
+| **Menu bar** | Six menus across the top of every page: All Articles, Important Articles, Mind Maps, Judgments, Amendments, Schedules. Each opens with what it has for the page you are on first — reading Article 324, Mind Maps offers Part XV's map, Judgments lists the four cases filed under 324, Amendments names the two that changed it. Maps, judgments, amendments and exam notes open over the page, so a look-up does not cost you your place. Below 1340px the menus take a second row of the header |
 | **Preamble** | Bare text, the 42nd Amendment footnotes, and a mind map of what it is doing |
 | **All Parts** | 26 Parts, I to XXII including IVA, IXA, IXB and XIVA — and VII, repealed whole |
 | **Article page** | *What it says* → **bare text as printed** → *The catch* → *Worth knowing* → diagram → landmark judgments → *What the examiners ask* → amendment footnotes → cross-links. The plain reading comes first, so you meet the provision already knowing roughly what it does |

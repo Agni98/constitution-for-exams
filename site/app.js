@@ -448,7 +448,7 @@
       if (target) {
         SPY_LOCK = Date.now() + 400;
         markSection(m[1]);
-        window.scrollTo(0, Math.max(0, target.getBoundingClientRect().top + window.scrollY - 74));
+        window.scrollTo(0, Math.max(0, target.getBoundingClientRect().top + window.scrollY - scrollPad()));
       }
     }
   }
@@ -1055,6 +1055,20 @@
              label: 'Part ' + part + ' \u2014 ' + title(p ? p.title : '') };
   }
 
+  // The small drawing that marks a mind map wherever one is offered.
+  function mapIco(cls) {
+    return '<svg class="' + cls + '" viewBox="0 0 30 22" fill="none" aria-hidden="true">' +
+      '<path d="M9 11C13 11 13 5 17 5" stroke="var(--saffron)" stroke-width="1.3"/>' +
+      '<path d="M9 11h8" stroke="var(--blue)" stroke-width="1.3"/>' +
+      '<path d="M9 11C13 11 13 17 17 17" stroke="var(--green)" stroke-width="1.3"/>' +
+      '<rect x="1" y="7.5" width="8" height="7" rx="2" fill="var(--bg-raise)" ' +
+      'stroke="var(--accent)" stroke-width="1.4"/>' +
+      '<rect x="17" y="2" width="12" height="6" rx="2" stroke="var(--saffron)" stroke-width="1.3"/>' +
+      '<rect x="17" y="8" width="12" height="6" rx="2" stroke="var(--blue)" stroke-width="1.3"/>' +
+      '<rect x="17" y="14" width="12" height="6" rx="2" stroke="var(--green)" stroke-width="1.3"/>' +
+      '</svg>';
+  }
+
   /* The map is offered, not imposed. Opened by default it is 1040px of
      diagram standing between a section heading and the two articles under it,
      which made Part III's "General" look like a section with nothing in it.
@@ -1066,16 +1080,7 @@
     var open = !!MAP_OPEN[got.key];
     return '<div class="secmap' + (open ? ' on' : '') + '">' +
       '<button class="secmap-t" type="button" data-mapkey="' + esc(got.key) + '">' +
-      '<svg class="sm-ico" viewBox="0 0 30 22" fill="none" aria-hidden="true">' +
-      '<path d="M9 11C13 11 13 5 17 5" stroke="var(--saffron)" stroke-width="1.3"/>' +
-      '<path d="M9 11h8" stroke="var(--blue)" stroke-width="1.3"/>' +
-      '<path d="M9 11C13 11 13 17 17 17" stroke="var(--green)" stroke-width="1.3"/>' +
-      '<rect x="1" y="7.5" width="8" height="7" rx="2" fill="var(--bg-raise)" ' +
-      'stroke="var(--accent)" stroke-width="1.4"/>' +
-      '<rect x="17" y="2" width="12" height="6" rx="2" stroke="var(--saffron)" stroke-width="1.3"/>' +
-      '<rect x="17" y="8" width="12" height="6" rx="2" stroke="var(--blue)" stroke-width="1.3"/>' +
-      '<rect x="17" y="14" width="12" height="6" rx="2" stroke="var(--green)" stroke-width="1.3"/>' +
-      '</svg>' +
+      mapIco('sm-ico') +
       '<span class="sm-l"><b class="sm-verb">' +
       (open ? 'Hide the' : 'Click here for the') + '</b> mind map on ' + esc(got.label) +
       '</span>' +
@@ -1565,16 +1570,7 @@
   function openExam(key) {
     var e = EXAM_BY_KEY[key];
     if (!e) return;
-    closeSheet();
-    _lastFocus = document.activeElement;
-
-    var box = document.createElement('div');
-    box.className = 'sheet-wrap';
-    box.innerHTML =
-      '<div class="sheet-back" data-close="1"></div>' +
-      '<div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetName">' +
-      '<button class="sheet-x" type="button" data-close="1" aria-label="Close">&times;</button>' +
-      '<div class="sheet-body">' +
+    openSheet(
       '<div class="sheet-head">' +
       '<a class="cc-where" href="' + e.href + '">' + esc(e.label) + ' &rarr;</a>' +
       '<h2 id="sheetName">' + esc(e.sub) + '</h2>' +
@@ -1583,12 +1579,7 @@
       examBody(e.x) +
       '<div class="sheet-foot"><a class="chip" href="' + e.href + '">Read ' +
       esc(e.label) + ' in full &rarr;</a>' +
-      '<button class="chip" type="button" data-close="1">Close</button></div>' +
-      '</div></div>';
-
-    document.body.appendChild(box);
-    document.body.classList.add('sheet-open');
-    box.querySelector('.sheet-x').focus();
+      '<button class="chip" type="button" data-close="1">Close</button></div>');
   }
 
   function examRow(e) {
@@ -1610,7 +1601,13 @@
     return s.length > n ? s.slice(0, n - 1).replace(/[\s,;—-]+$/, '') + '…' : s;
   }
 
-  function pageExam() {
+  function pageExam(tier) {
+    // #/exam/1 opens on the Core tier, so the menu bar can link straight to it.
+    var want = tier || 'all';
+    function tierBtn(t, label) {
+      return '<button data-tier="' + t + '"' + (t === want ? ' class="on"' : '') + '>' +
+        label + '</button>';
+    }
     var n1 = EXAM_LIST.filter(function (e) { return e.tier === 1; }).length;
     var n2 = EXAM_LIST.filter(function (e) { return e.tier === 2; }).length;
     var arts = EXAM_LIST.filter(function (e) { return /^\d/.test(e.key); }).length;
@@ -1627,10 +1624,10 @@
       '&ldquo;Money Bill&rdquo;, &ldquo;243&rdquo;, &ldquo;Rajya Sabha&rdquo;" ' +
       'autocomplete="off" spellcheck="false">' +
       '<div class="ex-sort">' +
-      '<button data-tier="all" class="on">All ' + EXAM_LIST.length + '</button>' +
-      '<button data-tier="1">Core ' + n1 + '</button>' +
-      '<button data-tier="2">Recurs ' + n2 + '</button>' +
-      '<button data-tier="3">Worth holding ' + (EXAM_LIST.length - n1 - n2) + '</button>' +
+      tierBtn('all', 'All ' + EXAM_LIST.length) +
+      tierBtn('1', 'Core ' + n1) +
+      tierBtn('2', 'Recurs ' + n2) +
+      tierBtn('3', 'Worth holding ' + (EXAM_LIST.length - n1 - n2)) +
       '</div><div class="ex-count" id="examCount"></div></div>';
 
     s += '<div class="ex-list" id="examList">';
@@ -1905,16 +1902,7 @@
     var x = CASE_LIST[i];
     if (!x) return;
     var c = x.c, st = STATUS[c.status] || STATUS.good;
-    closeSheet();
-    _lastFocus = document.activeElement;
-
-    var box = document.createElement('div');
-    box.className = 'sheet-wrap';
-    box.innerHTML =
-      '<div class="sheet-back" data-close="1"></div>' +
-      '<div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetName">' +
-      '<button class="sheet-x" type="button" data-close="1" aria-label="Close">&times;</button>' +
-      '<div class="sheet-body">' +
+    openSheet(
       '<div class="sheet-head">' +
       '<a class="cc-where" href="' + x.where.href + '">' + esc(x.where.label) + ' &rarr;</a>' +
       '<h2 id="sheetName">' + esc(c.case) + '</h2>' +
@@ -1930,9 +1918,22 @@
       '</dl>' +
       '<div class="sheet-foot"><a class="chip" href="' + x.where.href + '">' +
       'Read ' + esc(x.where.label) + ' in full &rarr;</a>' +
-      '<button class="chip" type="button" data-close="1">Close</button></div>' +
-      '</div></div>';
+      '<button class="chip" type="button" data-close="1">Close</button></div>');
+  }
 
+  // One overlay at a time, and focus goes back where it came from when it
+  // closes. wide: a diagram needs more room than a judgment does.
+  function openSheet(inner, wide) {
+    closeSheet();
+    _lastFocus = document.activeElement;
+    var box = document.createElement('div');
+    box.className = 'sheet-wrap';
+    box.innerHTML =
+      '<div class="sheet-back" data-close="1"></div>' +
+      '<div class="sheet' + (wide ? ' wide' : '') + '" role="dialog" aria-modal="true" ' +
+      'aria-labelledby="sheetName">' +
+      '<button class="sheet-x" type="button" data-close="1" aria-label="Close">&times;</button>' +
+      '<div class="sheet-body">' + inner + '</div></div>';
     document.body.appendChild(box);
     document.body.classList.add('sheet-open');
     box.querySelector('.sheet-x').focus();
@@ -1992,7 +1993,7 @@
     if (!m) return '#/part/' + rest;
     var secs = partSections(m[1]);
     for (var i = 0; i < secs.length; i++) {
-      if (secs[i].label === m[2]) return '#/part/' + m[1] + '/' + i;
+      if (secs[i].mapKey === k) return '#/part/' + m[1] + '/' + i;
     }
     return '#/part/' + m[1];
   }
@@ -2113,6 +2114,477 @@
     return out;
   }
 
+  /* ---------- the menu bar ---------- */
+
+  /* Six ways into the site from wherever you are. A menu is drawn when it
+     opens rather than once at load, because the most useful thing in it is
+     about the page you are on: reading Article 324, Mind Maps offers the map
+     for Part XV first and the index of every map after it. Maps, judgments,
+     amendments and exam notes open over the page, so a look-up does not cost
+     you your place. */
+  var NAV = [
+    { id: 'articles', label: 'All Articles', build: navArticles, wide: true,
+      on: /^#\/(article|part|parts|preamble)(\/|$)/ },
+    { id: 'exam', label: 'Important Articles', build: navExam, on: /^#\/exam(\/|$)/ },
+    { id: 'maps', label: 'Mind Maps', build: navMaps, wide: true, on: /^#\/maps$/ },
+    { id: 'cases', label: 'Judgments', build: navCases, on: /^#\/cases$/ },
+    { id: 'amend', label: 'Amendments', build: navAmend, on: /^#\/amendments$/ },
+    { id: 'sched', label: 'Schedules', build: navSched, on: /^#\/schedules?(\/|$)/ }
+  ];
+  var NAV_OPEN = null;
+
+  // Where to start with the case law. An editorial pick, not a ranking - the
+  // whole set is one click further on.
+  var START_CASES = ['Golak Nath', 'Kesavananda Bharati', 'Maneka Gandhi', 'Minerva Mills',
+    'Indra Sawhney', 'S.R. Bommai', 'Vishaka', 'Puttaswamy'];
+  // Likewise the amendments a reader is most often sent to.
+  var KEY_AMENDS = [1, 7, 24, 42, 44, 52, 61, 73, 74, 86, 101, 103, 106];
+
+  function navById(id) {
+    return NAV.filter(function (n) { return n.id === id; })[0] || null;
+  }
+
+  function buildTopnav() {
+    $('#topnav').innerHTML = NAV.map(function (n) {
+      return '<button class="tn" type="button" data-nav="' + n.id + '" aria-haspopup="true" ' +
+        'aria-expanded="false" aria-controls="navPanel">' + esc(n.label) +
+        '<svg class="tn-c" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" ' +
+        'fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" ' +
+        'stroke-linejoin="round"/></svg></button>';
+    }).join('');
+  }
+
+  function markNav(hash) {
+    document.querySelectorAll('.tn').forEach(function (b) {
+      var n = navById(b.getAttribute('data-nav'));
+      b.classList.toggle('on', !!n && n.on.test(hash));
+    });
+  }
+
+  // How far below the top of the window a scrolled-to heading has to land to
+  // clear the header - one row on a wide screen, two on anything narrower.
+  function scrollPad() {
+    var bar = $('.topbar');
+    return (bar ? bar.offsetHeight : 58) + 16;
+  }
+
+  // Where the reader is, in the terms the menus care about.
+  function navContext() {
+    var h = location.hash || '#/', m, ctx = {};
+    if ((m = h.match(/^#\/article\/(.+)$/))) {
+      var a = BY_NUM[decodeURIComponent(m[1])];
+      if (a) {
+        var secs = partSections(a.part);
+        ctx.art = a; ctx.part = a.part; ctx.name = 'Article ' + a.num;
+        ctx.sec = secs[secs.length > 1 ? sectionOf(a, secs) : 0] || null;
+      }
+    } else if ((m = h.match(/^#\/part\/([^\/]+)/))) {
+      var num = decodeURIComponent(m[1]);
+      if (PART_BY[num]) {
+        var ps = partSections(num);
+        // on a Part page, the section the rail says is in view
+        var on = document.querySelector('#main .pn-item.on[data-goto]');
+        ctx.part = num; ctx.name = 'Part ' + num;
+        ctx.sec = ps[on ? +on.getAttribute('data-goto') : 0] || null;
+      }
+    } else if (h === '#/preamble') {
+      ctx.preamble = true; ctx.name = 'the Preamble';
+    } else if ((m = h.match(/^#\/schedule\/(.+)$/))) {
+      ctx.sch = scheduleById(decodeURIComponent(m[1]));
+      if (ctx.sch) ctx.name = 'the ' + ctx.sch.name;
+    }
+    return ctx;
+  }
+  function scheduleById(id) {
+    return SCHEDULES.filter(function (x) { return x.id === id; })[0] || null;
+  }
+  // The key a page's own entry is filed under in CASES or EXAM, if it has one.
+  function ownKey(ctx, store) {
+    if (ctx.art) {
+      if (store[ctx.art.num]) return ctx.art.num;
+      return ctx.art.alias && store[ctx.art.alias] ? ctx.art.alias : null;
+    }
+    if (ctx.preamble) return store.preamble ? 'preamble' : null;
+    if (ctx.sch) return store['sch' + ctx.sch.id] ? 'sch' + ctx.sch.id : null;
+    return null;
+  }
+
+  // One line of a menu. t is HTML the caller has already escaped.
+  function npRow(o) {
+    var link = !!o.href;
+    return (link ? '<a href="' + esc(o.href) + '"' : '<button type="button" ' + o.data) +
+      ' class="np-row' + (o.cur ? ' cur' : '') + (o.cls ? ' ' + o.cls : '') + '"' +
+      (o.tip ? ' title="' + esc(o.tip) + '"' : '') + '>' +
+      (o.n != null ? '<span class="np-n">' + esc(o.n) + '</span>' : '') +
+      '<span class="np-t">' + o.t + '</span>' +
+      (o.c != null && o.c !== '' ? '<span class="np-c">' + esc(o.c) + '</span>' : '') +
+      (link ? '</a>' : '</button>');
+  }
+  function npHead(text) { return '<div class="np-h">' + esc(text) + '</div>'; }
+  function npHere(ctx, body) {
+    return '<div class="np-sec np-here">' + npHead('For ' + ctx.name) + body + '</div>';
+  }
+  function firstSpec(m) { return (Array.isArray(m) ? m[0] : m) || {}; }
+
+  function navArticles(ctx) {
+    var s = '<div class="np-sec np-top">' +
+      npRow({ href: '#/preamble', t: 'The Preamble', cur: ctx.preamble }) +
+      npRow({ href: '#/parts', t: 'All ' + PARTS.length + ' Parts', c: ARTS.length + ' articles' }) +
+      npRow({ href: '#/schedules', t: 'The ' + SCHEDULES.length + ' Schedules' }) +
+      '</div>';
+    s += '<div class="np-sec">' + npHead('Parts') + '<div class="np-cols">';
+    PARTS.forEach(function (p) {
+      var list = artsOfPart(p.num);
+      var live = list.filter(function (a) { return !a.omitted; });
+      var first = list.length ? list[0].num : '', last = list.length ? list[list.length - 1].num : '';
+      s += npRow({ href: '#/part/' + p.num, n: p.num, t: esc(title(p.title)),
+        c: !live.length ? 'repealed' : first === last ? first : first + '\u2013' + last,
+        cur: ctx.part === p.num });
+    });
+    return s + '</div></div>';
+  }
+
+  function navExam(ctx) {
+    var s = '', key = ownKey(ctx, EXAM);
+    if (key && EXAM_BY_KEY[key]) {
+      var e = EXAM_BY_KEY[key], t = TIER[e.tier] || TIER[3];
+      s += npHere(ctx, npRow({ data: 'data-navexam="' + esc(key) + '"',
+        t: '<span class="pill ' + t.pill + '">' + esc(t.label) + '</span> ' + esc(t.blurb),
+        c: 'Open the note' }));
+    } else if (ctx.art || ctx.preamble || ctx.sch) {
+      s += npHere(ctx, '<p class="np-p">Not on the priority list.</p>');
+    }
+
+    s += '<div class="np-sec">' + npHead('Ranked by how often they are asked');
+    [1, 2, 3].forEach(function (t) {
+      s += npRow({ href: '#/exam/' + t, c: EXAM_LIST.filter(function (e) { return e.tier === t; }).length,
+        t: '<b>' + esc(TIER[t].label) + '</b> <span class="np-d">' + esc(TIER[t].blurb) + '</span>' });
+    });
+    s += npRow({ href: '#/exam', t: 'The whole list', c: EXAM_LIST.length, cls: 'np-all' }) + '</div>';
+
+    var core = EXAM_LIST.filter(function (e) { return e.tier === 1; });
+    if (core.length) {
+      s += '<div class="np-sec">' + npHead('Core \u2014 straight to the text') + '<div class="np-chips">' +
+        core.map(function (e) {
+          return '<a class="np-chip" href="' + esc(e.href) + '" title="' +
+            esc(e.label + ' \u2014 ' + e.sub) + '">' + esc(e.label.replace(/^Article /, '')) + '</a>';
+        }).join('') + '</div></div>';
+    }
+    return s;
+  }
+
+  // Every drawn map, grouped by where it sits in the Constitution and in the
+  // order the Constitution prints. Built once: the maps do not change.
+  var MAP_GROUPS = null;
+  function mapGroups() {
+    if (MAP_GROUPS) return MAP_GROUPS;
+    var seen = [], by = {}, out = [];
+    Object.keys(MAPS).forEach(function (k) {
+      var m = MAPS[k];
+      if (seen.indexOf(m) >= 0) return;       // an alias would list a map twice
+      seen.push(m);
+      var gk, label = firstSpec(m).title || k, n = '', at = -1;
+      if (k === 'preamble') {
+        gk = 'preamble';
+      } else if (k.indexOf('sch') === 0) {
+        gk = 'sch'; n = k.slice(3); at = SCHEDULES.indexOf(scheduleById(n));
+      } else if (k.indexOf('part') === 0) {
+        var pm = k.slice(4).match(/^([IVXAB]+)(?:\.[IVX]+)?(?::(.*))?$/);
+        if (!pm || !PART_BY[pm[1]]) return;
+        gk = pm[1];
+        if (pm[2] != null) {
+          partSections(pm[1]).forEach(function (g) {
+            if (g.mapKey !== k) return;
+            label = sectionTitle(g);
+            n = g.range.replace(/^Art\. /, '');
+            at = ARTS.indexOf(g.arts[0]);
+          });
+        }
+      } else {
+        var a = BY_NUM[k];
+        if (!a) return;
+        gk = a.part; n = a.num; at = ARTS.indexOf(a);
+      }
+      if (!by[gk]) {
+        by[gk] = { items: [],
+          label: gk === 'preamble' ? 'Preamble' : gk === 'sch' ? 'Schedules' : partLabel(gk),
+          order: gk === 'preamble' ? -1 : gk === 'sch' ? 1e3 : PARTS.indexOf(PART_BY[gk]) };
+        out.push(by[gk]);
+      }
+      by[gk].items.push({ key: k, label: label, n: n, at: at });
+    });
+    out.sort(function (x, y) { return x.order - y.order; });
+    out.forEach(function (g) { g.items.sort(function (x, y) { return x.at - y.at; }); });
+    return (MAP_GROUPS = out);
+  }
+
+  function navMaps(ctx) {
+    var here = [], seen = [];
+    function offer(key, label) {
+      var m = mapFor(key);
+      if (!m || seen.indexOf(MAPS[key] || key) >= 0) return;
+      seen.push(MAPS[key] || key);
+      here.push(npRow({ data: 'data-navmap="' + esc(key) + '"', cls: 'np-map',
+        t: mapIco('np-ico') + '<span>' + esc(label) + '</span>',
+        c: firstSpec(m).type === 'flow' ? 'flow diagram' : '' }));
+    }
+    if (ctx.part) {
+      var got = articleMap(ctx.part, ctx.sec);
+      if (got) offer(got.key, 'Mind map on ' + got.label);
+    }
+    // An article with a drawing of its own - unless it is the same drawing,
+    // as Article 123's is.
+    if (ctx.art && MAPS[ctx.art.num]) offer(ctx.art.num, firstSpec(MAPS[ctx.art.num]).title);
+    if (ctx.preamble && MAPS.preamble) offer('preamble', firstSpec(MAPS.preamble).title);
+    if (ctx.sch && MAPS['sch' + ctx.sch.id]) offer('sch' + ctx.sch.id, firstSpec(MAPS['sch' + ctx.sch.id]).title);
+
+    var s = here.length ? npHere(ctx, here.join('')) : '';
+    s += '<div class="np-sec"><div class="np-hrow">' + npHead('Every drawn map, in constitutional order') +
+      '<a class="np-more" href="#/maps">All on one page &rarr;</a></div><div class="np-cols">' +
+      mapGroups().map(function (g) {
+        return '<div class="np-group"><div class="np-gh">' + esc(g.label) + '</div>' +
+          g.items.map(function (it) {
+            return npRow({ data: 'data-navmap="' + esc(it.key) + '"', n: it.n, t: esc(it.label) });
+          }).join('') + '</div>';
+      }).join('') + '</div></div>';
+    return s;
+  }
+
+  function navCases(ctx) {
+    var s = '', key = ownKey(ctx, CASES);
+    if (key) {
+      s += npHere(ctx, CASES[key].map(function (c, i) {
+        // "Association for Democratic Reforms (2002)" already carries its year
+        return npRow({ data: 'data-navcase="' + esc(key) + '|' + i + '"', t: esc(c.case),
+          c: c.case.indexOf(c.year) >= 0 ? '' : c.year });
+      }).join(''));
+    } else if (ctx.art || ctx.preamble || ctx.sch) {
+      s += npHere(ctx, '<p class="np-p">No landmark judgment is filed under ' + esc(ctx.name) + '.</p>');
+    }
+    s += '<div class="np-sec">' +
+      npRow({ href: '#/cases', t: 'All ' + caseCount() + ' landmark judgments', cls: 'np-all' }) + '</div>';
+
+    var start = [];
+    START_CASES.forEach(function (name) {
+      Object.keys(CASES).some(function (k) {
+        return CASES[k].some(function (c, i) {
+          // exact: "Puttaswamy" and "Puttaswamy (Aadhaar)" are different cases
+          if (c.case !== name) return false;
+          start.push({ k: k, i: i, c: c });
+          return true;
+        });
+      });
+    });
+    if (start.length) {
+      s += '<div class="np-sec">' + npHead('Start with these') + start.map(function (x) {
+        return npRow({ data: 'data-navcase="' + esc(x.k) + '|' + x.i + '"', t: esc(x.c.case), c: x.c.year,
+          n: x.k === 'preamble' ? 'Pre.' : x.k.indexOf('sch') === 0 ? 'Sch. ' + x.k.slice(3) : x.k });
+      }).join('') + '</div>';
+    }
+    return s;
+  }
+
+  function navAmend(ctx) {
+    var s = '', all = allAmendments();
+    if (ctx.art) {
+      var chips = (ctx.art.amendments || []).map(function (label) {
+        var n = amendNumber(label);
+        return n ? '<button class="np-chip" type="button" data-navamd="' + n + '">' + esc(label) + '</button>' : '';
+      }).join('');
+      s += npHere(ctx, chips ? '<div class="np-chips">' + chips + '</div>'
+        : '<p class="np-p">No amendment is footnoted against this article.</p>');
+    }
+    s += '<div class="np-sec">' +
+      npRow({ href: '#/amendments', t: 'All 106 amendments, newest first', cls: 'np-all' }) + '</div>';
+    s += '<div class="np-sec">' + npHead('Landmark amendments') +
+      KEY_AMENDS.filter(function (n) { return AMETA[n]; }).map(function (n) {
+        return npRow({ data: 'data-navamd="' + n + '"', n: ordinal(n), t: esc(AMETA[n].short),
+          c: all[n - 1] ? all[n - 1].year : '' });
+      }).join('') + '</div>';
+    return s;
+  }
+
+  function navSched(ctx) {
+    return '<div class="np-sec">' + SCHEDULES.map(function (sc) {
+      return npRow({ href: '#/schedule/' + sc.id, n: sc.id, t: esc(sc.title), tip: sc.name,
+        cur: ctx.sch === sc });
+    }).join('') + '</div><div class="np-sec">' +
+      npRow({ href: '#/schedules', t: 'All ' + SCHEDULES.length + ' Schedules', cls: 'np-all' }) + '</div>';
+  }
+
+  // A key the maps know, or a Part with no hand-drawn map, which gets the one
+  // generated from its articles - the same fallback the Part page uses.
+  function mapFor(k) {
+    if (MAPS[k]) return MAPS[k];
+    var pm = /^part([IVXAB]+)$/.exec(k);
+    return pm && PART_BY[pm[1]] ? autoPartMap(pm[1]) : null;
+  }
+  function mapName(k) {
+    if (k === 'preamble') return 'The Preamble';
+    if (k.indexOf('sch') === 0) {
+      var sc = scheduleById(k.slice(3));
+      return sc ? sc.name : k;
+    }
+    if (k.indexOf('part') === 0) {
+      var pm = k.slice(4).match(/^([IVXAB]+)(?:\.[IVX]+)?(?::(.*))?$/);
+      if (!pm) return k;
+      var name = partLabel(pm[1]);
+      if (pm[2] != null) partSections(pm[1]).forEach(function (g) {
+        if (g.mapKey === k) name = sectionTitle(g);
+      });
+      return name;
+    }
+    return BY_NUM[k] ? 'Article ' + k + ' \u2014 ' + BY_NUM[k].heading : 'Article ' + k;
+  }
+
+  function openMap(k) {
+    var m = mapFor(k);
+    if (!m) return;
+    var href = mapTarget(k);
+    openSheet(
+      '<div class="sheet-head">' +
+      '<a class="cc-where" href="' + esc(href) + '">' +
+      (firstSpec(m).type === 'flow' ? 'Flow diagram' : 'Mind map') + ' &rarr;</a>' +
+      '<h2 id="sheetName">' + esc(mapName(k)) + '</h2></div>' +
+      diagrams(m, true) +
+      '<div class="sheet-foot"><a class="chip" href="' + esc(href) + '">Go to the articles &rarr;</a>' +
+      '<a class="chip" href="#/maps">Every map &rarr;</a>' +
+      '<button class="chip" type="button" data-close="1">Close</button></div>', true);
+  }
+
+  function openAmend(n) {
+    var m = allAmendments()[n - 1];
+    if (!m) return;
+    var meta = AMETA[n] || {};
+    var arts = (m.articles || []).map(function (r) {
+      var k = r.replace('Art. ', '');
+      return BY_NUM[k] ? '<a class="chip" href="#/article/' + esc(k) + '">' + esc(r) + '</a>'
+        : '<span class="chip">' + esc(r) + '</span>';
+    }).join('');
+    openSheet(
+      '<div class="sheet-head">' +
+      '<a class="cc-where" href="#/amendments">' + ordinal(n) + ' Amendment' +
+      (m.year ? ' &middot; ' + esc(m.year) : '') + ' &rarr;</a>' +
+      '<h2 id="sheetName">' + esc(meta.short || ordinal(n) + ' Amendment') + '</h2>' +
+      '<div class="case-meta">' + commencement(m) + '</div></div>' +
+      (meta.what ? '<p>' + para(meta.what) + '</p>' : '') +
+      (arts ? '<div class="section-tag">Articles it touched</div><div class="chiprow">' + arts + '</div>' : '') +
+      ((m.schedules || []).length ? '<p class="sm">Also touched: ' + esc(m.schedules.join(', ')) + '</p>' : '') +
+      '<div class="sheet-foot"><a class="chip" href="#/amendments">All 106 amendments &rarr;</a>' +
+      '<button class="chip" type="button" data-close="1">Close</button></div>');
+  }
+
+  function openCaseRef(ref) {
+    var bar = ref.lastIndexOf('|'), k = ref.slice(0, bar);
+    var c = (CASES[k] || [])[+ref.slice(bar + 1)];
+    if (!c) return;
+    // The judgments page fills this list; from anywhere else it may be empty.
+    if (!CASE_LIST.length) CASE_LIST = allCases();
+    for (var i = 0; i < CASE_LIST.length; i++) {
+      if (CASE_LIST[i].c === c && CASE_LIST[i].key === k) { openCase(i); return; }
+    }
+  }
+
+  function openNav(id, byKeyboard) {
+    var n = navById(id), panel = $('#navPanel'), btn = $('.tn[data-nav="' + id + '"]');
+    if (!n || !panel || !btn) return;
+    closeNav();
+    panel.className = 'nav-panel' + (n.wide ? ' wide' : '');
+    panel.innerHTML = n.build(navContext());
+    panel.hidden = false;
+    panel.scrollTop = 0;
+    btn.setAttribute('aria-expanded', 'true');
+    NAV_OPEN = id;
+    placeNav();
+    if (byKeyboard) {
+      var first = panel.querySelector('a, button');
+      if (first) first.focus();
+    }
+  }
+
+  // Hidden, not emptied: a link inside it may be mid-click.
+  function closeNav(refocus) {
+    if (!NAV_OPEN) return;
+    var btn = $('.tn[data-nav="' + NAV_OPEN + '"]');
+    $('#navPanel').hidden = true;
+    NAV_OPEN = null;
+    if (btn) {
+      btn.setAttribute('aria-expanded', 'false');
+      if (refocus) btn.focus();
+    }
+  }
+
+  // Under the button that opened it, and never off the edge of the screen. On
+  // a phone the stylesheet pins it to both edges and this stands aside.
+  function placeNav() {
+    var panel = $('#navPanel'), btn = NAV_OPEN && $('.tn[data-nav="' + NAV_OPEN + '"]');
+    if (!btn) return;
+    if (window.matchMedia('(max-width: 900px)').matches) { panel.style.left = ''; return; }
+    var bar = $('.topbar').getBoundingClientRect();
+    var left = btn.getBoundingClientRect().left - bar.left;
+    panel.style.left = Math.max(12, Math.min(left, bar.width - panel.offsetWidth - 12)) + 'px';
+  }
+
+  function initNav() {
+    buildTopnav();
+    markNav(location.hash || '#/');
+
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      if (!t.closest) return;
+      var tn = t.closest('.tn');
+      if (tn) {
+        var id = tn.getAttribute('data-nav');
+        if (NAV_OPEN === id) closeNav();
+        else openNav(id, e.detail === 0);
+        return;
+      }
+      if (!NAV_OPEN) return;
+      if (!t.closest('#navPanel')) { closeNav(); return; }
+      var act = t.closest('[data-navmap], [data-navcase], [data-navamd], [data-navexam]');
+      if (act) {
+        var map = act.getAttribute('data-navmap'), cs = act.getAttribute('data-navcase'),
+            amd = act.getAttribute('data-navamd'), ex = act.getAttribute('data-navexam');
+        // Close first, so the overlay hands focus back to the menu button
+        // rather than to a row that is no longer on screen.
+        closeNav(true);
+        if (map) openMap(map);
+        else if (cs) openCaseRef(cs);
+        else if (amd) openAmend(+amd);
+        else if (ex) openExam(ex);
+        return;
+      }
+      // A link to the page you are already on fires no hashchange, so route()
+      // would never close the menu for it.
+      if (t.closest('a')) closeNav();
+    });
+
+    // With one menu open, pointing at another opens that one - with a mouse.
+    // A tap sends pointerover too, and would open a menu its click then shut.
+    document.addEventListener('pointerover', function (e) {
+      if (!NAV_OPEN || e.pointerType !== 'mouse' || !e.target.closest) return;
+      var tn = e.target.closest('.tn');
+      if (tn && tn.getAttribute('data-nav') !== NAV_OPEN) openNav(tn.getAttribute('data-nav'));
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && NAV_OPEN) closeNav(true);
+    });
+    document.addEventListener('focusin', function (e) {
+      if (NAV_OPEN && e.target.closest && !e.target.closest('#navPanel, .tn')) closeNav();
+    });
+
+    // The search box is narrower with the menus beside it. Its full hint is
+    // cut off mid-word below about 400px, so it says less rather than half.
+    var box = $('#search'), full = box.getAttribute('placeholder');
+    function fitHint() {
+      var w = box.clientWidth;
+      box.setAttribute('placeholder', w >= 400 ? full
+        : w >= 250 ? 'Search \u2014 try 21, or \u201chabeas corpus\u201d' : 'Search');
+    }
+    fitHint();
+    window.addEventListener('resize', function () { fitHint(); placeNav(); });
+  }
+
   /* ---------- router ---------- */
 
   function route() {
@@ -2129,14 +2601,16 @@
     else if (h === '#/schedules') out = pageSchedules();
     else if (h === '#/amendments') out = pageAmendments();
     else if (h === '#/cases') out = pageCases();
-    else if (h === '#/exam') out = pageExam();
+    else if ((m = h.match(/^#\/exam(?:\/([123]))?$/))) out = pageExam(m[1]);
     else if (h === '#/about') out = pageAbout();
     else if (h === '#/maps') out = pageMaps();
     else out = pageHome();
 
     closeSheet();
+    closeNav();
     main.innerHTML = out + siteFooter();
     markActive(h);
+    markNav(h);
     document.body.classList.remove('nav-open');
     if (!h.startsWith('#/search')) window.scrollTo(0, 0);
     // Moving focus to the new content is right when a link was followed and
@@ -2148,7 +2622,7 @@
       main.focus({ preventScroll: true });
     }
     if (h === '#/cases') filterCases();
-    if (h === '#/exam') filterExam();
+    if (h.indexOf('#/exam') === 0) filterExam();
 
     partSpy(h);
 
@@ -2168,6 +2642,7 @@
 
   function init() {
     buildSidebar();
+    initNav();
 
     var box = $('#search'), timer;
     box.addEventListener('input', function () {
@@ -2244,7 +2719,7 @@
         if (sec) {
           SPY_LOCK = Date.now() + 900;
           markSection(pn.getAttribute('data-goto'));
-          window.scrollTo({ top: Math.max(0, sec.getBoundingClientRect().top + window.scrollY - 74),
+          window.scrollTo({ top: Math.max(0, sec.getBoundingClientRect().top + window.scrollY - scrollPad()),
                             behavior: 'smooth' });
         }
         return;
