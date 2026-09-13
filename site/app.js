@@ -385,20 +385,9 @@
   /* ---------- sidebar ---------- */
 
   function buildSidebar() {
-    var s = '';
-    s += '<div class="side-group">' +
-      link('#/', 'Overview', '') +
-      link('#/preamble', 'Preamble', '') +
-      link('#/parts', 'All Parts', String(PARTS.length)) +
-      link('#/schedules', 'Schedules', String(SCHEDULES.length)) +
-      link('#/amendments', 'Amendments', '106') +
-      link('#/cases', 'Landmark judgments', String(caseCount())) +
-      link('#/exam', 'What the examiners ask', String(Object.keys(EXAM).length)) +
-      link('#/maps', 'Mind maps & flows', '') +
-      link('#/about', 'About & sources', '') +
-      '</div>';
-
-    s += '<div class="side-group"><div class="side-label">Parts</div>';
+    // The site's sections live in the menu bar, so the sidebar keeps what the
+    // menu bar has no room for: every Part, one line each.
+    var s = '<div class="side-group"><div class="side-label">Parts</div>';
     PARTS.forEach(function (p) {
       var n = artsOfPart(p.num).length;
       s += '<a class="side-link" data-h="#/part/' + p.num + '" href="#/part/' + p.num + '">' +
@@ -407,6 +396,8 @@
         '<span class="ct">' + n + '</span></a>';
     });
     s += '</div>';
+    // About is not in the menu bar, so it stays - under the Parts, out of the way.
+    s += '<div class="side-group">' + link('#/about', 'About & sources', '') + '</div>';
     $('#sidebar').innerHTML = s;
   }
   function link(href, label, count) {

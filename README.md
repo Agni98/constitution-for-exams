@@ -182,7 +182,7 @@ or `schX`. A key holds an array, newest last:
 
 A case may appear under more than one article — Kesavananda sits under the Preamble and under
 Article 368, Bommai under the Preamble, Article 75 and Article 356. The counts on the overview
-page and in the sidebar de-duplicate by case name, so adding a cross-listing does not inflate
+page and in the Judgments menu de-duplicate by case name, so adding a cross-listing does not inflate
 them. Any `Article 21`-style reference inside these fields is auto-linked, and the whole text
 is included in search.
 
