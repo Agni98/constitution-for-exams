@@ -2,32 +2,20 @@
    The home page
    A hero with search, four ways in, the topics a polity syllabus is built
    on, the revision list, the Constitution in print order, and one line from
-   the Constituent Assembly. Everything here is drawn in the theme's tokens,
-   the illustration included, so light and dark need no second copy.
+   the Constituent Assembly. Colours come from the theme's tokens, so light
+   and dark need no second copy.
    ============================================================ */
 
 :root {
   --hero-a:  #fbf4e8;
   --hero-b:  #f2d9b8;
   --hero-btn: #1d5b3c;
-  --st-hi:   #f4dfbd;
-  --st:      #e6c08c;
-  --st-mid:  #cf9e66;
-  --st-lo:   #a9763f;
-  --st-deep: #7b532d;
-  --sun:     #f5b36a;
   --tri-w:   #e4ddd0;
 }
 [data-theme="dark"] {
   --hero-a:  #1c1a18;
   --hero-b:  #33271b;
   --hero-btn: #2f7a52;
-  --st-hi:   #85684a;
-  --st:      #6f553c;
-  --st-mid:  #5a4430;
-  --st-lo:   #3f3023;
-  --st-deep: #2a2119;
-  --sun:     #c9803f;
   --tri-w:   #e8e6e1;
 }
 
@@ -102,19 +90,41 @@
 }
 .hero-try a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
-/* The drawing keeps its proportions and sits on the bottom-left corner, so
-   however the column is shaped the sky - and the quote - stay above it. */
-.hero-art { position: relative; min-height: 300px; }
-.hero-art svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.hero-quote { position: absolute; top: 30px; right: 26px; max-width: 38%; margin: 0; }
+/* The photograph fills its column and fades into the hero's own colour on
+   the side the text is on, so the two halves read as one panel. */
+.hero-art { position: relative; min-height: 300px; overflow: hidden; }
+.hero-photo {
+  position: absolute; inset: 0; width: 100%; height: 100%; display: block;
+  object-fit: cover; object-position: 62% 55%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 30%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 30%);
+}
+[data-theme="dark"] .hero-photo { filter: brightness(.72) saturate(.9); }
+
+/* The sky in the photograph is pale, so the quote sits on its own card:
+   dark text on a pale sky is fine, light text in dark mode is not. */
+.hero-quote {
+  position: absolute; top: 22px; right: 22px; max-width: 44%; margin: 0;
+  padding: 14px 16px 12px; border-radius: 12px;
+  background: color-mix(in srgb, var(--bg-raise) 84%, transparent);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+}
 .hero-quote p {
-  margin: 0 0 10px; font-family: var(--serif); font-style: italic;
-  font-size: 20px; line-height: 1.3; color: var(--ink);
+  margin: 0 0 8px; font-family: var(--serif); font-style: italic;
+  font-size: 18px; line-height: 1.3; color: var(--ink);
 }
 .hero-quote p::before {
-  content: "\201C"; display: block; margin-bottom: 4px;
-  font-size: 46px; line-height: .7; font-style: normal; color: var(--accent); opacity: .45;
+  content: "\201C"; display: block; margin-bottom: 2px;
+  font-size: 38px; line-height: .7; font-style: normal; color: var(--accent); opacity: .5;
 }
+.hero-credit {
+  position: absolute; right: 10px; bottom: 8px; margin: 0;
+  padding: 1px 8px; border-radius: 6px;
+  background: rgba(0,0,0,.5); color: #f1ece4;
+  font-size: 11px; line-height: 1.6;
+}
+.hero-credit a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
 .hero-quote footer {
   display: inline-block; padding-top: 8px; border-top: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
   font-size: 12.5px; color: var(--ink-soft);
@@ -156,7 +166,13 @@
   /* minmax(0, ...) - a bare 1fr lets the copy's min-content widen the column
      past the card, and the card's overflow:hidden then cuts the text off */
   .hero-main { grid-template-columns: minmax(0, 1fr); }
-  .hero-art { min-height: 190px; margin-top: -10px; }
+  .hero-art { min-height: 220px; }
+  /* stacked, the text is above the photo, so the fade comes from the top */
+  .hero-photo {
+    object-position: 60% 60%;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 26%);
+            mask-image: linear-gradient(180deg, transparent 0, #000 26%);
+  }
   .hero-quote { display: none; }
 }
 @container (max-width: 520px) {

@@ -713,7 +713,12 @@
       '<div class="card"><h3>Everything written here</h3>' +
       '<p>The explanations, judgment summaries, exam notes and diagrams are licensed ' +
       '<b>CC BY 4.0</b>. The site code and build scripts are <b>MIT</b>. Full terms in ' +
-      'the <code>LICENSE</code> file.</p></div></div>';
+      'the <code>https://creativecommons.org/licenses/by-sa/4.0/ENSE</code> file.</p></div></div>';
+    s += '<p class="sm">The photograph on the home page shows the old Parliament House in ' +
+      'New Delhi. It was taken by <a href="https://commons.wikimedia.org/wiki/File:Saansad_Bhawan.jpg" target="_blank" rel="noopener">Kuldeep ' +
+      'Maruvada</a> and is published on Wikimedia Commons under the ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> licence. It has been ' +
+      'cropped and resized for this site. The edited copy is under the same licence.</p>';
 
     /* ---- errors ---- */
     s += tag('Found an error?');
@@ -783,76 +788,6 @@
     return '<svg' + (cls ? ' class="' + cls + '"' : '') + ' viewBox="0 0 24 24" fill="none" ' +
       'stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ' +
       'aria-hidden="true">' + ICON[k] + '</svg>';
-  }
-
-  /* A colonnaded rotunda at the foot of the sky - the shape of the old
-     Parliament House, without drawing anything that stands for the State.
-     Built from ellipses seen slightly from above: every band is the front
-     half of one ellipse between two heights, so the columns, the storey
-     above and the dome all sit on the same curve. */
-  function heroArt() {
-    var cx = 215;
-    function r1(n) { return Math.round(n * 10) / 10; }
-    function band(rx, ry, top, bot, fill) {
-      var L = r1(cx - rx), R = r1(cx + rx);
-      return '<path d="M' + L + ' ' + top + 'A' + rx + ' ' + ry + ' 0 0 0 ' + R + ' ' + top +
-        'L' + R + ' ' + bot + 'A' + rx + ' ' + ry + ' 0 0 1 ' + L + ' ' + bot + 'Z" fill="' + fill + '"/>';
-    }
-    function lid(rx, ry, y, fill) {
-      return '<ellipse cx="' + cx + '" cy="' + y + '" rx="' + rx + '" ry="' + ry + '" fill="' + fill + '"/>';
-    }
-    // things spaced evenly round the front half of an ellipse
-    function ring(n, rx, ry, draw) {
-      var out = '';
-      for (var i = 0; i < n; i++) {
-        var th = Math.PI * (i + 0.5) / n, sn = Math.sin(th);
-        out += draw(cx - rx * Math.cos(th), ry * sn, sn);
-      }
-      return out;
-    }
-
-    // The viewBox is cropped close round the building, so it is the building
-    // that scales to the column; the sun is allowed to spill past it.
-    var s = '<svg viewBox="-8 44 470 272" preserveAspectRatio="xMinYMax meet" aria-hidden="true">' +
-      '<defs><radialGradient id="hSun"><stop offset="0" stop-color="var(--sun)" stop-opacity=".75"/>' +
-      '<stop offset="1" stop-color="var(--sun)" stop-opacity="0"/></radialGradient>' +
-      '<linearGradient id="hDome" x1="0" x2="1"><stop offset=".25" stop-color="var(--st-hi)"/>' +
-      '<stop offset="1" stop-color="var(--st-mid)"/></linearGradient></defs>' +
-      // kept inside the viewBox: where the drawing is height-bound, as on a
-      // phone, anything above its top edge is cut off square
-      '<circle cx="330" cy="152" r="108" fill="url(#hSun)"/>' +
-      '<ellipse cx="' + cx + '" cy="300" rx="262" ry="16" fill="var(--st-lo)" opacity=".2"/>';
-
-    // the steps, lowest first
-    s +=lid(218, 31, 259, 'var(--st-hi)') + band(218, 31, 259, 270, 'var(--st-lo)');
-    s += lid(206, 29, 250, 'var(--st-hi)') + band(206, 29, 250, 259, 'var(--st-mid)');
-    // the colonnade: a shadowed wall, and the columns standing in front of it
-    s += band(188, 26, 194, 250, 'var(--st-deep)');
-    s += ring(33, 196, 27, function (x, dy, sn) {
-      var w = 3 + 4.4 * sn, top = r1(194 + dy), h = 56;
-      return '<rect x="' + r1(x - w / 2) + '" y="' + top + '" width="' + r1(w) + '" height="' + h +
-        '" fill="var(--st-hi)"/><rect x="' + r1(x + w * 0.12) + '" y="' + top + '" width="' + r1(w * 0.38) +
-        '" height="' + h + '" fill="var(--st)"/>';
-    });
-    // the roof over it
-    s += lid(202, 28, 184, 'var(--st)') + band(202, 28, 184, 188, 'var(--st-lo)') +
-      band(199, 27.5, 188, 194, 'var(--st-mid)');
-    // the storey above, set back, with its windows
-    s += lid(138, 19, 146, 'var(--st-hi)') + band(138, 19, 146, 150, 'var(--st-mid)') +
-      band(134, 18.5, 150, 176, 'var(--st)');
-    s += ring(19, 134, 18.5, function (x, dy, sn) {
-      var w = 1.6 + 3.6 * sn;
-      return '<rect x="' + r1(x - w / 2) + '" y="' + r1(156 + dy) + '" width="' + r1(w) +
-        '" height="12" rx="1" fill="var(--st-lo)"/>';
-    });
-    // the dome, and the lantern on it
-    s += '<path d="M161 142A54 46 0 0 1 269 142A54 7.5 0 0 1 161 142Z" fill="url(#hDome)"/>' +
-      '<path d="M215 149.5V96M184 147Q192 108 215 96M246 147Q238 108 215 96" fill="none" ' +
-      'stroke="var(--st-mid)" stroke-width="1.2" opacity=".55"/>' +
-      '<rect x="209" y="84" width="12" height="12" rx="1.5" fill="var(--st-hi)"/>' +
-      '<path d="M207 85A8 6 0 0 1 223 85Z" fill="var(--st-mid)"/>' +
-      '<path d="M215 79V72" stroke="var(--st-lo)" stroke-width="1.6" stroke-linecap="round"/>';
-    return s + '</svg>';
   }
 
   // Where the chips under the search box lead. Each is a query the search
@@ -925,9 +860,16 @@
       '<div class="hero-try"><span>Try:</span>' + TRY.map(function (q) {
         return '<a href="#/search/' + encodeURIComponent(q.toLowerCase()) + '">' + esc(q) + '</a>';
       }).join('') + '</div></div>' +
-      '<div class="hero-art">' + heroArt() +
+      '<div class="hero-art">' +
+      '<img class="hero-photo" src="img/old-parliament-house.jpg" width="1600" height="833" ' +
+      'alt="The old Parliament House in New Delhi, where the Constituent Assembly met">' +
       '<blockquote class="hero-quote"><p>We, the people of India&hellip;</p>' +
-      '<footer>The Preamble</footer></blockquote></div></div>';
+      '<footer>The Preamble</footer></blockquote>' +
+      // CC BY-SA 4.0 asks for the author, a link to the licence and a note of
+      // any changes. All three are here, on the photo itself.
+      '<p class="hero-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Saansad_Bhawan.jpg" target="_blank" rel="noopener">' +
+      'Kuldeep Maruvada</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, ' +
+      'cropped</p></div></div>';
 
     function way(href, ic, t, sub) {
       return '<a class="way" href="' + href + '"><span class="way-ico">' + icon(ic) + '</span>' +

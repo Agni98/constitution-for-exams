@@ -31,7 +31,7 @@ of showing you nothing.
 
 | View | What it gives you |
 |---|---|
-| **Home** | A hero with its own search and six example queries, and four ways in beneath it (articles, mind maps, judgments, amendments). Then twelve topic tiles — Fundamental Rights, Parliament, Federalism, Emergency and the rest — each opening where its articles begin, with ranges read from the data; the revision list by tier; the Preamble, 26 Parts and Schedules as a carousel; and one line from Ambedkar's speech of 25 November 1949. The sidebar is folded into a drawer here, since the page lists the Parts itself. The illustration is drawn in SVG from the theme's colours, and deliberately shows no State Emblem |
+| **Home** | A hero with its own search and six example queries, and four ways in beneath it (articles, mind maps, judgments, amendments). Then twelve topic tiles — Fundamental Rights, Parliament, Federalism, Emergency and the rest — each opening where its articles begin, with ranges read from the data; the revision list by tier; the Preamble, 26 Parts and Schedules as a carousel; and one line from Ambedkar's speech of 25 November 1949. The sidebar is folded into a drawer here, since the page lists the Parts itself. The photograph of the old Parliament House is by Kuldeep Maruvada, from Wikimedia Commons, under CC BY-SA 4.0. It is credited on the photo, on the About page and in `LICENSE` |
 | **Menu bar** | Six menus across the top of every page: All Articles, Important Articles, Mind Maps, Judgments, Amendments, Schedules. Each opens with what it has for the page you are on first — reading Article 324, Mind Maps offers Part XV's map, Judgments lists the four cases filed under 324, Amendments names the two that changed it. Maps, judgments, amendments and exam notes open over the page, so a look-up does not cost you your place. Below 1340px the menus take a second row of the header |
 | **Preamble** | Bare text, the 42nd Amendment footnotes, and a mind map of what it is doing |
 | **All Parts** | 26 Parts, I to XXII including IVA, IXA, IXB and XIVA — and VII, repealed whole |
@@ -86,13 +86,14 @@ force"*.
 
 ## Licensing
 
-Three kinds of material, three sets of terms — set out in full in `LICENSE`.
+Four kinds of material, four sets of terms — set out in full in `LICENSE`.
 
 | | |
 |---|---|
 | The Constitution text | Government material, reproduced with commentary under section 52(1)(q)(ii) of the Copyright Act, 1957 and the Government of India reproduction terms |
 | The commentary written here | CC BY 4.0 |
 | The code and build scripts | MIT |
+| The home page photograph | CC BY-SA 4.0. Taken by Kuldeep Maruvada, from Wikimedia Commons, cropped and resized |
 
 This project is not produced by, endorsed by or affiliated with the UPSC, any State
 Public Service Commission, the Legislative Department, or any government body.
