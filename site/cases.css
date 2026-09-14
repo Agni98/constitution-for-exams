@@ -1,6 +1,6 @@
 /* ============================================================
-   The landmark-judgment index: a card grid, and the overlay
-   that opens when you click one.
+   Landmark judgments: the card, the index, a judgment's own page,
+   and the overlay the menus open for maps, amendments and exam notes.
    ============================================================ */
 
 /* ---------- filter + sort bar ---------- */
@@ -38,46 +38,120 @@
   font-weight: 700; color: var(--ink-faint); margin: 0 0 12px;
 }
 
-/* ---------- the card grid ---------- */
+/* ---------- a judgment as a card ---------- */
 
-.case-grid {
+.jgrid {
   display: grid; gap: 14px;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   align-items: stretch;
 }
-
-.case-card {
-  display: flex; flex-direction: column; gap: 5px;
-  text-align: left; font: inherit; color: inherit; cursor: pointer;
-  padding: 15px 17px 16px;
+.jcard {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 16px 18px 15px; color: inherit; text-decoration: none;
   background: var(--bg-raise);
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--accent);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--line); border-left: 4px solid var(--accent);
+  border-radius: var(--radius); box-shadow: var(--shadow);
   transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
 }
-.case-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent); border-left-color: var(--accent);
+.jcard:hover {
+  transform: translateY(-2px); border-color: var(--accent); text-decoration: none;
   box-shadow: 0 2px 4px rgba(31,26,18,.06), 0 10px 26px rgba(31,26,18,.10);
 }
-.case-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.case-card[hidden] { display: none; }
-
-.cc-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.cc-where {
-  font-family: var(--mono); font-size: 11px; letter-spacing: .04em;
-  color: var(--accent); white-space: nowrap;
+.jcard:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.jcard[hidden] { display: none; }
+.jc-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.jc-where, .cc-where {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--accent);
 }
-.cc-name {
+.jc-name {
   font-family: var(--serif); font-size: 18.5px; font-weight: 600;
-  line-height: 1.25; letter-spacing: -.01em; margin-top: 2px;
+  line-height: 1.25; letter-spacing: -.01em;
 }
-.cc-meta { font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint); }
-.cc-why {
-  font-size: 13.5px; line-height: 1.55; color: var(--ink-soft);
-  margin-top: 5px;
+.jc-meta { font-size: 12.5px; color: var(--ink-faint); }
+.jc-line { font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
+.jc-go { margin-top: auto; padding-top: 4px; font-size: 13px; font-weight: 600; color: var(--accent); }
+
+/* ---------- a judgment's own page ---------- */
+
+.jhead h1 { font-size: clamp(28px, 3.4vw, 42px); margin-bottom: 4px; }
+.j-sub { margin: 0 0 14px; font-size: 17px; font-style: italic; color: var(--ink-soft); }
+.j-meta { margin: 12px 0 0; font-size: 13px; color: var(--ink-faint); }
+.pill.violet { background: color-mix(in srgb, #7c3aed 12%, var(--bg-raise)); color: #6d28d9; }
+[data-theme="dark"] .pill.violet { background: color-mix(in srgb, #7c3aed 24%, var(--bg-raise)); color: #c4b5fd; }
+
+.jsecs { display: grid; gap: 16px; margin-top: 24px; }
+.jsec {
+  --jc: var(--line);
+  padding: 20px 24px 18px;
+  background: var(--bg-raise);
+  border: 1px solid var(--line); border-top: 4px solid var(--jc);
+  border-radius: 14px; box-shadow: var(--shadow);
+}
+.jsec > h2 {
+  margin: 0 0 12px;
+  font-family: var(--serif); font-size: 21px; font-weight: 600; letter-spacing: -.01em;
+}
+.jsec p { margin: 0 0 8px; font-size: 15.6px; line-height: 1.65; }
+.jsec p:last-child { margin-bottom: 0; }
+.jsec.q { --jc: var(--green); }
+.jsec.f { --jc: var(--accent); }
+.jsec.h { --jc: #7c3aed; }
+.jsec.p { --jc: var(--blue); }
+.jsec.l { --jc: var(--saffron); }
+.jsec a { border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+.jsec a:hover { text-decoration: none; border-bottom-color: var(--accent); }
+.jsec .chip { border-bottom: 1px solid var(--line); }
+
+.jlist { margin: 0; padding-left: 20px; }
+.jlist li { margin: 0 0 8px; font-size: 15.4px; line-height: 1.62; }
+.jlist li:last-child { margin-bottom: 0; }
+.jlist li::marker { color: var(--ink-faint); }
+
+.jnum { margin: 0; padding: 0; list-style: none; counter-reset: jn; }
+.jnum li {
+  position: relative; counter-increment: jn;
+  min-height: 26px; margin: 0 0 10px; padding: 1px 0 0 38px;
+  font-size: 15.4px; line-height: 1.62;
+}
+.jnum li:last-child { margin-bottom: 0; }
+.jnum li::before {
+  content: counter(jn);
+  position: absolute; left: 0; top: 0;
+  width: 26px; height: 26px; display: grid; place-items: center;
+  border-radius: 50%; font-size: 12.5px; font-weight: 700;
+  background: color-mix(in srgb, var(--jc) 14%, var(--bg-raise)); color: var(--jc);
+}
+
+.jheld-wrap { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.jheld { padding: 14px 16px 13px; border: 1px solid transparent; border-radius: 10px; }
+.jheld h3 { margin: 0 0 8px; font-size: 14.5px; font-weight: 700; letter-spacing: 0; }
+.jheld p, .jheld .jlist li { font-size: 15px; }
+.jheld.for { background: var(--green-soft); border-color: color-mix(in srgb, var(--green) 25%, transparent); }
+.jheld.for h3 { color: var(--green); }
+.jheld.also { background: var(--blue-soft); border-color: color-mix(in srgb, var(--blue) 25%, transparent); }
+.jheld.also h3 { color: var(--blue); }
+.jheld.against {
+  background: color-mix(in srgb, #dc2626 8%, var(--bg-raise));
+  border-color: color-mix(in srgb, #dc2626 24%, transparent);
+}
+.jheld.against h3 { color: #b91c1c; }
+[data-theme="dark"] .jheld.against h3 { color: #fca5a5; }
+
+.jfoot { border-top-width: 1px; padding-top: 12px; padding-bottom: 12px; }
+.jf-row {
+  display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px;
+  align-items: baseline; padding: 7px 0; font-size: 14px;
+}
+.jf-row + .jf-row { border-top: 1px solid var(--line-soft); }
+.jf-k {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+
+@media (max-width: 620px) {
+  .jsec { padding: 16px 16px 14px; }
+  .jf-row { grid-template-columns: 1fr; gap: 2px; }
+  .jheld-wrap { grid-template-columns: 1fr; }
 }
 
 /* ---------- the overlay ---------- */
@@ -152,5 +226,5 @@ body.sheet-open { overflow: hidden; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .case-card, .sheet, .sheet-back { transition: none; animation: none; }
+  .jcard, .sheet, .sheet-back { transition: none; animation: none; }
 }

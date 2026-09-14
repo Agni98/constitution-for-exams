@@ -534,40 +534,6 @@ footer.foot p { margin-bottom: 6px; }
 .diagram g.hot rect { transition: fill .12s ease; }
 .diagram g.hot:hover rect { fill: var(--bg-sunk); }
 
-/* ---------- landmark judgments ---------- */
-
-.case {
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--accent);
-  border-radius: var(--radius);
-  background: var(--bg-raise);
-  padding: 16px 20px 14px;
-  margin-bottom: 12px;
-  box-shadow: var(--shadow);
-}
-.case > header {
-  display: flex; flex-wrap: wrap; align-items: baseline;
-  gap: 8px 12px; margin-bottom: 4px;
-}
-.case h4 {
-  margin: 0; font-family: var(--serif); font-size: 19px;
-  font-weight: 600; letter-spacing: -.01em;
-}
-.case-meta { display: flex; flex-wrap: wrap; gap: 6px; }
-.case-full {
-  font-size: 12.5px; color: var(--ink-faint); font-style: italic;
-  margin: 0 0 10px;
-}
-.case-body { margin: 8px 0 0; display: grid; gap: 3px; }
-.case-body dt {
-  font-size: 10.5px; font-weight: 700; letter-spacing: .11em;
-  text-transform: uppercase; color: var(--ink-faint);
-  margin-top: 9px;
-}
-.case-body dt:first-child { margin-top: 0; }
-.case-body dd { margin: 0; font-size: 14.8px; line-height: 1.62; }
-.case-body dd a { border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
-
-}
+/* Judgment cards and a judgment's own page are in cases.css. */
 
 /* The home page has a stylesheet of its own: home.css. */

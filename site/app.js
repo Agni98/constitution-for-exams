@@ -84,14 +84,8 @@
 
   function explainOf(num) { return EXPLAIN[num] || null; }
 
-  // distinct judgments, not entries — a few cases sit under two articles
-  function caseCount() {
-    var seen = {};
-    Object.keys(CASES).forEach(function (k) {
-      CASES[k].forEach(function (c) { seen[c.case] = 1; });
-    });
-    return Object.keys(seen).length;
-  }
+  // distinct judgments, not entries: a few cases sit under two articles
+  function caseCount() { return REG.length; }
 
   function go(hash) { location.hash = hash; }
 
@@ -977,7 +971,7 @@
     var ex = EXPLAIN.preamble;
     var d = { flow: [], mind: [] };
     sortDiagrams(d, [], MAPS.preamble, 'For the Preamble', false);
-    var cases = CASES.preamble || [];
+    var cases = judgmentsFor('preamble');
     var first = ARTS[0];
 
     var s = '<div class="art-top"><nav class="crumbs" aria-label="Breadcrumb">' +
@@ -997,7 +991,7 @@
       explain: { html: ex ? explainBlock(ex) : '', none: 'No explainer for the Preamble yet' },
       flow: { html: diagramPane(d.flow), n: d.flow.length, none: 'No flow chart for the Preamble' },
       maps: { html: diagramPane(d.mind), n: d.mind.length, none: 'No mind map for the Preamble' },
-      judgments: { html: cases.length ? caseBlock(cases, 'Judgments on the Preamble') : '',
+      judgments: { html: cases.length ? judgPane(cases, 'Judgments on the Preamble') : '',
                    n: cases.length, none: 'No landmark judgment filed under the Preamble' },
       exams: { html: EXAM.preamble ? examBlock(EXAM.preamble) : '', none: 'Not on the exam priority list' }
     });
@@ -1363,7 +1357,8 @@
     s += '</div></header>';
 
     var d = diagramsFor(a);
-    var cases = CASES[num] || CASES[a.alias] || [];
+    var cases = judgmentsFor(a.num);
+    if (!cases.length && a.alias) cases = judgmentsFor(a.alias);
     var exam = examOf(a);
     s += tabbed('#/article/' + a.num, want, {
       text: { html: textPane(a) },
@@ -1371,7 +1366,7 @@
                  none: a.omitted ? 'This article was omitted, so it has no explainer' : 'No explainer yet' },
       flow: { html: diagramPane(d.flow), n: d.flow.length, none: 'No flow chart drawn for this article' },
       maps: { html: diagramPane(d.mind), n: d.mind.length, none: 'No mind map for this article' },
-      judgments: { html: cases.length ? caseBlock(cases, 'Judgments filed under Article ' + a.num) : '',
+      judgments: { html: cases.length ? judgPane(cases, 'Judgments filed under Article ' + a.num) : '',
                    n: cases.length, none: 'No landmark judgment filed under this article' },
       exams: { html: exam ? examBlock(exam) : '', none: 'Not on the exam priority list' }
     });
@@ -1641,24 +1636,197 @@
     historic:  { pill: 'blue',  label: 'superseded by Parliament' }
   };
 
-  function caseBlock(list, heading) {
-    if (!list || !list.length) return '';
-    var s = tag(heading || 'Landmark judgments');
-    list.forEach(function (c) {
-      var st = STATUS[c.status] || STATUS.good;
-      s += '<article class="case">' +
-        '<header><h4>' + esc(c.case) + '</h4><div class="case-meta">' +
-        '<span class="pill grey">' + esc(c.year) + '</span>' +
-        (c.bench ? '<span class="pill blue">' + esc(c.bench) + '</span>' : '') +
-        '<span class="pill ' + st.pill + '">' + esc(st.label) + '</span>' +
-        '</div></header>' +
-        (c.full && c.full !== c.case ? '<p class="case-full">' + esc(c.full) + '</p>' : '') +
-        '<dl class="case-body">' +
-        '<dt>What happened</dt><dd>' + para(c.facts) + '</dd>' +
-        '<dt>What the Court held</dt><dd>' + para(c.held) + '</dd>' +
-        '<dt>Why it matters</dt><dd>' + para(c.why) + '</dd>' +
-        '</dl></article>';
+  /* The judgment register. Each judgment is in it once, however many articles
+     it is filed under, with an id made from its short name and year. Which
+     articles it is filed under still comes from the cases files. A judgment
+     rewritten in the full format sits in judgments-*.js under the same id and
+     is read from there. One not yet rewritten keeps its short summary. */
+  var JUDG = window.COI_JUDGMENTS || {};
+
+  function caseId(c) {
+    return (String(c.case).replace(/\s*\(\d{4}\)\s*$/, '') + ' ' + c.year).toLowerCase()
+      .replace(/&/g, ' and ').replace(/['\u2019.]/g, '')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+  function keyOrder(k) {
+    if (k === 'preamble') return -1;
+    if (k.indexOf('sch') === 0) {
+      return 1e4 + SCHEDULES.map(function (x) { return x.id; }).indexOf(k.slice(3));
+    }
+    var a = BY_NUM[k];
+    return a ? a.n : 9e3;
+  }
+  function keyLabel(k) {
+    if (k === 'preamble') return 'Preamble';
+    if (k.indexOf('sch') === 0) {
+      var sc = scheduleById(k.slice(3));
+      return sc ? sc.name : k.slice(3) + ' Schedule';
+    }
+    return 'Article ' + k;
+  }
+  function keyShort(k) {
+    return k === 'preamble' ? 'Preamble' : k.indexOf('sch') === 0 ? 'Sch. ' + k.slice(3) : 'Art. ' + k;
+  }
+  function keyHref(k) {
+    if (k === 'preamble') return '#/preamble';
+    if (k.indexOf('sch') === 0) return '#/schedule/' + k.slice(3);
+    return '#/article/' + k;
+  }
+
+  var REG = [], REG_BY = {};
+  Object.keys(CASES).forEach(function (key) {
+    CASES[key].forEach(function (c) {
+      var id = caseId(c), r = REG_BY[id];
+      if (!r) {
+        r = REG_BY[id] = { id: id, c: c, j: JUDG[id] || null, keys: [] };
+        REG.push(r);
+      }
+      if (r.keys.indexOf(key) < 0) r.keys.push(key);
     });
+  });
+  REG.forEach(function (r) {
+    // articles before the Preamble and the Schedules, in the order printed
+    r.keys.sort(function (x, y) {
+      var ax = BY_NUM[x] ? 0 : 1, ay = BY_NUM[y] ? 0 : 1;
+      return ax - ay || keyOrder(x) - keyOrder(y);
+    });
+    r.order = keyOrder(r.keys[0]);
+    r.year = +((r.j && r.j.year) || r.c.year);
+    r.short = r.c.case;
+    r.name = (r.j && r.j.name) || r.c.full || r.c.case;
+    r.status = (r.j && r.j.status) || r.c.status;
+  });
+  REG.sort(function (x, y) { return x.order - y.order || x.year - y.year; });
+
+  // The judgments filed under one article, in the order the cases file lists them.
+  function judgmentsFor(key) {
+    var out = [];
+    (CASES[key] || []).forEach(function (c) {
+      var r = REG_BY[caseId(c)];
+      if (r && out.indexOf(r) < 0) out.push(r);
+    });
+    return out;
+  }
+
+  function benchText(r) {
+    if (r.j && r.j.bench) return r.j.bench + '-judge bench';
+    return r.c.bench ? String(r.c.bench).replace(/^(\d+) judges?$/, '$1-judge bench') : '';
+  }
+
+  // A judgment as a card: where it is filed, its name, year, bench and result,
+  // and one line on what it decided. The card is a link to its page.
+  function judgCard(r) {
+    var j = r.j, st = STATUS[r.status] || STATUS.good;
+    var line = j ? (j.summary || (j.question || [])[0] || '') : firstSentence(r.c.held);
+    var meta = [String(r.year), benchText(r), j && j.result ? j.result : ''].filter(Boolean).join(' \u00b7 ');
+    return '<a class="jcard" href="#/judgment/' + r.id + '" data-id="' + r.id + '">' +
+      '<span class="jc-top"><span class="jc-where">' + esc(r.keys.map(keyShort).join(' \u00b7 ')) + '</span>' +
+      (r.status && r.status !== 'good' ? '<span class="pill ' + st.pill + '">' + esc(st.label) + '</span>' : '') +
+      '</span>' +
+      '<span class="jc-name">' + esc(r.short) + '</span>' +
+      '<span class="jc-meta">' + esc(meta) + '</span>' +
+      '<span class="jc-line">' + esc(line) + '</span>' +
+      '<span class="jc-go">Read the judgment &rarr;</span></a>';
+  }
+
+  function judgPane(list, label) {
+    return tag(label) + '<div class="jgrid">' + list.map(judgCard).join('') + '</div>';
+  }
+
+  /* ---------- a judgment's own page ---------- */
+
+  var HELD_KIND = { unanimous: 'for', majority: 'for', plurality: 'for', concurring: 'also', dissent: 'against' };
+
+  function sourceName(url) {
+    if (/indiankanoon\.org/.test(url)) return 'Indian Kanoon';
+    if (/sci\.gov\.in/.test(url)) return 'the Supreme Court of India';
+    var m = String(url).match(/^https?:\/\/(?:www\.)?([^\/]+)/);
+    return m ? m[1] : 'the source';
+  }
+
+  function jsec(cls, heading, body) {
+    return body ? '<section class="jsec ' + cls + '"><h2>' + esc(heading) + '</h2>' + body + '</section>' : '';
+  }
+  function jParas(list) {
+    return (list || []).map(function (t) { return '<p>' + para(t) + '</p>'; }).join('');
+  }
+  function jBullets(list) {
+    return list && list.length ? '<ul class="jlist">' + list.map(function (t) {
+      return '<li>' + para(t) + '</li>';
+    }).join('') + '</ul>' : '';
+  }
+  function jNumbered(list) {
+    return list && list.length ? '<ol class="jnum">' + list.map(function (t) {
+      return '<li>' + para(t) + '</li>';
+    }).join('') + '</ol>' : '';
+  }
+  function jHeld(list) {
+    if (!list || !list.length) return '';
+    return '<div class="jheld-wrap">' + list.map(function (h) {
+      var pts = h.points || [];
+      return '<div class="jheld ' + (HELD_KIND[h.kind] || 'for') + '"><h3>' + esc(h.label) + '</h3>' +
+        (pts.length === 1 ? '<p>' + para(pts[0]) + '</p>' : jBullets(pts)) + '</div>';
+    }).join('') + '</div>';
+  }
+
+  function pageJudgment(id) {
+    var r = REG_BY[id];
+    if (!r) return '<p class="empty">No such judgment.</p>';
+    var i = REG.indexOf(r), prev = REG[i - 1], next = REG[i + 1];
+    var j = r.j, c = r.c, st = STATUS[r.status] || STATUS.good;
+
+    var s = '<div class="art-top"><nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a>' +
+      '<span>&rsaquo;</span><a href="#/cases">Judgments</a><span>&rsaquo;</span><b>' + esc(r.short) + '</b></nav>' +
+      '<div class="pager">' +
+      (prev ? '<a href="#/judgment/' + prev.id + '" title="' + esc(prev.short + ', ' + prev.year) +
+        '">&larr; Previous judgment</a>' : '') +
+      (next ? '<a href="#/judgment/' + next.id + '" title="' + esc(next.short + ', ' + next.year) +
+        '">Next judgment &rarr;</a>' : '') +
+      '</div></div>';
+
+    var sub = j ? [j.full && j.full !== r.name ? j.full : '', j.aka || ''].filter(Boolean).join(' \u00b7 ')
+      : (c.full && c.full !== r.name ? c.full : '');
+    s += '<header class="art-head jhead"><h1>' + esc(r.name) + '</h1>' +
+      (sub ? '<p class="j-sub">' + esc(sub) + '</p>' : '') +
+      '<div class="tagline"><span class="pill grey">' + esc(String(r.year)) + '</span>' +
+      (benchText(r) ? '<span class="pill blue">' + esc(benchText(r)) + '</span>' : '') +
+      (j && j.result ? '<span class="pill amber">' + esc(j.result) + '</span>' : '') +
+      '<span class="pill ' + st.pill + '">' + esc(st.label) + '</span>' +
+      ((j && j.tags) || []).map(function (t) { return '<span class="pill violet">' + esc(t) + '</span>'; }).join('') +
+      '</div>' +
+      (j && (j.decided || j.citation) ? '<p class="j-meta">' +
+        esc([j.decided ? 'Decided ' + j.decided : '', j.citation || ''].filter(Boolean).join(' \u00b7 ')) + '</p>' : '') +
+      '</header>';
+
+    s += '<div class="jsecs">';
+    if (j) {
+      s += jsec('q', 'Constitutional Question', jParas(j.question)) +
+        jsec('f', 'Facts of the Case', jBullets(j.facts)) +
+        jsec('h', 'What the Court Held', jHeld(j.held)) +
+        jsec('p', 'Key Principles', jNumbered(j.principles)) +
+        jsec('l', 'Subsequent Developments', jNumbered(j.legacy));
+    } else {
+      s += jsec('f', 'What happened', '<p>' + para(c.facts) + '</p>') +
+        jsec('h', 'What the Court held', '<p>' + para(c.held) + '</p>') +
+        jsec('l', 'Why it matters', '<p>' + para(c.why) + '</p>');
+    }
+    s += '<section class="jsec jfoot"><div class="jf-row"><span class="jf-k">Filed under</span>' +
+      '<span class="chiprow">' + r.keys.map(function (k) {
+        return '<a class="chip" href="' + keyHref(k) + '/judgments">' + esc(keyLabel(k)) + '</a>';
+      }).join('') + '</span></div>' +
+      (j && j.judges ? '<div class="jf-row"><span class="jf-k">Bench</span><span>' + esc(j.judges) + '</span></div>' : '') +
+      (j && j.source ? '<div class="jf-row"><span class="jf-k">Full text</span><a href="' + esc(j.source) +
+        '" target="_blank" rel="noopener">Read the judgment on ' + esc(sourceName(j.source)) + ' &#8599;</a></div>' : '') +
+      '</section></div>';
+
+    function to(x, dir) {
+      return '<a class="pf ' + dir + '" href="#/judgment/' + x.id + '">' +
+        '<span class="pf-d">' + (dir === 'prev' ? '&larr; Previous judgment' : 'Next judgment &rarr;') + '</span>' +
+        '<span class="pf-n">' + esc(x.keys.map(keyShort).join(' \u00b7 ') + ' \u00b7 ' + x.year) + '</span>' +
+        '<span class="pf-t">' + esc(x.short) + '</span></a>';
+    }
+    s += '<nav class="pager-foot" aria-label="Previous and next judgment">' +
+      (prev ? to(prev, 'prev') : '<span></span>') + (next ? to(next, 'next') : '') + '</nav>';
     return s;
   }
 
@@ -1954,7 +2122,7 @@
     var last = ARTS[ARTS.length - 1];
     var d = { flow: [], mind: [] };
     sortDiagrams(d, [], MAPS['sch' + id], 'For the ' + sc.name, false);
-    var cases = CASES['sch' + id] || [];
+    var cases = judgmentsFor('sch' + id);
     var exam = EXAM['sch' + id];
 
     var s = '<div class="art-top"><nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a>' +
@@ -1981,7 +2149,7 @@
       explain: { html: ex ? explainBlock(ex) : '', none: 'No explainer for this Schedule yet' },
       flow: { html: diagramPane(d.flow), n: d.flow.length, none: 'No flow chart for this Schedule' },
       maps: { html: diagramPane(d.mind), n: d.mind.length, none: 'No mind map for this Schedule' },
-      judgments: { html: cases.length ? caseBlock(cases, 'Judgments on the ' + sc.name) : '',
+      judgments: { html: cases.length ? judgPane(cases, 'Judgments on the ' + sc.name) : '',
                    n: cases.length, none: 'No landmark judgment filed under this Schedule' },
       exams: { html: exam ? examBlock(exam) : '', none: 'Not on the exam priority list' }
     });
@@ -2044,109 +2212,27 @@
     return n + (s[(v - 20) % 10] || s[v] || s[0]);
   }
 
-  // every case, flattened, with the article it hangs off
-  function allCases() {
-    var out = [];
-    Object.keys(CASES).forEach(function (key) {
-      var art = BY_NUM[key], where, sortN;
-      if (key === 'preamble') {
-        where = { href: '#/preamble', label: 'Preamble' };
-        sortN = -1;
-      } else if (key.indexOf('sch') === 0) {
-        var id = key.slice(3);
-        var sc = SCHEDULES.filter(function (x) { return x.id === id; })[0];
-        where = { href: '#/schedule/' + id, label: sc ? sc.name : id + ' Schedule' };
-        sortN = 1e4 + SCHEDULES.map(function (x) { return x.id; }).indexOf(id);
-      } else {
-        where = { href: '#/article/' + key, label: 'Art. ' + key };
-        sortN = art ? art.n : 9e3;
-      }
-      CASES[key].forEach(function (c) {
-        out.push({ c: c, key: key, where: where, sortN: sortN });
-      });
-    });
-    return out;
-  }
-
-  // the flattened list the case grid and the overlay both index into
-  var CASE_LIST = [];
-
-  function caseSorters(list) {
-    return {
-      order: list.slice().sort(function (a, b) {
-        return a.sortN - b.sortN || (+a.c.year) - (+b.c.year);
-      }),
-      year: list.slice().sort(function (a, b) {
-        return (+b.c.year) - (+a.c.year) || a.sortN - b.sortN;
-      })
-    };
-  }
-
-  function caseCard(x, i) {
-    var st = STATUS[x.c.status] || STATUS.good;
-    return '<button class="case-card" data-ci="' + i + '" type="button">' +
-      '<span class="cc-top"><span class="cc-where">' + esc(x.where.label) + '</span>' +
-      (x.c.status && x.c.status !== 'good'
-        ? '<span class="pill ' + st.pill + '">' + esc(st.label) + '</span>' : '') +
-      '</span>' +
-      '<span class="cc-name">' + esc(x.c.case) + '</span>' +
-      '<span class="cc-meta">' + esc(x.c.year) +
-      (x.c.bench ? ' &middot; ' + esc(x.c.bench) : '') + '</span>' +
-      '<span class="cc-why">' + esc(x.c.why) + '</span></button>';
-  }
-
   function pageCases() {
-    CASE_LIST = allCases();
-    var sorted = caseSorters(CASE_LIST);
-    var uniq = {};
-    CASE_LIST.forEach(function (x) { uniq[x.c.case] = 1; });
-
     var s = '<div class="page-head"><div class="eyebrow">Case law</div>' +
-      '<h1>Landmark judgments</h1><p class="lede">' + Object.keys(uniq).length +
-      ' judgments that changed what an article means. Click any card to read it here — what the ' +
-      'dispute was, what the Court decided, and why it still matters — without leaving this page. ' +
-      'A few appear under more than one article, because they did more than one thing.</p></div>';
+      '<h1>Landmark judgments</h1><p class="lede">' + REG.length +
+      ' judgments that changed what an article means. Click one to read it on its own page. ' +
+      'A few are filed under more than one article, because they decided more than one thing.</p></div>';
 
     s += '<div class="case-tools">' +
-      '<input id="caseFilter" type="search" placeholder="Filter by case, article or year — try Kesavananda, or 1978" autocomplete="off" spellcheck="false">' +
+      '<input id="caseFilter" type="search" placeholder="Filter by case, article or year, for example Kesavananda or 1978" autocomplete="off" spellcheck="false">' +
       '<div class="case-sort" role="group" aria-label="Sort">' +
       '<button type="button" class="on" data-sort="order">Constitutional order</button>' +
       '<button type="button" data-sort="year">Newest first</button>' +
       '</div></div>';
 
     s += '<div class="case-count" id="caseCount"></div>';
-    s += '<div class="case-grid" id="caseGrid">' +
-      sorted.order.map(function (x) { return caseCard(x, CASE_LIST.indexOf(x)); }).join('') +
-      '</div>';
+    s += '<div class="jgrid" id="caseGrid">' + REG.map(judgCard).join('') + '</div>';
     return s;
   }
 
-  /* ---------- the case overlay ---------- */
+  /* ---------- overlays ---------- */
 
   var _lastFocus = null;
-
-  function openCase(i) {
-    var x = CASE_LIST[i];
-    if (!x) return;
-    var c = x.c, st = STATUS[c.status] || STATUS.good;
-    openSheet(
-      '<div class="sheet-head">' +
-      '<a class="cc-where" href="' + x.where.href + '">' + esc(x.where.label) + ' &rarr;</a>' +
-      '<h2 id="sheetName">' + esc(c.case) + '</h2>' +
-      '<div class="case-meta"><span class="pill grey">' + esc(c.year) + '</span>' +
-      (c.bench ? '<span class="pill blue">' + esc(c.bench) + '</span>' : '') +
-      '<span class="pill ' + st.pill + '">' + esc(st.label) + '</span></div>' +
-      (c.full && c.full !== c.case ? '<p class="case-full">' + esc(c.full) + '</p>' : '') +
-      '</div>' +
-      '<dl class="case-body">' +
-      '<dt>What happened</dt><dd>' + para(c.facts) + '</dd>' +
-      '<dt>What the Court held</dt><dd>' + para(c.held) + '</dd>' +
-      '<dt>Why it matters</dt><dd>' + para(c.why) + '</dd>' +
-      '</dl>' +
-      '<div class="sheet-foot"><a class="chip" href="' + x.where.href + '">' +
-      'Read ' + esc(x.where.label) + ' in full &rarr;</a>' +
-      '<button class="chip" type="button" data-close="1">Close</button></div>');
-  }
 
   // One overlay at a time, and focus goes back where it came from when it
   // closes. wide: a diagram needs more room than a judgment does.
@@ -2181,27 +2267,24 @@
     var q = (box ? box.value : '').trim().toLowerCase();
     var shown = 0;
     [].slice.call(grid.children).forEach(function (card) {
-      var x = CASE_LIST[+card.getAttribute('data-ci')];
-      var hay = (x.c.case + ' ' + (x.c.full || '') + ' ' + x.c.year + ' ' +
-        (x.c.bench || '') + ' ' + x.where.label + ' ' + x.c.why).toLowerCase();
+      var r = REG_BY[card.getAttribute('data-id')], j = r.j || {};
+      var hay = [r.short, r.name, r.year, benchText(r), j.result, j.aka, (j.tags || []).join(' '),
+        j.summary, r.keys.map(keyLabel).join(' '), r.keys.map(keyShort).join(' '), r.c.why]
+        .join(' ').toLowerCase();
       var hit = !q || q.split(/\s+/).every(function (t) { return hay.includes(t); });
       card.hidden = !hit;
       if (hit) shown++;
     });
-    count.textContent = q
-      ? shown + ' of ' + CASE_LIST.length + ' judgments'
-      : CASE_LIST.length + ' judgments, ' + Object.keys(CASE_LIST.reduce(function (m, x) {
-          m[x.c.case] = 1; return m;
-        }, {})).length + ' distinct';
+    count.textContent = q ? shown + ' of ' + REG.length + ' judgments' : REG.length + ' judgments';
   }
 
   function sortCases(mode) {
     var grid = $('#caseGrid');
     if (!grid) return;
-    var sorted = caseSorters(CASE_LIST)[mode] || CASE_LIST;
-    grid.innerHTML = sorted.map(function (x) {
-      return caseCard(x, CASE_LIST.indexOf(x));
-    }).join('');
+    var list = mode === 'year'
+      ? REG.slice().sort(function (x, y) { return y.year - x.year || x.order - y.order; })
+      : REG;
+    grid.innerHTML = list.map(judgCard).join('');
     document.querySelectorAll('.case-sort button').forEach(function (b) {
       b.classList.toggle('on', b.getAttribute('data-sort') === mode);
     });
@@ -2304,6 +2387,24 @@
       if (score > 0) hits.push({ score: score, sc: sc, ex: ex });
     });
 
+    // The judgments themselves, so a case name leads to its own page.
+    REG.forEach(function (r) {
+      var j = r.j || {};
+      var hay = [r.short, r.name, j.full, j.aka, r.year, (j.tags || []).join(' '), j.summary,
+        (j.question || []).join(' '), (j.facts || []).join(' '),
+        (j.held || []).map(function (h) { return h.label + ' ' + (h.points || []).join(' '); }).join(' '),
+        (j.principles || []).join(' '), (j.legacy || []).join(' '),
+        r.c.facts, r.c.held, r.c.why].join(' ').toLowerCase();
+      var names = (r.short + ' ' + r.name + ' ' + (j.aka || '')).toLowerCase();
+      var score = 0;
+      terms.forEach(function (t) {
+        if (!hay.includes(t)) { score = -1e9; return; }
+        if (names.includes(t)) score += 60;
+        score += 2;
+      });
+      if (score > 0) hits.push({ score: score, jr: r });
+    });
+
     hits.sort(function (x, y) { return y.score - x.score; });
     return hits.slice(0, 60);
   }
@@ -2318,6 +2419,13 @@
       'like <em>ordinance</em>, <em>reservation</em>, <em>emergency</em>, or a case name like ' +
       '<em>Kesavananda</em>.</p>';
     hits.forEach(function (h) {
+      if (h.jr) {
+        s += '<a class="hit" href="#/judgment/' + h.jr.id + '">' +
+          '<b class="h">Judgment</b> &nbsp;<b>' + esc(h.jr.short + ', ' + h.jr.year) + '</b>' +
+          '<div class="snip">' + highlight((h.jr.j && h.jr.j.summary) || firstSentence(h.jr.c.held), q) +
+          '</div></a>';
+        return;
+      }
       if (h.sc) {
         var body = h.sc.sections[0] && h.sc.sections[0].blocks[0] ? h.sc.sections[0].blocks[0].t : '';
         s += '<a class="hit" href="#/schedule/' + h.sc.id + '">' +
@@ -2347,15 +2455,15 @@
   /* Six ways into the site from wherever you are. A menu is drawn when it
      opens rather than once at load, because the most useful thing in it is
      about the page you are on: reading Article 324, Mind Maps offers the map
-     for Part XV first and the index of every map after it. Maps, judgments,
-     amendments and exam notes open over the page, so a look-up does not cost
-     you your place. */
+     for Part XV first and the index of every map after it. Maps, amendments
+     and exam notes open over the page, so a look-up does not cost you your
+     place. A judgment opens on its own page. */
   var NAV = [
     { id: 'articles', label: 'All Articles', build: navArticles, wide: true,
       on: /^#\/(article|part|parts|preamble)(\/|$)/ },
     { id: 'exam', label: 'Important Articles', build: navExam, on: /^#\/exam(\/|$)/ },
     { id: 'maps', label: 'Mind Maps', build: navMaps, wide: true, on: /^#\/maps$/ },
-    { id: 'cases', label: 'Judgments', build: navCases, on: /^#\/cases$/ },
+    { id: 'cases', label: 'Judgments', build: navCases, on: /^#\/(cases|judgment)(\/|$)/ },
     { id: 'amend', label: 'Amendments', build: navAmend, on: /^#\/amendments$/ },
     { id: 'sched', label: 'Schedules', build: navSched, on: /^#\/schedules?(\/|$)/ }
   ];
@@ -2581,10 +2689,10 @@
   function navCases(ctx) {
     var s = '', key = ownKey(ctx, CASES);
     if (key) {
-      s += npHere(ctx, CASES[key].map(function (c, i) {
+      s += npHere(ctx, judgmentsFor(key).map(function (r) {
         // "Association for Democratic Reforms (2002)" already carries its year
-        return npRow({ data: 'data-navcase="' + esc(key) + '|' + i + '"', t: esc(c.case),
-          c: c.case.indexOf(c.year) >= 0 ? '' : c.year });
+        return npRow({ href: '#/judgment/' + r.id, t: esc(r.short),
+          c: r.short.indexOf(String(r.year)) >= 0 ? '' : r.year });
       }).join(''));
     } else if (ctx.art || ctx.preamble || ctx.sch) {
       s += npHere(ctx, '<p class="np-p">No landmark judgment is filed under ' + esc(ctx.name) + '.</p>');
@@ -2592,21 +2700,15 @@
     s += '<div class="np-sec">' +
       npRow({ href: '#/cases', t: 'All ' + caseCount() + ' landmark judgments', cls: 'np-all' }) + '</div>';
 
-    var start = [];
-    START_CASES.forEach(function (name) {
-      Object.keys(CASES).some(function (k) {
-        return CASES[k].some(function (c, i) {
-          // exact: "Puttaswamy" and "Puttaswamy (Aadhaar)" are different cases
-          if (c.case !== name) return false;
-          start.push({ k: k, i: i, c: c });
-          return true;
-        });
-      });
-    });
+    // exact names: "Puttaswamy" and "Puttaswamy (Aadhaar)" are different cases
+    var start = START_CASES.map(function (name) {
+      return REG.filter(function (r) { return r.short === name; })[0];
+    }).filter(Boolean);
     if (start.length) {
-      s += '<div class="np-sec">' + npHead('Start with these') + start.map(function (x) {
-        return npRow({ data: 'data-navcase="' + esc(x.k) + '|' + x.i + '"', t: esc(x.c.case), c: x.c.year,
-          n: x.k === 'preamble' ? 'Pre.' : x.k.indexOf('sch') === 0 ? 'Sch. ' + x.k.slice(3) : x.k });
+      s += '<div class="np-sec">' + npHead('Start with these') + start.map(function (r) {
+        var k = r.keys[0];
+        return npRow({ href: '#/judgment/' + r.id, t: esc(r.short), c: r.year,
+          n: k === 'preamble' ? 'Pre.' : k.indexOf('sch') === 0 ? 'Sch. ' + k.slice(3) : k });
       }).join('') + '</div>';
     }
     return s;
@@ -2702,17 +2804,6 @@
       '<button class="chip" type="button" data-close="1">Close</button></div>');
   }
 
-  function openCaseRef(ref) {
-    var bar = ref.lastIndexOf('|'), k = ref.slice(0, bar);
-    var c = (CASES[k] || [])[+ref.slice(bar + 1)];
-    if (!c) return;
-    // The judgments page fills this list; from anywhere else it may be empty.
-    if (!CASE_LIST.length) CASE_LIST = allCases();
-    for (var i = 0; i < CASE_LIST.length; i++) {
-      if (CASE_LIST[i].c === c && CASE_LIST[i].key === k) { openCase(i); return; }
-    }
-  }
-
   function openNav(id, byKeyboard) {
     var n = navById(id), panel = $('#navPanel'), btn = $('.tn[data-nav="' + id + '"]');
     if (!n || !panel || !btn) return;
@@ -2769,15 +2860,14 @@
       }
       if (!NAV_OPEN) return;
       if (!t.closest('#navPanel')) { closeNav(); return; }
-      var act = t.closest('[data-navmap], [data-navcase], [data-navamd], [data-navexam]');
+      var act = t.closest('[data-navmap], [data-navamd], [data-navexam]');
       if (act) {
-        var map = act.getAttribute('data-navmap'), cs = act.getAttribute('data-navcase'),
+        var map = act.getAttribute('data-navmap'),
             amd = act.getAttribute('data-navamd'), ex = act.getAttribute('data-navexam');
         // Close first, so the overlay hands focus back to the menu button
         // rather than to a row that is no longer on screen.
         closeNav(true);
         if (map) openMap(map);
-        else if (cs) openCaseRef(cs);
         else if (amd) openAmend(+amd);
         else if (ex) openExam(ex);
         return;
@@ -2830,6 +2920,7 @@
     else if ((m = h.match(/^#\/preamble(?:\/([a-z]+))?$/))) out = pagePreamble(m[1]);
     else if (h === '#/schedules') out = pageSchedules();
     else if (h === '#/amendments') out = pageAmendments();
+    else if ((m = h.match(/^#\/judgment\/([^\/]+)$/))) out = pageJudgment(decodeURIComponent(m[1]));
     else if (h === '#/cases') out = pageCases();
     else if ((m = h.match(/^#\/exam(?:\/([123]))?$/))) out = pageExam(m[1]);
     else if (h === '#/about') out = pageAbout();
@@ -2891,7 +2982,7 @@
         var hits = search(box.value);
         if (hits.length) {
           var top = hits[0];
-          go(top.sc ? '#/schedule/' + top.sc.id : '#/article/' + top.a.num);
+          go(top.jr ? '#/judgment/' + top.jr.id : top.sc ? '#/schedule/' + top.sc.id : '#/article/' + top.a.num);
           box.blur();
         }
       }
@@ -2921,8 +3012,6 @@
           Math.max(200, track.clientWidth * 0.8), behavior: 'smooth' });
         return;
       }
-      var card = e.target.closest && e.target.closest('.case-card');
-      if (card) { openCase(+card.getAttribute('data-ci')); return; }
       if (e.target.closest && e.target.closest('[data-peek-close]')) {
         var pp = e.target.closest('.peek-panel');
         var forSpec = pp && pp.getAttribute('data-for');
