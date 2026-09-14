@@ -1,0 +1,299 @@
+/* ============================================================
+   The home page
+   A hero with search, four ways in, the topics a polity syllabus is built
+   on, the revision list, the Constitution in print order, and one line from
+   the Constituent Assembly. Everything here is drawn in the theme's tokens,
+   the illustration included, so light and dark need no second copy.
+   ============================================================ */
+
+:root {
+  --hero-a:  #fbf4e8;
+  --hero-b:  #f2d9b8;
+  --hero-btn: #1d5b3c;
+  --st-hi:   #f4dfbd;
+  --st:      #e6c08c;
+  --st-mid:  #cf9e66;
+  --st-lo:   #a9763f;
+  --st-deep: #7b532d;
+  --sun:     #f5b36a;
+  --tri-w:   #e4ddd0;
+}
+[data-theme="dark"] {
+  --hero-a:  #1c1a18;
+  --hero-b:  #33271b;
+  --hero-btn: #2f7a52;
+  --st-hi:   #85684a;
+  --st:      #6f553c;
+  --st-mid:  #5a4430;
+  --st-lo:   #3f3023;
+  --st-deep: #2a2119;
+  --sun:     #c9803f;
+  --tri-w:   #e8e6e1;
+}
+
+/* No sidebar on the home page: it lists the Parts, and so does the page.
+   The menu button still brings it in, as a drawer over the page. */
+@media (min-width: 901px) {
+  body.is-home .sidebar {
+    display: block;
+    position: fixed; left: 0; top: var(--topbar-h); z-index: 35;
+    width: min(320px, 86vw);
+    transform: translateX(-102%); transition: transform .22s ease;
+    box-shadow: var(--shadow);
+  }
+  body.is-home.nav-open .sidebar { transform: none; }
+  body.is-home.nav-open .scrim {
+    display: block; position: fixed; inset: var(--topbar-h) 0 0 0;
+    background: rgba(0,0,0,.36); z-index: 30;
+  }
+  body.is-home main { max-width: 1240px; margin: 0 auto; }
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  container-type: inline-size;
+  border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+  background: var(--bg-raise);
+  box-shadow: var(--shadow);
+}
+.hero-main {
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  background:
+    radial-gradient(110% 95% at 88% 8%, color-mix(in srgb, var(--hero-b) 90%, transparent), transparent 62%),
+    linear-gradient(180deg, var(--hero-a), color-mix(in srgb, var(--hero-b) 45%, var(--hero-a)));
+}
+.hero-copy { padding: clamp(26px, 4cqi, 50px) clamp(20px, 3.6cqi, 46px) clamp(26px, 3.4cqi, 40px); }
+.hero h1 {
+  font-size: clamp(32px, 4.6cqi, 52px); line-height: 1.06; letter-spacing: -.022em;
+  margin: 0 0 14px;
+  text-wrap: balance;   /* "The Constitution / of India", not "The Constitution of / India" */
+}
+.hero h1 span { display: block; color: var(--accent); }
+.hero-lede { margin: 0 0 22px; max-width: 46ch; font-size: 16.4px; line-height: 1.55; color: var(--ink-soft); }
+
+.hero-search {
+  display: flex; align-items: center; gap: 10px;
+  max-width: 560px; height: 52px; padding: 0 6px 0 16px;
+  background: var(--bg-raise); color: var(--ink-faint);
+  border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(31,26,18,.05), 0 8px 24px rgba(31,26,18,.08);
+}
+.hero-search:focus-within { border-color: var(--accent); color: var(--accent); }
+.hs-ico { flex: 0 0 auto; width: 19px; height: 19px; }
+.hero-search input {
+  flex: 1 1 auto; min-width: 0; border: 0; outline: 0; background: transparent;
+  font: inherit; font-size: 15.5px; color: var(--ink);
+}
+.hero-search button {
+  flex: 0 0 auto; height: 40px; padding: 0 22px;
+  border: 0; border-radius: 9px; background: var(--hero-btn); color: #fff;
+  font: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer;
+}
+.hero-search button:hover { filter: brightness(1.1); }
+.hero-search button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.hero-try { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; }
+.hero-try > span { font-size: 13.5px; color: var(--ink-faint); margin-right: 2px; }
+.hero-try a {
+  padding: 4px 12px; border: 1px solid var(--line); border-radius: 999px;
+  background: color-mix(in srgb, var(--bg-raise) 72%, transparent);
+  font-size: 13px; color: var(--ink-soft); text-decoration: none;
+}
+.hero-try a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* The drawing keeps its proportions and sits on the bottom-left corner, so
+   however the column is shaped the sky - and the quote - stay above it. */
+.hero-art { position: relative; min-height: 300px; }
+.hero-art svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.hero-quote { position: absolute; top: 30px; right: 26px; max-width: 38%; margin: 0; }
+.hero-quote p {
+  margin: 0 0 10px; font-family: var(--serif); font-style: italic;
+  font-size: 20px; line-height: 1.3; color: var(--ink);
+}
+.hero-quote p::before {
+  content: "\201C"; display: block; margin-bottom: 4px;
+  font-size: 46px; line-height: .7; font-style: normal; color: var(--accent); opacity: .45;
+}
+.hero-quote footer {
+  display: inline-block; padding-top: 8px; border-top: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
+  font-size: 12.5px; color: var(--ink-soft);
+}
+
+/* four ways in, as the hero's own footer */
+.hero-ways {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line); background: var(--bg-raise);
+}
+.way {
+  position: relative; display: flex; align-items: center; gap: 13px;
+  padding: 17px 18px; color: var(--ink); text-decoration: none;
+}
+.way + .way::before {
+  content: ""; position: absolute; left: 0; top: 18px; bottom: 18px;
+  width: 1px; background: var(--line);
+}
+.way:hover { background: var(--bg-sunk); text-decoration: none; }
+.way:hover .chev { color: var(--accent); transform: translateX(2px); }
+.way-ico {
+  flex: 0 0 auto; width: 48px; height: 48px; display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 50%;
+  background: var(--bg-raise); color: var(--accent);
+}
+.way:nth-child(even) .way-ico { color: var(--green); }
+.way-ico svg { width: 24px; height: 24px; }
+.way-t { flex: 1 1 auto; min-width: 0; }
+.way-t b { display: block; font-family: var(--serif); font-size: 16.4px; font-weight: 650; line-height: 1.2; }
+.way-t small { display: block; margin-top: 3px; font-size: 12.8px; line-height: 1.38; color: var(--ink-faint); }
+.chev { flex: 0 0 auto; width: 16px; height: 16px; color: var(--ink-faint); transition: transform .15s ease; }
+
+@container (max-width: 900px) {
+  .hero-ways { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .way:nth-child(3)::before { display: none; }
+  .way:nth-child(n+3) { border-top: 1px solid var(--line-soft); }
+}
+@container (max-width: 760px) {
+  /* minmax(0, ...) - a bare 1fr lets the copy's min-content widen the column
+     past the card, and the card's overflow:hidden then cuts the text off */
+  .hero-main { grid-template-columns: minmax(0, 1fr); }
+  .hero-art { min-height: 190px; margin-top: -10px; }
+  .hero-quote { display: none; }
+}
+@container (max-width: 520px) {
+  .hero-ways { grid-template-columns: 1fr; }
+  .way::before { display: none; }
+  .way + .way { border-top: 1px solid var(--line-soft); }
+}
+
+/* ---------- sections ---------- */
+
+.home-sec { margin-top: 46px; }
+.hs-head {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 16px;
+  margin-bottom: 16px;
+}
+.hs-head h2 { margin: 0; font-size: clamp(24px, 2.6vw, 30px); line-height: 1.15; letter-spacing: -.015em; }
+.hs-head p { margin: 5px 0 0; font-size: 14.5px; color: var(--ink-faint); }
+.more {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 14px; font-weight: 600; white-space: nowrap;
+}
+.more svg { width: 16px; height: 16px; }
+
+/* topics */
+.topics { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(236px, 1fr)); }
+.topic {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 17px 18px; color: var(--ink); text-decoration: none;
+  background: var(--bg-raise); border: 1px solid var(--line); border-radius: 12px;
+  transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+a.topic:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  box-shadow: var(--shadow); transform: translateY(-1px); text-decoration: none;
+}
+.tp-ico {
+  flex: 0 0 auto; width: 42px; height: 42px; display: grid; place-items: center;
+  border-radius: 11px; background: var(--accent-soft); color: var(--accent);
+}
+.tp-ico.g { background: var(--green-soft); color: var(--green); }
+.tp-ico svg { width: 23px; height: 23px; }
+.tp-t { min-width: 0; }
+.tp-t b { display: block; font-family: var(--serif); font-size: 16.4px; font-weight: 650; line-height: 1.25; }
+.tp-t small { display: block; margin-top: 4px; font-size: 13px; line-height: 1.4; color: var(--ink-faint); }
+.tp-links { display: flex; flex-wrap: wrap; gap: 2px 10px; margin-top: 5px; font-size: 13px; line-height: 1.45; }
+.tp-links a { font-weight: 600; }
+
+/* the revision list */
+.revise {
+  margin-top: 26px; padding: 24px 26px;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 22px 28px; align-items: center;
+  border: 1px solid var(--line); border-radius: 16px;
+  background: linear-gradient(120deg, color-mix(in srgb, var(--green-soft) 80%, var(--bg-raise)), var(--bg-raise) 75%);
+}
+.rv-copy { display: flex; align-items: flex-start; gap: 16px; }
+.rv-ico {
+  flex: 0 0 auto; width: 56px; height: 56px; display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 50%; background: var(--bg-raise); color: var(--green);
+}
+.rv-ico svg { width: 28px; height: 28px; }
+.rv-copy h2 { margin: 2px 0 6px; font-size: 21px; line-height: 1.2; }
+.rv-copy p { margin: 0 0 10px; font-size: 14.5px; color: var(--ink-soft); }
+.rv-tiers { display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.rv-tier {
+  display: block; padding: 13px 14px 12px; color: var(--ink); text-decoration: none;
+  background: var(--bg-raise); border: 1px solid var(--line); border-top: 3px solid var(--tc);
+  border-radius: 12px; transition: box-shadow .15s ease, transform .15s ease;
+}
+.rv-tier:hover { box-shadow: var(--shadow); transform: translateY(-1px); text-decoration: none; }
+.rv-tier.t1 { --tc: var(--saffron); }
+.rv-tier.t2 { --tc: var(--amber); }
+.rv-tier.t3 { --tc: var(--blue); }
+.rv-tier b { display: block; font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--tc); }
+.rv-tier strong { display: block; margin-top: 7px; font-size: 14px; }
+.rv-tier small { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.35; color: var(--ink-faint); }
+
+/* the Constitution in print order */
+.car { position: relative; }
+.car-track {
+  display: flex; gap: 12px; overflow-x: auto;
+  scroll-snap-type: x mandatory; scroll-padding: 0 2px;
+  padding: 2px 2px 10px; scrollbar-width: none;
+}
+.car-track::-webkit-scrollbar { display: none; }
+.pcard {
+  flex: 0 0 190px; min-height: 146px; scroll-snap-align: start;
+  display: flex; flex-direction: column;
+  padding: 14px 16px; color: var(--ink); text-decoration: none;
+  background: var(--bg-raise); border: 1px solid var(--line); border-radius: 12px;
+}
+.pcard:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); text-decoration: none; }
+.pc-k { font-family: var(--mono); font-size: 11.5px; color: var(--accent); }
+.pcard b {
+  margin-top: 8px; font-family: var(--serif); font-size: 16px; font-weight: 650; line-height: 1.25;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.pcard small { margin-top: auto; padding-top: 10px; font-size: 12.5px; color: var(--ink-faint); }
+.pcard.dim b { color: var(--ink-faint); }
+.car-btn {
+  position: absolute; top: 50%; z-index: 2; transform: translateY(-58%);
+  width: 40px; height: 40px; display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 50%;
+  background: var(--bg-raise); color: var(--ink); box-shadow: var(--shadow);
+  cursor: pointer; transition: opacity .15s ease;
+}
+.car-btn:hover { color: var(--accent); border-color: var(--accent); }
+.car-btn svg { width: 18px; height: 18px; }
+.car-btn.prev { left: -14px; }
+.car-btn.next { right: -14px; }
+.car-btn.off { opacity: 0; pointer-events: none; }
+@media (hover: none) { .car-btn { display: none; } }
+
+/* one line from the Constituent Assembly */
+.home-close { margin-top: 52px; padding: 8px 16px 0; text-align: center; }
+.home-close blockquote {
+  margin: 0 auto; max-width: 740px;
+  font-family: var(--serif); font-style: italic; font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.45; color: var(--ink-soft);
+}
+.home-close figcaption { margin-top: 12px; font-size: 13px; color: var(--ink-faint); }
+.tricolour {
+  width: 132px; height: 3px; margin: 18px auto 0; border-radius: 3px;
+  background: linear-gradient(90deg, #f28c28 0 33.3%, var(--tri-w) 33.3% 66.6%, #138808 66.6%);
+}
+
+@media (max-width: 1000px) {
+  .revise { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .hs-head { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .revise { padding: 20px 18px; }
+  .rv-tiers { grid-template-columns: 1fr; }
+  .rv-tier { display: grid; grid-template-columns: 52px 1fr; column-gap: 12px; align-items: center; }
+  .rv-tier b { grid-row: span 2; }
+  .rv-tier strong { margin-top: 0; }
+  .topic { padding: 15px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .topic, .rv-tier, .chev, .sidebar { transition: none !important; }
+}

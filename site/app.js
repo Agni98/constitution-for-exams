@@ -739,43 +739,271 @@
 
   /* ---------- pages ---------- */
 
-  // The home page is the Constitution itself, in the order it is printed:
-  // the Preamble, the Parts, the Schedules. The ways of studying it - the exam
-  // list, the mind maps, the judgments, the amendments - are in the menu bar
-  // on every page, and a tile for each of them here only said so twice. The
-  // source note and the disclaimer are on every page too, in siteFooter().
-  function pageHome() {
-    var s = '<div class="page-head home-head"><h1>The Constitution of India for Exams</h1></div>';
+  /* ---------- the home page ---------- */
 
-    s += '<div class="grid home-grid">' +
-      tile('#/preamble', 'THE OPENING', 'Preamble',
-        'One paragraph, and every word of it argued over');
+  // Line icons, 24 units square, stroked in currentColor: the element they
+  // sit in sets the colour, and the theme sets that.
+  var ICON = {
+    doc: '<path d="M6.5 3h7.5l4.5 4.5V21h-12z"/><path d="M14 3v4.5h4.5"/>' +
+      '<path d="M9.5 12h6M9.5 15.5h6M9.5 19h3.5"/>',
+    book: '<path d="M12 6.5c-2-1.6-4.8-2.2-8.5-2v13.5c3.7-.2 6.5.4 8.5 2 2-1.6 4.8-2.2 8.5-2V4.5' +
+      'c-3.7-.2-6.5.4-8.5 2z"/><path d="M12 6.5V20"/>',
+    map: '<rect x="2.5" y="9.5" width="6" height="5" rx="1.2"/><rect x="15.5" y="3" width="6" height="4.5" rx="1.2"/>' +
+      '<rect x="15.5" y="9.75" width="6" height="4.5" rx="1.2"/><rect x="15.5" y="16.5" width="6" height="4.5" rx="1.2"/>' +
+      '<path d="M8.5 12h7M8.5 12c3.5 0 3.5-6.75 7-6.75M8.5 12c3.5 0 3.5 6.75 7 6.75"/>',
+    seal: '<path d="M13.5 3H6v18h6.5"/><path d="M13.5 3L18 7.5V11"/><path d="M13.5 3v4.5H18"/>' +
+      '<path d="M9 11h5M9 14.5h3"/><circle cx="17" cy="15.5" r="3"/><path d="M15.5 18.2l-.9 3 2.4-1.2 2.4 1.2-.9-3"/>',
+    history: '<path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1"/><path d="M3.5 3.8v4.4h4.4"/><path d="M12 7.5V12l3.2 2"/>',
+    scales: '<path d="M12 3.5v17M8 20.5h8M4.5 7h15"/><path d="M4.5 7L2 13.5M4.5 7L7 13.5M19.5 7L17 13.5M19.5 7L22 13.5"/>' +
+      '<path d="M2 13.5a2.5 2.5 0 0 0 5 0zM17 13.5a2.5 2.5 0 0 0 5 0z"/>',
+    sign: '<path d="M12 2.5v3M12 11v2.5M12 19v2.5"/><path d="M5 5.5h11l3 2.75-3 2.75H5z"/>' +
+      '<path d="M19 13.5H8l-3 2.75L8 19h11z"/>',
+    check: '<rect x="4" y="3" width="16" height="18" rx="2.5"/>' +
+      '<path d="M7.5 8.5l1.5 1.5 2.8-2.8M7.5 15l1.5 1.5 2.8-2.8M14.5 9h2.5M14.5 15.5h2.5"/>',
+    person: '<circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5c.6-3.9 3.7-6.5 7.5-6.5s6.9 2.6 7.5 6.5"/>',
+    house: '<path d="M6.5 10a5.5 3.2 0 0 1 11 0"/><path d="M12 6.8V4"/><path d="M3.5 10h17M3.5 17.5h17M2.5 20.5h19"/>' +
+      '<path d="M5 10v7.5M8.5 10v7.5M12 10v7.5M15.5 10v7.5M19 10v7.5"/>',
+    gavel: '<path d="M13.4 4.2l-3.2 3.2 6.4 6.4 3.2-3.2z"/><path d="M13.4 10.6l-7.9 7.9"/><path d="M13.5 20.5h7"/>',
+    hub: '<circle cx="12" cy="5" r="2.4"/><circle cx="5" cy="18.5" r="2.4"/><circle cx="19" cy="18.5" r="2.4"/>' +
+      '<path d="M10.8 7.1L6.2 16.4M13.2 7.1l4.6 9.3M7.4 18.5h9.2"/>',
+    shield: '<path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/><path d="M12 8.5V13M12 16.3v.2"/>',
+    village: '<path d="M2.5 20.5h19"/><path d="M4 20.5v-8l5-4 5 4v8"/><path d="M14 20.5v-6l3.5-2.8 3.5 2.8v6"/>' +
+      '<path d="M7.5 20.5V17h3v3.5"/>',
+    pillars: '<path d="M3.5 9L12 4l8.5 5z"/><path d="M5.5 11.5v6M10 11.5v6M14 11.5v6M18.5 11.5v6"/><path d="M3.5 20.5h17"/>',
+    pen: '<path d="M12.5 4.5H6a2 2 0 0 0-2 2V18a2 2 0 0 0 2 2h11.5a2 2 0 0 0 2-2v-6.5"/>' +
+      '<path d="M18 2.8a2.1 2.1 0 0 1 3 3l-8.5 8.5-4 1 1-4z"/>',
+    target: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.8"/>' +
+      '<circle cx="12" cy="12" r="1.4" fill="currentColor"/>',
+    search: '<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/>',
+    chev: '<path d="M9 5.5l6.5 6.5L9 18.5"/>',
+    chevL: '<path d="M15 5.5L8.5 12l6.5 6.5"/>',
+    arrow: '<path d="M4.5 12h15M13.5 6l6 6-6 6"/>'
+  };
+  function icon(k, cls) {
+    return '<svg' + (cls ? ' class="' + cls + '"' : '') + ' viewBox="0 0 24 24" fill="none" ' +
+      'stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" ' +
+      'aria-hidden="true">' + ICON[k] + '</svg>';
+  }
+
+  /* A colonnaded rotunda at the foot of the sky - the shape of the old
+     Parliament House, without drawing anything that stands for the State.
+     Built from ellipses seen slightly from above: every band is the front
+     half of one ellipse between two heights, so the columns, the storey
+     above and the dome all sit on the same curve. */
+  function heroArt() {
+    var cx = 215;
+    function r1(n) { return Math.round(n * 10) / 10; }
+    function band(rx, ry, top, bot, fill) {
+      var L = r1(cx - rx), R = r1(cx + rx);
+      return '<path d="M' + L + ' ' + top + 'A' + rx + ' ' + ry + ' 0 0 0 ' + R + ' ' + top +
+        'L' + R + ' ' + bot + 'A' + rx + ' ' + ry + ' 0 0 1 ' + L + ' ' + bot + 'Z" fill="' + fill + '"/>';
+    }
+    function lid(rx, ry, y, fill) {
+      return '<ellipse cx="' + cx + '" cy="' + y + '" rx="' + rx + '" ry="' + ry + '" fill="' + fill + '"/>';
+    }
+    // things spaced evenly round the front half of an ellipse
+    function ring(n, rx, ry, draw) {
+      var out = '';
+      for (var i = 0; i < n; i++) {
+        var th = Math.PI * (i + 0.5) / n, sn = Math.sin(th);
+        out += draw(cx - rx * Math.cos(th), ry * sn, sn);
+      }
+      return out;
+    }
+
+    // The viewBox is cropped close round the building, so it is the building
+    // that scales to the column; the sun is allowed to spill past it.
+    var s = '<svg viewBox="-8 44 470 272" preserveAspectRatio="xMinYMax meet" aria-hidden="true">' +
+      '<defs><radialGradient id="hSun"><stop offset="0" stop-color="var(--sun)" stop-opacity=".75"/>' +
+      '<stop offset="1" stop-color="var(--sun)" stop-opacity="0"/></radialGradient>' +
+      '<linearGradient id="hDome" x1="0" x2="1"><stop offset=".25" stop-color="var(--st-hi)"/>' +
+      '<stop offset="1" stop-color="var(--st-mid)"/></linearGradient></defs>' +
+      // kept inside the viewBox: where the drawing is height-bound, as on a
+      // phone, anything above its top edge is cut off square
+      '<circle cx="330" cy="152" r="108" fill="url(#hSun)"/>' +
+      '<ellipse cx="' + cx + '" cy="300" rx="262" ry="16" fill="var(--st-lo)" opacity=".2"/>';
+
+    // the steps, lowest first
+    s +=lid(218, 31, 259, 'var(--st-hi)') + band(218, 31, 259, 270, 'var(--st-lo)');
+    s += lid(206, 29, 250, 'var(--st-hi)') + band(206, 29, 250, 259, 'var(--st-mid)');
+    // the colonnade: a shadowed wall, and the columns standing in front of it
+    s += band(188, 26, 194, 250, 'var(--st-deep)');
+    s += ring(33, 196, 27, function (x, dy, sn) {
+      var w = 3 + 4.4 * sn, top = r1(194 + dy), h = 56;
+      return '<rect x="' + r1(x - w / 2) + '" y="' + top + '" width="' + r1(w) + '" height="' + h +
+        '" fill="var(--st-hi)"/><rect x="' + r1(x + w * 0.12) + '" y="' + top + '" width="' + r1(w * 0.38) +
+        '" height="' + h + '" fill="var(--st)"/>';
+    });
+    // the roof over it
+    s += lid(202, 28, 184, 'var(--st)') + band(202, 28, 184, 188, 'var(--st-lo)') +
+      band(199, 27.5, 188, 194, 'var(--st-mid)');
+    // the storey above, set back, with its windows
+    s += lid(138, 19, 146, 'var(--st-hi)') + band(138, 19, 146, 150, 'var(--st-mid)') +
+      band(134, 18.5, 150, 176, 'var(--st)');
+    s += ring(19, 134, 18.5, function (x, dy, sn) {
+      var w = 1.6 + 3.6 * sn;
+      return '<rect x="' + r1(x - w / 2) + '" y="' + r1(156 + dy) + '" width="' + r1(w) +
+        '" height="12" rx="1" fill="var(--st-lo)"/>';
+    });
+    // the dome, and the lantern on it
+    s += '<path d="M161 142A54 46 0 0 1 269 142A54 7.5 0 0 1 161 142Z" fill="url(#hDome)"/>' +
+      '<path d="M215 149.5V96M184 147Q192 108 215 96M246 147Q238 108 215 96" fill="none" ' +
+      'stroke="var(--st-mid)" stroke-width="1.2" opacity=".55"/>' +
+      '<rect x="209" y="84" width="12" height="12" rx="1.5" fill="var(--st-hi)"/>' +
+      '<path d="M207 85A8 6 0 0 1 223 85Z" fill="var(--st-mid)"/>' +
+      '<path d="M215 79V72" stroke="var(--st-lo)" stroke-width="1.6" stroke-linecap="round"/>';
+    return s + '</svg>';
+  }
+
+  // Where the chips under the search box lead. Each is a query the search
+  // answers well - "preamble" is not one: the Preamble has a page of its own
+  // and the search does not look inside it.
+  var TRY = ['Article 21', 'Habeas corpus', 'Money Bill', 'Kesavananda', 'Anti-defection', 'Creamy layer'];
+
+  // The areas a polity syllabus is built on. A tile names its Part, or its
+  // chapter within a Part, and takes its article range from the data rather
+  // than from a list typed here.
+  var TOPICS = [
+    { t: 'Preamble', href: '#/preamble', sub: 'The one paragraph the rest is read by', ic: 'book', g: 1 },
+    { t: 'Fundamental Rights', part: 'III', ic: 'scales' },
+    { t: 'Directive Principles', part: 'IV', ic: 'sign' },
+    { t: 'Fundamental Duties', part: 'IVA', ic: 'check', g: 1 },
+    { t: 'Union Executive', part: 'V', chap: 'I', sub: 'President, Vice-President, Ministers', ic: 'person', g: 1 },
+    { t: 'Parliament', part: 'V', chap: 'II', ic: 'house' },
+    { t: 'Judiciary', part: 'V', chap: 'IV', sub: 'The Supreme Court', ic: 'gavel' },
+    { t: 'Federalism', part: 'XI', sub: 'Centre\u2013State relations', ic: 'hub', g: 1 },
+    { t: 'Emergency Provisions', part: 'XVIII', ic: 'shield', g: 1 },
+    { t: 'Local Government', parts: ['IX', 'IXA'], sub: 'Panchayats and Municipalities', ic: 'village' },
+    { t: 'Constitutional Bodies', ic: 'pillars', g: 1,
+      bodies: [['148', 'CAG'], ['280', 'Finance Commission'], ['315', 'UPSC'],
+               ['324', 'Election Commission'], ['338', 'NCSC']] },
+    { t: 'Amending the Constitution', href: '#/article/368', sub: 'Article 368, and the basic structure', ic: 'pen' }
+  ];
+
+  function artRange(list) {
+    if (!list.length) return '';
+    var f = list[0].num, l = list[list.length - 1].num;
+    return f === l ? 'Article ' + f : 'Articles ' + f + '\u2013' + l;
+  }
+
+  function topicTile(x) {
+    var ico = '<span class="tp-ico' + (x.g ? ' g' : '') + '">' + icon(x.ic) + '</span>';
+    if (x.bodies) {
+      return '<div class="topic">' + ico + '<span class="tp-t"><b>' + esc(x.t) + '</b>' +
+        '<span class="tp-links">' + x.bodies.filter(function (b) { return BY_NUM[b[0]]; }).map(function (b) {
+          return '<a href="#/article/' + b[0] + '" title="Article ' + b[0] + ' \u2014 ' +
+            esc(BY_NUM[b[0]].heading) + '">' + esc(b[1]) + '</a>';
+        }).join('') + '</span></span></div>';
+    }
+    var href = x.href, arts = [];
+    if (x.chap) {
+      arts = artsOfPart(x.part).filter(function (a) { return a.chapter && chapNum(a.chapter) === x.chap; });
+      var secs = partSections(x.part);
+      href = '#/part/' + x.part;
+      for (var i = 0; i < secs.length; i++) {
+        if (secs[i].chapter && chapNum(secs[i].chapter) === x.chap) { href += '/' + i; break; }
+      }
+    } else if (x.part || x.parts) {
+      (x.parts || [x.part]).forEach(function (p) { arts = arts.concat(artsOfPart(p)); });
+      href = '#/part/' + (x.part || x.parts[0]);
+    }
+    var range = artRange(arts);
+    var sub = [x.sub, range].filter(Boolean).join(' \u00b7 ');
+    return '<a class="topic" href="' + href + '">' + ico + '<span class="tp-t"><b>' + esc(x.t) + '</b>' +
+      '<small>' + esc(sub) + '</small></span></a>';
+  }
+
+  function pageHome() {
+    var s = '<section class="hero"><div class="hero-main"><div class="hero-copy">' +
+      '<h1>The Constitution of India <span>for Exams</span></h1>' +
+      '<p class="hero-lede">The full bare text, explained in plain language &mdash; with the articles ' +
+      'examiners return to, the judgments that shaped them and mind maps to hold it together.</p>' +
+      '<form class="hero-search" role="search">' + icon('search', 'hs-ico') +
+      '<input id="heroSearch" type="search" placeholder="Search an article, a word or an idea" ' +
+      'autocomplete="off" spellcheck="false" aria-label="Search the Constitution">' +
+      '<button type="submit">Search</button></form>' +
+      '<div class="hero-try"><span>Try:</span>' + TRY.map(function (q) {
+        return '<a href="#/search/' + encodeURIComponent(q.toLowerCase()) + '">' + esc(q) + '</a>';
+      }).join('') + '</div></div>' +
+      '<div class="hero-art">' + heroArt() +
+      '<blockquote class="hero-quote"><p>We, the people of India&hellip;</p>' +
+      '<footer>The Preamble</footer></blockquote></div></div>';
+
+    function way(href, ic, t, sub) {
+      return '<a class="way" href="' + href + '"><span class="way-ico">' + icon(ic) + '</span>' +
+        '<span class="way-t"><b>' + esc(t) + '</b><small>' + sub + '</small></span>' +
+        icon('chev', 'chev') + '</a>';
+    }
+    s += '<nav class="hero-ways" aria-label="Ways in">' +
+      way('#/parts', 'doc', 'Find an Article', 'The bare text, with a plain reading beside it') +
+      way('#/maps', 'map', 'Mind Maps & Flows','Long Parts drawn as maps, processes as steps') +
+      way('#/cases', 'seal', 'Landmark Judgments', caseCount() + ' cases: the facts, the holding, why it matters') +
+      way('#/amendments', 'history', 'Amendments', 'All 106, and what each one changed') +
+      '</nav></section>';
+
+    s += '<section class="home-sec"><div class="hs-head"><div><h2>Start with Important Topics</h2>' +
+      '<p>The areas every polity syllabus covers. Each opens where its articles begin.</p></div></div>' +
+      '<div class="topics">' + TOPICS.map(topicTile).join('') + '</div></section>';
+
+    var tiers = [1, 2, 3].map(function (t) {
+      var n = EXAM_LIST.filter(function (e) { return e.tier === t; }).length;
+      return '<a class="rv-tier t' + t + '" href="#/exam/' + t + '"><b>' + n + '</b>' +
+        '<strong>' + esc(TIER[t].label) + '</strong><small>' + esc(TIER[t].blurb) + '</small></a>';
+    }).join('');
+    s += '<section class="revise"><div class="rv-copy"><span class="rv-ico">' + icon('target') + '</span>' +
+      '<div><h2>Important Articles for Quick Revision</h2>' +
+      '<p>' + EXAM_LIST.length + ' entries ranked by how often they turn up, each with the concepts a ' +
+      'question tests and where candidates lose the mark.</p>' +
+      '<a class="more" href="#/exam">View Important Articles ' + icon('arrow') + '</a></div></div>' +
+      '<div class="rv-tiers">' + tiers + '</div></section>';
+
+    function card(href, k, t, sub, dim) {
+      return '<a class="pcard' + (dim ? ' dim' : '') + '" href="' + href + '" title="' + esc(t) + '">' +
+        '<span class="pc-k">' + esc(k) + '</span><b>' + esc(t) + '</b><small>' + esc(sub) + '</small></a>';
+    }
+    var cards = card('#/preamble', 'The opening', 'Preamble', 'Where it begins');
     PARTS.forEach(function (p) {
       var list = artsOfPart(p.num);
       var live = list.filter(function (a) { return !a.omitted; });
-      var first = list.length ? list[0].num : '', last = list.length ? list[list.length - 1].num : '';
-      var range = !list.length ? '\u2014' : (first === last ? first : first + '\u2013' + last);
-      s += tile('#/part/' + p.num, 'PART ' + p.num + ' \u00b7 ART. ' + range,
-        title(p.title),
-        (live.length ? live.length + ' article' + (live.length === 1 ? '' : 's') +
-          (list.length !== live.length ? ' &middot; ' + (list.length - live.length) + ' omitted' : '')
-          : 'Repealed whole'));
+      cards += card('#/part/' + p.num, 'Part ' + p.num, title(p.title),
+        live.length ? artRange(list) : 'Repealed', !live.length);
     });
-    s += tile('#/schedules', 'THE TWELVE', 'Schedules',
-        'The Lists, the languages, the defection rules') +
-      '</div>';
+    cards += card('#/schedules', 'Schedules', 'The Twelve Schedules', 'I to XII');
+    s += '<section class="home-sec"><div class="hs-head"><div><h2>Browse the Constitution</h2>' +
+      '<p>The Preamble, all ' + PARTS.length + ' Parts and the Schedules, in the order they are printed.</p></div>' +
+      '<a class="more" href="#/parts">All Parts ' + icon('arrow') + '</a></div>' +
+      '<div class="car"><button class="car-btn prev off" type="button" data-car="-1" aria-label="Scroll back">' +
+      icon('chevL') + '</button><div class="car-track" id="homeCar">' + cards + '</div>' +
+      '<button class="car-btn next" type="button" data-car="1" aria-label="Scroll on">' + icon('chev') +
+      '</button></div></section>';
+
+    s += '<figure class="home-close"><blockquote>&ldquo;However good a Constitution may be, it is sure ' +
+      'to turn out bad because those who are called to work it, happen to be a bad lot.&rdquo;</blockquote>' +
+      '<figcaption>Dr B. R. Ambedkar, in the Constituent Assembly, 25 November 1949</figcaption>' +
+      '<div class="tricolour" aria-hidden="true"></div></figure>';
     return s;
+  }
+
+  // The carousel's arrows show only where there is somewhere to go.
+  function carSync() {
+    var track = $('#homeCar');
+    if (!track) return;
+    var max = track.scrollWidth - track.clientWidth - 2;
+    document.querySelectorAll('.car-btn').forEach(function (b) {
+      var back = b.getAttribute('data-car') === '-1';
+      b.classList.toggle('off', back ? track.scrollLeft <= 2 : track.scrollLeft >= max);
+    });
+  }
+  function wireHome() {
+    var track = $('#homeCar');
+    if (!track) return;
+    // #main is rebuilt on every route, so this listener goes with the old track
+    track.addEventListener('scroll', carSync, { passive: true });
+    carSync();
   }
 
   function stat(n, label) {
     return '<div class="stat"><b>' + n + '</b><small>' + esc(label) + '</small></div>';
-  }
-  // `sub` is written by this file, never by data, so it is inserted as markup
-  // to allow a middot; everything from the data is escaped before it gets here.
-  function tile(href, eyebrow, h, sub) {
-    return '<a class="card tile" href="' + href + '">' +
-      '<div class="rn">' + eyebrow + '</div>' +
-      '<h3>' + esc(h) + '</h3><p>' + sub + '</p></a>';
   }
 
   function partGrid() {
@@ -2477,7 +2705,7 @@
 
   function route() {
     var h = location.hash || '#/';
-    var main = $('#main'), out;
+    var main = $('#main'), out, home = false;
     var m;
     if ((m = h.match(/^#\/article\/(.+)$/))) out = pageArticle(decodeURIComponent(m[1]));
     else if ((m = h.match(/^#\/part\/([^\/]+)(?:\/([^\/]+))?$/)))
@@ -2492,8 +2720,10 @@
     else if ((m = h.match(/^#\/exam(?:\/([123]))?$/))) out = pageExam(m[1]);
     else if (h === '#/about') out = pageAbout();
     else if (h === '#/maps') out = pageMaps();
-    else out = pageHome();
+    else { out = pageHome(); home = true; }
 
+    // No sidebar on the home page: it lists the Parts, and so does the page.
+    document.body.classList.toggle('is-home', home);
     closeSheet();
     closeNav();
     main.innerHTML = out + siteFooter();
@@ -2511,6 +2741,7 @@
     }
     if (h === '#/cases') filterCases();
     if (h.indexOf('#/exam') === 0) filterExam();
+    if (home) wireHome();
 
     partSpy(h);
 
@@ -2569,6 +2800,13 @@
         document.body.classList.remove('nav-open');
       }
       if (e.target.closest && e.target.closest('[data-close]')) { closeSheet(); return; }
+      var carBtn = e.target.closest && e.target.closest('.car-btn');
+      if (carBtn) {
+        var track = $('#homeCar');
+        if (track) track.scrollBy({ left: +carBtn.getAttribute('data-car') *
+          Math.max(200, track.clientWidth * 0.8), behavior: 'smooth' });
+        return;
+      }
       var card = e.target.closest && e.target.closest('.case-card');
       if (card) { openCase(+card.getAttribute('data-ci')); return; }
       if (e.target.closest && e.target.closest('[data-peek-close]')) {
@@ -2630,6 +2868,17 @@
         filterExam();
       }
     });
+    // The hero's search waits for Enter or the button, rather than searching
+    // as you type: the results replace the page the box is on.
+    document.addEventListener('submit', function (e) {
+      if (!e.target.classList.contains('hero-search')) return;
+      e.preventDefault();
+      var q = $('#heroSearch').value.trim();
+      if (!q) return;
+      box.value = q;
+      go('#/search/' + encodeURIComponent(q));
+    });
+    window.addEventListener('resize', carSync);
     document.addEventListener('input', function (e) {
       if (e.target.id === 'caseFilter') filterCases();
       if (e.target.id === 'examFilter') filterExam();
@@ -2642,7 +2891,8 @@
     // column that folds away. One button, two behaviours, and the wide-screen
     // choice is remembered.
     $('#menuBtn').addEventListener('click', function () {
-      if (window.matchMedia('(max-width: 900px)').matches) {
+      if (window.matchMedia('(max-width: 900px)').matches ||
+          document.body.classList.contains('is-home')) {
         document.body.classList.toggle('nav-open');
         return;
       }

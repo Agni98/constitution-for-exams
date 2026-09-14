@@ -588,12 +588,4 @@ footer.foot p { margin-bottom: 6px; }
 
 }
 
-/* ---------- the landing page ----------
-   The Constitution in print order and nothing else: the title sits close to
-   the tiles, and a tile carries a label, a name and one line of scale. */
-.home-head { margin-bottom: 18px; }
-.home-head h1 { margin-bottom: 0; }
-.home-grid { grid-template-columns: repeat(auto-fill, minmax(228px, 1fr)); }
-.home-grid .tile { padding: 14px 16px; }
-.home-grid .tile h3 { margin: 5px 0 5px; font-size: 17px; }
-.home-grid .tile p { font-size: 12.5px; color: var(--ink-faint); }
+/* The home page has a stylesheet of its own: home.css. */
