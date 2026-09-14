@@ -30,7 +30,7 @@
   --side-w: 300px;
   --radius: 10px;
   --shadow: 0 1px 2px rgba(31,26,18,.05), 0 6px 22px rgba(31,26,18,.06);
-  /* the band behind the menu bar: warm, a step darker than the header */
+  /* the shaded box behind each menu: warm, a step darker than the header */
   --nav-band: color-mix(in srgb, var(--accent) 7%, var(--bg-sunk));
   --nav-line: color-mix(in srgb, var(--accent) 14%, var(--line));
 }
@@ -135,27 +135,21 @@ a:hover { text-decoration: underline; }
 
 /* ---------- the menu bar ---------- */
 
-/* A light band behind the menus, so they read as a bar rather than as loose
-   words in the header. On a wide screen it is a rounded strip in the header's
-   one row; below 1340px it is the whole second row (see the media query). */
-.topnav {
-  display: flex; align-items: center; gap: 2px; flex: 0 0 auto; margin-left: 6px;
-  padding: 3px; border-radius: 11px;
-  background: var(--nav-band); border: 1px solid var(--nav-line);
-}
+/* Each menu sits in its own lightly shaded box, so the menus read as
+   buttons rather than as loose words in the header. */
+.topnav { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; margin-left: 8px; }
 .tn {
   position: relative;
   display: inline-flex; align-items: center; gap: 5px;
-  height: 36px; padding: 0 11px;
-  border: 0; border-radius: 8px; background: transparent;
-  font: inherit; font-size: 14.2px; font-weight: 600; color: var(--ink-soft);
+  height: 34px; padding: 0 11px;
+  border: 1px solid var(--nav-line); border-radius: 8px; background: var(--nav-band);
+  font: inherit; font-size: 14.2px; font-weight: 600; color: var(--ink);
   white-space: nowrap; cursor: pointer;
 }
-/* On the band, hover and open lift the item to the page colour. */
-.tn { color: var(--ink); }
+/* hover and open lift the box to the page colour */
 .tn:hover, .tn[aria-expanded="true"] {
   background: var(--bg-raise); color: var(--ink);
-  box-shadow: 0 1px 2px rgba(31,26,18,.14), 0 0 0 1px var(--nav-line);
+  box-shadow: 0 1px 3px rgba(31,26,18,.16);
 }
 .tn:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 /* The section you are in. Underlined rather than filled, so it does not read
@@ -252,11 +246,8 @@ a:hover { text-decoration: underline; }
   .search-wrap { justify-self: end; width: 100%; }
   .topnav {
     grid-column: 1 / -1; grid-row: 2;
-    margin: 0 -14px; padding: 0 8px;
-    border-radius: 0; border-width: 1px 0 0;
-    /* fill the whole row: the header grid centres items, which left an
-       unshaded strip under a 37px band in a 43px row */
-    align-self: stretch;
+    margin: 0 -14px; padding: 0 12px;
+    border-top: 1px solid var(--line-soft);
     overflow-x: auto; scrollbar-width: none;
   }
   .topnav::-webkit-scrollbar { display: none; }
