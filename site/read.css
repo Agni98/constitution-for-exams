@@ -1,0 +1,236 @@
+/* ============================================================
+   Reading a provision: the Part tree on the left, the head of
+   the page, and the tabs that sort its readings into kinds.
+   ============================================================ */
+
+/* ---------- one frame for a Part page and its articles ---------- */
+
+.part-split {
+  display: grid;
+  grid-template-columns: 292px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  margin-top: 6px;
+}
+.part-body { min-width: 0; }
+
+.ps-head { margin-bottom: 12px; }
+.ps-head h2 {
+  margin: 0; font-family: var(--serif); font-size: 24px; font-weight: 600;
+  letter-spacing: -.015em; line-height: 1.2;
+}
+.ps-head p.sm { margin: 4px 0 0; font-size: 12.5px; color: var(--ink-faint); }
+
+/* ---------- the Part tree ---------- */
+
+.ptree {
+  position: sticky; top: calc(var(--topbar-h) + 14px);
+  max-height: calc(100vh - var(--topbar-h) - 28px);
+  overflow-y: auto; overscroll-behavior: contain;
+  background: var(--bg-raise);
+  border: 1px solid var(--line); border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.pt-head {
+  position: sticky; top: 0; z-index: 2;
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 12px 11px 16px;
+  background: var(--bg-raise);
+  border-bottom: 1px solid var(--line-soft);
+}
+.pt-part {
+  flex: 1 1 auto; min-width: 0;
+  display: flex; align-items: baseline; gap: 10px;
+  color: var(--ink); text-decoration: none;
+}
+.pt-part:hover { color: var(--accent); text-decoration: none; }
+.pt-pk { flex: 0 0 auto; font-size: 15px; font-weight: 600; color: var(--ink-soft); }
+.pt-pt { font-family: var(--serif); font-size: 17px; font-weight: 600; line-height: 1.25; }
+.pt-mob { display: none; }
+
+.pt-body { padding: 4px 0 8px; }
+
+/* A Chapter, or a group heading in a Part that has no Chapters. */
+.pt-node + .pt-node { border-top: 1px solid var(--line-soft); }
+.pt-row {
+  display: grid; grid-template-columns: 82px minmax(0, 1fr) auto;
+  align-items: baseline; gap: 8px;
+  width: 100%; padding: 10px 12px 10px 16px;
+  border: 0; background: transparent;
+  font: inherit; text-align: left; color: var(--ink-soft); cursor: pointer;
+}
+.pt-row:hover { background: var(--bg-sunk); color: var(--ink); }
+.pt-row.static { cursor: default; }
+.pt-row.static:hover { background: transparent; }
+.pt-k { font-size: 13px; color: var(--ink-faint); white-space: nowrap; }
+.pt-t { font-size: 14.2px; line-height: 1.38; }
+.pt-c {
+  align-self: center; white-space: nowrap;
+  font-family: var(--mono); font-size: 11px; color: var(--ink-faint);
+}
+.pt-chev {
+  width: 12px; height: 12px; align-self: center;
+  color: var(--ink-faint); transition: transform .15s ease;
+}
+.pt-node.open > .pt-row .pt-k,
+.pt-node.open > .pt-row .pt-t { color: var(--ink); font-weight: 650; }
+.pt-node.open > .pt-row .pt-chev { transform: rotate(180deg); color: var(--ink); }
+/* a row that stands for one section of the Part page, while it is in view */
+.pt-row.on { background: var(--accent-soft); }
+.pt-row.on .pt-k, .pt-row.on .pt-t { color: var(--accent); font-weight: 650; }
+
+.pt-kids { display: none; padding: 0 10px 10px 14px; }
+.pt-node.open > .pt-kids { display: block; }
+.pt-grp {
+  padding: 12px 8px 4px 14px;
+  font-size: 10.5px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--saffron);
+}
+
+.pt-art {
+  display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 4px;
+  padding: 8px 10px 8px 11px; margin: 1px 0;
+  border-left: 3px solid transparent; border-radius: 8px;
+  color: var(--ink-soft); text-decoration: none;
+  font-size: 13.8px; line-height: 1.42;
+}
+.pt-art:hover { background: var(--bg-sunk); color: var(--ink); text-decoration: none; }
+.pt-n { font-family: var(--mono); font-size: 12px; color: var(--ink-faint); padding-top: 1px; }
+.pt-art.cur {
+  background: var(--accent-soft); color: var(--accent);
+  border-left-color: var(--accent); border-radius: 0 8px 8px 0;
+  font-weight: 650;
+}
+.pt-art.cur .pt-n { color: var(--accent); }
+.pt-art.dim { opacity: .55; }
+.pt-flat { padding: 4px 10px 0; }
+
+/* a group inside a Chapter on the Part page: it scrolls the page to itself */
+.pt-sec {
+  display: flex; align-items: baseline; gap: 10px; width: 100%;
+  padding: 7px 10px 7px 11px; margin: 1px 0;
+  border: 0; border-left: 3px solid transparent; border-radius: 8px;
+  background: transparent; font: inherit; text-align: left; cursor: pointer;
+  color: var(--ink-soft); font-size: 13.8px; line-height: 1.42;
+}
+.pt-sec .pt-h { flex: 1 1 auto; min-width: 0; }
+.pt-sec:hover { background: var(--bg-sunk); color: var(--ink); }
+.pt-sec.on {
+  background: var(--accent-soft); color: var(--accent);
+  border-left-color: var(--accent); border-radius: 0 8px 8px 0; font-weight: 650;
+}
+
+.pt-foot {
+  display: flex; justify-content: space-between; gap: 10px;
+  padding: 11px 16px; border-top: 1px solid var(--line-soft);
+  font-size: 13px; color: var(--ink-soft); text-decoration: none;
+}
+.pt-foot:hover { background: var(--bg-sunk); color: var(--accent); text-decoration: none; }
+
+/* folding the tree away: the chevron in its head, and the tab that brings it back */
+.pn-fold {
+  flex: 0 0 auto;
+  width: 26px; height: 26px; display: grid; place-items: center;
+  font: inherit; font-size: 11px; line-height: 1; cursor: pointer;
+  border: 1px solid transparent; border-radius: 7px;
+  background: transparent; color: var(--ink-faint);
+}
+.pn-fold:hover { background: var(--bg-sunk); color: var(--accent); border-color: var(--line); }
+
+/* ---------- the head of an article, the Preamble or a Schedule ---------- */
+
+.art-top {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px 20px; flex-wrap: wrap; margin-bottom: 14px;
+}
+.art-top .crumbs { margin-bottom: 0; min-width: 0; font-size: 13.4px; }
+.crumbs b { color: var(--ink); font-weight: 600; }
+
+.pager { display: flex; gap: 10px; flex: 0 0 auto; }
+.pager a {
+  padding: 8px 16px; border-radius: 9px;
+  border: 1px solid var(--line); background: var(--bg-raise);
+  font-size: 14px; color: var(--accent); white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(31,26,18,.05);
+}
+.pager a:hover { border-color: var(--accent); text-decoration: none; }
+
+.art-head { margin: 0; }
+.art-head h1 { font-size: clamp(28px, 3.3vw, 40px); margin: 0 0 12px; }
+.art-head .tagline { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.art-head .pill { font-size: 12.5px; padding: 4px 12px; }
+
+/* ---------- the tabs ---------- */
+
+.atabs {
+  position: sticky; top: calc(var(--topbar-h) + 8px); z-index: 6;
+  display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none;
+  margin: 22px 0; padding: 0 8px;
+  background: var(--bg-raise);
+  border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.atabs::-webkit-scrollbar { display: none; }
+.atab {
+  position: relative; flex: 0 0 auto;
+  display: inline-flex; align-items: center; gap: 7px;
+  height: 50px; padding: 0 16px;
+  border: 0; background: transparent;
+  font: inherit; font-size: 14.6px; font-weight: 600; color: var(--ink-soft);
+  white-space: nowrap; cursor: pointer;
+}
+.atab::after {
+  content: ""; position: absolute; left: 12px; right: 12px; bottom: 0;
+  height: 3px; border-radius: 3px 3px 0 0; background: transparent;
+}
+.atab:hover { color: var(--ink); }
+.atab:hover::after { background: var(--line); }
+.atab.on { color: var(--accent); }
+.atab.on::after { background: var(--accent); }
+.atab:focus-visible { outline: 2px solid var(--accent); outline-offset: -6px; border-radius: 10px; }
+.atab[disabled] { color: var(--ink-faint); opacity: .5; cursor: not-allowed; }
+.atab[disabled]::after { display: none; }
+.atab .ct {
+  min-width: 20px; height: 19px; padding: 0 6px;
+  border-radius: 999px; background: var(--bg-sunk); color: var(--ink-faint);
+  font-size: 11px; font-weight: 700; line-height: 19px; text-align: center;
+}
+.atab.on .ct { background: var(--accent-soft); color: var(--accent); }
+
+.apane > .section-tag:first-child { margin-top: 4px; }
+.apane .bare { margin-top: 8px; }
+
+/* ---------- a phone ---------- */
+
+@media (max-width: 900px) {
+  .part-split { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .ptree { position: static; max-height: none; overflow: visible; }
+  .pt-head { position: static; }
+  .ptree .pn-fold { display: none; }
+  .pt-mob {
+    display: inline-flex; align-items: center; gap: 6px; flex: 0 0 auto;
+    padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--bg); color: var(--ink-soft);
+    font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+  }
+  /* Folded on a phone, so the article is on the first screen. */
+  .ptree:not(.show) .pt-body,
+  .ptree:not(.show) .pt-foot { display: none; }
+  .ptree:not(.show) .pt-head { border-bottom: 0; }
+  .ptree.show .pt-body { max-height: 56vh; overflow-y: auto; overscroll-behavior: contain; }
+  .ptree.show .pt-mob .pt-chev { transform: rotate(180deg); }
+  body.rail-off .ptree { display: block; }
+  body.rail-off .part-split { grid-template-columns: minmax(0, 1fr); }
+  .rail-show { display: none !important; }
+
+  .atabs { top: var(--topbar-h); margin: 16px 0 18px; padding: 0 4px; border-radius: 10px; }
+  .atab { height: 46px; padding: 0 12px; font-size: 14px; }
+  .pager a { padding: 7px 12px; font-size: 13px; }
+}
+@media (max-width: 560px) {
+  .art-top { flex-direction: column; align-items: stretch; }
+  .pager { justify-content: space-between; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pt-chev { transition: none; }
+}

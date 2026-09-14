@@ -1,6 +1,6 @@
 /* ============================================================
-   Two-panel Part pages, and the peek panel that opens when a
-   cross-reference is clicked.
+   The peek panel that opens when a cross-reference is clicked, the
+   section map on a Part page, and the pager at the foot of an article.
    ============================================================ */
 
 /* ---------- peek: a referenced article or amendment, read in place ---------- */
@@ -71,116 +71,6 @@
 .peek-bare p:last-child { margin-bottom: 0; }
 .peek-foot { padding-top: 10px; border-top: 1px solid var(--line-soft); }
 
-/* ---------- two-panel Part page ---------- */
-
-.part-split {
-  display: grid;
-  grid-template-columns: 254px minmax(0, 1fr);
-  gap: 26px;
-  align-items: start;
-  margin-top: 18px;
-}
-
-.part-nav {
-  position: sticky; top: calc(var(--topbar-h) + 16px);
-  max-height: calc(100vh - var(--topbar-h) - 40px);
-  overflow-y: auto; overscroll-behavior: contain;
-  border: 1px solid var(--line); border-radius: var(--radius);
-  background: var(--bg-raise);
-  padding: 8px;
-}
-.pn-head {
-  font-size: 10px; font-weight: 700; letter-spacing: .13em;
-  text-transform: uppercase; color: var(--ink-faint);
-  padding: 6px 9px 8px;
-}
-.pn-item {
-  display: block; width: 100%; text-align: left;
-  position: relative;
-  font: inherit; cursor: pointer;
-  padding: 8px 34px 8px 10px; margin-bottom: 2px;
-  border: 1px solid transparent; border-radius: 8px;
-  background: transparent; color: var(--ink-soft);
-}
-.pn-item:hover { background: var(--bg-sunk); color: var(--ink); }
-.pn-item.on {
-  background: var(--accent-soft); color: var(--accent);
-  border-color: color-mix(in srgb, var(--accent) 30%, transparent);
-}
-.pn-ch {
-  display: block;
-  font-family: var(--mono); font-size: 9.5px; letter-spacing: .06em;
-  text-transform: uppercase; color: var(--ink-faint);
-  margin-bottom: 2px;
-}
-.pn-item.on .pn-ch { color: var(--accent); }
-.pn-t { display: block; font-size: 13.4px; line-height: 1.4; }
-.pn-item.on .pn-t { font-weight: 600; }
-.pn-n {
-  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-  font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint);
-}
-.pn-all { margin-top: 6px; border-top: 1px solid var(--line-soft); border-radius: 0 0 8px 8px; }
-.pn-all .pn-t { color: var(--ink-faint); font-size: 12.5px; }
-
-.part-body { min-width: 0; }
-.ps-head { margin-bottom: 12px; }
-.ps-head h2 {
-  margin: 0; font-family: var(--serif); font-size: 24px; font-weight: 600;
-  letter-spacing: -.015em; line-height: 1.2;
-}
-.ps-head p.sm { margin: 4px 0 0; font-size: 12.5px; color: var(--ink-faint); }
-
-@media (max-width: 900px) {
-  .part-split { grid-template-columns: 1fr; gap: 16px; }
-  .part-nav {
-    /* Sixteen sections stacked on a phone push the articles two screens down.
-       Keep the list a box the reader scrolls inside instead. */
-    position: static; max-height: 44vh;
-    display: flex; flex-wrap: wrap; gap: 6px; padding: 10px;
-  }
-  .pn-head { width: 100%; padding: 0 2px 4px; }
-  .pn-item {
-    width: auto; margin-bottom: 0;
-    padding: 6px 30px 6px 10px;
-    border-color: var(--line);
-  }
-  .pn-all { margin-top: 0; border-top: 1px solid var(--line); border-radius: 8px; }
-}
-
-/* ---------- the rail while an article is open ---------- */
-
-/* The rail items are buttons on a Part page and links on an article page.
-   They have to look identical either way. */
-.pn-item { text-decoration: none; }
-
-.part-nav.in-article { max-height: calc(100vh - var(--topbar-h) - 40px); }
-
-/* the open section's own articles, listed under it */
-.pn-arts {
-  margin: 2px 0 6px 8px;
-  padding-left: 8px;
-  border-left: 2px solid var(--line);
-}
-.pn-art {
-  display: flex; align-items: baseline; gap: 7px;
-  padding: 5px 8px; margin-bottom: 1px;
-  border-radius: 6px;
-  color: var(--ink-soft); text-decoration: none;
-  font-size: 12.6px; line-height: 1.35;
-}
-.pn-art:hover { background: var(--bg-sunk); color: var(--ink); }
-.pn-art.cur {
-  background: var(--accent-soft); color: var(--accent); font-weight: 600;
-}
-.pn-art.dim { opacity: .5; }
-.pa-n {
-  flex: 0 0 auto; min-width: 30px;
-  font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint);
-}
-.pn-art.cur .pa-n { color: var(--accent); }
-.pa-t { flex: 1 1 auto; min-width: 0; }
-
 /* ---------- the section map, folded to one line ---------- */
 
 .secmap { margin: 14px 0 18px; }
@@ -228,23 +118,10 @@
 }
 
 @media (max-width: 900px) {
-  /* On a phone the rail is a header, not a sidebar, so it has to stay short
-     enough that the article itself is still on the first screen. Sixteen
-     section names would not: while an article is open, show only the section
-     it belongs to and the articles in it. The breadcrumb above still leads
-     back to the Part for the rest. */
-  .part-nav.in-article { max-height: 30vh; }
-  .part-nav.in-article .pn-item:not(.on):not(.pn-all) { display: none; }
-  .part-nav.in-article .pn-item.on { width: 100%; }
-  .part-nav .pn-arts { width: 100%; margin-left: 2px; }
   .secmap-body { padding: 6px 8px 10px; }
   .sm-l { font-size: 13.2px; }
   .secmap-t { padding: 9px 11px; gap: 9px; }
 }
-
-/* A Part with no chapters and no groups has no sections to indent under, so
-   its rail lists the articles flush. */
-.pn-arts.open { margin-left: 0; padding-left: 0; border-left: 0; }
 
 /* ---------- previous / next at the foot of an article ---------- */
 
@@ -290,20 +167,7 @@ a.pf:hover .pf-d { color: var(--accent); }
   .pf.next { text-align: left; }
 }
 
-/* ---------- folding the section rail away ----------
-   The site sidebar folds with the menu button; this is the same move one level
-   in. Exactly one control is on screen at a time: the chevron in the rail head
-   while the rail is open, the tab in the body panel while it is not. */
-
-.pn-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.pn-fold {
-  flex: 0 0 auto;
-  width: 22px; height: 22px; display: grid; place-items: center;
-  font: inherit; font-size: 10px; line-height: 1; cursor: pointer;
-  border: 1px solid transparent; border-radius: 6px;
-  background: transparent; color: var(--ink-faint);
-}
-.pn-fold:hover { background: var(--bg-sunk); color: var(--accent); border-color: var(--line); }
+/* ---------- folding the Part tree away ---------- */
 
 /* The only way back to the folded rail, so it is the accent colour and it
    names what it opens. Faint grey and the word "Sections" left a reader to
@@ -325,7 +189,7 @@ a.pf:hover .pf-d { color: var(--accent); }
 .rt-t { font-weight: 600; }
 .rt-x { font-size: 10px; opacity: .7; }
 
-body.rail-off .part-nav { display: none; }
+body.rail-off .ptree { display: none; }
 body.rail-off .part-split { grid-template-columns: minmax(0, 1fr); }
 body.rail-off .rail-show { display: inline-flex; }
 

@@ -19,23 +19,8 @@
   --tri-w:   #e8e6e1;
 }
 
-/* No sidebar on the home page: it lists the Parts, and so does the page.
-   The menu button still brings it in, as a drawer over the page. */
-@media (min-width: 901px) {
-  body.is-home .sidebar {
-    display: block;
-    position: fixed; left: 0; top: var(--topbar-h); z-index: 35;
-    width: min(320px, 86vw);
-    transform: translateX(-102%); transition: transform .22s ease;
-    box-shadow: var(--shadow);
-  }
-  body.is-home.nav-open .sidebar { transform: none; }
-  body.is-home.nav-open .scrim {
-    display: block; position: fixed; inset: var(--topbar-h) 0 0 0;
-    background: rgba(0,0,0,.36); z-index: 30;
-  }
-  body.is-home main { max-width: 1240px; margin: 0 auto; }
-}
+/* The home page reads a little narrower than a Part or an article. */
+body.is-home main { max-width: 1240px; }
 
 /* ---------- hero ---------- */
 

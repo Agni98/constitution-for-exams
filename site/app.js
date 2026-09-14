@@ -411,7 +411,7 @@
      stacked, because #main is rebuilt on every route. */
   var SPY = null, SPY_LOCK = 0;
   function markSection(i) {
-    document.querySelectorAll('.pn-item[data-goto]').forEach(function (b) {
+    document.querySelectorAll('#main [data-goto]').forEach(function (b) {
       b.classList.toggle('on', b.getAttribute('data-goto') === String(i));
     });
   }
@@ -448,7 +448,7 @@
     var best = null;
     // An article now reads inside its Part's shell, so the Part it belongs to
     // is the right thing to light up in the sidebar while you are in it.
-    var art = hash.match(/^#\/article\/(.+)$/);
+    var art = hash.match(/^#\/article\/([^\/]+)/);
     if (art) {
       var a = BY_NUM[decodeURIComponent(art[1])];
       if (a) hash = '#/part/' + a.part;
@@ -972,91 +972,127 @@
       'Parts IVA, IXA, IXB and XIVA were added later.</p></div>' + partGrid();
   }
 
-  function pagePreamble() {
+  function pagePreamble(want) {
     var pre = COI.preamble || { paras: [], notes: [] };
     var ex = EXPLAIN.preamble;
-    var s = '<div class="crumbs"><a href="#/">Overview</a><span>&rsaquo;</span>Preamble</div>' +
-      '<div class="art-head"><div class="eyebrow">The Constitution of India</div>' +
+    var d = { flow: [], mind: [] };
+    sortDiagrams(d, [], MAPS.preamble, 'For the Preamble', false);
+    var cases = CASES.preamble || [];
+    var first = ARTS[0];
+
+    var s = '<div class="art-top"><nav class="crumbs" aria-label="Breadcrumb">' +
+      '<a href="#/">Home</a><span>&rsaquo;</span><b>Preamble</b></nav>' +
+      '<div class="pager">' + (first ? '<a href="#/article/' + first.num + '" title="' +
+        esc(partLabel(first.part) + ' \u00b7 ' + first.heading) + '">Article ' + esc(first.num) +
+        ' &rarr;</a>' : '') + '</div></div>' +
+      '<header class="art-head"><div class="eyebrow">The Constitution of India</div>' +
       '<h1>Preamble</h1><div class="tagline">' +
       '<span class="pill red">Adopted 26 November 1949</span>' +
-      '<span class="pill blue">Amended once — 42nd, 1976</span></div></div>';
+      '<span class="pill blue">Amended once — 42nd, 1976</span></div></header>';
 
-    s += tag('Bare text') + '<div class="bare">';
-    (pre.paras || []).forEach(function (p) {
-      s += '<p class="l' + (p.lvl || 0) + '">' + bareHTML(p.t, pre.notes) + '</p>';
+    s += tabbed('#/preamble', want, {
+      text: { html: tag('The text') + '<div class="bare">' + (pre.paras || []).map(function (p) {
+        return '<p class="l' + (p.lvl || 0) + '">' + bareHTML(p.t, pre.notes) + '</p>';
+      }).join('') + '</div>' + fnList(pre.notes) },
+      explain: { html: ex ? explainBlock(ex) : '', none: 'No explainer for the Preamble yet' },
+      flow: { html: diagramPane(d.flow), n: d.flow.length, none: 'No flow chart for the Preamble' },
+      maps: { html: diagramPane(d.mind), n: d.mind.length, none: 'No mind map for the Preamble' },
+      judgments: { html: cases.length ? caseBlock(cases, 'Judgments on the Preamble') : '',
+                   n: cases.length, none: 'No landmark judgment filed under the Preamble' },
+      exams: { html: EXAM.preamble ? examBlock(EXAM.preamble) : '', none: 'Not on the exam priority list' }
     });
-    s += '</div>';
-    s += notesBlock(pre.notes);
-    if (ex) s += explainBlock(ex);
-    if (MAPS.preamble) s += tag('Picture it') + renderDiagram(MAPS.preamble);
-    s += caseBlock(CASES.preamble);
-    s += examBlock(EXAM.preamble);
     return s;
   }
 
-  /* ---------- the Part rail, shared by the Part page and its articles ----------
+  /* ---------- the Part tree: the left panel on a Part page and its articles ----------
 
-     A Part page and an article inside it used to be unrelated pages: opening
-     an article threw the section panel away, and the section's mind map with
-     it. Both now draw this rail, so the section you are reading stays on
-     screen and the article next to this one is one click away.
+     Part, then its Chapters, then the group headings inside a Chapter, then the
+     articles. On an article the Chapter it sits in is open and the others are
+     folded, so the panel stays short however long the Part is. A Part with group
+     headings but no Chapters (Part III) uses its groups as the top level. A Part
+     with neither lists its articles.
 
-     mode 'part'    - items switch panels in place, without a navigation
-     mode 'article' - items are links back into the Part, and the open section
-                      expands into its own articles                          */
-  function partRail(num, secs, active, mode, curNum) {
-    var total = 0;
-    secs.forEach(function (g) { total += g.arts.length; });
+     mode 'article' - the rows open and close, and the articles are links
+     mode 'part'    - the whole Part is already on the page, so a row stands for
+                      a section and scrolls the page to it                     */
+  var TREE_CHEV = '<svg class="pt-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" ' +
+    'fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-    function artLink(a) {
-      return '<a class="pn-art' + (a.num === curNum ? ' cur' : '') +
-        (a.omitted ? ' dim' : '') + '" href="#/article/' + a.num + '">' +
-        '<span class="pa-n">' + esc(a.num) + '</span>' +
-        '<span class="pa-t">' + esc(shortHeading(a.heading)) + '</span></a>';
-    }
-
-    // Nineteen of the twenty-six Parts have no chapters and no group headings.
-    // They have no sections to list, so the rail lists what they do have.
-    if (mode === 'article' && secs.length < 2) {
-      return '<nav class="part-nav in-article flat" aria-label="Articles of Part ' +
-        esc(num) + '">' +
-        '<div class="pn-head">Part ' + esc(num) + ' &middot; articles' + foldBtn() + '</div>' +
-        '<div class="pn-arts open">' + secs[0].arts.map(artLink).join('') + '</div>' +
-        // on the Part page itself there is nowhere for an "overview" link to go
-        (curNum ? '<a class="pn-item pn-all" href="#/part/' + esc(num) + '">' +
-          '<span class="pn-t">Part ' + esc(num) + ' overview</span>' +
-          '<span class="pn-n">' + total + '</span></a>' : '') +
-        '</nav>';
-    }
-
-    var items = secs.map(function (g, i) {
-      var on = i === active;
-      var inner = (g.chapLine ? '<span class="pn-ch">' + esc(g.chapLine) + '</span>' : '') +
-        '<span class="pn-t">' + esc(g.label) + '</span>' +
-        '<span class="pn-n">' + g.arts.length + '</span>';
-      var head = mode === 'part'
-        ? '<button class="pn-item' + (on ? ' on' : '') + '" type="button" data-goto="' + i +
-          '">' + inner + '</button>'
-        : '<a class="pn-item' + (on ? ' on' : '') + '" href="#/part/' + esc(num) + '/' + i +
-          '">' + inner + '</a>';
-      if (mode === 'article' && on) {
-        head += '<div class="pn-arts">' + g.arts.map(artLink).join('') + '</div>';
+  function treeNodes(num) {
+    var top = [], by = {};
+    partSections(num).forEach(function (g, i) {
+      var id = g.chapter ? 'c' + chapNum(g.chapter) : g.fromGroup ? 'g' + i : 'flat';
+      if (!by[id]) {
+        by[id] = {
+          id: id, secs: [],
+          k: g.chapter ? 'Chapter ' + chapNum(g.chapter) : g.fromGroup ? g.range.replace(/^Art\. /, '') : '',
+          t: g.chapter ? chapName(g.chapter) : g.fromGroup ? g.label : ''
+        };
+        top.push(by[id]);
       }
-      return head;
+      by[id].secs.push({ g: g, i: i });
+    });
+    return top;
+  }
+
+  function partTree(num, mode, curNum, active) {
+    var p = PART_BY[num];
+
+    function art(a) {
+      var cur = a.num === curNum;
+      return '<a class="pt-art' + (cur ? ' cur' : '') + (a.omitted ? ' dim' : '') + '" href="#/article/' +
+        a.num + '"' + (cur ? ' aria-current="page"' : '') + '>' +
+        '<span class="pt-n">' + esc(a.num) + '</span><span class="pt-h">' + esc(a.heading) + '</span></a>';
+    }
+    function sec(x) {
+      return '<button class="pt-sec' + (x.i === active ? ' on' : '') + '" type="button" data-goto="' + x.i + '">' +
+        '<span class="pt-h">' + esc(x.g.label) + '</span><span class="pt-c">' + x.g.arts.length + '</span></button>';
+    }
+
+    var body = treeNodes(num).map(function (node) {
+      if (node.id === 'flat') {
+        return '<div class="pt-flat">' + node.secs[0].g.arts.map(art).join('') + '</div>';
+      }
+      var head = '<span class="pt-k">' + esc(node.k) + '</span><span class="pt-t">' + esc(node.t) + '</span>';
+
+      if (mode === 'part') {
+        var groups = node.secs.filter(function (x) { return x.g.fromGroup && x.g.chapter; });
+        // A Chapter without groups, or a group with no Chapter, is one section,
+        // so its own row scrolls. A Chapter with groups lists them, and each of
+        // those scrolls.
+        if (!groups.length) {
+          var one = node.secs[0];
+          return '<div class="pt-node"><button class="pt-row' + (one.i === active ? ' on' : '') +
+            '" type="button" data-goto="' + one.i + '">' + head + '<span class="pt-c">' +
+            one.g.arts.length + '</span></button></div>';
+        }
+        return '<div class="pt-node open"><div class="pt-row static">' + head + '</div>' +
+          '<div class="pt-kids">' + node.secs.map(sec).join('') + '</div></div>';
+      }
+
+      var mine = node.secs.some(function (x) {
+        return x.g.arts.some(function (a) { return a.num === curNum; });
+      });
+      var kids = node.secs.map(function (x) {
+        return (x.g.fromGroup && x.g.chapter ? '<div class="pt-grp">' + esc(x.g.label) + '</div>' : '') +
+          x.g.arts.map(art).join('');
+      }).join('');
+      return '<div class="pt-node' + (mine ? ' open' : '') + '">' +
+        '<button class="pt-row" type="button" data-tree aria-expanded="' + mine + '">' + head + TREE_CHEV +
+        '</button><div class="pt-kids">' + kids + '</div></div>';
     }).join('');
 
-    // On a Part page every article is already on the page, so there is nothing
-    // for "show every article" to do. From an article, it is still the way back
-    // to the Part as a whole.
-    var all = mode === 'part' ? ''
-      : '<a class="pn-item pn-all" href="#/part/' + esc(num) + '">' +
-        '<span class="pn-t">The whole of Part ' + esc(num) + '</span>' +
-        '<span class="pn-n">' + total + '</span></a>';
-
-    return '<nav class="part-nav' + (mode === 'article' ? ' in-article' : '') +
-      '" aria-label="Sections of Part ' + esc(num) + '">' +
-      '<div class="pn-head">Part ' + esc(num) + ' &middot; sections' + foldBtn() + '</div>' +
-      items + all + '</nav>';
+    return '<nav class="ptree' + (mode === 'article' ? ' in-article' : '') + '" aria-label="Contents of Part ' +
+      esc(num) + '">' +
+      '<div class="pt-head"><a class="pt-part" href="#/part/' + esc(num) + '">' +
+      '<span class="pt-pk">Part ' + esc(num) + '</span>' +
+      '<span class="pt-pt">' + esc(title(p ? p.title : '')) + '</span></a>' +
+      '<button class="pt-mob" type="button" data-ptoggle aria-expanded="false">Contents' + TREE_CHEV + '</button>' +
+      foldBtn() + '</div>' +
+      '<div class="pt-body">' + body + '</div>' +
+      (mode === 'article' ? '<a class="pt-foot" href="#/part/' + esc(num) + '">The whole of Part ' + esc(num) +
+        '<span class="pt-c">' + artsOfPart(num).length + '</span></a>' : '') +
+      '</nav>';
   }
 
   // Folding the rail away, and the tab that brings it back. The tab lives in
@@ -1064,7 +1100,7 @@
   // always exactly one control on screen.
   function foldBtn() {
     return '<button class="pn-fold" type="button" data-rail="off" ' +
-      'aria-label="Hide the section list" title="Hide the section list">&#10094;</button>';
+      'aria-label="Hide the Part panel" title="Hide the Part panel">&#10094;</button>';
   }
   // What is behind the tab, and how much of it. A reader who folded the rail
   // ten pages ago should not have to remember what "Sections" meant.
@@ -1160,7 +1196,8 @@
     // most of the page.
     var panelled = list.length >= 2;
 
-    var s = '<div class="crumbs"><a href="#/parts">All Parts</a><span>&rsaquo;</span>Part ' + esc(num) + '</div>' +
+    var s = '<nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span>&rsaquo;</span>' +
+      '<a href="#/parts">Parts</a><span>&rsaquo;</span><b>Part ' + esc(num) + '</b></nav>' +
       '<div class="page-head"><div class="eyebrow">Part ' + esc(num) + '</div>' +
       '<h1>' + esc(title(p.title)) + '</h1>';
     var ex = EXPLAIN['part' + num];
@@ -1183,7 +1220,7 @@
       var active = want === 'all' ? 0
         : Math.min(Math.max(parseInt(want, 10) || 0, 0), secs.length - 1);
       s += '<div class="part-split">';
-      s += partRail(num, secs, active, 'part');
+      s += partTree(num, 'part', null, active);
 
       s += '<div class="part-body">' +
         railTab(secs.length === 1 ? 'section' : 'sections', secs.length, num) +
@@ -1208,7 +1245,7 @@
     // column looks broken - and on this page the rail lists an article you are
     // not on, which is not the same as the article page, where it would list
     // back the one you are reading.
-    var flatRail = list.length ? partRail(num, secs, 0, 'article', null) : '';
+    var flatRail = list.length ? partTree(num, 'part', null, -1) : '';
     var body = '';
 
     if (flatRail) body += railTab(list.length === 1 ? 'article' : 'articles', list.length, num);
@@ -1282,87 +1319,227 @@
     return out.length > 150 ? out.slice(0, 148) + '…' : out;
   }
 
-  function pageArticle(num) {
+  /* ---------- an article ---------- */
+
+  function pageArticle(num, want) {
     var a = BY_NUM[num];
     if (!a) return '<p class="empty">No article ' + esc(num) + ' in this text.</p>';
     var ex = explainOf(num);
-    var secs = partSections(a.part);
-    var mySec = secs.length > 1 ? sectionOf(a, secs) : 0;
-    // The map is worth offering on any article. The rail is not: on Part IVA,
-    // one article long, it would list the article you are already reading.
-    var railed = mySec >= 0 && artsOfPart(a.part).length >= 2;
-
-    // prev / next sits with the breadcrumbs, so it is reachable without
-    // scrolling to the end of a long article
     var nb = neighbours(a);
-    var pager = pagerTop(nb);
+    var secs = partSections(a.part);
+    var mine = secs.length > 1 ? sectionOf(a, secs) : 0;
+    var chap = a.chapter ? 'Chapter ' + chapNum(a.chapter) + ' \u2014 ' + chapName(a.chapter) : '';
 
-    var s = '<div class="art-top">' +
-      '<div class="crumbs"><a href="#/parts">Parts</a><span>&rsaquo;</span>' +
-      '<a href="#/part/' + esc(a.part) + '">Part ' + esc(a.part) + '</a>' +
-      (a.chapter ? '<span>&rsaquo;</span>' + esc(chapNum(a.chapter) + ' — ' + chapName(a.chapter)) : '') +
-      (a.group ? '<span>&rsaquo;</span>' + esc(a.group) : '') + '</div>' +
-      pager + '</div>';
+    // Home, the Part, the Chapter and the group: each one a step back up.
+    var crumbs = '<a href="#/">Home</a><span>&rsaquo;</span>' +
+      '<a href="#/part/' + esc(a.part) + '">' + esc(partLabel(a.part)) + '</a>';
+    if (chap) {
+      crumbs += '<span>&rsaquo;</span><a href="#/part/' + esc(a.part) + '/' +
+        firstSecOfChapter(secs, a.chapter) + '">' + esc(chap) + '</a>';
+    }
+    if (a.group && mine >= 0) {
+      crumbs += '<span>&rsaquo;</span><a href="#/part/' + esc(a.part) + '/' + mine + '">' + esc(a.group) + '</a>';
+    }
+    crumbs += '<span>&rsaquo;</span><b>Article ' + esc(a.num) + '</b>';
 
-    if (mySec >= 0) s += sectionMap(a.part, secs[mySec]);
+    var s = '<div class="art-top"><nav class="crumbs" aria-label="Breadcrumb">' + crumbs + '</nav>' +
+      pagerTop(nb) + '</div>';
 
-    s += '<div class="art-head"><div class="eyebrow">Article ' + esc(a.num) + '</div>' +
+    s += '<header class="art-head"><div class="eyebrow">Article ' + esc(a.num) + '</div>' +
       '<h1>' + esc(a.heading) + '</h1><div class="tagline">' +
       '<span class="pill grey">' + esc(partLabel(a.part)) + '</span>' +
+      (chap ? '<span class="pill grey">' + esc(chap) + '</span>' : '') +
       (a.omitted ? '<span class="pill red">Omitted / repealed</span>'
         // In force is the ordinary case and needs no sentence. Repealed is the
-        // exception and does - so it keeps its words.
+        // exception and does, so it keeps its words.
         : '<span class="live" role="img" aria-label="In force" title="In force"></span>');
-    (a.amendments || []).slice(0, 4).forEach(function (m) {
+    var amds = a.amendments || [];
+    amds.slice(0, 4).forEach(function (m) {
       s += '<span class="pill blue">' + esc(m) + '</span>';
     });
-    s += '</div></div>';
+    if (amds.length > 4) {
+      s += '<span class="pill blue" title="All of them are under Bare Text">+' + (amds.length - 4) + ' more</span>';
+    }
+    s += '</div></header>';
 
-    var bare = tag('Bare text') + '<div class="bare">' +
+    var d = diagramsFor(a);
+    var cases = CASES[num] || CASES[a.alias] || [];
+    var exam = examOf(a);
+    s += tabbed('#/article/' + a.num, want, {
+      text: { html: textPane(a) },
+      explain: { html: ex ? explainBlock(ex) : '',
+                 none: a.omitted ? 'This article was omitted, so it has no explainer' : 'No explainer yet' },
+      flow: { html: diagramPane(d.flow), n: d.flow.length, none: 'No flow chart drawn for this article' },
+      maps: { html: diagramPane(d.mind), n: d.mind.length, none: 'No mind map for this article' },
+      judgments: { html: cases.length ? caseBlock(cases, 'Judgments filed under Article ' + a.num) : '',
+                   n: cases.length, none: 'No landmark judgment filed under this article' },
+      exams: { html: exam ? examBlock(exam) : '', none: 'Not on the exam priority list' }
+    });
+
+    s += pagerFoot(a, nb);
+
+    // Inside a Part of two or more articles, the article is read beside the
+    // Part tree. On a one-article Part the tree would list only this article.
+    if (artsOfPart(a.part).length >= 2) {
+      return '<div class="part-split art-split">' + partTree(a.part, 'article', a.num) +
+        '<div class="part-body">' +
+        railTab(secs.length > 1 ? 'sections' : 'articles',
+          secs.length > 1 ? secs.length : artsOfPart(a.part).length, a.part) +
+        s + '</div></div>';
+    }
+    return s;
+  }
+
+  function firstSecOfChapter(secs, chapter) {
+    for (var i = 0; i < secs.length; i++) {
+      if (secs[i].chapter === chapter) return i;
+    }
+    return 0;
+  }
+
+  /* ---------- the reading tabs ----------
+
+     One provision's readings, sorted into kinds. Every pane is drawn up front
+     and shown one at a time, so switching costs no redraw and the reader keeps
+     their place. A tab with nothing in it is disabled rather than hidden, so the
+     six tabs sit in the same place on every page. The last tab chosen is
+     remembered, and the address names it, so a link or a reload opens the same
+     one. */
+  var TABS = [
+    { id: 'text', label: 'Bare Text' },
+    { id: 'explain', label: 'Explainer' },
+    { id: 'flow', label: 'Flow Charts' },
+    { id: 'maps', label: 'Mind Maps' },
+    { id: 'judgments', label: 'Judgments' },
+    { id: 'exams', label: 'For Exams' }
+  ];
+
+  function tabbed(base, want, panes) {
+    var stored = null;
+    try { stored = localStorage.getItem('coi-tab'); } catch (err) { /* private mode */ }
+    function has(id) { return !!(id && panes[id] && panes[id].html); }
+    var pick = [want, stored, 'text'].filter(has)[0] ||
+      (TABS.filter(function (t) { return has(t.id); })[0] || {}).id;
+
+    var bar = '<div class="atabs" role="tablist" aria-label="Readings" data-base="' + esc(base) + '">' +
+      TABS.map(function (t) {
+        var p = panes[t.id] || {}, on = t.id === pick;
+        return '<button class="atab' + (on ? ' on' : '') + '" type="button" role="tab" id="tab-' + t.id +
+          '" aria-controls="pane-' + t.id + '" aria-selected="' + on + '" data-tab="' + t.id + '"' +
+          (on ? '' : ' tabindex="-1"') +
+          (has(t.id) ? '' : ' disabled title="' + esc(p.none || 'Nothing here') + '"') + '>' +
+          esc(t.label) + (p.n ? '<span class="ct">' + p.n + '</span>' : '') + '</button>';
+      }).join('') + '</div>';
+
+    var body = TABS.map(function (t) {
+      if (!has(t.id)) return '';
+      return '<section class="apane" id="pane-' + t.id + '" role="tabpanel" aria-labelledby="tab-' + t.id + '"' +
+        (t.id === pick ? '' : ' hidden') + '>' + panes[t.id].html + '</section>';
+    }).join('');
+
+    return bar + '<div class="apanes">' + body + '</div>';
+  }
+
+  function showTab(id, focus) {
+    var bar = $('#main .atabs');
+    if (!bar) return;
+    var btn = bar.querySelector('.atab[data-tab="' + id + '"]');
+    if (!btn || btn.disabled) return;
+    bar.querySelectorAll('.atab').forEach(function (b) {
+      var on = b === btn;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+      b.tabIndex = on ? 0 : -1;
+    });
+    document.querySelectorAll('#main .apane').forEach(function (p) {
+      p.hidden = p.id !== 'pane-' + id;
+    });
+    try { localStorage.setItem('coi-tab', id); } catch (err) { /* private mode */ }
+    // replaceState rather than a new hash: a new hash would redraw the page.
+    if (history.replaceState) history.replaceState(null, '', bar.getAttribute('data-base') + '/' + id);
+    // Once the bar has stuck under the header, a new pane would open part-way
+    // down. Bring its start back up under the bar.
+    var panes = $('#main .apanes');
+    var stick = parseFloat(getComputedStyle(bar).top) || 0;
+    if (panes && bar.getBoundingClientRect().top <= stick + 1) {
+      window.scrollTo(0, Math.max(0, panes.getBoundingClientRect().top + window.scrollY -
+        stick - bar.offsetHeight - 14));
+    }
+    if (focus) btn.focus();
+  }
+
+  // Bare Text: the text as printed, what it refers to, what amended it, and
+  // the footnotes the official edition prints under it.
+  function textPane(a) {
+    var s = tag('The text') + '<div class="bare">' +
       a.paras.map(function (p) {
         return '<p class="l' + (p.lvl || 0) + '">' + bareHTML(p.t, a.notes) + '</p>';
       }).join('') + '</div>';
 
-    if (ex) s += explainSays(ex) + bare + explainRest(ex);
-    else s += bare + '<div class="panel note"><h4>Plain-language note</h4><p>A written ' +
-      'explanation for this article has not been added yet. The bare text above is complete ' +
-      'and official.</p></div>';
-
-    var map = MAPS[num];
-    if (map) s += tag('Picture it') +
-      diagrams(map);
-
-    s += caseBlock(CASES[num] || CASES[a.alias]);
-    s += examBlock(examOf(a));
-    s += notesBlock(a.notes, a.amendments);
-
     var refs = (a.refs || []).filter(function (r) { return BY_NUM[r]; });
-    if (refs.length || (a.schedRefs || []).length) {
-      s += '<div class="section-tag">Reads with</div><div class="chiprow">';
-      refs.forEach(function (r) {
-        s += '<button class="chip peek" type="button" data-peek="art:' + esc(r) + '">Art. ' +
-          esc(r) + ' — ' + esc(shortHeading(BY_NUM[r].heading)) + '</button>';
-      });
-      (a.schedRefs || []).forEach(function (r) {
-        var sch = SCHEDULES.filter(function (x) { return x.name.indexOf(r) === 0; })[0];
-        if (sch) s += '<a class="chip" href="#/schedule/' + sch.id + '">' + esc(sch.name) + '</a>';
-      });
-      s += '</div>';
+    var schs = (a.schedRefs || []).map(function (r) {
+      return SCHEDULES.filter(function (x) { return x.name.indexOf(r) === 0; })[0];
+    }).filter(Boolean);
+    if (refs.length || schs.length) {
+      s += tag('Refers to') + '<div class="chiprow">' +
+        refs.map(function (r) {
+          return '<button class="chip peek" type="button" data-peek="art:' + esc(r) + '">Art. ' +
+            esc(r) + ' — ' + esc(shortHeading(BY_NUM[r].heading)) + '</button>';
+        }).join('') +
+        schs.map(function (sch) {
+          return '<a class="chip" href="#/schedule/' + sch.id + '">' + esc(sch.name) + '</a>';
+        }).join('') + '</div>';
     }
+    return s + amdChips(a.amendments) + fnList(a.notes);
+  }
 
-    s += pagerFoot(a, nb);
+  function amdChips(amds) {
+    if (!amds || !amds.length) return '';
+    return tag('Amended by') + '<div class="chiprow">' + amds.map(function (m) {
+      var n = amendNumber(m);
+      return n
+        ? '<button class="chip peek" type="button" data-peek="amd:' + n + '">' + esc(m) + '</button>'
+        : '<span class="chip">' + esc(m) + '</span>';
+    }).join('') + '</div>';
+  }
 
-    // Inside a Part that has panels, the article is read in the same shell the
-    // Part page uses - the rail on the left keeps the section, its articles and
-    // its map one click away instead of a page away.
-    if (railed) {
-      return '<div class="part-split art-split">' +
-        partRail(a.part, secs, mySec, 'article', a.num) +
-        '<div class="part-body">' +
-        (secs.length > 1 ? railTab('sections', secs.length, a.part)
-          : railTab('articles', artsOfPart(a.part).length, a.part)) +
-        s + '</div></div>';
+  function fnList(notes) {
+    if (!notes || !notes.length) return '';
+    return tag('Footnotes, as printed') + '<ul class="fn-list">' + notes.map(function (n) {
+      return '<li><span class="fn-n">' + n.n + '</span><span>' + esc(n.text) + '</span></li>';
+    }).join('') + '</ul>';
+  }
+
+  // Every diagram that bears on an article, sorted by what kind of drawing it
+  // is: the article's own, then its section's, or else its Part's.
+  function specsOf(m) { return !m ? [] : Array.isArray(m) ? m : [m]; }
+  function sortDiagrams(out, seen, m, scope, compact) {
+    specsOf(m).forEach(function (spec) {
+      // Article 123's flow chart is also its section's, so it could come twice.
+      if (seen.indexOf(spec) >= 0) return;
+      seen.push(spec);
+      out[spec.type === 'flow' ? 'flow' : 'mind'].push({ scope: scope, spec: spec, compact: compact });
+    });
+  }
+  function diagramsFor(a) {
+    var out = { flow: [], mind: [] }, seen = [];
+    sortDiagrams(out, seen, MAPS[a.num] || (a.alias ? MAPS[a.alias] : null), 'For this article', false);
+    var secs = partSections(a.part), g = secs[secs.length > 1 ? sectionOf(a, secs) : 0];
+    if (g && MAPS[g.mapKey]) {
+      // The heading names the section, so the map's root box would only repeat it.
+      sortDiagrams(out, seen, MAPS[g.mapKey], 'For its section: ' + sectionTitle(g), true);
+    } else {
+      sortDiagrams(out, seen, MAPS['part' + a.part] || autoPartMap(a.part),
+        'For Part ' + a.part + ' as a whole', false);
     }
+    return out;
+  }
+  function diagramPane(list) {
+    var s = '', last = null;
+    list.forEach(function (x) {
+      if (x.scope !== last) { s += tag(x.scope); last = x.scope; }
+      s += renderDiagram(x.spec, x.compact);
+    });
     return s;
   }
 
@@ -1385,7 +1562,7 @@
     function art(x, dir) {
       return '<a href="#/article/' + x.num + '" title="' +
         esc(partLabel(x.part) + ' \u00b7 ' + x.heading) + '">' +
-        (dir === 'prev' ? '&larr; Art. ' + esc(x.num) : 'Art. ' + esc(x.num) + ' &rarr;') + '</a>';
+        (dir === 'prev' ? '&larr; Article ' + esc(x.num) : 'Article ' + esc(x.num) + ' &rarr;') + '</a>';
     }
     return '<div class="pager">' +
       (nb.prev ? art(nb.prev, 'prev')
@@ -1618,8 +1795,7 @@
 
   function examBlock(entry) {
     if (!entry) return '';
-    return tag('For exams') +
-      '<section class="exam"><header class="exam-head">' + examPills(entry) + '</header>' +
+    return '<section class="exam"><header class="exam-head">' + examPills(entry) + '</header>' +
       examBody(entry) + '</section>';
   }
 
@@ -1756,29 +1932,6 @@
       : EXAM_LIST.length + ' entries';
   }
 
-  function notesBlock(notes, amds) {
-    if ((!notes || !notes.length) && (!amds || !amds.length)) return '';
-    var s = tag('Amendment history, as footnoted in the official text');
-    if (amds && amds.length) {
-      s += '<div class="chiprow" style="margin-bottom:12px">';
-      amds.forEach(function (m) {
-        var n = amendNumber(m);
-        s += n
-          ? '<button class="chip peek" type="button" data-peek="amd:' + n + '">' + esc(m) + '</button>'
-          : '<span class="chip">' + esc(m) + '</span>';
-      });
-      s += '</div>';
-    }
-    if (notes && notes.length) {
-      s += '<ul class="fn-list">';
-      notes.forEach(function (n) {
-        s += '<li><span class="fn-n">' + n.n + '</span><span>' + esc(n.text) + '</span></li>';
-      });
-      s += '</ul>';
-    }
-    return s;
-  }
-
   function pageSchedules() {
     var s = '<div class="page-head"><div class="eyebrow">Contents</div><h1>The twelve Schedules</h1>' +
       '<p class="lede">Schedules carry the detail the articles point at — which States exist, who may ' +
@@ -1793,29 +1946,45 @@
     return s + '</div>';
   }
 
-  function pageSchedule(id) {
+  function pageSchedule(id, want) {
     var sc = SCHEDULES.filter(function (x) { return x.id === id; })[0];
     if (!sc) return '<p class="empty">No such Schedule.</p>';
     var ex = EXPLAIN['sch' + id];
-    var s = '<div class="crumbs"><a href="#/schedules">Schedules</a><span>&rsaquo;</span>' + esc(sc.name) + '</div>' +
-      '<div class="art-head"><div class="eyebrow">' + esc(sc.name) + '</div><h1>' + esc(sc.title) + '</h1>' +
-      (sc.articles ? '<div class="tagline"><span class="pill grey">Attached to article ' + esc(sc.articles) + '</span></div>' : '') +
-      '</div>';
-    if (ex) s += explainBlock(ex);
-    if (MAPS['sch' + id]) s += tag('Picture it') + renderDiagram(MAPS['sch' + id]);
+    var i = SCHEDULES.indexOf(sc), prev = SCHEDULES[i - 1], next = SCHEDULES[i + 1];
+    var last = ARTS[ARTS.length - 1];
+    var d = { flow: [], mind: [] };
+    sortDiagrams(d, [], MAPS['sch' + id], 'For the ' + sc.name, false);
+    var cases = CASES['sch' + id] || [];
+    var exam = EXAM['sch' + id];
 
+    var s = '<div class="art-top"><nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a>' +
+      '<span>&rsaquo;</span><a href="#/schedules">Schedules</a><span>&rsaquo;</span><b>' + esc(sc.name) + '</b></nav>' +
+      '<div class="pager">' +
+      (prev ? '<a href="#/schedule/' + prev.id + '" title="' + esc(prev.title) + '">&larr; ' + esc(prev.name) + '</a>'
+        : last ? '<a href="#/article/' + last.num + '" title="The last article">&larr; Article ' + esc(last.num) + '</a>' : '') +
+      (next ? '<a href="#/schedule/' + next.id + '" title="' + esc(next.title) + '">' + esc(next.name) + ' &rarr;</a>' : '') +
+      '</div></div>' +
+      '<header class="art-head"><div class="eyebrow">' + esc(sc.name) + '</div><h1>' + esc(sc.title) + '</h1>' +
+      (sc.articles ? '<div class="tagline"><span class="pill grey">Attached to article ' + esc(sc.articles) +
+        '</span></div>' : '') + '</header>';
+
+    var text = '';
     sc.sections.forEach(function (sec) {
-      if (sec.title) s += tag(sec.title);
-      else s += tag('Text');
-      s += '<table class="sched">';
-      sec.blocks.forEach(function (b) {
-        s += '<tr><td class="n">' + esc(b.n || '') + '</td><td>' + bareHTML(b.t, sc.notes) + '</td></tr>';
-      });
-      s += '</table>';
+      text += tag(sec.title || 'The text') + '<table class="sched">' + sec.blocks.map(function (b) {
+        return '<tr><td class="n">' + esc(b.n || '') + '</td><td>' + bareHTML(b.t, sc.notes) + '</td></tr>';
+      }).join('') + '</table>';
     });
-    s += caseBlock(CASES['sch' + id]);
-    s += examBlock(EXAM['sch' + id]);
-    s += notesBlock(sc.notes);
+    text += fnList(sc.notes);
+
+    s += tabbed('#/schedule/' + id, want, {
+      text: { html: text },
+      explain: { html: ex ? explainBlock(ex) : '', none: 'No explainer for this Schedule yet' },
+      flow: { html: diagramPane(d.flow), n: d.flow.length, none: 'No flow chart for this Schedule' },
+      maps: { html: diagramPane(d.mind), n: d.mind.length, none: 'No mind map for this Schedule' },
+      judgments: { html: cases.length ? caseBlock(cases, 'Judgments on the ' + sc.name) : '',
+                   n: cases.length, none: 'No landmark judgment filed under this Schedule' },
+      exams: { html: exam ? examBlock(exam) : '', none: 'Not on the exam priority list' }
+    });
     return s;
   }
 
@@ -2043,9 +2212,10 @@
   // name - "partV.IV:The Union Judiciary" - and the section's position in the
   // Part is what the route needs.
   function mapTarget(k) {
-    if (k === 'preamble') return '#/preamble';
-    if (k.indexOf('sch') === 0) return '#/schedule/' + k.slice(3);
-    if (k.indexOf('part') !== 0) return '#/article/' + k;
+    var tab = firstSpec(MAPS[k]).type === 'flow' ? '/flow' : '/maps';
+    if (k === 'preamble') return '#/preamble' + tab;
+    if (k.indexOf('sch') === 0) return '#/schedule/' + k.slice(3) + tab;
+    if (k.indexOf('part') !== 0) return '#/article/' + k + tab;
     var rest = k.slice(4);
     var m = rest.match(/^([IVXAB]+)(?:\.[IVX]+)?:(.*)$/);
     if (!m) return '#/part/' + rest;
@@ -2229,7 +2399,7 @@
   // Where the reader is, in the terms the menus care about.
   function navContext() {
     var h = location.hash || '#/', m, ctx = {};
-    if ((m = h.match(/^#\/article\/(.+)$/))) {
+    if ((m = h.match(/^#\/article\/([^\/]+)/))) {
       var a = BY_NUM[decodeURIComponent(m[1])];
       if (a) {
         var secs = partSections(a.part);
@@ -2241,13 +2411,13 @@
       if (PART_BY[num]) {
         var ps = partSections(num);
         // on a Part page, the section the rail says is in view
-        var on = document.querySelector('#main .pn-item.on[data-goto]');
+        var on = document.querySelector('#main [data-goto].on');
         ctx.part = num; ctx.name = 'Part ' + num;
         ctx.sec = ps[on ? +on.getAttribute('data-goto') : 0] || null;
       }
-    } else if (h === '#/preamble') {
+    } else if (/^#\/preamble(\/|$)/.test(h)) {
       ctx.preamble = true; ctx.name = 'the Preamble';
-    } else if ((m = h.match(/^#\/schedule\/(.+)$/))) {
+    } else if ((m = h.match(/^#\/schedule\/([^\/]+)/))) {
       ctx.sch = scheduleById(decodeURIComponent(m[1]));
       if (ctx.sch) ctx.name = 'the ' + ctx.sch.name;
     }
@@ -2649,13 +2819,15 @@
     var h = location.hash || '#/';
     var main = $('#main'), out, home = false;
     var m;
-    if ((m = h.match(/^#\/article\/(.+)$/))) out = pageArticle(decodeURIComponent(m[1]));
+    if ((m = h.match(/^#\/article\/([^\/]+)(?:\/([a-z]+))?$/)))
+      out = pageArticle(decodeURIComponent(m[1]), m[2]);
     else if ((m = h.match(/^#\/part\/([^\/]+)(?:\/([^\/]+))?$/)))
       out = pagePart(decodeURIComponent(m[1]), m[2]);
-    else if ((m = h.match(/^#\/schedule\/(.+)$/))) out = pageSchedule(decodeURIComponent(m[1]));
+    else if ((m = h.match(/^#\/schedule\/([^\/]+)(?:\/([a-z]+))?$/)))
+      out = pageSchedule(decodeURIComponent(m[1]), m[2]);
     else if ((m = h.match(/^#\/search\/(.*)$/))) out = pageSearch(decodeURIComponent(m[1]));
     else if (h === '#/parts') out = pageParts();
-    else if (h === '#/preamble') out = pagePreamble();
+    else if ((m = h.match(/^#\/preamble(?:\/([a-z]+))?$/))) out = pagePreamble(m[1]);
     else if (h === '#/schedules') out = pageSchedules();
     else if (h === '#/amendments') out = pageAmendments();
     else if (h === '#/cases') out = pageCases();
@@ -2690,9 +2862,9 @@
     // The rail scrolls independently of the page, so on a long section the
     // article being read can sit below its fold. Bring it into the rail
     // without moving the page itself.
-    var cur = main.querySelector('.pn-art.cur');
+    var cur = main.querySelector('.pt-art.cur');
     if (cur) {
-      var rail = cur.closest('.part-nav');
+      var rail = cur.closest('.ptree');
       if (rail && rail.scrollHeight > rail.clientHeight) {
         rail.scrollTop = Math.max(0, cur.offsetTop - rail.clientHeight / 2 + cur.offsetHeight / 2);
       }
@@ -2779,9 +2951,24 @@
         MAP_OPEN[key] = nowOpen;
         return;
       }
-      // Only a Part page's rail scrolls the page; on an article page the same
-      // items are ordinary links and must be left alone.
-      var pn = e.target.closest && e.target.closest('.pn-item[data-goto]');
+      var treeRow = e.target.closest && e.target.closest('.pt-row[data-tree]');
+      if (treeRow) {
+        var node = treeRow.parentNode, open = !node.classList.contains('open');
+        node.classList.toggle('open', open);
+        treeRow.setAttribute('aria-expanded', open ? 'true' : 'false');
+        return;
+      }
+      var ptoggle = e.target.closest && e.target.closest('[data-ptoggle]');
+      if (ptoggle) {
+        var tree = ptoggle.closest('.ptree'), show = !tree.classList.contains('show');
+        tree.classList.toggle('show', show);
+        ptoggle.setAttribute('aria-expanded', show ? 'true' : 'false');
+        return;
+      }
+      var tabBtn = e.target.closest && e.target.closest('.atab[data-tab]');
+      if (tabBtn) { showTab(tabBtn.getAttribute('data-tab')); return; }
+      // A section row on the Part page scrolls to its section.
+      var pn = e.target.closest && e.target.closest('[data-goto]');
       if (pn) {
         var sec = document.getElementById('sec-' + pn.getAttribute('data-goto'));
         if (sec) {
@@ -2828,25 +3015,30 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && $('.sheet-wrap')) { e.stopPropagation(); closeSheet(); }
     });
+    document.addEventListener('keydown', function (e) {
+      var t = e.target;
+      if (!t.classList || !t.classList.contains('atab')) return;
+      var tabs = [].slice.call(t.parentNode.querySelectorAll('.atab:not([disabled])'));
+      var i = tabs.indexOf(t), j = -1;
+      if (e.key === 'ArrowRight') j = (i + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft') j = (i - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') j = 0;
+      else if (e.key === 'End') j = tabs.length - 1;
+      if (j < 0) return;
+      e.preventDefault();
+      showTab(tabs[j].getAttribute('data-tab'), true);
+    });
 
-    // Under 900px the sidebar is a drawer over the page; above it, it is a
-    // column that folds away. One button, two behaviours, and the wide-screen
-    // choice is remembered.
+    // The list of Parts is a drawer over the page, on every page. The left
+    // side of a Part or an article belongs to its own Part tree.
     $('#menuBtn').addEventListener('click', function () {
-      if (window.matchMedia('(max-width: 900px)').matches ||
-          document.body.classList.contains('is-home')) {
-        document.body.classList.toggle('nav-open');
-        return;
-      }
-      var off = document.body.classList.toggle('side-off');
-      try { localStorage.setItem('coi-side', off ? 'off' : 'on'); } catch (err) { /* private mode */ }
+      document.body.classList.toggle('nav-open');
     });
     $('#scrim').addEventListener('click', function () {
       document.body.classList.remove('nav-open');
     });
 
     try {
-      if (localStorage.getItem('coi-side') === 'off') document.body.classList.add('side-off');
       if (localStorage.getItem('coi-rail') === 'off') document.body.classList.add('rail-off');
     } catch (err) { /* private mode - start with both panels showing */ }
 
