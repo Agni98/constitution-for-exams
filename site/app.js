@@ -1463,18 +1463,17 @@
 
   /* ---------- reading settings for the bare text ----------
 
-     Text size, font, line spacing and width for the text as printed, and for
-     nothing else on the page. The choices sit on the root element as data
-     attributes, so every page opens the way the reader left the last one.
-     They are kept in this browser only. */
+     Text size and style for the text as printed, and for nothing else on the
+     page. The Readable style also adds space between the lines and shortens
+     the line. The choices sit on the root element as data attributes, so every
+     page opens the way the reader left the last one. They are kept in this
+     browser only. */
   var READ_OPTS = {
     size: ['s', 'm', 'l'],
-    font: ['classic', 'readable', 'sans'],
-    lead: ['tight', 'normal', 'loose'],
-    width: ['narrow', 'medium', 'full']
+    font: ['classic', 'readable']
   };
   // The defaults are the look the text had before the settings existed.
-  var READ_DEFAULT = { size: 'm', font: 'classic', lead: 'normal', width: 'full' };
+  var READ_DEFAULT = { size: 'm', font: 'classic' };
   var READ = {};
 
   function readLoad() {
@@ -1524,19 +1523,10 @@
             '" aria-pressed="' + on + '" title="' + o.t + '" aria-label="' + o.t + '">' + o.h + '</button>';
         }).join('') + '</div>';
     }
-    // Four short strokes, spaced or cut to show what an option does.
-    function lines(ys, x1, x2) {
-      return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +
-        'stroke-linecap="round" aria-hidden="true"><path d="' + ys.map(function (y) {
-          return 'M' + x1 + ' ' + y + 'H' + x2;
-        }).join('') + '"/></svg>';
-    }
     var fonts = [
       { v: 'classic', t: 'Serif (Classic)', d: 'Closest to the printed text' },
-      { v: 'readable', t: 'Serif (Readable)', d: 'More open letters, easier on the eyes' },
-      { v: 'sans', t: 'Sans Serif', d: 'Clean and modern' }
+      { v: 'readable', t: 'Serif (Readable)', d: 'Open letters, more space between lines, shorter lines' }
     ];
-    var rows = [7, 10.5, 14, 17.5];
     return '<div class="rs">' +
       '<button class="rs-btn" type="button" data-rs-toggle="1" aria-expanded="false" aria-controls="rsPanel">' +
       '<span class="rs-aa" aria-hidden="true">Aa</span>Reading settings</button>' +
@@ -1553,16 +1543,6 @@
           (READ.font === f.v ? ' checked' : '') + '><span><b class="rs-ff-' + f.v + '">' + esc(f.t) +
           '</b><small>' + esc(f.d) + '</small></span></label>';
       }).join('') + '</div>' +
-      seg('lead', 'Line spacing', [
-        { v: 'tight', t: 'Compact', h: lines([7.5, 10.5, 13.5, 16.5], 5, 19) },
-        { v: 'normal', t: 'Normal', h: lines([6, 10, 14, 18], 5, 19) },
-        { v: 'loose', t: 'Relaxed', h: lines([4, 9.3, 14.7, 20], 5, 19) }
-      ]) +
-      seg('width', 'Text width', [
-        { v: 'narrow', t: 'Narrow', h: lines(rows, 9, 15) },
-        { v: 'medium', t: 'Medium', h: lines(rows, 6.5, 17.5) },
-        { v: 'full', t: 'Full width', h: lines(rows, 3.5, 20.5) }
-      ]) +
       '<button class="rs-reset" type="button" data-rs-reset="1">&#8634; Reset to default</button>' +
       '</div></div>';
   }

@@ -205,17 +205,15 @@
 :root { --serif-read: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; }
 :root[data-rs-size="s"] { --bare-fs: 15.6px; }
 :root[data-rs-size="l"] { --bare-fs: 19.8px; }
-:root[data-rs-font="readable"] { --bare-font: var(--serif-read); }
-:root[data-rs-font="sans"] { --bare-font: var(--sans); }
-:root[data-rs-lead="tight"] { --bare-lh: 1.5; --bare-gap: 9px; }
-:root[data-rs-lead="loose"] { --bare-lh: 2.05; --bare-gap: 20px; }
-/* Each width is a share of the column, capped at a comfortable line length,
-   so every option changes something on any screen. */
-:root[data-rs-width="narrow"] { --bare-w: min(72%, 34em); }
-:root[data-rs-width="medium"] { --bare-w: min(86%, 44em); }
+/* Readable is a more open serif, with more space between the lines and a
+   line capped at a comfortable length. */
+:root[data-rs-font="readable"] {
+  --bare-font: var(--serif-read);
+  --bare-lh: 2.05; --bare-gap: 20px;
+  --bare-w: min(86%, 44em);
+}
 @media (max-width: 620px) {
-  :root[data-rs-width="narrow"] { --bare-w: 88%; }
-  :root[data-rs-width="medium"] { --bare-w: 94%; }
+  :root[data-rs-font="readable"] { --bare-w: 94%; }
 }
 
 .bare-head { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
@@ -252,7 +250,6 @@
   font: inherit; color: var(--ink-soft); cursor: pointer;
   background: var(--bg); border: 1px solid var(--line); border-radius: 9px;
 }
-.rs-opt svg { width: 22px; height: 22px; }
 .rs-opt:hover { border-color: var(--accent); color: var(--ink); }
 .rs-opt.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
 .rs-a1, .rs-a2, .rs-a3 { font-family: var(--serif); line-height: 1; }
@@ -270,7 +267,6 @@
 .rs-font small { display: block; font-size: 12.5px; line-height: 1.35; color: var(--ink-faint); }
 .rs-ff-classic { font-family: var(--serif); }
 .rs-ff-readable { font-family: var(--serif-read); }
-.rs-ff-sans { font-family: var(--sans); }
 .rs-reset {
   display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;
   margin-top: 14px; padding: 10px 0 2px;
