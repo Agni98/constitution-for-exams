@@ -188,8 +188,6 @@
 .atab.on { color: var(--accent); }
 .atab.on::after { background: var(--accent); }
 .atab:focus-visible { outline: 2px solid var(--accent); outline-offset: -6px; border-radius: 10px; }
-.atab[disabled] { color: var(--ink-faint); opacity: .5; cursor: not-allowed; }
-.atab[disabled]::after { display: none; }
 .atab .ct {
   min-width: 20px; height: 19px; padding: 0 6px;
   border-radius: 999px; background: var(--bg-sunk); color: var(--ink-faint);

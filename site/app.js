@@ -988,12 +988,12 @@
       text: { html: tag('The text') + '<div class="bare">' + (pre.paras || []).map(function (p) {
         return '<p class="l' + (p.lvl || 0) + '">' + bareHTML(p.t, pre.notes) + '</p>';
       }).join('') + '</div>' + fnList(pre.notes) },
-      explain: { html: ex ? explainBlock(ex) : '', none: 'No explainer for the Preamble yet' },
-      flow: { html: diagramPane(d.flow), n: d.flow.length, none: 'No flow chart for the Preamble' },
-      maps: { html: diagramPane(d.mind), n: d.mind.length, none: 'No mind map for the Preamble' },
+      explain: { html: ex ? explainBlock(ex) : '' },
+      flow: { html: diagramPane(d.flow), n: d.flow.length },
+      maps: { html: diagramPane(d.mind), n: d.mind.length },
       judgments: { html: cases.length ? judgPane(cases, 'Judgments on the Preamble') : '',
-                   n: cases.length, none: 'No landmark judgment filed under the Preamble' },
-      exams: { html: EXAM.preamble ? examBlock(EXAM.preamble) : '', none: 'Not on the exam priority list' }
+                   n: cases.length },
+      exams: { html: EXAM.preamble ? examBlock(EXAM.preamble) : '' }
     });
     return s;
   }
@@ -1362,13 +1362,12 @@
     var exam = examOf(a);
     s += tabbed('#/article/' + a.num, want, {
       text: { html: textPane(a) },
-      explain: { html: ex ? explainBlock(ex) : '',
-                 none: a.omitted ? 'This article was omitted, so it has no explainer' : 'No explainer yet' },
-      flow: { html: diagramPane(d.flow), n: d.flow.length, none: 'No flow chart drawn for this article' },
-      maps: { html: diagramPane(d.mind), n: d.mind.length, none: 'No mind map for this article' },
+      explain: { html: ex ? explainBlock(ex) : '' },
+      flow: { html: diagramPane(d.flow), n: d.flow.length },
+      maps: { html: diagramPane(d.mind), n: d.mind.length },
       judgments: { html: cases.length ? judgPane(cases, 'Judgments filed under Article ' + a.num) : '',
-                   n: cases.length, none: 'No landmark judgment filed under this article' },
-      exams: { html: exam ? examBlock(exam) : '', none: 'Not on the exam priority list' }
+                   n: cases.length },
+      exams: { html: exam ? examBlock(exam) : '' }
     });
 
     s += pagerFoot(a, nb);
@@ -1396,10 +1395,10 @@
 
      One provision's readings, sorted into kinds. Every pane is drawn up front
      and shown one at a time, so switching costs no redraw and the reader keeps
-     their place. A tab with nothing in it is disabled rather than hidden, so the
-     six tabs sit in the same place on every page. The last tab chosen is
+     their place. A tab with nothing in it is left out, so the bar offers only
+     the readings that exist. Bare Text is always there. The last tab chosen is
      remembered, and the address names it, so a link or a reload opens the same
-     one. */
+     one, or Bare Text where that reading does not exist. */
   var TABS = [
     { id: 'text', label: 'Bare Text' },
     { id: 'explain', label: 'Explainer' },
@@ -1417,12 +1416,11 @@
       (TABS.filter(function (t) { return has(t.id); })[0] || {}).id;
 
     var bar = '<div class="atabs" role="tablist" aria-label="Readings" data-base="' + esc(base) + '">' +
-      TABS.map(function (t) {
-        var p = panes[t.id] || {}, on = t.id === pick;
+      TABS.filter(function (t) { return has(t.id); }).map(function (t) {
+        var p = panes[t.id], on = t.id === pick;
         return '<button class="atab' + (on ? ' on' : '') + '" type="button" role="tab" id="tab-' + t.id +
           '" aria-controls="pane-' + t.id + '" aria-selected="' + on + '" data-tab="' + t.id + '"' +
-          (on ? '' : ' tabindex="-1"') +
-          (has(t.id) ? '' : ' disabled title="' + esc(p.none || 'Nothing here') + '"') + '>' +
+          (on ? '' : ' tabindex="-1"') + '>' +
           esc(t.label) + (p.n ? '<span class="ct">' + p.n + '</span>' : '') + '</button>';
       }).join('') + '</div>';
 
@@ -1439,7 +1437,7 @@
     var bar = $('#main .atabs');
     if (!bar) return;
     var btn = bar.querySelector('.atab[data-tab="' + id + '"]');
-    if (!btn || btn.disabled) return;
+    if (!btn) return;
     bar.querySelectorAll('.atab').forEach(function (b) {
       var on = b === btn;
       b.classList.toggle('on', on);
@@ -2146,12 +2144,12 @@
 
     s += tabbed('#/schedule/' + id, want, {
       text: { html: text },
-      explain: { html: ex ? explainBlock(ex) : '', none: 'No explainer for this Schedule yet' },
-      flow: { html: diagramPane(d.flow), n: d.flow.length, none: 'No flow chart for this Schedule' },
-      maps: { html: diagramPane(d.mind), n: d.mind.length, none: 'No mind map for this Schedule' },
+      explain: { html: ex ? explainBlock(ex) : '' },
+      flow: { html: diagramPane(d.flow), n: d.flow.length },
+      maps: { html: diagramPane(d.mind), n: d.mind.length },
       judgments: { html: cases.length ? judgPane(cases, 'Judgments on the ' + sc.name) : '',
-                   n: cases.length, none: 'No landmark judgment filed under this Schedule' },
-      exams: { html: exam ? examBlock(exam) : '', none: 'Not on the exam priority list' }
+                   n: cases.length },
+      exams: { html: exam ? examBlock(exam) : '' }
     });
     return s;
   }
@@ -3107,7 +3105,7 @@
     document.addEventListener('keydown', function (e) {
       var t = e.target;
       if (!t.classList || !t.classList.contains('atab')) return;
-      var tabs = [].slice.call(t.parentNode.querySelectorAll('.atab:not([disabled])'));
+      var tabs = [].slice.call(t.parentNode.querySelectorAll('.atab'));
       var i = tabs.indexOf(t), j = -1;
       if (e.key === 'ArrowRight') j = (i + 1) % tabs.length;
       else if (e.key === 'ArrowLeft') j = (i - 1 + tabs.length) % tabs.length;
