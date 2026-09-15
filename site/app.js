@@ -991,7 +991,7 @@
       explain: { html: ex ? explainBlock(ex) : '' },
       flow: { html: diagramPane(d.flow), n: d.flow.length },
       maps: { html: diagramPane(d.mind), n: d.mind.length },
-      judgments: { html: cases.length ? judgPane(cases, 'Judgments on the Preamble') : '',
+      judgments: { html: cases.length ? judgPane(cases, 'Judgments on the Preamble', 'the Preamble') : '',
                    n: cases.length },
       exams: { html: EXAM.preamble ? examBlock(EXAM.preamble) : '' }
     });
@@ -1365,7 +1365,7 @@
       explain: { html: ex ? explainBlock(ex) : '' },
       flow: { html: diagramPane(d.flow), n: d.flow.length },
       maps: { html: diagramPane(d.mind), n: d.mind.length },
-      judgments: { html: cases.length ? judgPane(cases, 'Judgments filed under Article ' + a.num) : '',
+      judgments: { html: cases.length ? judgPane(cases, 'Judgments filed under Article ' + a.num, 'Article ' + a.num) : '',
                    n: cases.length },
       exams: { html: exam ? examBlock(exam) : '' }
     });
@@ -1712,7 +1712,8 @@
   }
 
   // A judgment as a card: where it is filed, its name, year, bench and result,
-  // and one line on what it decided. The card is a link to its page.
+  // and one line on what it decided. The card is a link to its page. On a
+  // Judgments tab, a plain click opens it in the drawer instead.
   function judgCard(r) {
     var j = r.j, st = STATUS[r.status] || STATUS.good;
     var line = j ? (j.summary || (j.question || [])[0] || '') : firstSentence(r.c.held);
@@ -1727,13 +1728,36 @@
       '<span class="jc-go">Read the judgment &rarr;</span></a>';
   }
 
-  function judgPane(list, label) {
-    return tag(label) + '<div class="jgrid">' + list.map(judgCard).join('') + '</div>';
+  // back names the page the tab is on, for the drawer's way back.
+  function judgPane(list, label, back) {
+    return tag(label) + '<div class="jgrid" data-back="' + esc(back) + '">' +
+      list.map(judgCard).join('') + '</div>';
   }
 
   /* ---------- a judgment's own page ---------- */
 
   var HELD_KIND = { unanimous: 'for', majority: 'for', plurality: 'for', concurring: 'also', dissent: 'against' };
+
+  // The marks beside a section's heading and beside each holding's label,
+  // drawn like the site's other icons.
+  var JSEC_ICON = {
+    q: '<circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.9.7c0 1.7-2.5 2.2-2.5 3.9"/>' +
+      '<path d="M12 17.2h.01"/>',
+    f: '<path d="M7 3.5h7l4 4v13H7z"/><path d="M14 3.5v4h4"/><path d="M10 12.5h5M10 16h5"/>',
+    h: ICON.scales,
+    p: ICON.target,
+    l: '<circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/>'
+  };
+  var HELD_MARK = {
+    'for': '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+    'also': '<path d="M12 5.5v13M5.5 12h13"/>',
+    'against': '<path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/>'
+  };
+  function markSvg(paths, cls) {
+    return '<svg' + (cls ? ' class="' + cls + '"' : '') + ' viewBox="0 0 24 24" fill="none" ' +
+      'stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" ' +
+      'aria-hidden="true">' + paths + '</svg>';
+  }
 
   function sourceName(url) {
     if (/indiankanoon\.org/.test(url)) return 'Indian Kanoon';
@@ -1743,7 +1767,9 @@
   }
 
   function jsec(cls, heading, body) {
-    return body ? '<section class="jsec ' + cls + '"><h2>' + esc(heading) + '</h2>' + body + '</section>' : '';
+    return body ? '<section class="jsec ' + cls + '"><h2>' +
+      (JSEC_ICON[cls] ? '<span class="jico">' + markSvg(JSEC_ICON[cls]) + '</span>' : '') +
+      '<span>' + esc(heading) + '</span></h2>' + body + '</section>' : '';
   }
   function jParas(list) {
     return (list || []).map(function (t) { return '<p>' + para(t) + '</p>'; }).join('');
@@ -1762,29 +1788,20 @@
     if (!list || !list.length) return '';
     return '<div class="jheld-wrap">' + list.map(function (h) {
       var pts = h.points || [];
-      return '<div class="jheld ' + (HELD_KIND[h.kind] || 'for') + '"><h3>' + esc(h.label) + '</h3>' +
+      var kind = HELD_KIND[h.kind] || 'for';
+      return '<div class="jheld ' + kind + '"><h3>' + markSvg(HELD_MARK[kind], 'jh-ico') +
+        '<span>' + esc(h.label) + '</span></h3>' +
         (pts.length === 1 ? '<p>' + para(pts[0]) + '</p>' : jBullets(pts)) + '</div>';
     }).join('') + '</div>';
   }
 
-  function pageJudgment(id) {
-    var r = REG_BY[id];
-    if (!r) return '<p class="empty">No such judgment.</p>';
-    var i = REG.indexOf(r), prev = REG[i - 1], next = REG[i + 1];
+  // The name, its pills and its date: the same on the page and in the drawer.
+  function judgmentHead(r, h) {
     var j = r.j, c = r.c, st = STATUS[r.status] || STATUS.good;
-
-    var s = '<div class="art-top"><nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a>' +
-      '<span>&rsaquo;</span><a href="#/cases">Judgments</a><span>&rsaquo;</span><b>' + esc(r.short) + '</b></nav>' +
-      '<div class="pager">' +
-      (prev ? '<a href="#/judgment/' + prev.id + '" title="' + esc(prev.short + ', ' + prev.year) +
-        '">&larr; Previous judgment</a>' : '') +
-      (next ? '<a href="#/judgment/' + next.id + '" title="' + esc(next.short + ', ' + next.year) +
-        '">Next judgment &rarr;</a>' : '') +
-      '</div></div>';
-
     var sub = j ? [j.full && j.full !== r.name ? j.full : '', j.aka || ''].filter(Boolean).join(' \u00b7 ')
       : (c.full && c.full !== r.name ? c.full : '');
-    s += '<header class="art-head jhead"><h1>' + esc(r.name) + '</h1>' +
+    return '<header class="art-head jhead"><' + h + (h === 'h2' ? ' id="sheetName"' : '') + '>' +
+      esc(r.name) + '</' + h + '>' +
       (sub ? '<p class="j-sub">' + esc(sub) + '</p>' : '') +
       '<div class="tagline"><span class="pill grey">' + esc(String(r.year)) + '</span>' +
       (benchText(r) ? '<span class="pill blue">' + esc(benchText(r)) + '</span>' : '') +
@@ -1795,8 +1812,12 @@
       (j && (j.decided || j.citation) ? '<p class="j-meta">' +
         esc([j.decided ? 'Decided ' + j.decided : '', j.citation || ''].filter(Boolean).join(' \u00b7 ')) + '</p>' : '') +
       '</header>';
+  }
 
-    s += '<div class="jsecs">';
+  // What the Court was asked, the facts, what it held and what followed, then
+  // where to read more. The drawer also offers the judgment's own page.
+  function judgmentBody(r, inDrawer) {
+    var j = r.j, c = r.c, s = '<div class="jsecs">';
     if (j) {
       s += jsec('q', 'Constitutional Question', jParas(j.question)) +
         jsec('f', 'Facts of the Case', jBullets(j.facts)) +
@@ -1808,7 +1829,10 @@
         jsec('h', 'What the Court held', '<p>' + para(c.held) + '</p>') +
         jsec('l', 'Why it matters', '<p>' + para(c.why) + '</p>');
     }
-    s += '<section class="jsec jfoot"><div class="jf-row"><span class="jf-k">Filed under</span>' +
+    return s + '<section class="jsec jfoot">' +
+      (inDrawer ? '<div class="jf-row"><span class="jf-k">Own page</span><a href="#/judgment/' + r.id +
+        '">Open this judgment as a full page &rarr;</a></div>' : '') +
+      '<div class="jf-row"><span class="jf-k">Filed under</span>' +
       '<span class="chiprow">' + r.keys.map(function (k) {
         return '<a class="chip" href="' + keyHref(k) + '/judgments">' + esc(keyLabel(k)) + '</a>';
       }).join('') + '</span></div>' +
@@ -1816,6 +1840,23 @@
       (j && j.source ? '<div class="jf-row"><span class="jf-k">Full text</span><a href="' + esc(j.source) +
         '" target="_blank" rel="noopener">Read the judgment on ' + esc(sourceName(j.source)) + ' &#8599;</a></div>' : '') +
       '</section></div>';
+  }
+
+  function pageJudgment(id) {
+    var r = REG_BY[id];
+    if (!r) return '<p class="empty">No such judgment.</p>';
+    var i = REG.indexOf(r), prev = REG[i - 1], next = REG[i + 1];
+
+    var s = '<div class="art-top"><nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a>' +
+      '<span>&rsaquo;</span><a href="#/cases">Judgments</a><span>&rsaquo;</span><b>' + esc(r.short) + '</b></nav>' +
+      '<div class="pager">' +
+      (prev ? '<a href="#/judgment/' + prev.id + '" title="' + esc(prev.short + ', ' + prev.year) +
+        '">&larr; Previous judgment</a>' : '') +
+      (next ? '<a href="#/judgment/' + next.id + '" title="' + esc(next.short + ', ' + next.year) +
+        '">Next judgment &rarr;</a>' : '') +
+      '</div></div>';
+
+    s += judgmentHead(r, 'h1') + judgmentBody(r);
 
     function to(x, dir) {
       return '<a class="pf ' + dir + '" href="#/judgment/' + x.id + '">' +
@@ -1826,6 +1867,55 @@
     s += '<nav class="pager-foot" aria-label="Previous and next judgment">' +
       (prev ? to(prev, 'prev') : '<span></span>') + (next ? to(next, 'next') : '') + '</nav>';
     return s;
+  }
+
+  /* ---------- a judgment in the drawer ----------
+
+     On a Judgments tab, a card opens its judgment in a drawer on the right of
+     the page, so the reader stays on the article. The drawer steps through the
+     other judgments on the same tab, and Back closes it. */
+  function judgmentDrawer(id, ids, back) {
+    var r = REG_BY[id], i = ids.indexOf(id);
+    var prev = REG_BY[ids[i - 1]], next = REG_BY[ids[i + 1]];
+    function step(x, dir) {
+      if (!x) {
+        return '<button class="jd-step" type="button" disabled>' +
+          (dir === 'prev' ? '&larr; Previous' : 'Next &rarr;') + '</button>';
+      }
+      return '<button class="jd-step" type="button" data-jstep="' + x.id + '" data-dir="' + dir + '" title="' +
+        esc(x.short + ', ' + x.year) + '">' + (dir === 'prev' ? '&larr; ' : '') +
+        '<span>' + esc(x.short) + '</span>' + (dir === 'next' ? ' &rarr;' : '') + '</button>';
+    }
+    return '<div class="jd-bar">' +
+      '<button class="jd-back" type="button" data-close="1">&larr; Back to ' + esc(back) +
+      ' &middot; Judgments</button>' +
+      '<div class="jd-steps">' +
+      (ids.length > 1 ? '<span class="jd-pos">' + (i + 1) + ' of ' + ids.length + '</span>' : '') +
+      step(prev, 'prev') + step(next, 'next') + '</div></div>' +
+      judgmentHead(r, 'h2') + judgmentBody(r, true);
+  }
+
+  // dir: set when stepping, so focus stays on the same side of the bar.
+  function openJudgment(id, ids, back, dir) {
+    if (!REG_BY[id]) return;
+    var html = judgmentDrawer(id, ids, back), sheet = $('.sheet.jdrawer');
+    if (sheet) {
+      var body = sheet.querySelector('.sheet-body');
+      body.innerHTML = html;
+      body.scrollTop = 0;
+    } else {
+      openSheet(html, 'jdrawer');
+      sheet = $('.sheet.jdrawer');
+    }
+    sheet.setAttribute('data-ids', ids.join(' '));
+    sheet.setAttribute('data-back', back);
+    document.querySelectorAll('.jcard.on').forEach(function (c) { c.classList.remove('on'); });
+    var card = document.querySelector('.jgrid[data-back] .jcard[data-id="' + id + '"]');
+    if (card) {
+      card.classList.add('on');
+      _lastFocus = card;
+    }
+    if (dir) (sheet.querySelector('.jd-step[data-dir="' + dir + '"]') || sheet.querySelector('.jd-back')).focus();
   }
 
   /* ---------- what the examiners ask ---------- */
@@ -2147,7 +2237,7 @@
       explain: { html: ex ? explainBlock(ex) : '' },
       flow: { html: diagramPane(d.flow), n: d.flow.length },
       maps: { html: diagramPane(d.mind), n: d.mind.length },
-      judgments: { html: cases.length ? judgPane(cases, 'Judgments on the ' + sc.name) : '',
+      judgments: { html: cases.length ? judgPane(cases, 'Judgments on the ' + sc.name, 'the ' + sc.name) : '',
                    n: cases.length },
       exams: { html: exam ? examBlock(exam) : '' }
     });
@@ -2233,15 +2323,17 @@
   var _lastFocus = null;
 
   // One overlay at a time, and focus goes back where it came from when it
-  // closes. wide: a diagram needs more room than a judgment does.
-  function openSheet(inner, wide) {
+  // closes. kind: true for a diagram, which needs more room than a note does,
+  // or 'jdrawer' for a judgment drawn in from the right of the page.
+  function openSheet(inner, kind) {
     closeSheet();
     _lastFocus = document.activeElement;
+    var mod = kind === true ? ' wide' : kind ? ' ' + kind : '';
     var box = document.createElement('div');
-    box.className = 'sheet-wrap';
+    box.className = 'sheet-wrap' + (kind === 'jdrawer' ? ' jdrawer-wrap' : '');
     box.innerHTML =
       '<div class="sheet-back" data-close="1"></div>' +
-      '<div class="sheet' + (wide ? ' wide' : '') + '" role="dialog" aria-modal="true" ' +
+      '<div class="sheet' + mod + '" role="dialog" aria-modal="true" ' +
       'aria-labelledby="sheetName">' +
       '<button class="sheet-x" type="button" data-close="1" aria-label="Close">&times;</button>' +
       '<div class="sheet-body">' + inner + '</div></div>';
@@ -2255,6 +2347,7 @@
     if (!open) return;
     open.remove();
     document.body.classList.remove('sheet-open');
+    document.querySelectorAll('.jcard.on').forEach(function (c) { c.classList.remove('on'); });
     if (_lastFocus && _lastFocus.focus) _lastFocus.focus();
     _lastFocus = null;
   }
@@ -3003,6 +3096,32 @@
         document.body.classList.remove('nav-open');
       }
       if (e.target.closest && e.target.closest('[data-close]')) { closeSheet(); return; }
+      // A card on a Judgments tab opens in the drawer. A click with a modifier
+      // key is left alone, so it can still open the full page in a new tab.
+      var jcard = e.target.closest && e.target.closest('.jgrid[data-back] .jcard');
+      if (jcard && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey && e.button === 0) {
+        e.preventDefault();
+        var jg = jcard.parentNode;
+        openJudgment(jcard.getAttribute('data-id'), [].map.call(jg.querySelectorAll('.jcard'), function (c) {
+          return c.getAttribute('data-id');
+        }), jg.getAttribute('data-back'));
+        return;
+      }
+      var jstep = e.target.closest && e.target.closest('[data-jstep]');
+      if (jstep) {
+        var jd = jstep.closest('.sheet');
+        openJudgment(jstep.getAttribute('data-jstep'), jd.getAttribute('data-ids').split(' '),
+          jd.getAttribute('data-back'), jstep.getAttribute('data-dir'));
+        return;
+      }
+      // A link in an overlay to the page already showing fires no hashchange,
+      // so route() would not close the overlay. Close it here instead.
+      var inLink = e.target.closest && e.target.closest('.sheet a[href^="#/"]');
+      if (inLink && inLink.getAttribute('href') === location.hash) {
+        e.preventDefault();
+        closeSheet();
+        return;
+      }
       var carBtn = e.target.closest && e.target.closest('.car-btn');
       if (carBtn) {
         var track = $('#homeCar');
@@ -3101,6 +3220,14 @@
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && $('.sheet-wrap')) { e.stopPropagation(); closeSheet(); }
+    });
+    // Left and right step through the judgments in the drawer.
+    document.addEventListener('keydown', function (e) {
+      if ((e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') || e.altKey || e.ctrlKey || e.metaKey) return;
+      var d = $('.sheet.jdrawer');
+      if (!d) return;
+      var b = d.querySelector('.jd-step[data-dir="' + (e.key === 'ArrowLeft' ? 'prev' : 'next') + '"]');
+      if (b) { e.preventDefault(); b.click(); }
     });
     document.addEventListener('keydown', function (e) {
       var t = e.target;
