@@ -11,7 +11,10 @@
    summaries, and its members are not listed. The corrections to the short
    summaries that came out of the check: Kesoram Industries was decided by
    4:1, not 3:2. Atiabari Tea was decided on 16 August 1960, not in 1961, and
-   Chief Justice Sinha dissented.
+   Chief Justice Sinha dissented. Automobile Transport was decided by 4:3.
+   Indian Kanoon lists Chief Justice Sinha on that bench, but the Chief Justice
+   did not sit in the case. The Cauvery entry is the 1991 Presidential
+   Reference on the Karnataka ordinance, not a later order of the tribunal.
 
    Written in plain, direct English: one fact to a sentence, normal word order. */
 Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
