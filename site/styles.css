@@ -405,11 +405,15 @@ p  { margin: 0 0 12px; }
 
 /* The head of an article, and the tabs under it, are in read.css. */
 
+/* The size, font, spacing and width come from the reading settings in
+   read.css. Each fallback is the default. */
 .bare {
-  font-family: var(--serif); font-size: 17.2px; line-height: 1.72;
+  font-family: var(--bare-font, var(--serif)); font-size: var(--bare-fs, 17.2px);
+  line-height: var(--bare-lh, 1.72);
+  max-width: var(--bare-w, none);
   margin: 20px 0 8px;
 }
-.bare p { margin: 0 0 13px; }
+.bare p { margin: 0 0 var(--bare-gap, 13px); }
 .bare .l1 { margin-left: 0; }
 .bare .l2 { margin-left: 26px; }
 .bare .l3 { margin-left: 52px; }

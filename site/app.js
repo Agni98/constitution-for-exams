@@ -985,7 +985,7 @@
       '<span class="pill blue">Amended once — 42nd, 1976</span></div></header>';
 
     s += tabbed('#/preamble', want, {
-      text: { html: tag('The text') + '<div class="bare">' + (pre.paras || []).map(function (p) {
+      text: { html: bareHead() + '<div class="bare">' + (pre.paras || []).map(function (p) {
         return '<p class="l' + (p.lvl || 0) + '">' + bareHTML(p.t, pre.notes) + '</p>';
       }).join('') + '</div>' + fnList(pre.notes) },
       explain: { html: ex ? explainBlock(ex) : '' },
@@ -1461,10 +1461,137 @@
     if (focus) btn.focus();
   }
 
+  /* ---------- reading settings for the bare text ----------
+
+     Text size, font, line spacing and width for the text as printed, and for
+     nothing else on the page. The choices sit on the root element as data
+     attributes, so every page opens the way the reader left the last one.
+     They are kept in this browser only. */
+  var READ_OPTS = {
+    size: ['s', 'm', 'l'],
+    font: ['classic', 'readable', 'sans'],
+    lead: ['tight', 'normal', 'loose'],
+    width: ['narrow', 'medium', 'full']
+  };
+  // The defaults are the look the text had before the settings existed.
+  var READ_DEFAULT = { size: 'm', font: 'classic', lead: 'normal', width: 'full' };
+  var READ = {};
+
+  function readLoad() {
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem('coi-read') || '{}') || {}; } catch (err) { /* private mode */ }
+    Object.keys(READ_OPTS).forEach(function (k) {
+      READ[k] = READ_OPTS[k].indexOf(saved[k]) >= 0 ? saved[k] : READ_DEFAULT[k];
+    });
+    readApply();
+  }
+  function readApply() {
+    Object.keys(READ_OPTS).forEach(function (k) {
+      document.documentElement.setAttribute('data-rs-' + k, READ[k]);
+    });
+  }
+  // Mark the chosen option in the panel, if one is on the page.
+  function readSync() {
+    document.querySelectorAll('[data-rs]').forEach(function (b) {
+      var kv = b.getAttribute('data-rs').split(':'), on = READ[kv[0]] === kv[1];
+      if (b.tagName === 'INPUT') b.checked = on;
+      else {
+        b.classList.toggle('on', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      }
+    });
+  }
+  function readSet(k, v) {
+    if (!READ_OPTS[k] || READ_OPTS[k].indexOf(v) < 0) return;
+    READ[k] = v;
+    readApply();
+    readSync();
+    try { localStorage.setItem('coi-read', JSON.stringify(READ)); } catch (err) { /* private mode */ }
+  }
+  function readReset() {
+    Object.keys(READ_DEFAULT).forEach(function (k) { READ[k] = READ_DEFAULT[k]; });
+    readApply();
+    readSync();
+    try { localStorage.removeItem('coi-read'); } catch (err) { /* private mode */ }
+  }
+
+  function readPanel() {
+    function seg(k, label, list) {
+      return '<div class="rs-k">' + label + '</div><div class="rs-seg" role="group" aria-label="' + label + '">' +
+        list.map(function (o) {
+          var on = READ[k] === o.v;
+          return '<button type="button" class="rs-opt' + (on ? ' on' : '') + '" data-rs="' + k + ':' + o.v +
+            '" aria-pressed="' + on + '" title="' + o.t + '" aria-label="' + o.t + '">' + o.h + '</button>';
+        }).join('') + '</div>';
+    }
+    // Four short strokes, spaced or cut to show what an option does.
+    function lines(ys, x1, x2) {
+      return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +
+        'stroke-linecap="round" aria-hidden="true"><path d="' + ys.map(function (y) {
+          return 'M' + x1 + ' ' + y + 'H' + x2;
+        }).join('') + '"/></svg>';
+    }
+    var fonts = [
+      { v: 'classic', t: 'Serif (Classic)', d: 'Closest to the printed text' },
+      { v: 'readable', t: 'Serif (Readable)', d: 'More open letters, easier on the eyes' },
+      { v: 'sans', t: 'Sans Serif', d: 'Clean and modern' }
+    ];
+    var rows = [7, 10.5, 14, 17.5];
+    return '<div class="rs">' +
+      '<button class="rs-btn" type="button" data-rs-toggle="1" aria-expanded="false" aria-controls="rsPanel">' +
+      '<span class="rs-aa" aria-hidden="true">Aa</span>Reading settings</button>' +
+      '<div class="rs-panel" id="rsPanel" role="group" aria-label="Reading settings for the text" hidden>' +
+      '<div class="rs-head"><span class="rs-aa" aria-hidden="true">Aa</span>Reading settings</div>' +
+      seg('size', 'Text size', [
+        { v: 's', t: 'Small', h: '<span class="rs-a1">A</span>' },
+        { v: 'm', t: 'Medium', h: '<span class="rs-a2">A</span>' },
+        { v: 'l', t: 'Large', h: '<span class="rs-a3">A</span>' }
+      ]) +
+      '<div class="rs-k">Font style</div><div class="rs-fonts" role="radiogroup" aria-label="Font style">' +
+      fonts.map(function (f) {
+        return '<label class="rs-font"><input type="radio" name="rsFont" data-rs="font:' + f.v + '"' +
+          (READ.font === f.v ? ' checked' : '') + '><span><b class="rs-ff-' + f.v + '">' + esc(f.t) +
+          '</b><small>' + esc(f.d) + '</small></span></label>';
+      }).join('') + '</div>' +
+      seg('lead', 'Line spacing', [
+        { v: 'tight', t: 'Compact', h: lines([7.5, 10.5, 13.5, 16.5], 5, 19) },
+        { v: 'normal', t: 'Normal', h: lines([6, 10, 14, 18], 5, 19) },
+        { v: 'loose', t: 'Relaxed', h: lines([4, 9.3, 14.7, 20], 5, 19) }
+      ]) +
+      seg('width', 'Text width', [
+        { v: 'narrow', t: 'Narrow', h: lines(rows, 9, 15) },
+        { v: 'medium', t: 'Medium', h: lines(rows, 6.5, 17.5) },
+        { v: 'full', t: 'Full width', h: lines(rows, 3.5, 20.5) }
+      ]) +
+      '<button class="rs-reset" type="button" data-rs-reset="1">&#8634; Reset to default</button>' +
+      '</div></div>';
+  }
+
+  function readPanelOpen(btn, open) {
+    var wrap = btn.closest('.rs');
+    wrap.querySelector('.rs-panel').hidden = !open;
+    wrap.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  // Returns true when there was a panel to close.
+  function readPanelClose(focusBtn) {
+    var panel = $('.rs-panel:not([hidden])');
+    if (!panel) return false;
+    var btn = panel.parentNode.querySelector('.rs-btn');
+    readPanelOpen(btn, false);
+    if (focusBtn) btn.focus();
+    return true;
+  }
+
+  // The label over the bare text, with the settings beside it.
+  function bareHead() {
+    return '<div class="bare-head">' + tag('The text') + readPanel() + '</div>';
+  }
+
   // Bare Text: the text as printed, what it refers to, what amended it, and
   // the footnotes the official edition prints under it.
   function textPane(a) {
-    var s = tag('The text') + '<div class="bare">' +
+    var s = bareHead() + '<div class="bare">' +
       a.paras.map(function (p) {
         return '<p class="l' + (p.lvl || 0) + '">' + bareHTML(p.t, a.notes) + '</p>';
       }).join('') + '</div>';
@@ -3056,6 +3183,7 @@
   /* ---------- wiring ---------- */
 
   function init() {
+    readLoad();
     buildSidebar();
     initNav();
 
@@ -3095,6 +3223,17 @@
       if (e.target.closest && e.target.closest('.sidebar a')) {
         document.body.classList.remove('nav-open');
       }
+      // Reading settings: a click outside the panel closes it.
+      if ($('.rs-panel:not([hidden])') && !(e.target.closest && e.target.closest('.rs'))) readPanelClose();
+      var rsToggle = e.target.closest && e.target.closest('[data-rs-toggle]');
+      if (rsToggle) { readPanelOpen(rsToggle, rsToggle.getAttribute('aria-expanded') !== 'true'); return; }
+      var rsOpt = e.target.closest && e.target.closest('button[data-rs]');
+      if (rsOpt) {
+        var rkv = rsOpt.getAttribute('data-rs').split(':');
+        readSet(rkv[0], rkv[1]);
+        return;
+      }
+      if (e.target.closest && e.target.closest('[data-rs-reset]')) { readReset(); return; }
       if (e.target.closest && e.target.closest('[data-close]')) { closeSheet(); return; }
       // A card on a Judgments tab opens in the drawer. A click with a modifier
       // key is left alone, so it can still open the full page in a new tab.
@@ -3217,6 +3356,14 @@
     document.addEventListener('input', function (e) {
       if (e.target.id === 'caseFilter') filterCases();
       if (e.target.id === 'examFilter') filterExam();
+    });
+    // The font choice is a set of radio buttons, which the arrow keys also change.
+    document.addEventListener('change', function (e) {
+      var kv = e.target.getAttribute && e.target.getAttribute('data-rs');
+      if (kv && e.target.checked) readSet(kv.split(':')[0], kv.split(':')[1]);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !$('.sheet-wrap') && readPanelClose(true)) e.stopPropagation();
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && $('.sheet-wrap')) { e.stopPropagation(); closeSheet(); }

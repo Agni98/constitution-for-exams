@@ -198,6 +198,90 @@
 .apane > .section-tag:first-child { margin-top: 4px; }
 .apane .bare { margin-top: 8px; }
 
+/* ---------- reading settings: the bare text only ---------- */
+
+/* The choices sit on the root element and set only the variables that .bare
+   reads, so nothing else on the page changes. */
+:root { --serif-read: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif; }
+:root[data-rs-size="s"] { --bare-fs: 15.6px; }
+:root[data-rs-size="l"] { --bare-fs: 19.8px; }
+:root[data-rs-font="readable"] { --bare-font: var(--serif-read); }
+:root[data-rs-font="sans"] { --bare-font: var(--sans); }
+:root[data-rs-lead="tight"] { --bare-lh: 1.5; --bare-gap: 9px; }
+:root[data-rs-lead="loose"] { --bare-lh: 2.05; --bare-gap: 20px; }
+/* Each width is a share of the column, capped at a comfortable line length,
+   so every option changes something on any screen. */
+:root[data-rs-width="narrow"] { --bare-w: min(72%, 34em); }
+:root[data-rs-width="medium"] { --bare-w: min(86%, 44em); }
+@media (max-width: 620px) {
+  :root[data-rs-width="narrow"] { --bare-w: 88%; }
+  :root[data-rs-width="medium"] { --bare-w: 94%; }
+}
+
+.bare-head { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
+.bare-head .section-tag { flex: 1 1 auto; margin: 0; }
+
+.rs { position: relative; flex: 0 0 auto; }
+.rs-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 34px; padding: 0 12px;
+  font: inherit; font-size: 13px; font-weight: 600; color: var(--ink-soft);
+  background: var(--bg-raise); border: 1px solid var(--line); border-radius: 9px; cursor: pointer;
+}
+.rs-btn:hover, .rs.open .rs-btn { border-color: var(--accent); color: var(--accent); }
+.rs-aa {
+  font-family: var(--serif); font-size: 16px; font-weight: 600;
+  letter-spacing: -.02em; color: var(--accent);
+}
+.rs-panel {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 20;
+  width: min(330px, calc(100vw - 32px));
+  padding: 16px 18px 12px;
+  background: var(--bg-raise); border: 1px solid var(--line); border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, .18);
+}
+.rs-head {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 16px; font-weight: 650; color: var(--ink);
+}
+.rs-head .rs-aa { font-size: 20px; }
+.rs-k { margin: 14px 0 7px; font-size: 13px; font-weight: 650; color: var(--ink); }
+.rs-seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.rs-opt {
+  height: 40px; display: grid; place-items: center;
+  font: inherit; color: var(--ink-soft); cursor: pointer;
+  background: var(--bg); border: 1px solid var(--line); border-radius: 9px;
+}
+.rs-opt svg { width: 22px; height: 22px; }
+.rs-opt:hover { border-color: var(--accent); color: var(--ink); }
+.rs-opt.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.rs-a1, .rs-a2, .rs-a3 { font-family: var(--serif); line-height: 1; }
+.rs-a1 { font-size: 13px; }
+.rs-a2 { font-size: 17px; }
+.rs-a3 { font-size: 22px; }
+.rs-fonts { display: grid; gap: 2px; }
+.rs-font {
+  display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; align-items: start;
+  padding: 6px 6px; border-radius: 8px; cursor: pointer;
+}
+.rs-font:hover { background: var(--bg-sunk); }
+.rs-font input { width: 16px; height: 16px; margin: 3px 0 0; accent-color: var(--accent); }
+.rs-font b { display: block; font-size: 15px; font-weight: 600; color: var(--ink); }
+.rs-font small { display: block; font-size: 12.5px; line-height: 1.35; color: var(--ink-faint); }
+.rs-ff-classic { font-family: var(--serif); }
+.rs-ff-readable { font-family: var(--serif-read); }
+.rs-ff-sans { font-family: var(--sans); }
+.rs-reset {
+  display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;
+  margin-top: 14px; padding: 10px 0 2px;
+  border: 0; border-top: 1px solid var(--line-soft); background: none;
+  font: inherit; font-size: 13.5px; color: var(--ink-soft); cursor: pointer;
+}
+.rs-reset:hover { color: var(--accent); }
+.rs-btn:focus-visible, .rs-opt:focus-visible, .rs-reset:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px;
+}
+
 /* ---------- a phone ---------- */
 
 @media (max-width: 900px) {
