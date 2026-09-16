@@ -86,7 +86,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Election appeal allowed, clause (4) of Article 329A struck down',
   tags: ['Article 329A', 'Basic structure', 'Free and fair elections'],
   judges: 'A.N. Ray CJI, H.R. Khanna, K.K. Mathew, M.H. Beg and Y.V. Chandrachud',
-  summary: 'The Court struck down clause (4) of Article 329A. The 39th Amendment had added it to declare the Prime Minister\'s election valid and to cancel the High Court\'s judgment. Free and fair elections are part of the basic structure. The election itself was upheld under the amended election laws, which the Court found valid.',
+  summary: 'The Court did two things. It struck down clause (4) of Article 329A, which the 39th Amendment had added to declare the Prime Minister\'s election valid and to cancel the High Court\'s judgment, because free and fair elections are part of the basic structure. It then decided the election appeal itself, and allowed it under the amended election laws, which it found valid.',
   question: [
     'Could Parliament, by amending the Constitution, declare a disputed election valid and cancel a court\'s judgment on it?',
     'Can ordinary laws be tested against the basic structure?',
@@ -100,12 +100,14 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'The 39th Amendment (10 August 1975) added Article 329A. Clause (4) said that the election laws would not apply to the Prime Minister\'s election, that the election would not be void, and that the High Court\'s judgment was itself void. Clause (5) required pending appeals to be decided in line with clause (4).'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous on the election appeal', points: [
-      'The amendments of 1974 and 1975 to the election law were valid, and applied to the pending case.',
-      'Under the amended law, the two corrupt practices found by the High Court could not stand. Indira Gandhi\'s appeal was allowed, and the High Court\'s judgment and the disqualification were set aside.',
+    { kind: 'unanimous', label: 'On the election appeal', points: [
+      'The Court allowed Indira Gandhi\'s appeal, after upholding the 1974 and 1975 amendments to the election law.',
+      'Those amendments were valid, and they applied to the pending case.',
+      'Under the amended law, the two corrupt practices found by the High Court could not stand. The High Court\'s judgment and the disqualification were set aside.',
       'Raj Narain\'s cross appeal was dismissed.'
     ] },
     { kind: 'majority', label: 'On clause (4) of Article 329A', points: [
+      'The Court examined the validity of clause (4) separately, and held that it could not stand. The judges differed in their reasons.',
       'Justice Khanna struck down clause (4). It violated the principle of free and fair elections, which is essential to democracy and part of the basic structure. It removed the forum for deciding the dispute, and put the election beyond any law.',
       'Justice Mathew held that validating an election without finding the facts or applying any law was an exercise of despotic power. It damaged the democratic structure of the Constitution.',
       'Justice Chandrachud held clauses (4) and (5) unconstitutional and void.',
