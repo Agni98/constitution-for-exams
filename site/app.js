@@ -1907,6 +1907,8 @@
     var j = r.j, c = r.c, st = STATUS[r.status] || STATUS.good;
     var sub = j ? [j.full && j.full !== r.name ? j.full : '', j.aka || ''].filter(Boolean).join(' \u00b7 ')
       : (c.full && c.full !== r.name ? c.full : '');
+    // What the case decided, in a line, before any of the reasoning.
+    var lede = j ? (j.summary || '') : firstSentence(c.held || '');
     return '<header class="art-head jhead"><' + h + (h === 'h2' ? ' id="sheetName"' : '') + '>' +
       esc(r.name) + '</' + h + '>' +
       (sub ? '<p class="j-sub">' + esc(sub) + '</p>' : '') +
@@ -1918,6 +1920,7 @@
       '</div>' +
       (j && (j.decided || j.citation) ? '<p class="j-meta">' +
         esc([j.decided ? 'Decided ' + j.decided : '', j.citation || ''].filter(Boolean).join(' \u00b7 ')) + '</p>' : '') +
+      (lede ? '<p class="j-lede">' + esc(lede) + '</p>' : '') +
       '</header>';
   }
 

@@ -154,6 +154,9 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'Lawyers filed writ petitions in several High Courts challenging these actions. The petitions were transferred to the Supreme Court and heard by seven judges.'
   ],
   held: [
+    { kind: 'majority', label: 'What the Court decided', points: [
+      'All the transferred cases and writ petitions were dismissed. The majority was not the same on every question, so each question is set out below.'
+    ] },
     { kind: 'majority', label: 'Majority on appointments (4 judges): Justices Bhagwati, Fazal Ali, Desai and Venkataramiah', points: [
       'Consultation under Articles 217 and 224 must be full and effective, but it does not mean concurrence.',
       'Where the constitutional functionaries differ, the opinion of none of them has primacy. The Central Government may decide after giving due weight to each opinion.',
@@ -165,9 +168,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     { kind: 'majority', label: 'Locus standi and disclosure', points: [
       'Practising advocates have a real interest in the independence of the judiciary, and could maintain the petitions. Justice Bhagwati held that any member of the public with sufficient interest may seek judicial redress for a public wrong, and other judges agreed.',
       'The Court rejected the government\'s claim of privilege over the correspondence on these appointments, and ordered it to be disclosed. Justice Fazal Ali disagreed on disclosure.'
-    ] },
-    { kind: 'majority', label: 'Order of the Court', points: [
-      'In view of the majority decisions, all the transferred cases and writ petitions were dismissed.'
     ] },
     { kind: 'dissent', label: 'Minority views', points: [
       'Justice Tulzapurkar held that the advice of the Chief Justice of India should have primacy. Justice Tulzapurkar would also have struck down the circular letter and quashed the decision to drop S.N. Kumar.',
@@ -312,12 +312,12 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   held: [
     { kind: 'unanimous', label: 'Unanimous, judgment by Justice P.B. Gajendragadkar', points: [
+      'The Act was valid. The appeal was dismissed with costs.',
       'Before independence, the Maharaja was an absolute monarch in the internal administration of the State. The Jammu and Kashmir Constitution Act of 1939 kept those powers intact.',
       'The lapse of British paramountcy in 1947 did not change this. Clause 6 of the Instrument of Accession expressly recognised that the Maharaja\'s sovereignty over the State continued.',
       'The Maharaja could delegate all powers to the Yuvaraj. The Yuvaraj then stood in the same position as the Maharaja.',
       'Neither the scheme of Article 370 nor its Explanation made the ruler a constitutional ruler. The temporary provisions of Article 370 assumed that the final relationship between India and the State would be decided by the State\'s Constituent Assembly. Until that Assembly decided, the Instrument of Accession held the field.',
-      'The Yuvaraj validly convened the Constituent Assembly by a proclamation of 20 April 1951. So the challenge to its decision not to pay compensation failed.',
-      'The Act was valid, and the appeal was dismissed with costs.'
+      'The Yuvaraj validly convened the Constituent Assembly by a proclamation of 20 April 1951. So the challenge to its decision not to pay compensation failed.'
     ] }
   ],
   principles: [
@@ -354,12 +354,12 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   held: [
     { kind: 'unanimous', label: 'Unanimous, judgment by Justice P.K. Balasubramanyan', points: [
+      'The 13 members were declared disqualified from 27 August 2003, and the appeals of the 37 members were dismissed.',
       'By asking the Governor to invite the leader of the opposing party to form the government, the 13 members voluntarily gave up membership of the BSP under paragraph 2 of the Tenth Schedule.',
       'To claim the protection of paragraph 3, it was not enough to show that one-third of the legislature party had separated. There also had to be proof of a split in the original political party.',
       'No split in the BSP on 26 August 2003 was proved, even prima facie. The 24 members who later joined the 13 could not establish a split either.',
       'The Speaker\'s decision under the Tenth Schedule is open to judicial review, as held in Kihoto Hollohan. The Speaker\'s order accepting the split, made without deciding the petition for disqualification, could not stand.',
-      'Normally the Court would send the matter back to the Speaker. But the term of the Assembly was coming to an end, and the members concerned were holding office, many as ministers. So the Court decided the question itself.',
-      'The 13 members were declared disqualified from 27 August 2003. The appeals of the 37 members were dismissed.'
+      'Normally the Court would send the matter back to the Speaker. But the term of the Assembly was coming to an end, and the members concerned were holding office, many as ministers. So the Court decided the question itself.'
     ] }
   ],
   principles: [
@@ -397,6 +397,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   held: [
     { kind: 'unanimous', label: 'Unanimous, judgment by Chief Justice D.Y. Chandrachud', points: [
+      'The Court held that the Governor was wrong to call for a floor test, but did not restore the Thackeray government, because Thackeray had resigned without facing the vote. The Shinde government stayed in office.',
       'The correctness of Nabam Rebia, on whether a Speaker facing a removal notice can decide disqualification petitions, was referred to a bench of seven judges.',
       'The Court does not ordinarily decide disqualification petitions itself, and there were no extraordinary circumstances here. The Speaker must decide them within a reasonable period.',
       'A member can take part in the proceedings of the House while disqualification petitions are pending. The validity of those proceedings does not depend on the outcome of the petitions.',

@@ -76,6 +76,12 @@
 .jhead h1 { font-size: clamp(28px, 3.4vw, 42px); margin-bottom: 4px; }
 .j-sub { margin: 0 0 14px; font-size: 17px; font-style: italic; color: var(--ink-soft); }
 .j-meta { margin: 12px 0 0; font-size: 13px; color: var(--ink-faint); }
+/* The outcome in a line, so it is read before the reasoning. */
+.j-lede {
+  margin: 16px 0 0; padding: 10px 0 10px 16px;
+  border-left: 3px solid var(--accent);
+  font-size: 16.6px; line-height: 1.6; color: var(--ink);
+}
 .pill.violet { background: color-mix(in srgb, #7c3aed 12%, var(--bg-raise)); color: #6d28d9; }
 [data-theme="dark"] .pill.violet { background: color-mix(in srgb, #7c3aed 24%, var(--bg-raise)); color: #c4b5fd; }
 
@@ -284,6 +290,7 @@ body.sheet-open { overflow: hidden; }
   line-height: 1.18; letter-spacing: -.015em;
 }
 .sheet.jdrawer .j-sub { font-size: 15.5px; }
+.sheet.jdrawer .j-lede { font-size: 15.4px; padding-left: 14px; }
 .sheet.jdrawer .jsecs { margin-top: 20px; gap: 14px; }
 .sheet.jdrawer .jsec { padding: 16px 20px 15px; }
 .sheet.jdrawer .jsec > h2 { font-size: 19px; }

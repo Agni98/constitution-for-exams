@@ -240,13 +240,13 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   held: [
     { kind: 'unanimous', label: 'Unanimous (5:0), judgment by Justice P.B. Gajendragadkar', points: [
+      'The Durgah Khawaja Saheb Act, 1955 was upheld. The appeal was allowed, and the Khadims\' writ petition was dismissed.',
       'The Court assumed, without deciding, that the Chishtia Sufis are a section of a religious denomination and that the Khadims represent it.',
       'Articles 26(c) and 26(d) "do not create rights in any denomination or its section which it never had". They only protect the rights it already had.',
       'For centuries the Durgah had been managed by mutawallis appointed by the rulers of the time, not by the Chishtia sect. So the Act took away no right protected by Article 26.',
       'Only practices that are essential and integral to a religion are protected. Practices that come from superstition may be "extraneous and unessential accretions" to religion, and a claim to protect them must be carefully examined.',
       'Offerings made generally for the Durgah had always belonged to the Durgah. The Act did not touch offerings made directly to the Khadims, so it did not violate their right to property.',
-      'The Act does not violate Article 25. It regulates only how the Khadims carry out their duties, and the Committee must act according to the tenets of the Chishti saint.',
-      'The appeal was allowed, and the Khadims\' writ petition was dismissed.'
+      'The Act does not violate Article 25. It regulates only how the Khadims carry out their duties, and the Committee must act according to the tenets of the Chishti saint.'
     ] }
   ],
   principles: [

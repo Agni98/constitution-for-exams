@@ -175,9 +175,9 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   held: [
     { kind: 'majority', label: 'Majority opinion by Chief Justice Ranjan Gogoi, for himself and Justices Ramana and Khanna', points: [
+      'The Tribunal Rules, 2017 are contrary to the parent laws and to constitutional principles. They were struck down in full.',
       'The Aadhaar judgment (2018) did not examine the effect of the word "only" in Article 110(1). So whether Part XIV was a Money Bill, and the Speaker\'s certificate, were referred to a larger bench.',
       'Section 184 does not suffer from excessive delegation. The binding judgments of the Court guide the power to make rules.',
-      'The Tribunal Rules, 2017 are contrary to the parent laws and to constitutional principles. They were struck down in full.',
       'The Government must frame new rules that follow the Court\'s earlier judgments on tribunals, with non-discriminatory and uniform conditions of service and assured tenure.',
       'The Ministry of Law and Justice must carry out a judicial impact assessment of the tribunals.'
     ] },
