@@ -2681,6 +2681,25 @@
     return NAV.filter(function (n) { return n.id === id; })[0] || null;
   }
 
+  /* The header's search is behind an icon. Opening it shows the box and puts
+     the caret in it. Escape, or a click outside it, closes it again. */
+  var SEARCH_HINT = '';
+  function fitSearchHint() {
+    var box = $('#search');
+    if (!box) return;
+    if (!SEARCH_HINT) SEARCH_HINT = box.getAttribute('placeholder');
+    var w = box.clientWidth;
+    box.setAttribute('placeholder', w >= 400 ? SEARCH_HINT
+      : w >= 250 ? 'Search \u2014 try 21, or \u201chabeas corpus\u201d' : 'Search');
+  }
+  function openSearch(on) {
+    var box = $('#search'), btn = $('#searchBtn');
+    document.body.classList.toggle('search-open', on);
+    if (btn) btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+    if (!box) return;
+    if (on) { fitSearchHint(); box.focus(); box.select(); } else box.blur();
+  }
+
   function buildTopnav() {
     $('#topnav').innerHTML = NAV.map(function (n) {
       return '<button class="tn" type="button" data-nav="' + n.id + '" aria-haspopup="true" ' +
@@ -3092,16 +3111,17 @@
       if (NAV_OPEN && e.target.closest && !e.target.closest('#navPanel, .tn')) closeNav();
     });
 
-    // The search box is narrower with the menus beside it. Its full hint is
-    // cut off mid-word below about 400px, so it says less rather than half.
-    var box = $('#search'), full = box.getAttribute('placeholder');
-    function fitHint() {
-      var w = box.clientWidth;
-      box.setAttribute('placeholder', w >= 400 ? full
-        : w >= 250 ? 'Search \u2014 try 21, or \u201chabeas corpus\u201d' : 'Search');
-    }
-    fitHint();
-    window.addEventListener('resize', function () { fitHint(); placeNav(); });
+    // The icon opens and closes the search box, and a click anywhere outside
+    // it closes it too. The hint inside it is cut off mid-word below about
+    // 400px, so there it says less rather than half.
+    $('#searchBtn').addEventListener('click', function () {
+      openSearch(!document.body.classList.contains('search-open'));
+    });
+    document.addEventListener('click', function (e) {
+      if (!document.body.classList.contains('search-open') || !e.target.closest) return;
+      if (!e.target.closest('.search-wrap, #searchBtn')) openSearch(false);
+    });
+    window.addEventListener('resize', function () { fitSearchHint(); placeNav(); });
   }
 
   /* ---------- router ---------- */
@@ -3185,13 +3205,13 @@
         if (hits.length) {
           var top = hits[0];
           go(top.jr ? '#/judgment/' + top.jr.id : top.sc ? '#/schedule/' + top.sc.id : '#/article/' + top.a.num);
-          box.blur();
+          openSearch(false);
         }
       }
-      if (e.key === 'Escape') { box.value = ''; box.blur(); }
+      if (e.key === 'Escape') { box.value = ''; openSearch(false); }
     });
     document.addEventListener('keydown', function (e) {
-      if (e.key === '/' && document.activeElement !== box) { e.preventDefault(); box.focus(); }
+      if (e.key === '/' && document.activeElement !== box) { e.preventDefault(); openSearch(true); }
     });
 
     // the case grid: open a card, filter, re-sort — all by delegation, so it

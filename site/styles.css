@@ -99,20 +99,26 @@ a:hover { text-decoration: underline; }
 }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-text strong { font-size: 14.5px; letter-spacing: -.01em; }
-.brand-text small { font-size: 11px; color: var(--ink-faint); }
+.brand-text small {
+  font-size: 9.6px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-faint);
+}
 
+/* The search sits behind the icon at the right of the header, so the menus
+   have the row to themselves. It opens over the bar, and closes on Escape or
+   on a click outside it. */
 .search-wrap {
-  /* min-width:0 lets this shrink past its min-content on a narrow phone.
-     Without it the flex item refuses to give way and pushes the theme
-     toggle off the right edge of the screen. */
-  flex: 1 1 auto; min-width: 0; max-width: 560px; margin-left: auto;
-  display: flex; align-items: center; gap: 8px;
+  position: absolute; top: 10px; right: 90px; z-index: 3;
+  width: min(460px, calc(100% - 136px));
+  display: none; align-items: center; gap: 8px;
   padding: 0 12px; height: 38px;
   background: var(--bg-sunk);
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--ink-faint);
+  box-shadow: var(--shadow);
 }
+body.search-open .search-wrap { display: flex; }
 .search-wrap:focus-within { border-color: var(--accent); color: var(--accent); }
 .search-wrap input {
   flex: 1; border: 0; outline: 0; background: transparent;
@@ -131,32 +137,29 @@ a:hover { text-decoration: underline; }
   font-size: 16px; cursor: pointer;
 }
 .icon-btn:hover { color: var(--accent); border-color: var(--accent); }
+/* The two at the right of the header are round, the menu button is not. */
+#searchBtn, #themeBtn { border-radius: 50%; }
 .menu-btn { display: grid; }
 
 /* ---------- the menu bar ---------- */
 
-/* Each menu sits in its own lightly shaded box, so the menus read as
-   buttons rather than as loose words in the header. */
-.topnav { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; margin-left: 8px; }
+/* The menus are words in the header, set to the right of the masthead, and
+   the menu that is open takes the accent colour rather than a box. */
+.topnav { display: flex; align-items: center; gap: 20px; flex: 0 0 auto; margin-left: auto; }
 .tn {
   position: relative;
   display: inline-flex; align-items: center; gap: 5px;
-  height: 34px; padding: 0 11px;
-  border: 1px solid var(--nav-line); border-radius: 8px; background: var(--nav-band);
-  font: inherit; font-size: 14.2px; font-weight: 600; color: var(--ink);
+  height: 34px; padding: 0 2px;
+  border: 0; border-radius: 8px; background: transparent;
+  font: inherit; font-size: 14.6px; font-weight: 600; color: var(--ink-soft);
   white-space: nowrap; cursor: pointer;
 }
-/* hover and open lift the box to the page colour */
-.tn:hover, .tn[aria-expanded="true"] {
-  background: var(--bg-raise); color: var(--ink);
-  box-shadow: 0 1px 3px rgba(31,26,18,.16);
-}
-.tn:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
-/* The section you are in. Underlined rather than filled, so it does not read
-   as a menu that is open. */
+.tn:hover, .tn[aria-expanded="true"] { color: var(--accent); }
+.tn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+/* The section you are in, marked by the rule under its name. */
 .tn.on { color: var(--accent); }
 .tn.on::after {
-  content: ""; position: absolute; left: 11px; right: 11px; bottom: 3px;
+  content: ""; position: absolute; left: 0; right: 0; bottom: 2px;
   height: 2px; border-radius: 2px; background: var(--accent);
 }
 .tn-c { width: 10px; height: 10px; flex: 0 0 auto; opacity: .6; transition: transform .15s ease; }
@@ -234,16 +237,17 @@ a:hover { text-decoration: underline; }
 
 @media (max-width: 1100px) { .np-cols { column-count: 2; } }
 
-/* Six menus and a search box worth typing into do not fit one row below this
-   width, so the menus take a row of their own. Everything that sits below the
-   header reads --topbar-h, so it all moves down with it. */
-@media (max-width: 1339px) {
+/* The masthead and six menus do not fit one row below this width, so the
+   menus take a row of their own. Everything that sits below the header reads
+   --topbar-h, so it all moves down with it. */
+@media (max-width: 1200px) {
   :root { --topbar-h: 102px; }
   .topbar {
-    display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto;
+    display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto auto;
     grid-template-rows: 58px 43px; gap: 0 12px;
   }
-  .search-wrap { justify-self: end; width: 100%; }
+  #searchBtn { justify-self: end; }
+  .search-wrap { left: 14px; right: 14px; width: auto; }
   .topnav {
     grid-column: 1 / -1; grid-row: 2;
     margin: 0 -14px; padding: 0 12px;
