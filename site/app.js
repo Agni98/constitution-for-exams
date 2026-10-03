@@ -2464,7 +2464,9 @@
      f: 'w'  which of two or three statements are correct
         'n'  how many of three or four statements are correct
         'p'  how many of three or four pairs are correctly matched
-        'si' Statement-I and Statement-II, with x: whether II explains I */
+        'si' Statement-I and Statement-II, with x: whether II explains I
+     a: a closing line of the question's own, for a list of items rather than
+        statements ("How many of the above are grounds in Article 19(2)?") */
   var MCQ_ASK = {
     w: 'Which of the statements given above is/are correct?',
     n: 'How many of the statements given above are correct?',
@@ -2575,7 +2577,8 @@
     }
     var why = m.s.map(function (x, k) {
       var ok = mcqTrue(m, x), reason = x[f === 'p' ? 3 : 2] || '';
-      var who = f === 'si' ? 'Statement-' + (k ? 'II' : 'I') : f === 'p' ? 'Pair ' + (k + 1) : 'Statement ' + (k + 1);
+      var who = f === 'si' ? 'Statement-' + (k ? 'II' : 'I') : f === 'p' ? 'Pair ' + (k + 1) :
+        (m.a ? 'Item ' : 'Statement ') + (k + 1);
       var mark = f === 'p' ? (ok ? ' is correctly matched.' : ' is not correctly matched.')
         : (ok ? ' is correct.' : ' is incorrect.');
       return '<li class="' + (ok ? 'ok' : 'no') + '"><b>' + who + mark + '</b> ' + esc(reason) + '</li>';
@@ -2588,7 +2591,7 @@
     var L = 'abcd';
     return '<article class="mq mq-f-' + f + '" data-ans="' + b.ans + '">' +
       '<p class="mq-q"><span class="mq-n">' + (i + 1) + '</span><span>' + esc(m.q) + '</span></p>' + body +
-      '<p class="mq-ask">' + esc(MCQ_ASK[f]) + '</p>' +
+      '<p class="mq-ask">' + esc(m.a || MCQ_ASK[f]) + '</p>' +
       '<div class="mq-opts" role="group" aria-label="Options">' + b.opts.map(function (o, k) {
         return '<button type="button" class="mq-o" data-o="' + k + '"><span class="mq-l">' + L.charAt(k) +
           '</span><span class="mq-t">' + esc(o) + '</span></button>';

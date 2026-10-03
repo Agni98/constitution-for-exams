@@ -284,12 +284,19 @@ and the answer from those marks, so an answer key can never disagree with its ex
 | `p` | How many pairs are correctly matched. Each row is `[left, right, 1 or 0, reason]` | Three or four |
 | `si` | Statement-I and Statement-II. `x: 1` when Statement-II explains Statement-I | Two |
 
-`note` is optional and prints under the explanation. The statements of `w`, `n` and `p`
+`note` is optional and prints under the explanation. `a` replaces the closing line for a list of
+items rather than statements, in the form the papers use: *Consider the following: … How many of
+the above are grounds in Article 19(2)?* The explanation then marks each item rather than each
+statement. The statements of `w`, `n` and `p`
 questions are shown in a fixed shuffled order, so the correct option does not sit in the same
 place every time. Statement-I and Statement-II keep their order.
 
-**House style.** Each statement is one fact that a reader who knows the article can mark true
-or false. A false statement is false for one plain reason, and the reason says what is
+**House style.** The stem names the subject in words, not only an article number: *Consider the
+following statements about a sitting of the Rajya Sabha at which a resolution to remove the
+Vice-President is under consideration*. Every statement stands on its own and names its own
+subject. A statement never leans on another with "such", "it" or "that power", because the
+statements are shown in a shuffled order. Each statement is one fact that a reader who knows the
+article can mark true or false. A false statement is false for one plain reason, and the reason says what is
 actually the case. No double negatives, and no statement that turns on a single tricky word.
 The number of questions on a key follows its tier in the exam notes: five for Core, three for
 Recurs, two for Worth holding and one for any other article in force.
