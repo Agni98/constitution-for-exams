@@ -89,6 +89,7 @@
   function caseCount() { return REG.length; }
 
   function go(hash) { location.hash = hash; }
+  function swap(hash) { location.replace(hash); }
 
   /* ---------- diagram rendering ---------- */
 
@@ -3340,6 +3341,26 @@
     }
   }
 
+  // The Android app asks the page first when Back is pressed. Whatever lies
+  // over the page closes, one layer at a time, and the answer says whether
+  // anything did. Only when nothing was open does Back go to the last page.
+  window.appBack = function () {
+    if ($('.sheet-wrap')) { closeSheet(); return true; }
+    if (readPanelClose()) return true;
+    if (NAV_OPEN) { closeNav(); return true; }
+    var body = document.body;
+    if (body.classList.contains('nav-open')) { body.classList.remove('nav-open'); return true; }
+    if (body.classList.contains('search-open')) { openSearch(false); return true; }
+    var tree = $('.ptree.show');
+    if (tree) {
+      tree.classList.remove('show');
+      var t = tree.querySelector('[data-ptoggle]');
+      if (t) t.setAttribute('aria-expanded', 'false');
+      return true;
+    }
+    return false;
+  };
+
   // Under the button that opened it, and never off the edge of the screen. On
   // a phone the stylesheet pins it to both edges and this stands aside.
   function placeNav() {
@@ -3484,8 +3505,11 @@
       clearTimeout(timer);
       timer = setTimeout(function () {
         var q = box.value.trim();
-        if (q.length >= 2) go('#/search/' + encodeURIComponent(q));
-        else if (location.hash.indexOf('#/search') === 0) go('#/');
+        // The results page takes one place in the history, however many
+        // letters are typed, so Back returns to the page the search began on.
+        var onSearch = location.hash.indexOf('#/search') === 0;
+        if (q.length >= 2) (onSearch ? swap : go)('#/search/' + encodeURIComponent(q));
+        else if (onSearch) swap('#/');
       }, 180);
     });
     box.addEventListener('keydown', function (e) {
