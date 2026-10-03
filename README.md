@@ -35,7 +35,7 @@ of showing you nothing.
 | **Menu bar** | Six menus across the top of every page: All Articles, Important Articles, Mind Maps, Judgments, Amendments, Schedules. Each opens with what it has for the page you are on first — reading Article 324, Mind Maps offers Part XV's map, Judgments lists the four cases filed under 324, Amendments names the two that changed it. Maps, judgments, amendments and exam notes open over the page, so a look-up does not cost you your place. Below 1200px the menus take a second row of the header. The search sits behind the icon at the right of the header, and opens on a click or the / key |
 | **Preamble** | Bare text, the 42nd Amendment footnotes, and a mind map of what it is doing |
 | **All Parts** | 26 Parts, I to XXII including IVA, IXA, IXB and XIVA — and VII, repealed whole |
-| **Article page** | A breadcrumb (Home, Part, Chapter, group), previous and next, the heading and its pills. Under them, up to six tabs sort the readings into kinds: **Bare Text** (the text as printed, the articles and Schedules it refers to, the amendments that changed it, and its footnotes, with reading settings for the text's size and style, kept in the browser. The Readable style adds space between the lines and shortens the line), **Explainer** (what it says, the catch, worth knowing), **Flow Charts** and **Mind Maps** (every drawing for the article, its section or its Part, sorted by type), **Judgments** and **For Exams**. A tab with nothing in it is left out, so the bar shows only the readings that exist. The choice is remembered from one article to the next, and the address names it, so `#/article/21/judgments` opens on the judgments. The Preamble and every Schedule use the same tabs |
+| **Article page** | A breadcrumb (Home, Part, Chapter, group), previous and next, the heading and its pills. Under them, up to seven tabs sort the readings into kinds: **Bare Text** (the text as printed, the articles and Schedules it refers to, the amendments that changed it, and its footnotes, with reading settings for the text's size and style, kept in the browser. The Readable style adds space between the lines and shortens the line), **Explainer** (what it says, the catch, worth knowing), **Flow Charts** and **Mind Maps** (every drawing for the article, its section or its Part, sorted by type), **Judgments**, **For Exams** and **MCQs**. A tab with nothing in it is left out, so the bar shows only the readings that exist. On a narrow column the bar scrolls sideways, keeps the open tab in sight, and fades the side that has more tabs. The choice is remembered from one article to the next, and the address names it, so `#/article/21/judgments` opens on the judgments. The Preamble and every Schedule use the same tabs |
 | **Part page** | The whole Part, on one page, in the order the Constitution prints it. The left panel is the Part tree: its Chapters, and the group headings inside them. Clicking a section scrolls to it, and scrolling marks where you are. `#/part/V/13` opens at the Union Judiciary |
 | **The Part tree** | The left panel on a Part page and on every article in it: Part, then Chapter, then group heading, then article. The Chapter you are in is open, the others are folded, and the article you are reading is marked. On a phone it folds into a Contents button. Previous and next run through the **whole document**, not one Part. The only two ends are the Preamble, before article 1, and the Schedules, after article 395 |
 | **Cross-references** | Every article and amendment named on a page opens **in place**. Reading article 368 and hit the 24th Amendment? Click it and what it did, when it commenced and which articles it touched unfold under the line, without losing your place |
@@ -43,6 +43,7 @@ of showing you nothing.
 | **Amendments** | All 106, each with what it did and which articles it touched |
 | **Landmark judgments** | 125 judgments, each on its own page at `#/judgment/<id>`, with previous and next. A judgment rewritten in full reads as: what it decided in one line, the constitutional question, the facts, what the Court held (the majority, any concurring opinion and any dissent, each in its own box), the key principles and what happened next, with the bench, the date, the citation and a link to the full text. The index is a filterable card grid, and every article's Judgments tab lists the cards filed under it. A card there opens its judgment in a drawer on the right of the page, with Back, previous and next, so the reader never leaves the article. A click with a modifier key still opens the full page |
 | **What the examiners ask** | 150 articles, the Preamble and eight Schedules ranked by exam weight, filterable by keyword and by tier; click a row to read the whole note in a panel without leaving the list. Each sighting can carry a citation — paper, question number, link — and every heading prints how many of its sightings actually do |
+| **Practice MCQs** | 870 statement-based questions in the Civil Services prelims format, on every article in force, the Preamble and all twelve Schedules. Core provisions carry five, Recurs three, Worth holding two and every other article one. Each article's MCQs tab holds its own set. `#/mcq/1`, `#/mcq/2`, `#/mcq/3` and `#/mcq/0` hold every question of one tier on a single page, in the order of the Constitution, under a progress bar that stays in view. Clicking an option locks the question and shows the answer, with every statement marked correct or incorrect and the reason. **Start again** clears a set. The Important Articles menu links to all of them |
 | **Mind maps & flows** | 46 hand-drawn diagrams. A short Part gets one map for the whole of it — Part III's six categories of rights fit on a page. A long one gets a map per section instead, drawn where that section is read, and carried into every article of that section. Every Part also gets one generated from the data |
 | **About & sources** | What the site is and is not, where the text came from, what has been verified, the licence, and how to report an error |
 
@@ -257,6 +258,42 @@ Services Prelims (1995–2025) and Mains General Studies Paper II (2013–2024),
 own questions by article, so the mapping from a question to an article is editorial — a `seen`
 line records that the year's paper carried a question on that subject, not a numbered question.
 
+## Editing the MCQs
+
+`site/data/mcq-1.js` … `mcq-15.js`, split by Part and keyed the same way as the exam notes: by
+article number, or `preamble`, or `schX`. A key holds an array of questions. A question stores
+only its statements, each marked true or false with the reason. `app.js` builds the options
+and the answer from those marks, so an answer key can never disagree with its explanation.
+
+```js
+"356": [
+  { f: 'w', q: 'Consider the following statements about Article 356:', s: [
+    ['President\'s Rule can be imposed only on a report from the Governor.', 0,
+     'Article 356(1) also allows it "or otherwise", without a report.'],
+    ['A proclamation must be approved by both Houses within two months.', 1,
+     'That is Article 356(3).']
+  ] },
+  { f: 'si', x: 0, q: 'Consider the following statements:', s: [ [...], [...] ] },
+],
+```
+
+| `f` | Form | Statements |
+|---|---|---|
+| `w` | Which of the statements are correct | Two or three |
+| `n` | How many of the statements are correct | Three or four |
+| `p` | How many pairs are correctly matched. Each row is `[left, right, 1 or 0, reason]` | Three or four |
+| `si` | Statement-I and Statement-II. `x: 1` when Statement-II explains Statement-I | Two |
+
+`note` is optional and prints under the explanation. The statements of `w`, `n` and `p`
+questions are shown in a fixed shuffled order, so the correct option does not sit in the same
+place every time. Statement-I and Statement-II keep their order.
+
+**House style.** Each statement is one fact that a reader who knows the article can mark true
+or false. A false statement is false for one plain reason, and the reason says what is
+actually the case. No double negatives, and no statement that turns on a single tricky word.
+The number of questions on a key follows its tier in the exam notes: five for Core, three for
+Recurs, two for Worth holding and one for any other article in force.
+
 ## Editing the diagrams
 
 `site/data/maps.js`, keyed by article number (`"368"`), Part (`partIII`), Schedule (`schX`)
@@ -310,6 +347,6 @@ constitution/
   source/     the downloaded PDFs and the extracted plain text
   build/      the parsers, the intermediate JSON, and verify.py
   site/       the website — open index.html
-    data/     generated data + hand-written explanations, judgments, diagrams and exam
-              notes; papers.js is the registry a citation points into
+    data/     generated data + hand-written explanations, judgments, diagrams, exam
+              notes and MCQs; papers.js is the registry a citation points into
 ```

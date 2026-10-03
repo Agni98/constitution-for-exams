@@ -171,6 +171,15 @@
   box-shadow: var(--shadow);
 }
 .atabs::-webkit-scrollbar { display: none; }
+/* Fades over the edge that still has tabs past it. They stick to the sides
+   of the row while it scrolls, and take no room of their own. */
+.atabs::before, .atabs::after {
+  content: ""; position: sticky; z-index: 1; flex: 0 0 40px;
+  pointer-events: none; opacity: 0; transition: opacity .15s;
+}
+.atabs::before { left: 0; margin-right: -40px; background: linear-gradient(to right, var(--bg-raise) 25%, transparent); }
+.atabs::after { right: 0; margin-left: -40px; background: linear-gradient(to left, var(--bg-raise) 25%, transparent); }
+.atabs.more-l::before, .atabs.more-r::after { opacity: 1; }
 .atab {
   position: relative; flex: 0 0 auto;
   display: inline-flex; align-items: center; gap: 7px;

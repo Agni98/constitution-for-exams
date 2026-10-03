@@ -1,0 +1,147 @@
+/* ============================================================
+   Practice questions: a set of MCQ cards, on the MCQs tab of an
+   article, the Preamble or a Schedule, and on the practice page.
+   ============================================================ */
+
+.mq-set { display: grid; gap: 16px; }
+.mq-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  min-height: 34px; font-size: 13.6px; color: var(--ink-soft);
+}
+.mq-prog b { color: var(--ink); font-weight: 700; }
+.mq-reset {
+  height: 32px; padding: 0 12px;
+  border: 1px solid var(--line); border-radius: 9px; background: var(--bg-raise);
+  font: inherit; font-size: 13px; font-weight: 600; color: var(--ink-soft); cursor: pointer;
+}
+.mq-reset:hover { border-color: var(--accent); color: var(--accent); }
+.mq-reset:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- one question ---------- */
+
+.mq {
+  padding: 20px 22px 18px;
+  background: var(--bg-raise);
+  border: 1px solid var(--line); border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.mq-q {
+  display: flex; align-items: flex-start; gap: 12px;
+  margin: 0 0 10px;
+  font-size: 16px; font-weight: 600; line-height: 1.55; color: var(--ink);
+}
+.mq-n {
+  flex: none; min-width: 28px; height: 28px; padding: 0 6px;
+  display: grid; place-items: center;
+  border-radius: 8px; background: var(--accent-soft); color: var(--accent);
+  font-size: 13px; font-weight: 700; line-height: 1;
+}
+.mq-s { margin: 0 0 8px 40px; padding: 0 0 0 22px; }
+.mq-s li { margin: 0 0 7px; padding-left: 2px; font-size: 15.4px; line-height: 1.6; }
+.mq-s li::marker { font-weight: 700; color: var(--ink-soft); }
+.mq-si { display: grid; gap: 8px; margin: 0 0 8px 40px; }
+.mq-si p { margin: 0; font-size: 15.4px; line-height: 1.6; }
+.mq-si b { white-space: nowrap; }
+.mq-tw { margin: 0 0 8px 40px; overflow-x: auto; }
+.mq-pairs { min-width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+.mq-pairs th, .mq-pairs td {
+  padding: 7px 12px 7px 0; text-align: left; vertical-align: top;
+  border-bottom: 1px solid var(--line-soft);
+}
+.mq-pairs th {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+.mq-pairs .mq-pn { width: 1%; padding-right: 10px; white-space: nowrap; font-weight: 700; color: var(--ink-soft); }
+.mq-ask { margin: 6px 0 12px 40px; font-size: 15px; font-weight: 600; color: var(--ink-soft); }
+
+.mq-opts {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;
+  margin-left: 40px;
+}
+.mq-f-si .mq-opts { grid-template-columns: minmax(0, 1fr); }
+.mq-o {
+  display: flex; align-items: center; gap: 10px;
+  min-height: 44px; padding: 8px 12px;
+  font: inherit; font-size: 14.8px; line-height: 1.42; text-align: left; color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+  cursor: pointer;
+  transition: border-color .12s ease, background-color .12s ease;
+}
+.mq-o:hover:not([disabled]) { border-color: var(--accent); background: var(--accent-soft); }
+.mq-o:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.mq-l {
+  flex: none; width: 26px; height: 26px;
+  display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 50%; background: var(--bg-raise);
+  font-size: 12.5px; font-weight: 700; color: var(--ink-soft);
+}
+.mq-o[disabled] { cursor: default; color: var(--ink); opacity: .58; }
+.mq-o.right, .mq-o.wrong { opacity: 1; }
+.mq-o.right { border-color: var(--green); background: var(--green-soft); }
+.mq-o.right .mq-l { border-color: var(--green); background: var(--green); color: #fff; }
+.mq-o.wrong { border-color: #dc2626; background: color-mix(in srgb, #dc2626 9%, var(--bg-raise)); }
+.mq-o.wrong .mq-l { border-color: #dc2626; background: #dc2626; color: #fff; }
+
+/* ---------- the answer, once an option is chosen ---------- */
+
+.mq-why {
+  margin: 14px 0 0 40px; padding: 14px 16px 13px;
+  background: var(--bg-sunk);
+  border-left: 3px solid var(--green); border-radius: 0 12px 12px 0;
+  animation: mq-in .18s ease;
+}
+.mq.missed .mq-why { border-left-color: #dc2626; }
+@keyframes mq-in { from { opacity: 0; transform: translateY(-3px); } }
+.mq-verdict { margin: 0 0 9px; font-size: 15px; font-weight: 700; }
+.mq.got .mq-verdict { color: var(--green); }
+.mq.missed .mq-verdict { color: #b91c1c; }
+[data-theme="dark"] .mq.missed .mq-verdict { color: #fca5a5; }
+.mq-ex { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.mq-ex li { position: relative; padding-left: 24px; font-size: 14.8px; line-height: 1.6; }
+.mq-ex li::before { position: absolute; left: 2px; top: 0; font-weight: 700; }
+.mq-ex li.ok::before { content: "\2713"; color: var(--green); }
+.mq-ex li.no::before { content: "\2717"; color: #dc2626; }
+.mq-ex b { font-weight: 650; }
+.mq-note {
+  margin: 10px 0 0; padding-top: 9px; border-top: 1px solid var(--line-soft);
+  font-size: 14.4px; line-height: 1.6; color: var(--ink-soft);
+}
+
+/* ---------- the practice page ---------- */
+
+.mq-tiers { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 18px; }
+.mq-tiers a {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--bg-raise);
+  font-size: 14px; font-weight: 600; color: var(--ink-soft);
+}
+.mq-tiers a span { font-size: 12px; font-weight: 600; color: var(--ink-faint); }
+.mq-tiers a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.mq-tiers a.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.mq-tiers a.on span { color: var(--accent); }
+.mq-page .mq-bar {
+  position: sticky; top: calc(var(--topbar-h) + 8px); z-index: 5;
+  padding: 8px 10px 8px 16px;
+  background: var(--bg-raise); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.mq-group { display: grid; gap: 14px; }
+.mq-group h2 {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px;
+  margin: 22px 0 0; font-size: 21px;
+}
+.mq-group h2 span { font-family: var(--sans); font-size: 14px; font-weight: 500; color: var(--ink-faint); }
+.page-head .mq-cta { margin: 14px 0 0; }
+
+@media (max-width: 620px) {
+  .mq { padding: 16px 14px 14px; }
+  .mq-q { gap: 10px; font-size: 15.4px; }
+  .mq-s, .mq-si, .mq-tw, .mq-ask, .mq-opts, .mq-why { margin-left: 0; }
+  .mq-opts { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mq-why { animation: none; }
+  .mq-o { transition: none; }
+}

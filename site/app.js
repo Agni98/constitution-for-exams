@@ -15,6 +15,7 @@
   var PAPERS_URL = window.COI_PAPERS_INDEX || 'https://upsc.gov.in/';
   var CASES     = window.COI_CASES || {};
   var EXAM      = window.COI_EXAM || {};
+  var MCQ       = window.COI_MCQ || {};
 
   var ARTS = COI.articles || [];
   var BY_NUM = {};
@@ -993,7 +994,8 @@
       maps: { html: diagramPane(d.mind), n: d.mind.length },
       judgments: { html: cases.length ? judgPane(cases, 'Judgments on the Preamble', 'the Preamble') : '',
                    n: cases.length },
-      exams: { html: EXAM.preamble ? examBlock(EXAM.preamble) : '' }
+      exams: { html: EXAM.preamble ? examBlock(EXAM.preamble) : '' },
+      mcq: { html: mcqPane('preamble'), n: (MCQ.preamble || []).length }
     });
     return s;
   }
@@ -1367,7 +1369,8 @@
       maps: { html: diagramPane(d.mind), n: d.mind.length },
       judgments: { html: cases.length ? judgPane(cases, 'Judgments filed under Article ' + a.num, 'Article ' + a.num) : '',
                    n: cases.length },
-      exams: { html: exam ? examBlock(exam) : '' }
+      exams: { html: exam ? examBlock(exam) : '' },
+      mcq: { html: mcqPane(mcqKeyOf(a)), n: (MCQ[mcqKeyOf(a)] || []).length }
     });
 
     s += pagerFoot(a, nb);
@@ -1405,7 +1408,8 @@
     { id: 'flow', label: 'Flow Charts' },
     { id: 'maps', label: 'Mind Maps' },
     { id: 'judgments', label: 'Judgments' },
-    { id: 'exams', label: 'For Exams' }
+    { id: 'exams', label: 'For Exams' },
+    { id: 'mcq', label: 'MCQs' }
   ];
 
   function tabbed(base, want, panes) {
@@ -1458,7 +1462,27 @@
       window.scrollTo(0, Math.max(0, panes.getBoundingClientRect().top + window.scrollY -
         stick - bar.offsetHeight - 14));
     }
+    tabsReveal(bar);
     if (focus) btn.focus();
+  }
+
+  // On a narrow column the tab row scrolls sideways, and the last tabs sit
+  // past its right edge. Keep the open tab in sight, and fade the side that
+  // still has tabs beyond it.
+  function tabsEdges(bar) {
+    var max = bar.scrollWidth - bar.clientWidth;
+    bar.classList.toggle('more-l', bar.scrollLeft > 2);
+    bar.classList.toggle('more-r', bar.scrollLeft < max - 2);
+  }
+  function tabsReveal(bar) {
+    if (!bar) return;
+    var btn = bar.querySelector('.atab.on');
+    if (btn && bar.scrollWidth > bar.clientWidth) {
+      var l = btn.offsetLeft, r = l + btn.offsetWidth, pad = 36;
+      if (l < bar.scrollLeft + pad) bar.scrollLeft = l - pad;
+      else if (r > bar.scrollLeft + bar.clientWidth - pad) bar.scrollLeft = r - bar.clientWidth + pad;
+    }
+    tabsEdges(bar);
   }
 
   /* ---------- reading settings for the bare text ----------
@@ -2217,7 +2241,8 @@
       '<p class="lede">' + arts + ' articles, the Preamble and eight Schedules, ranked by how ' +
       'often they actually turn up. Each one carries the concepts the question is really testing, ' +
       'the years it has been seen, and the place candidates lose the mark. The same block sits ' +
-      'under the bare text on every article page, below the landmark judgments.</p></div>';
+      'under the bare text on every article page, below the landmark judgments.</p>' +
+      '<p class="mq-cta"><a class="chip" href="#/mcq/1">Practise the MCQs, tier by tier &rarr;</a></p></div>';
 
     s += '<div class="ex-tools">' +
       '<input id="examFilter" type="search" placeholder="Filter — try &ldquo;emergency&rdquo;, ' +
@@ -2349,7 +2374,8 @@
       maps: { html: diagramPane(d.mind), n: d.mind.length },
       judgments: { html: cases.length ? judgPane(cases, 'Judgments on the ' + sc.name, 'the ' + sc.name) : '',
                    n: cases.length },
-      exams: { html: exam ? examBlock(exam) : '' }
+      exams: { html: exam ? examBlock(exam) : '' },
+      mcq: { html: mcqPane('sch' + id), n: (MCQ['sch' + id] || []).length }
     });
     return s;
   }
@@ -2426,6 +2452,253 @@
     s += '<div class="case-count" id="caseCount"></div>';
     s += '<div class="jgrid" id="caseGrid">' + REG.map(judgCard).join('') + '</div>';
     return s;
+  }
+
+  /* ---------- practice questions ----------
+
+     Each question is written as statements, each marked true or false with
+     the reason for it. The four options and the answer are worked out from
+     those marks here, in the forms the Civil Services prelims uses, so an
+     answer can never disagree with its own explanation.
+
+     f: 'w'  which of two or three statements are correct
+        'n'  how many of three or four statements are correct
+        'p'  how many of three or four pairs are correctly matched
+        'si' Statement-I and Statement-II, with x: whether II explains I */
+  var MCQ_ASK = {
+    w: 'Which of the statements given above is/are correct?',
+    n: 'How many of the statements given above are correct?',
+    p: 'How many of the pairs given above are correctly matched?',
+    si: 'Which one of the following is correct in respect of the above statements?'
+  };
+  var MCQ_SI = [
+    'Both Statement-I and Statement-II are correct, and Statement-II explains Statement-I',
+    'Both Statement-I and Statement-II are correct, but Statement-II does not explain Statement-I',
+    'Statement-I is correct, but Statement-II is incorrect',
+    'Statement-I is incorrect, but Statement-II is correct'
+  ];
+  var MCQ_COMBOS = ['1', '2', '3', '1,2', '2,3', '1,3', '1,2,3'];
+  var MCQ_TIER = { 1: 'Core', 2: 'Recurs', 3: 'Worth holding', 0: 'Other articles' };
+
+  function mcqTrue(m, x) { return !!x[m.f === 'p' ? 2 : 1]; }
+  function comboText(c) {
+    var n = c.split(',');
+    return n.length === 1 ? n[0] + ' only' : n.length === 3 ? '1, 2 and 3' : n[0] + ' and ' + n[1] + ' only';
+  }
+  function strHash(t) {
+    var h = 5381;
+    for (var i = 0; i < t.length; i++) h = ((h << 5) + h + t.charCodeAt(i)) | 0;
+    return Math.abs(h);
+  }
+
+  // The options and the index of the right one, or null when the marks
+  // cannot be put in the question's form.
+  function mcqBuild(m) {
+    var t = (m.s || []).map(function (x) { return mcqTrue(m, x); });
+    var k = t.length, c = t.filter(Boolean).length;
+    if (m.f === 'w' && k === 2) {
+      return { opts: ['1 only', '2 only', 'Both 1 and 2', 'Neither 1 nor 2'],
+        ans: t[0] && t[1] ? 2 : t[0] ? 0 : t[1] ? 1 : 3 };
+    }
+    if (m.f === 'w' && k === 3) {
+      if (!c) return null;
+      var right = [];
+      t.forEach(function (v, i) { if (v) right.push(i + 1); });
+      right = right.join(',');
+      // The right answer and "1, 2 and 3" are always offered. The rest are
+      // drawn from the other combinations, the same way every time.
+      var pool = MCQ_COMBOS.filter(function (x) { return x !== right && x !== '1,2,3'; });
+      var seed = strHash(m.q + m.s.map(function (x) { return x[0]; }).join('|'));
+      var set = [right];
+      if (right !== '1,2,3') set.push('1,2,3');
+      while (set.length < 4) {
+        set.push(pool.splice(seed % pool.length, 1)[0]);
+        seed = Math.floor(seed / 7) + 11;
+      }
+      set.sort(function (p, q) { return MCQ_COMBOS.indexOf(p) - MCQ_COMBOS.indexOf(q); });
+      return { opts: set.map(comboText), ans: set.indexOf(right) };
+    }
+    if ((m.f === 'n' || m.f === 'p') && (k === 3 || k === 4)) {
+      var pr = m.f === 'p';
+      if (k === 3) {
+        return { opts: pr ? ['Only one pair', 'Only two pairs', 'All three pairs', 'None of the pairs']
+          : ['Only one', 'Only two', 'All three', 'None'], ans: c ? c - 1 : 3 };
+      }
+      if (!c) return null;
+      return { opts: pr ? ['Only one pair', 'Only two pairs', 'Only three pairs', 'All four pairs']
+        : ['Only one', 'Only two', 'Only three', 'All four'], ans: c - 1 };
+    }
+    if (m.f === 'si' && k === 2) {
+      if (!t[0] && !t[1]) return null;
+      if (t[0] && t[1] && m.x == null) return null;
+      return { opts: MCQ_SI, ans: t[0] && t[1] ? (m.x ? 0 : 1) : t[0] ? 2 : 3 };
+    }
+    return null;
+  }
+
+  // Statements are shown in a shuffled order, fixed for each question, so the
+  // right option does not sit in the same place question after question.
+  // Statement-I and Statement-II keep their order, since II may explain I.
+  function mcqOrdered(m) {
+    if (m.f === 'si' || !m.s || m.s.length < 2) return m;
+    var seed = strHash(m.q + '#' + m.s.map(function (x) { return x[0]; }).join('|'));
+    var s = m.s.slice();
+    for (var i = s.length - 1; i > 0; i--) {
+      seed = (Math.imul(seed, 1103515245) + 12345) & 0x7fffffff;
+      var j = seed % (i + 1), t = s[i];
+      s[i] = s[j];
+      s[j] = t;
+    }
+    var o = {};
+    for (var k in m) o[k] = m[k];
+    o.s = s;
+    return o;
+  }
+
+  function mcqCard(m, i) {
+    m = mcqOrdered(m);
+    var b = mcqBuild(m);
+    if (!b) return '';
+    var f = m.f, body;
+    if (f === 'p') {
+      body = '<div class="mq-tw"><table class="mq-pairs">' +
+        (m.h ? '<thead><tr><th></th><th>' + esc(m.h[0]) + '</th><th>' + esc(m.h[1]) + '</th></tr></thead>' : '') +
+        '<tbody>' + m.s.map(function (x, k) {
+          return '<tr><td class="mq-pn">' + (k + 1) + '.</td><td>' + esc(x[0]) + '</td><td>' + esc(x[1]) + '</td></tr>';
+        }).join('') + '</tbody></table></div>';
+    } else if (f === 'si') {
+      body = '<div class="mq-si">' + m.s.map(function (x, k) {
+        return '<p><b>Statement-' + (k ? 'II' : 'I') + ':</b> ' + esc(x[0]) + '</p>';
+      }).join('') + '</div>';
+    } else {
+      body = '<ol class="mq-s">' + m.s.map(function (x) { return '<li>' + esc(x[0]) + '</li>'; }).join('') + '</ol>';
+    }
+    var why = m.s.map(function (x, k) {
+      var ok = mcqTrue(m, x), reason = x[f === 'p' ? 3 : 2] || '';
+      var who = f === 'si' ? 'Statement-' + (k ? 'II' : 'I') : f === 'p' ? 'Pair ' + (k + 1) : 'Statement ' + (k + 1);
+      var mark = f === 'p' ? (ok ? ' is correctly matched.' : ' is not correctly matched.')
+        : (ok ? ' is correct.' : ' is incorrect.');
+      return '<li class="' + (ok ? 'ok' : 'no') + '"><b>' + who + mark + '</b> ' + esc(reason) + '</li>';
+    }).join('');
+    if (f === 'si' && mcqTrue(m, m.s[0]) && mcqTrue(m, m.s[1])) {
+      why += '<li class="' + (m.x ? 'ok' : 'no') + '"><b>' +
+        (m.x ? 'Statement-II explains Statement-I.' : 'Statement-II does not explain Statement-I.') + '</b>' +
+        (m.xw ? ' ' + esc(m.xw) : '') + '</li>';
+    }
+    var L = 'abcd';
+    return '<article class="mq mq-f-' + f + '" data-ans="' + b.ans + '">' +
+      '<p class="mq-q"><span class="mq-n">' + (i + 1) + '</span><span>' + esc(m.q) + '</span></p>' + body +
+      '<p class="mq-ask">' + esc(MCQ_ASK[f]) + '</p>' +
+      '<div class="mq-opts" role="group" aria-label="Options">' + b.opts.map(function (o, k) {
+        return '<button type="button" class="mq-o" data-o="' + k + '"><span class="mq-l">' + L.charAt(k) +
+          '</span><span class="mq-t">' + esc(o) + '</span></button>';
+      }).join('') + '</div>' +
+      '<div class="mq-why" hidden><p class="mq-verdict">Answer: (' + L.charAt(b.ans) + ') ' + esc(b.opts[b.ans]) +
+      '</p><ul class="mq-ex">' + why + '</ul>' +
+      (m.note ? '<p class="mq-note">' + esc(m.note) + '</p>' : '') + '</div></article>';
+  }
+
+  function mcqProgText(done, got, total) {
+    return done ? '<b>' + done + '</b> of ' + total + ' answered &middot; <b>' + got + '</b> correct'
+      : total + (total === 1 ? ' question' : ' questions');
+  }
+  function mcqSet(inner, total, cls) {
+    return '<section class="mq-set' + (cls ? ' ' + cls : '') + '">' +
+      '<div class="mq-bar"><span class="mq-prog" aria-live="polite">' + mcqProgText(0, 0, total) + '</span>' +
+      '<button type="button" class="mq-reset" hidden>Start again</button></div>' + inner + '</section>';
+  }
+  function mcqKeyOf(a) {
+    if (MCQ[a.num]) return a.num;
+    return a.alias && MCQ[a.alias] ? a.alias : '';
+  }
+  function mcqPane(key) {
+    var list = (key && MCQ[key]) || [];
+    return list.length ? mcqSet(list.map(mcqCard).join(''), list.length) : '';
+  }
+
+  function mcqAnswer(btn) {
+    var card = btn.closest('.mq');
+    if (!card || card.classList.contains('done')) return;
+    var pick = +btn.getAttribute('data-o'), ans = +card.getAttribute('data-ans');
+    card.classList.add('done', pick === ans ? 'got' : 'missed');
+    card.querySelectorAll('.mq-o').forEach(function (o, k) {
+      o.disabled = true;
+      if (k === ans) o.classList.add('right');
+      else if (k === pick) o.classList.add('wrong');
+    });
+    card.querySelector('.mq-why').hidden = false;
+    mcqProgress(card.closest('.mq-set'));
+  }
+  function mcqReset(set) {
+    set.querySelectorAll('.mq').forEach(function (card) {
+      card.classList.remove('done', 'got', 'missed');
+      card.querySelectorAll('.mq-o').forEach(function (o) {
+        o.disabled = false;
+        o.classList.remove('right', 'wrong');
+      });
+      card.querySelector('.mq-why').hidden = true;
+    });
+    mcqProgress(set);
+    var first = set.querySelector('.mq-o');
+    if (first) first.focus({ preventScroll: true });
+  }
+  function mcqProgress(set) {
+    if (!set) return;
+    var total = set.querySelectorAll('.mq').length;
+    var done = set.querySelectorAll('.mq.done').length, got = set.querySelectorAll('.mq.got').length;
+    set.querySelector('.mq-prog').innerHTML = mcqProgText(done, got, total);
+    set.querySelector('.mq-reset').hidden = !done;
+  }
+
+  // Every provision that has questions, in the order the Constitution prints
+  // it, with its tier on the priority list. Built once: the questions do not
+  // change.
+  var MCQ_GROUPS = null;
+  function mcqGroups() {
+    if (MCQ_GROUPS) return MCQ_GROUPS;
+    MCQ_GROUPS = Object.keys(MCQ).map(function (k) {
+      var g = { key: k, list: MCQ[k], tier: EXAM_BY_KEY[k] ? EXAM_BY_KEY[k].tier : 0 };
+      if (k === 'preamble') {
+        g.label = 'The Preamble'; g.sub = ''; g.href = '#/preamble'; g.at = -1;
+      } else if (k.indexOf('sch') === 0) {
+        var sc = scheduleById(k.slice(3));
+        g.label = sc ? sc.name : k; g.sub = sc ? sc.title : '';
+        g.href = '#/schedule/' + k.slice(3); g.at = 1e6 + SCHEDULES.indexOf(sc);
+      } else {
+        var a = BY_NUM[k] || ARTS.filter(function (x) { return x.alias === k; })[0];
+        g.label = 'Article ' + (a ? a.num : k); g.sub = a ? a.heading : '';
+        g.href = '#/article/' + (a ? a.num : k); g.at = a ? ARTS.indexOf(a) : 1e5;
+      }
+      return g;
+    }).sort(function (p, q) { return p.at - q.at; });
+    return MCQ_GROUPS;
+  }
+  function mcqCount(tier) {
+    return mcqGroups().reduce(function (n, g) {
+      return n + (tier == null || g.tier === tier ? g.list.length : 0);
+    }, 0);
+  }
+
+  // #/mcq opens on the Core tier: that is where practice pays first.
+  function pageMcq(tier) {
+    var want = tier == null ? 1 : +tier;
+    var s = '<div class="page-head"><div class="eyebrow">Practice</div>' +
+      '<h1>MCQs on the Constitution</h1>' +
+      '<p class="lede">' + mcqCount() + ' statement-based questions in the Civil Services prelims ' +
+      'format, on every article in force, the Preamble and the Schedules. The articles the examiners ' +
+      'return to most carry the most questions.</p></div>';
+    s += '<nav class="mq-tiers" aria-label="Tiers">' + [1, 2, 3, 0].map(function (t) {
+      return '<a href="#/mcq/' + t + '"' + (t === want ? ' class="on" aria-current="page"' : '') + '>' +
+        esc(MCQ_TIER[t]) + '<span>' + mcqCount(t) + '</span></a>';
+    }).join('') + '</nav>';
+    var inner = '', n = 0;
+    mcqGroups().forEach(function (g) {
+      if (g.tier !== want) return;
+      inner += '<div class="mq-group"><h2><a href="' + g.href + '/mcq">' + esc(g.label) + '</a>' +
+        (g.sub ? '<span>' + esc(g.sub) + '</span>' : '') + '</h2>' + g.list.map(mcqCard).join('') + '</div>';
+      n += g.list.length;
+    });
+    return s + mcqSet(inner, n, 'mq-page');
   }
 
   /* ---------- overlays ---------- */
@@ -2662,7 +2935,7 @@
   var NAV = [
     { id: 'articles', label: 'All Articles', build: navArticles, wide: true,
       on: /^#\/(article|part|parts|preamble)(\/|$)/ },
-    { id: 'exam', label: 'Important Articles', build: navExam, on: /^#\/exam(\/|$)/ },
+    { id: 'exam', label: 'Important Articles', build: navExam, on: /^#\/(exam|mcq)(\/|$)/ },
     { id: 'maps', label: 'Mind Maps', build: navMaps, wide: true, on: /^#\/maps$/ },
     { id: 'cases', label: 'Judgments', build: navCases, on: /^#\/(cases|judgment)(\/|$)/ },
     { id: 'amend', label: 'Amendments', build: navAmend, on: /^#\/amendments$/ },
@@ -2817,6 +3090,17 @@
         t: '<b>' + esc(TIER[t].label) + '</b> <span class="np-d">' + esc(TIER[t].blurb) + '</span>' });
     });
     s += npRow({ href: '#/exam', t: 'The whole list', c: EXAM_LIST.length, cls: 'np-all' }) + '</div>';
+
+    s += '<div class="np-sec">' + npHead('Practice MCQs');
+    var mk = ownKey(ctx, MCQ);
+    if (mk) {
+      s += npRow({ href: (ctx.art ? '#/article/' + ctx.art.num : ctx.preamble ? '#/preamble'
+        : '#/schedule/' + ctx.sch.id) + '/mcq', t: 'On ' + esc(ctx.name), c: MCQ[mk].length, cls: 'np-all' });
+    }
+    [1, 2, 3, 0].forEach(function (t) {
+      s += npRow({ href: '#/mcq/' + t, t: esc(MCQ_TIER[t]), c: mcqCount(t) });
+    });
+    s += '</div>';
 
     var core = EXAM_LIST.filter(function (e) { return e.tier === 1; });
     if (core.length) {
@@ -3144,6 +3428,7 @@
     else if ((m = h.match(/^#\/judgment\/([^\/]+)$/))) out = pageJudgment(decodeURIComponent(m[1]));
     else if (h === '#/cases') out = pageCases();
     else if ((m = h.match(/^#\/exam(?:\/([123]))?$/))) out = pageExam(m[1]);
+    else if ((m = h.match(/^#\/mcq(?:\/([0-3]))?$/))) out = pageMcq(m[1]);
     else if (h === '#/about') out = pageAbout();
     else if (h === '#/maps') out = pageMaps();
     else { out = pageHome(); home = true; }
@@ -3165,6 +3450,7 @@
     if (!(ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA' || ae.isContentEditable))) {
       main.focus({ preventScroll: true });
     }
+    tabsReveal($('#main .atabs'));
     if (h === '#/cases') filterCases();
     if (h.indexOf('#/exam') === 0) filterExam();
     if (home) wireHome();
@@ -3226,6 +3512,11 @@
       if (e.target.closest && e.target.closest('.sidebar a')) {
         document.body.classList.remove('nav-open');
       }
+      // A practice question: an option shows the answer and why.
+      var mqo = e.target.closest && e.target.closest('.mq-o');
+      if (mqo) { mcqAnswer(mqo); return; }
+      var mqr = e.target.closest && e.target.closest('.mq-reset');
+      if (mqr) { mcqReset(mqr.closest('.mq-set')); return; }
       // Reading settings: a click outside the panel closes it.
       if ($('.rs-panel:not([hidden])') && !(e.target.closest && e.target.closest('.rs'))) readPanelClose();
       var rsToggle = e.target.closest && e.target.closest('[data-rs-toggle]');
@@ -3391,6 +3682,15 @@
       if (j < 0) return;
       e.preventDefault();
       showTab(tabs[j].getAttribute('data-tab'), true);
+    });
+    // Scroll events do not bubble, so listen in the capture phase.
+    document.addEventListener('scroll', function (e) {
+      var t = e.target;
+      if (t.classList && t.classList.contains('atabs')) tabsEdges(t);
+    }, true);
+    window.addEventListener('resize', function () {
+      var bar = $('#main .atabs');
+      if (bar) tabsEdges(bar);
     });
 
     // The list of Parts is a drawer over the page, on every page. The left
