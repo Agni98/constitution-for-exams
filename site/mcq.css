@@ -135,6 +135,75 @@
 .mq-group h2 span { font-family: var(--sans); font-size: 14px; font-weight: 500; color: var(--ink-faint); }
 .page-head .mq-cta { margin: 14px 0 0; }
 
+/* ---------- the MCQ Bank: its tiers and its index by Part ---------- */
+
+.mqb-tiers { display: grid; gap: 10px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.rv-tier.t0 { --tc: var(--green); }
+.mqx-h { margin: 26px 0 8px; font-family: var(--serif); font-size: 19px; }
+/* down each column, in print order, as a book's index reads */
+.mqx { columns: 300px 3; column-gap: 26px; }
+.mqx-row {
+  break-inside: avoid;
+  display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; align-items: center; gap: 10px;
+  padding: 9px 6px; border-bottom: 1px solid var(--line-soft);
+  color: var(--ink); text-decoration: none;
+}
+.mqx-row:hover { background: var(--bg-sunk); text-decoration: none; }
+.mqx-row:hover .mqx-t { color: var(--accent); }
+.mqx-k { font-family: var(--mono); font-size: 11.5px; color: var(--accent); white-space: nowrap; }
+.mqx-t { min-width: 0; font-size: 14.5px; font-weight: 600; line-height: 1.3; }
+.mqx-t small { display: block; margin-top: 1px; font-size: 12px; font-weight: 400; color: var(--ink-faint); }
+.mqx-n {
+  min-width: 36px; padding: 2px 9px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+  font-size: 12px; font-weight: 700; text-align: center;
+}
+
+/* a tier page: the heading of each Part in turn */
+.mq-parthead {
+  margin: 34px 0 -6px; padding-bottom: 7px; border-bottom: 1px solid var(--line);
+  font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: .05em;
+  text-transform: uppercase; color: var(--accent);
+}
+/* a Part page: each article's tier beside its name */
+.mq-tt {
+  font-family: var(--sans); font-style: normal; font-size: 11.5px; font-weight: 700;
+  padding: 2px 8px; border-radius: 999px; background: var(--bg-sunk); color: var(--ink-soft);
+}
+.mq-tt.t1 { background: color-mix(in srgb, var(--saffron) 14%, transparent); color: var(--saffron); }
+.mq-tt.t2 { background: var(--amber-soft); color: var(--amber); }
+.mq-tt.t3 { background: var(--blue-soft); color: var(--blue); }
+.mqj { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 16px; }
+.mqj > span { margin-right: 4px; font-size: 13px; font-weight: 600; color: var(--ink-faint); }
+.mqj button {
+  display: inline-flex; align-items: baseline; gap: 5px;
+  padding: 4px 9px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg-raise);
+  font: inherit; font-family: var(--mono); font-size: 12.5px; color: var(--ink); cursor: pointer;
+}
+.mqj button b { font-family: var(--sans); font-size: 11px; color: var(--ink-faint); }
+.mqj button:hover { border-color: var(--accent); color: var(--accent); }
+.mqp-pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 30px; }
+.mqp-pager a {
+  display: flex; flex-direction: column; gap: 2px; padding: 9px 14px;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--bg-raise);
+  font-weight: 600; color: var(--accent);
+}
+.mqp-pager a.nx { text-align: right; }
+.mqp-pager small { font-size: 11.5px; font-weight: 600; color: var(--ink-faint); }
+.mqp-pager a:hover { border-color: var(--accent); text-decoration: none; }
+
+@media (max-width: 760px) {
+  .mqb-tiers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .mqx-t { font-size: 14px; line-height: 1.25; }
+  .mqx-t small { display: none; }
+  .mqx-row { grid-template-columns: 66px minmax(0, 1fr) auto; padding: 8px 2px; }
+  .mqb-tiers .rv-tier { display: block; padding: 10px 12px 9px; }
+  .mqb-tiers .rv-tier b { font-size: 24px; }
+  .mqb-tiers .rv-tier strong { margin-top: 5px; }
+}
+
 @media (max-width: 620px) {
   .mq { padding: 16px 14px 14px; }
   .mq-q { gap: 10px; font-size: 15.4px; }

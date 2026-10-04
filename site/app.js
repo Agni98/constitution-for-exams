@@ -895,6 +895,12 @@
       '<a class="more" href="#/exam">View Important Articles ' + icon('arrow') + '</a></div></div>' +
       '<div class="rv-tiers">' + tiers + '</div></section>';
 
+    s += '<section class="home-sec mqb"><div class="hs-head"><div><h2>MCQ Bank</h2>' +
+      '<p>' + mcqCount() + ' statement-based questions in the Civil Services prelims format, on every ' +
+      'article in force, the Preamble and the Schedules.</p></div>' +
+      '<a class="more" href="#/mcq">Open the MCQ Bank ' + icon('arrow') + '</a></div>' +
+      mcqTierCards() + '<h3 class="mqx-h">Index by Part</h3>' + mcqIndexList() + '</section>';
+
     function card(href, k, t, sub, dim) {
       return '<a class="pcard' + (dim ? ' dim' : '') + '" href="' + href + '" title="' + esc(t) + '">' +
         '<span class="pc-k">' + esc(k) + '</span><b>' + esc(t) + '</b><small>' + esc(sub) + '</small></a>';
@@ -2302,7 +2308,7 @@
       'often they actually turn up. Each one carries the concepts the question is really testing, ' +
       'the years it has been seen, and the place candidates lose the mark. The same block sits ' +
       'under the bare text on every article page, below the landmark judgments.</p>' +
-      '<p class="mq-cta"><a class="chip" href="#/mcq/1">Practise the MCQs, tier by tier &rarr;</a></p></div>';
+      '<p class="mq-cta"><a class="chip" href="#/mcq">Open the MCQ Bank &rarr;</a></p></div>';
 
     s += '<div class="ex-tools">' +
       '<input id="examFilter" type="search" placeholder="Filter — try &ldquo;emergency&rdquo;, ' +
@@ -2722,15 +2728,17 @@
     MCQ_GROUPS = Object.keys(MCQ).map(function (k) {
       var g = { key: k, list: MCQ[k], tier: EXAM_BY_KEY[k] ? EXAM_BY_KEY[k].tier : 0 };
       if (k === 'preamble') {
-        g.label = 'The Preamble'; g.sub = ''; g.href = '#/preamble'; g.at = -1;
+        g.label = 'The Preamble'; g.sub = ''; g.href = '#/preamble'; g.at = -1; g.part = 'preamble';
       } else if (k.indexOf('sch') === 0) {
         var sc = scheduleById(k.slice(3));
         g.label = sc ? sc.name : k; g.sub = sc ? sc.title : '';
         g.href = '#/schedule/' + k.slice(3); g.at = 1e6 + SCHEDULES.indexOf(sc);
+        g.part = 'schedules'; g.num = k.slice(3);
       } else {
         var a = BY_NUM[k] || ARTS.filter(function (x) { return x.alias === k; })[0];
         g.label = 'Article ' + (a ? a.num : k); g.sub = a ? a.heading : '';
         g.href = '#/article/' + (a ? a.num : k); g.at = a ? ARTS.indexOf(a) : 1e5;
+        g.part = a ? a.part : ''; g.num = a ? a.num : k;
       }
       return g;
     }).sort(function (p, q) { return p.at - q.at; });
@@ -2742,26 +2750,124 @@
     }, 0);
   }
 
-  // #/mcq opens on the Core tier: that is where practice pays first.
+  /* ---------- the MCQ Bank ----------
+
+     Every question, indexed two ways: by tier, as the priority list ranks the
+     provisions, and by Part, in the order the Constitution prints them. The
+     same index sits on the home page and at #/mcq. */
+  var MCQ_EACH = { 1: 'Five questions each', 2: 'Three questions each', 3: 'Two questions each',
+    0: 'One question each' };
+
+  // The Preamble, every Part that has questions, then the Schedules.
+  var MCQ_INDEX = null;
+  function mcqIndex() {
+    if (MCQ_INDEX) return MCQ_INDEX;
+    var by = {};
+    mcqGroups().forEach(function (g) { (by[g.part] = by[g.part] || []).push(g); });
+    var out = [];
+    function add(id, k, t, groups, range) {
+      if (!groups || !groups.length) return;
+      out.push({ id: id, k: k, t: t, groups: groups, range: range || '',
+        n: groups.reduce(function (s, g) { return s + g.list.length; }, 0) });
+    }
+    add('preamble', 'Opening', 'The Preamble', by.preamble);
+    PARTS.forEach(function (p) {
+      var gs = by[p.num];
+      if (!gs) return;
+      var f = gs[0].num, l = gs[gs.length - 1].num;
+      add(p.num, 'Part ' + p.num, title(p.title), gs, f === l ? 'Article ' + f : 'Articles ' + f + '\u2013' + l);
+    });
+    add('schedules', 'Schedules', 'The Twelve Schedules', by.schedules, 'First to Twelfth');
+    MCQ_INDEX = out;
+    return out;
+  }
+
+  function mcqTierCards() {
+    return '<div class="mqb-tiers">' + [1, 2, 3, 0].map(function (t) {
+      return '<a class="rv-tier t' + t + '" href="#/mcq/' + t + '"><b>' + mcqCount(t) + '</b>' +
+        '<strong>' + esc(MCQ_TIER[t]) + '</strong><small>' + esc(MCQ_EACH[t]) + '</small></a>';
+    }).join('') + '</div>';
+  }
+
+  function mcqIndexList() {
+    return '<div class="mqx">' + mcqIndex().map(function (x) {
+      return '<a class="mqx-row" href="#/mcq/part/' + x.id + '" title="' + esc(x.k + ': ' + x.t) + '">' +
+        '<span class="mqx-k">' + esc(x.k) + '</span>' +
+        '<span class="mqx-t">' + esc(x.t) + (x.range ? '<small>' + esc(x.range) + '</small>' : '') + '</span>' +
+        '<span class="mqx-n">' + x.n + '</span></a>';
+    }).join('') + '</div>';
+  }
+
+  function mcqHead(eyebrow, h1, lede) {
+    return '<div class="page-head"><div class="eyebrow">' + eyebrow + '</div><h1>' + h1 + '</h1>' +
+      '<p class="lede">' + lede + '</p></div>';
+  }
+  var MCQ_LEDE = ' statement-based questions in the Civil Services prelims format, on every article in ' +
+    'force, the Preamble and the Schedules. The articles the examiners return to most carry the most questions.';
+
+  function mcqTierNav(cur) {
+    return '<nav class="mq-tiers" aria-label="MCQ Bank"><a href="#/mcq"' +
+      (cur === 'index' ? ' class="on" aria-current="page"' : '') + '>Index</a>' +
+      [1, 2, 3, 0].map(function (t) {
+        return '<a href="#/mcq/' + t + '"' + (t === cur ? ' class="on" aria-current="page"' : '') + '>' +
+          esc(MCQ_TIER[t]) + '<span>' + mcqCount(t) + '</span></a>';
+      }).join('') + '</nav>';
+  }
+
+  function mcqGroupHtml(g, withTier) {
+    return '<div class="mq-group" id="mqg-' + esc(g.key) + '"><h2><a href="' + g.href + '/mcq">' +
+      esc(g.label) + '</a>' +
+      (withTier && g.tier ? '<em class="mq-tt t' + g.tier + '">' + esc(MCQ_TIER[g.tier]) + '</em>' : '') +
+      (g.sub ? '<span>' + esc(g.sub) + '</span>' : '') + '</h2>' + g.list.map(mcqCard).join('') + '</div>';
+  }
+
+  function partHead(part) {
+    return part === 'preamble' ? 'The Preamble' : part === 'schedules' ? 'The Schedules' : partLabel(part);
+  }
+
+  // #/mcq is the index. #/mcq/1 to #/mcq/0 hold one tier each, under the
+  // heading of each Part in turn.
   function pageMcq(tier) {
-    var want = tier == null ? 1 : +tier;
-    var s = '<div class="page-head"><div class="eyebrow">Practice</div>' +
-      '<h1>MCQs on the Constitution</h1>' +
-      '<p class="lede">' + mcqCount() + ' statement-based questions in the Civil Services prelims ' +
-      'format, on every article in force, the Preamble and the Schedules. The articles the examiners ' +
-      'return to most carry the most questions.</p></div>';
-    s += '<nav class="mq-tiers" aria-label="Tiers">' + [1, 2, 3, 0].map(function (t) {
-      return '<a href="#/mcq/' + t + '"' + (t === want ? ' class="on" aria-current="page"' : '') + '>' +
-        esc(MCQ_TIER[t]) + '<span>' + mcqCount(t) + '</span></a>';
-    }).join('') + '</nav>';
-    var inner = '', n = 0;
+    if (tier == null) {
+      return mcqHead('Practice', 'MCQ Bank', mcqCount() + MCQ_LEDE) + mcqTierNav('index') +
+        '<h2>By tier</h2>' + mcqTierCards() + '<h2>By Part</h2>' + mcqIndexList();
+    }
+    var want = +tier;
+    var s = mcqHead('Practice', 'MCQ Bank', mcqCount() + MCQ_LEDE) + mcqTierNav(want);
+    var inner = '', n = 0, part = null;
     mcqGroups().forEach(function (g) {
       if (g.tier !== want) return;
-      inner += '<div class="mq-group"><h2><a href="' + g.href + '/mcq">' + esc(g.label) + '</a>' +
-        (g.sub ? '<span>' + esc(g.sub) + '</span>' : '') + '</h2>' + g.list.map(mcqCard).join('') + '</div>';
+      if (g.part !== part) {
+        part = g.part;
+        if (part !== 'preamble') inner += '<h3 class="mq-parthead">' + esc(partHead(part)) + '</h3>';
+      }
+      inner += mcqGroupHtml(g, false);
       n += g.list.length;
     });
     return s + mcqSet(inner, n, 'mq-page');
+  }
+
+  // One Part's questions, in print order, with a row of its articles to jump to.
+  function pageMcqPart(id) {
+    var list = mcqIndex(), i = -1;
+    list.forEach(function (x, j) { if (x.id === id) i = j; });
+    if (i < 0) return pageMcq();
+    var x = list[i], prev = list[i - 1], next = list[i + 1];
+    var s = mcqHead('MCQ Bank &middot; ' + esc(x.k), esc(x.t), x.n + ' question' + (x.n === 1 ? '' : 's') +
+      (x.range ? ' on ' + esc(x.range) : '') + ', in the order the Constitution prints them.');
+    s += mcqTierNav(null);
+    if (x.groups.length > 1) {
+      s += '<nav class="mqj" aria-label="Jump to"><span>Jump to</span>' + x.groups.map(function (g) {
+        return '<button type="button" data-jump="mqg-' + esc(g.key) + '" title="' + esc(g.label) + '">' +
+          esc(g.num || g.label) + '<b>' + g.list.length + '</b></button>';
+      }).join('') + '</nav>';
+    }
+    s += mcqSet(x.groups.map(function (g) { return mcqGroupHtml(g, true); }).join(''), x.n, 'mq-page');
+    s += '<nav class="mqp-pager" aria-label="Other Parts">' +
+      (prev ? '<a href="#/mcq/part/' + prev.id + '"><small>&larr; Previous</small>' + esc(prev.k) + '</a>' : '<span></span>') +
+      (next ? '<a class="nx" href="#/mcq/part/' + next.id + '"><small>Next &rarr;</small>' + esc(next.k) + '</a>' : '<span></span>') +
+      '</nav>';
+    return s;
   }
 
   /* ---------- overlays ---------- */
@@ -3154,7 +3260,7 @@
     });
     s += npRow({ href: '#/exam', t: 'The whole list', c: EXAM_LIST.length, cls: 'np-all' }) + '</div>';
 
-    s += '<div class="np-sec">' + npHead('Practice MCQs');
+    s += '<div class="np-sec">' + npHead('MCQ Bank');
     var mk = ownKey(ctx, MCQ);
     if (mk) {
       s += npRow({ href: (ctx.art ? '#/article/' + ctx.art.num : ctx.preamble ? '#/preamble'
@@ -3163,7 +3269,7 @@
     [1, 2, 3, 0].forEach(function (t) {
       s += npRow({ href: '#/mcq/' + t, t: esc(MCQ_TIER[t]), c: mcqCount(t) });
     });
-    s += '</div>';
+    s += npRow({ href: '#/mcq', t: 'Index by Part', c: mcqCount(), cls: 'np-all' }) + '</div>';
 
     var core = EXAM_LIST.filter(function (e) { return e.tier === 1; });
     if (core.length) {
@@ -3511,6 +3617,7 @@
     else if ((m = h.match(/^#\/judgment\/([^\/]+)$/))) out = pageJudgment(decodeURIComponent(m[1]));
     else if (h === '#/cases') out = pageCases();
     else if ((m = h.match(/^#\/exam(?:\/([123]))?$/))) out = pageExam(m[1]);
+    else if ((m = h.match(/^#\/mcq\/part\/([A-Za-z]+)$/))) out = pageMcqPart(m[1]);
     else if ((m = h.match(/^#\/mcq(?:\/([0-3]))?$/))) out = pageMcq(m[1]);
     else if (h === '#/about') out = pageAbout();
     else if (h === '#/maps') out = pageMaps();
@@ -3598,6 +3705,17 @@
       // and on a wide screen the class is not in play at all.
       if (e.target.closest && e.target.closest('.sidebar a')) {
         document.body.classList.remove('nav-open');
+      }
+      // The row of articles above one Part's questions.
+      var jump = e.target.closest && e.target.closest('[data-jump]');
+      if (jump) {
+        var to = document.getElementById(jump.getAttribute('data-jump'));
+        if (to) {
+          var head = $('.topbar'), pbar = $('.mq-page .mq-bar');
+          var off = (head ? head.offsetHeight : 0) + (pbar ? pbar.offsetHeight + 8 : 0) + 14;
+          window.scrollTo(0, to.getBoundingClientRect().top + window.scrollY - off);
+        }
+        return;
       }
       // A practice question: an option shows the answer and why.
       var mqo = e.target.closest && e.target.closest('.mq-o');
