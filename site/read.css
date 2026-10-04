@@ -207,6 +207,64 @@
 .apane > .section-tag:first-child { margin-top: 4px; }
 .apane .bare { margin-top: 8px; }
 
+/* ---------- the sections bar at the foot of a phone ---------- */
+
+/* On a wider screen the tabs above do this job, so the bar and the headings
+   it adds to the diagrams stay out of sight. */
+.abar, .apane-dh { display: none; }
+
+@media (max-width: 620px) {
+  #main .atabs { display: none; }
+  .abar {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 28;
+    padding: 5px 4px calc(6px + env(safe-area-inset-bottom));
+    background: color-mix(in srgb, var(--bg-raise) 94%, transparent);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-top: 1px solid var(--line);
+  }
+  .abar-i {
+    flex: 1 1 0; min-width: 0;
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+    padding: 2px 0; border: 0; background: none; cursor: pointer;
+    font: inherit; font-size: 11px; font-weight: 600; line-height: 1.2;
+    color: var(--ink-faint); white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .abar-ic {
+    position: relative; display: grid; place-items: center;
+    width: 52px; height: 30px; border-radius: 15px;
+    transition: background .15s ease;
+  }
+  .abar-ic svg {
+    width: 22px; height: 22px; fill: none; stroke: currentColor;
+    stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+  }
+  .abar-i.on { color: var(--accent); }
+  .abar-i.on .abar-ic { background: var(--accent-soft); }
+  .abar-i:focus-visible { outline: none; }
+  .abar-i:focus-visible .abar-ic { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .abar-ct {
+    position: absolute; top: -2px; right: 2px;
+    min-width: 17px; height: 17px; padding: 0 4px; border-radius: 999px;
+    background: var(--accent); color: var(--bg-raise);
+    font-size: 10.5px; font-weight: 700; line-height: 17px; text-align: center;
+  }
+  .abar-i:not(.on) .abar-ct { background: var(--bg-sunk); color: var(--ink-soft); }
+
+  /* Room at the foot of the page, so the bar never covers the last lines. */
+  body.has-abar main { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
+  /* Out of the way while the search box or the list of Parts is open. */
+  body.search-open .abar, body.nav-open .abar { display: none; }
+
+  /* Diagrams: flow charts and mind maps one above the other, each named. */
+  .apanes.show-diag .apane-diag { display: block; }
+  .apane-dh {
+    display: block; margin: 6px 0 12px;
+    font-family: var(--serif); font-size: 21px; font-weight: 600;
+  }
+  .apane-diag + .apane-diag .apane-dh { margin-top: 30px; }
+}
+
 /* ---------- reading settings: the bare text only ---------- */
 
 /* The choices sit on the root element and set only the variables that .bare

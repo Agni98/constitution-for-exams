@@ -1431,11 +1431,46 @@
 
     var body = TABS.map(function (t) {
       if (!has(t.id)) return '';
-      return '<section class="apane" id="pane-' + t.id + '" role="tabpanel" aria-labelledby="tab-' + t.id + '"' +
-        (t.id === pick ? '' : ' hidden') + '>' + panes[t.id].html + '</section>';
+      var diag = DIAG.indexOf(t.id) >= 0;
+      return '<section class="apane' + (diag ? ' apane-diag' : '') + '" id="pane-' + t.id +
+        '" role="tabpanel" aria-labelledby="tab-' + t.id + '"' + (t.id === pick ? '' : ' hidden') + '>' +
+        (diag ? '<h2 class="apane-dh">' + esc(t.label) + '</h2>' : '') + panes[t.id].html + '</section>';
     }).join('');
 
-    return bar + '<div class="apanes">' + body + '</div>';
+    return bar + '<div class="apanes' + (DIAG.indexOf(pick) >= 0 ? ' show-diag' : '') + '">' + body + '</div>' +
+      footBar(panes, has, pick);
+  }
+
+  /* On a phone the same choices sit in a bar at the foot of the screen, where
+     the thumb is, and every one of them is in view. Flow charts and mind maps
+     share one place there, and open one above the other. */
+  var DIAG = ['flow', 'maps'];
+  var FOOT = {
+    text: { label: 'Text', icon: '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h5M10 16h5"/>' },
+    explain: { label: 'Explain', icon: '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/>' },
+    diagrams: { label: 'Diagrams', icon: '<rect x="9" y="3" width="6" height="5" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M6 16v-4h12v4"/>' },
+    judgments: { label: 'Cases', icon: '<path d="M12 4v16M8 20h8M5 7h14"/><path d="M2 13l3-6 3 6a3 3 0 0 1-6 0zM16 13l3-6 3 6a3 3 0 0 1-6 0z"/>' },
+    exams: { label: 'Exam', icon: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/>' },
+    mcq: { label: 'MCQs', icon: '<path d="M3.5 6.5l1.6 1.6L8 5.2M3.5 13.5l1.6 1.6L8 12.2"/><path d="M11 7h10M11 14h10M4 20h17"/>' }
+  };
+
+  function footBar(panes, has, pick) {
+    var items = [], diagDone = false;
+    TABS.forEach(function (t) {
+      if (!has(t.id)) return;
+      var diag = DIAG.indexOf(t.id) >= 0;
+      if (diag && diagDone) return;
+      if (diag) diagDone = true;
+      var ids = diag ? DIAG.filter(has) : [t.id];
+      var f = FOOT[diag ? 'diagrams' : t.id];
+      var n = ids.reduce(function (s, id) { return s + (panes[id].n || 0); }, 0);
+      var on = ids.indexOf(pick) >= 0;
+      items.push('<button class="abar-i' + (on ? ' on' : '') + '" type="button" data-tab="' + ids[0] +
+        '" data-group="' + ids.join(' ') + '"' + (on ? ' aria-current="true"' : '') + '>' +
+        '<span class="abar-ic"><svg viewBox="0 0 24 24" aria-hidden="true">' + f.icon + '</svg>' +
+        (n ? '<span class="abar-ct">' + n + '</span>' : '') + '</span>' + esc(f.label) + '</button>');
+    });
+    return items.length > 1 ? '<nav class="abar" aria-label="Sections">' + items.join('') + '</nav>' : '';
   }
 
   function showTab(id, focus) {
@@ -1452,16 +1487,24 @@
     document.querySelectorAll('#main .apane').forEach(function (p) {
       p.hidden = p.id !== 'pane-' + id;
     });
+    document.querySelectorAll('#main .abar-i').forEach(function (b) {
+      var on = b.getAttribute('data-group').split(' ').indexOf(id) >= 0;
+      b.classList.toggle('on', on);
+      if (on) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
+    });
+    var panes = $('#main .apanes');
+    if (panes) panes.classList.toggle('show-diag', DIAG.indexOf(id) >= 0);
     try { localStorage.setItem('coi-tab', id); } catch (err) { /* private mode */ }
     // replaceState rather than a new hash: a new hash would redraw the page.
     if (history.replaceState) history.replaceState(null, '', bar.getAttribute('data-base') + '/' + id);
-    // Once the bar has stuck under the header, a new pane would open part-way
-    // down. Bring its start back up under the bar.
-    var panes = $('#main .apanes');
-    var stick = parseFloat(getComputedStyle(bar).top) || 0;
-    if (panes && bar.getBoundingClientRect().top <= stick + 1) {
-      window.scrollTo(0, Math.max(0, panes.getBoundingClientRect().top + window.scrollY -
-        stick - bar.offsetHeight - 14));
+    // A pane whose start has scrolled up out of sight would open part-way
+    // down. Bring its start back up, under the tab bar where there is one and
+    // under the header on a phone, where the tabs sit at the foot instead.
+    var head = $('.topbar');
+    var under = bar.offsetHeight ? (parseFloat(getComputedStyle(bar).top) || 0) + bar.offsetHeight
+      : (head ? head.offsetHeight : 0);
+    if (panes && panes.getBoundingClientRect().top < under) {
+      window.scrollTo(0, Math.max(0, panes.getBoundingClientRect().top + window.scrollY - under - 14));
     }
     tabsReveal(bar);
     if (focus) btn.focus();
@@ -3462,6 +3505,7 @@
     closeSheet();
     closeNav();
     main.innerHTML = out + siteFooter();
+    document.body.classList.toggle('has-abar', !!$('#main .abar'));
     markActive(h);
     markNav(h);
     document.body.classList.remove('nav-open');
@@ -3631,7 +3675,7 @@
         ptoggle.setAttribute('aria-expanded', show ? 'true' : 'false');
         return;
       }
-      var tabBtn = e.target.closest && e.target.closest('.atab[data-tab]');
+      var tabBtn = e.target.closest && e.target.closest('.atab[data-tab], .abar-i[data-tab]');
       if (tabBtn) { showTab(tabBtn.getAttribute('data-tab')); return; }
       // A section row on the Part page scrolls to its section.
       var pn = e.target.closest && e.target.closest('[data-goto]');
