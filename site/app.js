@@ -1420,32 +1420,37 @@
     var pick = [want, stored, 'text'].filter(has)[0] ||
       (TABS.filter(function (t) { return has(t.id); })[0] || {}).id;
 
+    var list = sections(panes, has);
     var bar = '<div class="atabs" role="tablist" aria-label="Readings" data-base="' + esc(base) + '">' +
-      TABS.filter(function (t) { return has(t.id); }).map(function (t) {
-        var p = panes[t.id], on = t.id === pick;
-        return '<button class="atab' + (on ? ' on' : '') + '" type="button" role="tab" id="tab-' + t.id +
-          '" aria-controls="pane-' + t.id + '" aria-selected="' + on + '" data-tab="' + t.id + '"' +
-          (on ? '' : ' tabindex="-1"') + '>' +
-          esc(t.label) + (p.n ? '<span class="ct">' + p.n + '</span>' : '') + '</button>';
+      list.map(function (x) {
+        var on = x.ids.indexOf(pick) >= 0;
+        return '<button class="atab' + (on ? ' on' : '') + '" type="button" role="tab" id="tab-' + x.ids[0] +
+          '" aria-controls="' + x.ids.map(function (id) { return 'pane-' + id; }).join(' ') +
+          '" aria-selected="' + on + '" data-tab="' + x.ids[0] + '" data-group="' + x.ids.join(' ') + '"' +
+          (on ? '' : ' tabindex="-1"') + '>' + secIcon(x.icon) +
+          esc(x.label) + (x.n ? '<span class="ct">' + x.n + '</span>' : '') + '</button>';
       }).join('') + '</div>';
 
     var body = TABS.map(function (t) {
       if (!has(t.id)) return '';
       var diag = DIAG.indexOf(t.id) >= 0;
       return '<section class="apane' + (diag ? ' apane-diag' : '') + '" id="pane-' + t.id +
-        '" role="tabpanel" aria-labelledby="tab-' + t.id + '"' + (t.id === pick ? '' : ' hidden') + '>' +
+        '" role="tabpanel" aria-labelledby="tab-' + (diag ? DIAG.filter(has)[0] : t.id) + '"' +
+        (t.id === pick ? '' : ' hidden') + '>' +
         (diag ? '<h2 class="apane-dh">' + esc(t.label) + '</h2>' : '') + panes[t.id].html + '</section>';
     }).join('');
 
     return bar + '<div class="apanes' + (DIAG.indexOf(pick) >= 0 ? ' show-diag' : '') + '">' + body + '</div>' +
-      footBar(panes, has, pick);
+      footBar(list, pick);
   }
 
-  /* On a phone the same choices sit in a bar at the foot of the screen, where
-     the thumb is, and every one of them is in view. Flow charts and mind maps
-     share one place there, and open one above the other. */
+  /* The sections of a page, in the same six places on every screen: Text,
+     Explain, Diagrams, Cases, Exam and MCQs, each with its icon. Flow charts
+     and mind maps share the Diagrams place and open one above the other. On a
+     wider screen the sections are tabs above the page. On a phone they sit in
+     a bar at the foot of the screen, where the thumb is. */
   var DIAG = ['flow', 'maps'];
-  var FOOT = {
+  var SECTION = {
     text: { label: 'Text', icon: '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h5M10 16h5"/>' },
     explain: { label: 'Explain', icon: '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/>' },
     diagrams: { label: 'Diagrams', icon: '<rect x="9" y="3" width="6" height="5" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M6 16v-4h12v4"/>' },
@@ -1454,29 +1459,40 @@
     mcq: { label: 'MCQs', icon: '<path d="M3.5 6.5l1.6 1.6L8 5.2M3.5 13.5l1.6 1.6L8 12.2"/><path d="M11 7h10M11 14h10M4 20h17"/>' }
   };
 
-  function footBar(panes, has, pick) {
-    var items = [], diagDone = false;
+  function sections(panes, has) {
+    var list = [], diagDone = false;
     TABS.forEach(function (t) {
       if (!has(t.id)) return;
       var diag = DIAG.indexOf(t.id) >= 0;
       if (diag && diagDone) return;
       if (diag) diagDone = true;
       var ids = diag ? DIAG.filter(has) : [t.id];
-      var f = FOOT[diag ? 'diagrams' : t.id];
-      var n = ids.reduce(function (s, id) { return s + (panes[id].n || 0); }, 0);
-      var on = ids.indexOf(pick) >= 0;
-      items.push('<button class="abar-i' + (on ? ' on' : '') + '" type="button" data-tab="' + ids[0] +
-        '" data-group="' + ids.join(' ') + '"' + (on ? ' aria-current="true"' : '') + '>' +
-        '<span class="abar-ic"><svg viewBox="0 0 24 24" aria-hidden="true">' + f.icon + '</svg>' +
-        (n ? '<span class="abar-ct">' + n + '</span>' : '') + '</span>' + esc(f.label) + '</button>');
+      var sec = SECTION[diag ? 'diagrams' : t.id];
+      list.push({ ids: ids, label: sec.label, icon: sec.icon,
+        n: ids.reduce(function (s, id) { return s + (panes[id].n || 0); }, 0) });
     });
-    return items.length > 1 ? '<nav class="abar" aria-label="Sections">' + items.join('') + '</nav>' : '';
+    return list;
+  }
+
+  function secIcon(paths) {
+    return '<svg class="sec-ic" viewBox="0 0 24 24" aria-hidden="true">' + paths + '</svg>';
+  }
+
+  function footBar(list, pick) {
+    if (list.length < 2) return '';
+    return '<nav class="abar" aria-label="Sections">' + list.map(function (x) {
+      var on = x.ids.indexOf(pick) >= 0;
+      return '<button class="abar-i' + (on ? ' on' : '') + '" type="button" data-tab="' + x.ids[0] +
+        '" data-group="' + x.ids.join(' ') + '"' + (on ? ' aria-current="true"' : '') + '>' +
+        '<span class="abar-ic">' + secIcon(x.icon) +
+        (x.n ? '<span class="abar-ct">' + x.n + '</span>' : '') + '</span>' + esc(x.label) + '</button>';
+    }).join('') + '</nav>';
   }
 
   function showTab(id, focus) {
     var bar = $('#main .atabs');
     if (!bar) return;
-    var btn = bar.querySelector('.atab[data-tab="' + id + '"]');
+    var btn = bar.querySelector('.atab[data-group~="' + id + '"]');
     if (!btn) return;
     bar.querySelectorAll('.atab').forEach(function (b) {
       var on = b === btn;
