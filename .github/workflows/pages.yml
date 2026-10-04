@@ -1,19 +1,20 @@
-# Publish the site to GitHub Pages.
+# The old GitHub Pages address now only forwards readers to the new one.
 #
-# Pages can serve a branch only from its root or from /docs, and the site lives
-# in site/. Rather than move it and break every path in the repo, this uploads
-# site/ as the artifact and deploys that - which is also the only way to publish
-# a subdirectory without restructuring.
-#
-# There is no build step by design: every data file ships as a .js file so that
-# site/index.html opens straight from file://. So this copies, it does not
-# compile, and what is served is byte-for-byte what is in the repository.
+# The site itself is published by Cloudflare Pages, from site/, at
+# https://constitution.okayupsc.com. What GitHub Pages serves at
+# agni98.github.io/constitution-for-exams/ is the small page in
+# .github/pages-redirect/, which sends each visitor to the same page there,
+# the part after the # included. Its 404.html does the same for any other
+# path under the old address.
 
-name: Deploy the site to Pages
+name: Redirect the old Pages address
 
 on:
   push:
     branches: [main]
+    paths:
+      - '.github/pages-redirect/**'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:        # so a deploy can be re-run without a commit
 
 permissions:
@@ -39,7 +40,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: .github/pages-redirect
 
       - id: deployment
         uses: actions/deploy-pages@v4

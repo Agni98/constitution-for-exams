@@ -5,6 +5,9 @@ India, arranged exactly as the Constitution arranges itself — 26 Parts, 506 ar
 12 Schedules — with a plain-language reading and **the catch** under every article, plus
 mind maps and flow diagrams for the processes that are hard to hold in your head.
 
+Live at **https://constitution.okayupsc.com**, published by Cloudflare Pages from `site/` on every push
+to `main`. The old GitHub Pages address forwards there.
+
 ## Opening it
 
 Double-click **`Open the Constitution.bat`**. It starts the local server and opens your
