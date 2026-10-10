@@ -1,9 +1,9 @@
 # Security headers, applied by Cloudflare Pages to every page of the site.
 # The site loads nothing from outside itself except Cloudflare's analytics
-# script and the Roboto Slab font from Google Fonts. 'unsafe-inline' is
-# needed for the inline scripts and style attributes the pages are built with.
+# script. 'unsafe-inline' is needed for the inline scripts and style
+# attributes the pages are built with.
 # No other site may show these pages inside a frame.
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://cloudflareinsights.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
   X-Frame-Options: DENY
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
