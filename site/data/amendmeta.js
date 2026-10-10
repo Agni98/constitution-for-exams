@@ -509,7 +509,7 @@ window.COI_AMEND_META = {
   what: "The 98th Amendment added Article 371J for the Hyderabad-Karnataka region, now called Kalyana-Karnataka. The region gets a development board, and reserved seats in education and jobs for local people." },
 
 99: { key: 1, struck: 2, t: "c",
-  short: "The NJAC, struck down",
+  short: "A commission to appoint judges",
   what: "The 99th Amendment set up a National Judicial Appointments Commission to choose judges of the Supreme Court and the High Courts. The commission had six members: the Chief Justice of India, two senior judges, the Law Minister and two eminent persons.",
   why: "Judges were chosen by a collegium of senior judges. The government wanted a role in choosing them.",
   court: "In 2015 the Supreme Court struck the amendment down by 4 to 1. The Court held that it threatened the independence of the judiciary, which is part of the basic structure. The collegium continues.",
