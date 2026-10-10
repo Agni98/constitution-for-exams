@@ -4221,9 +4221,22 @@
       if (bar) tabsEdges(bar);
     });
 
+    // The OkayUPSC bar above the header scrolls away with the page. Until it
+    // has gone, the drawer and the menus start that much lower. The value is
+    // set only when it changes, so scrolling further down costs nothing.
+    var suite = $('.ok-suite'), suiteVis = -1;
+    function suiteGap() {
+      var v = suite ? Math.max(0, Math.round(suite.getBoundingClientRect().bottom)) : 0;
+      if (v !== suiteVis) { suiteVis = v; document.documentElement.style.setProperty('--ok-suite-vis', v + 'px'); }
+    }
+    window.addEventListener('scroll', suiteGap, { passive: true });
+    window.addEventListener('resize', suiteGap);
+    suiteGap();
+
     // The list of Parts is a drawer over the page, on every page. The left
     // side of a Part or an article belongs to its own Part tree.
     $('#menuBtn').addEventListener('click', function () {
+      suiteGap();
       document.body.classList.toggle('nav-open');
     });
     $('#scrim').addEventListener('click', function () {

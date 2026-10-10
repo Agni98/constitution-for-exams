@@ -360,3 +360,9 @@ constitution/
     data/     generated data + hand-written explanations, judgments, diagrams, exam
               notes and MCQs; papers.js is the registry a citation points into
 ```
+
+`site/okay-ui.css` is the look this site shares with okayupsc.com and the Thinkers site: the
+colours in light and dark, the two typefaces, the corners and shadows, and the navy OkayUPSC bar
+at the top of the page. `site/styles.css` maps this site's own colour names onto it. The master
+copy lives in the okayupsc repo, and `node tools/sync-ui.js` there copies it here, so edit it
+there and not in this repo.

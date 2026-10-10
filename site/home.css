@@ -9,13 +9,13 @@
 :root {
   --hero-a:  #fbf4e8;
   --hero-b:  #f2d9b8;
-  --hero-btn: #1d5b3c;
+  --hero-btn: var(--ok-cta);
   --tri-w:   #e4ddd0;
 }
 [data-theme="dark"] {
   --hero-a:  #1c1a18;
   --hero-b:  #33271b;
-  --hero-btn: #2f7a52;
+  --hero-btn: var(--ok-cta);
   --tri-w:   #e8e6e1;
 }
 
@@ -26,7 +26,7 @@ body.is-home main { max-width: 1240px; }
 
 .hero {
   container-type: inline-size;
-  border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+  border: 1px solid var(--line); border-radius: var(--ok-r-lg); overflow: hidden;
   background: var(--bg-raise);
   box-shadow: var(--shadow);
 }
@@ -60,10 +60,10 @@ body.is-home main { max-width: 1240px; }
 }
 .hero-search button {
   flex: 0 0 auto; height: 40px; padding: 0 22px;
-  border: 0; border-radius: 9px; background: var(--hero-btn); color: #fff;
+  border: 0; border-radius: var(--ok-r-sm); background: var(--hero-btn); color: var(--ok-cta-ink);
   font: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer;
 }
-.hero-search button:hover { filter: brightness(1.1); }
+.hero-search button:hover { background: var(--ok-cta-h); }
 .hero-search button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .hero-try { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; }

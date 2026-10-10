@@ -137,7 +137,7 @@ details[open] > summary .amd-chev { transform: rotate(-90deg); }
   font: 700 10.5px/1.5 var(--sans); letter-spacing: .05em; text-transform: uppercase;
 }
 .amd-tag.key { color: var(--saffron); background: color-mix(in srgb, var(--saffron) 12%, transparent); }
-.amd-tag.struck { color: var(--accent); background: var(--accent-soft); }
+.amd-tag.struck { color: var(--red); background: var(--red-soft); }
 
 .amd-body { padding: 14px 18px 18px 86px; }
 .amd-what { margin: 0 0 10px; font-size: 15.5px; line-height: 1.65; }

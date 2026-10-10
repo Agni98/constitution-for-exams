@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1F2A44">
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
 <title>The Constitution of India — bare act, explained</title>
 <meta name="description" content="The full bare text of the Constitution of India, part by part, with a plain-language explanation and the catch under every article.">
@@ -12,6 +13,7 @@
      filename there and fail to load it, which would leave a blank page. -->
 <script>
   var COI_V = location.protocol === 'file:' ? '' : '?v=' + Date.now();
+  document.write('<link rel="stylesheet" href="okay-ui.css' + COI_V + '">');
   document.write('<link rel="stylesheet" href="styles.css' + COI_V + '">');
   document.write('<link rel="stylesheet" href="cases.css' + COI_V + '">');
   document.write('<link rel="stylesheet" href="exam.css' + COI_V + '">');
@@ -23,6 +25,7 @@
   document.write('<link rel="stylesheet" href="amend.css' + COI_V + '">');
 </script>
 <noscript>
+  <link rel="stylesheet" href="okay-ui.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="cases.css">
   <link rel="stylesheet" href="exam.css">
@@ -36,10 +39,17 @@
 </head>
 <body>
 
+<nav class="ok-suite" aria-label="OkayUPSC">
+  <a class="ok-home" href="https://okayupsc.com/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="rgba(255,255,255,.1)"/><path d="M18 33.5l9 9 19-21" fill="none" stroke="#E8A13A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>OkayUPSC</a>
+  <span class="ok-sep" aria-hidden="true"></span>
+  <a href="https://constitution.okayupsc.com/" aria-current="page">Constitution</a>
+  <a href="https://thinkers.okayupsc.com/">Thinkers</a>
+</nav>
+
 <header class="topbar">
   <button class="icon-btn menu-btn" id="menuBtn" aria-label="Toggle menu">&#9776;</button>
   <a class="brand" href="#/">
-    <span class="brand-mark">&#x2696;</span>
+    <span class="brand-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
     <span class="brand-text">
       <strong>The Constitution of India</strong>
       <small>Bare act &middot; indexed &middot; explained</small>

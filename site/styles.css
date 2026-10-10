@@ -2,18 +2,26 @@
    The Constitution of India — bare act, explained
    ============================================================ */
 
+/* The colours, type and shapes come from okay-ui.css, the look shared by the
+   three OkayUPSC sites. The names below are this site's own, mapped onto it,
+   so the rest of the stylesheet is unchanged. Only the colours that mean
+   something here (the tricolour, and the reds, greens, blues and ambers of
+   the tags) are set in this file. */
 :root {
-  --bg:        #f6f4ef;
-  --bg-raise:  #ffffff;
-  --bg-sunk:   #ece8df;
-  --ink:       #1d1c1a;
-  --ink-soft:  #55514a;
-  --ink-faint: #8b857b;
-  --line:      #ded8cc;
-  --line-soft: #ebe6db;
+  --bg:        var(--ok-bg);
+  --bg-raise:  var(--ok-surface);
+  --bg-sunk:   var(--ok-sunk);
+  --ink:       var(--ok-ink);
+  --ink-soft:  var(--ok-ink-2);
+  --ink-faint: var(--ok-ink-3);
+  --line:      var(--ok-line);
+  --line-soft: var(--ok-line-2);
+  --head:      var(--ok-head);
 
-  --accent:      #9a3412;   /* deep terracotta — headings, links */
-  --accent-soft: #f6e5dc;
+  --accent:      var(--ok-accent);       /* links and the item you are on */
+  --accent-soft: var(--ok-accent-soft);
+  --red:         #9a3412;                /* the Core tier, overruled and struck down */
+  --red-soft:    #f6e5dc;
   --saffron:     #c2410c;
   --green:       #15803d;
   --green-soft:  #e3f2e7;
@@ -22,31 +30,22 @@
   --amber:       #a16207;
   --amber-soft:  #fbf0d4;
 
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-  --sans:  "Segoe UI", Inter, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
-  --mono:  "Cascadia Mono", "SF Mono", Consolas, "Liberation Mono", monospace;
+  --serif: var(--ok-serif);
+  --sans:  var(--ok-sans);
+  --mono:  var(--ok-mono);
 
-  --topbar-h: 58px;
+  --topbar-h: var(--ok-header-h);
   --side-w: 300px;
-  --radius: 10px;
-  --shadow: 0 1px 2px rgba(31,26,18,.05), 0 6px 22px rgba(31,26,18,.06);
+  --radius: var(--ok-r);
+  --shadow: var(--ok-shadow);
   /* the shaded box behind each menu: warm, a step darker than the header */
   --nav-band: color-mix(in srgb, var(--accent) 7%, var(--bg-sunk));
   --nav-line: color-mix(in srgb, var(--accent) 14%, var(--line));
 }
 
 [data-theme="dark"] {
-  --bg:        #16171a;
-  --bg-raise:  #1e2024;
-  --bg-sunk:   #121316;
-  --ink:       #e8e6e1;
-  --ink-soft:  #b3afa7;
-  --ink-faint: #7e7a72;
-  --line:      #2f3238;
-  --line-soft: #26282d;
-
-  --accent:      #f0a882;
-  --accent-soft: #38241c;
+  --red:         #f0a882;
+  --red-soft:    #38241c;
   --saffron:     #f59e5e;
   --green:       #6ee7a0;
   --green-soft:  #12291d;
@@ -54,7 +53,6 @@
   --blue-soft:   #16203a;
   --amber:       #f0c46a;
   --amber-soft:  #2e2413;
-  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 22px rgba(0,0,0,.28);
   /* in dark mode a step lighter than the header, not darker */
   --nav-band: color-mix(in srgb, var(--accent) 11%, var(--bg-raise));
   --nav-line: color-mix(in srgb, var(--accent) 18%, var(--line));
@@ -84,23 +82,23 @@ a:hover { text-decoration: underline; }
   height: var(--topbar-h);
   display: flex; align-items: center; gap: 12px;
   padding: 0 14px;
-  background: color-mix(in srgb, var(--bg-raise) 88%, transparent);
-  backdrop-filter: saturate(180%) blur(12px);
+  background: var(--ok-surface-2);
   border-bottom: 1px solid var(--line);
 }
 
 .brand { display: flex; align-items: center; gap: 10px; color: inherit; flex: 0 0 auto; }
 .brand:hover { text-decoration: none; }
 .brand-mark {
-  width: 34px; height: 34px; display: grid; place-items: center;
-  border-radius: 9px; font-size: 18px;
-  background: linear-gradient(150deg, var(--saffron), var(--green));
-  color: #fff;
+  width: 34px; height: 34px; display: grid; place-items: center; flex: none;
+  border-radius: var(--ok-r-mark); font-size: 18px; line-height: 1;
+  background: var(--ok-mark-bg); color: var(--ok-mark-ink);
 }
-.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
-.brand-text strong { font-size: 14.5px; letter-spacing: -.01em; }
+.brand-text { display: flex; flex-direction: column; gap: 2px; line-height: 1.15; }
+.brand-text strong {
+  font: 600 17px/1.1 var(--serif); letter-spacing: -.01em; color: var(--head);
+}
 .brand-text small {
-  font-size: 9.6px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
   color: var(--ink-faint);
 }
 
@@ -108,7 +106,7 @@ a:hover { text-decoration: underline; }
    have the row to themselves. It opens over the bar, and closes on Escape or
    on a click outside it. */
 .search-wrap {
-  position: absolute; top: 10px; right: 90px; z-index: 3;
+  position: absolute; top: 11px; right: 94px; z-index: 3;
   width: min(460px, calc(100% - 136px));
   display: none; align-items: center; gap: 8px;
   padding: 0 12px; height: 38px;
@@ -131,12 +129,14 @@ body.search-open .search-wrap { display: flex; }
 
 .icon-btn {
   flex: 0 0 auto;
-  width: 36px; height: 36px; display: grid; place-items: center;
-  border: 1px solid var(--line); border-radius: 9px;
+  width: 38px; height: 38px; display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: var(--ok-r-mark);
   background: var(--bg-raise); color: var(--ink-soft);
   font-size: 16px; cursor: pointer;
+  transition: color .15s ease, border-color .15s ease;
 }
-.icon-btn:hover { color: var(--accent); border-color: var(--accent); }
+.icon-btn:hover { color: var(--ok-saffron-ink); border-color: var(--ok-saffron); }
+.icon-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 /* The two at the right of the header are round, the menu button is not. */
 #searchBtn, #themeBtn { border-radius: 50%; }
 .menu-btn { display: grid; }
@@ -145,35 +145,40 @@ body.search-open .search-wrap { display: flex; }
 
 /* The menus are words in the header, set to the right of the masthead, and
    the menu that is open takes the accent colour rather than a box. */
-.topnav { display: flex; align-items: center; gap: 20px; flex: 0 0 auto; margin-left: auto; }
+.topnav { display: flex; align-self: stretch; align-items: stretch; gap: 2px; flex: 0 0 auto; margin-left: auto; }
 .tn {
   position: relative;
   display: inline-flex; align-items: center; gap: 5px;
-  height: 34px; padding: 0 2px;
-  border: 0; border-radius: 8px; background: transparent;
-  font: inherit; font-size: 14.6px; font-weight: 600; color: var(--ink-soft);
+  height: 100%; padding: 0 11px;
+  border: 0; border-radius: 0; background: transparent;
+  font: 600 14.5px/1 var(--sans); color: var(--ink-soft);
   white-space: nowrap; cursor: pointer;
+  transition: color .15s ease;
 }
-.tn:hover, .tn[aria-expanded="true"] { color: var(--accent); }
-.tn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-/* The section you are in, marked by the rule under its name. */
-.tn.on { color: var(--accent); }
-.tn.on::after {
-  content: ""; position: absolute; left: 0; right: 0; bottom: 2px;
-  height: 2px; border-radius: 2px; background: var(--accent);
+.tn:hover, .tn[aria-expanded="true"] { color: var(--head); }
+.tn:focus-visible { outline: 2px solid var(--accent); outline-offset: -6px; border-radius: 8px; }
+/* A saffron rule under the section you are in, and a fainter one under the
+   menu you point at or have open. */
+.tn::after {
+  content: ""; position: absolute; left: 11px; right: 11px; bottom: -1px;
+  height: 3px; border-radius: 3px 3px 0 0; background: var(--ok-saffron);
+  opacity: 0; transition: opacity .15s ease;
 }
+.tn:hover::after, .tn[aria-expanded="true"]::after { opacity: .5; }
+.tn.on { color: var(--head); }
+.tn.on::after { opacity: 1; }
 .tn-c { width: 10px; height: 10px; flex: 0 0 auto; opacity: .6; transition: transform .15s ease; }
 .tn[aria-expanded="true"] .tn-c { transform: rotate(180deg); opacity: 1; }
 
 .nav-panel {
   position: absolute; top: calc(100% + 6px); left: 12px; z-index: 45;
   width: min(460px, calc(100vw - 24px));
-  max-height: calc(100vh - var(--topbar-h) - 20px);
+  max-height: calc(100vh - var(--topbar-h) - var(--ok-suite-vis, 0px) - 20px);
   overflow-y: auto; overscroll-behavior: contain;
   padding: 12px 12px 10px;
   background: var(--bg-raise); color: var(--ink);
-  border: 1px solid var(--line); border-radius: 12px;
-  box-shadow: 0 18px 48px rgba(31,26,18,.16), 0 2px 6px rgba(31,26,18,.06);
+  border: 1px solid var(--line); border-top: 3px solid var(--ok-saffron); border-radius: var(--ok-r);
+  box-shadow: var(--ok-shadow-lg);
   font-size: 14px; line-height: 1.4;
   animation: np-in .14s ease;
 }
@@ -244,13 +249,13 @@ body.search-open .search-wrap { display: flex; }
   :root { --topbar-h: 102px; }
   .topbar {
     display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto auto;
-    grid-template-rows: 58px 43px; gap: 0 12px;
+    grid-template-rows: 60px 41px; gap: 0 12px;
   }
   #searchBtn { justify-self: end; }
   .search-wrap { left: 14px; right: 14px; width: auto; }
   .topnav {
     grid-column: 1 / -1; grid-row: 2;
-    margin: 0 -14px; padding: 0 12px;
+    margin: 0 -14px; padding: 0 3px;
     border-top: 1px solid var(--line-soft);
     overflow-x: auto; scrollbar-width: none;
   }
@@ -269,8 +274,8 @@ body.search-open .search-wrap { display: flex; }
 /* The list of all Parts is a drawer behind the menu button, on every page.
    The left side of a Part or an article belongs to its own Part tree. */
 .sidebar {
-  position: fixed; left: 0; top: var(--topbar-h); z-index: 35;
-  width: min(320px, 86vw); height: calc(100vh - var(--topbar-h));
+  position: fixed; left: 0; top: calc(var(--topbar-h) + var(--ok-suite-vis, 0px)); z-index: 35;
+  width: min(320px, 86vw); height: calc(100vh - var(--topbar-h) - var(--ok-suite-vis, 0px));
   overflow-y: auto; overscroll-behavior: contain;
   border-right: 1px solid var(--line);
   padding: 14px 8px 60px 14px;
@@ -283,7 +288,7 @@ body.nav-open .sidebar { transform: none; visibility: visible; transition: trans
 
 .scrim { display: none; }
 body.nav-open .scrim {
-  display: block; position: fixed; inset: var(--topbar-h) 0 0 0;
+  display: block; position: fixed; inset: calc(var(--topbar-h) + var(--ok-suite-vis, 0px)) 0 0 0;
   background: rgba(0,0,0,.36); z-index: 30;
 }
 
@@ -324,11 +329,11 @@ main {
 
 .page-head { margin-bottom: 22px; }
 .eyebrow {
-  font-size: 11px; font-weight: 700; letter-spacing: .13em;
-  text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px;
+  font: 700 11.5px/1.3 var(--sans); letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ok-saffron-ink); margin-bottom: 6px;
 }
-h1 { font-family: var(--serif); font-size: clamp(26px, 3.4vw, 38px); line-height: 1.15; margin: 0 0 8px; letter-spacing: -.015em; }
-h2 { font-family: var(--serif); font-size: 23px; margin: 34px 0 12px; letter-spacing: -.01em; }
+h1 { font-family: var(--serif); font-size: clamp(26px, 3.4vw, 38px); font-weight: 600; line-height: 1.15; margin: 0 0 8px; letter-spacing: -.015em; color: var(--head); }
+h2 { font-family: var(--serif); font-size: 23px; font-weight: 600; margin: 34px 0 12px; letter-spacing: -.01em; color: var(--head); }
 h3 { font-size: 15px; margin: 22px 0 8px; letter-spacing: .01em; }
 p  { margin: 0 0 12px; }
 .lede { font-size: 17px; color: var(--ink-soft); max-width: 66ch; }
@@ -376,7 +381,7 @@ p  { margin: 0 0 12px; }
 .pill.green { background: var(--green-soft); color: var(--green); }
 .pill.blue  { background: var(--blue-soft); color: var(--blue); }
 .pill.amber { background: var(--amber-soft); color: var(--amber); }
-.pill.red   { background: var(--accent-soft); color: var(--accent); }
+.pill.red   { background: var(--red-soft); color: var(--red); }
 
 .crumbs { font-size: 12.5px; color: var(--ink-faint); margin-bottom: 10px; }
 .crumbs a { color: var(--ink-soft); }
