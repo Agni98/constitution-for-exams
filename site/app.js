@@ -525,8 +525,8 @@
       var touched = (m.articles || []).slice(0, 10).join(', ') +
         ((m.articles || []).length > 10 ? ', and others' : '');
       if (touched) b += '<div class="peek-bare"><h5>Articles it touched</h5><p>' + esc(touched) + '</p></div>';
-      return h + b + '<div class="peek-foot"><a class="chip" href="#/amendments">' +
-        'All amendments &rarr;</a></div>';
+      return h + b + '<div class="peek-foot"><a class="chip" href="#/amendments/' + m.num + '">' +
+        'Read it in full &rarr;</a></div>';
     }
     return '';
   }
@@ -2462,39 +2462,268 @@
     return out;
   }
 
-  function pageAmendments() {
-    var list = allAmendments();
-    var traced = AMENDS.length;
-    var s = '<div class="page-head"><div class="eyebrow">Since 1950</div><h1>All 106 amendments</h1>' +
-      '<p class="lede">The articles listed against an amendment are read straight out of the ' +
-      'footnotes printed under the official text, so they are the ones the government\'s own ' +
-      'edition credits to it — ' + traced + ' of the 106 leave such a trace. The latest in force ' +
-      'is the 106th (2023), which reserved one-third of Lok Sabha and State Assembly seats for ' +
-      'women. Nothing after it has been enacted.</p></div>';
-    s += '<div class="section-tag">Newest first</div>';
-    list.slice().reverse().forEach(function (m) {
+  /* ---------- amendments ----------
+
+     All 106 in six periods, oldest first. Each one opens to what it changed,
+     the changes one by one for the largest, what led to it, and what the
+     courts did with it. Above the list sit how an amendment is passed, a
+     search box, and filters: the amendments the exam returns to most, the
+     ones the courts struck down, and each topic. #/amendments/42 opens the
+     page with the 42nd unfolded. */
+  var AMD_ERAS = window.COI_AMEND_ERAS || [];
+  var AMD_HOW = window.COI_AMEND_HOW || null;
+  var AMD_TOPICS = [
+    ['r', 'Rights'], ['q', 'Reservation'], ['p', 'Parliament and elections'],
+    ['s', 'Union and the States'], ['c', 'Courts'], ['e', 'Emergency'], ['m', 'Taxes'],
+    ['l', 'Panchayats and cities'], ['n', 'Land and property'], ['g', 'Languages']
+  ];
+  var amdView = { show: 'all', topic: '', newest: false };
+  var amdOpen = 0;
+  var AMD_TEXT = null;
+
+  function amdHas(meta, topic) {
+    return (' ' + (meta.t || '') + ' ').indexOf(' ' + topic + ' ') >= 0;
+  }
+
+  // Everything a search can match, per amendment: its number, year, words
+  // and the articles it touched, with "Art. 21" also findable as "article 21".
+  function amdText() {
+    if (AMD_TEXT) return AMD_TEXT;
+    AMD_TEXT = {};
+    allAmendments().forEach(function (m) {
       var meta = AMETA[m.num] || {};
-      s += '<details class="acc"><summary>' + ordinal(m.num) + ' Amendment' +
-        (m.year ? ', ' + esc(m.year) : '') +
-        (meta.short ? ' — ' + esc(meta.short) : '') + '</summary><div>';
-      if (meta.what) s += '<p>' + esc(meta.what) + '</p>';
-      s += '<p>' + commencement(m) + '</p>';
-      if (m.articles.length) {
-        s += '<div class="chiprow">';
-        m.articles.forEach(function (r) {
-          var n = r.replace('Art. ', '');
-          s += BY_NUM[n]
-            ? '<button class="chip peek" type="button" data-peek="art:' + esc(n) + '">' +
-              esc(r) + '</button>'
-            : '<span class="chip">' + esc(r) + '</span>';
-        });
-        s += '</div>';
-      }
-      if (m.schedules.length) s += '<p style="margin-top:8px;font-size:13px;color:var(--ink-faint)">Also touched: ' +
-        esc(m.schedules.join(', ')) + '</p>';
-      s += '</div></details>';
+      var topics = AMD_TOPICS.filter(function (t) { return amdHas(meta, t[0]); })
+        .map(function (t) { return t[1]; });
+      AMD_TEXT[m.num] = [ordinal(m.num), m.year, meta.short, meta.what, (meta.list || []).join(' '),
+        meta.why, meta.court, topics.join(' '), (m.articles || []).join(' '),
+        (m.articles || []).join(' ').replace(/Art\. /g, 'article '), (m.schedules || []).join(' ')]
+        .join(' ').toLowerCase();
     });
+    return AMD_TEXT;
+  }
+
+  function amdCaseLinks(ids) {
+    return (ids || []).map(function (id) {
+      var r = REG_BY[id];
+      return r ? '<a class="amd-case" href="#/judgment/' + esc(id) + '">' + icon('seal') +
+        '<span>' + esc(r.short) + ' <small>' + esc(String(r.year)) + '</small></span></a>' : '';
+    }).join('');
+  }
+
+  function amdCard(m) {
+    var meta = AMETA[m.num] || {};
+    var tags = (meta.key ? '<span class="amd-tag key">Know first</span>' : '') +
+      (meta.struck ? '<span class="amd-tag struck">' +
+        (meta.struck === 2 ? 'Struck down' : 'Partly struck down') + '</span>' : '');
+    var body = meta.what ? '<p class="amd-what">' + para(meta.what) + '</p>' : '';
+    if (meta.list && meta.list.length)
+      body += '<ul class="amd-list">' + meta.list.map(function (x) {
+        return '<li>' + para(x) + '</li>';
+      }).join('') + '</ul>';
+    if (meta.why)
+      body += '<div class="amd-note"><h4>Background</h4><p>' + para(meta.why) + '</p></div>';
+    if (meta.court || (meta.cases || []).length)
+      body += '<div class="amd-note court"><h4>In the courts</h4>' +
+        (meta.court ? '<p>' + para(meta.court) + '</p>' : '') +
+        ((meta.cases || []).length ? '<div class="amd-cases">' + amdCaseLinks(meta.cases) + '</div>' : '') +
+        '</div>';
+    var facts = '<div class="amd-facts"><div class="amd-when">' + commencement(m) + '</div>';
+    if ((m.articles || []).length) {
+      facts += '<div class="amd-touched"><h4>Articles changed</h4><div class="chiprow">' +
+        m.articles.map(function (r) {
+          var n = r.replace('Art. ', '');
+          return BY_NUM[n]
+            ? '<button class="chip peek" type="button" data-peek="art:' + esc(n) + '">' + esc(r) + '</button>'
+            : '<span class="chip">' + esc(r) + '</span>';
+        }).join('') + '</div></div>';
+    }
+    if ((m.schedules || []).length)
+      facts += '<div class="amd-touched"><h4>Schedules changed</h4><p>' +
+        esc(m.schedules.join(', ')) + '</p></div>';
+    facts += '</div>';
+    return '<details class="amd' + (meta.key ? ' is-key' : '') + '" id="amd-' + m.num + '" data-n="' + m.num + '">' +
+      '<summary><span class="amd-no"><b>' + ordinal(m.num) + '</b>' +
+      (m.year ? '<small>' + esc(m.year) + '</small>' : '') + '</span>' +
+      '<span class="amd-h"><b>' + esc(meta.short || ordinal(m.num) + ' Amendment') + '</b>' +
+      (tags ? '<span class="amd-tags">' + tags + '</span>' : '') + '</span>' +
+      icon('chev', 'amd-chev') + '</summary>' +
+      '<div class="amd-body">' + body + facts + '</div></details>';
+  }
+
+  function amdListHTML() {
+    var list = allAmendments(), eras = AMD_ERAS.slice();
+    if (amdView.newest) eras.reverse();
+    return eras.map(function (e) {
+      var items = list.slice(e.from - 1, e.to);
+      if (amdView.newest) items.reverse();
+      return '<section class="amd-era" id="amd-era-' + e.from + '">' +
+        '<header class="amd-era-head"><span class="amd-years">' + esc(e.years) +
+        '<i>' + ordinal(e.from) + ' to ' + ordinal(e.to) + '</i></span>' +
+        '<h2>' + esc(e.t) + '</h2><p>' + para(e.p) + '</p></header>' +
+        '<div class="amd-items">' + items.map(amdCard).join('') + '</div></section>';
+    }).join('');
+  }
+
+  function amdHowHTML() {
+    if (!AMD_HOW) return '';
+    return '<details class="amd-how"><summary>' + icon('scales', 'amd-how-ico') +
+      '<span><b>How an amendment is passed</b><small>Article 368</small></span>' +
+      icon('chev', 'amd-chev') + '</summary><div class="amd-how-body">' +
+      '<div class="amd-kinds">' + AMD_HOW.kinds.map(function (k, i) {
+        return '<div class="amd-kind"><span class="amd-kind-n">' + (i + 1) + '</span>' +
+          '<h3>' + esc(k.t) + '</h3><p>' + para(k.need) + '</p>' +
+          '<p class="amd-ex"><b>Used for</b> ' + para(k.ex) + '</p></div>';
+      }).join('') + '</div>' +
+      '<ul class="amd-rules">' + AMD_HOW.rules.map(function (r) {
+        return '<li>' + para(r) + '</li>';
+      }).join('') + '</ul>' +
+      '<div class="amd-cases">' + amdCaseLinks(AMD_HOW.cases) +
+      '<a class="amd-case" href="#/article/368">' + icon('doc') +
+      '<span>Article 368 <small>the text</small></span></a></div></div></details>';
+  }
+
+  function pageAmendments(open) {
+    var list = allAmendments();
+    var nKey = list.filter(function (m) { return (AMETA[m.num] || {}).key; }).length;
+    var nStruck = list.filter(function (m) { return (AMETA[m.num] || {}).struck; }).length;
+    var latest = list[list.length - 1];
+    var chip = function (key, label, n) {
+      return '<button type="button" class="amd-chip' + (amdView.show === key ? ' on' : '') +
+        '" data-amdshow="' + key + '" aria-pressed="' + (amdView.show === key) + '">' + label +
+        ' <i>' + n + '</i></button>';
+    };
+    var s = '<div class="page-head"><div class="eyebrow">Since 1950</div><h1>Amendments</h1>' +
+      '<p class="lede">Parliament has amended the Constitution ' + list.length + ' times, most recently in ' +
+      esc(latest.year) + '.</p></div>';
+    s += amdHowHTML();
+    s += '<div class="amd-tools">' +
+      '<label class="amd-search">' + icon('search') +
+      '<input id="amdFilter" type="search" placeholder="Search a number, year, article or word" ' +
+      'autocomplete="off" spellcheck="false" aria-label="Search the amendments"></label>' +
+      '<div class="amd-sort" role="group" aria-label="Order">' +
+      '<button type="button" data-amdsort="old"' + (amdView.newest ? '' : ' class="on"') + '>Oldest first</button>' +
+      '<button type="button" data-amdsort="new"' + (amdView.newest ? ' class="on"' : '') + '>Newest first</button>' +
+      '</div></div>';
+    s += '<div class="amd-filters" role="group" aria-label="Show">' +
+      chip('all', 'All', list.length) + chip('key', 'Know these first', nKey) +
+      chip('struck', 'Struck down by the courts', nStruck) + '</div>';
+    s += '<div class="amd-topics" role="group" aria-label="Topic">' + AMD_TOPICS.map(function (t) {
+      var n = list.filter(function (m) { return amdHas(AMETA[m.num] || {}, t[0]); }).length;
+      return '<button type="button" class="amd-topic' + (amdView.topic === t[0] ? ' on' : '') +
+        '" data-amdtopic="' + t[0] + '" aria-pressed="' + (amdView.topic === t[0]) + '">' +
+        esc(t[1]) + ' <i>' + n + '</i></button>';
+    }).join('') + '</div>';
+    s += '<label class="amd-topic-pick"><span>Topic</span><select id="amdTopic">' +
+      '<option value="">All topics</option>' + AMD_TOPICS.map(function (t) {
+        var n = list.filter(function (m) { return amdHas(AMETA[m.num] || {}, t[0]); }).length;
+        return '<option value="' + t[0] + '"' + (amdView.topic === t[0] ? ' selected' : '') + '>' +
+          esc(t[1]) + ' (' + n + ')</option>';
+      }).join('') + '</select></label>';
+    s += '<nav class="amd-jump" aria-label="Periods"><span class="amd-jump-l">Periods</span>' + AMD_ERAS.map(function (e) {
+      return '<button type="button" data-amdera="' + e.from + '">' + esc(e.years.split(' ')[0]) + '</button>';
+    }).join('') + '</nav>';
+    s += '<div class="amd-count" id="amdCount" aria-live="polite"></div>' +
+      '<div id="amdList">' + amdListHTML() + '</div>' +
+      '<p class="amd-none" id="amdNone" hidden>No amendment matches.</p>';
+    amdOpen = open ? +open : 0;
     return s;
+  }
+
+  // After the page is drawn: apply the filters, and unfold an amendment the
+  // address names.
+  function wireAmend() {
+    filterAmend();
+    if (!amdOpen) return;
+    var el = $('#amd-' + amdOpen);
+    amdOpen = 0;
+    if (!el) return;
+    el.open = true;
+    window.scrollTo(0, Math.max(0, el.getBoundingClientRect().top + window.scrollY - 80));
+  }
+
+  function filterAmend() {
+    var listEl = $('#amdList');
+    if (!listEl) return;
+    var box = $('#amdFilter'), text = amdText();
+    var q = (box ? box.value : '').trim().toLowerCase().replace(/\s+/g, ' ');
+    var num = q.match(/^(\d{1,3})(?:st|nd|rd|th)?(?: amendment)?$/);
+    // "article 21" finds Article 21 itself, not 21A or 210
+    var art = q.match(/^art(?:icle)?\.? ?(\d{1,3}[a-z]{0,3})$/);
+    var artRe = art ? new RegExp('\\barticles?\\b[^.]{0,60}?\\b' + art[1] + '\\b') : null;
+    var words = q ? q.split(' ') : [];
+    var shown = 0, last = null, all = allAmendments();
+    listEl.querySelectorAll('.amd').forEach(function (el) {
+      var n = +el.getAttribute('data-n'), meta = AMETA[n] || {};
+      var ok = (amdView.show !== 'key' || meta.key) && (amdView.show !== 'struck' || meta.struck) &&
+        (!amdView.topic || amdHas(meta, amdView.topic));
+      if (ok && q) {
+        if (num && +num[1] >= 1 && +num[1] <= all.length) ok = n === +num[1];
+        else if (art) ok = (all[n - 1].articles || []).some(function (r) {
+          return r.replace('Art. ', '').toLowerCase() === art[1];
+        }) || artRe.test(text[n]);
+        else ok = words.every(function (w) { return text[n].indexOf(w) >= 0; });
+      }
+      el.hidden = !ok;
+      if (ok) { shown++; last = el; }
+    });
+    listEl.querySelectorAll('.amd-era').forEach(function (sec) {
+      sec.hidden = !sec.querySelector('.amd:not([hidden])');
+    });
+    var total = allAmendments().length, filtered = !!(q || amdView.show !== 'all' || amdView.topic);
+    $('#amdCount').textContent = filtered ? shown + ' of ' + total + ' amendments' : '';
+    $('#amdNone').hidden = shown > 0;
+    $('.amd-jump').hidden = filtered;
+    // a search that leaves one amendment opens it
+    if (q && shown === 1 && last) last.open = true;
+  }
+
+  function amdTopic(k) {
+    amdView.topic = k;
+    document.querySelectorAll('[data-amdtopic]').forEach(function (x) {
+      var on = x.getAttribute('data-amdtopic') === k;
+      x.classList.toggle('on', on);
+      x.setAttribute('aria-pressed', String(on));
+    });
+    var pick = $('#amdTopic');
+    if (pick) pick.value = k;
+    filterAmend();
+  }
+
+  // The filter and order buttons. True when the click was one of them.
+  function amdClick(t) {
+    var b;
+    if ((b = t.closest('[data-amdshow]'))) {
+      amdView.show = b.getAttribute('data-amdshow');
+      document.querySelectorAll('[data-amdshow]').forEach(function (x) {
+        x.classList.toggle('on', x === b);
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+      filterAmend();
+      return true;
+    }
+    if ((b = t.closest('[data-amdtopic]'))) {
+      var k = b.getAttribute('data-amdtopic');
+      amdTopic(amdView.topic === k ? '' : k);
+      return true;
+    }
+    if ((b = t.closest('[data-amdsort]'))) {
+      var newest = b.getAttribute('data-amdsort') === 'new';
+      if (newest !== amdView.newest) {
+        amdView.newest = newest;
+        $('#amdList').innerHTML = amdListHTML();
+        document.querySelectorAll('[data-amdsort]').forEach(function (x) {
+          x.classList.toggle('on', x === b);
+        });
+        filterAmend();
+      }
+      return true;
+    }
+    if ((b = t.closest('[data-amdera]'))) {
+      var sec = $('#amd-era-' + b.getAttribute('data-amdera'));
+      if (sec) window.scrollTo(0, Math.max(0, sec.getBoundingClientRect().top + window.scrollY - 76));
+      return true;
+    }
+    return false;
   }
 
   function ordinal(n) {
@@ -3107,7 +3336,7 @@
     { id: 'exam', label: 'Important Articles', build: navExam, on: /^#\/(exam|mcq)(\/|$)/ },
     { id: 'maps', label: 'Mind Maps', build: navMaps, wide: true, on: /^#\/maps$/ },
     { id: 'cases', label: 'Judgments', build: navCases, on: /^#\/(cases|judgment)(\/|$)/ },
-    { id: 'amend', label: 'Amendments', build: navAmend, on: /^#\/amendments$/ },
+    { id: 'amend', label: 'Amendments', build: navAmend, on: /^#\/amendments(\/\d+)?$/ },
     { id: 'sched', label: 'Schedules', build: navSched, on: /^#\/schedules?(\/|$)/ }
   ];
   var NAV_OPEN = null;
@@ -3117,7 +3346,7 @@
   var START_CASES = ['Golak Nath', 'Kesavananda Bharati', 'Maneka Gandhi', 'Minerva Mills',
     'Indra Sawhney', 'S.R. Bommai', 'Vishaka', 'Puttaswamy'];
   // Likewise the amendments a reader is most often sent to.
-  var KEY_AMENDS = [1, 7, 24, 42, 44, 52, 61, 73, 74, 86, 101, 103, 106];
+  var KEY_AMENDS = Object.keys(AMETA).filter(function (n) { return AMETA[n].key; }).map(Number);
 
   function navById(id) {
     return NAV.filter(function (n) { return n.id === id; })[0] || null;
@@ -3398,8 +3627,8 @@
         : '<p class="np-p">No amendment is footnoted against this article.</p>');
     }
     s += '<div class="np-sec">' +
-      npRow({ href: '#/amendments', t: 'All 106 amendments, newest first', cls: 'np-all' }) + '</div>';
-    s += '<div class="np-sec">' + npHead('Landmark amendments') +
+      npRow({ href: '#/amendments', t: 'All 106 amendments', cls: 'np-all' }) + '</div>';
+    s += '<div class="np-sec">' + npHead('Know these first') +
       KEY_AMENDS.filter(function (n) { return AMETA[n]; }).map(function (n) {
         return npRow({ data: 'data-navamd="' + n + '"', n: ordinal(n), t: esc(AMETA[n].short),
           c: all[n - 1] ? all[n - 1].year : '' });
@@ -3466,14 +3695,14 @@
     }).join('');
     openSheet(
       '<div class="sheet-head">' +
-      '<a class="cc-where" href="#/amendments">' + ordinal(n) + ' Amendment' +
+      '<a class="cc-where" href="#/amendments/' + n + '">' + ordinal(n) + ' Amendment' +
       (m.year ? ' &middot; ' + esc(m.year) : '') + ' &rarr;</a>' +
       '<h2 id="sheetName">' + esc(meta.short || ordinal(n) + ' Amendment') + '</h2>' +
       '<div class="case-meta">' + commencement(m) + '</div></div>' +
       (meta.what ? '<p>' + para(meta.what) + '</p>' : '') +
       (arts ? '<div class="section-tag">Articles it touched</div><div class="chiprow">' + arts + '</div>' : '') +
       ((m.schedules || []).length ? '<p class="sm">Also touched: ' + esc(m.schedules.join(', ')) + '</p>' : '') +
-      '<div class="sheet-foot"><a class="chip" href="#/amendments">All 106 amendments &rarr;</a>' +
+      '<div class="sheet-foot"><a class="chip" href="#/amendments/' + n + '">Read it in full &rarr;</a>' +
       '<button class="chip" type="button" data-close="1">Close</button></div>');
   }
 
@@ -3613,7 +3842,7 @@
     else if (h === '#/parts') out = pageParts();
     else if ((m = h.match(/^#\/preamble(?:\/([a-z]+))?$/))) out = pagePreamble(m[1]);
     else if (h === '#/schedules') out = pageSchedules();
-    else if (h === '#/amendments') out = pageAmendments();
+    else if ((m = h.match(/^#\/amendments(?:\/(\d+))?$/))) out = pageAmendments(m[1]);
     else if ((m = h.match(/^#\/judgment\/([^\/]+)$/))) out = pageJudgment(decodeURIComponent(m[1]));
     else if (h === '#/cases') out = pageCases();
     else if ((m = h.match(/^#\/exam(?:\/([123]))?$/))) out = pageExam(m[1]);
@@ -3644,6 +3873,7 @@
     tabsReveal($('#main .atabs'));
     if (h === '#/cases') filterCases();
     if (h.indexOf('#/exam') === 0) filterExam();
+    if (h.indexOf('#/amendments') === 0) wireAmend();
     if (home) wireHome();
 
     partSpy(h);
@@ -3831,6 +4061,7 @@
         openExam(exRow.getAttribute('data-k'));
         return;
       }
+      if (e.target.closest && amdClick(e.target)) return;
       var sortBtn = e.target.closest && e.target.closest('.case-sort button');
       if (sortBtn) { sortCases(sortBtn.getAttribute('data-sort')); return; }
       var tierBtn = e.target.closest && e.target.closest('.ex-sort button');
@@ -3855,6 +4086,8 @@
     document.addEventListener('input', function (e) {
       if (e.target.id === 'caseFilter') filterCases();
       if (e.target.id === 'examFilter') filterExam();
+      if (e.target.id === 'amdFilter') filterAmend();
+      if (e.target.id === 'amdTopic') amdTopic(e.target.value);
     });
     // The font choice is a set of radio buttons, which the arrow keys also change.
     document.addEventListener('change', function (e) {
