@@ -642,6 +642,24 @@
       'not. When it matters, read the bare text and the source.</p></div>' +
       '</div>';
 
+    /* ---- the exam notes: where they come from, and how far they are checked.
+       This stood at the foot of "What the examiners ask" until that page was
+       kept to the notes themselves. ---- */
+    s += tag('Where the exam notes come from');
+    s += '<div class="card"><p>The notes under "What the examiners ask" are written for this ' +
+      'site. They describe what past papers have tested: the UPSC Civil Services Prelims, UPSC ' +
+      'Mains General Studies Paper II, UPPCS Mains and the polity sections of other State papers. ' +
+      'No question paper is reproduced or quoted here.</p>' +
+      '<p>The commissions do not tag their questions by article. So linking a question to an ' +
+      'article is a judgment made for this site. A line under "Seen in the papers" says that a ' +
+      'year\'s paper had a question on that subject. The line does not quote the question or ' +
+      'give its number.</p>' +
+      '<p>Each line can carry a citation: the paper, the question number and a link to it. Right ' +
+      'now <strong>' + examCited() + ' of ' + examSightings() + '</strong> lines do. The figure is ' +
+      'counted from the data each time this page is drawn. For the questions themselves, read the ' +
+      '<a href="' + esc(PAPERS_URL) + '" target="_blank" rel="noopener">official papers at ' +
+      'upsc.gov.in</a>.</p></div>';
+
     /* ---- the source ---- */
     s += tag('Where the text comes from');
     s += '<div class="card"><h3>' + esc(src.title || '') + '</h3>' +
@@ -2129,7 +2147,7 @@
   // flatten an entry to plain text, for the filter and the site search
   function examText(x) {
     if (!x) return '';
-    return [x.why, (x.concepts || []).map(function (c) {
+    return [x.says, x.why, (x.concepts || []).map(function (c) {
       return typeof c === 'string' ? c : (c.t || '') + ' ' + (c.d || '');
     }).join(' '), (x.seen || []).map(function (c) { return sighting(c).text; }).join(' '), x.trap,
       (x.papers || []).join(' ')].join(' ');
@@ -2201,9 +2219,16 @@
     };
   }
 
+  // "UPSC Pre 2024 — the right to privacy" reads as a year, a paper and a topic
+  var SEEN_PAPER = { 'UPSC Pre': 'Prelims', 'UPSC Mains': 'Mains', 'UPPCS Mains': 'UPPCS',
+    'State PCS': 'State PCS' };
   function sightingLI(c) {
     var g = sighting(c);
-    var li = '<li>' + esc(g.text);
+    var m = g.text.match(/^(UPSC Pre|UPSC Mains|UPPCS Mains|State PCS)\s+(\d{4})\s*[—–-]\s*(.*)$/);
+    var li = m
+      ? '<li><span class="seen-y">' + esc(m[2]) + '</span><span class="seen-p">' +
+        esc(SEEN_PAPER[m[1]] || m[1]) + '</span><span class="seen-t">' + esc(m[3]) + '</span>'
+      : '<li><span class="seen-t">' + esc(g.text) + '</span>';
     if (g.cited) {
       var label = (g.q ? 'Q' + esc(g.q) + ' &middot; ' : '') + esc(g.name);
       li += g.url
@@ -2215,8 +2240,6 @@
     return li + '</li>';
   }
 
-  // How many of a set of sightings carry a citation. Printed rather than
-  // claimed, so the page cannot drift from the data.
   function citedCount(list) {
     return (list || []).filter(function (c) { return sighting(c).cited; }).length;
   }
@@ -2226,26 +2249,46 @@
   function conceptLI(c) {
     if (typeof c === 'string') return '<li><b>' + para(c) + '</b></li>';
     return '<li><b>' + para(c.t || '') + '</b>' +
-      (c.d ? '<span>' + para(c.d) + '</span>' : '') + '</li>';
+      (c.d ? '<p>' + para(c.d) + '</p>' : '') + '</li>';
   }
 
-  function examBody(entry) {
+
+  /* A note in six parts, in the order a reader uses them: what the provision
+     says, why it is asked, what a question tests, where the mark is lost, the
+     papers it has been seen in, and where to practise it. `inSheet` adds a way
+     back to the provision itself, which the article page does not need. */
+  function examBody(entry, inSheet) {
+    var e = EXAM_LIST.filter(function (z) { return z.x === entry; })[0];
     var s = '';
-    if (entry.why) s += '<div class="exam-why">' + para(entry.why, 'p') + '</div>';
+    var first = entry.why ? firstSentence(entry.why) : '';
+    if (/\u2026$/.test(first)) first = '';
+    var says = entry.says || first;
+    var why = entry.says ? entry.why : String(entry.why || '').slice(first.length).trim();
+    if (says) s += '<div class="exam-says"><h5>What it says</h5><p>' + para(says) + '</p></div>';
+    if (why) s += '<div class="exam-sec"><h5>Why it is asked</h5>' + para(why, 'p') + '</div>';
     if (entry.concepts && entry.concepts.length) {
-      s += '<div class="exam-sec"><h5>What it means, in plain words</h5>' +
-        '<ul class="exam-list">' + entry.concepts.map(conceptLI).join('') + '</ul></div>';
+      s += '<div class="exam-sec"><h5>What the question tests</h5>' +
+        '<ol class="exam-points">' + entry.concepts.map(conceptLI).join('') + '</ol></div>';
     }
+    if (entry.trap) s += '<div class="exam-trap"><h5>Where the mark is lost</h5>' +
+      para(entry.trap, 'p') + '</div>';
     if (entry.seen && entry.seen.length) {
       var nc = citedCount(entry.seen);
-      s += '<div class="exam-sec"><h5>Seen in the papers' +
-        '<span class="cite-count' + (nc ? ' some' : '') + '">' + nc + ' of ' +
-        entry.seen.length + ' cited</span></h5>' +
-        '<ul class="exam-list seen">' + entry.seen.map(sightingLI).join('') +
-        '</ul></div>';
+      s += '<div class="exam-sec exam-seen-sec"><h5>Seen in the papers</h5>' +
+        '<p class="seen-note' + (nc ? ' some' : '') + '">' + (nc
+          ? nc + ' of ' + entry.seen.length + ' checked against the question paper'
+          : 'Not yet checked against the question papers') + '</p>' +
+        '<ul class="exam-seen">' + entry.seen.map(sightingLI).join('') + '</ul></div>';
     }
-    if (entry.trap) s += '<div class="exam-trap"><h5>&#9888; Where the mark is lost</h5>' +
-      para(entry.trap, 'p') + '</div>';
+    if (e) {
+      var nm = (MCQ[e.key] || []).length, nj = judgmentsFor(e.key).length;
+      var go = (nm ? '<a class="chip go" href="' + e.href + '/mcq">' + icon('check') +
+          'Practise its MCQs <i>' + nm + '</i></a>' : '') +
+        (nj ? '<a class="chip go" href="' + e.href + '/judgments">' + icon('seal') +
+          'Its judgments <i>' + nj + '</i></a>' : '') +
+        (inSheet ? '<a class="chip go" href="' + e.href + '">' + icon('doc') + 'Read the text</a>' : '');
+      if (go) s += '<div class="exam-go">' + go + '</div>';
+    }
     return s;
   }
 
@@ -2266,90 +2309,106 @@
       '<h2 id="sheetName">' + esc(e.sub) + '</h2>' +
       '<div class="case-meta">' + examPills(e.x) + '</div>' +
       '</div>' +
-      examBody(e.x) +
+      examBody(e.x, true) +
       '<div class="sheet-foot"><a class="chip" href="' + e.href + '">Read ' +
       esc(e.label) + ' in full &rarr;</a>' +
       '<button class="chip" type="button" data-close="1">Close</button></div>');
   }
 
+  // Every provision on the list is asked in Prelims, so what tells them apart
+  // is whether UPSC Mains asks it too.
+  var EXAM_PAPERS = [['mains', 'Prelims and Mains'], ['pre', 'Prelims only']];
+  function examIn(x, paper) {
+    var mains = (x.papers || []).indexOf('UPSC Mains') >= 0;
+    return !paper || (paper === 'mains' ? mains : !mains);
+  }
   function examRow(e) {
     var t = TIER[e.tier] || TIER[3];
-    var chips = (e.x.concepts || []).slice(0, 3).map(function (c) {
-      return '<span class="ex-chip">' +
-        esc(shorten(typeof c === 'string' ? c : c.t, 46)) + '</span>';
-    }).join('');
+    var tags = examIn(e.x, 'mains') ? '<span class="ex-paper">Also asked in Mains</span>' : '';
+    var n = (e.x.concepts || []).length;
     return '<a class="ex-row t' + e.tier + '" href="' + e.href + '" data-k="' + esc(e.key) +
-      '" title="Open the full note">' +
+      '" title="Open the note">' +
       '<span class="ex-rn">' + esc(e.label.replace(/^Article /, 'Art. ')) + '</span>' +
       '<span class="ex-body"><b>' + esc(e.sub) + '</b>' +
-      '<small>' + esc(firstSentence(e.x.why)) + '</small>' +
-      (chips ? '<span class="ex-chips">' + chips + '</span>' : '') + '</span>' +
-      '<span class="ex-tier pill ' + t.pill + '">' + esc(t.label) + '</span></a>';
+      '<small>' + esc(e.x.says || firstSentence(e.x.why)) + '</small>' +
+      '<span class="ex-meta">' + tags + (n ? '<span class="ex-n">' + n + ' points</span>' : '') +
+      '</span></span>' +
+      '<span class="ex-tier pill ' + t.pill + '">' + esc(t.label) + '</span>' +
+      icon('chev', 'ex-chev') + '</a>';
   }
+
   function shorten(s, n) {
     s = String(s || '');
     return s.length > n ? s.slice(0, n - 1).replace(/[\s,;—-]+$/, '') + '…' : s;
   }
 
+  var examView = { tier: 'all', paper: '', order: 'tier' };
+
   function pageExam(tier) {
     // #/exam/1 opens on the Core tier, so the menu bar can link straight to it.
-    var want = tier || 'all';
-    function tierBtn(t, label) {
-      return '<button data-tier="' + t + '"' + (t === want ? ' class="on"' : '') + '>' +
-        label + '</button>';
-    }
-    var n1 = EXAM_LIST.filter(function (e) { return e.tier === 1; }).length;
-    var n2 = EXAM_LIST.filter(function (e) { return e.tier === 2; }).length;
-    var arts = EXAM_LIST.filter(function (e) { return /^\d/.test(e.key); }).length;
-
+    examView.tier = tier || 'all';
+    var count = function (t) {
+      return EXAM_LIST.filter(function (e) { return t === 'all' || e.tier === +t; }).length;
+    };
+    var tcard = function (t, label, blurb) {
+      return '<button type="button" class="ex-tcard t' + t + (examView.tier === t ? ' on' : '') +
+        '" data-extier="' + t + '" aria-pressed="' + (examView.tier === t) + '"><b>' + count(t) +
+        '</b><strong>' + esc(label) + '</strong><small>' + esc(blurb) + '</small></button>';
+    };
     var s = '<div class="page-head"><div class="eyebrow">Priority list</div>' +
       '<h1>What the examiners ask</h1>' +
-      '<p class="lede">' + arts + ' articles, the Preamble and eight Schedules, ranked by how ' +
-      'often they actually turn up. Each one carries the concepts the question is really testing, ' +
-      'the years it has been seen, and the place candidates lose the mark. The same block sits ' +
-      'under the bare text on every article page, below the landmark judgments.</p>' +
-      '<p class="mq-cta"><a class="chip" href="#/mcq">Open the MCQ Bank &rarr;</a></p></div>';
-
-    s += '<div class="ex-tools">' +
-      '<input id="examFilter" type="search" placeholder="Filter — try &ldquo;emergency&rdquo;, ' +
-      '&ldquo;Money Bill&rdquo;, &ldquo;243&rdquo;, &ldquo;Rajya Sabha&rdquo;" ' +
-      'autocomplete="off" spellcheck="false">' +
-      '<div class="ex-sort">' +
-      tierBtn('all', 'All ' + EXAM_LIST.length) +
-      tierBtn('1', 'Core ' + n1) +
-      tierBtn('2', 'Recurs ' + n2) +
-      tierBtn('3', 'Worth holding ' + (EXAM_LIST.length - n1 - n2)) +
-      '</div><div class="ex-count" id="examCount"></div></div>';
-
-    s += '<div class="ex-list" id="examList">';
-    [1, 2, 3].forEach(function (t) {
-      var rows = EXAM_LIST.filter(function (e) { return e.tier === t; });
-      if (!rows.length) return;
-      s += '<div class="ex-band" data-band="' + t + '"><h3>' + esc(TIER[t].label) +
-        ' &mdash; ' + esc(TIER[t].blurb) + '<span>' + rows.length + '</span></h3>' +
-        rows.map(examRow).join('') + '</div>';
-    });
-    s += '</div>';
-
-    s += '<div class="card ex-note"><h3>Where this ranking comes from</h3>' +
-      '<p>The tiers, the paper tags and the sightings are <strong>written for this site</strong>. ' +
-      'They describe what the previous-year papers of the UPSC Civil Services Prelims and Mains ' +
-      'General Studies Paper II, UPPSC / UPPCS Mains and the polity sections of other State PSC ' +
-      'papers have tested. No question paper and no coaching compilation is reproduced here, ' +
-      'quoted here, or held in this project: nothing in this section was transcribed from a ' +
-      'document, and it is the least verifiable part of the site. The commissions do not tag ' +
-      'their own questions by article, so the mapping from a question to an article is editorial. ' +
-      'A sighting listed by year records that the year&rsquo;s paper carried a question on that ' +
-      'subject — it is not a claim about a numbered question, and it is not quoted from one. ' +
-      'For the questions themselves, go to the official papers on upsc.gov.in.</p>' +
-      '<p>A sighting can carry a citation — the paper, the question number and a link to it. ' +
-      'Right now <strong>' + examCited() + ' of ' + examSightings() + '</strong> do. That number ' +
-      'is counted from the data every time this page is drawn, so it cannot drift from the ' +
-      'truth: a citation appears here only once somebody has opened the actual paper and read ' +
-      'the question. <a href="' + esc(PAPERS_URL) + '" target="_blank" rel="noopener">' +
-      'Previous question papers at upsc.gov.in &rarr;</a></p>' +
+      '<p class="lede">' + EXAM_LIST.length + ' provisions of the Constitution, ranked by how ' +
+      'often the papers ask about them.</p></div>';
+    s += '<div class="ex-tiers" role="group" aria-label="Priority">' +
+      tcard('1', TIER[1].label, TIER[1].blurb) + tcard('2', TIER[2].label, TIER[2].blurb) +
+      tcard('3', TIER[3].label, TIER[3].blurb) + tcard('all', 'All', 'every provision on the list') +
       '</div>';
+    s += '<div class="ex-tools">' +
+      '<label class="ex-search">' + icon('search') +
+      '<input id="examFilter" type="search" placeholder="Search an article or a word, such as Money Bill" ' +
+      'autocomplete="off" spellcheck="false" aria-label="Search the list"></label>' +
+      '<div class="ex-order" role="group" aria-label="Order">' +
+      '<button type="button" data-exorder="tier"' + (examView.order === 'tier' ? ' class="on"' : '') +
+      '>By priority</button>' +
+      '<button type="button" data-exorder="part"' + (examView.order === 'part' ? ' class="on"' : '') +
+      '>By Part</button></div></div>';
+    s += '<div class="ex-papers" role="group" aria-label="Paper">' +
+      [['', 'All papers']].concat(EXAM_PAPERS)
+        .map(function (p) {
+          var n = EXAM_LIST.filter(function (e) { return examIn(e.x, p[0]); }).length;
+          return '<button type="button" class="ex-pchip' + (examView.paper === p[0] ? ' on' : '') +
+            '" data-expaper="' + p[0] + '" aria-pressed="' + (examView.paper === p[0]) + '">' +
+            esc(p[1]) + ' <i>' + n + '</i></button>';
+        }).join('') +
+      '<a class="ex-mcq" href="#/mcq">' + icon('check') + 'MCQ Bank</a></div>';
+    s += '<div class="ex-count" id="examCount" aria-live="polite"></div>' +
+      '<div class="ex-list" id="examList">' + examListHTML() + '</div>' +
+      '<p class="ex-none" id="examNone" hidden>Nothing on the list matches.</p>';
     return s;
+  }
+
+  // A band per tier, or a band per Part in the Constitution's own order.
+  function examListHTML() {
+    var bands = [];
+    if (examView.order === 'tier') {
+      [1, 2, 3].forEach(function (t) {
+        bands.push({ h: TIER[t].label, sub: TIER[t].blurb, cls: 't' + t,
+          rows: EXAM_LIST.filter(function (e) { return e.tier === t; }) });
+      });
+    } else {
+      EXAM_LIST.forEach(function (e) {
+        var a = BY_NUM[e.key];
+        var h = e.key === 'preamble' ? 'The Preamble' : e.key.indexOf('sch') === 0 ? 'The Schedules'
+          : a ? partLabel(a.part) : 'Other';
+        var last = bands[bands.length - 1];
+        if (last && last.h === h) last.rows.push(e); else bands.push({ h: h, sub: '', cls: '', rows: [e] });
+      });
+    }
+    return bands.filter(function (b) { return b.rows.length; }).map(function (b) {
+      return '<section class="ex-band ' + b.cls + '"><h3><span class="ex-bh">' + esc(b.h) + '</span>' +
+        (b.sub ? '<small>' + esc(b.sub) + '</small>' : '') + '<i>' + b.rows.length + '</i></h3>' +
+        b.rows.map(examRow).join('') + '</section>';
+    }).join('');
   }
 
   // Totals across the whole exam dataset, counted rather than recorded.
@@ -2365,28 +2424,65 @@
   }
 
   function filterExam() {
-    var box = $('#examFilter');
-    if (!box) return;
+    var box = $('#examFilter'), list = $('#examList');
+    if (!box || !list) return;
     var q = box.value.trim().toLowerCase();
-    var tierBtn = $('.ex-sort button.on');
-    var tier = tierBtn ? tierBtn.getAttribute('data-tier') : 'all';
+    var art = q.match(/^(?:art(?:icle)?\.? ?)?(\d{1,3}[a-z]{0,3})$/);
     var shown = 0;
-
-    document.querySelectorAll('.ex-row').forEach(function (row) {
-      var e = EXAM_LIST.filter(function (x) { return x.key === row.getAttribute('data-k'); })[0];
-      var okTier = tier === 'all' || String(e.tier) === tier;
-      var hay = (e.label + ' ' + e.sub + ' ' + examText(e.x)).toLowerCase();
-      var ok = okTier && (!q || hay.indexOf(q) >= 0);
+    list.querySelectorAll('.ex-row').forEach(function (row) {
+      var e = EXAM_BY_KEY[row.getAttribute('data-k')];
+      var ok = (examView.tier === 'all' || String(e.tier) === examView.tier) &&
+        examIn(e.x, examView.paper);
+      if (ok && q) {
+        // "21" or "article 21" is the article itself; anything else searches the notes
+        ok = art ? e.key.toLowerCase() === art[1]
+          : (e.label + ' ' + e.sub + ' ' + examText(e.x)).toLowerCase().indexOf(q) >= 0;
+      }
       row.hidden = !ok;
       if (ok) shown++;
     });
-    document.querySelectorAll('.ex-band').forEach(function (b) {
+    list.querySelectorAll('.ex-band').forEach(function (b) {
       b.hidden = !b.querySelector('.ex-row:not([hidden])');
     });
-    var c = $('#examCount');
-    if (c) c.textContent = (q || tier !== 'all')
-      ? shown + ' of ' + EXAM_LIST.length + ' shown'
-      : EXAM_LIST.length + ' entries';
+    var filtered = q || examView.tier !== 'all' || examView.paper;
+    $('#examCount').textContent = filtered ? shown + ' of ' + EXAM_LIST.length + ' provisions' : '';
+    $('#examNone').hidden = shown > 0;
+  }
+
+  // The tier cards, the paper chips and the order. True when the click was one.
+  function examClick(t) {
+    var b;
+    if ((b = t.closest('[data-extier]'))) {
+      examView.tier = b.getAttribute('data-extier');
+      document.querySelectorAll('[data-extier]').forEach(function (x) {
+        x.classList.toggle('on', x === b);
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+      filterExam();
+      return true;
+    }
+    if ((b = t.closest('[data-expaper]'))) {
+      examView.paper = b.getAttribute('data-expaper');
+      document.querySelectorAll('[data-expaper]').forEach(function (x) {
+        x.classList.toggle('on', x === b);
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+      filterExam();
+      return true;
+    }
+    if ((b = t.closest('[data-exorder]'))) {
+      var order = b.getAttribute('data-exorder');
+      if (order !== examView.order) {
+        examView.order = order;
+        $('#examList').innerHTML = examListHTML();
+        document.querySelectorAll('[data-exorder]').forEach(function (x) {
+          x.classList.toggle('on', x === b);
+        });
+        filterExam();
+      }
+      return true;
+    }
+    return false;
   }
 
   function pageSchedules() {
@@ -4064,13 +4160,7 @@
       if (e.target.closest && amdClick(e.target)) return;
       var sortBtn = e.target.closest && e.target.closest('.case-sort button');
       if (sortBtn) { sortCases(sortBtn.getAttribute('data-sort')); return; }
-      var tierBtn = e.target.closest && e.target.closest('.ex-sort button');
-      if (tierBtn) {
-        document.querySelectorAll('.ex-sort button').forEach(function (b) {
-          b.classList.toggle('on', b === tierBtn);
-        });
-        filterExam();
-      }
+      if (e.target.closest && examClick(e.target)) return;
     });
     // The hero's search waits for Enter or the button, rather than searching
     // as you type: the results replace the page the box is on.
