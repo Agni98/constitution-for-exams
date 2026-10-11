@@ -189,6 +189,14 @@ page and in the Judgments menu de-duplicate by case name, so adding a cross-list
 them. Any `Article 21`-style reference inside these fields is auto-linked, and the whole text
 is included in search.
 
+The full page for each of the 125 landmark judgments comes from `site/data/judgments-1.js` …
+`judgments-17.js`; the fields are listed at the top of `judgments-1.js`. Every page opens with
+**The Story Before the Case** (the `background` field), so that a reader who does not know the
+earlier cases or amendments can follow it. Each article, amendment, writ or legal term is
+explained in plain words where it first appears, and the Key Principles end on the case's
+central point. New text follows the same rules as the rest of the site: no sentence over 35
+words, no semicolons or dashes, and no sentence opening with a bare This, That or It.
+
 ## Citing a question paper
 
 Every sighting under **Seen in the papers** is one of two shapes:
