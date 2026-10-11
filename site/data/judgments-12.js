@@ -345,7 +345,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'So Article 142 fills gaps in the law, but cannot be used to rewrite it.'
+    'So even the Court\'s widest power works inside the law, not above it.'
   ],
   legacy: [
     'The limits on Article 142 stated here are cited whenever the Court is asked to use that power against a law.'
