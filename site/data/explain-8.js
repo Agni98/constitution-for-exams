@@ -126,21 +126,21 @@ partXXII: {
   catch: "Article 371E is the only article that provides for one named university. The University of Hyderabad was set up under it in 1974."
 },
 "371F": {
-  simple: "Article 371F contains the special provisions for Sikkim.\n\n" +
-    "They cover the Assembly's composition and the protection of different sections of the population, the Governor's special responsibility for peace and equitable arrangements, the continuance of pre-1975 laws, and a bar on courts entertaining disputes arising out of the pre-merger treaties.",
-  catch: "Clause (k) preserves Sikkim's older laws, including the income-tax exemption for Sikkimese. The Supreme Court extended that exemption to old Indian settlers in 2023."
+  simple: "Article 371F holds the special provisions for Sikkim.\n\n" +
+    "The provisions cover the make-up of the Assembly and the protection of different sections of the people. They give the Governor special responsibility for peace and fair arrangements, keep laws from before 1975 in force, and bar courts from disputes over the treaties made before the merger.",
+  catch: "Clause (k) kept Sikkim's older laws in force, and Sikkim's separate tax arrangements grew from them. In 2023 the Supreme Court extended the income-tax exemption for Sikkimese people to Indian settlers who lived there before the merger."
 },
 "371G": {
-  simple: "No Act of Parliament applies to Mizoram on Mizo religious or social practices, Mizo customary law and procedure, civil and criminal justice according to Mizo customary law, or ownership and transfer of land, unless the Legislative Assembly so decides.",
-  catch: "Modelled on Article 371A. It is the constitutional half of the 1986 Mizo Accord."
+  simple: "No Act of Parliament applies to Mizoram on four subjects unless the Mizoram Assembly agrees. They are Mizo religious and social practices, Mizo customary law and procedure, justice under Mizo customary law, and the ownership and transfer of land.",
+  catch: "The article copies Article 371A for Nagaland. The 53rd Amendment (1986) added it, as the constitutional half of the Mizo Accord of that year."
 },
 "371H": {
-  simple: "The Governor of Arunachal Pradesh has special responsibility for law and order. He exercises his individual judgment after consulting the Council of Ministers, until the President directs otherwise.",
-  catch: "'Individual judgment' is stronger than the ordinary discretion in Article 163. It is also subject to being switched off by the President."
+  simple: "The Governor of Arunachal Pradesh has special responsibility for law and order. On that subject the Governor uses individual judgment after consulting the ministers.",
+  catch: "The President can end the special responsibility by order, once satisfied that it is no longer needed."
 },
 "371-I": {
-  simple: "The Legislative Assembly of Goa shall consist of not less than thirty members.",
-  catch: "The shortest of the special provisions, and a purely arithmetical one. It protects a small State from having a legislature too small to function."
+  simple: "The Legislative Assembly of Goa shall have at least thirty members.",
+  catch: "The rule is purely a matter of numbers, and ensures that a small State still has a legislature large enough to work."
 },
 "371J": {
   simple: "The President may give the Governor of Karnataka special responsibility for the Kalyana-Karnataka region, once called Hyderabad-Karnataka. The region gets a separate development board, a fair share of development funds, and reservation in education and State jobs for local people.",
@@ -153,8 +153,8 @@ partXXII: {
   catch: "So the Indian Penal Code of 1860, the Evidence Act of 1872 and the Contract Act of 1872 carried on without a break. The Constitution changed the framework without emptying the statute book."
 },
 "372A": {
-  simple: "This article gave the President power, until 1957, to adapt laws to bring them into accord with the Constitution as amended by the 7th Amendment.",
-  catch: "Added by the 7th Amendment itself, to handle the enormous statutory consequences of States reorganisation."
+  simple: "Article 372A gave the President power, until 1957, to adapt laws to fit the Constitution as changed by the 7th Amendment.",
+  catch: "The 7th Amendment added the article itself, to deal with the huge effect of reorganising the States on the statute book."
 },
 "373": {
   simple: "Until Parliament made a law on preventive detention, the President could make orders on it under the rules from before the Constitution.",
@@ -181,8 +181,8 @@ partXXII: {
   catch: "The Federal Public Service Commission became the Union Public Service Commission without a break."
 },
 "378A": {
-  simple: "This article made special provision for the duration of the first Andhra Pradesh Legislative Assembly.",
-  catch: "A one-off provision shortening that Assembly's term, so its elections could be synchronised after the 1956 reorganisation."
+  simple: "Article 378A made a special rule on how long the first Andhra Pradesh Legislative Assembly would last.",
+  catch: "The rule was a one-off, made to fix the Assembly's term after the reorganisation of 1956."
 },
 "379": {
   simple: "Article 379 dealt with the provisional Parliament and its Speaker and Deputy Speaker.",
@@ -253,10 +253,9 @@ partXXII: {
     "The articles that came into force early were the ones needed for the change-over, such as citizenship, elections and the provisional arrangements."
 },
 "394A": {
-  simple: "The President shall publish an authoritative text of the Constitution in Hindi, incorporating all amendments. That text has the same meaning as the English text.\n\n" +
-    "He must also publish a Hindi translation of every future amendment.",
-  catch: "Inserted by the 58th Amendment in 1987.\n\n" +
-    "Where the two texts differ, clause (3) gives the President power to bring the Hindi text into conformity. The English text therefore remains the reference in practice."
+  simple: "The President shall publish an authoritative Hindi text of the Constitution, including all amendments. The Hindi text has the same meaning as the English text.\n\n" +
+    "The President must also publish a Hindi translation of every later amendment.",
+  catch: "The 58th Amendment (1987) added the article."
 },
 "395": {
   simple: "The Indian Independence Act, 1947 and the Government of India Act, 1935 are repealed, with all the laws amending them. The Abolition of Privy Council Jurisdiction Act, 1949 is not repealed.",
@@ -267,23 +266,23 @@ partXXII: {
 /* ---------- Schedules ---------- */
 
 schI: {
-  simple: "The First Schedule lists the States and Union territories, with the territories each comprises. There are currently 28 States and 8 Union territories.",
-  catch: "This Schedule can be amended by an ordinary law under Articles 3 and 4. No special majority, no State ratification.\n\n" +
-    "That is what makes India a Union of destructible States. It was last amended by the Jammu and Kashmir Reorganisation Act in 2019, and by the merger of Dadra and Nagar Haveli with Daman and Diu in 2020."
+  simple: "The First Schedule lists the States and Union territories, and the territory each one covers. There are now 28 States and 8 Union territories.",
+  catch: "An ordinary law under Articles 3 and 4 can change the Schedule, with no special majority and no ratification by the States. So India is an indestructible Union of destructible States.\n\n" +
+    "The last changes came with the Jammu and Kashmir Reorganisation Act, 2019, and the merger of Dadra and Nagar Haveli with Daman and Diu in 2020."
 },
 schII: {
-  simple: "The Second Schedule sets the emoluments, allowances and privileges of the President, the Governors, the Speaker and Deputy Speaker, the Chairman and Deputy Chairman, the judges of the Supreme Court and High Courts, and the Comptroller and Auditor-General.",
-  catch: "The point of putting salaries in a Schedule is that they cannot be varied to the holder's disadvantage during the term. It is a guarantee of independence, not a perk."
+  simple: "The Second Schedule sets the pay, allowances and privileges of the President, the Governors, the presiding officers of the legislatures, the judges of the Supreme Court and High Courts, and the Comptroller and Auditor-General.",
+  catch: "The protected pay cannot be changed to the holder's disadvantage during the term. So the Schedule guarantees independence. The pay is not a perk."
 },
 schIII: {
-  simple: "The Third Schedule sets out the forms of oath or affirmation, for Ministers, candidates and members of legislatures, judges of the Supreme Court and High Courts, and the Comptroller and Auditor-General.",
-  catch: "The words 'I will uphold the sovereignty and integrity of India' were added to every form by the 16th Amendment in 1963, after the Chinese war and in the shadow of secessionist movements.\n\n" +
-    "A Minister's oath alone includes a promise of secrecy."
+  simple: "The Third Schedule sets out the forms of oath or affirmation for ministers, candidates and members of legislatures, judges of the Supreme Court and High Courts, and the Comptroller and Auditor-General.",
+  catch: "The 16th Amendment (1963) added the promise to \"uphold the sovereignty and integrity of India\" to every form, after the war with China and amid demands for secession.\n\n" +
+    "Only a minister swears an oath of secrecy as well."
 },
 schIV: {
-  simple: "The Fourth Schedule allocates Rajya Sabha seats to each State and Union territory.",
-  catch: "Allocation is not proportional to population. Uttar Pradesh has 31 seats for over 200 million people, while smaller States get a floor that is generous relative to their numbers.\n\n" +
-    "This is the only structurally federal feature of the upper House, and it is far weaker than the American Senate's equality."
+  simple: "The Fourth Schedule allots Rajya Sabha seats to each State and Union territory.",
+  catch: "Seats are not strictly in proportion to population. Uttar Pradesh has 31 seats for about 200 million people, while small States get a minimum that is generous for their size.\n\n" +
+    "So the House of the States treats the States far less equally than the American Senate does."
 },
 schV: {
   simple: "The Fifth Schedule governs the Scheduled Areas and Scheduled Tribes of every State except Assam, Meghalaya, Tripura and Mizoram.\n\n" +
