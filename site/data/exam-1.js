@@ -382,9 +382,8 @@ preamble: {
   says: "Article 24 bans employing a child below fourteen years in any factory, mine or other hazardous work.",
   why: "Article 24 is short and has one precise number in it. The number suits a factual question, and the article is often matched with Articles 39 and 51A.",
   concepts: [
-    { t: "What it forbids", d: "No child below the age of fourteen may be employed in a factory, a mine, or any other hazardous employment." },
-    { t: "What it does not forbid", d: "Article 24 does not ban all work by children. A child helping in a family shop or in a non-hazardous job was not covered by the Constitution itself." },
-    { t: "The statute went further", d: "The Child Labour (Prohibition and Regulation) Act, 1986, as amended in 2016, now bans employing any child below fourteen in any occupation, with a narrow exception for family enterprises outside school hours. The total ban came from the law, not from Article 24." },
+    { t: "What it does not forbid", d: "Work that is not hazardous, such as helping in a family shop, is outside Article 24." },
+    { t: "The statute went further", d: "The Child Labour Act, as amended in 2016, bans employing children under fourteen in any occupation, except in a family enterprise outside school hours." },
     { t: "M.C. Mehta (1996)", d: "Following child deaths in the Sivakasi fireworks factories, the Court ordered a welfare fund, compensation from employers, and alternative employment for a parent of each rescued child." },
     { t: "Article 24 pairs with other provisions", d: "Article 39(e) directs the State to protect children from entering unsuitable work. Article 39(f) requires children to be given opportunities to develop. Article 45 and Article 21A cover their education." }
   ],
@@ -402,8 +401,8 @@ preamble: {
   concepts: [
     { t: "What is guaranteed", d: "Freedom of conscience, and the right freely to profess, practise and propagate religion. Profess means to declare your belief. Practise means to perform rituals. Propagate means to spread your belief." },
     { t: "The four limits", d: "The right is subject to public order, morality, health, and the other provisions of Part III. So a religious practice that violates another Fundamental Right can be stopped." },
-    { t: "Propagate does not mean convert", d: "In Stainislaus (1977) the Court held the right to propagate does not include a right to convert another person. Spreading your faith is protected. Forced or fraudulent conversion is not." },
-    { t: "Essential religious practices", d: "Courts protect only those practices that are essential to a religion, meaning the religion would change its character without them. The judges decide what is essential, usually from religious texts, which is itself the standing criticism of the doctrine." },
+    { t: "Propagate does not mean convert", d: "The right to propagate does not include a right to convert another person." },
+    { t: "Essential religious practices", d: "Only practices essential to a religion are protected, and judges decide which ones are." },
     { t: "The State may regulate the secular side", d: "Clause (2) lets the State regulate economic, financial, political or other secular activity associated with religion. So the State can regulate how a temple manages its money. The State cannot regulate the form of worship." },
     { t: "Temple entry", d: "Clause (2)(b) lets the State throw open Hindu religious institutions of a public character to all classes and sections of Hindus. Clause (2)(b) is the constitutional basis of temple-entry laws." },
     { t: "The Explanation", d: "Wearing and carrying a kirpan is deemed part of the Sikh religion. And Sikhs, Jains and Buddhists are included within the reference to Hindus for the temple-entry clause." }
@@ -420,14 +419,13 @@ preamble: {
   says: "Article 26 gives every religious denomination the right to set up institutions, manage its own religious affairs, and own and run property, subject to public order, morality and health.",
   why: "Article 26 gives rights to religious groups, not to individuals. The article decides who controls temples, mosques, churches and religious endowments, a question that is always in the courts.",
   concepts: [
-    { t: "The four rights", d: "Every religious denomination has four rights. A denomination may set up and maintain institutions for religious and charitable purposes, and manage its own affairs in matters of religion. A denomination may also own and acquire property, and run that property according to law." },
-    { t: "All four are subject to three limits", d: "The article opens \"Subject to public order, morality and health\". Public order, morality and health qualify every one of the four rights, so none of them is absolute. Article 25 carries a fourth limit that Article 26 does not: the other provisions of Part III." },
+    { t: "All four are subject to three limits", d: "Public order, morality and health limit all four rights. Article 25 adds a fourth limit, the rest of Part III, which Article 26 lacks." },
     { t: "What counts as a denomination", d: "In S.P. Mittal (1983) the Court set three tests: a collection of individuals with a common system of beliefs they regard as conducive to their spiritual well-being, a common organisation, and a distinctive name." },
-    { t: "The crucial split", d: "Matters of religion under clause (b) are protected from State interference. Administration of property under clause (d) is expressly \"in accordance with law\", so the State can legislate on it." },
+    { t: "The crucial split", d: "Clause (b), matters of religion, is protected from ordinary regulation. Clause (d), property, is run \"in accordance with law\", so the State can legislate on it." },
     { t: "Shirur Mutt (1954) drew the line", d: "The Court held that what constitutes an essential part of a religion is decided with reference to the religion's own doctrines. But the secular management of religious property is open to State regulation." },
-    { t: "Where it collides with Article 25", d: "Sabarimala (2018) pitted a denomination's claim to manage its own affairs against individual women's rights under Articles 14, 15 and 25. The majority held the temple was not a separate denomination and the exclusion failed." }
+    { t: "Where it collides with Article 25", d: "The majority held the devotees were not a separate denomination, so the exclusion of women failed." }
   ],
-  trap: "Clause (b), matters of religion, is protected from legislative interference. Clause (d), administering property, is expressly \"in accordance with law\", so it is not.\n\nBut nothing in Article 26 is absolute. The article opens \"Subject to public order, morality and health\", and that governs all four rights. Almost every case here is decided by putting the disputed activity on one side of the (b)/(d) line, then testing it against those three limits."
+  trap: "Matters of religion under clause (b) are protected from ordinary regulation, but they are not absolute.\n\nThe article opens \"Subject to public order, morality and health\", and those three limits govern all four rights. So an option calling any Article 26 right absolute is wrong."
 },
 
 "29": {
@@ -436,13 +434,11 @@ preamble: {
   says: "Article 29 lets any section of citizens with its own language, script or culture conserve it. No citizen can be refused admission to an institution run or aided by the State only on grounds of religion, race, caste or language.",
   why: "Article 29 is constantly confused with Article 30, and examiners rely on that confusion.",
   concepts: [
-    { t: "Clause (1): conserving culture", d: "Any section of citizens with a distinct language, script or culture has the right to conserve it. Note the words: any section of citizens, not any minority." },
-    { t: "Clause (2): admission", d: "No citizen may be denied admission to a State-run or State-aided educational institution on grounds only of religion, race, caste or language." },
-    { t: "Article 29 is not limited to minorities", d: "The point matters most of all. Article 29(1) protects the majority community too, if it has a distinct culture to conserve. Only Article 30 is confined to minorities." },
-    { t: "Champakam Dorairajan (1951)", d: "A caste-based quota in Madras medical colleges was struck down under Article 29(2). Parliament responded with the First Amendment, adding Article 15(4) so that such quotas could be made." },
+    { t: "Article 29 is not limited to minorities", d: "Article 29(1) protects the majority too. Only Article 30 is confined to minorities." },
+    { t: "Champakam Dorairajan (1951)", d: "A caste quota in Madras medical colleges fell under Article 29(2). The First Amendment added Article 15(4) in reply." },
     { t: "The grounds in 29(2) are narrower", d: "Religion, race, caste and language only. Sex and place of birth are not among them, unlike in Article 15." }
   ],
-  trap: "Article 29(1) is available to any section of citizens, including the majority. Only 29(2) and Article 30 are framed around minorities.\n\nAn option describing Article 29 as a wholly minority right is wrong, even though the article sits under the heading \"Cultural and Educational Rights\" alongside Article 30."
+  trap: "Article 29 is not confined to minorities, though its heading reads \"Protection of interests of minorities\". Clause (1) protects any section of citizens, and clause (2) protects every citizen.\n\nSo an option calling Article 29 a minority right is wrong. Only Article 30 is limited to minorities."
 },
 
 "30": {
@@ -451,13 +447,12 @@ preamble: {
   says: "Article 30 gives all minorities, religious or linguistic, the right to set up and run educational institutions of their choice. The State may not discriminate against them when giving aid.",
   why: "Article 30 stays topical because of disputes over government aid, regulation, and whether the Right to Education Act applies to minority institutions.",
   concepts: [
-    { t: "The right", d: "All minorities, whether based on religion or language, may establish and administer educational institutions of their choice." },
     { t: "Two kinds of minority", d: "Religious and linguistic. A Tamil-medium school in Delhi qualifies as a linguistic minority institution just as a Christian school does as a religious one." },
     { t: "No discrimination in giving aid", d: "Clause (2) says the State cannot refuse aid to an institution merely because it is run by a minority. But the State can attach conditions to the aid it gives." },
     { t: "Compensation on acquisition", d: "Clause (1A), added by the 44th Amendment, requires that if the State compulsorily acquires the property of a minority educational institution, the compensation must not defeat the right. Clause (1A) is the one place where property still has the protection of a Fundamental Right." },
     { t: "T.M.A. Pai (2002)", d: "An eleven-judge bench held that whether a community is a minority is decided State by State, not for India as a whole. So Hindus are a minority in Punjab, Kashmir and the north-east." },
-    { t: "Regulation versus takeover", d: "The State may lay down standards of teaching, qualifications and syllabus, in the interest of excellence. The State may not take over the running of the institution." },
-    { t: "Pramati (2014)", d: "The Right to Education Act, including the 25% seat rule, does not apply to minority institutions, aided or unaided." }
+    { t: "Regulation versus takeover", d: "The State may set standards, but may not take over the running of the institution." },
+    { t: "Pramati (2014)", d: "The Right to Education Act, including the 25% seat rule, does not apply to minority schools, aided or unaided." }
   ],
   seen: [
     "UPSC Mains 2018 — enforcement of the National Commission for Scheduled Castes in religious minority institutions"
@@ -506,14 +501,14 @@ preamble: {
   says: "Article 32 gives the right to go straight to the Supreme Court when a Fundamental Right is violated. The Court can issue writs such as habeas corpus, mandamus, prohibition, certiorari and quo warranto.",
   why: "Ambedkar called Article 32 the heart and soul of the Constitution, because without it the other rights would be promises with no remedy. Some paper examines the five writs every year.",
   concepts: [
-    { t: "Article 32 is itself a Fundamental Right", d: "The arrangement is unusual. The right to the remedy is guaranteed in the same way as the rights it protects. So Parliament cannot take it away by ordinary law." },
+    { t: "Article 32 is itself a Fundamental Right", d: "The right to the remedy is guaranteed like the rights it protects. So Parliament cannot take it away by ordinary law." },
     { t: "Habeas corpus", d: "Latin for \"you may have the body\". The court orders that a detained person be produced before it, and releases them if the detention is illegal. Habeas corpus is the only writ that can be issued against a private person as well as the State." },
     { t: "Mandamus", d: "\"We command\". Mandamus orders a public official or body to perform a public duty they have refused to perform. Mandamus does not lie against the President, a Governor or a private person, or to enforce a contract." },
     { t: "Prohibition", d: "Issued by a higher court to a lower court or tribunal, telling it to stop proceedings in a case that is beyond its jurisdiction. Prohibition is preventive. The writ stops a case before it finishes." },
     { t: "Certiorari", d: "Issued by a higher court to quash an order a lower court or tribunal has already passed without jurisdiction. Certiorari is curative. The writ undoes something already done." },
     { t: "Quo warranto", d: "\"By what authority\". Quo warranto asks a person to show what legal authority they have to hold a public office. Any interested person can apply, not just the aggrieved party." },
-    { t: "Only for Fundamental Rights", d: "Article 32 has one key limit. If your ordinary legal right is violated, Article 32 does not help. You go to the High Court under Article 226, which is wider." },
-    { t: "Public interest litigation", d: "The Court relaxed the rule that only the injured person may sue. Since the late 1970s, any public-spirited person may move the Court on behalf of those who cannot. Public interest litigation is a creation of the courts, not of the text." }
+    { t: "Only for Fundamental Rights", d: "An ordinary legal right goes to the High Court under Article 226, which is wider." },
+    { t: "Public interest litigation", d: "Any public-spirited person may move the Court for those who cannot. The rule is a creation of the courts, not of the text." }
   ],
   seen: [
     "UPSC Pre 2024 — the writ of prohibition and restraining a lower court",
@@ -529,11 +524,10 @@ preamble: {
   says: "Article 33 lets Parliament, by law, restrict or remove the Fundamental Rights of the armed forces, the police and similar forces, so that they do their duty and keep discipline.",
   why: "Examiners ask Article 33 because it reverses the usual rule that rights apply to everyone.",
   concepts: [
-    { t: "What it permits", d: "Parliament may restrict or even abolish the Fundamental Rights of members of the armed forces, the paramilitary, the police, intelligence organisations and similar services, so that they can do their duty and maintain discipline." },
-    { t: "Only Parliament", d: "No State legislature can do this, even for the State police. The power belongs exclusively to Parliament." },
-    { t: "Only a law can do it", d: "An executive order or a departmental circular cannot restrict these rights. There has to be an Act." },
+    { t: "Only Parliament", d: "No State legislature can do this, even for the State police." },
+    { t: "Only a law can do it", d: "An executive order or a departmental circular cannot restrict these rights." },
     { t: "A law under Article 33 cannot be challenged", d: "A law made under Article 33 is protected from being struck down under Article 13 for violating Fundamental Rights." },
-    { t: "In practice", d: "The Army Act, the Navy Act and the Air Force Act restrict freedom of speech, association and assembly for service personnel. Members of the armed forces cannot form trade unions." }
+    { t: "In practice", d: "The Army, Navy and Air Force Acts restrict speech, association and assembly. Service personnel cannot form trade unions." }
   ],
   trap: "The power lies with Parliament alone and must be exercised by law.\n\nSo an option saying a State government can restrict its police force's Fundamental Rights is wrong, even though police is a State subject."
 },

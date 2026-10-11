@@ -194,26 +194,24 @@ partIII: {
     "The Asiad Workers case (1982) widened the article. Someone who works for less than the legal minimum wage does so only out of need, the Court held, and need is a form of force. So paying below the minimum wage is forced labour, and a clause against slavery became a clause on labour rights."
 },
 "24": {
-  simple: "No child below fourteen may be employed in a factory, a mine, or any other hazardous employment.",
-  catch: "The bar is on hazardous work, not on all child labour.\n\n" +
-    "Non-hazardous work, such as a family shop or agriculture, was left outside the constitutional prohibition and had to be dealt with by statute. The Child Labour (Prohibition and Regulation) Act, amended in 2016, now bars employment of children under fourteen in all occupations, except helping in a family enterprise outside school hours."
+  simple: "No child below fourteen may be employed in a factory, a mine or any other hazardous work.",
+  catch: "Article 24 bans only hazardous work, not all child labour. A child helping in a family shop or on a farm was outside the constitutional ban.\n\n" +
+    "The Child Labour (Prohibition and Regulation) Act went further. Since its 2016 amendment, no child under fourteen may be employed in any occupation, except to help a family enterprise outside school hours. So the total ban comes from the statute, not from Article 24."
 },
 
 /* ---------- Freedom of Religion ---------- */
 
 "25": {
-  simple: "Everyone is equally entitled to freedom of conscience, and to freely profess, practise and propagate religion. This is subject to public order, morality, health and the other fundamental rights.\n\n" +
-    "The State keeps two powers. It may regulate secular activity associated with religion, and it may throw open Hindu religious institutions to all classes of Hindus.",
-  catch: "'Propagate' means the right to spread your faith. It is not a right to convert someone by force, fraud or allurement, and Stainislaus (1977) upheld State anti-conversion laws on that footing.\n\n" +
-    "Courts protect only what they call essential religious practices. That test was invented by judges and is applied by judges, which means the courts routinely decide what is essential to a religion.",
-  note: "Explanation II says the reference to Hindus includes Sikhs, Jains and Buddhists. It remains politically sensitive."
+  simple: "Every person is equally entitled to freedom of conscience, and to profess, practise and propagate religion freely. The right is subject to public order, morality, health and the other fundamental rights.\n\n" +
+    "The State keeps two powers. The State may regulate secular activity linked to religion, and it may open Hindu religious institutions of a public character to all classes of Hindus.",
+  catch: "The word \"propagate\" has a limit. In Stainislaus (1977) the Court held that the right to spread a faith does not include a right to convert another person. So State laws against forced or fraudulent conversion stand.\n\n" +
+    "Courts also protect only what they call essential religious practices. A practice is essential if the religion would change its character without it. Judges decide the question, usually by reading religious texts. So judges, not believers, end up deciding what a religion requires."
 },
 "26": {
-  simple: "Every religious denomination may establish and maintain institutions for religious and charitable purposes, manage its own affairs in matters of religion, own and acquire property, and administer that property according to law.",
-  catch: "Notice the split between the four rights.\n\n" +
-    "Managing religious affairs is subject only to public order, morality and health. Administering property is expressly 'in accordance with law'.\n\n" +
-    "That difference is why the State can regulate temple finances and endowments heavily without touching the religion itself.",
-  note: "'Denomination' is a threshold test with real teeth. A group must show a common faith, a common organisation and a distinctive name before it can claim this article at all."
+  simple: "Every religious denomination has four rights under Article 26. A denomination may set up and maintain institutions for religious and charitable purposes, and manage its own affairs in matters of religion. A denomination may also own and acquire property, and run that property according to law.\n\n" +
+    "All four rights are subject to public order, morality and health.",
+  catch: "A group can use Article 26 only if it is a religious denomination. In Sabarimala (2018) the majority held that the temple's devotees were not a separate denomination. So the temple could not use Article 26 to keep women out.\n\n" +
+    "The four rights are also not equally protected. Managing matters of religion, under clause (b), is limited only by public order, morality and health. But administering property, under clause (d), must be done \"in accordance with law\". So the State can regulate temple funds and endowments closely without touching the faith itself."
 },
 "27": {
   simple: "No one can be compelled to pay a tax whose proceeds are specifically used to promote or maintain any particular religion or denomination.",
@@ -231,16 +229,15 @@ partIII: {
 
 "29": {
   simple: "Any section of citizens with a distinct language, script or culture has the right to conserve it.\n\n" +
-    "Separately, no citizen may be denied admission to a State-maintained or State-aided educational institution on grounds only of religion, race, caste or language.",
-  catch: "Clause (1) speaks of 'any section of citizens'. It therefore protects majorities as well as minorities, despite the heading over this group of articles.\n\n" +
-    "Clause (2) is an individual right against the institution. It sits in tension with reservation, and the tension is resolved by treating Article 15(4) as an exception to it."
+    "Separately, no citizen may be refused admission to an educational institution run or aided by the State on grounds only of religion, race, caste or language.",
+  catch: "Clause (1) protects \"any section of citizens\", not only minorities. So a majority community with a distinct culture is covered too.\n\n" +
+    "Clause (2) once blocked caste quotas. In Champakam Dorairajan (1951) the Court struck down a caste-based quota in Madras medical colleges under clause (2). Parliament replied with the First Amendment, which added Article 15(4) to allow such quotas."
 },
 "30": {
-  simple: "All minorities, religious or linguistic, may establish and administer educational institutions of their choice.\n\n" +
-    "The State cannot discriminate against them in granting aid. If it acquires their property it must pay an amount that does not restrict this right.",
-  catch: "This right is unusually strong. T.M.A. Pai (2002) confirmed that the State may regulate for standards but may not take over administration.\n\n" +
-    "It is also exclusive to minorities. Article 15(5), which allows reservation in private institutions, expressly does not apply to minority institutions. That is why minority status is so heavily litigated.",
-  note: "Minority status is determined State by State, not nationally. A community can be a minority in one State and a majority in another."
+  simple: "All minorities, religious or linguistic, may set up and run educational institutions of their choice.\n\n" +
+    "The State may not discriminate against a minority institution when giving aid. If the State acquires the institution's property, the amount it pays must not defeat the right.",
+  catch: "The right is unusually strong. In T.M.A. Pai (2002) an eleven-judge bench held that the State may set standards of teaching, qualifications and syllabus. But the State may not take over the running of the institution.\n\n" +
+    "The right also belongs only to minorities. Article 15(5), which allows reservation in private institutions, does not apply to minority institutions. Pramati (2014) held that the Right to Education Act does not apply to them either. So minority status is worth a great deal, and it is often fought over in court."
 },
 
 /* ---------- Property and saving clauses ---------- */
@@ -275,21 +272,20 @@ partIII: {
 /* ---------- Right to Constitutional Remedies ---------- */
 
 "32": {
-  simple: "Article 32 gives you the right to move the Supreme Court directly to enforce a fundamental right, and gives the Court the power to issue five writs to do it: habeas corpus, mandamus, prohibition, quo warranto and certiorari.\n\n" +
-    "The right to move the Court is itself a fundamental right.",
-  catch: "It covers fundamental rights and nothing else. You cannot come here for an ordinary legal wrong.\n\n" +
-    "High Courts under Article 226 have wider power, because they may issue the same writs 'for any other purpose' as well.\n\n" +
-    "The Supreme Court has also grown more discretionary about entertaining Article 32 petitions where a High Court remedy exists.",
-  note: "Ambedkar called this 'the very soul of the Constitution and the very heart of it'. Its suspension during the 1975 Emergency, upheld in ADM Jabalpur, is the decision the Court has since disowned. It was expressly overruled in Puttaswamy (2017)."
+  simple: "Article 32 gives a person the right to go straight to the Supreme Court when a fundamental right is violated. The right to go to the Court is itself a fundamental right.\n\n" +
+    "The Court can issue five writs to enforce the rights: habeas corpus, mandamus, prohibition, certiorari and quo warranto.",
+  catch: "Article 32 covers fundamental rights and nothing else. A person whose ordinary legal right is broken cannot come here. The High Courts under Article 226 have wider power, because they may issue the same writs \"for any other purpose\" as well.\n\n" +
+    "But the Court has widened who may use Article 32. Since the late 1970s, any public-spirited person may move the Court for people who cannot, which is public interest litigation. So Article 32 is narrow in what it covers, but wide in who may use it.",
+  note: "During the 1975 Emergency, the right to move any court to enforce Article 21 was suspended. ADM Jabalpur (1976) upheld the suspension, and Puttaswamy (2017) overruled ADM Jabalpur."
 },
 "32A": {
   simple: "This article once barred the Supreme Court from considering the constitutional validity of a State law in an Article 32 proceeding.",
   catch: "Inserted by the 42nd Amendment and repealed by the 43rd in 1977."
 },
 "33": {
-  simple: "Parliament may restrict or take away the fundamental rights of the armed forces, paramilitary forces, police, intelligence organisations, and telecommunication systems set up for them.",
-  catch: "Only Parliament may do this, not a State legislature, and only by law, not by executive order.\n\n" +
-    "The justification is discipline. A soldier's freedom of association and expression can be curtailed in ways no civilian's could be."
+  simple: "Parliament may restrict or take away the fundamental rights of the armed forces, the police, paramilitary forces and intelligence services, so that they do their duty and keep discipline. The power also covers people in telecommunication systems set up for these forces.",
+  catch: "Only Parliament may do this, not a State legislature. And Parliament must act by a law, not by an executive order. So a State cannot restrict the rights of even its own police.\n\n" +
+    "The reason is discipline. The Army Act, the Navy Act and the Air Force Act limit the speech, association and assembly of service personnel. So members of the armed forces cannot form trade unions."
 },
 "34": {
   simple: "Where martial law is in force, Parliament may indemnify anyone for acts done to maintain or restore order, and may validate sentences and punishments passed under it.",
@@ -297,9 +293,9 @@ partIII: {
     "Martial law is not the same thing as an emergency under Part XVIII. Martial law suspends the ordinary courts in an area. An emergency does not."
 },
 "35": {
-  simple: "Only Parliament may make laws under Articles 16(3), 32(3), 33 and 34. Only Parliament may prescribe punishment for the acts that Articles 17 and 23 declare to be offences. A State legislature cannot.",
-  catch: "This carves those subjects out of the ordinary legislative-list scheme.\n\n" +
-    "The purpose is uniformity: the content of these particular fundamental rights cannot be allowed to vary from State to State."
+  simple: "Only Parliament may make laws under Articles 16(3), 32(3), 33 and 34. Only Parliament may set the punishment for the acts that Articles 17 and 23 make offences. A State legislature can do neither.",
+  catch: "Article 35 overrides the usual split of law-making power in the Seventh Schedule. On these matters a State legislature has no power, even where the subject would otherwise belong to it.\n\n" +
+    "The reason is uniformity. The content of these fundamental rights, and the punishment for breaking them, must not change from State to State."
 }
 
 });
