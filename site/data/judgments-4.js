@@ -192,7 +192,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So a villager who keeps a Dalit away from a public well commits a crime, even though no official is involved.'
   ],
   legacy: [
-    'The case is often cited for the rule that Article 17 reaches private conduct.',
     'In Sukanya Shantha v. Union of India (2024), the Court relied on Article 17, among other provisions, to strike down caste-based division of work in prison manuals.'
   ],
   source: 'https://indiankanoon.org/doc/514077/'

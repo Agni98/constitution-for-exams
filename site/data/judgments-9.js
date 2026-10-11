@@ -472,7 +472,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So AMU\'s status is not settled yet. The Court changed the test, and a smaller bench must now apply it to AMU\'s history.'
   ],
   legacy: [
-    'A regular bench is yet to decide whether AMU itself is a minority institution.'
+
   ],
   source: 'https://indiankanoon.org/doc/33465676/'
 }

@@ -106,7 +106,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   legacy: [
     'The First National Judicial Pay Commission, headed by Justice K.J. Shetty, was set up in 1996.',
-    'An All India Judicial Service under Article 312 has still not been created.'
+    'By 2026 an All India Judicial Service had still not been created.'
   ],
   source: 'https://indiankanoon.org/doc/1977799/'
 },

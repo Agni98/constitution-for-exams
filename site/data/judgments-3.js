@@ -61,7 +61,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the problem was not the special court itself, but a power to send anyone there with nothing to guide the choice.'
   ],
   legacy: [
-    'The case was one of the first major judgments on Article 14.',
     'Later in 1952, in Kathi Raning Rawat, the Court upheld a similar special courts law of Saurashtra, because that law stated a policy to guide the government.',
     'In Ram Krishna Dalmia (1958), the Court listed laws that give unguided discretion as one of the kinds of law that break Article 14.'
   ],
@@ -209,7 +208,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So a rule can survive the ban on sex discrimination and still fall as arbitrary.'
   ],
   legacy: [
-    'The separate-class reasoning has been criticised, because the employer\'s own rules had created the difference between the two classes.',
     'Later cases on women at work, such as Anuj Garg (2007), held that laws based on stereotypes about women break equality.'
   ],
   source: 'https://indiankanoon.org/doc/1903603/'
@@ -257,7 +255,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the government could not give two people with the same service different pensions only because one retired a day later.'
   ],
   legacy: [
-    'The case became the leading authority against arbitrary cut-off dates in pensions and other service benefits.',
     'In Krishena Kumar v. Union of India (1990), the Court held that Nakara does not apply where people move to a different scheme, instead of getting a better formula within the same scheme.'
   ],
   source: 'https://indiankanoon.org/doc/1416283/'

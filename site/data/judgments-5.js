@@ -65,7 +65,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the Court accepted reservation for the backward classes, but fenced it in, so that it helps those who need it most and does not swallow equal opportunity.'
   ],
   legacy: [
-    'The government set criteria to identify the creamy layer. The income limit has been raised several times since.',
+    'In 1993 the government set criteria to identify the creamy layer. The income limit has been raised several times since, to Rs. 8 lakh a year in 2017.',
     'Parliament set up the National Commission for Backward Classes by a law in 1993. The 102nd Amendment (2018) made it a constitutional body under Article 338B.',
     'The 77th Amendment (1995) added Article 16(4A) to allow reservation in promotion for the Scheduled Castes and Scheduled Tribes.',
     'In Janhit Abhiyan (2022), the Court upheld 10 per cent reservation for economically weaker sections and held that the 50 per cent ceiling is not inflexible.'
@@ -117,8 +117,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the creamy layer rule, first set for jobs in Indra Sawhney, now limits reservation in education too.'
   ],
   legacy: [
-    'In Pramati Educational and Cultural Trust v. Union of India (2014), five judges upheld Article 15(5) for private unaided institutions as well.',
-    'Reservation for Other Backward Classes in central educational institutions continues under the 2006 Act.'
+    'In Pramati Educational and Cultural Trust v. Union of India (2014), five judges upheld Article 15(5) for private unaided institutions as well.'
   ],
   source: 'https://indiankanoon.org/doc/1219385/'
 },

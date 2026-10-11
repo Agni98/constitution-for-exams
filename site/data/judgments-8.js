@@ -78,8 +78,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the Court made detention more humane, but it could not force the government to bring in the stronger safeguard that Parliament had already passed.'
   ],
   legacy: [
-    'Section 3 of the 44th Amendment has never been brought into force. Article 22(4) still applies in its original form.',
-    'The National Security Act, 1980 remains in force.'
+    'Section 3 of the 44th Amendment (1978) has still not been brought into force, so Article 22(4) keeps its original wording.'
   ],
   source: 'https://indiankanoon.org/doc/875590/'
 },
@@ -184,8 +183,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the burden shifted. A quarry owner who keeps workers in forced labour must prove that they are not bonded, instead of the workers proving that they are.'
   ],
   legacy: [
-    'In Neeraja Chaudhary v. State of Madhya Pradesh (1984), the Court held that bonded labourers who are freed must also be rehabilitated.',
-    'The idea of life with human dignity from this case is relied on in many later cases on labour and welfare rights.'
+    'In Neeraja Chaudhary v. State of Madhya Pradesh (1984), the Court held that bonded labourers who are freed must also be rehabilitated.'
   ],
   source: 'https://indiankanoon.org/doc/595099/'
 },

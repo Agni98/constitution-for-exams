@@ -151,8 +151,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the government cannot escape the test for speech by calling a measure an economic policy. The Court looks at what the measure does.'
   ],
   legacy: [
-    'In Maneka Gandhi (1978), the Court restated the approach as the "direct and inevitable effect" test.',
-    'The test is still used to judge laws that affect fundamental rights indirectly.'
+    'In Maneka Gandhi (1978), the Court restated the approach as the "direct and inevitable effect" test.'
   ],
   source: 'https://indiankanoon.org/doc/125596/'
 },
@@ -421,10 +420,10 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   principles: [
     'A right can be limited only by a law. An official\'s circular, however well meant, is not enough.',
+    'The judgment closes on tolerance. Justice Chinnappa Reddy wrote that India\'s tradition teaches tolerance, its philosophy preaches tolerance and its Constitution practises tolerance, and he asked: "let us not dilute it."',
     'So respect for the anthem can be shown by standing in silence. The State cannot force children to sing against their faith.'
   ],
   legacy: [
-    'The judgment closes on tolerance. Justice Chinnappa Reddy wrote that India\'s tradition teaches tolerance, its philosophy preaches tolerance and its Constitution practises tolerance, and he asked: "let us not dilute it."',
     'In Shyam Narayan Chouksey (2016), an interim order required the anthem to be played in cinemas. In 2018 the Court changed the order and made it optional.'
   ],
   source: 'https://indiankanoon.org/doc/1508089/'

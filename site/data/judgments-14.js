@@ -149,7 +149,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the drug makers had to bear the surcharge out of their profits, while patients still paid the controlled price.'
   ],
   legacy: [
-    'The case is a standard authority on repugnancy and on the separation of taxing and regulating powers.'
+
   ],
   source: 'https://indiankanoon.org/doc/703764/'
 },

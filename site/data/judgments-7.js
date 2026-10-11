@@ -60,7 +60,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the State could detain a person by following any procedure that a law set out. Twenty-eight years later, Maneka Gandhi turned this round.'
   ],
   legacy: [
-    'In R.C. Cooper (1970), the Court rejected the idea that the fundamental rights are separate compartments.',
+    'In R.C. Cooper (1970), the bank nationalisation case, eleven judges held that a law must meet every fundamental right it touches.',
     'In Maneka Gandhi (1978), the Court held that a procedure under Article 21 must be fair, just and reasonable, and that Articles 14, 19 and 21 must be read together. Gopalan\'s approach was rejected.'
   ],
   source: 'https://indiankanoon.org/doc/1857950/'
@@ -157,7 +157,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So a poor person cannot be left in jail for years simply because the system is slow. The delay itself breaks Article 21.'
   ],
   legacy: [
-    'The case was one of the earliest public interest petitions in the Supreme Court, and many undertrial prisoners in Bihar were released.',
     'In 1987 Parliament passed the Legal Services Authorities Act to provide free legal aid.',
     'Section 436A, added to the Code of Criminal Procedure in 2005, lets an undertrial who has spent half the maximum sentence in jail be released on bail.'
   ],

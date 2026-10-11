@@ -253,8 +253,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the Court\'s own past rulings bind every other court, but not the Court itself, which can correct its own mistakes.'
   ],
   legacy: [
-    'Parliament passed the Sales Tax Laws Validation Act, 1956. The Sixth Amendment (1956) gave Parliament the power to tax sales between States, and the Central Sales Tax Act, 1956 followed.',
-    'The Court has relied on this power to overrule its own decisions in many later cases.'
+    'Parliament passed the Sales Tax Laws Validation Act, 1956. The Sixth Amendment (1956) gave Parliament the power to tax sales between States, and the Central Sales Tax Act, 1956 followed.'
   ],
   source: 'https://indiankanoon.org/doc/1629830/'
 },

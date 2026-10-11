@@ -210,7 +210,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   legacy: [
     'Parliament passed the Ninth Amendment (1960) to transfer the territories under the Agreement.',
-    'In Kesavananda Bharati (1973), the Court held that the Preamble is part of the Constitution.',
     'The 100th Amendment (2015) gave effect to the Land Boundary Agreement with Bangladesh, including the exchange of enclaves.'
   ],
   source: 'https://indiankanoon.org/doc/1120103/'
@@ -307,7 +306,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the same rule that failed in 2017 passed in 2019, because this time the State brought the evidence the Court had asked for.'
   ],
   legacy: [
-    'The judgment is cited on the power of legislatures to cure, by a fresh law, the defects found by a court.'
+
   ],
   source: 'https://indiankanoon.org/doc/18096795/'
 },

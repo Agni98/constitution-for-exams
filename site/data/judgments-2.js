@@ -60,7 +60,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So what matters is whether a body is the government in substance, whatever it calls itself.'
   ],
   legacy: [
-    'For twenty years the Ajay Hasia tests decided which bodies could be sued for breaking fundamental rights.',
+    'From 1981 until 2002, courts used the Ajay Hasia signs to decide which bodies could be sued for breaking fundamental rights.',
     'In Pradeep Kumar Biswas (2002), seven judges said the tests are not a rigid set of rules. The question became whether the government dominates the body in money, functions and administration.'
   ],
   source: 'https://indiankanoon.org/doc/1186368/'
