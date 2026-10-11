@@ -10,10 +10,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 239 says every Union territory is run by the President, acting through an administrator the President appoints.",
   why: "Article 239 covers how Union territories are run. The article became topical again in 2019, when Jammu and Kashmir and Ladakh became Union territories.",
   concepts: [
-    { t: "Who governs a Union territory", d: "The President, acting through an administrator appointed by them. Union territories are administered by the centre, not by a State government." },
+    { t: "Who governs a Union territory", d: "The President, through an administrator. The centre runs Union territories, not a State." },
     { t: "The administrator's title varies", d: "Lieutenant Governor in Delhi, Puducherry, Jammu and Kashmir, Ladakh and Andaman and Nicobar. Administrator in Chandigarh, Dadra and Nagar Haveli and Daman and Diu, and Lakshadweep." },
-    { t: "A Governor can double up", d: "The President may appoint the Governor of a State as the administrator of an adjoining Union territory. The Governor then acts independently of their State ministers." },
-    { t: "The administrator is not a Governor", d: "They are an agent of the President, not the head of a State. Their powers come from delegation, not from Part VI." },
+    { t: "A Governor can double up", d: "A State Governor may run an adjoining Union territory, independently of the State's ministers." },
+    { t: "The administrator is not a Governor", d: "The administrator is the President's agent, with delegated powers, not powers drawn from Part VI." },
     { t: "Some have legislatures", d: "Delhi, Puducherry and Jammu and Kashmir have Legislative Assemblies. Having one does not turn a Union territory into a State." }
   ],
   seen: [
@@ -44,8 +44,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 243 defines the words Part IX uses, such as Gram Sabha, panchayat, intermediate level and village.",
   why: "Article 243 is the definitions article for Part IX. The definitions feed the three-level structure of panchayats, one of the most reliably asked facts about Panchayati Raj.",
   concepts: [
-    { t: "What it defines", d: "The article defines district, Gram Sabha, intermediate level, panchayat, panchayat area, population and village. The rest of Part IX uses these words." },
-    { t: "Gram Sabha", d: "The body consisting of all persons registered on the electoral rolls of a village within a panchayat area. The Gram Sabha is the only institution of direct democracy in the Constitution, because every voter is a member." },
+    { t: "Gram Sabha", d: "Every voter on the village's electoral rolls within a panchayat area is a member." },
     { t: "The 73rd Amendment", d: "Part IX was inserted in 1992 and came into force on 24 April 1993, now observed as Panchayati Raj Day." },
     { t: "Three tiers", d: "Village, intermediate (block) and district. All three are compulsory, with one exception." },
     { t: "The exception", d: "A State with a population below twenty lakh need not have the intermediate level. Village and district panchayats are required everywhere." },
@@ -228,9 +227,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 244 says the Fifth Schedule governs the Scheduled Areas and tribes of most States. The Sixth Schedule governs the tribal areas of Assam, Meghalaya, Tripura and Mizoram.",
   why: "Papers asked about Scheduled and tribal areas in 2025, 2023, 2022, 2019 and 2015. Almost no other topic in polity comes back so often.",
   concepts: [
-    { t: "Two different schemes", d: "The Fifth Schedule governs Scheduled Areas and Scheduled Tribes in States other than Assam, Meghalaya, Tripura and Mizoram. The Sixth Schedule governs the tribal areas in those four States." },
     { t: "Who declares a Scheduled Area", d: "The President, by order, after consulting the Governor. The criteria are a preponderance of tribal population, compactness, underdevelopment and marked economic disparity." },
-    { t: "The Governor's special role", d: "In a Fifth Schedule area the Governor reports annually to the President, and may direct that any Act of Parliament or of the State legislature shall not apply, or shall apply with modifications." },
+    { t: "The Governor's special role", d: "The Governor reports to the President every year, and may exclude or modify any Act of Parliament or of the State in the area." },
     { t: "Tribes Advisory Council", d: "Every Fifth Schedule State must have one, of up to twenty members, three quarters of them representatives of Scheduled Tribes in the Assembly. The Council only advises." },
     { t: "Autonomous District Councils", d: "Under the Sixth Schedule these bodies can make laws on land, forests, shifting cultivation, inheritance and marriage, run village courts, and levy certain taxes. They have real legislative and judicial power." },
     { t: "Part IX does not apply", d: "Article 243M excludes both kinds of area. PESA extends Part IX to Fifth Schedule areas with modifications." }
@@ -266,12 +264,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 246 divides law-making power. Parliament alone makes laws on the Union List, the States alone on the State List, and both on the Concurrent List.",
   why: "Article 246 divides law-making power between the Union and the States. Every question on federalism in both papers rests on it.",
   concepts: [
-    { t: "The three Lists", d: "List I is the Union List, on which only Parliament can legislate. List II is the State List, reserved to State legislatures. List III is the Concurrent List, on which both can." },
     { t: "How many entries", d: "The original figures are settled: 97 in the Union List, 66 in the State List, 47 in the Concurrent List. The current figures are not. Books give the Union List as 98 or 100 entries and the State List as 59 or 61, depending on whether omitted entries are still counted. The Concurrent List is given as 52. Do not memorise a current figure. Know the original three figures, know that the Concurrent List grew and the State List shrank, and know which subjects moved." },
     { t: "What is where", d: "Defence, foreign affairs, railways, banking, currency and atomic energy are Union. Police, public order, public health, agriculture and land are State. Criminal law, marriage, education, forests and electricity are Concurrent." },
     { t: "The Union wins ties", d: "Article 246 gives Parliament's power a non-obstante effect. On a Concurrent subject, a Union law prevails over a conflicting State law under Article 254." },
-    { t: "Pith and substance", d: "When a law seems to touch more than one List, courts look at its true nature and dominant purpose. If that falls within the legislature's competence, incidental encroachment on another List does not invalidate it." },
-    { t: "Colourable legislation", d: "A legislature cannot do indirectly what it cannot do directly. If it dresses up a law to appear within its competence when it is really outside, the law is struck down." },
+    { t: "Pith and substance", d: "Courts look at a law's true nature. An incidental touch on another List does not invalidate it." },
+    { t: "Colourable legislation", d: "A legislature cannot do indirectly what it cannot do directly." },
     { t: "The 42nd Amendment shifted five subjects", d: "Education, forests, weights and measures, protection of wild animals and birds, and administration of justice moved from the State List to the Concurrent List in 1976." }
   ],
   seen: [
@@ -308,7 +305,6 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 248 gives Parliament the sole power to make laws on any matter not named in the State List or the Concurrent List, including any tax not named in either.",
   why: "Residuary power is one of the clearest contrasts between Indian federalism and other federations, so questions often compare them.",
   concepts: [
-    { t: "What it says", d: "Parliament has exclusive power to make any law on any matter not enumerated in the Concurrent List or the State List, including the power to impose a tax not mentioned in either." },
     { t: "Article 248 matches an entry in the Union List", d: "Entry 97 of List I is the residuary entry, saying the same thing from the other direction." },
     { t: "Who decides whether a subject is residuary", d: "The courts. And they lean against finding a subject residuary, preferring to fit it into an existing entry by generous interpretation." },
     { t: "The comparison", d: "In the United States, Australia and Switzerland the residue belongs to the states. In India and Canada it belongs to the centre." },
@@ -327,12 +323,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 249 lets Parliament make laws on a State List subject for a year at a time, if the Rajya Sabha resolves by a two-thirds majority that the national interest needs it.",
   why: "Article 249 is the Rajya Sabha's power to hand a State subject to Parliament. The power is a distinctive Indian feature, and the 2016 paper asked it directly.",
   concepts: [
-    { t: "How it works", d: "If the Rajya Sabha declares by resolution that it is necessary in the national interest, Parliament may make a law on a State List subject." },
     { t: "The majority needed", d: "Two thirds of the members present and voting. Not two thirds of the total membership." },
-    { t: "Only the Rajya Sabha", d: "The Lok Sabha has no equivalent power. The reasoning is that the House of the States should be the one to consent to States losing ground." },
-    { t: "How long it lasts", d: "The resolution stays in force for one year, and can be renewed any number of times, each time for a year." },
+    { t: "Only the Rajya Sabha", d: "The Lok Sabha has no equivalent power." },
+    { t: "How long it lasts", d: "One year, renewable any number of times." },
     { t: "What happens afterwards", d: "The law ceases to have effect six months after the resolution expires." },
-    { t: "The State keeps its own power", d: "The State legislature is not stripped of the subject. Both can legislate. If they conflict, the Union law prevails." }
+    { t: "The State keeps its own power", d: "Both can legislate, and the Union law prevails in a conflict." }
   ],
   seen: [
     "UPSC Pre 2016 — Parliament's power to legislate on a State List subject by Rajya Sabha resolution, and the two-thirds requirement"
@@ -347,10 +342,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   why: "Article 250 is the emergency counterpart of Article 249, and completes the set of ways Parliament can reach the State List.",
   concepts: [
     { t: "When it applies", d: "While a Proclamation of Emergency under Article 352 is in operation." },
-    { t: "What Parliament can do", d: "Make laws for the whole or any part of India on any matter in the State List." },
-    { t: "No resolution needed", d: "Unlike Article 249, no Rajya Sabha resolution is required. The emergency itself is enough." },
+    { t: "No resolution needed", d: "Unlike Article 249, no Rajya Sabha resolution is needed." },
     { t: "How long the law lasts", d: "The law ceases to have effect six months after the emergency ends." },
-    { t: "The State keeps its power", d: "As with Article 249, the State legislature is not suspended. The Union law simply prevails while it lasts." }
+    { t: "The State keeps its power", d: "The State legislature is not suspended. The Union law prevails while it lasts." }
   ],
   trap: "Even during a national emergency the State legislatures continue to function and to legislate.\n\nA national emergency does not dissolve State governments. Dismissing a State government is Article 356, which is a different thing entirely."
 },

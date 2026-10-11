@@ -39,9 +39,10 @@ partX: {
 /* ---------- Part VIII: Union territories ---------- */
 
 "239": {
-  simple: "Every Union territory is administered by the President, through an administrator he appoints with whatever designation he specifies.\n\n" +
-    "The President may also appoint the Governor of a State as administrator of an adjoining Union territory. Where he does, the Governor acts independently of his own Council of Ministers.",
-  catch: "The administrator is called Lieutenant Governor in some territories and Administrator in others. That is a difference of name, not of constitutional status."
+  simple: "The President administers every Union territory, through an administrator the President appoints and names.\n\n" +
+    "The President may also make a State's Governor the administrator of a neighbouring Union territory. The Governor then acts independently of the State's own ministers.",
+  catch: "The administrator is called Lieutenant Governor in some territories and Administrator in others. The difference is only in name.\n\n" +
+    "The administrator is not a Governor. The administrator acts as the President's agent, with delegated powers. So even a Union territory with an elected Assembly, such as Delhi, stays under the President's administration."
 },
 "239A": {
   simple: "Parliament may by law create a legislature or a Council of Ministers, or both, for Puducherry. It decides whether the body is elected or partly nominated, and how it works.",
@@ -81,9 +82,9 @@ partX: {
 /* ---------- Part IX: the Panchayats ---------- */
 
 "243": {
-  simple: "Article 243 defines the terms used in this Part: district, Gram Sabha, intermediate level, panchayat, panchayat area, population and village.",
-  catch: "'Population' means the figures of the last preceding census for which the totals have been published.\n\n" +
-    "Panchayat seat arithmetic therefore tracks the census, even though Lok Sabha seat arithmetic does not."
+  simple: "Article 243 defines the words used in Part IX: district, Gram Sabha, intermediate level, panchayat, panchayat area, population and village.",
+  catch: "The Gram Sabha is the body of all voters on the rolls of a village in a panchayat area. Every voter is a member, so the Gram Sabha is the Constitution's one institution of direct democracy.\n\n" +
+    "\"Population\" means the last census whose figures have been published. So panchayat seats follow the latest census, while Lok Sabha seats between States stay frozen on 1971 figures."
 },
 "243A": {
   simple: "The Gram Sabha is the village electorate meeting as a body. It may exercise such powers and perform such functions at village level as the State legislature provides by law.",
@@ -294,10 +295,9 @@ partX: {
 /* ---------- Part X ---------- */
 
 "244": {
-  simple: "The Fifth Schedule governs the administration and control of Scheduled Areas and Scheduled Tribes in States other than Assam, Meghalaya, Tripura and Mizoram. The Sixth Schedule governs the tribal areas in those four States.",
-  catch: "The two schemes are quite different.\n\n" +
-    "The Fifth Schedule gives the Governor sweeping power to modify how Union and State laws apply, advised by a Tribes Advisory Council.\n\n" +
-    "The Sixth Schedule creates elected Autonomous District Councils with their own legislative, judicial and taxing powers."
+  simple: "The Fifth Schedule governs the Scheduled Areas and Scheduled Tribes of every State except Assam, Meghalaya, Tripura and Mizoram. The Sixth Schedule governs the tribal areas of those four States.",
+  catch: "The two schemes work very differently. Under the Fifth Schedule, the Governor can change how Union and State laws apply in a Scheduled Area. A Tribes Advisory Council advises, but it only advises.\n\n" +
+    "The Sixth Schedule creates elected Autonomous District Councils. The Councils make laws on land, forests, inheritance and marriage, run village courts and levy some taxes. So the Sixth Schedule gives tribal people real self-government, while the Fifth leaves power with the Governor."
 },
 "244A": {
   simple: "Parliament may by law form an autonomous State within Assam, comprising the tribal areas, with its own legislature or Council of Ministers, or both.",

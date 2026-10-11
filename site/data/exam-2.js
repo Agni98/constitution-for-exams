@@ -864,13 +864,12 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 233 says the Governor appoints district judges in consultation with the High Court. A lawyer recruited directly needs seven years at the Bar and the High Court's recommendation.",
   why: "District judge appointments split power between the Governor and the High Court in an unusual way, and the split is what makes them examinable.",
   concepts: [
-    { t: "Who appoints", d: "The Governor of the State, in consultation with the High Court exercising jurisdiction there." },
     { t: "Promotion versus direct recruitment", d: "Most district judges are promoted from the subordinate judiciary. Some are recruited directly from the Bar." },
-    { t: "For a direct recruit from the Bar", d: "The person must have been an advocate or pleader for at least seven years, and must be recommended by the High Court. The recommendation is mandatory, not advisory." },
-    { t: "Control afterwards belongs to the High Court", d: "Article 235 gives the High Court control over district courts and subordinate courts, including posting, promotion and leave. The Governor has no role after appointment." },
-    { t: "Why it is structured this way", d: "The design keeps the subordinate judiciary independent of the State executive, giving effect to the directive in Article 50." }
+    { t: "For a direct recruit from the Bar", d: "Seven years as an advocate or pleader, and a recommendation from the High Court, which is mandatory." },
+    { t: "Control afterwards belongs to the High Court", d: "Article 235 gives the High Court control over district and subordinate courts. The High Court posts and promotes judges below the rank of district judge." },
+    { t: "Why it is structured this way", d: "The design keeps the subordinate judiciary independent of the State executive, as Article 50 directs." }
   ],
-  trap: "The Governor appoints, but the High Court's recommendation is compulsory for a direct recruit from the Bar.\n\nAnd once appointed, the judge is under the High Court's control entirely. The executive appoints and then steps away."
+  trap: "The Governor appoints, but the High Court's recommendation is compulsory for a direct recruit from the Bar.\n\nAfter appointment, the High Court controls the district courts under Article 235. The Governor still posts and promotes district judges, but only in consultation with the High Court."
 }
 
 });

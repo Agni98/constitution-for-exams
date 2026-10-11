@@ -401,10 +401,10 @@ partVI: {
 /* ---------- Subordinate courts ---------- */
 
 "233": {
-  simple: "District judges are appointed, posted and promoted by the Governor in consultation with the High Court.\n\n" +
-    "A person not already in Union or State service qualifies if he has been an advocate or pleader for seven years and the High Court recommends him.",
-  catch: "The seven-year bar applies to direct recruits only.\n\n" +
-    "The split between promotion from within the service and direct recruitment from the bar has generated a long line of litigation, most recently on whether serving judicial officers may apply as advocates."
+  simple: "The Governor appoints, posts and promotes district judges, in consultation with the High Court.\n\n" +
+    "A person not already in government service can be appointed only after seven years as an advocate or pleader, and only on the High Court's recommendation.",
+  catch: "Most district judges are promoted from the subordinate judiciary. Some are recruited directly from the Bar, and the seven-year rule applies only to them.\n\n" +
+    "After appointment, the High Court controls the district courts under Article 235. The design keeps the lower courts independent of the State government, as Article 50 directs."
 },
 "233A": {
   simple: "This article validates appointments of, and judgments delivered by, certain district judges appointed irregularly before 1966.",

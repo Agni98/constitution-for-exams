@@ -27,9 +27,9 @@ partXIII: {
     "Even Parliament's reach has a limit. GVK Industries (2011) held that its extra-territorial laws must have a real nexus with India."
 },
 "246": {
-  simple: "Parliament has exclusive power over List I, the Union List. States have exclusive power over List II, the State List. Both may legislate on List III, the Concurrent List, where Parliament's law prevails.",
-  catch: "The non-obstante clauses set the pecking order. Union List beats Concurrent List, which beats State List.\n\n" +
-    "The doctrine of pith and substance then saves a law that in substance falls within its own list, even if it incidentally touches another."
+  simple: "Parliament alone makes laws on List I, the Union List. The States alone make laws on List II, the State List. Both make laws on List III, the Concurrent List, and Parliament's law prevails.",
+  catch: "The opening words of each clause set the order. The Union List beats the Concurrent List, and the Concurrent List beats the State List.\n\n" +
+    "When a law seems to touch more than one List, courts ask what the law is in pith and substance. If its true nature falls within the legislature's own List, an incidental touch on another List does not invalidate it. But a legislature cannot dress up a law to do indirectly what it cannot do directly."
 },
 "246A": {
   simple: "Both Parliament and every State legislature may make laws on goods and services tax. For inter-State supply, only Parliament may legislate.",
@@ -41,19 +41,19 @@ partXIII: {
   catch: "It has been used for bodies such as the National Green Tribunal's appellate structure. These are additional courts for central laws, distinct from the tribunals under Part XIVA."
 },
 "248": {
-  simple: "Parliament has exclusive power to make any law on any matter not enumerated in the Concurrent or State List, including a tax not mentioned in either.",
-  catch: "The residuary power sits with the Centre. That is the opposite of the American and Australian models, and it was a deliberate choice by the Constituent Assembly.\n\n" +
-    "Read with entry 97 of List I."
+  simple: "Parliament alone can make laws on any matter not named in the State List or the Concurrent List. The power includes any tax not named in either List.",
+  catch: "India gives the residuary power to the Union, as Canada does. The United States, Australia and Switzerland leave it with the states. Entry 97 of the Union List says the same thing as Article 248 from the other side.\n\n" +
+    "The choice was deliberate. The framers had just seen Partition, and leaving unlisted subjects with the States seemed to risk breaking the country apart."
 },
 "249": {
-  simple: "If the Rajya Sabha resolves, by two-thirds of those present and voting, that it is necessary in the national interest, Parliament may legislate on a State List matter for up to a year at a time.",
-  catch: "The Rajya Sabha is the House of the States, and it is the body that authorises this intrusion into State power. That is the theory of the article.\n\n" +
-    "The resolution is renewable indefinitely, and the law lapses six months after the resolution expires."
+  simple: "If the Rajya Sabha resolves, by two-thirds of the members present and voting, that the national interest requires it, Parliament may make laws on a State List subject. The resolution lasts a year at a time.",
+  catch: "The Rajya Sabha is the House of the States. So the House that represents the States is the one that lets Parliament step into State territory.\n\n" +
+    "The resolution can be renewed any number of times. A law made under it lapses six months after the resolution ends. Meanwhile the State keeps its own power over the subject, though the Union law prevails in a conflict."
 },
 "250": {
-  simple: "While a Proclamation of Emergency is in operation, Parliament may legislate on any State List matter, for the whole or any part of India.",
-  catch: "No State consent, no Rajya Sabha resolution, and no time limit beyond the emergency itself plus six months.\n\n" +
-    "This is the sharpest federal effect of Article 352."
+  simple: "While a national emergency is in force, Parliament may make laws on any State List subject, for the whole of India or any part of it.",
+  catch: "Article 250 needs no State consent and no Rajya Sabha resolution. The emergency itself is enough, and the law lasts until six months after the emergency ends.\n\n" +
+    "But the State legislatures keep working. A Union law made under Article 250 simply prevails while it lasts. Removing a State government is a different power, under Article 356."
 },
 "251": {
   simple: "A law made under Article 249 or 250 does not restrict a State's power to legislate. The State law is inoperative to the extent of any repugnancy, and revives when the Parliamentary law ceases.",
