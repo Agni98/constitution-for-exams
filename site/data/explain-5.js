@@ -256,8 +256,7 @@ partX: {
 },
 "243ZJ": {
   simple: "A co-operative's board may have up to twenty-one directors, and serves a five-year term. One seat goes to a Scheduled Caste or Scheduled Tribe member, and two seats to women.\n\n" +
-    "The board may co-opt at most two experts, who cannot vote in board elections.",
-  catch: "This is the provision the Supreme Court found most clearly trespassed on the State List entry for co-operative societies."
+    "The board may co-opt at most two experts, who cannot vote in board elections."
 },
 "243ZK": {
   simple: "A co-operative's board must be elected before the outgoing board's term ends. The State legislature must give the job of running the elections to an independent authority."
