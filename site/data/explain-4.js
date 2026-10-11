@@ -83,9 +83,9 @@ partVI: {
   catch: "The Advocate-General is the State's version of the Attorney-General. Under Article 177 the Advocate-General may speak in the State legislature, but cannot vote."
 },
 "166": {
-  simple: "All executive action of a State is expressed to be taken in the Governor's name. An authenticated order cannot be questioned on the ground that the Governor did not make it.\n\n" +
-    "The Governor makes rules for the more convenient transaction of business and its allocation among Ministers.",
-  catch: "The authentication rule protects an order from being challenged for its form. It does not cure a want of authority. An order made by someone with no power to make it is still void."
+  simple: "All executive action of a State is taken in the Governor's name. An order signed in the prescribed way cannot be challenged on the ground that the Governor did not make it.\n\n" +
+    "The Governor makes rules for conducting the government's business and dividing it among the ministers.",
+  catch: "The signing rule protects an order only from challenges to its form, and does not cure a lack of power. An order made by someone with no power to make it is still void."
 },
 "167": {
   simple: "The Chief Minister has three duties towards the Governor.\n\n" +
@@ -97,8 +97,8 @@ partVI: {
 /* ---------- The State legislature ---------- */
 
 "168": {
-  simple: "Every State has a legislature consisting of the Governor and one or two Houses. Six States have a Legislative Council as well as a Legislative Assembly.",
-  catch: "Which States have a Council is not fixed by the Constitution. Article 169 lets Parliament create or abolish one on a State's own resolution, which is why the list has changed repeatedly."
+  simple: "Every State has a legislature made up of the Governor and one or two Houses. Six States have a Legislative Council as well as a Legislative Assembly.",
+  catch: "The Constitution does not fix which States have a Council. Under Article 169, Parliament can create or abolish one when the State asks, so the list has changed many times."
 },
 "169": {
   simple: "Parliament may create or abolish a State's Legislative Council by law. The State's Assembly must first ask for it, by a resolution passed by a majority of its total membership and two-thirds of those present and voting.\n\n" +
@@ -107,8 +107,8 @@ partVI: {
     "But the Assembly's resolution only lets Parliament act. The resolution does not force Parliament to act. Rajasthan and Assam have passed resolutions that Parliament has never acted on."
 },
 "170": {
-  simple: "A Legislative Assembly has between sixty and 500 members, chosen by direct election from territorial constituencies. Seats are allotted so that the ratio of seats to population is, as far as practicable, the same throughout the State.",
-  catch: "The same 1971-census freeze that applies to the Lok Sabha applies here. The 84th Amendment extended it to the first census after 2026."
+  simple: "A Legislative Assembly has between sixty and five hundred members, directly elected from territorial constituencies. A few small States have fewer under special provisions. Seats are shared so that the ratio of seats to population is, as far as practicable, the same across the State.",
+  catch: "The freeze on the 1971 census that applies to the Lok Sabha applies here too. The 84th Amendment extended it until the first census after 2026."
 },
 "171": {
   simple: "A Legislative Council can have no more than one-third of the Assembly's members, and no fewer than forty.\n\n" +
@@ -117,63 +117,64 @@ partVI: {
     "The weakness, together with the unusual franchise, is why several States have abolished their Councils."
 },
 "172": {
-  simple: "Every Legislative Assembly lasts five years from its first sitting unless dissolved sooner. During an emergency it can be extended one year at a time.\n\n" +
+  simple: "Every Legislative Assembly lasts five years from its first sitting, unless dissolved sooner. During an emergency its life can be extended a year at a time.\n\n" +
     "A Legislative Council is never dissolved. One-third of its members retire every second year.",
-  catch: "The one-year extension applies only while a national emergency under Article 352 is in force.\n\n" +
-    "A State emergency under Article 356 cannot extend an Assembly's life. It suspends or dissolves it instead."
+  catch: "The extension is possible only while a national emergency under Article 352 is in force.\n\n" +
+    "President's rule under Article 356 cannot extend an Assembly's life, and instead suspends or dissolves the Assembly."
 },
 "173": {
-  simple: "To be a member of a State legislature you must be a citizen, take the prescribed oath, and be at least thirty for the Council or twenty-five for the Assembly.",
-  catch: "Thirty for the Council but twenty-five for the Assembly. The upper House expects more age, exactly as at the Union level."
+  simple: "A member of a State legislature must be a citizen and take the prescribed oath. A member must be at least thirty for the Council, or twenty-five for the Assembly.",
+  catch: "The upper House asks for an older age, exactly as Parliament does."
 },
 "174": {
-  simple: "The Governor summons the House or Houses so that no more than six months separate the last sitting of one session from the first of the next. He may prorogue them, and dissolve the Assembly.",
-  catch: "The six-month rule is a maximum gap between sittings, not a minimum number of sitting days.\n\n" +
-    "Governors have used that silence to delay summoning an Assembly. The Supreme Court has held the Governor must act on the Council of Ministers' advice in doing so."
+  simple: "The Governor summons the House or Houses so that no more than six months pass between the last sitting of one session and the first sitting of the next. The Governor may also prorogue the Houses and dissolve the Assembly.",
+  catch: "The rule sets a maximum gap, not a minimum number of sitting days.\n\n" +
+    "Some Governors have used the gap to delay summoning an Assembly. But the Supreme Court has held that the Governor must act on the Council of Ministers' advice in summoning the House."
 },
 "175": {
-  simple: "The Governor may address the House or Houses, and send messages about a pending Bill or anything else.",
-  catch: "The power to send a message is one of the few the Governor exercises without a specific requirement of ministerial advice on the face of the article."
+  simple: "The Governor may address the House or Houses, and may send messages about a pending Bill or anything else.",
+  catch: "Nabam Rebia (2016) held that the Governor cannot use a message to set the House's business on the Governor's own, against the ministers' advice."
 },
 "176": {
   simple: "The Governor addresses the Assembly, or both Houses together, at the first session after each general election and at the first session of each year.",
-  catch: "The address is written by the State government and read by the Governor.\n\n" +
-    "Governors declining to read passages they disagree with has become a recurring flashpoint in Centre–State relations."
+  catch: "The State government writes the address, and the Governor reads it.\n\n" +
+    "Some Governors have refused to read passages they disagree with. The refusals have become a recurring flashpoint between the Union and the States."
 },
 "177": {
-  simple: "Ministers and the Advocate-General may speak and take part in the proceedings of either House and of its committees. They may vote only in a House of which they are members.",
-  catch: "The Advocate-General may speak but can never vote. He is an officer, not a member."
+  simple: "Ministers and the Advocate-General may speak and take part in the proceedings of either House and its committees. They may vote only in a House of which they are members.",
+  catch: "So the Advocate-General may speak but can never vote. The Advocate-General is an officer, not a member."
 },
 "178": {
   simple: "The Legislative Assembly chooses a Speaker and a Deputy Speaker from among its members.",
-  catch: "The Constitution sets no deadline for electing either officer. That is how Deputy Speaker posts have stayed vacant for entire Assembly terms."
+  catch: "The Constitution sets no deadline for electing either. So some Assemblies have left the Deputy Speaker's post empty for a whole term."
 },
 "179": {
-  simple: "The Speaker or Deputy Speaker vacates office on ceasing to be a member, on resignation, or on removal by a resolution of a majority of all the then members after fourteen days' notice.",
-  catch: "The Speaker continues in office after the Assembly is dissolved, until just before the first meeting of the next one. A State is therefore never without a presiding officer."
+  simple: "The Speaker or Deputy Speaker leaves office on ceasing to be a member, or on resigning. The Assembly may also remove either, by a resolution passed by a majority of all its then members after fourteen days' notice.",
+  catch: "The Speaker stays in office after the Assembly is dissolved, until just before the new Assembly first meets. So the House always has a presiding officer."
 },
 "180": {
-  simple: "The Deputy Speaker performs the Speaker's duties when the office is vacant or the Speaker is absent. So does a member chosen by the Assembly, where necessary."
+  simple: "The Deputy Speaker does the Speaker's work while the Speaker's office is vacant. If both offices are vacant, a member appointed by the Governor does it. When the Speaker is only absent, the Deputy Speaker or a member chosen under the rules presides."
 },
 "181": {
-  simple: "A Speaker or Deputy Speaker whose removal is under consideration may not preside, but may speak and vote in the proceedings.",
-  catch: "Nabam Rebia (2016) held that a Speaker facing a removal notice should not decide Tenth Schedule disqualification petitions while that notice is pending. That holding was referred to a larger bench in 2023 and is still unresolved."
+  simple: "A Speaker or Deputy Speaker whose removal is being considered may not preside. The Speaker may still speak, and may vote in the first instance, though not cast a deciding vote.",
+  catch: "Nabam Rebia (2016) held that a Speaker facing a notice for removal should not decide petitions to disqualify members for defection. In 2023 the Court sent that rule to a larger bench, where it remains undecided."
 },
 "182": {
   simple: "The Legislative Council chooses a Chairman and a Deputy Chairman from among its members."
 },
 "183": {
-  simple: "The Chairman or Deputy Chairman of a Council vacates office by the same three routes as the Speaker: ceasing to be a member, resignation, or removal by a resolution of a majority of all the then members."
+  simple: "The Chairman or Deputy Chairman of a Council leaves office in the same three ways as a Speaker. The three are ceasing to be a member, resigning, and removal by a resolution passed by a majority of all the then members."
 },
 "184": {
-  simple: "The Deputy Chairman performs the Chairman's duties when the office is vacant or the Chairman is absent. So does a member chosen by the Council, where necessary."
+  simple: "The Deputy Chairman does the Chairman's work while the Chairman's office is vacant. If both offices are vacant, a member appointed by the Governor does it. When the Chairman is only absent, the Deputy Chairman or a member chosen under the rules presides."
 },
 "185": {
-  simple: "A Chairman or Deputy Chairman whose removal is under consideration may not preside, but may speak and vote."
+  simple: "A Chairman or Deputy Chairman whose removal is being considered may not preside. The Chairman may still speak, and may vote in the first instance.",
+  catch: "The Chairman of a Legislative Council is a member of the Council. So, unlike the Vice-President in the Rajya Sabha, the Chairman keeps a vote."
 },
 "186": {
-  simple: "Salaries and allowances of the Speaker, Deputy Speaker, Chairman and Deputy Chairman are fixed by the State legislature. Until then the Second Schedule applies.",
-  catch: "These salaries are charged on the Consolidated Fund of the State, so they are not voted on annually. The presiding officers' pay cannot be used as leverage against them."
+  simple: "The State legislature fixes the salaries and allowances of the Speaker, Deputy Speaker, Chairman and Deputy Chairman. Until it does, the Second Schedule applies.",
+  catch: "The salaries are charged on the State's Consolidated Fund, so they are not voted on every year. Nobody can therefore use the presiding officers' pay as a lever against them."
 },
 "187": {
   simple: "Each House of a State legislature has a separate secretarial staff. The legislature may regulate their recruitment and service conditions by law."
