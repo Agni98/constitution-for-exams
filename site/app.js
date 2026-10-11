@@ -1956,6 +1956,7 @@
   // The marks beside a section's heading and beside each holding's label,
   // drawn like the site's other icons.
   var JSEC_ICON = {
+    b: '<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v14.5H6.5A2.5 2.5 0 0 0 4 20z"/><path d="M4 20a2.5 2.5 0 0 1 2.5-2.5H20V21H6.5A2.5 2.5 0 0 1 4 18.5"/>',
     q: '<circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.9.7c0 1.7-2.5 2.2-2.5 3.9"/>' +
       '<path d="M12 17.2h.01"/>',
     f: '<path d="M7 3.5h7l4 4v13H7z"/><path d="M14 3.5v4h4"/><path d="M10 12.5h5M10 16h5"/>',
@@ -2033,11 +2034,13 @@
   }
 
   // What the Court was asked, the facts, what it held and what followed, then
-  // where to read more. The drawer also offers the judgment's own page.
+  // where to read more. The drawer also offers the judgment's own page. A case
+  // that only makes sense with its history first opens with that story.
   function judgmentBody(r, inDrawer) {
     var j = r.j, c = r.c, s = '<div class="jsecs">';
     if (j) {
-      s += jsec('q', 'Constitutional Question', jParas(j.question)) +
+      s += jsec('b', 'The Story Before the Case', jBullets(j.background)) +
+        jsec('q', 'Constitutional Question', jParas(j.question)) +
         jsec('f', 'Facts of the Case', jBullets(j.facts)) +
         jsec('h', 'What the Court Held', jHeld(j.held)) +
         jsec('p', 'Key Principles', jNumbered(j.principles)) +
@@ -3359,7 +3362,7 @@
     REG.forEach(function (r) {
       var j = r.j || {};
       var hay = [r.short, r.name, j.full, j.aka, r.year, (j.tags || []).join(' '), j.summary,
-        (j.question || []).join(' '), (j.facts || []).join(' '),
+        (j.background || []).join(' '), (j.question || []).join(' '), (j.facts || []).join(' '),
         (j.held || []).map(function (h) { return h.label + ' ' + (h.points || []).join(' '); }).join(' '),
         (j.principles || []).join(' '), (j.legacy || []).join(' '),
         r.c.facts, r.c.held, r.c.why].join(' ').toLowerCase();

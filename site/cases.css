@@ -106,6 +106,7 @@
 .jico svg { width: 20px; height: 20px; }
 .jsec p { margin: 0 0 8px; font-size: 15.6px; line-height: 1.65; }
 .jsec p:last-child { margin-bottom: 0; }
+.jsec.b { --jc: var(--ok-saffron-ink); }
 .jsec.q { --jc: var(--green); }
 .jsec.f { --jc: var(--accent); }
 .jsec.h { --jc: #7c3aed; }

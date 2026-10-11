@@ -16,6 +16,8 @@
      tags       topic pills
      judges     the bench, by name
      summary    one or two sentences, used on cards and in search
+     background the story before the case, in order, for a judgment that
+                cannot be followed without it (optional)
      question   the constitutional question(s) the Court answered
      facts      short points, in order
      held       blocks of { kind, label, points }

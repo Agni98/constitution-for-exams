@@ -31,47 +31,64 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Majority 7:6',
   tags: ['Article 368', 'Basic structure', 'Amending power'],
   judges: 'S.M. Sikri CJI, J.M. Shelat, K.S. Hegde, A.N. Grover, A.N. Ray, P. Jaganmohan Reddy, D.G. Palekar, H.R. Khanna, K.K. Mathew, M.H. Beg, S.N. Dwivedi, A.K. Mukherjea and Y.V. Chandrachud',
-  summary: 'Parliament can amend any part of the Constitution, including the fundamental rights, but it cannot alter the basic structure of the Constitution. Golak Nath was overruled. The 24th and 29th Amendments were upheld, but the part of Article 31C that stopped courts from examining a law\'s declaration was struck down.',
+  summary: 'Parliament can amend any part of the Constitution, including the fundamental rights. But it cannot destroy the basic structure, the core features that make the Constitution what it is. Thirteen judges decided this by 7 votes to 6.',
+  background: [
+    'When the Constitution came into force in 1950, the right to property was a fundamental right. The States soon passed land reform laws. The laws ended the estates of the zamindars, the big landlords, and limited how much land one owner could hold. The landowners went to court and argued that the laws broke their right to property.',
+    'Parliament answered with the First Amendment in 1951. The amendment created the Ninth Schedule, a list of laws at the end of the Constitution. Under Article 31B, no law in that list can be struck down for breaking a fundamental right.',
+    'The landowners then asked whether Parliament could change the fundamental rights at all. Article 13 says that any law which takes away or cuts down a fundamental right is void. Was a constitutional amendment such a law?',
+    'In Shankari Prasad (1951) and Sajjan Singh (1964), the Supreme Court said no. An amendment made under Article 368 was not an ordinary law, so Article 13 did not stop it. Parliament could amend the fundamental rights like any other part of the Constitution.',
+    'In Golak Nath (1967), eleven judges changed course by 6 votes to 5. The majority held that an amendment is a law under Article 13. So Parliament could no longer amend the fundamental rights to take them away or cut them down. But the earlier amendments were left standing, because the new rule applied only to the future.'
+  ],
   question: [
-    'Is Parliament\'s power to amend the Constitution under Article 368 unlimited?',
-    'Can Parliament amend the fundamental rights, and was Golak Nath correctly decided?',
-    'Were the 24th, 25th and 29th Amendments valid?'
+    'Article 368 gives Parliament the power to amend the Constitution. Does that power have any limit?',
+    'Can Parliament use the power to take away or cut down the fundamental rights in Part III? Six years earlier, in Golak Nath, the Court had said no. Was Golak Nath right?',
+    'After Golak Nath, Parliament passed the 24th, 25th and 29th Amendments to win back its power and to protect land reform. Were these amendments valid?'
   ],
   facts: [
-    'In Golak Nath (1967), eleven judges held by 6:5 that Parliament could not amend the fundamental rights so as to take them away or abridge them.',
-    'Parliament responded with the 24th Amendment (1971). It said that Parliament can amend any provision of the Constitution under Article 368, and that Article 13 does not apply to amendments.',
-    'The 25th Amendment (1971) replaced "compensation" with "amount" in Article 31(2), and added Article 31C. Article 31C protected laws giving effect to Article 39(b) and (c) from challenge under Articles 14, 19 and 31. It also stopped courts from questioning a declaration that a law gave effect to that policy.',
-    'The 26th Amendment (1971) abolished privy purses. The 29th Amendment (1972) placed two Kerala land reform Acts in the Ninth Schedule.',
-    'Swami Kesavananda Bharati, head of the Edneer Mutt in Kasaragod, Kerala, challenged the Kerala land reform laws. The case grew to cover the amendments.',
-    'Thirteen judges heard the case from 31 October 1972 to 23 March 1973. They delivered eleven separate opinions.'
+    'Swami Kesavananda Bharati was the head of the Edneer Mutt, a Hindu monastery in Kasaragod, Kerala. Kerala\'s land reform laws limited how much land the mutt could keep. In 1970 he challenged the laws in the Supreme Court.',
+    'While his case waited, Indira Gandhi\'s government set out to undo Golak Nath. Parliament passed four amendments in 1971 and 1972.',
+    'The 24th Amendment (1971) said that Parliament can amend any part of the Constitution, including the fundamental rights. The amendment also wrote into Articles 13 and 368 that Article 13 does not apply to amendments.',
+    'The 25th Amendment (1971) changed the rules on property. When the State took property, Article 31(2) had promised "compensation". The amendment replaced that word with "amount", and said no court could question the amount as too low. A new Article 31(2B) also stopped such laws from being challenged under the right to property in Article 19(1)(f).',
+    'The 25th Amendment also added Article 31C. Article 39 is one of the Directive Principles, the goals that the Constitution sets for the State. Its clauses (b) and (c) ask the State to share out the community\'s resources for the common good, and to stop wealth from gathering in a few hands.',
+    'Under the first half of Article 31C, a law serving those two goals could not be struck down for breaking Article 14 (equality), Article 19 (the freedoms) or Article 31 (property).',
+    'The second half of Article 31C went further. If a law declared that it served those goals, no court could ask whether it really did. So one sentence of declaration could shield a whole law from the fundamental rights.',
+    'When the princely States joined India, their rulers were promised a yearly payment called a privy purse. The 26th Amendment (1971) ended the privy purses.',
+    'The 29th Amendment (1972) placed two Kerala land reform laws in the Ninth Schedule. They were the laws that Kesavananda Bharati was challenging. So his case turned into a challenge to the amendments themselves, and to Parliament\'s power to make them.',
+    'To settle the question, the Court sat with thirteen judges, the largest bench in its history. The judges heard arguments from 31 October 1972 to 23 March 1973, and wrote eleven separate opinions.'
   ],
   held: [
-    { kind: 'majority', label: 'View of the majority, in a statement signed by nine judges', points: [
-      'Golak Nath is overruled.',
-      'Article 368 does not enable Parliament to alter the basic structure or framework of the Constitution.',
+    { kind: 'majority', label: 'What the Court decided, in a statement signed by nine of the thirteen judges', points: [
+      'Golak Nath was wrong, and is overruled. Parliament can amend the fundamental rights.',
+      'But Article 368 does not let Parliament alter the basic structure of the Constitution.',
       'The 24th Amendment is valid.',
-      'Section 2(a) and Section 2(b) of the 25th Amendment, which changed Article 31(2) and added Article 31(2B), are valid.',
-      'The first part of Article 31C is valid. The second part, which stopped courts from questioning a declaration that a law gives effect to Article 39(b) or (c), is invalid.',
+      'The change from "compensation" to "amount" in Article 31(2), and the new Article 31(2B), are valid.',
+      'The first half of Article 31C is valid. A law that serves the goals of Article 39(b) and (c) is protected from challenge under Articles 14, 19 and 31.',
+      'The second half of Article 31C is struck down. A law cannot escape the courts just by declaring that it serves those goals. A court can still check whether the law really does.',
       'The 29th Amendment is valid.',
-      'The validity of the 26th Amendment and the remaining questions were sent to a Constitution Bench of five judges.'
+      'The Court did not rule on the 26th Amendment, which ended the privy purses. The judges sent that question, and the rest of the case, to a bench of five judges.'
     ] },
-    { kind: 'majority', label: 'Majority on the limits of the amending power (7 judges): Chief Justice Sikri and Justices Shelat, Grover, Hegde, Mukherjea, Jaganmohan Reddy and Khanna', points: [
-      'The amending power is wide. It reaches every part of the Constitution, including the fundamental rights.',
-      'But the power to amend does not include the power to destroy the basic structure or the identity of the Constitution.',
-      'Chief Justice Sikri gave examples of basic features: the supremacy of the Constitution, republican and democratic government, the secular character of the Constitution, the separation of powers and the federal character of the Constitution. The list was not closed.'
+    { kind: 'majority', label: 'The seven judges who set the limit: Chief Justice Sikri and Justices Shelat, Grover, Hegde, Mukherjea, Jaganmohan Reddy and Khanna', points: [
+      'The power to amend is wide, and reaches every part of the Constitution, including the fundamental rights.',
+      'But to amend something is to change it, not to destroy it. After any amendment, the Constitution must still be the same Constitution, with its basic structure in place.',
+      'Justice Khanna\'s vote decided the case. He held that Parliament could amend the fundamental rights, and that the right to property was not part of the basic structure. But he joined the other six in holding that Parliament could not destroy the basic structure.',
+      'Chief Justice Sikri gave five examples of basic features. They were the supremacy of the Constitution, republican and democratic government, the secular character of the Constitution, the separation of powers and the federal character of the Constitution.',
+      'The separation of powers means that Parliament, the government and the courts each have their own work, and none may take over the work of another. Sikri left his list open, so later cases could add to it.',
+      'The Preamble is part of the Constitution. The judges used it to find the basic features.'
     ] },
-    { kind: 'dissent', label: 'Minority (6 judges): Justices Ray, Palekar, Mathew, Beg, Dwivedi and Chandrachud', points: [
-      'There are no implied or inherent limits on the amending power. Parliament can amend any provision of the Constitution under Article 368.',
-      'The minority also held that Golak Nath was wrongly decided, and that the 24th and 29th Amendments were valid.'
+    { kind: 'dissent', label: 'The six judges in the minority: Justices Ray, Palekar, Mathew, Beg, Dwivedi and Chandrachud', points: [
+      'The words of Article 368 set no limit on the amending power, and the courts cannot read an unwritten limit into them. So Parliament can amend any provision, including a basic feature.',
+      'The minority agreed with the majority on three points. Golak Nath was wrong, and the 24th and 29th Amendments were valid.'
     ] }
   ],
   principles: [
-    'Parliament may amend any part of the Constitution, but not its basic structure.',
-    'The courts decide, case by case, what forms part of the basic structure.'
+    'Parliament may amend any part of the Constitution, including the fundamental rights, but it may not destroy the basic structure. Picture a house. Parliament may repair it or add rooms, but may not pull it down and still call it the same house.',
+    'The courts decide what belongs to the basic structure, one case at a time. No complete list exists.',
+    'So both sides won something. Parliament got back the power that Golak Nath had taken away. The courts kept the last word on whether an amendment goes too far.'
   ],
   legacy: [
-    'The doctrine was used to strike down clause (4) of Article 329A in Indira Nehru Gandhi v. Raj Narain (1975), and clauses (4) and (5) of Article 368 in Minerva Mills (1980).',
-    'In Waman Rao (1980) and I.R. Coelho (2007), the date of this judgment, 24 April 1973, became the cut-off date for testing laws placed in the Ninth Schedule.'
+    'Indira Nehru Gandhi v. Raj Narain (1975) was the first case to strike down part of an amendment on this ground. The 39th Amendment had added Article 329A, whose clause (4) put the Prime Minister\'s 1971 election beyond challenge in any court. The Court struck the clause down, holding that it destroyed basic features such as free and fair elections.',
+    'In Minerva Mills (1980), the Court struck down clauses (4) and (5) of Article 368. The 42nd Amendment (1976) had added them to stop the courts from reviewing amendments and to declare the amending power unlimited. The Court held that a limited amending power is itself a basic feature.',
+    'In Waman Rao (1980) and I.R. Coelho (2007), the date of this judgment, 24 April 1973, became a dividing line. A law placed in the Ninth Schedule after that date can still be tested against the basic structure.'
   ],
   source: 'https://indiankanoon.org/doc/257876/'
 },
