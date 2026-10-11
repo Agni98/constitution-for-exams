@@ -450,8 +450,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   concepts: [
     { t: "Strength", d: "A Chief Justice and such number of other judges as Parliament fixes by law. The current sanctioned strength is 34 including the Chief Justice." },
     { t: "Qualification", d: "A citizen of India who has been a High Court judge for five years, or a High Court advocate for ten years, or is in the President's opinion a distinguished jurist. No distinguished jurist has ever been appointed." },
-    { t: "The collegium", d: "The text says the President appoints after consultation with judges. The Second Judges case (1993) and Third Judges case (1998) reinterpreted \"consultation\" as \"concurrence\", creating a collegium of the Chief Justice and four senior-most judges that effectively selects judges." },
-    { t: "The NJAC was struck down", d: "The 99th Amendment (2014) created a National Judicial Appointments Commission to replace the collegium. In 2015 the Supreme Court struck it down, holding that judicial primacy in appointments is part of the basic structure." },
+    { t: "The collegium", d: "The Second (1993) and Third (1998) Judges cases read \"consultation\" as \"concurrence\". The Chief Justice and the four senior-most judges choose." },
+    { t: "The NJAC was struck down", d: "The 99th Amendment (2014) created the NJAC. The Court struck it down in 2015 as a breach of the basic structure." },
     { t: "Removal: the grounds", d: "Only proved misbehaviour or incapacity. Nothing else." },
     { t: "Removal: the procedure", d: "An address by each House, supported by a majority of the total membership *and* two thirds of members present and voting, presented to the President in the same session." },
     { t: "The Judges (Inquiry) Act, 1968", d: "The Act sets out the investigation: a motion signed by 100 Lok Sabha members or 50 Rajya Sabha members, an inquiry committee of three, and only then a vote." },
@@ -473,12 +473,12 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 129 says the Supreme Court is a court of record, with all the powers of such a court, including the power to punish for contempt of itself.",
   why: "The contempt power was asked directly in 2022. Article 129 is compact, and it pairs neatly with Article 215 for the High Courts.",
   concepts: [
-    { t: "Court of record", d: "The Supreme Court is a court of record. Its proceedings and judgments are recorded permanently, have evidentiary value, and cannot be questioned in any court." },
-    { t: "Power to punish for contempt", d: "Being a court of record carries the power to punish anyone who contemns it. The power flows from the Constitution itself." },
+    { t: "Court of record", d: "The Court's records are permanent evidence and cannot be questioned in any court." },
+    { t: "Power to punish for contempt", d: "The power flows from the Constitution itself, not from a statute." },
     { t: "The High Courts have the same", d: "Article 215 makes every High Court a court of record with the same contempt power." },
     { t: "Two kinds of contempt", d: "Civil contempt is wilful disobedience of a court order. Criminal contempt is scandalising the court, prejudicing a case, or obstructing the administration of justice." },
     { t: "Truth is now a defence", d: "The Contempt of Courts Act was amended in 2006 to allow truth as a defence, if it is in the public interest and the request is bona fide." },
-    { t: "Parliament cannot abolish it", d: "The power comes from the Constitution, not the Act. Parliament may regulate the procedure but cannot take the power away." }
+    { t: "Parliament cannot abolish it", d: "Parliament may regulate the procedure, but cannot take the power away." }
   ],
   seen: [
     "UPSC Pre 2022 — the Contempt of Courts Act, 1971 and the contempt powers under Articles 129 and 215"
@@ -493,8 +493,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   why: "Original jurisdiction covers disputes between governments. The subject became topical again when Kerala and West Bengal sued the Union directly.",
   concepts: [
     { t: "What disputes it covers", d: "The disputes can be between the Government of India and one or more States, or between the Government of India and some States on one side and other States on the other. They can also be between two or more States." },
-    { t: "The jurisdiction is exclusive", d: "No other court can hear these disputes. They go straight to the Supreme Court and nowhere else." },
-    { t: "The dispute must involve a legal right", d: "The dispute must turn on a question of law or fact on which the existence or extent of a legal right depends. A purely political grievance will not do." },
+    { t: "The dispute must involve a legal right", d: "The dispute must turn on the existence or extent of a legal right. A purely political grievance will not do." },
     { t: "Private parties are excluded", d: "A citizen, a company or a public-sector undertaking cannot use Article 131, even in a dispute with a State." },
     { t: "The treaty exception", d: "Disputes arising out of a treaty or agreement entered into before the Constitution began, and still in force, are excluded." },
     { t: "Water disputes are excluded too", d: "Article 262 lets Parliament bar the courts from inter-State river water disputes, and the Inter-State River Water Disputes Act, 1956 does exactly that." }
@@ -511,11 +510,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 136 lets the Supreme Court grant special leave to appeal against any judgment or order of any court or tribunal in India, except a military tribunal.",
   why: "Special leave to appeal is the widest discretionary power any court in India holds, and its breadth is what questions test.",
   concepts: [
-    { t: "What it allows", d: "The Supreme Court may, in its discretion, grant special leave to appeal from any judgment, decree, determination, sentence or order, in any cause or matter, passed by any court or tribunal in India." },
     { t: "The one exclusion", d: "Courts or tribunals constituted under a law relating to the armed forces. Court-martial decisions cannot come up under Article 136." },
-    { t: "Special leave is a power, not a right", d: "No litigant can demand special leave. The Court decides whether to grant it, and gives no reasons for refusing." },
+    { t: "Special leave is a power, not a right", d: "The Court grants or refuses it at its own discretion." },
     { t: "Special leave covers tribunals", d: "The reach is wider than Articles 132 to 134, which cover appeals from High Courts only." },
-    { t: "Special leave is residuary", d: "The power exists to catch cases of grave injustice that the ordinary routes of appeal miss. In practice it has become the main route into the Supreme Court." }
+    { t: "Special leave is residuary", d: "Meant for grave injustice that the ordinary appeals miss. In practice it is the main route into the Court." }
   ],
   trap: "Article 136 reaches tribunals as well as courts, but never court-martial.\n\nAnd it confers no right of appeal on anyone. Describing it as a right rather than a discretion is the standard error."
 },
@@ -526,11 +524,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 137 lets the Supreme Court review its own judgments and orders, subject to any law of Parliament and the Court's own rules.",
   why: "Review, and the curative petition built on top of it, complete the picture of when a Supreme Court decision is truly final.",
   concepts: [
-    { t: "What review means", d: "The Supreme Court may review any judgment or order it has pronounced, subject to any law and to rules made under Article 145." },
-    { t: "The grounds are narrow", d: "Discovery of new and important evidence, an error apparent on the face of the record, or another sufficient reason. Not simply that the losing side disagrees." },
+    { t: "The grounds are narrow", d: "New and important evidence, an error apparent on the face of the record, or another sufficient reason." },
     { t: "How it is heard", d: "Normally by circulation in chambers, by the same judges, without oral argument. Death-penalty cases are an exception and get an oral hearing." },
-    { t: "The curative petition", d: "Created by the Court in Rupa Ashok Hurra (2002) as a last remedy after review fails. A curative petition needs a violation of natural justice or an undisclosed conflict of interest, and a senior advocate must certify it." },
-    { t: "Where the curative petition comes from", d: "Not from Article 137. The Court built it out of Article 142, its power to do complete justice." }
+    { t: "The curative petition", d: "A last remedy after review fails. The petition needs a breach of natural justice or an undisclosed conflict of interest, and a senior advocate's certificate." },
+    { t: "Where the curative petition comes from", d: "Article 142, the power to do complete justice, not Article 137." }
   ],
   trap: "The curative petition is nowhere in the Constitution.\n\nThe Court invented it, resting on Article 142. Attributing it to Article 137 is the natural but wrong answer."
 },
@@ -541,9 +538,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 141 says the law declared by the Supreme Court binds all courts in India.",
   why: "Article 141 is one of the most often asked single facts in the section on the judiciary, and it has one exception that decides the answer.",
   concepts: [
-    { t: "What it says", d: "The law declared by the Supreme Court shall be binding on all courts within the territory of India." },
-    { t: "The Supreme Court is not bound by itself", d: "\"All courts\" has been read as all courts *below* the Supreme Court. The Court can overrule its own earlier decisions, which is how ADM Jabalpur and P.V. Narasimha Rao were undone." },
-    { t: "Only the ratio binds", d: "The ratio decidendi, the reasoning essential to the decision, is binding. Obiter dicta, remarks made in passing, are persuasive but not binding." },
+    { t: "The Supreme Court is not bound by itself", d: "\"All courts\" means courts below it. ADM Jabalpur and P.V. Narasimha Rao were both overruled." },
+    { t: "Only the ratio binds", d: "The ratio decidendi binds. Obiter dicta only persuade." },
     { t: "Bench strength matters", d: "A larger bench can overrule a smaller one. A bench of equal strength that disagrees must refer the matter to a larger bench rather than decide against the earlier ruling." },
     { t: "High Courts", d: "A High Court's decisions bind courts within its own territory. They are only persuasive in other States." }
   ],
@@ -556,9 +552,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 142 lets the Supreme Court pass any decree or order needed to do complete justice in a case before it, and that order can be enforced throughout India.",
   why: "Article 142 lets the Supreme Court do whatever complete justice needs. The article is the centre of the debate on judicial overreach that Mains keeps returning to.",
   concepts: [
-    { t: "What it permits", d: "The Supreme Court may pass any decree or order necessary for doing complete justice in any cause or matter pending before it. The order can be enforced throughout India." },
-    { t: "Where it has been used", d: "The Bhopal gas settlement (1989), the Ayodhya decree (2019), dissolving irretrievably broken marriages without the statutory waiting period, banning liquor shops near highways, and creating the curative petition." },
-    { t: "The limit", d: "In Supreme Court Bar Association (1998) the Court held that Article 142 cannot be used to override an express statutory provision. Article 142 adds to the law, and does not replace it." },
+    { t: "Where it has been used", d: "Bhopal (1989), Ayodhya (2019), broken marriages, liquor shops near highways, and the curative petition." },
+    { t: "The limit", d: "Supreme Court Bar Association (1998): Article 142 cannot override an express statutory provision." },
     { t: "The 2024 restatement", d: "The Court reaffirmed that relief under Article 142 cannot be granted contrary to substantive law, only where the law is silent or a gap needs filling." },
     { t: "The criticism", d: "Critics say the power lets the Court legislate. Defenders say it exists precisely for cases where following the rules exactly would produce injustice." }
   ],
@@ -576,8 +571,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   why: "Advisory jurisdiction is examined for one point above all others: the answer binds nobody.",
   concepts: [
     { t: "Two kinds of reference", d: "Clause (1) covers any question of law or fact of public importance that has arisen or is likely to arise. Clause (2) covers disputes arising from pre-Constitution treaties and agreements." },
-    { t: "The Court may refuse", d: "Under clause (1) the Court may decline to answer, and has done so. Under clause (2) it must give its opinion." },
-    { t: "The opinion is not binding", d: "The opinion binds nobody, not even the President who asked. The opinion is advice, not a judgment, and it is not law under Article 141." },
+    { t: "The Court may refuse", d: "The Court may decline under clause (1), and has. Under clause (2) the Court must answer." },
+    { t: "The opinion is not binding", d: "The opinion binds nobody, not even the President, and is not law under Article 141." },
     { t: "But it carries great weight", d: "In practice every court below treats a reference opinion as authoritative, and governments follow it." },
     { t: "The famous references", d: "The best known are Berubari (1960) on ceding territory, the Special Courts Bill (1978), the Cauvery dispute (1991) and the Third Judges case (1998) on the collegium. The Court declined to answer the Ayodhya reference of 1993." },
     { t: "The 2025 reference", d: "The President referred questions about the time limits on Governors and the President in giving assent to State Bills. The dispute arises from Articles 200 and 201." }

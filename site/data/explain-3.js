@@ -240,12 +240,10 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 /* ---------- The Supreme Court ---------- */
 
 "124": {
-  simple: "Article 124 establishes the Supreme Court, with a Chief Justice and such number of other judges as Parliament prescribes.\n\n" +
-    "Judges are appointed by the President after consultation with such judges of the Supreme Court and High Courts as he thinks necessary. They hold office until sixty-five. They may be removed only by an address of both Houses, on the ground of proved misbehaviour or incapacity.",
-  catch: "The text says 'consultation'. The Second and Third Judges Cases, in 1993 and 1998, read that as 'concurrence' and built the collegium.\n\n" +
-    "The 99th Amendment tried to replace the collegium with the National Judicial Appointments Commission, and the Court struck the amendment down in 2015.\n\n" +
-    "So the appointment machinery that actually operates appears nowhere in this article.",
-  note: "Removal needs a majority of the total membership of each House, plus two-thirds of those present and voting. It has been begun several times and never completed. Justice V. Ramaswami came closest in 1993."
+  simple: "Article 124 sets up the Supreme Court. The Court has a Chief Justice and as many other judges as Parliament fixes by law.\n\n" +
+    "The President appoints the judges after consulting the judges of the Supreme Court and the High Courts that the President thinks necessary. A judge serves until 65. A judge can be removed only for proved misbehaviour or incapacity, by an address of both Houses.",
+  catch: "The text says \"consultation\". But the Second Judges case (1993) and the Third Judges case (1998) read it as \"concurrence\". They created a collegium of the Chief Justice and the four senior-most judges, which in effect chooses the judges.\n\n" +
+    "The 99th Amendment (2014) tried to replace the collegium with a National Judicial Appointments Commission. In 2015 the Court struck the amendment down, holding that judicial primacy in appointments is part of the basic structure. So the system that actually appoints judges appears nowhere in Article 124."
 },
 "124A": {
   simple: "This article set up the National Judicial Appointments Commission: the Chief Justice, the two next senior judges, the Law Minister and two eminent persons.",
@@ -278,18 +276,18 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
   catch: "It also needs that person's consent. No one can be compelled back to the bench."
 },
 "129": {
-  simple: "The Supreme Court is a court of record. It has all the powers of such a court, including the power to punish for contempt of itself.",
-  catch: "'Court of record' does two things. Its proceedings are memorials of evidentiary value, and its contempt power is inherent rather than derived from the Contempt of Courts Act.\n\n" +
-    "That is why the Act's limits do not confine the Court's own jurisdiction."
+  simple: "The Supreme Court is a court of record, with all the powers of such a court. The powers include punishing anyone for contempt of the Court.",
+  catch: "Being a court of record does two things. The Court's records and judgments are kept permanently as evidence, and cannot be questioned in any court. And the power to punish for contempt comes from the Constitution itself.\n\n" +
+    "So the Contempt of Courts Act, 1971 only regulates the power, and its limits do not confine the Court. Parliament can set the procedure, but cannot take the power away."
 },
 "130": {
   simple: "The Supreme Court sits in Delhi, or in such other place as the Chief Justice may appoint with the President's approval.",
   catch: "Repeated proposals for regional benches have failed at this article. The Chief Justice has never exercised the power, and the Court has consistently opposed splitting itself."
 },
 "131": {
-  simple: "The Supreme Court has exclusive original jurisdiction over disputes between the Government of India and one or more States, and between States. The dispute must involve a question of law or fact on which a legal right depends.",
-  catch: "It must be a legal right, not a political grievance. Several State suits against the Union have been resisted on that ground.\n\n" +
-    "A dispute arising out of a pre-Constitution treaty or agreement still in operation is expressly excluded."
+  simple: "Only the Supreme Court can hear disputes between the Government of India and one or more States, or between States. The dispute must turn on a question of law or fact on which a legal right depends.",
+  catch: "The dispute must be about a legal right, not a political grievance. Some suits by States against the Union have been resisted on that ground.\n\n" +
+    "The forum is narrow in other ways too. Private parties cannot use it, disputes under treaties made before the Constitution are excluded, and Parliament has taken inter-State water disputes out of the courts under Article 262."
 },
 "131A": {
   simple: "This article gave the Supreme Court exclusive jurisdiction over the constitutional validity of central laws.",
@@ -316,14 +314,14 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
   catch: "Largely spent. It matters now only for a handful of pre-1950 statutory jurisdictions that were never re-enacted."
 },
 "136": {
-  simple: "The Supreme Court may, in its discretion, grant special leave to appeal from any judgment, decree, determination, sentence or order of any court or tribunal in India. Courts-martial are the only exception.",
-  catch: "This is the widest discretionary power any apex court has.\n\n" +
-    "It is not an appeal as of right, and the Court has said repeatedly that it will be used sparingly in exceptional cases. In practice the special leave petition has become the dominant route into the Supreme Court, and the source of most of its docket."
+  simple: "The Supreme Court may, at its discretion, allow an appeal against any judgment or order of any court or tribunal in India. Courts martial and other armed forces tribunals are the only exception.",
+  catch: "Special leave is a discretion, not a right. No litigant can demand it, and the Court gives no reasons for refusing. The Court has said it will use the power sparingly, in exceptional cases.\n\n" +
+    "But in practice the special leave petition has become the main route into the Supreme Court. Most of the Court's docket comes through it."
 },
 "137": {
-  simple: "The Supreme Court may review any judgment or order it has pronounced, subject to law and to rules made under Article 145.",
-  catch: "A review is not a rehearing, and the grounds are narrow.\n\n" +
-    "Where a review fails, the Court has fashioned a further remedy out of Article 142: the curative petition, created in Rupa Ashok Hurra (2002)."
+  simple: "The Supreme Court may review any judgment or order it has given, subject to any law of Parliament and to the Court's own rules under Article 145.",
+  catch: "A review is not a fresh hearing. The grounds are narrow: new and important evidence, an error plain on the face of the record, or another sufficient reason. Disagreeing with the result is not enough.\n\n" +
+    "When a review fails, one more remedy remains. In Rupa Ashok Hurra (2002) the Court created the curative petition, and rested it on Article 142, not on Article 137."
 },
 "138": {
   simple: "Parliament may enlarge the Supreme Court's jurisdiction over Union List matters, and by agreement with a State over other matters.",
@@ -343,22 +341,21 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
   catch: "Whatever Parliament confers here must not be inconsistent with the Constitution. It cannot be used to widen Article 142 beyond its own limits."
 },
 "141": {
-  simple: "The law declared by the Supreme Court is binding on all courts within India.",
-  catch: "'All courts' does not include the Supreme Court itself. It may overrule its own decisions, though only through a bench of equal or greater strength.\n\n" +
-    "Only the ratio binds. Observations not necessary to the decision are persuasive at most."
+  simple: "The law declared by the Supreme Court binds all courts in India.",
+  catch: "\"All courts\" means all courts below the Supreme Court. The Court can overrule its own earlier decisions, as it did with ADM Jabalpur and P.V. Narasimha Rao. But only a larger bench can do so. A bench of equal strength that disagrees must refer the question to a larger bench.\n\n" +
+    "Only the ratio binds, meaning the reasoning needed to decide the case. Remarks made in passing, called obiter dicta, persuade at most."
 },
 "142": {
-  simple: "The Supreme Court may pass any decree or order necessary for doing complete justice in a case before it, and such an order is enforceable throughout India.\n\n" +
-    "It may also secure the attendance of persons, the production of documents, and punish for contempt.",
-  catch: "This is the most open-ended power in the Constitution, and the most argued about.\n\n" +
-    "It has been used to dissolve marriages that had irretrievably broken down, to clean the Taj Mahal, to transfer the Bhopal case, and to order the Ayodhya land settlement.\n\n" +
-    "It has limits. Since Supreme Court Bar Association (1998) it cannot be used to override an express statutory prohibition."
+  simple: "The Supreme Court may pass any decree or order needed to do complete justice in a case before it. The order can be enforced throughout India.\n\n" +
+    "The Court may also require people to attend, order documents to be produced, and punish for contempt.",
+  catch: "Article 142 is the most open-ended power in the Constitution. The Court has used it to settle the Bhopal gas claims in 1989, to order the Ayodhya settlement in 2019, and to end broken marriages without the statutory waiting period.\n\n" +
+    "But the power has a limit. In Supreme Court Bar Association (1998) the Court held that Article 142 cannot override an express provision of a statute. So the power can fill gaps in the law, but cannot go against it."
 },
 "143": {
-  simple: "The President may refer to the Supreme Court any question of law or fact of public importance that has arisen or is likely to arise, and the Court may report its opinion.\n\n" +
-    "For questions arising out of pre-Constitution treaties excluded by Article 131, the Court must report.",
-  catch: "For an ordinary reference the Court 'may' report. It has declined at least once, on the Ayodhya reference of 1993.\n\n" +
-    "The opinion is advisory and not binding, though in practice it is followed."
+  simple: "The President may ask the Supreme Court for its opinion on a question of law or fact of public importance, whether it has arisen or is likely to arise. The Court may give its opinion.\n\n" +
+    "For disputes arising from treaties made before the Constitution, which Article 131 excludes, the Court must give its opinion.",
+  catch: "On an ordinary reference the Court \"may\" answer, so it can refuse. The Court refused the Ayodhya reference of 1993.\n\n" +
+    "An opinion is advice, not a judgment, and binds nobody, not even the President who asked. But in practice courts and governments follow it."
 },
 "144": {
   simple: "All authorities, civil and judicial, in the territory of India shall act in aid of the Supreme Court.",
