@@ -217,21 +217,21 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
   catch: "The rules, not the Constitution, govern Question Hour, Zero Hour and whether a Bill goes to a committee at all. Under Article 122 the presiding officer's reading of the rules is final."
 },
 "119": {
-  simple: "Parliament may by law regulate financial procedure and the timely completion of financial business. Such a law overrides the Houses' own rules.",
+  simple: "Parliament may make a law on financial procedure and on finishing financial business on time. The law would override the Houses' own rules.",
   catch: "Parliament has never made such a law. Financial procedure runs entirely on the Houses' own rules, which the Houses can change themselves."
 },
 "120": {
-  simple: "Business in Parliament is transacted in Hindi or English. The presiding officer may allow a member who cannot express himself adequately in either to address the House in his mother tongue.",
-  catch: "The English limb was to expire after fifteen years unless Parliament provided otherwise. Parliament provided otherwise, and English continues indefinitely under the Official Languages Act, 1963."
+  simple: "Parliament does its business in Hindi or English. The presiding officer may let a member who cannot speak well in either use their mother tongue.",
+  catch: "The use of English was to end after fifteen years, unless Parliament decided otherwise. Parliament did, and English continues indefinitely under the Official Languages Act, 1963."
 },
 "121": {
-  simple: "No discussion may take place in Parliament on the conduct of a judge of the Supreme Court or a High Court in the discharge of his duties, except on a motion for his removal.",
-  catch: "This is the constitutional basis of judicial insulation from parliamentary criticism. A removal motion is the only forum in which a judge's conduct may be debated."
+  simple: "Parliament may not discuss the conduct of a Supreme Court or High Court judge in carrying out judicial duties. The only exception is a motion to remove the judge.",
+  catch: "Article 121 shields judges from criticism in Parliament. A motion for removal is the only occasion on which a judge's conduct may be debated there."
 },
 "122": {
-  simple: "The validity of parliamentary proceedings cannot be questioned in court on the ground of an alleged irregularity of procedure. Nor is an officer of Parliament with powers to regulate procedure subject to a court's jurisdiction for exercising them.",
-  catch: "'Irregularity' is not the same as 'illegality'.\n\n" +
-    "Courts have held they may still intervene where a proceeding is unconstitutional rather than merely irregular. That is how the Speaker's Money Bill certificate came to be argued as reviewable."
+  simple: "No court may question the validity of proceedings in Parliament on the ground of an irregularity of procedure. Nor can a court act against an officer of Parliament for using powers to regulate procedure.",
+  catch: "But an irregularity is not the same as an illegality. Courts have held that they may still step in where a proceeding is unconstitutional, not merely irregular.\n\n" +
+    "So the Speaker's certificate that a Bill is a Money Bill came to be argued as open to review."
 },
 "123": {
   simple: "Unless both Houses of Parliament are in session, the President may make an ordinance when immediate action is needed. An ordinance has the same force as an Act of Parliament.\n\n" +
@@ -262,21 +262,21 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
   catch: "Struck down with Articles 124A and 124B in 2015."
 },
 "125": {
-  simple: "Judges' salaries are as Parliament determines. Their privileges, allowances, leave and pension cannot be varied to their disadvantage after appointment.",
-  catch: "The prohibition on disadvantageous variation is a core independence guarantee. It yields during a Financial Emergency under Article 360(4)(b)."
+  simple: "Judges' salaries are fixed by Parliament. Their privileges, allowances, leave and pension cannot be changed to their disadvantage after appointment.",
+  catch: "The bar on changes for the worse is a core guarantee of judicial independence. The one exception is a financial emergency, when Article 360(4)(b) allows judges' salaries to be cut."
 },
 "126": {
-  simple: "When the office of Chief Justice is vacant, or the Chief Justice cannot act, the President appoints another judge of the Court to act as Chief Justice.",
-  catch: "The appointment is the President's, but convention makes it the senior-most judge.\n\n" +
-    "The two occasions that convention was broken, in 1973 and 1977, produced the supersession crises and a wave of resignations from the bench."
+  simple: "When the Chief Justice's office is vacant, or the Chief Justice cannot act, the President appoints another judge of the Court to act as Chief Justice.",
+  catch: "The President appoints, but by convention the senior-most judge acts.\n\n" +
+    "Do not confuse acting with appointment. The supersessions of 1973 and 1977, when senior judges were passed over, concerned the permanent appointment of a Chief Justice under Article 124."
 },
 "127": {
-  simple: "Where there is not a quorum of permanent judges, the Chief Justice may ask a duly qualified High Court judge to sit as an ad hoc judge of the Supreme Court. This needs the President's consent and consultation with the relevant Chief Justice.",
-  catch: "It has never been used. When the Court needs extra hands it reaches for Article 128 and brings back retired judges instead."
+  simple: "If there are too few permanent judges to make a quorum, the Chief Justice may ask a qualified High Court judge to sit in the Supreme Court as an ad hoc judge. The Chief Justice needs the President's consent, and must consult the High Court's Chief Justice.",
+  catch: "The power is rarely used. When the Court needs extra judges, it is more likely to bring back retired judges under Article 128."
 },
 "128": {
-  simple: "The Chief Justice may request a retired judge of the Supreme Court, or a qualified retired High Court judge, to sit and act as a judge of the Supreme Court. This needs the President's consent.",
-  catch: "It also needs that person's consent. No one can be compelled back to the bench."
+  simple: "With the President's consent, the Chief Justice may ask a retired Supreme Court judge, or a qualified retired High Court judge, to sit and act as a Supreme Court judge.",
+  catch: "The retired judge must also agree. Nobody can be compelled back to the bench."
 },
 "129": {
   simple: "The Supreme Court is a court of record, with all the powers of such a court. The powers include punishing anyone for contempt of the Court.",
@@ -284,8 +284,8 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "So the Contempt of Courts Act, 1971 only regulates the power, and its limits do not confine the Court. Parliament can set the procedure, but cannot take the power away."
 },
 "130": {
-  simple: "The Supreme Court sits in Delhi, or in such other place as the Chief Justice may appoint with the President's approval.",
-  catch: "Repeated proposals for regional benches have failed at this article. The Chief Justice has never exercised the power, and the Court has consistently opposed splitting itself."
+  simple: "The Supreme Court sits in Delhi, or in any other place the Chief Justice names with the President's approval.",
+  catch: "Proposals for permanent regional benches keep coming up under Article 130. The Court has consistently resisted splitting itself."
 },
 "131": {
   simple: "Only the Supreme Court can hear disputes between the Government of India and one or more States, or between States. The dispute must turn on a question of law or fact on which a legal right depends.",
@@ -297,24 +297,24 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
   catch: "Inserted by the 42nd Amendment and repealed by the 43rd in 1977. It was one of the provisions that had stripped High Courts of judicial review."
 },
 "132": {
-  simple: "An appeal lies to the Supreme Court from any judgment of a High Court, civil, criminal or otherwise, if the High Court certifies that the case involves a substantial question of law as to the interpretation of the Constitution.",
-  catch: "The certificate route is nearly dead. Almost every constitutional case now reaches the Supreme Court by special leave under Article 136, which needs no certificate at all."
+  simple: "An appeal lies to the Supreme Court from any judgment of a High Court, civil, criminal or other. The High Court must certify that the case raises a substantial question of law on the meaning of the Constitution.",
+  catch: "The certificate route is now rarely used. Almost every constitutional case reaches the Supreme Court by special leave under Article 136, which needs no certificate."
 },
 "133": {
-  simple: "An appeal lies in civil matters where the High Court certifies that the case involves a substantial question of law of general importance, which in the High Court's opinion needs to be decided by the Supreme Court.",
-  catch: "The 30th Amendment removed the old monetary threshold of ₹20,000, replacing money with importance as the test."
+  simple: "An appeal lies in a civil case where the High Court certifies two things. The case must raise a substantial question of law of general importance, and the High Court must think the Supreme Court needs to decide it.",
+  catch: "The 30th Amendment (1972) removed the old test of a dispute worth ₹20,000 or more. Importance replaced money as the test."
 },
 "134": {
-  simple: "An appeal lies in criminal matters as of right in three situations: where the High Court has reversed an acquittal and passed a death sentence, where it has withdrawn a case to itself and passed a death sentence, or where it certifies the case fit for appeal.",
-  catch: "The death sentence is what makes the appeal automatic. Everything short of it needs a certificate, or special leave under Article 136."
+  simple: "An appeal lies as of right in a criminal case in three situations. The High Court has reversed an acquittal and passed a death sentence. Or the High Court has taken a case to itself and passed a death sentence. Or the High Court certifies the case as fit for appeal.",
+  catch: "A death sentence makes the appeal automatic. Anything less needs a certificate, or special leave under Article 136."
 },
 "134A": {
-  simple: "A High Court must consider whether to give a certificate under Articles 132, 133 or 134. It does so on its own motion, or on an oral application made immediately after judgment.",
-  catch: "Added by the 44th Amendment, to stop litigants having to file a separate application later."
+  simple: "A High Court must decide whether to grant a certificate for appeal under Article 132, 133 or 134. The High Court does so on its own, or when a party asks orally right after the judgment.",
+  catch: "The 44th Amendment added the article, so that litigants no longer had to file a separate application later."
 },
 "135": {
-  simple: "The Supreme Court inherits any jurisdiction the Federal Court had under pre-Constitution law, unless Parliament provides otherwise.",
-  catch: "Largely spent. It matters now only for a handful of pre-1950 statutory jurisdictions that were never re-enacted."
+  simple: "The Supreme Court takes over any jurisdiction that the Federal Court had under laws made before the Constitution, unless Parliament provides otherwise.",
+  catch: "The article is largely spent. Article 135 matters only for a few pre-1950 statutory jurisdictions that were never re-enacted."
 },
 "136": {
   simple: "The Supreme Court may, at its discretion, allow an appeal against any judgment or order of any court or tribunal in India. Courts martial and other armed forces tribunals are the only exception.",
@@ -327,8 +327,8 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "When a review fails, one more remedy remains. In Rupa Ashok Hurra (2002) the Court created the curative petition, and rested it on Article 142, not on Article 137."
 },
 "138": {
-  simple: "Parliament may enlarge the Supreme Court's jurisdiction over Union List matters, and by agreement with a State over other matters.",
-  catch: "It needs a law of Parliament, and for non-Union matters a State's agreement as well. Both requirements have kept it almost entirely unused."
+  simple: "Parliament may widen the Supreme Court's jurisdiction over Union List matters. Parliament may widen it over other matters too, if the State government agrees.",
+  catch: "Both conditions, a law of Parliament and, for other matters, a State's agreement, have kept the power almost unused."
 },
 "139": {
   simple: "Parliament may by law confer on the Supreme Court the power to issue writs for purposes other than enforcing fundamental rights.",

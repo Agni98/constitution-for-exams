@@ -6,18 +6,18 @@
 Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 
 partIV: {
-  simple: "Part IV contains the Directive Principles of State Policy. They are instructions to the State about the kind of society it should build.\n\n" +
-    "They cover welfare, equality of outcome, a living wage, free legal aid, a uniform civil code and environmental protection.\n\n" +
-    "Part IV sets the goals; Part III sets the limits. Article 37 says plainly that no court may enforce these principles, and that they are nevertheless fundamental to the governance of the country."
+  simple: "Part IV contains the Directive Principles of State Policy. They tell the State what kind of society to build.\n\n" +
+    "They cover welfare, reducing inequality, a living wage, free legal aid, a uniform civil code and the protection of the environment.\n\n" +
+    "Part IV sets the goals, while Part III sets the limits. Article 37 says that no court can enforce the principles, but that they are still fundamental to governing the country."
 },
 partIVA: {
-  simple: "Part IVA contains the Fundamental Duties. They are the citizen's side of the bargain.\n\n" +
-    "It was added in 1976 on the Swaran Singh Committee's recommendation. One article, eleven duties, and no direct enforcement."
+  simple: "Part IVA contains the Fundamental Duties, the citizen's side of the bargain.\n\n" +
+    "The Part was added in 1976 on the Swaran Singh Committee's advice. The Part has one article, eleven duties, and no direct means of enforcing them."
 },
 partV: {
   simple: "Part V sets up the Union government.\n\n" +
-    "It covers the President and Vice-President, the Council of Ministers, the Attorney-General, Parliament and how it legislates, the President's ordinance power, the Supreme Court, and the Comptroller and Auditor-General.\n\n" +
-    "It is the largest Part in the Constitution."
+    "The Part covers the President and Vice-President, the Council of Ministers, the Attorney-General, Parliament and how it makes laws, the President's power to make ordinances, the Supreme Court, and the Comptroller and Auditor-General.\n\n" +
+    "Part V is the largest Part of the Constitution."
 },
 
 /* ---------- Part IV: Directive Principles ---------- */
