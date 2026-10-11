@@ -304,8 +304,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A legislature may remove the basis of a judgment by a new law, but cannot simply overrule it.',
-    'Efficiency of administration is to be understood inclusively, not only through test scores.',
     'So the same rule that failed in 2017 passed in 2019, because this time the State brought the evidence the Court had asked for.'
   ],
   legacy: [
@@ -354,7 +352,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The anti-defection law is valid, and the courts can review the Speaker\'s decisions under it on limited grounds.',
     'So the law against defection survived, but the Speaker did not become the final and unchecked judge of it.'
   ],
   legacy: [
@@ -400,7 +397,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Delay by a Speaker in deciding disqualification petitions defeats the anti-defection law, and the courts can correct it.',
     'So a Speaker cannot protect a defector simply by sitting on the petition. Silence is treated as a failure the courts can fix.'
   ],
   legacy: [

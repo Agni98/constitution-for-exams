@@ -81,7 +81,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Parliament may amend any part of the Constitution, including the fundamental rights, but it may not destroy the basic structure. Picture a house. Parliament may repair it or add rooms, but may not pull it down and still call it the same house.',
+    'Think of a house. Parliament may repair it or add rooms, but may not pull it down and still call it the same house.',
     'The courts decide what belongs to the basic structure, one case at a time. No complete list exists.',
     'So both sides won something. Parliament got back the power that Golak Nath had taken away. The courts kept the last word on whether an amendment goes too far.'
   ],
@@ -142,8 +142,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Free and fair elections are part of the basic structure of the Constitution.',
-    'An amendment to the Constitution cannot be used to decide one particular dispute without applying any law.',
     'So Indira Gandhi kept her seat, but only because Parliament had changed the election law. The Court refused to let Parliament simply declare her the winner.'
   ],
   legacy: [
@@ -205,8 +203,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Consultation is not agreement.',
-    'Any member of the public with enough interest may come to court about a public wrong.',
     'So in 1981 the government won the power to choose judges. But the case also opened the courts to public interest litigation and to open government.'
   ],
   legacy: [
@@ -260,7 +256,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Where the Constitution itself excludes a hearing, natural justice cannot restore it.',
     'So the government can dismiss without inquiry in these three narrow cases. But it must still record its reasons, and the penalty must still fit the facts.'
   ],
   legacy: [
@@ -321,8 +316,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A Governor\'s report under Article 356 must rest on checked facts, not on suspicion.',
-    'The Governor\'s personal immunity does not put the Governor\'s actions beyond review by the courts.',
     'So the Court found that the Assembly had been dissolved without good reason, but did not stop the new elections that had already begun.'
   ],
   legacy: [
@@ -369,7 +362,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Under Article 370 as first written, the final decision on the State\'s relationship with India lay with the Constituent Assembly of Jammu and Kashmir.',
     'So in 1950 the ruler of Jammu and Kashmir still made its laws, and his land reform, taking land from big landlords without compensation, stood.'
   ],
   legacy: [
@@ -417,8 +409,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Asking the Governor to invite a rival party to form the government can amount to voluntarily giving up party membership.',
-    'A defence of split needed proof of a split in the political party itself.',
     'So the defectors could not escape by adding up legislators. Leaving the party to help a rival form the government was defection.'
   ],
   legacy: [
@@ -471,8 +461,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The whip is appointed by the political party, not by the legislature party.',
-    'A Governor may call for a floor test only on objective material showing that the government may have lost the confidence of the House.',
     'So the Court found the Governor at fault, but could not undo a resignation. A Chief Minister who steps down before the vote cannot later be put back.'
   ],
   legacy: [
