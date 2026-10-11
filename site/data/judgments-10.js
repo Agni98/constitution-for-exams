@@ -57,9 +57,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The pardon power under Article 72 is a constitutional power, used on the advice of ministers.',
-    'The President may look at the evidence and differ from the courts.',
-    'The courts\' review of decisions on pardon is narrow.',
     'So a mercy petition is a real second look at the case, not a formality. But it is a political decision, not a fresh trial.'
   ],
   legacy: [
@@ -120,8 +117,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The protection of Article 21 lasts until execution, so delay and mental illness after the final judgment matter.',
-    'Mercy petitions must be decided without undue delay, and prisoners on death row have procedural rights.',
     'So waiting for years under a death sentence is itself a punishment. When the State causes that wait, the State loses the right to carry out the execution.'
   ],
   legacy: [
@@ -173,9 +168,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'India follows the cabinet form of government. The President and the Governors act on the advice of their ministers.',
-    'Whether ending a person\'s service is a punishment depends on its substance, not its wording.',
-    'The High Court, not the government, controls the lower judiciary.',
     'So power rests with the elected ministers, not with the formal head of State. The head of State advises and warns, but follows the ministers\' advice.'
   ],
   legacy: [
@@ -236,9 +228,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'President\'s Rule under Article 356 can be reviewed by the courts.',
-    'The floor of the House is the place to test a government\'s majority.',
-    'Secularism is part of the basic structure of the Constitution.',
+    'Federalism is part of the basic structure. The States are not mere agents of the Centre.',
     'So the Centre can no longer dismiss a State government on a Governor\'s say-so. The Centre must show relevant reasons, and the majority is counted in the House.'
   ],
   legacy: [
@@ -288,8 +278,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A floor test is the proper way to settle a doubt about a government\'s majority.',
-    'The Governor may call for a floor test on objective material, but must not use the power to topple a government.',
     'So when a majority is in doubt, the House decides it quickly by a vote. Neither the Governor nor a delay by the Speaker can decide it for the members.'
   ],
   legacy: [
@@ -334,8 +322,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The power of pardon and remission is not beyond the courts. The power must be used on relevant considerations.',
-    'Courts do not decide whether a pardon should be granted. They check whether the decision was lawfully made.',
+    'Courts check how a mercy decision was made, not whether mercy was deserved.',
     'So mercy cannot be handed out as a political favour. A pardon based on party loyalty can be struck down.'
   ],
   legacy: [

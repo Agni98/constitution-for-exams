@@ -412,8 +412,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Institutional preference in postgraduate education must be limited, because merit matters most at that level.',
-    'The fundamental duties in Article 51A can guide courts in reading laws and judging the State\'s actions.',
+    'Merit weighs more as education rises. A preference that is fair for entry to college is harder to justify at the postgraduate level.',
     'So a college may favour its own students a little, but not so much that better candidates from elsewhere are shut out.'
   ],
   legacy: [
@@ -469,8 +468,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Minority status depends on who founded an institution and why, not on the law that gave it legal form.',
-    'A minority institution may include people outside the minority in its management.',
+    'Article 30 looks to the past. The question is who founded an institution, so the evidence lies in its early history.',
     'So AMU\'s status is not settled yet. The Court changed the test, and a smaller bench must now apply it to AMU\'s history.'
   ],
   legacy: [

@@ -61,8 +61,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'In 1998 the Court read the immunity for votes in Parliament broadly, even where the vote was bought.',
-    'People who pay bribes to members of Parliament are not protected by parliamentary privilege.',
     'So the result was strange. The member who took the money and voted as paid was safe, while the member who took the money and stayed away was not.'
   ],
   legacy: [
@@ -110,7 +108,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   principles: [
     'Parliamentary privilege protects the free working of the House, not the private gain of its members.',
-    'Bribery of a legislator is a crime, complete outside the House the moment the bribe is taken.',
     'So the protection for a legislator\'s vote does not protect a vote that was sold.'
   ],
   legacy: [
