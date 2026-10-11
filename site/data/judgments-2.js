@@ -54,10 +54,10 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   principles: [
     'Six signs help show that a body is an arm of the government. The government holds its shares. Government money meets almost all its costs. The State gives or protects its monopoly.',
-    'The other three signs are these: deep and pervasive control by the State, work of public importance close to the work of government, and a government department handed over to the body.',
+    'The other three signs are deep and pervasive control by the State, work of public importance close to the work of government, and a government department handed over to the body.',
     'The signs are indicators, not a checklist that must be fully met.',
-    'Article 14 is not only about treating like cases alike. Any arbitrary act of the State breaks it. The Court also said that interview marks should not be more than 15 per cent of the total.',
-    'So the government cannot slip out of the fundamental rights by working through a company or a society. If the body is the government in substance, the rights apply.'
+    'The Court also said that interview marks should not be more than 15 per cent of the total, because an interview is so easy to misuse.',
+    'So what matters is whether a body is the government in substance, whatever it calls itself.'
   ],
   legacy: [
     'For twenty years the Ajay Hasia tests decided which bodies could be sued for breaking fundamental rights.',
@@ -106,9 +106,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A body is "the State" if the government dominates it in money, functions and administration.',
-    'The control must be special to that body. General regulation by law does not make a body "the State".',
-    'Whether a body was set up by a statute, as a company or as a society does not settle the question by itself.',
+    'The test applies to any kind of body, whether a statute set it up or it was registered as a company or a society.',
+    'No single sign settles the question. A body that shows one or two of the Ajay Hasia signs may still fall outside Article 12.',
     'So the test looks at who really runs the body, not at the form on its papers.'
   ],
   legacy: [
@@ -157,9 +156,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A body is not "the State" only because it holds a monopoly or does public work.',
-    'A body that is not "the State" can still answer to a High Court under Article 226 when it performs a public duty.',
-    'So the BCCI is not the government, but it is not beyond the courts either. The route to the courts runs through the High Courts.'
+    'There are two routes with two tests. Article 32 needs "the State", but Article 226 needs only a public duty.',
+    'So a body can stay outside Article 12 and still answer in court for the way it does public work.'
   ],
   legacy: [
     'For this reason, sports bodies can be taken to the High Courts under Article 226 but not straight to the Supreme Court under Article 32.',
@@ -204,8 +202,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Ordinary laws and amendments to the Constitution are different things. Article 13(2) controls only ordinary laws.',
-    'So in 1951 the Court held that Parliament\'s power to amend under Article 368 reached the fundamental rights too.'
+    'The power to amend is a constituent power, different in kind from the power to make ordinary laws.',
+    'So in 1951 the text placed no limit on what Parliament could amend, the fundamental rights included.'
   ],
   legacy: [
     'Sajjan Singh (1964) followed this view.',

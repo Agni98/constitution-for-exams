@@ -79,9 +79,9 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A right can be fundamental even when the Constitution does not name it. Privacy is found inside the rights to life, liberty and the freedoms.',
+    'Rights can sit inside other rights. A freedom the text never names can still be fundamental, if it forms part of one that is named.',
     'Dignity and the freedom to run one\'s own life lie at the core of Part III.',
-    'The State can limit privacy only through a law with a legitimate aim, and only as far as that aim needs.',
+    'Privacy belongs to the person, not to a place. A person does not lose it by stepping into a public space.',
     'So life and liberty are not gifts from the Constitution. Every person has them already, and the Constitution recognises them.'
   ],
   legacy: [
@@ -133,9 +133,9 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The majority gave an Article 359 order the widest possible reach. While the order lasted, courts could not look at a detention at all.',
-    'Justice Khanna held the opposite. In his view, the rule of law protects life and liberty even during an Emergency.',
-    'So the case is remembered as a warning. The courts\' power to protect personal liberty matters most when the State is at its most powerful.'
+    'Justice Khanna\'s view is now the law. The State needs the authority of a law to hold anyone, whether or not Article 21 can be enforced at the time.',
+    'A dissent can become the law later. Khanna\'s did, forty-one years on.',
+    'So the case is remembered as a warning. Courts matter most to personal liberty when the State is at its most powerful.'
   ],
   legacy: [
     'The 44th Amendment (1978) changed Article 359. Since 20 June 1979, a Presidential Order cannot suspend the enforcement of Articles 20 and 21, even during an Emergency.',
@@ -186,10 +186,9 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A general law that protects women from destitution applies to all women, whatever their personal law.',
-    'Personal law cannot defeat a right in a statute that stops a person from falling into destitution.',
-    'The Court also said that "Article 44 of our Constitution has remained a dead letter". In its view, a common civil code would help national integration.',
-    'So the case set a floor under every divorced woman. Religion decides much of family law, but not whether a woman is left without support.'
+    'Laws that prevent destitution are secular. They apply to everyone, and personal law cannot take them away.',
+    'The Court\'s remark that Article 44 "has remained a dead letter" was said in passing. The remark did not decide the case, but it started a long debate on a common civil code.',
+    'So religion decides much of family law, but not whether a woman is left without support.'
   ],
   legacy: [
     'The judgment led to political protest. In 1986 Parliament passed the Muslim Women (Protection of Rights on Divorce) Act to limit its effect.',
@@ -241,9 +240,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The independence of the judiciary is part of the basic structure. Even an amendment to the Constitution cannot take it away.',
-    'In choosing judges for the Supreme Court and the High Courts, the judiciary\'s opinion must prevail over the government\'s.',
-    'But the Court also accepted that the collegium needed to become more open. So the judgment kept the judges in charge of appointments, while asking them to do the job more transparently.'
+    'How judges are chosen is part of judicial independence. So rules on appointments are tested against the basic structure, like any other amendment.',
+    'So the judges kept control of appointments, but the Court accepted that the collegium had to become more open.'
   ],
   legacy: [
     'In November 2015 the Court heard suggestions on how to improve the collegium system.',
