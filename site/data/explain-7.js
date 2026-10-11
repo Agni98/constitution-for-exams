@@ -117,14 +117,14 @@ partXVIII: {
 /* ---------- Part XIVA: Tribunals ---------- */
 
 "323A": {
-  simple: "Parliament may by law provide for administrative tribunals to decide disputes about the recruitment and conditions of service of public servants. It may exclude the jurisdiction of all courts except the Supreme Court under Article 136.",
-  catch: "L. Chandra Kumar (1997) struck down the exclusion of High Court jurisdiction.\n\n" +
-    "Judicial review under Articles 226 and 227 is part of the basic structure. Tribunals are supplemental to High Courts, not substitutes for them."
+  simple: "Parliament may set up administrative tribunals by law, to decide disputes about the recruitment and service conditions of public servants. The law may shut out every court except the Supreme Court under Article 136.",
+  catch: "The 42nd Amendment (1976) added the article. The Administrative Tribunals Act, 1985 then created the Central Administrative Tribunal, and allows State tribunals.\n\n" +
+    "But L. Chandra Kumar (1997) struck down the exclusion of the High Courts. Judicial review under Articles 226 and 227 is part of the basic structure. So a tribunal's decision now goes first to a division bench of the High Court, and tribunals supplement the High Courts rather than replace them."
 },
 "323B": {
-  simple: "The appropriate legislature may set up tribunals for taxation, foreign exchange, industrial and labour disputes, land reform, urban property ceilings, elections to Parliament and State legislatures, food supplies and rent control.",
-  catch: "Same fate as Article 323A: the exclusion of High Court jurisdiction cannot stand.\n\n" +
-    "Rojer Mathew (2019) and Madras Bar Association (2021) went further, striking down rules on tribunal members' qualifications and tenure for compromising independence."
+  simple: "Parliament or a State legislature may set up tribunals for taxation, foreign exchange, industrial and labour disputes, land reform, urban land ceilings, elections, food supplies, and rent and tenancy.",
+  catch: "Article 323B differs from Article 323A in three ways. Both Parliament and the States may act. The subjects are many, not just service matters. And a hierarchy of tribunals is allowed.\n\n" +
+    "But the same limit applies. After L. Chandra Kumar (1997), no tribunal can shut out the High Courts. Rojer Mathew (2019) and Madras Bar Association (2021) went further, and struck down rules on members' qualifications and tenure that weakened the tribunals' independence."
 },
 
 /* ---------- Part XV: Elections ---------- */
@@ -225,12 +225,14 @@ partXVIII: {
     "The Union and every State must consult the Commission on all major policy matters affecting Scheduled Castes. The Commission became a multi-member constitutional body in 1990, and the 89th Amendment (2003) split off a separate Commission for Scheduled Tribes."
 },
 "338A": {
-  simple: "Article 338A applies the same scheme to a separate National Commission for Scheduled Tribes.",
-  catch: "The single SC and ST Commission was split into two by the 89th Amendment in 2003, on the view that the two groups' problems are not the same."
+  simple: "There shall be a National Commission for Scheduled Tribes, with a Chairperson, a Vice-Chairperson and three other members. The Commission works like the Commission for Scheduled Castes.",
+  catch: "Until 2003 one Commission served both Scheduled Castes and Scheduled Tribes. The 89th Amendment split it in two.\n\n" +
+    "The tribes' concerns differ in kind: loss of land, forest rights, displacement and autonomous councils. In a combined body, those concerns were getting less attention."
 },
 "338B": {
-  simple: "There shall be a National Commission for Backward Classes, with the same investigative, advisory and reporting functions, and the same civil-court powers.",
-  catch: "Inserted by the 102nd Amendment in 2018. The NCBC had existed by statute since 1993, but had no constitutional status until then."
+  simple: "There shall be a National Commission for Backward Classes. The Commission investigates and monitors the safeguards for backward classes, advises on policy, and reports to the President. While investigating, the Commission has the powers of a civil court.",
+  catch: "The Commission existed by statute from 1993, after Indra Sawhney asked for a permanent body to examine claims for inclusion. The 102nd Amendment (2018) gave it constitutional status, and added Article 342A on a central list of backward classes.\n\n" +
+    "In the Maratha reservation case (2021), the Court read the 2018 amendment as removing the States' power to identify their own backward classes. Parliament restored that power within months, through the 105th Amendment."
 },
 "339": {
   simple: "The President may appoint a Commission to report on the administration of Scheduled Areas and the welfare of Scheduled Tribes.\n\n" +
@@ -252,9 +254,10 @@ partXVIII: {
   catch: "Unlike Scheduled Castes, Scheduled Tribe status carries no religious restriction."
 },
 "342A": {
-  simple: "The President specifies the socially and educationally backward classes for the Central List, and only Parliament may vary it. Every State may prepare and maintain its own list for its own purposes.",
-  catch: "Clause (3), preserving the States' own lists, was added by the 105th Amendment in 2021.\n\n" +
-    "It was a direct answer to the Maratha Reservation ruling (2021), which had read the 102nd Amendment as taking that power away."
+  simple: "The President, after consulting the Governor, specifies the socially and educationally backward classes for the central list. Only Parliament may change that list.\n\n" +
+    "Each State may prepare and keep its own list for its own purposes.",
+  catch: "Clause (3), which protects the State lists, came with the 105th Amendment (2021). In the Maratha reservation case earlier that year, the Court had read the 102nd Amendment as creating a single central list.\n\n" +
+    "So there are now two kinds of list. The central list governs central jobs and central institutions, and a State's list governs its own. A community can be on one list and not the other."
 },
 
 /* ---------- Part XVII: Official language ---------- */

@@ -654,12 +654,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 323A lets Parliament set up administrative tribunals to decide disputes about the recruitment and service conditions of government employees.",
   why: "Administrative tribunals and the L. Chandra Kumar ruling make a compact story that Mains likes and Prelims can test in one line.",
   concepts: [
-    { t: "What it permits", d: "Parliament may by law establish administrative tribunals to decide disputes about recruitment and conditions of service of persons appointed to public services." },
     { t: "Only Parliament", d: "A State legislature cannot create a tribunal under Article 323A, even for its own services. The point is the first difference from Article 323B." },
     { t: "Where it came from", d: "The 42nd Amendment, 1976, on the recommendation of the Swaran Singh Committee. The amendment added Part XIVA." },
     { t: "The law that followed", d: "The Administrative Tribunals Act, 1985, which created the Central Administrative Tribunal and allows State Administrative Tribunals." },
-    { t: "The exclusion clause", d: "Article 323A(2)(d) originally allowed Parliament to exclude the jurisdiction of all courts except the Supreme Court under Article 136. So the High Courts could not review the tribunals' decisions." },
-    { t: "L. Chandra Kumar (1997)", d: "A seven-judge bench struck that down. Judicial review by High Courts under Articles 226 and 227 is part of the basic structure and cannot be excluded." },
+    { t: "The exclusion clause", d: "The article let Parliament shut out every court but the Supreme Court under Article 136." },
+    { t: "L. Chandra Kumar (1997)", d: "High Court review under Articles 226 and 227 is part of the basic structure, and cannot be excluded." },
     { t: "The result", d: "Tribunal decisions now go first to a division bench of the relevant High Court, not straight to the Supreme Court." }
   ],
   seen: [
@@ -675,10 +674,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 323B lets Parliament or a State legislature set up tribunals for other kinds of dispute, such as taxation, land reform, industrial disputes, rent and elections.",
   why: "The second article on tribunals differs from the first in three specific ways, and questions test exactly those differences.",
   concepts: [
-    { t: "The subjects it covers", d: "Taxation, foreign exchange, industrial and labour disputes, land reforms, ceiling on urban property, elections to Parliament and State legislatures, food supplies, and rent and tenancy matters." },
-    { t: "Difference one: who can legislate", d: "Both Parliament and a State legislature may establish tribunals under Article 323B. Only Parliament can under 323A." },
-    { t: "Difference two: the subjects", d: "323A covers only service matters. 323B covers a long list of other subjects." },
-    { t: "Difference three: hierarchy", d: "323B expressly allows a hierarchy of tribunals. 323A contemplates only one tribunal for the Union and one for each State, with no appellate tier." },
+    { t: "Difference one: who can legislate", d: "Both Parliament and the States. Only Parliament under 323A." },
+    { t: "Difference two: the subjects", d: "Many subjects. 323A covers only service matters." },
+    { t: "Difference three: hierarchy", d: "A hierarchy of tribunals is allowed. 323A has none." },
     { t: "Same origin", d: "Both were inserted by the 42nd Amendment, 1976." },
     { t: "Same limit", d: "L. Chandra Kumar applies here too. High Court review under Articles 226 and 227 cannot be excluded." }
   ],

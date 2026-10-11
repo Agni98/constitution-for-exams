@@ -104,10 +104,10 @@ partXXII: {
     "The development boards for Vidarbha and Marathwada were constituted only in 1994 and lapsed in 2020. Their revival is a live political demand."
 },
 "371A": {
-  simple: "No Act of Parliament applies to Nagaland on four subjects, unless the Legislative Assembly so decides. They are Naga religious or social practices, Naga customary law and procedure, civil and criminal justice decided according to Naga customary law, and ownership and transfer of land and its resources.\n\n" +
+  simple: "No Act of Parliament applies to Nagaland on four subjects unless the Nagaland Assembly agrees. They are Naga religious and social practices, Naga customary law and procedure, justice under customary law, and the ownership and transfer of land and its resources.\n\n" +
     "The Governor has special responsibility for law and order while internal disturbances continue.",
-  catch: "This is the strongest asymmetric provision in the Constitution after Article 370 was read down. A State legislature holds a veto over Parliament on named subjects.\n\n" +
-    "Ownership of land and its resources includes minerals, which is why oil exploration in Nagaland is a State-consent question."
+  catch: "Article 371A gives a State legislature a veto over Parliament on named subjects. Land and its resources include minerals, so oil exploration in Nagaland needs the State's consent.\n\n" +
+    "The 13th Amendment (1962) added the article as part of the settlement that created Nagaland. Unlike Article 370, Article 371A is not temporary. No presidential order can end it, and removing it would need a constitutional amendment."
 },
 "371B": {
   simple: "The President may provide for a committee of the Assam Legislative Assembly, consisting of members elected from the tribal areas.",
@@ -145,9 +145,9 @@ partXXII: {
   catch: "The shortest of the special provisions, and a purely arithmetical one. It protects a small State from having a legislature too small to function."
 },
 "371J": {
-  simple: "The President may provide for a separate development board for the Hyderabad-Karnataka region, equitable allocation of development funds, and reservation in education and State government jobs for people of that region.",
-  catch: "Inserted by the 98th Amendment in 2012.\n\n" +
-    "Uniquely among these articles, it authorises reservation in education and employment on the basis of region rather than caste or class."
+  simple: "The President may give the Governor of Karnataka special responsibility for the Kalyana-Karnataka region, once called Hyderabad-Karnataka. The region gets a separate development board, a fair share of development funds, and reservation in education and State jobs for local people.",
+  catch: "The 98th Amendment (2012) added the article. The reservation goes to people who belong to the region by birth or domicile, in its educational institutions and in identified State posts there.\n\n" +
+    "Article 371D does something similar for Andhra Pradesh and Telangana. What Article 371J adds is a package: local reservation together with a development board and a duty of fair funding."
 },
 "372": {
   simple: "All laws in force immediately before the Constitution continue, until altered, repealed or amended by a competent legislature.\n\n" +
@@ -250,10 +250,10 @@ schIV: {
     "This is the only structurally federal feature of the upper House, and it is far weaker than the American Senate's equality."
 },
 schV: {
-  simple: "The Fifth Schedule governs the administration and control of Scheduled Areas and Scheduled Tribes, in States other than Assam, Meghalaya, Tripura and Mizoram.\n\n" +
-    "The Governor reports annually to the President. He may direct that a Union or State law shall not apply to a Scheduled Area, or shall apply with modifications. He is advised by a Tribes Advisory Council.",
-  catch: "The power to disapply an Act of Parliament to a Scheduled Area is one of the most striking in the Constitution. It is exercised on ministerial advice, so in practice it is the State government's power.\n\n" +
-    "Paragraph 7 lets Parliament amend this Schedule by ordinary law, without Article 368."
+  simple: "The Fifth Schedule governs the Scheduled Areas and Scheduled Tribes of every State except Assam, Meghalaya, Tripura and Mizoram.\n\n" +
+    "The Governor reports every year to the President, and may direct that a Union or State law shall not apply to a Scheduled Area, or shall apply with changes. A Tribes Advisory Council advises.",
+  catch: "The power to keep an Act of Parliament out of a Scheduled Area is one of the most striking in the Constitution. But the Governor uses it on ministerial advice, so in practice it is the State government's power.\n\n" +
+    "The Governor may also make regulations restricting land transfers involving Scheduled Tribes and controlling money-lending to them, with the President's assent. And paragraph 7 lets Parliament amend the Schedule by ordinary law, without Article 368."
 },
 schVI: {
   simple: "The Sixth Schedule governs the tribal areas of Assam, Meghalaya, Tripura and Mizoram, through Autonomous District and Regional Councils.\n\n" +

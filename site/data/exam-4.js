@@ -107,11 +107,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 338A sets up the National Commission for Scheduled Tribes, with a Chairperson, a Vice-Chairperson and three members, to investigate and report on the safeguards for Scheduled Tribes.",
   why: "The 89th Amendment of 2003 separated the Scheduled Tribes Commission from the Scheduled Castes Commission. The split is a clean fact about an amendment, with a date attached.",
   concepts: [
-    { t: "What it creates", d: "The National Commission for Scheduled Tribes." },
     { t: "When", d: "The 89th Amendment, 2003. Before that a single Commission served both Scheduled Castes and Scheduled Tribes." },
-    { t: "Composition and powers", d: "The Commission is identical to the Scheduled Castes Commission: a Chairperson, a Vice-Chairperson and three members, with the powers of a civil court in investigations." },
+    { t: "Composition and powers", d: "Same as the Scheduled Castes Commission, with a civil court's powers in investigations." },
     { t: "Mandatory consultation", d: "The Union and every State must consult it on all major policy matters affecting Scheduled Tribes." },
-    { t: "Why it was split", d: "The concerns of Scheduled Tribes, such as loss of land, forest rights, displacement and autonomous councils, differ in kind from those of Scheduled Castes. In a combined body they were getting less attention." }
+    { t: "Why it was split", d: "Land, forest rights, displacement and autonomous councils differ from the concerns of Scheduled Castes." }
   ],
   trap: "Before 2003 there was one Commission for both groups.\n\nThe sequence matters: a Special Officer until 1990, a combined multi-member Commission from 1990, and two separate Commissions from 2003."
 },
@@ -123,10 +122,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   why: "The National Commission for Backward Classes became constitutional only in 2018. Prelims likes recent changes of status, and this change came in a sequence of steps.",
   concepts: [
     { t: "What it creates", d: "The National Commission for Backward Classes, with five members appointed by the President." },
-    { t: "The Commission was statutory first", d: "Set up in 1993 by an Act of Parliament, following the Supreme Court's direction in Indra Sawhney that a permanent body examine claims of over-inclusion and under-inclusion." },
-    { t: "The 102nd Amendment (2018)", d: "The amendment gave the Commission constitutional status. The same amendment inserted Article 342A, on the central list of backward classes." },
-    { t: "The unintended consequence", d: "In the Maratha reservation case (2021) the Supreme Court read the 102nd Amendment as having taken away the States' power to identify their own backward classes." },
-    { t: "The 105th Amendment (2021)", d: "Passed within months to restore that power, by adding Article 342A(3) making clear States may maintain their own lists." },
+    { t: "The Commission was statutory first", d: "Set up by an Act of Parliament in 1993, after Indra Sawhney." },
+    { t: "The 102nd Amendment (2018)", d: "Constitutional status, together with Article 342A." },
+    { t: "The unintended consequence", d: "The Maratha case (2021) read it as removing the States' power to list backward classes." },
+    { t: "The 105th Amendment (2021)", d: "Restored the States' power by adding Article 342A(3)." },
     { t: "Its powers", d: "Civil-court powers of investigation, mandatory consultation on major policy affecting backward classes, and annual reports to the President." }
   ],
   seen: [
@@ -157,12 +156,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 342A lets the President notify, for the Union's purposes, a central list of the socially and educationally backward classes. Each State keeps its own list for its own purposes.",
   why: "Two amendments three years apart, the second undoing the effect of the first, make a well-shaped question.",
   concepts: [
-    { t: "What it provides", d: "The President, after consulting the Governor, may specify the socially and educationally backward classes for a State. Parliament may then include or exclude classes from that central list by law." },
     { t: "When it was added", d: "By the 102nd Amendment, 2018, alongside constitutional status for the NCBC." },
-    { t: "What went wrong", d: "In the Maratha reservation case (2021) the Supreme Court held by majority that the amendment had created a single central list, stripping States of the power to identify their own backward classes." },
+    { t: "What went wrong", d: "The Maratha case (2021) read the 2018 amendment as creating one central list." },
     { t: "Why that mattered", d: "States identify backward classes for their own reservations in State jobs and colleges. Losing that power would have thrown every State list into doubt." },
-    { t: "The 105th Amendment (2021)", d: "The amendment added Article 342A(3), which expressly keeps the power of every State to prepare and maintain its own list of socially and educationally backward classes." },
-    { t: "Where it stands", d: "There is a central list, used for central government jobs and central educational institutions, and separate State lists. They are not the same, and a caste can be on one and not the other." }
+    { t: "The 105th Amendment (2021)", d: "Added clause (3), keeping every State's power over its own list." },
+    { t: "Where it stands", d: "A central list for central jobs and institutions, and separate State lists." }
   ],
   trap: "The central list and the State lists are different lists.\n\nA community may be backward for State purposes and not for central purposes, or the reverse. The 2021 judgment treated them as a single list. Parliament reversed that reading months later with the 105th Amendment."
 },
@@ -376,11 +374,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 371A says no Act of Parliament on Naga religious or social practices, customary law, justice under customary law, or ownership of land applies to Nagaland unless its Assembly agrees.",
   why: "Nagaland's provision is the strongest of the special provisions, and in some ways stronger than Article 370 ever was. Questions ask it as a comparison.",
   concepts: [
-    { t: "What it protects", d: "No Act of Parliament applies to Nagaland on four subjects unless the Nagaland Assembly resolves that it should. The four are the religious or social practices of the Nagas, Naga customary law and procedure, civil and criminal justice under Naga customary law, and the ownership and transfer of land and its resources." },
-    { t: "When it was added", d: "By the 13th Amendment, 1962, as part of the settlement creating the State of Nagaland." },
+    { t: "When it was added", d: "The 13th Amendment (1962), part of the settlement creating Nagaland." },
     { t: "The Governor's special responsibility", d: "The Governor has special responsibility for law and order in Nagaland so long as internal disturbances continue, and exercises individual judgment on it after consulting the Council of Ministers." },
     { t: "Mizoram has an almost identical provision", d: "Article 371G, added by the 53rd Amendment in 1986, protects the same four subjects for Mizoram." },
-    { t: "Why it is stronger than Article 370", d: "Article 371A is not headed \"temporary\", and no presidential order can make it inoperative. Removing it would need a constitutional amendment." }
+    { t: "Why it is stronger than Article 370", d: "Not temporary, so no presidential order can end it. Only an amendment can." }
   ],
   seen: [
     "UPSC Pre 2025 — the constitutional history of Nagaland"
@@ -396,8 +393,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   concepts: [
     { t: "What it covers", d: "The article covers the Kalyana-Karnataka region, formerly called Hyderabad-Karnataka. The region is made up of the districts of northern Karnataka that were part of the princely state of Hyderabad." },
     { t: "When it was added", d: "By the 98th Amendment, 2012." },
-    { t: "What it provides", d: "The region gets a separate development board, which reports every year to the State legislature, and a fair share of State funds for development. People from the region also get reservation in education and in State government jobs." },
-    { t: "What is distinctive about it", d: "Article 371J is the most recent of the Article 371 provisions, and clause (2) spells the reservation out unusually plainly. A share of seats in the region's educational and vocational institutions goes to students who belong to it \"by birth or by domicile\". A share of identified posts under the State Government there goes to them too. Do not call it the only such provision: Article 371D does the same for Andhra Pradesh and Telangana, covering public employment *and* education. What 371J adds is that it packages the reservation with a development board and an equitable funding duty." },
+    { t: "What it provides", d: "A development board, a fair share of funds, and local reservation in education and State jobs." },
+    { t: "What is distinctive about it", d: "Reservation by birth or domicile, packaged with a development board. Article 371D also reserves on a local basis, so 371J is not unique." },
     { t: "Comparable provisions", d: "Article 371 provides development boards for Vidarbha, Marathwada and parts of Gujarat. Article 371D gives Andhra Pradesh and Telangana local-cadre reservations in public employment, which is the closest parallel." }
   ],
   trap: "Article 371 provisions cannot be abrogated by presidential order.\n\nThey sit in Part XXI under the heading of temporary, transitional *and special* provisions. Only Article 370 was in the temporary category. The 371 series is special, and permanent unless amended."
@@ -409,12 +406,12 @@ schV: {
   says: "The Fifth Schedule governs the Scheduled Areas and Scheduled Tribes in States other than Assam, Meghalaya, Tripura and Mizoram. The Governor can keep laws from applying there, and a Tribes Advisory Council advises the State.",
   why: "Papers asked about Scheduled Areas in 2025, 2023, 2022, 2019 and 2013. Few topics in the polity paper come back so often, because tribal rights over land and minerals are always contested.",
   concepts: [
-    { t: "Where it applies", d: "Scheduled Areas and Scheduled Tribes in every State except Assam, Meghalaya, Tripura and Mizoram, which are covered by the Sixth Schedule. Ten States have Scheduled Areas." },
+    { t: "Where it applies", d: "Every State except Assam, Meghalaya, Tripura and Mizoram. Ten States have Scheduled Areas." },
     { t: "Who declares an area Scheduled", d: "The President, by order, after consulting the Governor. The President may also alter the boundaries or rescind the declaration." },
     { t: "The Governor's report", d: "The Governor must report annually to the President on the administration of Scheduled Areas in the State, and whenever the President requires." },
-    { t: "The Governor's power over laws", d: "The Governor may direct that any Act of Parliament or of the State legislature shall not apply to a Scheduled Area, or shall apply with modifications. The power is real and unusual." },
-    { t: "Regulations on land and money-lending", d: "The Governor may make regulations prohibiting or restricting the transfer of land by or among members of Scheduled Tribes, and regulating money-lending to them. The regulations need the President's assent." },
-    { t: "Tribes Advisory Council", d: "Every State with Scheduled Areas must have one, of not more than twenty members, three quarters of whom are representatives of Scheduled Tribes in the Legislative Assembly. Its role is purely advisory." },
+    { t: "The Governor's power over laws", d: "Any Act of Parliament or of the State may be kept out, or applied with changes." },
+    { t: "Regulations on land and money-lending", d: "Regulations on land transfer and money-lending, with the President's assent." },
+    { t: "Tribes Advisory Council", d: "Up to twenty members, three-quarters of them Scheduled Tribe MLAs. The Council only advises." },
     { t: "The executive power", d: "The executive power of the Union extends to giving directions to a State on the administration of Scheduled Areas." },
     { t: "PESA, 1996", d: "PESA extends Part IX to Scheduled Areas with changes, giving the Gram Sabha powers over land acquisition, minor forest produce, minor water bodies and minor minerals." }
   ],
