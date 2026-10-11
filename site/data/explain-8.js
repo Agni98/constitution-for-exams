@@ -256,49 +256,43 @@ schV: {
     "The Governor may also make regulations restricting land transfers involving Scheduled Tribes and controlling money-lending to them, with the President's assent. And paragraph 7 lets Parliament amend the Schedule by ordinary law, without Article 368."
 },
 schVI: {
-  simple: "The Sixth Schedule governs the tribal areas of Assam, Meghalaya, Tripura and Mizoram, through Autonomous District and Regional Councils.\n\n" +
-    "These have elected members, their own legislative powers over land, forests, inheritance, marriage and social custom, their own village courts, and their own taxing powers.",
-  catch: "This is far stronger than the Fifth Schedule. These are elected bodies with real legislative and judicial power, not advisory councils.\n\n" +
-    "Ladakh's demand for inclusion in the Sixth Schedule is a live political question precisely because of that difference."
+  simple: "The Sixth Schedule governs the tribal areas of Assam, Meghalaya, Tripura and Mizoram, through Autonomous District Councils and Regional Councils.\n\n" +
+    "The Councils are elected. They make laws on land, forests, inheritance, marriage and social custom, run village courts, and raise some taxes.",
+  catch: "The Sixth Schedule is far stronger than the Fifth. Its Councils are elected bodies with real legislative and judicial power, not advisory councils.\n\n" +
+    "The difference explains why Ladakh's demand to be brought under the Sixth Schedule is a live political question."
 },
 schVII: {
-  simple: "The Seventh Schedule contains the three legislative lists.\n\n" +
-    "List I, the Union List, has around 100 entries: defence, foreign affairs, railways, banking, currency, income tax.\n\n" +
-    "List II, the State List, has around 60: police, public order, public health, agriculture, land, local government.\n\n" +
-    "List III, the Concurrent List, has around 50: criminal law, marriage, contracts, bankruptcy, education, forests.",
-  catch: "Entries are read broadly, in their widest amplitude. A law is tested by its pith and substance rather than by its incidental effects.\n\n" +
-    "Education, forests, wildlife, and weights and measures were moved from List II to List III by the 42nd Amendment. That is the single largest transfer of legislative power from the States to the Centre since 1950."
+  simple: "The Seventh Schedule holds the three Lists of subjects.\n\n" +
+    "List I, the Union List, covers subjects such as defence, foreign affairs, railways, banking, currency and income tax. List II, the State List, covers police, public order, public health, agriculture, land and local government. List III, the Concurrent List, covers criminal law, marriage, contracts, bankruptcy, education and forests.",
+  catch: "Courts read each entry in its widest sense. A law is judged by its pith and substance, not by what it touches incidentally.\n\n" +
+    "The 42nd Amendment (1976) moved five subjects from the State List to the Concurrent List. They were education, forests, weights and measures, protection of wild animals and birds, and administration of justice. The move was the largest shift of law-making power from the States to the Union since 1950."
 },
 schVIII: {
   simple: "The Eighth Schedule lists the twenty-two languages recognised by the Constitution: Assamese, Bengali, Bodo, Dogri, Gujarati, Hindi, Kannada, Kashmiri, Konkani, Maithili, Malayalam, Manipuri, Marathi, Nepali, Odia, Punjabi, Sanskrit, Santhali, Sindhi, Tamil, Telugu and Urdu.",
-  catch: "Inclusion does not make a language official anywhere.\n\n" +
-    "Its legal effect is narrow: representation on the Official Language Commission under Article 344, and a claim on the enrichment of Hindi under Article 351.\n\n" +
-    "Fourteen languages were listed in 1950. Sindhi came in 1967; Konkani, Manipuri and Nepali in 1992; Bodo, Dogri, Maithili and Santhali in 2003."
+  catch: "Being in the Schedule does not make a language official anywhere. The legal effect is narrow. Members of the Official Language Commission under Article 344 are drawn from these languages, and Article 351 asks Hindi to draw on them.\n\n" +
+    "Fourteen languages were listed in 1950. Sindhi came in 1967. Konkani, Manipuri and Nepali came in 1992. Bodo, Dogri, Maithili and Santhali came in 2003."
 },
 schIX: {
-  simple: "The Ninth Schedule lists around 284 Acts and Regulations, mostly State land-reform and land-ceiling laws. Article 31B protects them from challenge for violating fundamental rights.",
-  catch: "I.R. Coelho (2007) held that any law inserted into this Schedule after 24 April 1973, the date of Kesavananda, can still be tested against the basic structure.\n\n" +
-    "The Schedule is therefore no longer the absolute shield it was designed to be."
+  simple: "The Ninth Schedule lists more than 280 Acts and Regulations, many of them State land-reform and land-ceiling laws. Article 31B protects them from challenge for breaching fundamental rights.",
+  catch: "The First Amendment (1951) created the Schedule with thirteen laws, to protect land reform from the right to property. The Schedule then grew far beyond land.\n\n" +
+    "Waman Rao (1981) drew a line at 24 April 1973, the date of Kesavananda, and I.R. Coelho (2007) confirmed it. Any law added after that date can be tested against the basic structure, so the Schedule is no longer an absolute shield."
 },
 schX: {
   simple: "The Tenth Schedule is the anti-defection law.\n\n" +
-    "A member is disqualified if he voluntarily gives up his party's membership, or votes against the party whip without permission. An independent who joins a party is disqualified, and so is a nominated member who joins one after six months.\n\n" +
+    "A member is disqualified for voluntarily giving up membership of the party, or for voting against the party's direction without permission. An independent who joins a party is disqualified. So is a nominated member who joins a party more than six months after taking the seat.\n\n" +
     "The Speaker or Chairman decides.",
-  catch: "The only surviving exception is a merger agreed to by two-thirds of a party's legislators. The one-third 'split' exception was deleted by the 91st Amendment in 2003.\n\n" +
-    "Kihoto Hollohan (1992) upheld the Schedule but struck down the clause barring judicial review, so the Speaker's decision is reviewable.\n\n" +
-    "No time limit is written in, so a Speaker can effectively decide the outcome by not deciding at all."
+  catch: "Only one exception survives: a merger agreed to by two-thirds of a party's legislators. The 91st Amendment removed the old exception for a split by one-third, because splits had become the usual route to engineered defections.\n\n" +
+    "Kihoto Hollohan (1992) upheld the Schedule but struck down the clause barring judicial review, so the Speaker's decision can be reviewed. But no time limit is written in. So a Speaker can decide the outcome by not deciding at all, though Keisham Meghachandra (2020) said three months should be the norm."
 },
 schXI: {
-  simple: "The Eleventh Schedule lists the twenty-nine subjects a State legislature may devolve to panchayats under Article 243G.\n\n" +
-    "They include agriculture, land improvement, minor irrigation, animal husbandry, fisheries, rural housing, drinking water, roads, rural electrification, poverty alleviation, education, health, women and child development, and public distribution.",
-  catch: "This is a menu, not a mandate.\n\n" +
-    "Article 243G says the legislature 'may' endow panchayats with these functions. A subject in this Schedule is devolved only if the State chooses to devolve it."
+  simple: "The Eleventh Schedule lists twenty-nine subjects that a State may hand over to panchayats under Article 243G. They include agriculture, minor irrigation, animal husbandry, fisheries, rural housing, drinking water, roads, poverty alleviation, education, health, women and child development, and public distribution.",
+  catch: "The Schedule is a menu, not a mandate. Article 243G says the legislature \"may\" give panchayats these functions. So a subject moves only if the State passes a law to move it.\n\n" +
+    "States differ widely in how many subjects they have handed over. Many also transferred the function without the money or the staff to perform it."
 },
 schXII: {
-  simple: "The Twelfth Schedule lists the eighteen subjects a State legislature may devolve to municipalities under Article 243W.\n\n" +
-    "They include urban planning, land-use regulation, water supply, public health and sanitation, fire services, slum improvement, urban poverty alleviation, parks, burial grounds and street lighting.",
-  catch: "The same permissive structure as the Eleventh Schedule.\n\n" +
-    "It is why Indian city governments control so little of what happens in their cities. Water, transport and planning are often run by State parastatals rather than by the elected municipality."
+  simple: "The Twelfth Schedule lists eighteen subjects that a State may hand over to municipalities under Article 243W. They include urban planning, land-use rules, water supply, public health and sanitation, fire services, slum improvement, urban poverty alleviation, parks, burial grounds and street lighting.",
+  catch: "The structure is the same permissive one as in the Eleventh Schedule. Article 243W says the State \"may\" give these powers.\n\n" +
+    "So Indian city governments control little of what happens in their cities. Water, transport and planning are often run by State bodies such as development authorities and water boards, which the elected municipality does not control."
 }
 
 });

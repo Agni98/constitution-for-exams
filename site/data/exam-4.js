@@ -433,11 +433,11 @@ schVI: {
   concepts: [
     { t: "Where it applies", d: "The tribal areas of Assam, Meghalaya, Tripura and Mizoram. There are ten autonomous districts across the four States." },
     { t: "Autonomous District Councils", d: "Each district has a Council of up to thirty members: twenty-six elected for five years by adult suffrage, and four nominated by the Governor to hold office at the Governor's pleasure." },
-    { t: "They make laws", d: "On land allotment and use, forests other than reserved forests, canal water for agriculture, shifting cultivation, village administration, inheritance, marriage and divorce, and social customs. The laws need the Governor's assent." },
+    { t: "They make laws", d: "Land, forests other than reserved forests, canal water, shifting cultivation, village administration, inheritance, marriage and social customs. The laws need the Governor's assent." },
     { t: "They run courts", d: "Village councils and courts may try suits and cases between members of Scheduled Tribes. The High Court's jurisdiction over these is as the Governor specifies." },
     { t: "They raise money", d: "They may levy land revenue and certain taxes, and collect royalties from licences for mineral extraction." },
     { t: "The Governor's power over laws", d: "The Governor may direct that any Act of Parliament or of the State legislature shall not apply to an autonomous district, or shall apply with modifications." },
-    { t: "Part IX does not apply", d: "Article 243M excludes these areas from the panchayat system, because the Councils already perform that role with far greater powers." }
+    { t: "Part IX does not apply", d: "Article 243M keeps panchayats out, because the Councils already do that work with greater powers." }
   ],
   seen: [
     "UPSC Pre 2015 — the purpose of the Fifth and Sixth Schedules"
@@ -455,7 +455,7 @@ schVII: {
     { t: "Union List: the big ones", d: "Defence, armed forces, atomic energy, foreign affairs, railways, shipping, airways, posts, currency, banking, insurance, inter-State trade and commerce, census, and the residuary entry 97." },
     { t: "State List: the big ones", d: "Public order, police, prisons, local government, public health and sanitation, agriculture, land, fisheries, betting and gambling, State taxes on agricultural income, and alcohol." },
     { t: "Concurrent List: the big ones", d: "Criminal law and procedure, marriage and divorce, transfer of property other than agricultural land, bankruptcy, trusts, education, forests, protection of wild animals and birds, electricity, factories, and economic and social planning." },
-    { t: "The five subjects the 42nd Amendment moved", d: "Education, forests, weights and measures, protection of wild animals and birds, and administration of justice all moved from the State List to the Concurrent List in 1976." },
+    { t: "The five subjects the 42nd Amendment moved", d: "Education, forests, weights and measures, protection of wild animals and birds, and administration of justice." },
     { t: "How conflicts are resolved", d: "Article 254: on a Concurrent subject the Union law prevails, unless the State law received the President's assent, and even then Parliament can override it later." },
     { t: "GST sits outside all three", d: "Article 246A is a stand-alone power. So the 101st Amendment was needed." }
   ],
@@ -477,7 +477,7 @@ schVIII: {
     { t: "Sindhi, 1967", d: "Added by the 21st Amendment, bringing the total to fifteen." },
     { t: "Konkani, Manipuri and Nepali, 1992", d: "Added by the 71st Amendment, bringing the total to eighteen." },
     { t: "Bodo, Dogri, Maithili and Santhali, 2003", d: "Added by the 92nd Amendment, bringing the total to twenty-two." },
-    { t: "What inclusion actually does", d: "Members of the Official Language Commission under Article 344 are drawn from these languages. Article 351 requires Hindi to draw on them for vocabulary. And candidates may use them in certain public examinations." },
+    { t: "What inclusion actually does", d: "Members of the Official Language Commission come from these languages, Hindi draws on them under Article 351, and some public examinations allow them." },
     { t: "English is not in it", d: "English is an additional official language of the Union under the Official Languages Act, 1963, but it is not an Eighth Schedule language." },
     { t: "Classical language status is separate", d: "A government decision confers the status, not the Schedule. Tamil, Sanskrit, Telugu, Kannada, Malayalam, Odia and others hold it." }
   ],
@@ -494,12 +494,12 @@ schIX: {
   why: "Papers asked the Ninth Schedule in both 2019 and 2018. The Schedule has a clean arc: created to protect land reform, stretched far beyond it, then partly reopened by the courts.",
   concepts: [
     { t: "What it does", d: "Acts placed in it are protected by Article 31B from being struck down for violating any Fundamental Right." },
-    { t: "How it started", d: "The First Amendment, 1951, inserted it with thirteen laws, almost all of them State land-reform legislation that courts had struck down as violating the right to property." },
-    { t: "How it grew", d: "There are now more than 280 entries, covering reservation, mining, trade regulation and much else. Most have nothing to do with land." },
+    { t: "How it started", d: "The First Amendment (1951), with thirteen laws, almost all of them land reform." },
+    { t: "How it grew", d: "More than 280 entries now, including laws on reservation, mining and trade. Many have nothing to do with land." },
     { t: "The protection is retrospective", d: "A law already declared void by a court revives once placed in the Schedule. The protection is wider than the one in Article 31A." },
     { t: "How a law is added", d: "Only by a constitutional amendment, since it means adding to a Schedule of the Constitution." },
-    { t: "Waman Rao (1981)", d: "The Court drew the line at 24 April 1973, the date of the Kesavananda judgment. Laws added before the date were immune. Laws added after it could be tested." },
-    { t: "I.R. Coelho (2007)", d: "A nine-judge bench confirmed and elaborated this. Any law added after 24 April 1973 can be tested against the basic structure, and if it damages the essence of a Fundamental Right it will be struck down despite being in the Schedule." }
+    { t: "Waman Rao (1981)", d: "Laws added before 24 April 1973 are immune, and later ones can be tested." },
+    { t: "I.R. Coelho (2007)", d: "Nine judges held that later additions can be struck down if they damage the basic structure." }
   ],
   seen: [
     "UPSC Pre 2019 — the Ninth Schedule and its origin in the Nehru years",
@@ -518,10 +518,10 @@ schX: {
     { t: "Ground one: giving up membership", d: "A member of a political party is disqualified if they voluntarily give up membership of that party. Courts have read the ground widely. The ground needs no formal resignation, and conduct alone can be enough." },
     { t: "Ground two: defying the whip", d: "Voting or abstaining contrary to the party's direction, without prior permission, and without the party condoning it within fifteen days." },
     { t: "Independents and nominated members", d: "An independent member who joins any political party after election is disqualified. A nominated member has six months from taking their seat to join a party, and is disqualified if they join one later." },
-    { t: "The split exception was deleted", d: "Originally a split by one third of a legislature party was protected. The 91st Amendment removed it, because it had become the standard route to engineered defections. The Act is titled 2003 but took effect on 1 January 2004, which matters for anything that happened in between." },
+    { t: "The split exception was deleted", d: "The one-third split exception went with the 91st Amendment, which took effect on 1 January 2004." },
     { t: "The merger exception survives", d: "If two thirds of the members of a legislature party agree to merge with another party, they are not disqualified." },
-    { t: "Who decides", d: "The Speaker or Chairman of the House. Their decision is final under the Schedule, and no time limit is prescribed for making it." },
-    { t: "Kihoto Hollohan (1992)", d: "The Court upheld the Schedule but struck down the clause barring judicial review. The Speaker acts as a tribunal, and the decision can be reviewed, though not before it is made." },
+    { t: "Who decides", d: "The Speaker or Chairman, with no time limit." },
+    { t: "Kihoto Hollohan (1992)", d: "Upheld the Schedule. The Speaker's decision is open to judicial review once made." },
     { t: "Keisham Meghachandra (2020)", d: "The Court said Speakers should decide within three months, and suggested Parliament consider transferring the power to an independent tribunal." }
   ],
   seen: [
@@ -539,11 +539,10 @@ schXI: {
   says: "The Eleventh Schedule lists 29 subjects that a State may hand over to its panchayats, such as agriculture, drinking water, rural housing, primary education and health.",
   why: "Questions ask the 29 panchayat subjects both by count and by content, and almost always pair them with the Twelfth Schedule.",
   concepts: [
-    { t: "What it is", d: "A list of 29 subjects that a State may devolve to panchayats under Article 243G." },
     { t: "All twenty-nine, in the Schedule's own order", d: "Farming and land come first: agriculture, land improvement and land reform, minor irrigation and watershed development, animal husbandry with dairying and poultry, fisheries, social and farm forestry, and minor forest produce. Then come small-scale industries, khadi with village and cottage industries, rural housing, drinking water, fuel and fodder, and roads with culverts, bridges, ferries and waterways. Next are rural electrification, non-conventional energy, poverty alleviation, education including primary and secondary schools, technical training and vocational education, adult and non-formal education, and libraries. The last nine are cultural activities, markets and fairs, health and sanitation, family welfare, women and child development, social welfare, welfare of the weaker sections, the public distribution system, and maintenance of community assets." },
     { t: "When it was added", d: "By the 73rd Amendment, 1992, along with Part IX." },
-    { t: "The list is illustrative, not mandatory", d: "Listing a subject creates no obligation on the State to transfer it. Each transfer needs a State law." },
-    { t: "Why devolution is uneven", d: "States differ enormously in how many of the 29 they have actually devolved, and in whether they transferred the funds and staff to go with the function." }
+    { t: "The list is illustrative, not mandatory", d: "Listing a subject creates no duty to transfer it. Each transfer needs a State law." },
+    { t: "Why devolution is uneven", d: "States differ in how many of the 29 they devolved, and in whether funds and staff went too." }
   ],
   trap: "The Eleventh Schedule devolves nothing by itself.\n\nThe Schedule is a menu of what *may* be transferred. Confusing it with a list of powers panchayats actually hold is the error, and it is what makes the Mains question about weak local government answerable."
 },
@@ -554,11 +553,10 @@ schXII: {
   says: "The Twelfth Schedule lists 18 subjects that a State may hand over to its municipalities, such as town planning, water supply, public health, fire services and slum improvement.",
   why: "The 18 municipal subjects are the urban counterpart of the Eleventh Schedule. Options constantly swap the two counts, and that swap is the whole point of the question.",
   concepts: [
-    { t: "What it is", d: "A list of 18 subjects that a State may devolve to municipalities under Article 243W." },
     { t: "All eighteen, in the Schedule's own order", d: "Planning comes first: urban and town planning, rules on land use and buildings, and planning for economic and social development. Then come roads and bridges, water supply, public health with sanitation and solid waste management, fire services, and urban forestry with protection of the environment. Next are safeguarding the weaker sections, slum improvement, urban poverty alleviation, amenities such as parks and playgrounds, and promotion of cultural, educational and aesthetic aspects. The last five are burial and cremation grounds, cattle pounds and prevention of cruelty to animals, registration of births and deaths, street lighting with parking and bus stops, and regulation of slaughter houses and tanneries." },
     { t: "When it was added", d: "By the 74th Amendment, 1992, along with Part IXA." },
-    { t: "Same permissive wording", d: "Article 243W says the State \"may\" endow municipalities with these powers. Devolution depends on a State law." },
-    { t: "Why cities remain weak", d: "Much of what a city needs, such as water, transport and housing, is often run by State bodies like development authorities and water boards. The elected municipal body has no control over them." }
+    { t: "Same permissive wording", d: "Article 243W says \"may\". Each transfer needs a State law." },
+    { t: "Why cities remain weak", d: "Water, transport and housing often sit with State bodies outside the municipality's control." }
   ],
   seen: [
     "UPSC Mains 2023 — States' reluctance to empower urban local bodies functionally and financially"
