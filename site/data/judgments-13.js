@@ -60,8 +60,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The Governor acts on the ministers\' advice in summoning and addressing the House.',
-    'The Governor\'s discretion is narrow, and the courts can review it.',
     'So a Governor cannot take sides in a party\'s internal revolt by changing the Assembly\'s calendar. The elected government decides when the House meets.'
   ],
   legacy: [
@@ -103,8 +101,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The Governor\'s power under Article 200 cannot be used to stall laws for ever.',
-    'The power to govern rests with the elected government and legislature.',
     'So the Governor may ask the legislature to think again, but the legislature has the last word on its own Bills.'
   ],
   legacy: [
@@ -153,8 +149,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'In this judgment, the Court held that a Governor cannot use delay to block laws passed by an elected legislature.',
-    'But the judgment did not stand for long. Its time limits and deemed approval were rejected by five judges seven months later, while its core point against endless delay survived.'
+    'So the judgment\'s core point against endless delay survived. But five judges rejected its time limits and its deemed approval seven months later.'
   ],
   legacy: [
     'The President then referred questions on these issues to the Supreme Court under Article 143.',
@@ -202,8 +197,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Review by the High Courts and the Supreme Court cannot be taken away, even by an amendment to the Constitution.',
-    'Tribunals add to the High Courts. They do not replace them.',
     'So a tribunal can take the first look at a dispute, but its decision always remains open to a High Court.'
   ],
   legacy: [
@@ -249,8 +242,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Making a petitioner use other remedies first is a matter of the court\'s choice, not of its power.',
-    'A writ lies against action taken wholly without legal power, even if the law provides another remedy.',
     'So the High Court\'s door stays open where the problem is serious. The other remedy is a rule of convenience, not a lock.'
   ],
   legacy: [
@@ -297,8 +288,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'In Delhi, the elected government holds executive power, except on public order, police and land.',
-    'Differences with the Lieutenant Governor should be settled by discussion, and referred to the President only in exceptional cases.',
     'So the people\'s vote in Delhi decides who governs most matters. The Lieutenant Governor is not a parallel ruler.'
   ],
   legacy: [
@@ -343,8 +332,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   principles: [
     'An elected government must control the officers who carry out its decisions.',
-    'Delhi\'s special status under Article 239AA gives its elected government real powers.',
-    'But the judgment also showed the limit of Delhi\'s powers. Parliament could take services back by law, and within months it did.'
+    'So the Court can read the Constitution in favour of an elected government. But Parliament can still change the law on which that reading rests.'
   ],
   legacy: [
     'On 19 May 2023 the Central Government issued an ordinance taking control of services away from the Delhi Government. A challenge to it was sent to a Constitution Bench in July 2023.',
@@ -391,7 +379,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   principles: [
     'Local bodies must not be left without elected members because of administrative delay.',
-    'State Election Commissions are independent and must make sure elections are held on time.',
     'So a city cannot be run by officials alone because the government is slow to redraw its wards. The vote comes first.'
   ],
   legacy: [

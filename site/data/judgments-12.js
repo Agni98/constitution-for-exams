@@ -299,8 +299,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The power to do complete justice under Article 142 is wide, and provisions of ordinary laws do not cut it down.',
-    'Settling the civil claims for a mass disaster does not wipe out criminal liability.',
     'So the company\'s money settled the claims for compensation, but it could not buy the accused freedom from trial.'
   ],
   legacy: [
@@ -347,9 +345,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Article 142 adds to the law but cannot override it. Article 142 cannot set aside express provisions of a law or take over the powers of bodies created by law.',
-    'Disciplining lawyers belongs to the Bar Councils.',
-    'So even the Supreme Court\'s widest power has an edge. Where a law gives a job to another body, the Court cannot do that job itself.'
+    'So Article 142 fills gaps in the law, but cannot be used to rewrite it.'
   ],
   legacy: [
     'The limits on Article 142 stated here are cited whenever the Court is asked to use that power against a law.'
@@ -399,8 +395,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The State can take over places of worship of any religion, including mosques, in exceptional circumstances.',
-    'The Court may decline to answer a question from the President under Article 143.',
     'So the dispute went back to the ordinary courts. The Court refused to settle a question of history and faith by giving an opinion.'
   ],
   legacy: [
@@ -447,8 +441,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Where a private company shares the revenue from a public resource with the State, the CAG can examine its accounts to protect public revenue.',
-    'The State holds natural resources in trust for the people.',
     'So a private company that profits from public spectrum cannot hide from the public auditor the figures on which the public\'s share depends.'
   ],
   legacy: [
