@@ -20,22 +20,22 @@ partVI: {
 /* ---------- The Governor ---------- */
 
 "153": {
-  simple: "There shall be a Governor for each State. The same person may be appointed Governor of two or more States.",
-  catch: "The proviso allowing one Governor for several States came with the 7th Amendment. It is used routinely in the North-East."
+  simple: "Every State has a Governor. One person may be Governor of two or more States.",
+  catch: "The 7th Amendment (1956) allowed one person to be Governor of two or more States. Shared Governors are now common, especially in the north-east. So the Constitution does not insist on a separate Governor for every State."
 },
 "154": {
   simple: "The executive power of the State is vested in the Governor. He exercises it directly or through subordinate officers.",
   catch: "This is the mirror of Article 53, and like it, a formality. The substance is in Article 163."
 },
 "155": {
-  simple: "The Governor is appointed by the President by warrant under his hand and seal.",
-  catch: "Appointed, not elected. This is the single largest departure from the Union model, and the root of most Centre–State friction.\n\n" +
-    "The Constituent Assembly considered an elected Governor and rejected the idea."
+  simple: "The President appoints the Governor of a State by warrant under the President's hand and seal.",
+  catch: "The Governor is appointed, not elected, and that is the biggest difference from the Union model. The draft Constitution had an elected Governor. The Constituent Assembly dropped it, because two elected heads in one State would clash.\n\n" +
+    "Nothing in the text requires the Union to consult the State government first. Consulting the Chief Minister is only a convention, and it has often been ignored."
 },
 "156": {
-  simple: "The Governor holds office during the pleasure of the President, for a term of five years. He may resign to the President, and continues until his successor takes office.",
-  catch: "'During the pleasure' means no fixed security of tenure at all.\n\n" +
-    "B.P. Singhal (2010) held that a Governor cannot be removed arbitrarily, or merely because the party in power at the Centre has changed. The Court will not require reasons to be disclosed."
+  simple: "The Governor holds office during the pleasure of the President, for a term of five years. A Governor may resign to the President, and stays in office until a successor takes over.",
+  catch: "\"During the pleasure\" overrides the five-year term. The President acts on the Union government's advice, so the Union can remove a Governor at any time.\n\n" +
+    "B.P. Singhal (2010) put a limit on the power. Removal cannot be arbitrary, or based only on a change of government at the centre. But no reasons need be given and no hearing is required, so the limit is hard to enforce."
 },
 "157": {
   simple: "To be Governor you must be a citizen of India and have completed thirty-five years.",
@@ -56,9 +56,9 @@ partVI: {
   catch: "It is used when a Governor dies or resigns suddenly. The President typically asks the Governor of a neighbouring State, or the Chief Justice of the High Court, to hold additional charge."
 },
 "161": {
-  simple: "The Governor may pardon, reprieve, respite or remit punishment, and may suspend or commute a sentence, for offences against laws relating to matters within the State's executive power.",
-  catch: "Two things the Governor cannot do that the President can: pardon a death sentence, and deal with court-martial cases.\n\n" +
-    "Beyond that his remission power is genuinely wide. Like the President's, it is exercised on ministerial advice."
+  simple: "The Governor may pardon a convict, or suspend, remit or commute a sentence, for offences against laws on matters within the State's executive power.",
+  catch: "The Governor's power differs from the President's in two ways. The Governor cannot pardon a death sentence, though the Governor can commute it to life imprisonment. And the Governor has no power over court-martial sentences.\n\n" +
+    "Like the President, the Governor acts on the advice of ministers, as Maru Ram (1980) settled. Courts review the decision only on narrow grounds."
 },
 "162": {
   simple: "The State's executive power extends to matters on which its legislature can make laws.\n\n" +
@@ -66,18 +66,17 @@ partVI: {
   catch: "This is the mirror of Article 73. It is also why the Centre's executive reach expands automatically whenever it legislates on a Concurrent List subject."
 },
 "163": {
-  simple: "There shall be a Council of Ministers headed by the Chief Minister to aid and advise the Governor, except where the Constitution requires him to act in his discretion.\n\n" +
-    "If a question arises whether a matter is within his discretion, his decision is final. The advice tendered cannot be inquired into by any court.",
-  catch: "The words 'except in so far as he is required to exercise his functions in his discretion' have no counterpart in Article 74.\n\n" +
-    "That single clause is what gives the Governor real personal power, and what makes the office politically contested.\n\n" +
-    "Nabam Rebia (2016) held the discretion is not unlimited and is subject to judicial review.",
-  note: "Recognised areas of discretion include reserving a Bill for the President under Article 200, recommending President's Rule under Article 356, appointing a Chief Minister in a hung Assembly, and the special responsibilities under Articles 371A to 371J."
+  simple: "A Council of Ministers, led by the Chief Minister, aids and advises the Governor. The exception is where the Constitution requires the Governor to act in the Governor's discretion.\n\n" +
+    "If a question arises whether a matter is within that discretion, the Governor's decision is final. No court may ask what advice the ministers gave.",
+  catch: "Article 74 has no such exception for the President. So the Governor has real personal power that the President lacks, and the office is fought over for that reason.\n\n" +
+    "Some discretion is written into the text, such as reserving a Bill for the President under Article 200. Some arises from events, such as choosing a Chief Minister when no party has a majority.\n\n" +
+    "But the courts have narrowed it. Shamsher Singh (1974) held that acting on advice is the rule and discretion the exception. Nabam Rebia (2016) held that the Governor's discretion is open to judicial review."
 },
 "164": {
-  simple: "The Chief Minister is appointed by the Governor. Other Ministers are appointed on the Chief Minister's advice and hold office during the Governor's pleasure.\n\n" +
-    "The Council is collectively responsible to the Legislative Assembly. A Minister who is not a member of the legislature must become one within six months.",
-  catch: "Clause (1A), added by the 91st Amendment, caps a State Council of Ministers at 15 per cent of the Assembly's strength, with a floor of twelve.\n\n" +
-    "The proviso requiring a Minister for tribal welfare applies to Chhattisgarh, Jharkhand, Madhya Pradesh and Odisha."
+  simple: "The Governor appoints the Chief Minister, and appoints the other ministers on the Chief Minister's advice. Ministers hold office during the Governor's pleasure.\n\n" +
+    "The Council of Ministers is collectively responsible to the Legislative Assembly. A minister who is not a member of the legislature must become one within six months.",
+  catch: "The 91st Amendment (2003) added clause (1A). A State ministry may have no more than 15 per cent of the Assembly's strength, and no fewer than twelve ministers. The Union cap has no such floor.\n\n" +
+    "The floor keeps the ministry workable where 15 per cent of the Assembly would be too few."
 },
 "165": {
   simple: "The Governor appoints an Advocate-General for the State, qualified to be a High Court judge, to advise the government and perform the legal duties assigned to him.",

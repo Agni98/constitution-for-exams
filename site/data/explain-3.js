@@ -383,14 +383,14 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 
 "148": {
   simple: "There shall be a Comptroller and Auditor-General of India, appointed by the President by warrant.\n\n" +
-    "He may be removed only in the same manner and on the same grounds as a Supreme Court judge. His service conditions cannot be varied to his disadvantage, and his administrative expenses are charged on the Consolidated Fund.",
-  catch: "He is ineligible for any further office under the Union or a State after leaving. The bar is designed to stop an audit being softened in the hope of a post-retirement job.\n\n" +
-    "Ambedkar called the CAG the most important officer under the Constitution."
+    "The CAG can be removed only in the way, and on the grounds, that a Supreme Court judge can be. The office's expenses are charged on the Consolidated Fund.",
+  catch: "Article 148 fixes no term. The six years, or age 65 if earlier, come from a 1971 Act of Parliament. What the article guarantees is that the terms cannot be changed for the worse after appointment.\n\n" +
+    "After leaving office, the CAG cannot hold any other office under the Union or a State. The bar removes any reason to soften an audit in the hope of a later job."
 },
 "149": {
-  simple: "The CAG performs the duties and exercises the powers that Parliament prescribes, in relation to the accounts of the Union, the States, and any other authority or body.",
-  catch: "The substance sits in the CAG's (Duties, Powers and Conditions of Service) Act, 1971, not in the Constitution.\n\n" +
-    "Parliament, whose spending he audits, therefore defines the scope of his audit."
+  simple: "The CAG performs the duties and uses the powers that Parliament lays down by law, for the accounts of the Union, the States and other bodies.",
+  catch: "The substance is in an ordinary law, the Comptroller and Auditor-General's (Duties, Powers and Conditions of Service) Act, 1971, not in the Constitution.\n\n" +
+    "So Parliament decides how far the CAG's audit reaches, and can change it by an ordinary law."
 },
 "150": {
   simple: "The accounts of the Union and the States are kept in the form the President prescribes, on the CAG's advice.",

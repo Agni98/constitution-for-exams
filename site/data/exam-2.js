@@ -590,11 +590,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   why: "The CAG audits how public money was spent. Prelims asks about appointment and removal. Mains asks about the difference between checking that spending was legal and checking that it was sensible.",
   concepts: [
     { t: "Appointment", d: "Appointed by the President by warrant under hand and seal. There is no prescribed qualification and no selection committee in the Constitution." },
-    { t: "Tenure, and where it comes from", d: "Six years, or until the age of 65, whichever comes first. But Article 148 fixes no term at all. Clause (3) leaves salary and conditions of service to Parliament, and the figures are in the Comptroller and Auditor-General's (Duties, Powers and Conditions of Service) Act, 1971. What the article does guarantee is that the terms cannot be varied to the holder's disadvantage after appointment." },
+    { t: "Tenure, and where it comes from", d: "Six years or age 65, whichever comes first. The figures come from the 1971 Act, not from Article 148." },
     { t: "Removal", d: "The CAG can be removed only in the same way and on the same grounds as a Supreme Court judge. The grounds are proved misbehaviour or incapacity, and both Houses must pass an address by a special majority." },
     { t: "Salary is charged", d: "The salary and administrative expenses are charged on the Consolidated Fund of India, so Parliament cannot vote them down." },
-    { t: "No job afterwards", d: "After holding office they are ineligible for any further office under the Government of India or of any State. The bar removes any incentive to please the government." },
-    { t: "Ambedkar's assessment", d: "He called the office the most important in the Constitution, more so even than the judiciary, because it guards the public purse." },
+    { t: "No job afterwards", d: "No further office under the Union or any State after leaving." },
+    { t: "Ambedkar's assessment", d: "Ambedkar called the CAG the most important officer under the Constitution." },
     { t: "Legality and propriety", d: "The CAG checks not only whether spending was legal but also whether it was wise and economical. The second check is the propriety audit, and most of the friction comes from it." }
   ],
   seen: [
@@ -612,7 +612,6 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 149 says the CAG shall perform the duties and use the powers that Parliament lays down by law, for the accounts of the Union, the States and other bodies.",
   why: "Article 149 explains why so much of the CAG's actual mandate sits in an ordinary law rather than in the Constitution.",
   concepts: [
-    { t: "What it says", d: "The CAG shall perform such duties and exercise such powers as Parliament prescribes by law." },
     { t: "The law", d: "The Comptroller and Auditor-General's (Duties, Powers and Conditions of Service) Act, 1971." },
     { t: "What is audited", d: "The Consolidated Fund of India and of each State, the Contingency Fund, the Public Account, all trading and manufacturing accounts, and government companies and corporations." },
     { t: "Where the reports go", d: "Union reports go to the President, who lays them before Parliament. State reports go to the Governor, who lays them before the State legislature." },
@@ -627,8 +626,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 153 says there shall be a Governor for each State. One person may be Governor of two or more States.",
   why: "The Governor is the busiest question area in Part VI, and Article 153 is where it begins.",
   concepts: [
-    { t: "What it says", d: "There shall be a Governor for each State." },
-    { t: "One Governor can serve two States", d: "The 7th Amendment (1956) added a proviso allowing the same person to be Governor of two or more States. Shared Governors are common in the north-east." },
+    { t: "One Governor can serve two States", d: "Added by the 7th Amendment (1956). Shared Governors are common in the north-east." },
     { t: "The Governor is not elected", d: "The Constituent Assembly considered an elected Governor and rejected the idea, fearing conflict with an elected Chief Minister." },
     { t: "Not answerable to the State", d: "The Governor is appointed by, and holds office at the pleasure of, the President. The State legislature has no power over them at all." },
     { t: "The standing criticism", d: "Both the Sarkaria Commission (1988) and the Punchhi Commission (2010) found the office had been used as an agent of the centre, and recommended reforms that were never enacted." }
@@ -645,9 +643,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 155 says the President appoints the Governor of a State by warrant under the President's hand and seal.",
   why: "How Governors are appointed drives every question on friction between the Union and the States. Questions test the gap between the text of the Constitution and political convention.",
   concepts: [
-    { t: "What it says", d: "The Governor of a State shall be appointed by the President by warrant under hand and seal." },
-    { t: "The draft was different", d: "The draft Constitution provided for an elected Governor. The Constituent Assembly dropped it, on the ground that two elected heads in one State would clash." },
-    { t: "Consulting the Chief Minister is convention only", d: "There is no requirement in the text to consult the State government. The convention has been ignored many times." },
+    { t: "The draft was different", d: "The draft had an elected Governor. The Assembly dropped it to avoid two elected heads in one State." },
+    { t: "Consulting the Chief Minister is convention only", d: "The text does not require it, and the convention has often been ignored." },
     { t: "The Sarkaria recommendations", d: "The Governor should be an eminent person from outside the State, detached from local politics, not active in politics for some time before appointment, and appointed after consulting the Chief Minister. None of this is binding." },
     { t: "Qualifications", d: "A citizen of India, at least 35 years old. The Constitution requires nothing more." }
   ],
@@ -664,8 +661,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   why: "Tenure \"during the pleasure of the President\" is the most consequential clause about a Governor, because it makes the five-year term only nominal.",
   concepts: [
     { t: "The two rules together", d: "The Governor holds office during the pleasure of the President, and shall hold office for a term of five years. The first rule overrides the second." },
-    { t: "What pleasure means in practice", d: "The Union Council of Ministers can have a Governor removed at any time, for any reason or none, because the President acts on its advice." },
-    { t: "B.P. Singhal (2010)", d: "A Constitution Bench held that no reason need be given for removal, and the Governor has no right to be heard. But removal cannot be arbitrary, capricious or based on irrelevant grounds. A change of government at the centre is not by itself a valid reason." },
+    { t: "What pleasure means in practice", d: "The Union Council of Ministers can have a Governor removed at any time." },
+    { t: "B.P. Singhal (2010)", d: "Removal cannot be arbitrary, and a change of government at the centre is not enough. But no reasons or hearing are needed." },
     { t: "The burden of proof", d: "The Court said it will presume the removal was valid. Only if the affected person produces prima facie material will the court call for the records." },
     { t: "Continuation", d: "A Governor continues in office after the five years until a successor takes charge, so there is never a vacancy." }
   ],
@@ -681,11 +678,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 161 gives the Governor the power to pardon, or to suspend, remit or commute a sentence, for offences against laws on matters within the State's executive power.",
   why: "Questions always compare the Governor's pardoning power with the President's under Article 72, and the two differences are the answer.",
   concepts: [
-    { t: "What the Governor can do", d: "Grant pardons, reprieves, respites and remissions of punishment, and suspend, remit or commute the sentence of any person convicted of an offence against a State law." },
     { t: "The scope", d: "The power covers offences against laws on matters within the State's executive power, which means State List subjects." },
     { t: "Two things the Governor cannot do", d: "Pardon a death sentence, and touch a court-martial sentence. Both belong to the President alone." },
-    { t: "But the Governor can commute a death sentence", d: "Many candidates find the point surprising. The Governor cannot *pardon* it, which would wipe it out entirely, but can reduce it to life imprisonment." },
-    { t: "Exercised on advice", d: "The Governor acts on the advice of the State Council of Ministers, not personally. Maru Ram (1980) settled this." },
+    { t: "But the Governor can commute a death sentence", d: "The Governor cannot pardon it, but can reduce it to life imprisonment." },
+    { t: "Exercised on advice", d: "The Governor acts on the State Council of Ministers' advice, as Maru Ram (1980) held." },
     { t: "Reviewable on narrow grounds", d: "Epuru Sudhakar (2006) applied the same limited review to Article 161 as to Article 72. The grounds are bad faith, irrelevant considerations and failure to apply the mind." }
   ],
   seen: [
@@ -700,11 +696,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 163 says a Council of Ministers led by the Chief Minister aids and advises the Governor, except where the Constitution requires the Governor to act in their discretion.",
   why: "The word \"discretion\" in Article 163 is the source of almost every confrontation between the Union and the States in the last decade. Papers tested it in 2025 and 2014.",
   concepts: [
-    { t: "The basic rule", d: "There shall be a Council of Ministers with the Chief Minister at its head to aid and advise the Governor, except where the Governor is required to act in their discretion." },
-    { t: "The Governor decides what is discretionary", d: "Clause (2) says if any question arises whether a matter falls within the Governor's discretion, the Governor's own decision is final and cannot be questioned." },
+    { t: "The Governor decides what is discretionary", d: "The Governor's own decision on whether a matter is discretionary is final." },
     { t: "Constitutional discretion", d: "Powers the Constitution expressly gives the Governor: reserving a Bill for the President under Article 200, recommending President's rule, acting as administrator of an adjoining Union territory, and special responsibilities in certain States." },
     { t: "Situational discretion", d: "Powers that arise from circumstances rather than text: appointing a Chief Minister when no party has a majority, dismissing a ministry that has lost confidence, and dissolving the Assembly." },
-    { t: "The contrast with the President", d: "Article 74 gives the President no discretion in the text. Article 163 gives the Governor discretion expressly. The difference answers the question of whether the Governor is more powerful than the President." },
+    { t: "The contrast with the President", d: "Article 74 has no discretion clause, and Article 163 has one." },
     { t: "The courts have narrowed it", d: "Shamsher Singh (1974) held the Governor must normally act on advice, and discretion is the exception rather than the rule. Nabam Rebia (2016) held the Governor cannot act on their own in summoning or dissolving the House." }
   ],
   seen: [
@@ -721,7 +716,6 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 164 says the Governor appoints the Chief Minister, and the other ministers on the Chief Minister's advice. The ministry is collectively responsible to the Assembly, and must have at least 12 ministers and no more than 15 per cent of the Assembly.",
   why: "The State Council of Ministers follows the Union pattern, with two differences that examiners like.",
   concepts: [
-    { t: "Appointment", d: "The Governor appoints the Chief Minister, and the other ministers on the Chief Minister's advice." },
     { t: "The size cap has a floor as well as a ceiling", d: "The 91st Amendment (2003) fixed the total at not more than 15% of the Assembly's strength, and not fewer than twelve. The Union cap has only a ceiling." },
     { t: "The six-month rule", d: "A minister who is not a member of the legislature for six consecutive months ceases to be a minister." },
     { t: "The Tribal Welfare Minister", d: "Chhattisgarh, Jharkhand, Madhya Pradesh and Odisha must have a minister in charge of tribal welfare, who may also handle Scheduled Castes and backward classes." },
