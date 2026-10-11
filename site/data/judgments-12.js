@@ -29,42 +29,47 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Majority 7:2',
   tags: ['Articles 124 and 217', 'Appointment of judges', 'Collegium'],
   judges: 'S. Ratnavel Pandian, A.M. Ahmadi, Kuldip Singh, J.S. Verma, M.M. Punchhi, Yogeshwar Dayal, G.N. Ray, A.S. Anand and S.P. Bharucha',
-  summary: 'In appointing and transferring judges of the Supreme Court and the High Courts, the opinion of the Chief Justice of India, formed with senior judges, has primacy. S.P. Gupta (1981) was overruled on this point, and the collegium system began.',
+  summary: 'In appointing and transferring judges of the Supreme Court and the High Courts, the opinion of the Chief Justice of India, formed with senior judges, must prevail. S.P. Gupta (1981) was overruled on this point, and the collegium system began.',
+  background: [
+    'Articles 124 and 217 say that the President appoints judges of the Supreme Court and the High Courts after "consultation" with the Chief Justice of India and other judges.',
+    'In S.P. Gupta (1981), the First Judges case, seven judges held that "consultation" did not mean agreement. So the government had the final say in choosing judges.',
+    'A matter is justiciable if a court can decide it. The second question was whether courts could decide how many judges a High Court should have.'
+  ],
   question: [
-    'In appointments to the Supreme Court and the High Courts, and in transfers of High Court judges, does the opinion of the Chief Justice of India have primacy?',
-    'Is the fixing of the number of judges in a High Court justiciable?'
+    'In appointments to the Supreme Court and the High Courts, and in transfers of High Court judges, must the opinion of the Chief Justice of India prevail?',
+    'Can the courts decide how many judges a High Court should have?'
   ],
   facts: [
-    'In S.P. Gupta (1981), a majority of seven judges held that "consultation" with the Chief Justice of India did not mean concurrence. The executive had the final say.',
     'The Supreme Court Advocates-on-Record Association filed a writ petition in 1987 about appointments and vacancies in the higher judiciary.',
-    'In 1990 a three-judge bench referred two questions to a larger bench: the primacy of the Chief Justice of India, and whether the strength of judges in a High Court is justiciable.',
-    'A bench of nine judges heard the case from 7 April to 11 May 1993.'
+    'In 1990 three judges sent two questions to a larger bench: whether the Chief Justice of India\'s opinion must prevail, and whether the number of judges in a High Court is justiciable.',
+    'Nine judges heard the case from 7 April to 11 May 1993.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority (7 judges): Justice J.S. Verma, for himself and Justices Dayal, Ray, Anand and Bharucha, with concurring opinions by Justices Pandian and Kuldip Singh', points: [
-      'Appointing judges is an integrated, participatory and consultative process. All the constitutional functionaries must try to reach an agreed decision.',
-      'A proposal for appointment to the Supreme Court must start with the Chief Justice of India, and for a High Court with the Chief Justice of that High Court. A proposal for transfer must start with the Chief Justice of India.',
-      'If the functionaries disagree, the opinion of the judiciary, "symbolised by the view of the Chief Justice of India", has primacy.',
-      'No judge can be appointed unless the appointment conforms to the opinion of the Chief Justice of India. That opinion must be formed after consulting senior judges.',
-      'The Government may decline to appoint only for strong reasons disclosed to the Chief Justice of India. If the Chief Justice and the judges consulted reiterate the recommendation, the appointment should be made.',
-      'The senior-most judge of the Supreme Court considered fit to hold the office should be appointed Chief Justice of India.',
-      'In transfers of High Court judges, the opinion of the Chief Justice of India is determinative. The consent of the judge is not needed, and a transfer on the Chief Justice\'s recommendation is not punitive.',
-      'Appointments and transfers can be reviewed by the courts only on limited grounds, such as lack of consultation or of eligibility.',
-      'The fixing of the number of judges in a High Court is justiciable, to a limited extent.',
-      'S.P. Gupta is not correct on the primacy of the Chief Justice of India and on justiciability.'
+    { kind: 'majority', label: 'The majority of seven: Justice J.S. Verma, for himself and Justices Dayal, Ray, Anand and Bharucha, with Justices Pandian and Kuldip Singh agreeing in separate opinions', points: [
+      'Appointing judges is a joint process of consultation. Everyone involved must try to reach an agreed decision.',
+      'A proposal for the Supreme Court must start with the Chief Justice of India, and for a High Court with the Chief Justice of that High Court. A proposal for transfer must start with the Chief Justice of India.',
+      'If they disagree, the judiciary\'s opinion, "symbolised by the view of the Chief Justice of India", must prevail.',
+      'No judge can be appointed unless the appointment agrees with the opinion of the Chief Justice of India. The Chief Justice must form that opinion after consulting senior judges.',
+      'The government may refuse an appointment only for strong reasons, disclosed to the Chief Justice of India. If the Chief Justice and the judges consulted repeat the recommendation, the appointment should be made.',
+      'The senior most judge of the Supreme Court who is fit for the office should be appointed Chief Justice of India.',
+      'In transfers of High Court judges, the opinion of the Chief Justice of India decides. The judge\'s consent is not needed, and a transfer on the Chief Justice\'s recommendation is not a punishment.',
+      'Courts can review appointments and transfers only on limited grounds, such as lack of consultation or lack of eligibility.',
+      'The number of judges in a High Court is justiciable, to a limited extent.',
+      'S.P. Gupta is wrong on these points.'
     ] },
-    { kind: 'dissent', label: 'Dissents (Justices A.M. Ahmadi and M.M. Punchhi)', points: [
-      'Justice Ahmadi dissented from the majority. Justice Punchhi agreed broadly with Justice Ahmadi.',
-      'Justice Punchhi objected to reducing the Chief Justice of India to a spokesman for a group of judges. By adding words to the Constitution through interpretation, the majority had in effect rewritten it.',
-      'Justice Punchhi also disagreed with shutting out judicial review of appointments.'
+    { kind: 'dissent', label: 'Justices A.M. Ahmadi and M.M. Punchhi, in dissent', points: [
+      'Justice Ahmadi dissented from the majority. Justice Punchhi agreed broadly with him.',
+      'Justice Punchhi objected to turning the Chief Justice of India into a spokesman for a group of judges. In his view, the majority had added words to the Constitution by interpretation and so had in effect rewritten it.',
+      'Justice Punchhi also disagreed with shutting the courts out from reviewing appointments.'
     ] }
   ],
   principles: [
-    'The judiciary, through the Chief Justice of India acting with senior judges, has the decisive voice in appointing judges.',
-    'An appointment must conform to the opinion of the Chief Justice of India, formed with senior colleagues.'
+    'The judiciary, through the Chief Justice of India acting with senior judges, has the deciding voice in appointing judges.',
+    'An appointment must agree with the opinion of the Chief Justice of India, formed with senior colleagues.',
+    'So the power to choose judges moved from the government to the judges themselves. The group of senior judges who choose came to be called the collegium.'
   ],
   legacy: [
-    'In the Third Judges Case (1998), the Court fixed the collegium as the Chief Justice of India and the four senior-most judges for appointments to the Supreme Court.',
+    'In the Third Judges Case (1998), the Court fixed the collegium as the Chief Justice of India and the four senior most judges, for appointments to the Supreme Court.',
     'In 2015 the Court struck down the National Judicial Appointments Commission, created by the 99th Amendment, and the collegium system continued.'
   ],
   source: 'https://indiankanoon.org/doc/753224/'
@@ -78,35 +83,42 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   bench: 9,
   result: 'Unanimous opinion',
   tags: ['Article 143', 'Collegium', 'Appointment of judges'],
-  summary: 'Answering a Presidential Reference, the Court held that the Chief Justice of India must consult a collegium of senior judges. For appointments to the Supreme Court, the collegium is the Chief Justice and the four senior-most judges. A recommendation made without this consultation does not bind the Government.',
+  summary: 'Answering a question from the President, the Court held that the Chief Justice of India must consult a collegium of senior judges. For the Supreme Court, the collegium is the Chief Justice and the four senior most judges. A recommendation made without that consultation does not bind the government.',
+  background: [
+    'Articles 124 and 217 say that the President appoints judges of the Supreme Court and the High Courts after "consultation" with the Chief Justice of India and other judges.',
+    'In the Second Judges Case (1993), the Court held that the opinion of the Chief Justice of India, formed with senior judges, must prevail. But how many judges, and which ones, had to be consulted was unclear.',
+    'Under Article 143(1), the President can ask the Supreme Court for its opinion on a question of law, by what is called a Presidential Reference.',
+    'A puisne judge is any judge of a court other than its Chief Justice.'
+  ],
   question: [
     'What does "consultation with the Chief Justice of India" require in appointments and transfers of judges?',
     'Who must be consulted, and how?',
-    'Is a recommendation that does not follow these norms binding on the Government?'
+    'Is a recommendation that does not follow these rules binding on the government?'
   ],
   facts: [
-    'Doubts arose about how the Second Judges Case (1993) should be applied to appointments and transfers.',
+    'Doubts arose about how to apply the Second Judges Case to appointments and transfers.',
     'The President referred nine questions to the Supreme Court under Article 143(1).',
-    'The Attorney General stated that the Union was not seeking a review of the Second Judges Case, and that it would accept the Court\'s answers as binding.'
+    'The Attorney General told the Court that the Union was not asking for a review of the Second Judges Case, and that it would accept the Court\'s answers as binding.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous opinion of nine judges, written by Justice S.P. Bharucha', points: [
-      '"Consultation with the Chief Justice of India" requires consultation with a plurality of judges. The sole opinion of the Chief Justice of India is not consultation.',
-      'Recommendations for appointment to the Supreme Court, and for transfer of High Court judges and Chief Justices, must be made in consultation with the four senior-most puisne judges of the Supreme Court.',
-      'Recommendations for appointment to a High Court must be made in consultation with the two senior-most puisne judges of the Supreme Court.',
-      'The views of the judges consulted must be in writing, and must be sent to the Government with the views of the Chief Justice.',
-      'A transfer can be reviewed by the courts only if the four senior-most judges were not consulted, or the views of the Chief Justices of the two High Courts were not obtained.',
-      'Merit is the main consideration for appointment to the Supreme Court. A departure from seniority need not be justified for each senior judge passed over, but the positive reason for the recommendation must be recorded.',
-      'A recommendation made without following these norms is not binding on the Government of India.'
+    { kind: 'unanimous', label: 'The opinion of all nine judges, written by Justice S.P. Bharucha', points: [
+      '"Consultation with the Chief Justice of India" means consultation with a group of judges. The opinion of the Chief Justice of India alone is not consultation.',
+      'Recommendations for appointment to the Supreme Court, and for transfer of High Court judges and Chief Justices, must be made after consulting the four senior most puisne judges of the Supreme Court.',
+      'Recommendations for appointment to a High Court must be made after consulting the two senior most puisne judges of the Supreme Court.',
+      'The views of the judges consulted must be in writing, and must be sent to the government with the views of the Chief Justice.',
+      'Courts can review a transfer only if the four senior most judges were not consulted, or the views of the Chief Justices of the two High Courts were not obtained.',
+      'Merit is the main test for appointment to the Supreme Court. Passing over a senior judge need not be justified for each judge passed over, but the positive reason for the choice must be recorded.',
+      'A recommendation made without following these rules does not bind the Government of India.'
     ] }
   ],
   principles: [
     'Appointments to the higher judiciary are decided by a collegium, not by the Chief Justice of India alone.',
-    'The consultation must be in writing and follow fixed norms.'
+    'The consultation must be in writing and follow fixed rules.',
+    'So the collegium took its present shape: five senior judges for the Supreme Court, recording their views in writing.'
   ],
   legacy: [
     'The collegium system described in this opinion still governs appointments to the higher judiciary.',
-    'In 2015 the Court struck down the National Judicial Appointments Commission, and this system continued.'
+    'In 2015 the Court struck down the National Judicial Appointments Commission, and the system continued.'
   ],
   source: 'https://indiankanoon.org/doc/543658/'
 },
@@ -121,38 +133,45 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Suit maintainable by 4:3, but dismissed',
   tags: ['Article 131', 'Centre-State disputes', 'Commissions of Inquiry'],
   judges: 'M.H. Beg CJI, Y.V. Chandrachud, P.N. Bhagwati, N.L. Untwalia, P.N. Shinghal, Jaswant Singh and P.S. Kailasam',
-  summary: 'A State can sue the Union under Article 131 when Central action affects the State\'s governmental powers. But the Central Government could appoint a Commission of Inquiry into charges against a State\'s Chief Minister and ministers, so Karnataka\'s suit was dismissed.',
+  summary: 'A State can sue the Union under Article 131 when Central action touches the State\'s powers of government. But the Centre could appoint a Commission of Inquiry into charges against Karnataka\'s Chief Minister and ministers, so Karnataka\'s suit was dismissed.',
+  background: [
+    'Under Article 131, a dispute between the Union and a State goes straight to the Supreme Court, without passing through any lower court.',
+    'The Commissions of Inquiry Act, 1952 lets the Central or a State Government appoint a commission to look into a definite matter of public importance. A commission gathers facts and reports, but cannot punish anyone.',
+    'In ordinary civil cases, a person can sue only on a cause of action, the facts that give that person a legal claim.',
+    'In 1977 the Janata Party came to power at the Centre after the Emergency. Karnataka was still ruled by the Congress, under Chief Minister D. Devaraj Urs.'
+  ],
   question: [
-    'Can a State bring a suit under Article 131 against the Central Government\'s appointment of a Commission of Inquiry against its ministers?',
-    'Could the Central Government appoint such a commission under Section 3 of the Commissions of Inquiry Act, 1952?'
+    'Can a State bring a suit under Article 131 against the Centre\'s appointment of a Commission of Inquiry into its ministers?',
+    'Could the Central Government appoint such a commission under Section 3 of the Commissions of Inquiry Act?'
   ],
   facts: [
-    'On 23 May 1977 the Central Government appointed a Commission of Inquiry under Section 3 of the Commissions of Inquiry Act, 1952.',
-    'The one-man commission of A.N. Grover was to inquire into charges of corruption, nepotism, favouritism and misuse of governmental power against the Chief Minister and other ministers of Karnataka.',
-    'The Central notification excluded matters already covered by a notification of the State Government.',
-    'The State of Karnataka filed a suit under Article 131. It said the Centre had no power to inquire into the conduct of State ministers, and that the inquiry damaged the federal structure.'
+    'On 23 May 1977 the Central Government appointed a Commission of Inquiry under Section 3 of the Act.',
+    'The one-man commission of A.N. Grover was to look into charges of corruption, favouring relatives, favouritism and misuse of power against the Chief Minister and other ministers of Karnataka.',
+    'The Central notice left out matters already covered by a notice of the State Government.',
+    'The State of Karnataka filed a suit under Article 131. The State said the Centre had no power to inquire into the conduct of State ministers, and that the inquiry damaged the federal structure.'
   ],
   held: [
-    { kind: 'majority', label: 'On maintainability, majority (4 judges): Chief Justice Beg and Justices Chandrachud, Bhagwati and Kailasam', points: [
-      'The suit is maintainable. A State has sufficient interest to challenge Central action against its ministers in respect of the exercise of the State\'s governmental powers.',
-      'Justice Chandrachud added that Article 131 should not be tested by the rules of the Code of Civil Procedure. It speaks of a "dispute", not a cause of action.'
+    { kind: 'majority', label: 'On whether the suit could be heard, the majority of four: Chief Justice Beg and Justices Chandrachud, Bhagwati and Kailasam', points: [
+      'The suit can be heard. A State has enough interest to challenge Central action against its ministers for the way they used the State\'s powers of government.',
+      'Justice Chandrachud added that Article 131 should not be tested by the rules of the Code of Civil Procedure. Article 131 speaks of a "dispute", not a cause of action.'
     ] },
-    { kind: 'dissent', label: 'On maintainability, dissent (Justices Untwalia, Shinghal and Jaswant Singh)', points: [
-      'The suit is not maintainable. Under Article 131 the dispute must be with the State itself, not with a limb of the State such as its executive.'
+    { kind: 'dissent', label: 'On whether the suit could be heard, the three in dissent: Justices Untwalia, Shinghal and Jaswant Singh', points: [
+      'The suit cannot be heard. Under Article 131 the dispute must be with the State itself, not with a part of it such as its government.'
     ] },
-    { kind: 'majority', label: 'On the merits, majority', points: [
-      'The Central Government had power under Section 3 of the Commissions of Inquiry Act to appoint the commission. The suit was dismissed with costs.'
+    { kind: 'majority', label: 'On the merits, the majority', points: [
+      'The Central Government had the power under Section 3 of the Act to appoint the commission. The suit was dismissed with costs.'
     ] },
-    { kind: 'dissent', label: 'On the merits, dissent (Justice Kailasam)', points: [
-      'The notification interfered with the State\'s right to function in its own sphere and was beyond the Central Government\'s power under Section 3. Justice Kailasam would have decreed the suit.'
+    { kind: 'dissent', label: 'On the merits, Justice Kailasam in dissent', points: [
+      'The notice interfered with the State\'s right to work in its own sphere and went beyond the Centre\'s power under Section 3. Justice Kailasam would have decided the suit in Karnataka\'s favour.'
     ] }
   ],
   principles: [
-    'A State can sue the Union under Article 131 whenever its legal rights or governmental powers are in dispute, without showing a cause of action in the ordinary civil sense.',
-    'The Centre may inquire into allegations of corruption against State ministers under the Commissions of Inquiry Act.'
+    'A State can sue the Union under Article 131 whenever its legal rights or powers of government are in dispute, without showing a cause of action in the ordinary civil sense.',
+    'The Centre may inquire into charges of corruption against State ministers under the Commissions of Inquiry Act.',
+    'So Karnataka won the right to come to the Court, but lost the case. The federal structure did not protect State ministers from a Central inquiry.'
   ],
   legacy: [
-    'The case remains the leading authority on the scope of suits between the Union and the States under Article 131.'
+    'The case remains the leading authority on suits between the Union and the States under Article 131.'
   ],
   source: 'https://indiankanoon.org/doc/184521/'
 },
@@ -166,10 +185,14 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Unanimous, 5:0',
   tags: ['Article 136', 'Special leave to appeal', 'Criminal appeals'],
   judges: 'S. Fazl Ali, M. Patanjali Sastri, M.C. Mahajan, B.K. Mukherjea and S.R. Das',
-  summary: 'The Supreme Court\'s power to grant special leave under Article 136 is to be used sparingly, only in exceptional cases where substantial and grave injustice has been done. The Court is not an ordinary court of criminal appeal.',
+  summary: 'The Supreme Court\'s power to grant special leave to appeal under Article 136 is to be used rarely, only in exceptional cases where grave injustice has been done. The Court is not an ordinary court of criminal appeal.',
+  background: [
+    'Article 136 lets the Supreme Court allow an appeal against any judgment of any court or tribunal in India. The permission is called special leave. The Court can grant it or refuse it as it thinks fit.',
+    'A criminal case normally goes from the trial court to the High Court on appeal. The question was how often the Supreme Court should open a third round.'
+  ],
   question: [
     'When should the Supreme Court grant special leave to appeal under Article 136?',
-    'Will the Court re-examine findings of fact in a criminal appeal?'
+    'Will the Court look again at the facts found in a criminal case?'
   ],
   facts: [
     'Pritam Singh was convicted of murdering Buta Singh on 30 December 1948, and sentenced to death by the Sessions Judge of Ferozepore.',
@@ -177,17 +200,18 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'Pritam Singh obtained special leave to appeal to the Supreme Court under Article 136.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (5:0), judgment by Justice S. Fazl Ali', points: [
-      'The wide discretionary power under Article 136 "is to be exercised sparingly and in exceptional cases only".',
-      'Special leave will not be granted unless exceptional and special circumstances exist, substantial and grave injustice has been done, and the case has features grave enough to warrant a review.',
-      'The same standard applies at the stage of granting leave and at the final hearing. At the final hearing, only points fit to be urged at the leave stage can be raised.',
-      'The Court is not an ordinary court of criminal appeal. It will not generally reopen facts, especially where two courts agree on them and they depend on the credibility of witnesses.',
+    { kind: 'unanimous', label: 'All five judges agreed (5:0). Justice S. Fazl Ali wrote the judgment', points: [
+      'The wide power under Article 136 "is to be exercised sparingly and in exceptional cases only".',
+      'Special leave will not be granted unless there are special circumstances, grave injustice has been done, and the case is serious enough to need a review.',
+      'The same standard applies when leave is granted and at the final hearing. At the final hearing, only points that could have been raised when asking for leave can be argued.',
+      'The Court is not an ordinary court of criminal appeal. The Court will not usually reopen the facts, especially where two courts agree on them and they turn on whether witnesses are believable.',
       'The appeal was dismissed.'
     ] }
   ],
   principles: [
-    'Article 136 gives a discretionary remedy, not a right of appeal.',
-    'Findings of fact on which two courts agree are rarely disturbed under Article 136.'
+    'Article 136 gives a remedy at the Court\'s choice, not a right of appeal.',
+    'Facts on which two courts agree are rarely disturbed under Article 136.',
+    'So the Supreme Court keeps itself for grave injustice and important questions, not for a third trial of the facts.'
   ],
   legacy: [
     'The standard set here is still cited when the Court decides whether to grant special leave.'
@@ -204,35 +228,40 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Majority 4:3',
   tags: ['Article 141', 'Overruling precedent', 'Article 286'],
   judges: 'S.R. Das (Acting CJI), Vivian Bose, N.H. Bhagwati, B. Jagannadhadas, T.L. Venkatarama Aiyar, B.P. Sinha and S.J. Imam',
-  summary: 'The Supreme Court is not bound by its own earlier decisions and can overrule them when convinced that they are wrong. The Court overruled State of Bombay v. United Motors (1953) and held that States could not tax inter-State sales until Parliament provided otherwise.',
+  summary: 'The Supreme Court is not bound by its own earlier decisions and can overrule them when convinced they are wrong. The Court overruled State of Bombay v. United Motors (1953) and held that States could not tax sales between States until Parliament allowed it.',
+  background: [
+    'Article 141 says that the law declared by the Supreme Court binds all courts in India. The question was whether it binds the Supreme Court itself.',
+    'Sales tax was a tax that States charged on the sale of goods. Article 286, as it stood in 1955, stopped States from taxing sales in the course of trade between States, unless Parliament by law allowed it.',
+    'In State of Bombay v. United Motors (1953), a majority of the Supreme Court had held that the State where goods were delivered could still tax such sales.'
+  ],
   question: [
-    'Is the Supreme Court bound by its own previous decisions?',
-    'Under Article 286 as it then stood, could a State tax sales in the course of inter-State trade before Parliament made a law?'
+    'Is the Supreme Court bound by its own earlier decisions?',
+    'Under Article 286 as it then stood, could a State tax sales made in the course of trade between States before Parliament made a law?'
   ],
   facts: [
-    'The Bengal Immunity Company, based outside Bihar, sold goods that were delivered to buyers in Bihar for consumption there.',
-    'The Bihar sales tax authorities sought to tax these sales. The Patna High Court dismissed the company\'s writ petition on 4 December 1952.',
-    'In State of Bombay v. United Motors (1953), a majority of the Supreme Court had held that the State in which goods were delivered could tax such sales.',
-    'The company appealed, and a bench of seven judges considered whether United Motors was correct.'
+    'The Bengal Immunity Company, based outside Bihar, sold goods that were delivered to buyers in Bihar for use there.',
+    'The Bihar sales tax authorities tried to tax these sales. The Patna High Court dismissed the company\'s writ petition on 4 December 1952.',
+    'The company appealed, and seven judges considered whether United Motors was right.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority (4 judges): Acting Chief Justice S.R. Das, for himself and Justices Bose and Imam, with Justice Bhagwati concurring', points: [
+    { kind: 'majority', label: 'The majority of four: Acting Chief Justice S.R. Das, for himself and Justices Bose and Imam, with Justice Bhagwati agreeing', points: [
       '"There is nothing in our Constitution which prevents us from departing from a previous decision if we are convinced of its error and its baneful effect on the general interests of the public."',
-      'Article 141 makes the law declared by the Supreme Court binding on all courts in India. This refers to courts other than the Supreme Court itself.',
-      'An error in interpreting the Constitution could otherwise remain uncorrected for a long time, because the Constitution is hard to amend.',
-      'Until Parliament by law provides otherwise under Article 286(2), no State can tax sales or purchases in the course of inter-State trade or commerce. The majority view in United Motors was overruled.',
-      'Bihar was directed not to tax out-of-State dealers on such sales, even where the goods were delivered in Bihar for consumption there.'
+      'Article 141 makes the law declared by the Supreme Court binding on all courts in India. The Article means courts other than the Supreme Court itself.',
+      'Otherwise a mistake in reading the Constitution could stay uncorrected for a long time, because the Constitution is hard to amend.',
+      'Until Parliament makes a law under Article 286(2), no State can tax sales or purchases in the course of trade between States. The majority view in United Motors was overruled.',
+      'Bihar was told not to tax dealers from other States on such sales, even where the goods were delivered in Bihar for use there.'
     ] },
-    { kind: 'dissent', label: 'Dissent (Justices Jagannadhadas, Venkatarama Aiyar and Sinha)', points: [
+    { kind: 'dissent', label: 'Justices Jagannadhadas, Venkatarama Aiyar and Sinha, in dissent', points: [
       'United Motors should continue to hold good, and the appeal should have been dismissed.'
     ] }
   ],
   principles: [
     'The Supreme Court can overrule its own earlier decisions, especially on the Constitution.',
-    'Before 1956, States could not tax inter-State sales without a law made by Parliament.'
+    'Before 1956, States could not tax sales between States without a law made by Parliament.',
+    'So the Court\'s own past rulings bind every other court, but not the Court itself, which can correct its own mistakes.'
   ],
   legacy: [
-    'Parliament passed the Sales Tax Laws Validation Act, 1956. The Sixth Amendment (1956) gave Parliament the power to tax inter-State sales, and the Central Sales Tax Act, 1956 followed.',
+    'Parliament passed the Sales Tax Laws Validation Act, 1956. The Sixth Amendment (1956) gave Parliament the power to tax sales between States, and the Central Sales Tax Act, 1956 followed.',
     'The Court has relied on this power to overrule its own decisions in many later cases.'
   ],
   source: 'https://indiankanoon.org/doc/1629830/'
@@ -248,39 +277,44 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Review allowed in part',
   tags: ['Article 142', 'Bhopal gas disaster', 'Settlement'],
   judges: 'Ranganath Misra CJI, M.N. Venkatachaliah, K.N. Singh, A.M. Ahmadi and N.D. Ojha',
-  summary: 'The Bhopal gas disaster settlement of US $470 million was upheld on review, but the quashing of the criminal cases was set aside and the prosecutions were revived. The Court held that its power under Article 142 is not limited by provisions of ordinary laws.',
+  summary: 'The Bhopal gas disaster settlement of US $470 million was upheld on review. But the Court set aside the quashing of the criminal cases and revived the prosecutions. The Court also held that no ordinary law can limit its power under Article 142.',
+  background: [
+    'On the night of 2 and 3 December 1984, methyl isocyanate gas leaked from the plant of Union Carbide India Ltd. in Bhopal. Thousands of people died, and many more were injured.',
+    'Under the Bhopal Gas Leak Disaster (Processing of Claims) Act, 1985, the Union of India represented all the victims and sued Union Carbide Corporation, the American parent company.',
+    'Article 142 lets the Supreme Court pass any order needed to do "complete justice" in a case before it.',
+    'A settlement ends a case by agreement between the parties, usually with one side paying money. A review lets the Court look again at its own order.'
+  ],
   question: [
-    'Could the Supreme Court, under Article 142, withdraw the civil suits and criminal cases to itself and dispose of them by recording a settlement?',
-    'Was the quashing of the criminal proceedings as part of the settlement valid?',
-    'Was the settlement void for not hearing the victims, or as against public policy?'
+    'Could the Supreme Court, under Article 142, take over the civil suits and criminal cases and end them by recording a settlement?',
+    'Was the quashing of the criminal cases as part of the settlement valid?',
+    'Was the settlement void because the victims were not heard, or because it went against public policy?'
   ],
   facts: [
-    'On the night of 2 and 3 December 1984, methyl isocyanate gas leaked from the plant of Union Carbide India Ltd. in Bhopal. Thousands of people died and many more were injured.',
-    'Under the Bhopal Gas Leak Disaster (Processing of Claims) Act, 1985, the Union of India represented the victims and sued Union Carbide Corporation.',
-    'On 14 and 15 February 1989, while hearing appeals arising from the suit, the Supreme Court recorded a settlement of US $470 million. It also terminated all civil and criminal proceedings.',
-    'Victims\' groups and others filed review petitions and writ petitions against the settlement.'
+    'On 14 and 15 February 1989, while hearing appeals that arose from the suit, the Supreme Court recorded a settlement of US $470 million. The Court also ended all civil and criminal cases.',
+    'Groups of victims and others filed review petitions and writ petitions against the settlement.'
   ],
   held: [
-    { kind: 'majority', label: 'Main judgment by Justice M.N. Venkatachaliah, with Justice Ahmadi partly dissenting', points: [
-      'Under Article 142(1), the Court had jurisdiction to withdraw to itself the suits pending in the Bhopal District Court and the criminal proceedings, and to dispose of them in terms of the settlement.',
-      'The Court also had power under Article 142(1) to quash the criminal proceedings, and a provision in an ordinary law cannot limit that power. But on the facts, quashing the criminal proceedings was not justified, so they were revived.',
-      'The part of the 1989 orders that barred future criminal proceedings was also set aside.',
-      'The settlement was not void for want of a hearing to the victims, or as being against public policy. It was left undisturbed.',
-      'If the settlement fund proved insufficient, the Union of India must make good the shortfall.',
-      'The Court directed time-bound disposal of claims, a hospital of at least 500 beds giving free treatment for eight years, and group medical insurance for about one lakh people in the affected wards who had not filed claims.'
+    { kind: 'majority', label: 'The main judgment by Justice M.N. Venkatachaliah, with Justice Ahmadi dissenting in part', points: [
+      'Under Article 142(1), the Court had the power to take over the suits pending in the Bhopal District Court and the criminal cases, and to end them on the terms of the settlement.',
+      'The Court also had the power under Article 142(1) to quash the criminal cases, and a provision in an ordinary law cannot limit that power. But on the facts, quashing them was not justified, so they were revived.',
+      'The part of the 1989 orders that barred future criminal cases was also set aside.',
+      'The settlement was not void for lack of a hearing to the victims, or for going against public policy. The settlement was left in place.',
+      'If the settlement fund proved too small, the Union of India must make up the shortfall.',
+      'The Court ordered quick decisions on claims, and a hospital of at least 500 beds giving free treatment for eight years. The Court also ordered group medical insurance for about one lakh people in the affected wards who had not filed claims.'
     ] },
-    { kind: 'dissent', label: 'Partly dissenting (Justice A.M. Ahmadi)', points: [
-      'Justice Ahmadi agreed with the other conclusions. But the Union of India could not be made to bear any shortfall in the fund when it had not been found liable as a wrongdoer.'
+    { kind: 'dissent', label: 'Justice A.M. Ahmadi, dissenting in part', points: [
+      'Justice Ahmadi agreed with the other conclusions. But the Union of India could not be made to pay any shortfall, because it had not been found to be a wrongdoer.'
     ] }
   ],
   principles: [
     'The power to do complete justice under Article 142 is wide, and provisions of ordinary laws do not cut it down.',
-    'A settlement of civil claims for a mass disaster does not wipe out criminal liability.'
+    'Settling the civil claims for a mass disaster does not wipe out criminal liability.',
+    'So the company\'s money settled the claims for compensation, but it could not buy the accused freedom from trial.'
   ],
   legacy: [
     'In 2010 a court in Bhopal convicted seven former officials of Union Carbide India Ltd. of causing death by negligence.',
-    'In Supreme Court Bar Association (1998), the Court explained that Article 142 cannot be used to ignore express statutory provisions dealing with a subject.',
-    'In March 2023 five judges dismissed the Union of India\'s curative petition, which sought more compensation from the successors of Union Carbide.'
+    'In Supreme Court Bar Association (1998), the Court explained that Article 142 cannot be used to ignore express provisions of a law that deals with the subject.',
+    'In March 2023 five judges dismissed the Union of India\'s curative petition, which asked for more compensation from the successors of Union Carbide.'
   ],
   source: 'https://indiankanoon.org/doc/27098883/'
 },
@@ -295,32 +329,38 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Unanimous, 5:0',
   tags: ['Article 142', 'Article 129', 'Contempt of court'],
   judges: 'S.C. Agrawal, G.N. Ray, A.S. Anand, S.P. Bharucha and S. Rajendra Babu',
-  summary: 'The Supreme Court cannot suspend an advocate\'s licence as a punishment for contempt. That power belongs to the Bar Councils under the Advocates Act, and Article 142 cannot be used to take it over. In re Vinay Chandra Mishra (1995) was overruled on this point.',
+  summary: 'The Supreme Court cannot suspend a lawyer\'s licence to practise as a punishment for contempt. The power to suspend belongs to the Bar Councils under the Advocates Act, and Article 142 cannot be used to take it over. In re Vinay Chandra Mishra (1995) was overruled on this point.',
+  background: [
+    'Contempt of court means disobeying or insulting a court in a way that interferes with justice. Under Article 129, the Supreme Court can punish contempt of itself.',
+    'Under the Advocates Act, 1961, the Bar Councils, which are bodies of lawyers, discipline lawyers for professional misconduct. They can suspend or cancel a lawyer\'s licence after a fixed procedure.',
+    'Article 142 lets the Supreme Court pass any order needed to do "complete justice" in a case before it.'
+  ],
   question: [
-    'Can the Supreme Court, while punishing an advocate for contempt, suspend the advocate\'s licence to practise?',
-    'Can Article 142 be used to exercise a power that a statute gives to another body?'
+    'When punishing a lawyer for contempt, can the Supreme Court suspend the lawyer\'s licence to practise?',
+    'Can Article 142 be used to exercise a power that a law gives to another body?'
   ],
   facts: [
-    'In In re Vinay Chandra Mishra (1995), three judges found an advocate guilty of criminal contempt for using insulting and threatening language to overawe the court.',
-    'The Court imposed a suspended sentence of six weeks\' simple imprisonment, and suspended the advocate from practice for three years.',
-    'The Supreme Court Bar Association filed a writ petition under Article 32. It argued that only the disciplinary committees of the Bar Councils can suspend an advocate\'s licence.'
+    'In In re Vinay Chandra Mishra (1995), three judges found a lawyer guilty of criminal contempt for using insulting and threatening language to overawe the court.',
+    'The Court gave him a suspended sentence of six weeks\' simple imprisonment, and suspended him from practice for three years.',
+    'The Supreme Court Bar Association filed a writ petition under Article 32. The Association argued that only the disciplinary committees of the Bar Councils can suspend a lawyer\'s licence.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (5:0), judgment by Justice A.S. Anand', points: [
-      'Article 129 gives the Supreme Court power to punish for contempt of itself. The recognised punishments include fine and imprisonment.',
-      'Suspending an advocate\'s licence is not a recognised punishment for contempt. It is a punishment for professional misconduct under the Advocates Act, 1961, imposed by the Bar Councils after a detailed procedure.',
+    { kind: 'unanimous', label: 'All five judges agreed (5:0). Justice A.S. Anand wrote the judgment', points: [
+      'Article 129 gives the Supreme Court the power to punish contempt of itself. The recognised punishments include a fine and imprisonment.',
+      'Suspending a lawyer\'s licence is not a recognised punishment for contempt. Suspension is a punishment for professional misconduct under the Advocates Act, imposed by the Bar Councils after a detailed procedure.',
       '"Article 142, even with the width of its amplitude, cannot be used to build a new edifice where none existed earlier, by ignoring express statutory provisions dealing with a subject."',
-      'Article 142 supplements the law so that the Court can do complete justice in a case. It cannot be used to take over a jurisdiction that a statute gives to another body.',
-      'In re Vinay Chandra Mishra is not good law to the extent that it suspended the advocate\'s licence.',
-      'The Court may still stop a contemner advocate from appearing before it until the contempt is purged, and may withdraw the privilege of practising as an Advocate-on-Record.'
+      'Article 142 adds to the law so that the Court can do complete justice in a case. Article 142 cannot be used to take over a power that a law gives to another body.',
+      'In re Vinay Chandra Mishra is wrong to the extent that it suspended the lawyer\'s licence.',
+      'The Court may still stop a lawyer guilty of contempt from appearing before it until the contempt is made good, and may withdraw the privilege of practising as an Advocate-on-Record.'
     ] }
   ],
   principles: [
-    'Article 142 is a supplementary power. It cannot override express statutory provisions or take over the powers of statutory bodies.',
-    'Professional discipline of advocates belongs to the Bar Councils.'
+    'Article 142 adds to the law but cannot override it. Article 142 cannot set aside express provisions of a law or take over the powers of bodies created by law.',
+    'Disciplining lawyers belongs to the Bar Councils.',
+    'So even the Supreme Court\'s widest power has an edge. Where a law gives a job to another body, the Court cannot do that job itself.'
   ],
   legacy: [
-    'The limits on Article 142 stated here are cited whenever the Court is asked to use that power in the face of a statute.'
+    'The limits on Article 142 stated here are cited whenever the Court is asked to use that power against a law.'
   ],
   source: 'https://indiankanoon.org/doc/1666530/'
 },
@@ -335,39 +375,45 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Act upheld by 3:2, except one section; Reference returned',
   tags: ['Article 143', 'Secularism', 'Acquisition of places of worship'],
   judges: 'M.N. Venkatachaliah CJI, A.M. Ahmadi, J.S. Verma, G.N. Ray and S.P. Bharucha',
-  summary: 'The Acquisition of Certain Area at Ayodhya Act, 1993 was upheld, except the section that ended all pending suits over the disputed site. The Court declined to answer the President\'s reference on whether a Hindu temple had stood at the site.',
+  summary: 'The law by which the Centre took over the land at Ayodhya was upheld, except the section that ended all pending court cases over the disputed site. The Court declined to answer the President\'s question on whether a Hindu temple had stood there.',
+  background: [
+    'For decades, Hindu and Muslim parties had argued in court over who owned the site of the Babri Masjid at Ayodhya. Hindu parties claimed that a temple to Ram had stood there before the mosque.',
+    'Under Article 143, the President can ask the Supreme Court for its opinion. The Court may decline to answer if the question is not suitable.',
+    'Namaz is the Muslim prayer. A statutory receiver holds disputed property under a law, until a court decides who owns it.'
+  ],
   question: [
     'Was the Acquisition of Certain Area at Ayodhya Act, 1993 valid?',
-    'Could the Act end all pending suits about the disputed site without providing another way to resolve the dispute?',
-    'Should the Court answer the President\'s reference under Article 143?'
+    'Could the Act end all pending suits about the disputed site without providing another way to settle the dispute?',
+    'Should the Court answer the President\'s question under Article 143?'
   ],
   facts: [
     'The Babri Masjid at Ayodhya was demolished on 6 December 1992.',
-    'On 7 January 1993 an ordinance acquired 67.703 acres of land in and around the disputed area. The same day the President referred a question to the Supreme Court under Article 143: whether a Hindu temple or religious structure existed on the site before the mosque was built.',
-    'Parliament replaced the ordinance with the Acquisition of Certain Area at Ayodhya Act, 1993. Section 4(3) of the Act ended all pending suits and legal proceedings about the disputed area.',
-    'Writ petitions challenged the Act, and the Reference was heard with them.'
+    'On 7 January 1993 an ordinance took over 67.703 acres of land in and around the disputed area. The same day the President asked the Supreme Court under Article 143 whether a Hindu temple or religious structure had stood on the site before the mosque was built.',
+    'Parliament replaced the ordinance with the Acquisition of Certain Area at Ayodhya Act, 1993. Section 4(3) of the Act ended all pending suits and cases about the disputed area.',
+    'Writ petitions challenged the Act, and the President\'s question was heard with them.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority (3 judges): Justice J.S. Verma, for himself, Chief Justice Venkatachaliah and Justice Ray', points: [
-      'The Act is valid, except Section 4(3). That section ended all pending suits without providing any other way to resolve the dispute, so it is unconstitutional.',
-      'With Section 4(3) struck down, the pending suits revived and must be decided in accordance with law.',
-      'The disputed area vested in the Central Government as a statutory receiver. It must maintain the status quo and hand the area over to the party found entitled in the suits.',
-      'A mosque has no special immunity from acquisition by the State. A mosque is not an essential part of the practice of Islam, and namaz can be offered anywhere.',
-      'Since the suits revived, the Reference was unnecessary. The Court respectfully declined to answer it and returned it.'
+    { kind: 'majority', label: 'The majority of three: Justice J.S. Verma, for himself, Chief Justice Venkatachaliah and Justice Ray', points: [
+      'The Act is valid, except Section 4(3). The section ended all pending suits without providing any other way to settle the dispute, so it is unconstitutional.',
+      'With Section 4(3) struck down, the pending suits came back to life and must be decided according to law.',
+      'The disputed area belongs to the Central Government as a statutory receiver. The Centre must keep things as they are and hand the area over to whichever party wins the suits.',
+      'A mosque has no special protection from being taken over by the State. A mosque is not an essential part of the practice of Islam, and namaz can be offered anywhere.',
+      'Because the suits had come back to life, the President\'s question was unnecessary. The Court respectfully declined to answer it and returned it.'
     ] },
-    { kind: 'dissent', label: 'Dissent (Justice S.P. Bharucha, for himself and Justice Ahmadi)', points: [
+    { kind: 'dissent', label: 'Justice S.P. Bharucha, for himself and Justice Ahmadi, in dissent', points: [
       'The whole Act is unconstitutional and must be struck down.',
-      'The Reference should be returned unanswered, because answering it would impair the Court\'s credibility.',
+      'The President\'s question should be returned unanswered, because answering it would harm the Court\'s standing.',
       '"Ayodhya is a storm that will pass. The dignity and honour of the Supreme Court cannot be compromised because of it."'
     ] }
   ],
   principles: [
-    'Places of worship of any religion, including mosques, can be acquired by the State in exceptional circumstances.',
-    'The Court may decline to answer a Presidential Reference under Article 143.'
+    'The State can take over places of worship of any religion, including mosques, in exceptional circumstances.',
+    'The Court may decline to answer a question from the President under Article 143.',
+    'So the dispute went back to the ordinary courts. The Court refused to settle a question of history and faith by giving an opinion.'
   ],
   legacy: [
-    'On 27 September 2018, in M. Siddiq v. Mahant Suresh Das, three judges declined by 2:1 to refer the observation about mosques to a larger bench.',
-    'On 9 November 2019, in the same case, five judges decided the title suits. The disputed site was given for a temple, and five acres of land elsewhere in Ayodhya were directed to be given for a mosque.'
+    'On 27 September 2018, in M. Siddiq v. Mahant Suresh Das, three judges declined by 2 votes to 1 to send the remark about mosques to a larger bench.',
+    'On 9 November 2019, in the same case, five judges decided the ownership suits. The disputed site was given for a temple, and five acres of land elsewhere in Ayodhya were to be given for a mosque.'
   ],
   source: 'https://indiankanoon.org/doc/37494799/'
 },
@@ -382,10 +428,16 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Unanimous, 2:0',
   tags: ['Article 149', 'CAG audit', 'Natural resources'],
   judges: 'K.S. Radhakrishnan and Vikramajit Sen',
-  summary: 'The Comptroller and Auditor General can examine the accounts of private telecom companies that share revenue with the Government, to check whether the Union gets its due share. Spectrum is a natural resource that the State holds in trust for the people.',
+  summary: 'The Comptroller and Auditor General (CAG) can examine the accounts of private telecom companies that share their revenue with the government, to check that the Union gets its due share. Spectrum is a natural resource that the State holds in trust for the people.',
+  background: [
+    'The CAG audits the accounts of the Union and the States under Articles 148 to 151. Article 149 sets out the CAG\'s duties and powers.',
+    'Spectrum is the set of radio frequencies that mobile phones use. Only the government can allot it, and companies pay for its use.',
+    'Under the public trust doctrine, the State holds natural resources in trust for the people, so it must allot them fairly. In the 2G case (2012), the Court cancelled 122 telecom licences that had been given out unfairly.',
+    'Money paid to the government goes into its main account, the Consolidated Fund of India.'
+  ],
   question: [
-    'Can the CAG audit the accounts of private telecom service providers?',
-    'Does the revenue-sharing arrangement in their licences bring their accounts within the CAG\'s powers under Article 149?'
+    'Can the CAG audit the accounts of private telecom companies?',
+    'Does the sharing of revenue under their licences bring their accounts within the CAG\'s powers under Article 149?'
   ],
   facts: [
     'Under their Unified Access Service licences, telecom companies paid the Union a licence fee and spectrum charges as a share of their adjusted gross revenue. The money went into the Consolidated Fund of India.',
@@ -394,17 +446,18 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'The association of the companies appealed to the Supreme Court.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (2:0), judgment by Justice K.S. Radhakrishnan', points: [
-      'Natural resources such as spectrum are public property. The State distributes them as a trustee for the people and must act fairly.',
-      'Under Article 149 and Section 16 of the CAG (Duties, Powers and Conditions of Service) Act, 1971, the CAG can audit all receipts payable into the Consolidated Fund of India.',
-      'The CAG can examine the accounts of the service providers to find out whether the Union is getting its due share of licence fee and spectrum charges. This is not a general audit of private companies.',
-      'The licences also allow the Government to call for the companies\' books of account at any time.',
+    { kind: 'unanimous', label: 'Both judges agreed (2:0). Justice K.S. Radhakrishnan wrote the judgment', points: [
+      'Natural resources such as spectrum are public property. The State hands them out as a trustee for the people and must act fairly.',
+      'Under Article 149 and Section 16 of the CAG (Duties, Powers and Conditions of Service) Act, 1971, the CAG can audit all money payable into the Consolidated Fund of India.',
+      'The CAG can examine the companies\' accounts to find out whether the Union is getting its due share of licence fee and spectrum charges. The examination is not a general audit of private companies.',
+      'The licences also let the government call for the companies\' books of account at any time.',
       'The companies\' appeals were dismissed, and the tribunal\'s decision was set aside.'
     ] }
   ],
   principles: [
-    'Where a private party shares revenue from a public resource with the State, the CAG can examine its accounts to protect public revenue.',
-    'The State holds natural resources in trust for the people.'
+    'Where a private company shares the revenue from a public resource with the State, the CAG can examine its accounts to protect public revenue.',
+    'The State holds natural resources in trust for the people.',
+    'So a private company that profits from public spectrum cannot hide from the public auditor the figures on which the public\'s share depends.'
   ],
   legacy: [
     'In October 2019 the Supreme Court upheld the Department of Telecommunications\' wide definition of adjusted gross revenue, which led to large dues from telecom companies.'
