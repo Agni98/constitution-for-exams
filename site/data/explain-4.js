@@ -8,13 +8,13 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 
 partVI: {
   simple: "Part VI sets up the government of a State.\n\n" +
-    "It covers the Governor, the Chief Minister and Council of Ministers, the State legislature and its procedure, the Governor's ordinance power, and the High Courts and subordinate courts.\n\n" +
-    "It repeats the structure of Part V almost article for article. The differences are where all the interesting law is."
+    "The Part covers the Governor, the Chief Minister and the Council of Ministers, the State legislature and its procedure, the Governor's power to make ordinances, and the High Courts and lower courts.\n\n" +
+    "Part VI repeats the structure of Part V almost article for article. Most of the interesting law lies in the differences."
 },
 
 "152": {
-  simple: "In this Part, 'State' does not include Jammu and Kashmir.",
-  catch: "The exclusion is now spent. After the 2019 reorganisation, Jammu and Kashmir is a Union territory, and Part VIII governs it."
+  simple: "In Part VI, \"State\" does not include Jammu and Kashmir.",
+  catch: "The exclusion no longer matters. Since the 2019 reorganisation, Jammu and Kashmir is a Union territory, governed under Part VIII."
 },
 
 /* ---------- The Governor ---------- */
@@ -24,8 +24,8 @@ partVI: {
   catch: "The 7th Amendment (1956) allowed one person to be Governor of two or more States. Shared Governors are now common, especially in the north-east. So the Constitution does not insist on a separate Governor for every State."
 },
 "154": {
-  simple: "The executive power of the State is vested in the Governor. He exercises it directly or through subordinate officers.",
-  catch: "This is the mirror of Article 53, and like it, a formality. The substance is in Article 163."
+  simple: "The executive power of the State is vested in the Governor. The Governor uses it directly or through officers below the Governor.",
+  catch: "Article 154 mirrors Article 53, and like it, the vesting is a formality. The substance is in Article 163."
 },
 "155": {
   simple: "The President appoints the Governor of a State by warrant under the President's hand and seal.",
@@ -38,22 +38,22 @@ partVI: {
     "B.P. Singhal (2010) put a limit on the power. Removal cannot be arbitrary, or based only on a change of government at the centre. But no reasons need be given and no hearing is required, so the limit is hard to enforce."
 },
 "157": {
-  simple: "To be Governor you must be a citizen of India and have completed thirty-five years.",
-  catch: "Two qualifications, and that is all. There is no requirement of neutrality, no bar on having held party office, and no consultation with the State.\n\n" +
-    "The Sarkaria and Punchhi Commissions both recommended adding some. Nothing was added."
+  simple: "A Governor must be a citizen of India and at least thirty-five years old.",
+  catch: "The Constitution sets only those two conditions. There is no requirement of neutrality, no bar on past party office, and no duty to consult the State.\n\n" +
+    "The Sarkaria and Punchhi Commissions both recommended more conditions. None were added."
 },
 "158": {
-  simple: "The Governor cannot be a member of a legislature or hold any other office of profit. He gets a rent-free residence and the emoluments in the Second Schedule, which cannot be reduced during his term.\n\n" +
-    "Where one person is Governor of two States, the emoluments are shared as the President directs.",
-  catch: "The bar on reducing emoluments is largely theoretical. Article 156's 'pleasure' removal means a Governor who displeases the Centre simply stops being Governor."
+  simple: "A Governor cannot be a member of a legislature or hold any other office of profit. The Governor gets a rent-free residence and the pay set out in the Second Schedule, which cannot be cut during the term.\n\n" +
+    "Where one person is Governor of two States, the pay is shared between them as the President directs.",
+  catch: "The bar on cutting the pay protects little in practice. Under Article 156 a Governor holds office at the President's pleasure, so a Governor who displeases the Union can simply be removed."
 },
 "159": {
-  simple: "The Governor takes his oath before the Chief Justice of the High Court. He swears to preserve, protect and defend the Constitution and the law, and to devote himself to the service and well-being of the people of the State.",
-  catch: "The oath is to the people of the State. That sits awkwardly with appointment and removal by the Union, and both the Sarkaria and Punchhi Commissions flagged the tension."
+  simple: "The Governor takes the oath before the Chief Justice of the High Court. The Governor swears to preserve, protect and defend the Constitution and the law, and to serve the people of the State.",
+  catch: "The oath is to the people of the State. But the Union appoints and removes the Governor, and the two do not sit easily together."
 },
 "160": {
-  simple: "The President may make provision for the discharge of the Governor's functions in any contingency this Chapter does not cover.",
-  catch: "It is used when a Governor dies or resigns suddenly. The President typically asks the Governor of a neighbouring State, or the Chief Justice of the High Court, to hold additional charge."
+  simple: "The President may provide for the Governor's functions to be carried out in any situation this Chapter does not cover.",
+  catch: "The power is used when a Governor dies or resigns suddenly. The President usually asks the Governor of a neighbouring State, or the Chief Justice of the High Court, to take charge for a while."
 },
 "161": {
   simple: "The Governor may pardon a convict, or suspend, remit or commute a sentence, for offences against laws on matters within the State's executive power.",
@@ -61,9 +61,9 @@ partVI: {
     "Like the President, the Governor acts on the advice of ministers, as Maru Ram (1980) settled. Courts review the decision only on narrow grounds."
 },
 "162": {
-  simple: "The State's executive power extends to matters on which its legislature can make laws.\n\n" +
-    "Where the subject is one both Parliament and the State can legislate on, the State's executive power is subject to what the Union exercises.",
-  catch: "This is the mirror of Article 73. It is also why the Centre's executive reach expands automatically whenever it legislates on a Concurrent List subject."
+  simple: "The executive power of a State covers the matters on which its legislature can make laws.\n\n" +
+    "On a subject where both Parliament and the State can make laws, the State's executive power gives way to any executive power the Constitution or a law of Parliament expressly gives the Union.",
+  catch: "Article 162 mirrors Article 73. But the Union gains executive power on a Concurrent subject only where its law says so expressly. Making a law on the subject is not enough by itself."
 },
 "163": {
   simple: "A Council of Ministers, led by the Chief Minister, aids and advises the Governor. The exception is where the Constitution requires the Governor to act in the Governor's discretion.\n\n" +
@@ -79,8 +79,8 @@ partVI: {
     "The floor keeps the ministry workable where 15 per cent of the Assembly would be too few."
 },
 "165": {
-  simple: "The Governor appoints an Advocate-General for the State, qualified to be a High Court judge, to advise the government and perform the legal duties assigned to him.",
-  catch: "He is the State counterpart of the Attorney-General. He has a right of audience in all State courts and a right to speak in the legislature, but no vote."
+  simple: "The Governor appoints an Advocate-General for the State, who must be qualified to be a High Court judge. The Advocate-General advises the State government on legal matters and carries out the legal duties assigned.",
+  catch: "The Advocate-General is the State's version of the Attorney-General. Under Article 177 the Advocate-General may speak in the State legislature, but cannot vote."
 },
 "166": {
   simple: "All executive action of a State is expressed to be taken in the Governor's name. An authenticated order cannot be questioned on the ground that the Governor did not make it.\n\n" +

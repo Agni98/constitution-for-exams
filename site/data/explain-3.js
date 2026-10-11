@@ -331,17 +331,17 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
   catch: "Both conditions, a law of Parliament and, for other matters, a State's agreement, have kept the power almost unused."
 },
 "139": {
-  simple: "Parliament may by law confer on the Supreme Court the power to issue writs for purposes other than enforcing fundamental rights.",
-  catch: "Without such a law, the Court's writ power under Article 32 is confined to fundamental rights. A High Court's under Article 226 is not."
+  simple: "Parliament may by law give the Supreme Court power to issue writs for purposes other than enforcing fundamental rights.",
+  catch: "Without such a law, the Court's writ power under Article 32 covers only fundamental rights. But a High Court's power under Article 226 is wider already."
 },
 "139A": {
-  simple: "The Supreme Court may transfer cases to itself where the same substantial question of law is pending before it and one or more High Courts, or before two or more High Courts. It may also transfer any case from one High Court to another.",
-  catch: "Added by the 42nd Amendment and retained.\n\n" +
-    "It is the machinery used to consolidate litigation on a single question, and to move a trial when a fair trial is not possible where it is pending."
+  simple: "The Supreme Court may take over cases that raise the same substantial question of law, when they are pending before it and one or more High Courts, or before two or more High Courts. The Court may also move any case from one High Court to another.",
+  catch: "The 42nd Amendment added the article, and it has stayed.\n\n" +
+    "The Court uses it to decide a single question once, instead of in many courts. The Court also uses it to move a case when justice requires it."
 },
 "140": {
-  simple: "Parliament may confer on the Supreme Court supplemental powers, not inconsistent with the Constitution, as appear necessary for it to exercise its jurisdiction more effectively.",
-  catch: "Whatever Parliament confers here must not be inconsistent with the Constitution. It cannot be used to widen Article 142 beyond its own limits."
+  simple: "Parliament may give the Supreme Court extra powers that help it exercise its jurisdiction better, so long as they fit with the Constitution.",
+  catch: "Whatever Parliament grants must stay within the Constitution. So Article 140 cannot be used to stretch Article 142 beyond its own limits."
 },
 "141": {
   simple: "The law declared by the Supreme Court binds all courts in India.",
@@ -361,8 +361,8 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "An opinion is advice, not a judgment, and binds nobody, not even the President who asked. But in practice courts and governments follow it."
 },
 "144": {
-  simple: "All authorities, civil and judicial, in the territory of India shall act in aid of the Supreme Court.",
-  catch: "There is no equivalent article for the High Courts. They rely on Article 227's power of superintendence and on their contempt jurisdiction instead."
+  simple: "All authorities in India, civil and judicial, shall act in aid of the Supreme Court.",
+  catch: "There is no matching article for the High Courts. They rely instead on their power of superintendence under Article 227, and on their power to punish contempt."
 },
 "144A": {
   simple: "This article required a bench of at least seven judges, and a two-thirds majority, to strike down a law as unconstitutional.",
@@ -370,16 +370,16 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 },
 "145": {
   simple: "The Supreme Court makes rules for its own practice and procedure, with the President's approval.\n\n" +
-    "A minimum of five judges must sit on a case involving a substantial question of law as to the interpretation of the Constitution, or on an Article 143 reference. Judgments are delivered in open court, and dissents may be recorded.",
-  catch: "The five-judge minimum is where the term 'Constitution Bench' comes from. It is a floor, not a ceiling, which is how Kesavananda ended up with thirteen."
+    "At least five judges must sit on a case that raises a substantial question about the meaning of the Constitution, or on a reference under Article 143. Judgments are given in open court, and judges may record dissents.",
+  catch: "The five-judge minimum is where the term \"Constitution Bench\" comes from. Five is a floor, not a ceiling, which is how Kesavananda Bharati came to be heard by thirteen judges."
 },
 "146": {
-  simple: "Appointments of officers and servants of the Supreme Court are made by the Chief Justice. Their conditions of service are settled by rules he makes, and the Court's administrative expenses are charged on the Consolidated Fund of India.",
-  catch: "Financial and administrative autonomy is the third leg of judicial independence, alongside security of tenure and protected salaries."
+  simple: "The Chief Justice appoints the officers and staff of the Supreme Court, and sets their conditions of service by rules. The Court's running costs are charged on the Consolidated Fund of India.",
+  catch: "Control over its own staff and money is the third support of judicial independence, alongside secure tenure and protected salaries."
 },
 "147": {
-  simple: "References in this Chapter to the interpretation of the Constitution include the Government of India Act, 1935, and the Indian Independence Act, 1947, together with any amending or supplementing enactment.",
-  catch: "This is why arguments about legislative competence still cite Federal Court decisions on the 1935 Act. By this article, those are cases on the interpretation of the Constitution."
+  simple: "In this Chapter, questions about the meaning of the Constitution include questions about the Government of India Act, 1935, and the Indian Independence Act, 1947, and any law amending them.",
+  catch: "So arguments about which legislature can make a law still cite the Federal Court's decisions on the 1935 Act. Under Article 147 those are cases on the meaning of the Constitution."
 },
 
 /* ---------- Comptroller and Auditor-General ---------- */
@@ -396,13 +396,13 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "So Parliament decides how far the CAG's audit reaches, and can change it by an ordinary law."
 },
 "150": {
-  simple: "The accounts of the Union and the States are kept in the form the President prescribes, on the CAG's advice.",
-  catch: "The 44th Amendment changed this from 'after consultation with' to 'on the advice of', which strengthened the CAG's hand over accounting form."
+  simple: "The accounts of the Union and the States are kept in the form the President prescribes, on the advice of the Comptroller and Auditor-General.",
+  catch: "The 44th Amendment changed the words \"after consultation with\" to \"on the advice of\". The change gave the CAG more say over how the accounts are kept."
 },
 "151": {
-  simple: "The CAG's reports on Union accounts go to the President and are laid before both Houses. Reports on a State's accounts go to the Governor and are laid before the State legislature.",
-  catch: "The report is only laid. The Constitution imposes no obligation to act on it.\n\n" +
-    "Follow-up happens through the Public Accounts Committee, which is a creature of parliamentary rules, not of this article."
+  simple: "The CAG's reports on the Union's accounts go to the President, who has them laid before both Houses. Reports on a State's accounts go to the Governor, who has them laid before the State legislature.",
+  catch: "The report is only laid. The Constitution creates no duty to act on it.\n\n" +
+    "The follow-up happens in the Public Accounts Committee, which the rules of Parliament create, not Article 151."
 }
 
 });
