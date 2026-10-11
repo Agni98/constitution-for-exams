@@ -66,9 +66,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Minority status for Article 30 is decided State by State.',
-    'Private educational institutions have freedom to run themselves, but education cannot be run for profit.',
-    'Aided minority institutions must admit a reasonable share of students from outside the minority.',
     'So private colleges won control over their own admissions and fees, but lost any right to sell seats.'
   ],
   legacy: [
@@ -113,8 +110,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Placing a law in the Ninth Schedule does not put it beyond the basic structure test.',
-    'Articles 14, 19 and 21 form part of the basic structure against which such laws are tested.',
     'So the Ninth Schedule is no longer a safe for any law Parliament chooses. A law put there after 1973 must still respect the core of equality, freedom and life.'
   ],
   legacy: [
@@ -168,8 +163,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Article 370 was a temporary arrangement that the President could end under Article 370(3).',
-    'Jammu and Kashmir had no sovereignty apart from the sovereignty of India.',
     'So the end of the special status stood, even though the Court rejected one of the routes the government had used to reach it.'
   ],
   legacy: [
@@ -213,7 +206,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Giving away national territory requires an amendment to the Constitution under Article 368.',
     'So the government cannot hand land to another country by a treaty and an ordinary law. The special majority needed to amend the Constitution must agree.'
   ],
   legacy: [
@@ -267,7 +259,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Reservation beyond 50 per cent needs an extraordinary situation, shown by proper data.',
     'So a large and influential community cannot be added on top of existing quotas just because it asks. The State must prove real backwardness and real necessity.'
   ],
   legacy: [

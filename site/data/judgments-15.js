@@ -102,8 +102,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Judges hold constitutional office. They are not government employees.',
-    'The State must give the judiciary minimum working and service conditions, whatever its finances.',
     'So the lower courts cannot be starved of pay, housing and books for want of money. A poor State still owes its judges the basics.'
   ],
   legacy: [
@@ -150,8 +148,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Secure tenure and proper service conditions are essential to the independence of tribunals.',
-    'The legislature cannot override a judgment of the Court without curing its basis.',
     'So the government cannot keep tribunal members on short terms, always hoping for reappointment. Short terms make them depend on the government they must sometimes rule against.'
   ],
   legacy: [
@@ -200,8 +196,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The Election Commission has full power under Article 324 to fill gaps in the law, subject to fairness and the rule of law.',
-    'Election disputes are decided by election petitions after the result, not by courts during the election.',
     'So the Commission may act quickly to save an election, but it must still act fairly, and it must stand by the reasons it gave at the time.'
   ],
   legacy: [
@@ -246,8 +240,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The voter\'s right to information about candidates is a fundamental right.',
-    'The Election Commission can act under Article 324 where the law is silent.',
     'So a voter can now see, before voting, whether a candidate faces serious criminal charges and what the candidate owns.'
   ],
   legacy: [
@@ -295,7 +287,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'An independent Election Commission is essential to free and fair elections.',
     'So the Court tried to take the choice of election referees out of the ruling party\'s hands alone. Parliament then wrote its own law and kept the government in the majority on the committee.'
   ],
   legacy: [
@@ -343,8 +334,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Voters\' right to information reaches the funding of political parties.',
-    'Unlimited company funding of parties threatens free and fair elections.',
     'So voters are entitled to know who pays the parties they vote for, especially when the payer is a company that may want something back.'
   ],
   legacy: [
@@ -388,7 +377,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Courts do not interrupt an election that is under way. Disputes are decided by election petitions after the result.',
     'So a wrongly rejected candidate is not left without a remedy. The remedy simply comes after the vote, so that the election is not held up.'
   ],
   legacy: [
