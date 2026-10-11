@@ -21,10 +21,10 @@ partXIII: {
 /* ---------- Legislative relations ---------- */
 
 "245": {
-  simple: "Parliament may make laws for the whole or any part of India. A State legislature may make laws for the whole or any part of the State.\n\n" +
-    "A law of Parliament is not invalid merely because it has extra-territorial operation.",
-  catch: "The bar on extra-territorial legislation applies to State legislatures, not to Parliament.\n\n" +
-    "Even Parliament's reach has a limit. GVK Industries (2011) held that its extra-territorial laws must have a real nexus with India."
+  simple: "Parliament may make laws for the whole of India or any part of it. A State legislature may make laws for the whole State or any part of it.\n\n" +
+    "A law of Parliament is not invalid only because it operates outside India.",
+  catch: "The bar on laws that operate outside the territory applies to State legislatures, not to Parliament.\n\n" +
+    "But even Parliament's reach has a limit. GVK Industries (2011) held that a law operating outside India must have a real connection with India."
 },
 "246": {
   simple: "Parliament alone makes laws on List I, the Union List. The States alone make laws on List II, the State List. Both make laws on List III, the Concurrent List, and Parliament's law prevails.",
@@ -37,8 +37,8 @@ partXIII: {
     "The GST Council under Article 279A recommends rates and rules. But Mohit Minerals (2022) held that its recommendations persuade and do not bind. Parliament and the States each keep their own power."
 },
 "247": {
-  simple: "Parliament may by law establish additional courts, for the better administration of laws made by Parliament, or of existing laws on a Union List matter.",
-  catch: "It has been used for bodies such as the National Green Tribunal's appellate structure. These are additional courts for central laws, distinct from the tribunals under Part XIVA."
+  simple: "Parliament may by law set up additional courts, to better administer laws made by Parliament, or existing laws on Union List subjects.",
+  catch: "The courts serve central laws. They are different from the tribunals set up under Part XIVA."
 },
 "248": {
   simple: "Parliament alone can make laws on any matter not named in the State List or the Concurrent List. The power includes any tax not named in either List.",
@@ -56,8 +56,8 @@ partXIII: {
     "But the State legislatures keep working. A Union law made under Article 250 simply prevails while it lasts. Removing a State government is a different power, under Article 356."
 },
 "251": {
-  simple: "A law made under Article 249 or 250 does not restrict a State's power to legislate. The State law is inoperative to the extent of any repugnancy, and revives when the Parliamentary law ceases.",
-  catch: "Note the word 'inoperative', not 'void'. The State law goes dormant and comes back automatically."
+  simple: "A law made under Article 249 or 250 does not take away a State's power to make laws. Where the two conflict, the State law stops operating, and it revives when the law of Parliament ends.",
+  catch: "The word is \"inoperative\", not \"void\". The State law lies dormant and comes back on its own."
 },
 "252": {
   simple: "If two or more State legislatures pass resolutions asking for it, Parliament may make a law on a State List subject for them. Any other State can adopt the law later by its own resolution.",
@@ -65,9 +65,9 @@ partXIII: {
     "But consent has a cost. Once a State has asked, its own legislature can no longer amend or repeal the Act. Only Parliament can."
 },
 "253": {
-  simple: "Parliament may make any law to implement an international treaty, agreement or convention, or a decision of an international body, notwithstanding the division of legislative powers.",
-  catch: "This is the widest inroad into the State List anywhere in the Constitution. A treaty on any subject at all lets Parliament legislate on it.\n\n" +
-    "The Environment (Protection) Act, 1986 was enacted under this article, following the Stockholm Conference."
+  simple: "Parliament may make any law to carry out an international treaty, agreement or convention, or a decision of an international body. The usual division of law-making power does not limit it.",
+  catch: "Article 253 is the widest route into the State List anywhere in the Constitution. A treaty on any subject lets Parliament make laws on that subject.\n\n" +
+    "The Environment (Protection) Act, 1986 was made under Article 253, after the Stockholm Conference of 1972."
 },
 "254": {
   simple: "When a State law on a Concurrent List subject conflicts with a law of Parliament, Parliament's law prevails. The State law is void to the extent of the conflict.\n\n" +
@@ -76,8 +76,8 @@ partXIII: {
     "The State's win under clause (2) is also not permanent. Parliament may later pass a fresh law on the same subject and override the State law again."
 },
 "255": {
-  simple: "A requirement of recommendation or previous sanction is a matter of procedure only. An Act is not invalid for want of it, if it received the necessary assent.",
-  catch: "A procedural saving with real effect. A law that should have had prior sanction is cured if the required assent was in fact given later."
+  simple: "A requirement that a Bill have a recommendation or previous sanction is only a matter of procedure. An Act is not invalid for lacking it, if the necessary assent was given.",
+  catch: "The rule has real effect. A law that should have had prior sanction is cured if the required assent was in fact given later."
 },
 
 /* ---------- Administrative relations ---------- */
@@ -88,9 +88,9 @@ partXIII: {
     "The finding is a ground for President's rule under Article 356. So a direction under Article 256 can become a route to President's rule."
 },
 "257": {
-  simple: "A State's executive power must not impede the Union's.\n\n" +
-    "The Union may direct a State on the construction and maintenance of means of communication of national or military importance, and on the protection of railways. The Union pays the extra cost.",
-  catch: "Read with Article 365, a failure to comply with a direction under Articles 256 or 257 is a ground on which the President may hold that the State's government cannot be carried on in accordance with the Constitution."
+  simple: "A State must not use its executive power to obstruct the Union's.\n\n" +
+    "The Union may direct a State to build and maintain means of communication of national or military importance, and to protect railways. The Union pays any extra cost.",
+  catch: "Article 365 adds the consequence. If a State fails to follow a direction under Article 256 or 257, the President may hold that the State's government cannot be carried on under the Constitution."
 },
 "257A": {
   simple: "This article once allowed the Union to deploy armed forces to deal with a grave law and order situation in a State.",
@@ -98,32 +98,30 @@ partXIII: {
     "Public order remains a State subject. Central forces are deployed at a State's request, or under a separate law."
 },
 "258": {
-  simple: "The President may entrust Union functions to a State or its officers, with that State's consent.\n\n" +
-    "Parliament may also confer powers on a State or its officers regardless of consent, where a Union law so provides. The Union bears the extra cost.",
-  catch: "Clause (2) is the one that does not need consent.\n\n" +
-    "Parliament can simply give State officers duties under a central law. That is how most central legislation is administered on the ground."
+  simple: "With a State's consent, the President may hand Union functions to the State or its officers.\n\n" +
+    "A Union law may also give powers and duties to a State or its officers, without consent. The Union pays any extra cost.",
+  catch: "The second route needs no consent. Parliament can simply give State officers duties under a central law, and most central laws are run on the ground in that way."
 },
 "258A": {
   simple: "A State Governor may entrust State functions to the Union or its officers, with the Union government's consent.",
   catch: "Added by the 7th Amendment to make the delegation two-way. The original Constitution allowed it only from Centre to State."
 },
 "259": {
-  simple: "This article once dealt with the armed forces of the States in Part B of the First Schedule.",
-  catch: "Omitted by the 7th Amendment in 1956."
+  simple: "Article 259 once dealt with the armed forces of the former princely States, listed in Part B of the First Schedule.",
+  catch: "The 7th Amendment omitted it in 1956."
 },
 "260": {
-  simple: "The Government of India may, by agreement, undertake executive, legislative or judicial functions in any territory outside India.",
-  catch: "It has been used for arrangements with neighbouring countries, such as the administration of enclaves before the 2015 land boundary agreement with Bangladesh."
+  simple: "By agreement with a foreign government, the Government of India may take on executive, legislative or judicial work in territory outside India.",
+  catch: "So India can govern or administer territory abroad only by agreement with the government concerned."
 },
 "261": {
-  simple: "Full faith and credit shall be given throughout India to the public acts, records and judicial proceedings of the Union and of every State. Final judgments of civil courts are executable anywhere in India.",
-  catch: "It covers civil judgments only.\n\n" +
-    "Criminal judgments are outside it, so a conviction in one State is not automatically executable in another as a matter of this article."
+  simple: "Full faith and credit shall be given throughout India to the public acts, records and court proceedings of the Union and of every State. Final judgments of civil courts can be enforced anywhere in India.",
+  catch: "The rule covers civil judgments only. So Article 261 does not by itself make a criminal conviction in one State enforceable in another."
 },
 "262": {
-  simple: "Parliament may by law provide for the adjudication of disputes about the waters of inter-State rivers. It may also bar the Supreme Court and every other court from jurisdiction over such a dispute.",
-  catch: "Parliament did both, through the Inter-State River Water Disputes Act, 1956.\n\n" +
-    "The ouster is not absolute in practice. The Supreme Court has heard appeals from tribunal awards under Article 136, and decided questions about a tribunal's constitution, while declining to reopen the merits."
+  simple: "Parliament may by law provide for deciding disputes over the waters of inter-State rivers. Parliament may also bar the Supreme Court and every other court from hearing such a dispute.",
+  catch: "Parliament did both, in the Inter-State River Water Disputes Act, 1956.\n\n" +
+    "But the bar is not complete in practice. In the Cauvery case (2018) the Supreme Court heard appeals against the tribunal's award under Article 136, and changed the States' shares."
 },
 "263": {
   simple: "The President may set up an Inter-State Council. The Council inquires into disputes between States, discusses subjects of common interest, and recommends better coordination of policy.",
@@ -134,12 +132,12 @@ partXIII: {
 /* ---------- Part XII: Finance ---------- */
 
 "264": {
-  simple: "Article 264 defines 'Finance Commission' for this Part as the Commission constituted under Article 280."
+  simple: "In Part XII, \"Finance Commission\" means the Commission set up under Article 280."
 },
 "265": {
   simple: "No tax shall be levied or collected except by authority of law.",
-  catch: "Eight words that make every tax demand traceable to a statute.\n\n" +
-    "'Law' means an Act of the legislature. An executive order or a circular will not do, and countless tax notifications have fallen on that ground."
+  catch: "So every tax demand must trace back to a statute.\n\n" +
+    "\"Law\" here means an Act of the legislature. An executive order or a circular is not enough, and tax demands resting only on one have been struck down."
 },
 "266": {
   simple: "All revenue the Government of India receives, all loans it raises, and all loan repayments it receives form the Consolidated Fund of India. Each State has a Consolidated Fund on the same pattern.\n\n" +
@@ -148,21 +146,20 @@ partXIII: {
     "So money can be paid out of the Public Account without a vote in Parliament. Money in the Consolidated Fund needs an Appropriation Act first."
 },
 "267": {
-  simple: "Parliament may establish a Contingency Fund of India, placed at the President's disposal, to meet unforeseen expenditure pending authorisation by Parliament. A State legislature may do the same.",
-  catch: "It is an imprest, not a slush fund. Money drawn from it must be recouped by a later Appropriation Act."
+  simple: "Parliament may set up a Contingency Fund of India, held by the President, to meet unexpected spending until Parliament approves it. A State legislature may set up one for the State.",
+  catch: "The Fund is an advance, not a store of spare money. Whatever is drawn from it must be made good by a later Appropriation Act."
 },
 "268": {
-  simple: "Certain duties are levied by the Union but collected and appropriated by the States. Stamp duties are the surviving example.",
-  catch: "The 101st Amendment removed the excise limb when GST subsumed it, leaving stamp duties."
+  simple: "Some duties are levied by the Union but collected and kept by the States. Stamp duties are the example that remains.",
+  catch: "The 101st Amendment removed the duties on medicinal and toilet preparations, which GST absorbed. Only stamp duties are left."
 },
 "268A": {
   simple: "This article once provided for service tax, levied by the Union and collected and appropriated by the Union and the States.",
   catch: "Inserted by the 88th Amendment in 2003 and omitted by the 101st in 2016, when GST replaced service tax."
 },
 "269": {
-  simple: "Taxes on inter-State sale or consignment of goods are levied and collected by the Union but assigned to the States. They do not form part of the Consolidated Fund of India.",
-  catch: "Largely superseded by Article 269A for goods and services within GST.\n\n" +
-    "It survives for the few goods outside GST, such as petroleum products and alcohol."
+  simple: "Taxes on the sale or consignment of goods between States are levied and collected by the Union, but handed to the States. The money never enters the Consolidated Fund of India.",
+  catch: "Article 269A has largely replaced Article 269 for goods and services under GST. Article 269 survives for the few goods outside GST, such as petroleum products and alcohol."
 },
 "269A": {
   simple: "The Union levies and collects GST on supplies between States. The proceeds are shared between the Union and the States as Parliament provides, on the GST Council's recommendation.\n\n" +
@@ -177,12 +174,12 @@ partXIII: {
     "So the States receive well below the headline share of total central taxes. The gap is the States' most persistent fiscal grievance."
 },
 "271": {
-  simple: "Parliament may at any time increase any of the duties or taxes in Articles 269 and 270 by a surcharge for Union purposes. The whole proceeds form part of the Consolidated Fund of India.",
-  catch: "This is the article that puts surcharges outside the shareable pool. The 101st Amendment excluded GST from the power."
+  simple: "Parliament may at any time add a surcharge to the duties and taxes in Articles 269 and 270, for the Union's purposes. The whole surcharge goes into the Consolidated Fund of India.",
+  catch: "Article 271 is what keeps surcharges out of the pool shared with the States. The 101st Amendment barred surcharges on GST."
 },
 "272": {
-  simple: "This article once dealt with Union excise duties shared with the States.",
-  catch: "Omitted by the 80th Amendment in 2000, when all Union taxes were pooled for sharing under a redrafted Article 270."
+  simple: "Article 272 once dealt with Union excise duties shared with the States.",
+  catch: "The 80th Amendment omitted it in 2000, when all Union taxes were pooled for sharing under a rewritten Article 270."
 },
 "273": {
   simple: "Grants are paid in lieu of the export duty on jute and jute products to Assam, Bihar, Odisha and West Bengal, charged on the Consolidated Fund of India.",
