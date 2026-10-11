@@ -255,8 +255,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'On this view, not even an amendment to the Constitution could cut down a fundamental right.',
-    'Prospective overruling was used for the first time in India. A new rule applies only to the future, so that settled laws and past decisions are not upset.',
+    'Prospective overruling entered Indian law here. A court can lay down a new rule for the future while leaving past decisions undisturbed.',
     'So the Court protected the fundamental rights for the future without undoing the land reforms already made.'
   ],
   legacy: [
@@ -301,9 +300,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Fundamental rights work from 26 January 1950 onward. They do not reopen acts done before that date.',
-    'A law from before the Constitution that clashes with a fundamental right is not wiped out. The law still governs what was done before the Constitution began.',
-    'So the Constitution drew a line at 26 January 1950. The rights protect people from that day, not before it.'
+    'The Constitution does not undo the past. Completed acts, and prosecutions for them, are judged by the law that applied when the acts were done.',
+    'So a clashing law from before 1950 is not wiped off the books. The law only stops working against rights from 26 January 1950, an idea the Court later built into the doctrine of eclipse.'
   ],
   legacy: [
     'The Court built on this view in Bhikaji Narain Dhakras (1955), where it laid down the doctrine of eclipse.'
@@ -345,9 +343,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The rule is called the doctrine of eclipse. A law from before the Constitution that clashes with a fundamental right is not void from the start. The right only casts a shadow over it.',
-    'If the Constitution is later amended to remove the clash, the law comes back by itself.',
-    'So the doctrine lets an old law rest instead of dying. When the clash ends, the law works again without being passed afresh.'
+    'The rule is called the doctrine of eclipse. A clash with a fundamental right puts an old law to sleep, but does not kill it.',
+    'So when the clash ends, an old law needs no new vote of the legislature to work again.'
   ],
   legacy: [
     'In Deep Chand (1959) and Mahendra Lal Jaini (1962), the Court held that the doctrine does not save a law made after the Constitution that breaks a fundamental right. A new law of that kind is void from the start.',

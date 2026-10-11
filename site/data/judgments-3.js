@@ -56,10 +56,9 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Article 14 forbids a law that gives the government unguided power to pick and choose whom to treat differently.',
-    'A valid line between groups needs a clear basis. A vague aim such as a speedier trial is not enough.',
-    'Equal protection covers procedure too. People in the same position must get the same safeguards at their trial.',
-    'So the problem was not the special court itself. The problem was a power to send anyone there, with nothing to guide the choice.'
+    'A law need not discriminate on its face to break Article 14. A power to discriminate, with nothing to guide it, is enough.',
+    'Equal protection reaches procedure as well as substance.',
+    'So the problem was not the special court itself, but a power to send anyone there with nothing to guide the choice.'
   ],
   legacy: [
     'The case was one of the first major judgments on Article 14.',
@@ -110,7 +109,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'A law may apply to a single person or company, if special circumstances make that person a class by itself.',
     'A law that picks out one person for special treatment without any reasonable basis is void.',
     'A law that gives the government a choice without any policy to guide it is void. But if the law states a policy and the government ignores it, only the government\'s action is struck down.',
-    'So Article 14 asks two questions about any line a law draws. Is the difference real and clear? And does the difference connect to what the law is trying to do?'
+    'So a law may single out even one company, as long as a real difference sets it apart and the difference serves the law\'s purpose.'
   ],
   legacy: [
     'The two-part test of a clear difference and a rational link is still applied in almost every Article 14 case.',
@@ -159,10 +158,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Article 14 has a second test. Besides drawing sensible lines between groups, State action must not be arbitrary.',
-    'Articles 14 and 16 strike at arbitrary decisions in government jobs too.',
-    'A person who accuses senior officials of bad faith must prove it with clear facts.',
-    'So Royappa lost his own case, but the reasoning changed Article 14. Since 1973, any arbitrary act of the State can be challenged as a denial of equality.'
+    'Article 14 now has two tests. One checks the line a law draws between groups. The other, from this case, checks whether State action is arbitrary.',
+    'So Royappa lost his own case, but the reasoning changed Article 14. Any arbitrary act of the State can now be challenged as a denial of equality.'
   ],
   legacy: [
     'In Maneka Gandhi (1978), the Court applied the same idea to Article 21. A procedure that takes away liberty must be fair, just and reasonable, not arbitrary.',
@@ -208,10 +205,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A rule that ends a woman\'s job because she becomes pregnant is plainly arbitrary.',
-    'Unguided power over a person\'s conditions of service breaks Article 14.',
-    'Treating two groups of employees differently is not sex discrimination if they are truly different classes.',
-    'So the air hostesses won on pregnancy and on the unguided power, but lost on retirement at 35 and on the marriage rule.'
+    'Articles 14 and 15 work differently. Article 15 bars only discrimination on the ground of sex alone, but Article 14 strikes at any rule that is plainly arbitrary.',
+    'So a rule can survive the ban on sex discrimination and still fall as arbitrary.'
   ],
   legacy: [
     'The separate-class reasoning has been criticised, because the employer\'s own rules had created the difference between the two classes.',
@@ -257,7 +252,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   principles: [
     'A cut-off date that splits one class must have a rational link to the purpose of the scheme. An arbitrary date breaks Article 14.',
-    'Pension is earned by long service. Pension is pay held back for old age, and a form of social security.',
+    'Pension is deferred pay earned by long service, and a form of social security in old age.',
     'The Court read pensions together with Article 41 and the idea of a socialist welfare State in the Preamble.',
     'So the government could not give two people with the same service different pensions only because one retired a day later.'
   ],
@@ -305,8 +300,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A law that treats a woman as the property of her husband breaks equality and dignity.',
-    'A law can be struck down under Article 14 if it is manifestly arbitrary.',
+    'Manifest arbitrariness is a ground for striking down a law, not only an executive act.',
+    'Laws that rest on stereotypes about women fail Article 15, even when they seem to protect women.',
     'Criminal law should not be used to punish private conduct between adults in a marriage.',
     'So the State may still let adultery end a marriage, but it may not send a person to prison for it.'
   ],
