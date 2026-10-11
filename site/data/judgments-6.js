@@ -52,9 +52,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Freedom of the press is part of freedom of speech, and it includes the freedom to circulate.',
-    'Speech can be limited only on the grounds listed in Article 19(2).',
-    'A law worded so widely that it covers both allowed and forbidden limits is void as a whole.',
+    'Freedom of the press is not named in Article 19, but it is part of freedom of speech.',
+    'The grounds for limiting speech are a closed list. A ground that is not in Article 19(2) cannot be used, however sensible it seems.',
     'So in 1950 the government could not ban a journal merely to keep public order. Parliament changed the Constitution the next year to allow it.'
   ],
   legacy: [
@@ -98,8 +97,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Freedom of the press covers how much a newspaper prints and how widely it circulates.',
-    'A law that directly limits speech cannot be justified as a way of regulating trade.',
+    'Each freedom carries its own list of limits. The grounds in Article 19(6) for regulating trade cannot be used to limit speech.',
     'So a newspaper is first a voice and only then a business. A law that shrinks the voice must pass the test for speech.'
   ],
   legacy: [
@@ -149,8 +147,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A measure that directly limits speech is tested under Article 19(2), whatever its stated purpose.',
-    'Freedom of the press includes the freedom to decide the number of pages and to reach more readers.',
+    'Shareholders can claim their own Article 19 rights when a law hits the company they own.',
     'So the government cannot escape the test for speech by calling a measure an economic policy. The Court looks at what the measure does.'
   ],
   legacy: [

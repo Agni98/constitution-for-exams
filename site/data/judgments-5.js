@@ -61,8 +61,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Caste can be a starting point for identifying backward classes. The real test is social and educational backwardness.',
-    'Reservation has limits. The creamy layer is left out, and total reservation should normally stay within 50 per cent.',
     'Article 16(4) is not an exception to Article 16(1). Article 16(4) is a way of reaching the equality that Article 16(1) promises.',
     'So the Court accepted reservation for the backward classes, but fenced it in, so that it helps those who need it most and does not swallow equal opportunity.'
   ],
@@ -116,8 +114,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   principles: [
     'Article 15(5) only enables the State to make special measures in education for backward classes. The clause does not force it to.',
-    'The creamy layer rule applies to reservation for Other Backward Classes in education, as it does in government jobs.',
-    'So OBC reservation moved from jobs into higher education, with the same limit: the better-off among the OBCs do not get it.'
+    'So the creamy layer rule, first set for jobs in Indra Sawhney, now limits reservation in education too.'
   ],
   legacy: [
     'In Pramati Educational and Cultural Trust v. Union of India (2014), five judges upheld Article 15(5) for private unaided institutions as well.',
@@ -166,9 +163,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Economic weakness alone can be a ground for special provisions in education and government jobs.',
-    'The 50 per cent ceiling set in Indra Sawhney is not inflexible.',
-    'So reservation in India now has two bases. Social and educational backwardness remains one, and poverty among those without other reservation is now the second.'
+    'Equality lets the State give different groups different kinds of help. Leaving a group out of one scheme is fair when it already has its own.',
+    'So reservation in India now has two bases. Social and educational backwardness remains one, and poverty among those without other reservation is the second.'
   ],
   legacy: [
     'Economically weaker sections have up to 10 per cent reservation in central government jobs and central educational institutions.',

@@ -47,9 +47,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'In 1951 the Court held that the fundamental rights prevail over the Directive Principles when the two clash.',
-    'The State cannot share out seats in its colleges by religion or caste unless the Constitution clearly allows it.',
-    'So the Constitution of 1951 allowed reservation in jobs but not in education. Parliament closed that gap the same year.'
+    'A fundamental right gives way only to an exception written into the Constitution. A policy goal, however worthy, cannot create one.',
+    'So the Constitution of 1951 allowed reservation in jobs but not in education, and Parliament closed that gap the same year.'
   ],
   legacy: [
     'Parliament answered with the First Amendment in 1951. The amendment added Article 15(4), which allows special provisions for socially and educationally backward classes and for the Scheduled Castes and Scheduled Tribes.',
@@ -95,8 +94,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   principles: [
     'An amendment is tested by two questions. Does it widen a power so far that the limits on it disappear? Does it destroy the identity of the Constitution?',
-    'Reservation in promotion is a power of the State, not a duty.',
-    'Equality of opportunity stays protected by limits such as the 50 per cent ceiling and the exclusion of the creamy layer.',
     'So Parliament could allow reservation in promotion, but each State had to justify it with evidence before using it.'
   ],
   legacy: [
@@ -143,9 +140,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The Scheduled Castes and Scheduled Tribes do not have to prove their backwardness again. Their place on the President\'s lists shows it.',
-    'Reservation is meant to lift the whole class. Its benefits should not be taken only by the better-off few.',
-    'So the judgment removed one hurdle for the States and added one limit. Backwardness need no proof, but the creamy layer can be left out.'
+    'The creamy layer rule comes from equality itself, not from any one scheme. So the rule can reach every group that gets reservation.',
+    'So the judgment removed one hurdle for the States and added one limit. Backwardness needs no proof, but the creamy layer can be left out.'
   ],
   legacy: [
     'In January 2022, in a later judgment in the same case, the Court declined to fix a yardstick for inadequate representation. The Court left that to the States, to be judged cadre by cadre.',
@@ -192,9 +188,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Article 17 abolishes untouchability in every form. Article 17 applies to private persons as well as to the State.',
-    'Laws against social evils such as untouchability must be read to serve their purpose, not narrowly.',
-    'So a villager who keeps a Dalit away from a public well commits a crime, even though no government official is involved.'
+    'Some fundamental rights bind private persons, because the text says so. Articles 15(2), 17, 23 and 24 are the clearest examples.',
+    'So a villager who keeps a Dalit away from a public well commits a crime, even though no official is involved.'
   ],
   legacy: [
     'The case is often cited for the rule that Article 17 reaches private conduct.',
