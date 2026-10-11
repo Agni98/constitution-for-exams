@@ -74,9 +74,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Preventive detention is allowed, but only within the safeguards of Article 22 and a fair procedure under Article 21.',
-    'A vague ground of detention cannot be used unless the public is told in advance what conduct it covers.',
-    'Where Parliament has left the start date of an amendment to the government, the Court cannot fix that date.',
+    'A ground of detention must give fair warning. People must be able to know in advance what conduct can get them detained.',
     'So the Court made detention more humane, but it could not force the government to bring in the stronger safeguard that Parliament had already passed.'
   ],
   legacy: [
@@ -126,10 +124,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Forced labour includes work done out of economic need for less than the minimum wage.',
-    'Some fundamental rights, such as those in Articles 17, 23 and 24, bind private persons.',
-    'A person acting in good faith can bring a case for those who cannot reach the Court.',
-    'So a worker who accepts a low wage because he is hungry has not chosen freely. Paying him less than the minimum is forcing him.'
+    'Article 23 reaches beyond slavery and begar, to any work drawn out of a person by economic pressure.',
+    'So a worker who accepts a low wage because of hunger has not chosen freely. Paying less than the minimum is forcing the worker.'
   ],
   legacy: [
     'In Sanjit Roy v. State of Rajasthan (1983), the Court applied the same reasoning to famine relief work paid below the minimum wage.',
@@ -184,9 +180,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The right to life under Article 21 includes the right to live with human dignity, free from exploitation.',
-    'Forced labour is presumed to be bonded labour unless shown otherwise.',
-    'In public interest cases, the Court may use flexible procedures, such as acting on letters and appointing fact-finding commissions.',
+    'Directive Principles can give content to a fundamental right. The welfare goals in Part IV shape what dignity under Article 21 requires.',
     'So the burden shifted. A quarry owner who keeps workers in forced labour must prove that they are not bonded, instead of the workers proving that they are.'
   ],
   legacy: [
@@ -232,8 +226,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Article 25 protects the spreading of religion, not the conversion of others.',
-    'Laws against conversion by force, fraud or allurement are laws for public order, which the States can make.',
     'So a person may preach and explain a faith freely. But the State may punish conversions brought about by pressure, trickery or bribes.'
   ],
   legacy: [
@@ -281,9 +273,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Article 26 guarantees that a denomination keeps the rights it already had. Article 26 does not create new ones.',
-    'Courts may examine whether a practice is essential to a religion. Superstitious additions to a religion may not be protected.',
-    'So the Khadims kept their personal offerings and their religious role, but not the management of the shrine, which had never been theirs.'
+    'The essential practices test lets courts separate the core of a faith from later additions, and protect only the core.',
+    'So a denomination cannot use Article 26 to win control it never had.'
   ],
   legacy: [
     'Its warning about superstitious practices is often cited with Shirur Mutt (1954) when courts apply the essential religious practices test.'

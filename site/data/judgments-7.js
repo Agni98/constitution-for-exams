@@ -247,8 +247,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Where the law is silent, courts can use international conventions to fill in the content of fundamental rights.',
-    'The right to work with dignity is part of Articles 19(1)(g) and 21.',
+    'When the legislature is silent on a fundamental right, the Court can lay down binding guidelines under Article 32 that last until Parliament acts.',
     'So the Court did not wait for Parliament. The Court wrote rules that bound every workplace until Parliament acted, sixteen years later.'
   ],
   legacy: [
@@ -294,8 +293,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Dignity at the end of life is part of the right to life.',
-    'A competent adult can refuse medical treatment, including in advance.',
+    'The right to refuse treatment comes from a person\'s autonomy over their own body. Doctors must respect it even when the refusal will lead to death.',
     'So a person may choose not to be kept alive by machines. But no one may act to end another person\'s life.'
   ],
   legacy: [
@@ -338,8 +336,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The State cannot make a person\'s sexual orientation, or consensual private conduct, a crime.',
-    'Fundamental rights do not depend on the approval of the majority.',
+    'Discrimination because of sexual orientation is discrimination because of sex under Article 15.',
     'So a right protects a minority even when most people disapprove. The Constitution\'s values decide, not a vote.'
   ],
   legacy: [
@@ -388,8 +385,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Arrest and detention must follow basic safeguards that protect dignity and prevent torture.',
-    'Compensation is a remedy in public law for the breach of fundamental rights.',
+    'Compensation for breaking a fundamental right comes in addition to the ordinary remedies. A victim may still sue for damages in the ordinary courts.',
     'So every arrest must leave a record: who arrested whom, when, where, and in what condition. Torture becomes harder to hide.'
   ],
   legacy: [
@@ -436,9 +432,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Absolute liability means that a business carrying on a hazardous activity bears the full cost of the harm it causes, with no excuses.',
-    'Larger and richer businesses must pay larger compensation.',
-    'So the English rule of strict liability, with its exceptions, was not enough for India. A dangerous industry pays for every accident it causes.'
+    'Indian courts may make new rules of liability to suit Indian conditions, instead of following English law.',
+    'So a dangerous industry pays for every accident it causes. Unlike strict liability, absolute liability allows no excuse such as an act of God.'
   ],
   legacy: [
     'Parliament passed the Public Liability Insurance Act, 1991, which requires insurance for hazardous activities.',
