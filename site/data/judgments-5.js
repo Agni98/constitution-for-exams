@@ -166,8 +166,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So reservation in India now has two bases. Social and educational backwardness remains one, and poverty among those without other reservation is the second.'
   ],
   legacy: [
-    'Economically weaker sections have up to 10 per cent reservation in central government jobs and central educational institutions.',
-    'With the EWS quota added, the total reserved share in central institutions is now above 50 per cent.'
+    'Since the judgment, reservation in central jobs and central institutions has stood at 59.5 per cent in all. The shares are 15 per cent for Scheduled Castes, 7.5 for Scheduled Tribes, 27 for Other Backward Classes and 10 for economically weaker sections.'
   ],
   source: 'https://indiankanoon.org/doc/98959833/'
 }

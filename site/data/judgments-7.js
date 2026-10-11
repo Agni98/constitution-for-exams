@@ -111,7 +111,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So after 1978 the question is not only whether a law allows the State to take away liberty. The question is also whether the law and its procedure are fair.'
   ],
   legacy: [
-    'Almost every later widening of Article 21 builds on this judgment, including the rights to a speedy trial, legal aid, livelihood, a clean environment and privacy.'
+    'Later judgments read many rights into Article 21 on this footing, among them a speedy trial (Hussainara Khatoon, 1979), livelihood (Olga Tellis, 1985) and privacy (Puttaswamy, 2017).'
   ],
   source: 'https://indiankanoon.org/doc/1766147/'
 },
@@ -205,7 +205,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the pavement dwellers had no right to stay on the pavement for ever. But the State could not throw them out without notice, a hearing and a thought for where they would go.'
   ],
   legacy: [
-    'Later cases on slum clearance, street vending and rehabilitation build on the right to livelihood recognised here.',
     'In Sodan Singh v. New Delhi Municipal Committee (1989), the Court held that street vending is a trade protected by Article 19(1)(g), subject to reasonable regulation.'
   ],
   source: 'https://indiankanoon.org/doc/709776/'

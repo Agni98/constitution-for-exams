@@ -89,7 +89,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   legacy: [
     'In 2018 the Court relied on this judgment twice. In Navtej Singh Johar it decriminalised consensual same-sex relations, and in Joseph Shine it decriminalised adultery.',
     'In September 2018 a bench of five judges ruled on Aadhaar itself, in Puttaswamy (Aadhaar). The bench applied the privacy tests, upheld the scheme, and struck down some parts of the Aadhaar law.',
-    'Justice D.Y. Chandrachud\'s opinion overruled ADM Jabalpur. His father, Justice Y.V. Chandrachud, had been one of the four majority judges in that case.',
     'The judgment shaped the debate on data protection that led to the Digital Personal Data Protection Act, 2023.'
   ],
   source: 'https://indiankanoon.org/doc/91938676/'
@@ -143,7 +142,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'The 44th Amendment (1978) changed Article 359. Since 20 June 1979, a Presidential Order cannot suspend the enforcement of Articles 20 and 21, even during an Emergency.',
     'In January 1977 Justice Khanna was passed over for Chief Justice of India. Justice M.H. Beg was appointed instead, and Justice Khanna resigned.',
     'In 2011 Justice P.N. Bhagwati, one of the majority judges, said the decision was wrong and apologised for it.',
-    'In Puttaswamy (2017), Justice D.Y. Chandrachud\'s opinion for four judges called the majority opinions "seriously flawed" and overruled ADM Jabalpur.'
+    'In Puttaswamy (2017), Justice D.Y. Chandrachud\'s opinion for four judges called the majority opinions "seriously flawed" and overruled ADM Jabalpur. His father, Justice Y.V. Chandrachud, had been one of the four majority judges in ADM Jabalpur.'
   ],
   source: 'https://indiankanoon.org/doc/1735815/'
 },
@@ -248,8 +247,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   legacy: [
     'In November 2015 the Court heard suggestions on how to improve the collegium system.',
     'On 16 December 2015 the Court said the Government of India could add to the Memorandum of Procedure, the document that sets out how appointments are processed, in consultation with the Chief Justice of India. The Court named eligibility criteria, transparency, a secretariat and a way to deal with complaints.',
-    'The collegium still decides appointments to the Supreme Court and the High Courts.',
-    'Articles 124A, 124B and 124C are still printed in the official text of the Constitution. Because of this judgment, they have no effect.'
+    'Articles 124A, 124B and 124C are still printed in the official text of the Constitution, though they have had no effect since 2015.'
   ],
   source: 'https://indiankanoon.org/doc/66970168/'
 }

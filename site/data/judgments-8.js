@@ -127,8 +127,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So a worker who accepts a low wage because of hunger has not chosen freely. Paying less than the minimum is forcing the worker.'
   ],
   legacy: [
-    'In Sanjit Roy v. State of Rajasthan (1983), the Court applied the same reasoning to famine relief work paid below the minimum wage.',
-    'The case is a leading authority on public interest litigation and on the reach of Article 23.'
+    'In Sanjit Roy v. State of Rajasthan (1983), the Court applied the same reasoning to famine relief work paid below the minimum wage.'
   ],
   source: 'https://indiankanoon.org/doc/496663/'
 },
@@ -227,7 +226,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So a person may preach and explain a faith freely. But the State may punish conversions brought about by pressure, trickery or bribes.'
   ],
   legacy: [
-    'Several other States have since passed laws against conversion by force, fraud or allurement. Their validity rests on this judgment.'
+    'Other States have since passed similar laws, among them Gujarat (2003), Uttar Pradesh (2021) and Karnataka (2022).'
   ],
   source: 'https://indiankanoon.org/doc/1308071/'
 },

@@ -207,7 +207,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the Supreme Court keeps itself for grave injustice and important questions, not for a third trial of the facts.'
   ],
   legacy: [
-    'The standard set here is still cited when the Court decides whether to grant special leave.'
+
   ],
   source: 'https://indiankanoon.org/doc/743851/'
 },

@@ -63,7 +63,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So a Governor cannot take sides in a party\'s internal revolt by changing the Assembly\'s calendar. The elected government decides when the House meets.'
   ],
   legacy: [
-    'The judgment restored the earlier government of Chief Minister Nabam Tuki.',
+    'Nabam Tuki returned as Chief Minister in July 2016, but within days Pema Khandu replaced him as leader of the Congress legislators and became Chief Minister.',
     'In Subhash Desai v. Principal Secretary, Governor of Maharashtra (2023), five judges sent to a larger bench the view in this case that a Speaker facing a notice for removal cannot decide disqualification petitions.'
   ],
   source: 'https://indiankanoon.org/doc/192490620/'

@@ -199,7 +199,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the Commission may act quickly to save an election, but it must still act fairly, and it must stand by the reasons it gave at the time.'
   ],
   legacy: [
-    'The rule that an order must stand or fall on the reasons written in it is widely applied in administrative law.'
+
   ],
   source: 'https://indiankanoon.org/doc/1831036/'
 },

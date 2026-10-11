@@ -64,7 +64,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the result was strange. The member who took the money and voted as paid was safe, while the member who took the money and stayed away was not.'
   ],
   legacy: [
-    'The ruling was widely criticised for that reason.',
     'In Sita Soren v. Union of India (2024), seven judges unanimously overruled this judgment and held that bribery is not protected by parliamentary privilege.'
   ],
   source: 'https://indiankanoon.org/doc/1301360/'

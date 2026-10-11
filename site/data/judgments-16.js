@@ -113,7 +113,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the Ninth Schedule is no longer a safe for any law Parliament chooses. A law put there after 1973 must still respect the core of equality, freedom and life.'
   ],
   legacy: [
-    'The judgment confirmed the date of 24 April 1973 used in Waman Rao (1980), and extended basic structure review to the contents of laws in the Ninth Schedule.'
+
   ],
   source: 'https://indiankanoon.org/doc/322504/'
 },
@@ -399,7 +399,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So a Speaker cannot protect a defector simply by sitting on the petition. Silence is treated as a failure the courts can fix.'
   ],
   legacy: [
-    'The judgment is relied on whenever Speakers delay decisions on disqualification petitions.'
+
   ],
   source: 'https://indiankanoon.org/doc/102050163/'
 }

@@ -97,7 +97,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So Parliament could allow reservation in promotion, but each State had to justify it with evidence before using it.'
   ],
   legacy: [
-    'The demand for quantifiable data held up promotions in many States for years.',
     'In Jarnail Singh (2018), five judges held that the State need not collect data to show the backwardness of the Scheduled Castes and Scheduled Tribes. The other conditions remain.',
     'In B.K. Pavitra II (2019), the Court upheld a Karnataka law on consequential seniority, after the State collected data on representation and efficiency.'
   ],

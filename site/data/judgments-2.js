@@ -111,7 +111,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the test looks at who really runs the body, not at the form on its papers.'
   ],
   legacy: [
-    'The case is now the leading test for deciding whether a body is "the State" under Article 12.',
     'In Zee Telefilms (2005), five judges applied the test and held that the BCCI is not "the State".'
   ],
   source: 'https://indiankanoon.org/doc/471272/'
@@ -396,8 +395,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So a court cuts away only the bad part of a law, as long as what remains is still the law the legislature meant to make.'
   ],
   legacy: [
-    'The Chamarbaugwalla rules are still the standard statement of severability in India.',
-    'Courts use them to strike down only the offending part of a law under Article 13 and keep the rest.'
+
   ],
   source: 'https://indiankanoon.org/doc/725224/'
 }

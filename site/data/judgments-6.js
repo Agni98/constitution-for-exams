@@ -376,8 +376,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So a person can lose smuggled goods to the customs and still face a criminal trial for the smuggling.'
   ],
   legacy: [
-    'In Thomas Dana v. State of Punjab (1959), the Court held that Article 20(2) applies only where both proceedings are for the same offence.',
-    'Because of these rules, a person can face both a departmental penalty and a criminal trial for the same conduct.'
+    'In Thomas Dana v. State of Punjab (1959), the Court held that Article 20(2) applies only where both proceedings are for the same offence.'
   ],
   source: 'https://indiankanoon.org/doc/1815080/'
 },

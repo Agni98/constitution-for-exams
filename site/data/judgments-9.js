@@ -217,7 +217,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the State can still use Article 31C to protect laws that share out resources. But it cannot treat every private flat or factory as community property just by saying so.'
   ],
   legacy: [
-    'The judgment ends the broad reading of Article 39(b) followed since Sanjeev Coke. The judgment narrows the use of Articles 39(b) and 31C to protect laws that take over private property.'
+
   ],
   source: 'https://indiankanoon.org/doc/114205571/'
 },
@@ -317,7 +317,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So Quareshi\'s rule of 1958 gave way. A State may now protect all cattle, useful or not, without breaking the right to trade.'
   ],
   legacy: [
-    'Several States have since passed or tightened laws against cattle slaughter, relying on this judgment.'
+    'In 2015 Maharashtra and Haryana passed laws that extended their bans to bulls and bullocks.'
   ],
   source: 'https://indiankanoon.org/doc/101278772/'
 },

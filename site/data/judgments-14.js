@@ -191,7 +191,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So GST did not make the States give up their power to tax. Each legislature keeps the final say over its own GST law.'
   ],
   legacy: [
-    'The judgment is a leading statement on the sharing of financial powers under GST.'
+
   ],
   source: 'https://indiankanoon.org/doc/98511521/'
 },
@@ -481,7 +481,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the State cannot simply write its own name into the property records. The State must follow every step, from notice to a final decision.'
   ],
   legacy: [
-    'Courts now test compulsory acquisitions of private property against these seven rights.'
+
   ],
   source: 'https://indiankanoon.org/doc/11565482/'
 }

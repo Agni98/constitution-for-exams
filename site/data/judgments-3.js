@@ -111,7 +111,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So a law may single out even one company, as long as a real difference sets it apart and the difference serves the law\'s purpose.'
   ],
   legacy: [
-    'The two-part test of a clear difference and a rational link is still applied in almost every Article 14 case.',
     'From E.P. Royappa (1973) onwards, the Court added a second test under Article 14. State action must not be arbitrary.'
   ],
   source: 'https://indiankanoon.org/doc/685234/'
