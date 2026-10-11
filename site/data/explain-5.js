@@ -86,9 +86,9 @@ partX: {
     "\"Population\" means the last census whose figures have been published. So panchayat seats follow the latest census, while Lok Sabha seats between States stay frozen on 1971 figures."
 },
 "243A": {
-  simple: "The Gram Sabha is the village electorate meeting as a body. It may exercise such powers and perform such functions at village level as the State legislature provides by law.",
-  catch: "The Constitution creates the Gram Sabha and then gives it nothing.\n\n" +
-    "Every one of its powers depends on State law, which is why its real strength varies so much between States. PESA, 1996 gives it considerably more in Fifth Schedule areas."
+  simple: "The Gram Sabha is the village's voters meeting as one body. The Gram Sabha may use the powers and do the work at village level that the State legislature gives it by law.",
+  catch: "The Constitution creates the Gram Sabha and then gives it nothing. Every power it has comes from State law, so its real strength varies a great deal between States.\n\n" +
+    "PESA, 1996 gives the Gram Sabha far more power in Fifth Schedule areas."
 },
 "243B": {
   simple: "Every State shall have panchayats at the village, intermediate and district levels. A State with a population under twenty lakh need not have the intermediate level.",
@@ -108,15 +108,15 @@ partX: {
     "The States may also reserve seats for backward classes, but need not. In K. Krishna Murthy (2010) the Court held that reservation for Scheduled Castes, Scheduled Tribes and backward classes together should not exceed fifty per cent."
 },
 "243E": {
-  simple: "A panchayat lasts five years from the date of its first meeting and no longer.\n\n" +
-    "Elections must be completed before the term expires, or within six months of dissolution. A panchayat constituted after premature dissolution serves only the remainder of the term.",
-  catch: "The six-month rule answers the old practice of leaving local bodies under an administrator indefinitely.\n\n" +
-    "If the remainder of a dissolved panchayat's term is under six months, no election need be held at all."
+  simple: "A panchayat lasts five years from its first meeting, and no longer.\n\n" +
+    "Elections must be completed before the term ends, or within six months of an early dissolution. A panchayat elected after an early dissolution serves only the rest of the term.",
+  catch: "The six-month rule was written to end the old practice of leaving local bodies under an administrator for years.\n\n" +
+    "If less than six months of a dissolved panchayat's term remain, no election is needed at all."
 },
 "243F": {
-  simple: "A person is disqualified from a panchayat if disqualified under any law for elections to the State legislature, or under any law the State makes.\n\n" +
-    "No one may be disqualified for being under twenty-five if he has turned twenty-one.",
-  catch: "The age floor for a panchayat member is twenty-one, not twenty-five. It is a deliberate opening to younger candidates."
+  simple: "A person is disqualified from a panchayat if disqualified under any law for elections to the State legislature, or under any law the State makes for panchayats.\n\n" +
+    "But nobody aged twenty-one or more may be disqualified for being under twenty-five.",
+  catch: "So the minimum age for a panchayat member is twenty-one, not twenty-five. The lower age deliberately opens local politics to younger candidates."
 },
 "243G": {
   simple: "The State legislature may give panchayats the powers they need to work as institutions of self-government.\n\n" +
@@ -125,19 +125,19 @@ partX: {
     "So devolution is uneven. Real devolution needs functions, funds and functionaries, and most States transferred functions on paper without the money or staff. Kerala and Karnataka are the usual exceptions."
 },
 "243H": {
-  simple: "The State legislature may authorise a panchayat to levy, collect and appropriate taxes, duties, tolls and fees. It may also assign it State revenues and provide grants-in-aid from the Consolidated Fund of the State.",
-  catch: "Permissive again.\n\n" +
-    "Without own revenue, and with limited assigned revenue, most panchayats depend on tied grants. That is what the State Finance Commission in the next article is supposed to address."
+  simple: "The State legislature may let a panchayat levy, collect and keep taxes, duties, tolls and fees. The legislature may also hand it a share of State revenue, and give it grants from the State's Consolidated Fund.",
+  catch: "The word is \"may\" again. Few panchayats raise much of their own money, and few receive much State revenue, so most depend on grants tied to set purposes.\n\n" +
+    "The State Finance Commission under Article 243-I is meant to fix that."
 },
 "243-I": {
-  simple: "The Governor shall constitute a Finance Commission every five years, to review the financial position of the panchayats.\n\n" +
-    "It recommends how State taxes should be shared with them, what taxes they may levy, and what grants-in-aid they should receive.",
-  catch: "'Shall constitute' is mandatory, and the recommendations must be laid before the legislature with an action-taken memorandum.\n\n" +
-    "They are not binding, exactly like the Union Finance Commission's under Article 280."
+  simple: "The Governor shall set up a Finance Commission every five years, to review the finances of the panchayats.\n\n" +
+    "The Commission recommends how State taxes should be shared with the panchayats, which taxes they may levy, and what grants they should receive.",
+  catch: "Setting up the Commission is compulsory. Its recommendations must be laid before the legislature, with a note on the action taken.\n\n" +
+    "But the recommendations do not bind the State, just as the Union Finance Commission's do not under Article 280."
 },
 "243J": {
-  simple: "The State legislature may make provision for the maintenance of panchayat accounts and their audit.",
-  catch: "Permissive, not mandatory, and the weakest link in the chain. Audit arrangements vary enormously, and the CAG has no constitutional role here at all."
+  simple: "The State legislature may provide for keeping and auditing panchayat accounts.",
+  catch: "The rule is optional, and the weakest link in the chain. Audit arrangements vary widely between States, and the CAG has no role here under the Constitution."
 },
 "243K": {
   simple: "A State Election Commission controls panchayat elections and the preparation of their electoral rolls. The Governor appoints the State Election Commissioner.\n\n" +
@@ -146,8 +146,8 @@ partX: {
     "Kishan Singh Tomar (2006) insisted on that independence. A State cannot delay local elections for its own convenience."
 },
 "243L": {
-  simple: "This Part applies to Union territories, subject to any modifications the President directs.",
-  catch: "The President's power to modify is unlimited in terms. Local government in a Union territory is whatever the Union decides it should be."
+  simple: "Part IX applies to the Union territories, with any changes the President directs.",
+  catch: "The text puts no limit on the President's power to make changes. So local government in a Union territory is whatever the Union decides."
 },
 "243M": {
   simple: "Part IX does not apply to the Scheduled Areas and tribal areas, to Nagaland, Meghalaya and Mizoram, or to the hill areas of Manipur that have District Councils. In the Darjeeling hills, only the district-level provisions are left out.\n\n" +
@@ -156,21 +156,21 @@ partX: {
     "Parliament later used the escape clause in PESA, 1996. The Act extends Part IX to Fifth Schedule areas with major changes, and gives the Gram Sabha far more power than elsewhere. The Gram Sabha approves plans, is consulted on land acquisition, and controls minor forest produce."
 },
 "243N": {
-  simple: "Existing State laws inconsistent with this Part continue for one year from the commencement of the 73rd Amendment, or until amended, whichever is earlier.\n\n" +
-    "Existing panchayats continue for their term unless dissolved sooner by a resolution of the State Assembly.",
-  catch: "The one-year window in 1993 and 1994 is why every State had to rewrite its Panchayati Raj Act at once."
+  simple: "State laws that clashed with Part IX could continue for one year after the 73rd Amendment came into force, or until amended, if sooner.\n\n" +
+    "Existing panchayats could serve out their terms, unless the State Assembly dissolved them earlier by resolution.",
+  catch: "The one-year window, from April 1993, is why every State had to rewrite its Panchayati Raj law at the same time."
 },
 "243-O": {
-  simple: "No court may question the validity of a delimitation or allotment of seats made under this Part. A panchayat election may be challenged only by an election petition presented as State law provides.",
-  catch: "An election, once begun, cannot be stopped by a writ petition. The challenge has to wait for the election petition afterwards.\n\n" +
-    "The bar does not oust judicial review of a failure to hold elections at all."
+  simple: "No court may question the drawing of panchayat constituencies or the sharing of seats under Part IX. A panchayat election may be challenged only by an election petition under State law.",
+  catch: "So once an election has begun, a writ petition cannot stop it. The challenge must wait for an election petition afterwards.\n\n" +
+    "But the bar does not stop courts from acting when a State fails to hold elections at all."
 },
 
 /* ---------- Part IXA: the Municipalities ---------- */
 
 "243P": {
-  simple: "Article 243P defines the terms used in this Part: Committee, district, Metropolitan area, Municipal area, Municipality, panchayat and population.",
-  catch: "A 'Metropolitan area' means an area with at least ten lakh people, comprising one or more districts and two or more municipalities or panchayats. It is the trigger for the Metropolitan Planning Committee under Article 243ZE."
+  simple: "Article 243P defines the terms used in Part IXA, including committee, district, metropolitan area, municipal area, municipality, panchayat and population.",
+  catch: "A metropolitan area has at least ten lakh people, spread over one or more districts and two or more municipalities or panchayats. Every metropolitan area must have a Metropolitan Planning Committee under Article 243ZE."
 },
 "243Q": {
   simple: "Every State shall set up three kinds of urban body. A Nagar Panchayat serves an area changing from rural to urban, a Municipal Council a smaller urban area, and a Municipal Corporation a larger one.",
@@ -178,27 +178,27 @@ partX: {
     "The Governor may also decide not to set up a municipality where an industrial establishment provides the municipal services. So some company towns stay outside elected municipal government."
 },
 "243R": {
-  simple: "All seats in a Municipality are filled by direct election from wards.\n\n" +
-    "The State legislature may also provide for representation of people with special knowledge, of MPs and MLAs, and of chairpersons of ward committees.",
-  catch: "Nominated members with special knowledge expressly have no right to vote in municipal meetings."
+  simple: "All seats in a municipality are filled by direct election from wards.\n\n" +
+    "The State legislature may also give seats to people with special knowledge, to the area's MPs and MLAs, and to the chairpersons of ward committees.",
+  catch: "The members chosen for special knowledge have no vote in municipal meetings. The Constitution says so expressly."
 },
 "243S": {
-  simple: "Ward committees are compulsory in a Municipality with a population of three lakh or more. The State legislature decides their composition and how chairpersons are chosen.",
-  catch: "This is the one piece of genuinely sub-municipal democracy in the Constitution, and among the least implemented."
+  simple: "A municipality with three lakh people or more must have ward committees. The State legislature decides how they are made up and how their chairpersons are chosen.",
+  catch: "Ward committees are the Constitution's one real piece of democracy below the level of the municipality. They are also among the least implemented parts of it."
 },
 "243T": {
-  simple: "Seats are reserved for Scheduled Castes and Scheduled Tribes in proportion to population, with at least one-third of those reserved seats and at least one-third of all seats going to women.\n\n" +
-    "The State legislature may also reserve seats for backward classes. Chairperson posts are reserved as the legislature provides.",
-  catch: "Reservation for backward classes in urban bodies is at the State's option, unlike SC and ST reservation, which is mandatory.\n\n" +
-    "Vikas Kishanrao Gawali (2021) required the triple test before OBC reservation in local bodies."
+  simple: "Seats in every municipality are reserved for Scheduled Castes and Scheduled Tribes, in proportion to their population. At least one-third of all seats, counting the reserved ones, go to women.\n\n" +
+    "The State legislature may also reserve seats for backward classes, and decides how chairperson posts are reserved.",
+  catch: "Reservation for backward classes in urban bodies is optional for the State. Reservation for Scheduled Castes and Scheduled Tribes is compulsory.\n\n" +
+    "In Vikas Kishanrao Gawali (2021) the Supreme Court required a \"triple test\" before any reservation for backward classes in local bodies."
 },
 "243U": {
-  simple: "A Municipality lasts five years from its first meeting. Elections must be completed before expiry, or within six months of dissolution. A body constituted after premature dissolution serves only the remainder of the term.",
-  catch: "This is the same six-month rule as for panchayats, and it has been broken as often. The Supreme Court addressed the point again in Suresh Mahajan (2022)."
+  simple: "A municipality lasts five years from its first meeting. Elections must be completed before the term ends, or within six months of an early dissolution. A municipality elected after an early dissolution serves only the rest of the term.",
+  catch: "The six-month rule is the same as for panchayats, and States have broken it just as often. The Supreme Court took up the problem again in Suresh Mahajan (2022)."
 },
 "243V": {
-  simple: "The disqualifications for municipal membership follow the same scheme as Article 243F.",
-  catch: "The age floor is twenty-one, as with panchayats, not the twenty-five required for a State Assembly."
+  simple: "The disqualifications for membership of a municipality follow the same pattern as for panchayats under Article 243F.",
+  catch: "So the minimum age is twenty-one, as for panchayats, not the twenty-five needed for a State Assembly."
 },
 "243W": {
   simple: "The State legislature may give municipalities the powers they need to work as institutions of self-government, including on the 18 subjects in the Twelfth Schedule. The State may give committees, such as ward committees, powers too.",
@@ -206,15 +206,15 @@ partX: {
     "Cities raise revenue that States are slow to give up. Bodies such as development authorities and water boards often hold the real powers. So Indian cities have elected mayors with little executive power, and a State-appointed Municipal Commissioner runs the administration."
 },
 "243X": {
-  simple: "The State legislature may authorise a Municipality to levy, collect and appropriate taxes, duties, tolls and fees. It may also assign it State revenues and provide grants-in-aid.",
-  catch: "Municipal finance depends on this power actually being exercised. Where a State has not authorised property tax reform, the city has almost no elastic revenue of its own."
+  simple: "The State legislature may let a municipality levy, collect and keep taxes, duties, tolls and fees. The legislature may also hand it a share of State revenue, and give it grants.",
+  catch: "Municipal finance depends on the State actually using this power. Where a State has given a city few taxes of its own, the city has little revenue that grows with it."
 },
 "243Y": {
-  simple: "The Finance Commission constituted under Article 243-I shall also review the financial position of Municipalities and make recommendations about them.",
-  catch: "One State Finance Commission does both rural and urban bodies. Its report is a single document covering panchayats and municipalities together."
+  simple: "The Finance Commission set up under Article 243-I also reviews the finances of the municipalities and makes recommendations on them.",
+  catch: "So one State Finance Commission covers both rural and urban bodies, in a single report."
 },
 "243Z": {
-  simple: "The State legislature may make provision for the maintenance and audit of municipal accounts."
+  simple: "The State legislature may provide for keeping and auditing municipal accounts."
 },
 "243ZA": {
   simple: "Superintendence, direction and control of municipal elections vest in the same State Election Commission set up under Article 243K."
