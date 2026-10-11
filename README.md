@@ -160,10 +160,17 @@ in the structure rather than in any article's text.
 
 Part-level entries are keyed `partIII`, schedule-level ones `schVII`.
 
-**House style.** Short declarative sentences, one idea each. Say the thing plainly before
-qualifying it. Break into paragraphs where the ideas are distinct — a `\n\n` inside the string
-becomes a paragraph on the page. Avoid stacking clauses behind em-dashes; if a sentence needs
-three of them, it is two sentences.
+The three fields render as What it says, How it works and Worth knowing.
+
+**Each thing is said once.** `simple` gives the plain meaning. `catch` tells the story: the
+exception, the amendment or the line of cases that changes how the article works. It is told
+here and nowhere else. `note` holds only what neither of the others nor the exam note carries,
+and is left out when nothing is left. Most of the 159 priority provisions have no `note`.
+
+**House style.** Short declarative sentences, none over 35 words, one idea each. No semicolons
+or dashes, and no sentence that opens with a bare This, That, It, These, Those or Such. Say the
+thing plainly before qualifying it, signpost a contrast with "But", and end each section on its
+central point. A `\n\n` inside the string becomes a paragraph on the page.
 
 ## Editing the landmark judgments
 
@@ -231,8 +238,8 @@ no URL yet still renders, as plain text rather than a dead link.
 ## Editing what the examiners ask
 
 `site/data/exam-1.js` … `exam-4.js`, keyed by article number, or `preamble`, or `schX`. One
-entry per key. It renders directly below the landmark judgments on the article page, and the
-same note opens as a panel when you click a row at `#/exam`:
+entry per key. It renders in the Explain tab under **For the exam**, after the explanation.
+Clicking a row at `#/exam` opens the same reading as a panel, explanation first:
 
 ```js
 "356": {
@@ -249,10 +256,10 @@ otherwise\" mean the centre does not need a Governor's report at all." },
 },
 ```
 
-**House style for `concepts`.** `t` is the point, three to seven words. `d` explains it in one
-or two sentences. Write it out — no shorthand, no bare fragments, and assume the reader knows
-no law and has not read the article yet. A concept that reads as a label rather than an
-explanation is the thing this section exists to avoid.
+**House style for `concepts`.** `t` is the point, three to seven words. `d` gives the testable
+fact in one or two short sentences. The story behind it belongs in the explanation's `catch`,
+so a point does not retell it, and a point that only repeats What it says is dropped. `why`
+gives the exam angle, not the story. The same writing rules apply as for the explanations.
 
 `\n\n` inside `why` or `trap` becomes a paragraph break. `*stress*` marks the single word a
 question turns on — “only”, “or otherwise”, “total membership” — and renders as coloured
