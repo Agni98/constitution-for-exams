@@ -314,12 +314,10 @@ partXVIII: {
 /* ---------- Part XVIII: Emergency ---------- */
 
 "352": {
-  simple: "The President may proclaim an emergency if satisfied that the security of India, or any part of it, is threatened by war, external aggression or armed rebellion, or by the imminent danger of them.\n\n" +
-    "The Proclamation must be approved by both Houses within one month, each by a majority of total membership and two-thirds of those present and voting. It then lasts six months at a time.",
-  catch: "Almost everything protective here is 44th Amendment work.\n\n" +
-    "Before 1978 the ground was 'internal disturbance', a simple majority sufficed, and there was no maximum period.\n\n" +
-    "Now the ground is 'armed rebellion', the majority is special, the Cabinet's recommendation must be in writing, and one-tenth of the Lok Sabha's members can force a special sitting to pass a simple-majority resolution disapproving it.",
-  note: "Declared three times: in 1962 against China, in 1971 against Pakistan, and in 1975 on the ground of internal disturbance. The third is the reason for everything in the paragraph above."
+  simple: "The President may declare a national emergency if satisfied that war, external aggression or armed rebellion threatens the security of India or any part of it. An imminent danger is enough.\n\n" +
+    "The Cabinet must recommend the emergency in writing. Both Houses must approve it within one month, by a special majority, and it then lasts six months at a time.",
+  catch: "Almost every safeguard here was added by the 44th Amendment (1978), after the 1975 Emergency. Before 1978 the third ground was \"internal disturbance\". A simple majority approved the emergency within two months, and once approved it had no time limit.\n\n" +
+    "Now the ground is the narrower \"armed rebellion\". The majority is special, and the Cabinet must advise in writing. And one-tenth of the Lok Sabha's members can force a special sitting, where a simple majority can end the emergency."
 },
 "353": {
   simple: "While a Proclamation of Emergency is in operation, the Union's executive power extends to giving a State any direction it thinks fit. Parliament's legislative power extends to State List matters, including conferring powers and duties on the Union and its officers.",
@@ -331,43 +329,41 @@ partXVIII: {
   catch: "The Union can therefore redirect the States' share of taxes to itself during an emergency. Every such order must be laid before both Houses."
 },
 "355": {
-  simple: "It is the duty of the Union to protect every State against external aggression and internal disturbance, and to ensure that every State's government is carried on in accordance with the Constitution.",
-  catch: "This is a duty, not a power. It is nevertheless often cited as the justification for central intervention.\n\n" +
-    "Sarbananda Sonowal (2005) treated it as imposing a positive obligation. Naga People's Movement (1998) used it to uphold the deployment of armed forces in a State."
+  simple: "The Union has a duty to protect every State against external aggression and internal disturbance. The Union must also make sure that every State is governed according to the Constitution.",
+  catch: "The States have no defence of their own and cannot leave the Union. In return, the Union owes them protection.\n\n" +
+    "The second duty is the constitutional basis for intervening under Articles 356 and 365. But because Article 355 sets a duty, courts read it to require a proportionate response. Sending central forces into a State, for example, does not need President's rule."
 },
 "356": {
-  simple: "If the President is satisfied that a State's government cannot be carried on in accordance with the Constitution, he may act. He does so on a Governor's report or otherwise.\n\n" +
-    "He may assume the State executive's functions, declare that Parliament shall exercise the State legislature's powers, and suspend any constitutional provision relating to any State body. The High Court's powers are excepted.",
-  catch: "This is the most abused article in the Constitution. It has been used more than 120 times, often to dismiss opposition State governments.\n\n" +
-    "S.R. Bommai (1994) changed that. The Proclamation is subject to judicial review. The material must be relevant. A ministry's majority must be tested on the floor of the House, not judged in Raj Bhavan. And an Assembly cannot be dissolved before Parliament approves the Proclamation.",
-  note: "Approval needs only a simple majority of both Houses, within two months. It runs six months at a time, up to three years — and beyond one year only if a national emergency is in force and the Election Commission certifies that elections cannot be held."
+  simple: "If the President is satisfied that a State's government cannot be carried on according to the Constitution, the President may take it over. The President may act on the Governor's report, or otherwise.\n\n" +
+    "The President may take over the State executive's powers, and let Parliament exercise the State legislature's powers. The High Court's powers cannot be touched.",
+  catch: "Article 356 was used more than 120 times, often to dismiss opposition State governments. S.R. Bommai (1994) changed that.\n\n" +
+    "After Bommai, the proclamation is open to judicial review, and the material behind it must be relevant. A ministry's majority must be tested on the floor of the House, not judged by the Governor. The Assembly cannot be dissolved before Parliament approves the proclamation. And if the proclamation is struck down, the dismissed government returns."
 },
 "357": {
   simple: "When Parliament takes over a State legislature's powers under Article 356, it may confer them on the President and authorise him to delegate them. It may also sanction expenditure from the State's Consolidated Fund pending parliamentary approval.",
   catch: "This is how a State is actually governed during President's Rule: by presidential order, with the State budget passed by Parliament."
 },
 "358": {
-  simple: "While a Proclamation of Emergency on the ground of war or external aggression is in operation, Article 19 is suspended.\n\n" +
-    "The State may make any law or take any executive action it would otherwise be barred from taking. Such laws cease to have effect when the Proclamation ends.",
-  catch: "The 44th Amendment narrowed this in two ways. It no longer applies to an armed-rebellion emergency, and it protects only laws that recite that they relate to the emergency.\n\n" +
-    "Before 1978 the whole of Article 19 fell away in any emergency, automatically."
+  simple: "During a national emergency declared on the ground of war or external aggression, Article 19 is suspended. The State may make laws or take action that Article 19 would otherwise forbid.\n\n" +
+    "When the emergency ends, Article 19 revives. Laws made under the suspension stop working to the extent they conflict with it, but acts already done stay valid.",
+  catch: "The suspension is automatic. No presidential order is needed, and only Article 19 is affected.\n\n" +
+    "The 44th Amendment (1978) narrowed it in two ways. Article 358 no longer applies to an emergency declared for armed rebellion. And only laws that state they relate to the emergency are protected. Before 1978, Article 19 fell away in any emergency."
 },
 "359": {
-  simple: "The President may by order suspend the right to move any court for the enforcement of specified fundamental rights during an emergency, for the period he specifies. Every such order must be laid before both Houses.",
-  catch: "Articles 20 and 21 are expressly excluded.\n\n" +
-    "That exclusion was added by the 44th Amendment, in direct answer to ADM Jabalpur (1976). The Court had held that during the Emergency no one could approach a court even to challenge an unlawful detention, and that even the right to life stood suspended. Puttaswamy (2017) formally overruled it.",
-  note: "Note what this article does and does not do. It suspends the remedy, not the right. Article 358 suspends the right itself, but only for Article 19."
+  simple: "During an emergency, the President may by order suspend the right to go to court to enforce the fundamental rights named in the order. The order must be laid before both Houses.\n\n" +
+    "Articles 20 and 21 can never be suspended.",
+  catch: "Article 359 suspends the remedy, not the right. The right still exists, but nobody can go to court to enforce it. Article 358, by contrast, suspends Article 19 itself.\n\n" +
+    "The bar on suspending Articles 20 and 21 answers ADM Jabalpur (1976). By 4 to 1, the Court had held that during the Emergency nobody could challenge even an unlawful detention in court. The 44th Amendment closed that door in 1978, and Puttaswamy (2017) overruled the judgment."
 },
 "359A": {
   simple: "This article once excluded Punjab from the application of certain emergency provisions.",
   catch: "Inserted by the 59th Amendment in 1988 and repealed by the 63rd in 1990."
 },
 "360": {
-  simple: "If the President is satisfied that the financial stability or credit of India, or of any part of it, is threatened, he may proclaim a Financial Emergency.\n\n" +
-    "It must be approved by both Houses within two months by simple majority, and then continues until revoked.\n\n" +
-    "The Union may direct States to observe canons of financial propriety, reduce the salaries of State servants and of judges of the Supreme Court and High Courts, and require all Money Bills to be reserved for the President.",
-  catch: "It has never been proclaimed, not even in 1991 when the balance-of-payments crisis was at its worst.\n\n" +
-    "There is no maximum duration and no periodic re-approval. Once approved, it is the least-constrained of the three emergencies."
+  simple: "If the President is satisfied that the financial stability or credit of India, or of any part of it, is threatened, the President may declare a financial emergency.\n\n" +
+    "Both Houses must approve it within two months, by a simple majority. Once approved, it lasts until it is revoked.",
+  catch: "During a financial emergency, the Union may direct States to follow rules of financial propriety. The Union may order salary cuts for public servants, including Supreme Court and High Court judges. And the Union may require State Money Bills to be reserved for the President.\n\n" +
+    "No financial emergency has ever been declared, not even in the 1991 balance-of-payments crisis. With no time limit and no renewal, it would be the least controlled of the three emergencies."
 }
 
 });

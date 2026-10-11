@@ -202,9 +202,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 352 lets the President declare a national emergency when war, external aggression or armed rebellion threatens India's security, on the Cabinet's written advice. Parliament must approve it within one month.",
   why: "National emergency is examined every cycle. Almost every safeguard in Article 352 was added by the 44th Amendment after the 1975 Emergency, which gives it a clear before and after.",
   concepts: [
-    { t: "The three grounds", d: "War, external aggression, or armed rebellion. Originally the third ground was \"internal disturbance\", which the 44th Amendment replaced with the much narrower \"armed rebellion\"." },
+    { t: "The three grounds", d: "War, external aggression or armed rebellion. \"Armed rebellion\" replaced \"internal disturbance\" in 1978." },
     { t: "The Cabinet must recommend it in writing", d: "Another 44th Amendment safeguard. In 1975 the Prime Minister advised the President alone, without consulting the Cabinet." },
-    { t: "Parliamentary approval", d: "Both Houses must approve within one month, by a special majority. The special majority is a majority of total membership and two-thirds of those present and voting. Before 1978 it was two months and a simple majority." },
+    { t: "Parliamentary approval", d: "Within one month, by a special majority in each House. Before 1978 it was two months and a simple majority." },
     { t: "Duration", d: "Six months at a time, renewable indefinitely with fresh parliamentary approval each time." },
     { t: "The Lok Sabha can revoke it", d: "If one tenth of the members of the Lok Sabha give notice, a special sitting must be held within fourteen days, and a simple majority of the House can disapprove the emergency." },
     { t: "An emergency can be partial", d: "Since the 42nd Amendment, an emergency may be declared for the whole of India or only part of it." },
@@ -224,10 +224,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 355 makes it the Union's duty to protect every State against external aggression and internal disturbance, and to make sure every State is governed according to the Constitution.",
   why: "Article 355 is the justification for President's rule, and since Bommai it also works as a limit on it. The double role is the sophisticated answer.",
   concepts: [
-    { t: "The two duties", d: "The Union has two duties. The first is to protect every State against external aggression and internal disturbance. The second is to make sure the government of every State is carried on according to the Constitution." },
-    { t: "Why it exists", d: "The States have no independent means of defence, and cannot secede. In exchange, the Union owes them protection." },
-    { t: "Article 355 justifies Articles 356 and 365", d: "The second duty is the constitutional basis for intervening when a State government breaks down." },
-    { t: "But it also constrains", d: "Because the article is framed as a duty, courts have read it as requiring the Union to act in proportion. The Union must try lesser measures before reaching for dismissal." },
+    { t: "Why it exists", d: "The States cannot defend themselves or secede, so the Union owes them protection." },
+    { t: "Article 355 justifies Articles 356 and 365", d: "The second duty is the basis for intervening when a State's government breaks down." },
+    { t: "But it also constrains", d: "Because Article 355 sets a duty, the response must be proportionate, with lesser measures before dismissal." },
     { t: "Sarbananda Sonowal (2005)", d: "The Court held that large-scale illegal migration into Assam amounted to external aggression, and struck down a law that made deportation harder, as a failure of the Union's Article 355 duty." },
     { t: "Naga People's Movement (1998)", d: "The Court upheld the deployment of armed forces in a State under Article 355, holding it does not displace the State government." }
   ],
@@ -240,13 +239,12 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 356 lets the President take over a State's government when, on the Governor's report or otherwise, the President is satisfied it cannot be carried on according to the Constitution. Parliament must approve within two months.",
   why: "President's rule is the most examined emergency provision. Prelims tests the procedure. Mains tests how far the Bommai judgment actually curbed its misuse.",
   concepts: [
-    { t: "The ground", d: "The President is satisfied that a situation has arisen in which the government of a State cannot be carried on in accordance with the Constitution." },
     { t: "How it is triggered", d: "On receipt of a report from the Governor, *or otherwise*. The words \"or otherwise\" mean the centre does not need a Governor's report at all." },
-    { t: "What happens", d: "The President may assume the functions of the State government, declare that the powers of the State legislature shall be exercised by Parliament, and make any incidental provisions." },
+    { t: "What happens", d: "The President may take over the State government's functions and give the legislature's powers to Parliament." },
     { t: "What is not affected", d: "The High Court's powers cannot be assumed or suspended. And the State legislature is not necessarily dissolved. The legislature may only be suspended." },
     { t: "Approval and duration", d: "Both Houses must approve within two months, by a simple majority. Then six months at a time, up to a maximum of three years." },
     { t: "Beyond one year is very hard", d: "After the 44th Amendment, extension past one year requires two conditions together: a national emergency must be in force, and the Election Commission must certify that elections in that State cannot be held." },
-    { t: "S.R. Bommai (1994)", d: "The landmark. The proclamation is subject to judicial review. The floor of the House, not the Governor's opinion, is the test of majority. The Assembly cannot be dissolved before Parliament approves. And if the proclamation is struck down, the dismissed government is restored." },
+    { t: "S.R. Bommai (1994)", d: "Judicial review, the floor test, no dissolution before Parliament approves, and restoration if the proclamation falls." },
     { t: "Article 365", d: "If a State fails to comply with a Union direction, the President may hold that constitutional machinery has failed. The finding is a separate route into Article 356." }
   ],
   seen: [
@@ -264,12 +262,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 358 says that during a national emergency declared on the ground of war or external aggression, the freedoms in Article 19 are suspended automatically.",
   why: "Articles 358 and 359 are always examined as a pair, because they do similar-sounding things in importantly different ways.",
   concepts: [
-    { t: "What it does", d: "When a Proclamation of Emergency is in operation, the six freedoms in Article 19 are automatically suspended. The State may make any law or take any action that would otherwise violate Article 19." },
-    { t: "The suspension is automatic", d: "No separate presidential order is needed. The emergency itself does it." },
+    { t: "The suspension is automatic", d: "No presidential order is needed." },
     { t: "Article 358 covers Article 19 only", d: "No other Fundamental Right is touched by Article 358." },
-    { t: "The 44th Amendment narrowed it", d: "Article 358 now applies only when the emergency is declared on the ground of war or external aggression, and not for armed rebellion." },
-    { t: "Only emergency-related laws are protected", d: "Another 44th Amendment change. A law must contain a recital that it relates to the emergency to get protection." },
-    { t: "What happens afterwards", d: "When the emergency ends, Article 19 revives, and any law made under its shelter stops working as far as it conflicts with Article 19. Acts already done remain valid." }
+    { t: "The 44th Amendment narrowed it", d: "Since 1978, only for war or external aggression, not armed rebellion." },
+    { t: "Only emergency-related laws are protected", d: "A law must state that it relates to the emergency." },
+    { t: "What happens afterwards", d: "Article 19 revives, conflicting laws stop working, and past acts stay valid." }
   ],
   trap: "Article 358 is automatic. Article 359 needs a presidential order.\n\nAnd since 1978, Article 358 does not operate at all in an emergency proclaimed on the ground of armed rebellion. Both distinctions get tested."
 },
@@ -280,13 +277,12 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 359 lets the President, during a national emergency, suspend the right to go to court to enforce the Fundamental Rights named in the order, except Articles 20 and 21.",
   why: "ADM Jabalpur, widely seen as the Supreme Court's worst decision, was decided under Article 359. Questions ask it as a question about rights during an emergency.",
   concepts: [
-    { t: "What it does", d: "The President may by order suspend the right to move any court for the enforcement of specified Fundamental Rights, for the period of the emergency or a shorter period." },
-    { t: "Article 359 suspends the remedy, not the right", d: "The point is the crucial difference from Article 358. The right continues to exist. You simply cannot go to court about it." },
+    { t: "Article 359 suspends the remedy, not the right", d: "The right continues. Only the court route is closed." },
     { t: "The suspension is not automatic", d: "A separate presidential order is required, and it must specify which rights are covered." },
-    { t: "Articles 20 and 21 can never be suspended", d: "Added by the 44th Amendment, in direct response to what happened in 1975." },
+    { t: "Articles 20 and 21 can never be suspended", d: "Added by the 44th Amendment (1978)." },
     { t: "The order must be laid before Parliament", d: "Each House must be given the order as soon as possible after it is made." },
-    { t: "ADM Jabalpur (1976)", d: "By 4 to 1 the Court held that during the Emergency, a person had no right to move any court even against unlawful detention or death in custody. Justice H.R. Khanna dissented and lost his chance at the Chief Justiceship." },
-    { t: "ADM Jabalpur was overruled", d: "Puttaswamy (2017) expressly declared ADM Jabalpur wrong, forty-one years later." }
+    { t: "ADM Jabalpur (1976)", d: "By 4 to 1, nobody could challenge even unlawful detention in court. Justice H.R. Khanna dissented, and was later passed over for Chief Justice." },
+    { t: "ADM Jabalpur was overruled", d: "Puttaswamy (2017) expressly overruled it." }
   ],
   trap: "Article 358 suspends the *right*. Article 359 suspends the *remedy*.\n\nUnder 359 the right survives, so a claim can be brought once the emergency ends. Papers rely on candidates treating the two as the same mechanism."
 },
@@ -297,13 +293,12 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 360 lets the President declare a financial emergency when the financial stability or credit of India, or of any part of it, is threatened. Parliament must approve it within two months.",
   why: "A financial emergency has never been declared, which makes it tidy factual material. Article 360 also lacks a feature the other two emergencies have.",
   concepts: [
-    { t: "The ground", d: "The President is satisfied that a situation has arisen whereby the financial stability or credit of India, or of any part of it, is threatened." },
     { t: "Approval", d: "Both Houses must approve within two months, by simple majority." },
-    { t: "No maximum duration", d: "The lack of a maximum is the key difference. Once approved, it continues indefinitely until revoked. There is no six-month renewal cycle as under Articles 352 and 356." },
-    { t: "What the Union can do", d: "Direct any State to observe canons of financial propriety, and give any other directions it considers necessary." },
+    { t: "No maximum duration", d: "Once approved, it lasts until revoked, with no six-month renewal." },
+    { t: "What the Union can do", d: "Directions on financial propriety, and any others needed." },
     { t: "Salaries can be cut", d: "The Union may direct cuts in the salaries and allowances of any class of people serving a State or the Union. The cuts can include the judges of the Supreme Court and the High Courts." },
     { t: "State money Bills", d: "All money Bills and financial Bills passed by a State legislature may be required to be reserved for the President's consideration." },
-    { t: "Never used", d: "India came close to one in 1991, during the balance-of-payments crisis, but none was declared." }
+    { t: "Never used", d: "Not even during the 1991 balance-of-payments crisis." }
   ],
   seen: [
     "UPSC Mains 2018 — the proclamation of a financial emergency"
@@ -317,12 +312,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 361 says the President and the Governors are not answerable to any court for their official acts. No criminal case can be brought against them while they hold office.",
   why: "The immunity of the President and the Governors was asked in both 2025 and 2018. The immunity contrasts instructively with the immunity of legislators in Article 105.",
   concepts: [
-    { t: "Not answerable to any court", d: "The President and the Governors are not answerable to any court for the exercise and performance of the powers and duties of their office." },
     { t: "No criminal proceedings at all", d: "No criminal proceedings whatsoever may be instituted or continued against them during their term of office. The bar is absolute while they hold office." },
     { t: "No arrest or imprisonment", d: "No process for arrest or imprisonment may issue from any court during their term." },
     { t: "Civil proceedings need notice", d: "Civil proceedings about their personal acts may be brought only after two months' written notice." },
-    { t: "The immunity is personal, not institutional", d: "The office-holder cannot be sued, but their official decisions can be struck down. Bommai reviewed the material behind a Governor's report while the Governor remained personally immune." },
-    { t: "The immunity ends with the term", d: "Once they leave office, the ordinary law applies to acts done before, during or after. The shield lasts for a time, not for ever." },
+    { t: "The immunity is personal, not institutional", d: "The office-holder cannot be sued, but official decisions can be struck down." },
+    { t: "The immunity ends with the term", d: "Once out of office, the ordinary law applies." },
     { t: "The contrast with Article 105", d: "A legislator's immunity attaches to what is said or voted in the House and lasts forever for those words. A Governor's immunity attaches to the person and lasts only while in office." }
   ],
   seen: [
@@ -340,12 +334,12 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   concepts: [
     { t: "Three ways to amend, not one", d: "Some provisions change by a simple majority outside Article 368. Most need a special majority. A few need a special majority plus ratification by the States." },
     { t: "Simple majority: outside Article 368", d: "Admitting or creating States, changing State boundaries or names, creating or abolishing a Legislative Council, citizenship, Scheduled Areas, and the Second Schedule. The Constitution does not count these changes as amendments at all." },
-    { t: "Special majority", d: "A majority of the total membership of each House, *and* two thirds of the members present and voting in each House. Most amendments use this route." },
+    { t: "Special majority", d: "A majority of total membership and two-thirds of those present and voting, in each House." },
     { t: "Special majority plus State ratification", d: "The proviso to clause (2) lists them. The list covers the election of the President (Articles 54 and 55) and the reach of Union and State executive power (Articles 73 and 162). The list also covers High Courts for Union territories (Article 241), the GST Council (Article 279A), the Union judiciary (Chapter IV of Part V) and the High Courts (Chapter V of Part VI). Finally, the list covers the division of legislative powers (Chapter I of Part XI), any List in the Seventh Schedule, the representation of States in Parliament, and Article 368 itself. At least half the State legislatures must ratify, by simple majority. The rule means half of all the States, not half of those that respond." },
     { t: "Procedure", d: "A Bill may be introduced in either House. There is no joint sitting if they disagree. Each House must pass it separately. The President must assent, which became compulsory with the 24th Amendment." },
-    { t: "Kesavananda Bharati (1973)", d: "By 7 to 6, a thirteen-judge bench held that Parliament can amend any part of the Constitution, including Fundamental Rights, but cannot destroy or damage its basic structure." },
+    { t: "Kesavananda Bharati (1973)", d: "By 7 to 6, Parliament may amend anything, but may not destroy the basic structure." },
     { t: "What is in the basic structure", d: "There is no closed list. Judgments have included supremacy of the Constitution, republican and democratic government, secularism, separation of powers, federalism, judicial review, free and fair elections, and the rule of law." },
-    { t: "Minerva Mills (1980)", d: "The Court struck down clauses (4) and (5) of Article 368, inserted by the 42nd Amendment. The clauses had said there is no limit on Parliament's power to amend, and that no court can question an amendment." }
+    { t: "Minerva Mills (1980)", d: "Struck down clauses (4) and (5), which had barred the courts and removed all limits." }
   ],
   seen: [
     "UPSC Pre 2025 — amendment requirements and which provisions need State ratification",

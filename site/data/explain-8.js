@@ -25,11 +25,10 @@ partXXII: {
 /* ---------- Part XIX ---------- */
 
 "361": {
-  simple: "The President and every Governor are not answerable to any court for the exercise of their powers.\n\n" +
-    "No criminal proceeding may be instituted against them while in office. No process for arrest or imprisonment may issue. Civil proceedings need two months' prior notice.",
-  catch: "The immunity is personal, and it lasts only while in office.\n\n" +
-    "It does not protect the office's decisions from review. Courts routinely strike down a Governor's actions. What they cannot do is summon him to answer for them.\n\n" +
-    "Rameshwar Prasad (2006) confirmed that the immunity does not bar scrutiny of the act itself, including for mala fides."
+  simple: "The President and the Governors are not answerable to any court for the use of their powers.\n\n" +
+    "No criminal case may be brought against them while in office, and no court may order their arrest or imprisonment. A civil case about their personal acts needs two months' written notice.",
+  catch: "The immunity is personal, and it lasts only while the person holds office. The immunity does not protect the office's decisions. Courts often strike down a Governor's orders. What courts cannot do is summon the Governor to answer for them.\n\n" +
+    "Rameshwar Prasad (2006) confirmed the point. The Court examined a Governor's report for bad faith, while the Governor stayed personally immune."
 },
 "361A": {
   simple: "No one is liable in civil or criminal proceedings for publishing a substantially true report of proceedings of either House of Parliament or of a State legislature.\n\n" +
@@ -77,13 +76,12 @@ partXXII: {
 /* ---------- Part XX ---------- */
 
 "368": {
-  simple: "Parliament may amend the Constitution by addition, variation or repeal.\n\n" +
-    "An amendment Bill must be passed in each House separately, by a majority of that House's total membership and by two-thirds of the members present and voting.\n\n" +
-    "Some amendments need more. If the Bill changes the election of the President, the distribution of legislative powers, the Seventh Schedule, the representation of States in Parliament, or Article 368 itself, it must also be ratified by the legislatures of at least half the States.\n\n" +
+  simple: "Parliament may amend the Constitution by adding to, changing or repealing any provision.\n\n" +
+    "An amendment Bill must pass each House separately, by a majority of the total membership and two-thirds of those present and voting. Some amendments also need ratification by half the State legislatures. They are amendments touching the election of the President, the division of powers, the Seventh Schedule, the States' representation in Parliament, and Article 368 itself.\n\n" +
     "The President must then assent.",
-  catch: "Clauses (4) and (5), inserted by the 42nd Amendment, said that no amendment could be called in question in any court, and that Parliament's amending power was unlimited. Minerva Mills (1980) struck both down.\n\n" +
-    "The real limit on this article is therefore not in it. Kesavananda Bharati (1973) holds that Parliament may amend anything, but may not damage the basic structure of the Constitution.",
-  note: "There is no joint sitting for an amendment Bill, and no President's prior recommendation is needed. Amendments under Articles 2, 3, 4, 169 and the Fifth and Sixth Schedules are expressly not Article 368 amendments, and pass by simple majority."
+  catch: "The real limit on the amending power is not in Article 368. Kesavananda Bharati (1973) held that Parliament may amend any part of the Constitution, but may not damage its basic structure.\n\n" +
+    "The 42nd Amendment tried to remove that limit. New clauses (4) and (5) said no court could question an amendment, and that Parliament's amending power had no limit. Minerva Mills (1980) struck both clauses down, so the basic structure limit stands.",
+  note: "No prior recommendation of the President is needed to introduce an amendment Bill."
 },
 
 /* ---------- Part XXI ---------- */
