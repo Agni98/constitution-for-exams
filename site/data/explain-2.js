@@ -122,9 +122,8 @@ partV: {
 "51A": {
   simple: "Article 51A lists eleven duties of every citizen.\n\n" +
     "Respect the Constitution, the flag and the anthem. Cherish the ideals of the freedom struggle. Uphold sovereignty and integrity. Defend the country. Promote harmony and renounce practices derogatory to women. Value the composite culture. Protect the environment. Develop a scientific temper. Safeguard public property and abjure violence. Strive towards excellence. Provide education to your child between six and fourteen.",
-  catch: "None of these is directly enforceable against a citizen.\n\n" +
-    "They are not decorative either. Courts use them as an aid to interpretation, they can help justify a restriction as 'reasonable' under Article 19, and Parliament has legislated on several of them. The Prevention of Insults to National Honour Act is the clearest example.",
-  note: "Duties (a) to (j) came with the 42nd Amendment in 1976. The eleventh, (k), was added by the 86th in 2002 to match the new right to education."
+  catch: "No court can enforce a fundamental duty against a citizen. There is no writ and no general penalty.\n\n" +
+    "But the duties are not decorative. Courts use them to interpret other provisions, and a duty can help show that a restriction under Article 19 is reasonable. Parliament has also made laws on several of them, such as the Prevention of Insults to National Honour Act, 1971."
 },
 
 /* ---------- Part V: the President and Vice-President ---------- */

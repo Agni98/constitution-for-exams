@@ -752,7 +752,7 @@ preamble: {
     { t: "The eleventh duty", d: "Every parent or guardian must provide opportunities for education to their child between the ages of six and fourteen. The duty is the counterpart of the right in Article 21A." },
     { t: "Where they came from", d: "The Swaran Singh Committee (1976) recommended them, drawing on the Soviet constitution. The Committee suggested eight duties and penalties for breaching them. The government adopted ten duties and no penalties." },
     { t: "They bind citizens only", d: "Unlike Fundamental Rights, which mostly protect any person, the duties apply only to citizens of India." },
-    { t: "They cannot be enforced by a court", d: "There is no writ, no remedy, and no general law punishing a breach. But Parliament may make laws on any of them, and several laws already do. One example is the Prevention of Insults to National Honour Act." },
+    { t: "They cannot be enforced by a court", d: "No writ and no general penalty. But Parliament may make laws on any duty, and several laws already do." },
     { t: "Courts still use them", d: "Judges cite Fundamental Duties when interpreting other provisions. Article 51A(g) on the environment has been used to give content to Article 21." },
     { t: "The ones most often tested", d: "Duty (g), protecting the environment and showing compassion to living creatures. Duty (h), developing scientific temper and the spirit of inquiry. Duty (i), safeguarding public property and abjuring violence." }
   ],

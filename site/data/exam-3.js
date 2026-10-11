@@ -29,11 +29,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   why: "The Delhi article is always in the news. The fight over who controls the civil services in Delhi produced two Constitution Bench rulings and a law that reversed one of them.",
   concepts: [
     { t: "What it created", d: "The 69th Amendment (1991) gave Delhi the name National Capital Territory, a Legislative Assembly and a Council of Ministers." },
-    { t: "What the Assembly can legislate on", d: "Any State List or Concurrent List subject, except three: public order, police and land. The three subjects stay with the centre." },
     { t: "The Lieutenant Governor's position", d: "The LG acts on the aid and advice of the Council of Ministers, except on matters where they act in their discretion or under a law." },
-    { t: "The referral power", d: "If the LG disagrees with ministers, they may refer the matter to the President. Until the President decides, the LG may act on their own in an urgent case." },
-    { t: "The 2018 ruling", d: "A Constitution Bench held the LG has no general power of discretion, must act on ministerial advice outside the three excepted subjects, and cannot obstruct every decision." },
-    { t: "The 2023 ruling and its reversal", d: "On 11 May 2023 a Constitution Bench gave the Delhi government control over services. An ordinance undoing it followed on 19 May, and the Government of NCT of Delhi (Amendment) Act, 2023 replaced that ordinance in August. The Act was made under Article 239AA(7)(a), which lets Parliament legislate to give effect to or supplement Article 239AA, and it created a National Capital Civil Service Authority to decide transfers and postings." }
+    { t: "The referral power", d: "The LG may refer a disagreement to the President, and act alone in an urgent case meanwhile." },
+    { t: "The 2018 ruling", d: "No general discretion. The LG must follow ministerial advice outside the three reserved subjects." },
+    { t: "The 2023 ruling and its reversal", d: "The Court gave Delhi control over services on 11 May 2023. An ordinance reversed it on 19 May, and the 2023 Act replaced the ordinance, creating a National Capital Civil Service Authority for transfers and postings." }
   ],
   trap: "Delhi is not a State and the Lieutenant Governor is not a Governor.\n\nBut since 2018 the LG must act on ministerial advice for everything outside public order, police and land. Claims that the LG has full discretion over Delhi are wrong."
 },
@@ -62,9 +61,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 243B says every State shall have panchayats at the village, intermediate and district levels. A State with fewer than 20 lakh people may leave out the intermediate level.",
   why: "Article 243B made panchayats mandatory. Before it, a State could simply not have them, and many States did exactly that.",
   concepts: [
-    { t: "What it requires", d: "Panchayats shall be constituted at the village, intermediate and district levels in every State." },
-    { t: "\"Shall\" is the operative word", d: "The rule is mandatory. No State may choose to have no panchayats." },
-    { t: "What changed in 1992", d: "Before the amendment, panchayats existed only under State laws. States could set them up, dissolve them and postpone elections without limit, and many routinely did." },
+    { t: "\"Shall\" is the operative word", d: "No State may choose to have no panchayats." },
+    { t: "What changed in 1992", d: "Before 1992, States could dissolve panchayats and postpone elections at will." },
     { t: "Elections are now compulsory too", d: "Article 243E fixes a five-year term and requires elections before it expires, or within six months of a dissolution." }
   ],
   trap: "The 73rd Amendment's real achievement was removing the State's discretion, not creating panchayats.\n\nPanchayats existed in most States before 1992. What they lacked was any guarantee of continued existence or of elections being held."
@@ -76,12 +74,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 243C lets the State legislature decide how panchayats are made up. Members are directly elected from territorial wards, and the members of the intermediate and district panchayats elect their chairpersons.",
   why: "Papers tested composition, eligibility and the election of chairpersons in 2025 and 2016. The age requirement is the most often asked single fact.",
   concepts: [
-    { t: "The State decides composition", d: "The State legislature may by law provide for the composition of panchayats, within the limits Part IX sets." },
     { t: "The population-to-seat ratio", d: "The ratio between the population of a panchayat area and the number of seats must be the same throughout the State, as far as practicable." },
-    { t: "All seats are directly elected", d: "Members are chosen by direct election from territorial constituencies at every level, including district panchayats." },
     { t: "Minimum age is 21", d: "Anyone qualified to vote in State Assembly elections may stand for a panchayat, except that the minimum age is twenty-one, not twenty-five." },
-    { t: "The village chairperson", d: "How the chairperson at village level is elected is left entirely to the State to decide by law. Some States elect directly, others indirectly." },
-    { t: "Intermediate and district chairpersons", d: "The elected members of that panchayat choose the chairperson from among themselves, so the election is indirect." },
+    { t: "The village chairperson", d: "Left to State law. Some States elect directly, others indirectly." },
+    { t: "Intermediate and district chairpersons", d: "Chosen by and from the elected members, so the election is indirect." },
     { t: "Who else can sit on a panchayat", d: "MPs, MLAs and MLCs representing the area, and the chairpersons of lower-tier panchayats, may be given representation. MPs and MLAs vote only at intermediate and district level." }
   ],
   seen: [
@@ -98,11 +94,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   why: "Reservation in panchayats is where women's political representation in India actually began, decades before the Lok Sabha provision. The article is the standard opening for that Mains answer.",
   concepts: [
     { t: "Scheduled Castes and Tribes", d: "Seats are reserved in proportion to their population in the panchayat area. Reserved seats are rotated between constituencies." },
-    { t: "Women: the one-third rule", d: "Not less than one third of all seats, including of the seats reserved for Scheduled Castes and Tribes, must go to women." },
+    { t: "Women: the one-third rule", d: "At least one-third of all seats, including the SC and ST seats, go to women." },
     { t: "Chairperson posts too", d: "Not less than one third of the chairperson posts at every level must be reserved for women." },
-    { t: "Backward classes", d: "The State legislature *may* reserve seats for backward classes. Reservation for backward classes is optional, unlike reservation for Scheduled Castes, Scheduled Tribes and women." },
-    { t: "States went further", d: "More than twenty States have raised women's reservation to fifty percent by their own law. The Constitution sets a floor, not a ceiling." },
-    { t: "The Supreme Court's cap on total reservation", d: "In K. Krishna Murthy (2010) the Court held that reservation for backward classes in local bodies, taken with SC and ST reservation, should not exceed fifty percent." }
+    { t: "Backward classes", d: "Optional for the State, unlike the SC, ST and women's reservation." },
+    { t: "States went further", d: "More than twenty States reserve fifty per cent for women." },
+    { t: "The Supreme Court's cap on total reservation", d: "SC, ST and backward-class reservation together should not exceed fifty per cent." }
   ],
   seen: [
     "UPSC Mains 2019 — women's reservation in local government",
@@ -117,11 +113,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 243G lets the State legislature give panchayats the powers they need to work as institutions of self-government, including on the subjects in the Eleventh Schedule.",
   why: "Article 243G explains why devolution to panchayats stalled. The article is the direct answer to the Mains question about why local bodies remain weak.",
   concepts: [
-    { t: "What it says", d: "The State legislature *may* by law endow panchayats with such powers and authority as may be necessary to enable them to function as institutions of self-government." },
-    { t: "The word is \"may\"", d: "Not \"shall\". The State is permitted, not required, to transfer powers. The single word explains why devolution varies so widely between States." },
+    { t: "The word is \"may\"", d: "The State is permitted, not required, to transfer powers." },
     { t: "The Eleventh Schedule", d: "The Eleventh Schedule lists 29 subjects that may be devolved, including agriculture, minor irrigation, rural housing, drinking water, poverty alleviation, education and health." },
-    { t: "The Schedule transfers nothing by itself", d: "Listing a subject creates no obligation. Each subject needs a State law to actually move to the panchayat." },
-    { t: "The three Fs", d: "Real devolution requires functions, funds and functionaries. Most States transferred some functions on paper without the money or the staff to perform them." },
+    { t: "The Schedule transfers nothing by itself", d: "Each subject needs a State law before it moves to the panchayat." },
+    { t: "The three Fs", d: "Functions, funds and functionaries." },
     { t: "Kerala and Karnataka are the usual examples", d: "They devolved substantially. Most States did not, which is why the Union government publishes a Devolution Index ranking them." }
   ],
   seen: [
@@ -137,12 +132,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 243K puts a State Election Commission, appointed by the Governor, in charge of all panchayat elections. A State Election Commissioner can be removed only in the way a High Court judge is.",
   why: "Candidates regularly confuse the State Election Commission with the Election Commission of India, and the question is built on that confusion.",
   concepts: [
-    { t: "What it creates", d: "Superintendence, direction and control of panchayat elections, including preparing electoral rolls, vests in a State Election Commission consisting of a State Election Commissioner." },
     { t: "Who appoints", d: "The Governor of the State." },
-    { t: "How they are removed", d: "In the same manner and on the same grounds as a High Court judge. The rule gives real security of tenure." },
+    { t: "How they are removed", d: "Only in the way a High Court judge can be removed." },
     { t: "Conditions of service protected", d: "They cannot be varied to the Commissioner's disadvantage after appointment." },
     { t: "The municipal equivalent", d: "Article 243ZA applies the same scheme to municipal elections, using the same State Election Commission." },
-    { t: "The State Election Commission is entirely separate from the ECI", d: "The Election Commission of India conducts elections to Parliament, State legislatures, and the offices of President and Vice-President. The Election Commission of India has no role in local body elections." }
+    { t: "The State Election Commission is entirely separate from the ECI", d: "The ECI runs elections to Parliament, the State legislatures and the two highest offices, and none for local bodies." }
   ],
   trap: "The Election Commission of India has nothing to do with panchayat or municipal elections.\n\nTwo different bodies, two different appointing authorities, two entirely separate jurisdictions. Options that merge them are wrong."
 },
@@ -153,11 +147,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 243M keeps Part IX out of the Scheduled and tribal areas, out of Nagaland, Meghalaya and Mizoram, and out of the hill areas of Manipur that have District Councils. Parliament can extend Part IX to them by law.",
   why: "Article 243M is the reason PESA exists, and papers have asked about PESA directly.",
   concepts: [
-    { t: "Who is excluded, and how completely", d: "Some areas are wholly out: the Scheduled Areas and tribal areas under Article 244, the States of Nagaland, Meghalaya and Mizoram, and the hill areas of Manipur that have District Councils. Only partly out: the hill areas of Darjeeling, where clause (3) excludes just the *district-level* panchayat provisions, leaving the rest of Part IX to apply. A third, narrower carve-out is clause (3A). The clause stops Article 243D's reservation of seats for Scheduled Castes from applying in Arunachal Pradesh alone." },
-    { t: "Why", d: "The excluded areas already have their own systems of tribal self-government, under the Fifth and Sixth Schedules or under separate arrangements." },
+    { t: "Who is excluded, and how completely", d: "Wholly out: Scheduled and tribal areas, Nagaland, Meghalaya, Mizoram, and Manipur's hill areas with District Councils. Partly out: the Darjeeling hills, which lack only the district tier. Clause (3A) keeps SC reservation out of Arunachal Pradesh." },
     { t: "Two ways back in", d: "Clause (4)(b) lets Parliament extend Part IX to Scheduled and tribal areas, with exceptions and modifications. The clause expressly says that such a law is not an amendment of the Constitution. Clause (4)(a) lets Nagaland, Meghalaya or Mizoram bring Part IX in themselves, if the Assembly resolves to do so by a majority of its total membership and two thirds of those present and voting." },
-    { t: "PESA, 1996", d: "The Panchayats (Extension to Scheduled Areas) Act did exactly that. PESA extends Part IX to Fifth Schedule areas with major changes." },
-    { t: "What PESA gives the Gram Sabha", d: "Power to approve development plans, to be consulted before land acquisition, to control minor forest produce and minor water bodies, and to recommend on prospecting licences for minor minerals." },
+    { t: "PESA, 1996", d: "Extends Part IX to Fifth Schedule areas with major changes." },
+    { t: "What PESA gives the Gram Sabha", d: "Approve plans, be consulted on land acquisition, control minor forest produce and water bodies, and advise on minor-mineral licences." },
     { t: "PESA covers ten States", d: "Andhra Pradesh, Chhattisgarh, Gujarat, Himachal Pradesh, Jharkhand, Madhya Pradesh, Maharashtra, Odisha, Rajasthan and Telangana." }
   ],
   seen: [

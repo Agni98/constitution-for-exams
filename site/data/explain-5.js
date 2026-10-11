@@ -50,11 +50,10 @@ partX: {
     "Parliament can therefore set up or dismantle a Union territory's legislature by simple majority."
 },
 "239AA": {
-  simple: "Delhi is the National Capital Territory. It has a directly elected Legislative Assembly, which may legislate on State List and Concurrent List subjects, except public order, police and land.\n\n" +
-    "There is a Council of Ministers headed by a Chief Minister to aid and advise the Lieutenant Governor.",
-  catch: "The proviso lets the Lieutenant Governor refer any difference of opinion with his Ministers to the President, and act as the President directs. A decade of litigation has come out of it.\n\n" +
-    "The 2018 Constitution Bench held that the Lieutenant Governor has no independent decision-making power and is bound by ministerial advice, except on the three reserved subjects.\n\n" +
-    "The 2023 ruling gave Delhi control over services. Parliament reversed that within days, through the Government of NCT of Delhi (Amendment) Act, 2023."
+  simple: "Delhi is the National Capital Territory. Its directly elected Legislative Assembly can make laws on State List and Concurrent List subjects, except public order, police and land.\n\n" +
+    "A Council of Ministers led by a Chief Minister aids and advises the Lieutenant Governor.",
+  catch: "The Lieutenant Governor may refer any disagreement with the ministers to the President, and then act as the President directs. The proviso has produced a decade of litigation.\n\n" +
+    "In 2018 a Constitution Bench held that the Lieutenant Governor has no general discretion, and must follow ministerial advice outside the three reserved subjects. In May 2023 another Constitution Bench gave the Delhi government control over services. But an ordinance reversed the ruling within a week, and the Government of NCT of Delhi (Amendment) Act, 2023 replaced the ordinance in August."
 },
 "239AB": {
   simple: "The President may suspend the operation of Article 239AA and run Delhi directly, if its constitutional machinery fails. He acts on the Lieutenant Governor's report or otherwise.",
@@ -92,19 +91,21 @@ partX: {
     "Every one of its powers depends on State law, which is why its real strength varies so much between States. PESA, 1996 gives it considerably more in Fifth Schedule areas."
 },
 "243B": {
-  simple: "Every State shall constitute panchayats at village, intermediate and district levels. A State with a population under twenty lakh need not have the intermediate tier.",
-  catch: "'Shall' — this is mandatory. The three-tier structure is no longer at a State's discretion, which is exactly what the 73rd Amendment was for."
+  simple: "Every State shall have panchayats at the village, intermediate and district levels. A State with a population under twenty lakh need not have the intermediate level.",
+  catch: "The word \"shall\" is the point. Before 1992, panchayats existed only under State laws. States could dissolve them and postpone their elections at will, and many did.\n\n" +
+    "The 73rd Amendment removed that choice. Every State must now have panchayats, and Article 243E requires elections every five years."
 },
 "243C": {
-  simple: "The State legislature makes provision for the composition of panchayats, keeping the ratio of population to seats as far as practicable the same throughout the State.\n\n" +
-    "All seats are filled by direct election from territorial constituencies. The legislature decides how chairpersons are chosen.",
-  catch: "The Constitution requires direct election of all members but leaves the manner of choosing chairpersons to the State. That is why some States elect the sarpanch directly and others have the elected members choose one."
+  simple: "The State legislature decides how panchayats are made up. The ratio of population to seats should, as far as practicable, be the same throughout the State.\n\n" +
+    "All members are directly elected from territorial constituencies. The State decides how the village chairperson is chosen. At the intermediate and district levels, the elected members choose the chairperson from among themselves.",
+  catch: "So some States elect the village sarpanch directly, and others let the elected members choose one.\n\n" +
+    "The State may also give seats to the area's MPs, MLAs and MLCs, and to chairpersons of lower-tier panchayats. MPs and MLAs sit only at the intermediate and district levels."
 },
 "243D": {
-  simple: "Seats are reserved for Scheduled Castes and Scheduled Tribes in proportion to their population.\n\n" +
-    "At least one-third of those reserved seats go to women, and at least one-third of all seats, including reserved ones, go to women. Chairperson posts are reserved on the same basis.",
-  catch: "One-third is a floor, not a ceiling. More than twenty States have legislated for fifty per cent reservation for women in panchayats.\n\n" +
-    "The SC and ST reservation lapses when Article 334 expires. The reservation for women does not."
+  simple: "Seats in every panchayat are reserved for Scheduled Castes and Scheduled Tribes, in proportion to their population.\n\n" +
+    "At least one-third of all seats, counting the reserved ones, go to women. Chairperson posts are reserved in the same way.",
+  catch: "One-third is a floor, not a ceiling. More than twenty States have raised women's reservation in panchayats to fifty per cent by their own laws.\n\n" +
+    "The States may also reserve seats for backward classes, but need not. In K. Krishna Murthy (2010) the Court held that reservation for Scheduled Castes, Scheduled Tribes and backward classes together should not exceed fifty per cent."
 },
 "243E": {
   simple: "A panchayat lasts five years from the date of its first meeting and no longer.\n\n" +
@@ -118,10 +119,10 @@ partX: {
   catch: "The age floor for a panchayat member is twenty-one, not twenty-five. It is a deliberate opening to younger candidates."
 },
 "243G": {
-  simple: "The State legislature may endow panchayats with the powers and authority they need to function as institutions of self-government.\n\n" +
-    "That includes preparing plans for economic development and social justice, and implementing schemes on the twenty-nine matters in the Eleventh Schedule.",
-  catch: "'May endow', not 'shall'. This is the hinge on which the whole amendment turns.\n\n" +
-    "The Constitution lists the twenty-nine subjects but leaves it to each State whether to hand any of them over. That is why devolution is so uneven."
+  simple: "The State legislature may give panchayats the powers they need to work as institutions of self-government.\n\n" +
+    "The powers can include planning for economic development and social justice, and running schemes on the 29 subjects in the Eleventh Schedule.",
+  catch: "The word is \"may\", not \"shall\". The Constitution lists the 29 subjects, but each State decides whether to hand any of them over.\n\n" +
+    "So devolution is uneven. Real devolution needs functions, funds and functionaries, and most States transferred functions on paper without the money or staff. Kerala and Karnataka are the usual exceptions."
 },
 "243H": {
   simple: "The State legislature may authorise a panchayat to levy, collect and appropriate taxes, duties, tolls and fees. It may also assign it State revenues and provide grants-in-aid from the Consolidated Fund of the State.",
@@ -139,19 +140,20 @@ partX: {
   catch: "Permissive, not mandatory, and the weakest link in the chain. Audit arrangements vary enormously, and the CAG has no constitutional role here at all."
 },
 "243K": {
-  simple: "Superintendence, direction and control of panchayat elections, and preparation of the electoral rolls, vest in a State Election Commission. It consists of a State Election Commissioner appointed by the Governor.\n\n" +
-    "He may be removed only in the same manner and on the same grounds as a High Court judge, and his conditions of service cannot be varied to his disadvantage.",
-  catch: "This is a separate body from the Election Commission of India, and independent of the State government by design.\n\n" +
-    "Kishan Singh Tomar (2006) insisted on that independence, holding that a State cannot delay local elections for administrative convenience."
+  simple: "A State Election Commission controls panchayat elections and the preparation of their electoral rolls. The Governor appoints the State Election Commissioner.\n\n" +
+    "The Commissioner can be removed only in the way, and on the grounds, that a High Court judge can be. The Commissioner's terms of service cannot be changed for the worse after appointment.",
+  catch: "The State Election Commission is separate from the Election Commission of India, and independent of the State government by design. The same Commission runs municipal elections under Article 243ZA.\n\n" +
+    "Kishan Singh Tomar (2006) insisted on that independence. A State cannot delay local elections for its own convenience."
 },
 "243L": {
   simple: "This Part applies to Union territories, subject to any modifications the President directs.",
   catch: "The President's power to modify is unlimited in terms. Local government in a Union territory is whatever the Union decides it should be."
 },
 "243M": {
-  simple: "This Part does not apply to the Scheduled Areas and tribal areas under the Fifth and Sixth Schedules, to the hill areas of Manipur with a District Council, or to certain parts of the North-East and Darjeeling.",
-  catch: "Parliament closed most of this gap through PESA, 1996.\n\n" +
-    "That Act extends Part IX to Fifth Schedule areas with modifications, and gives the Gram Sabha considerably more power than it has elsewhere."
+  simple: "Part IX does not apply to the Scheduled Areas and tribal areas, to Nagaland, Meghalaya and Mizoram, or to the hill areas of Manipur that have District Councils. In the Darjeeling hills, only the district-level provisions are left out.\n\n" +
+    "Parliament may extend Part IX to the Scheduled and tribal areas by law.",
+  catch: "The excluded areas already had their own systems of tribal self-government. So Part IX was kept out rather than imposed.\n\n" +
+    "Parliament later used the escape clause in PESA, 1996. The Act extends Part IX to Fifth Schedule areas with major changes, and gives the Gram Sabha far more power than elsewhere. The Gram Sabha approves plans, is consulted on land acquisition, and controls minor forest produce."
 },
 "243N": {
   simple: "Existing State laws inconsistent with this Part continue for one year from the commencement of the 73rd Amendment, or until amended, whichever is earlier.\n\n" +
