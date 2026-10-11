@@ -9,12 +9,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 324 gives the Election Commission the superintendence, direction and control of elections to Parliament, the State legislatures, and the offices of President and Vice-President.",
   why: "The Election Commission is among the most heavily examined constitutional bodies. The 2023 judgment on how Commissioners are appointed, and the law that soon overrode it, made the subject current again.",
   concepts: [
-    { t: "What it controls", d: "Superintendence, direction and control of the preparation of electoral rolls and the conduct of all elections to Parliament, to State legislatures, and to the offices of President and Vice-President." },
     { t: "What it does not control", d: "Elections to panchayats and municipalities. Local elections belong to the State Election Commission, under Articles 243K and 243ZA." },
-    { t: "Composition", d: "A Chief Election Commissioner and such number of other Commissioners as the President fixes. The Commission had a single member until 1989, and briefly again in 1990. The Commission has had three members since 1993." },
-    { t: "The security-of-tenure gap", d: "The Chief Election Commissioner can be removed only in the same manner as a Supreme Court judge. The other Commissioners can be removed on the Chief Election Commissioner's recommendation. So the two Commissioners have weaker protection." },
-    { t: "Anoop Baranwal (2023)", d: "A Constitution Bench held that until Parliament made a law, appointments should be made by a committee of the Prime Minister, the Leader of the Opposition and the Chief Justice of India." },
-    { t: "What Parliament then did", d: "The Chief Election Commissioner and other Election Commissioners Act, 2023 replaced the Chief Justice on that panel with a Union Cabinet Minister, giving the government a majority on it." },
+    { t: "Composition", d: "Single-member until October 1989, three members briefly, single again from January 1990, and three members since October 1993." },
+    { t: "The security-of-tenure gap", d: "The Chief has a judge's protection. The others can be removed on the Chief's recommendation." },
+    { t: "Anoop Baranwal (2023)", d: "Until Parliament legislated: the Prime Minister, the Leader of the Opposition and the Chief Justice." },
+    { t: "What Parliament then did", d: "The 2023 Act put a Union Cabinet Minister in the Chief Justice's place, giving the government a majority." },
     { t: "Plenary power where law is silent", d: "Mohinder Singh Gill (1978) held that Article 324 gives the Commission residuary power to act where the law does not provide, so that elections are not left unregulated." },
     { t: "The Model Code of Conduct", d: "The Model Code has no statutory force. The Code works through consensus among parties and the Commission's moral authority." }
   ],
@@ -33,10 +32,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 326 says elections to the Lok Sabha and the State Assemblies shall be on the basis of adult suffrage. Every citizen aged 18 or more who is not otherwise disqualified can register as a voter.",
   why: "Universal adult suffrage and the lowering of the voting age are precise facts that are often asked. There is also a subtle point about whether voting is actually a right.",
   concepts: [
-    { t: "What it guarantees", d: "Elections to the Lok Sabha and to every State Legislative Assembly shall be on the basis of adult suffrage. Every citizen not otherwise disqualified is entitled to be registered as a voter." },
-    { t: "The age was lowered", d: "From 21 to 18 by the 61st Amendment, 1988, which took effect for the 1989 general election." },
+    { t: "The age was lowered", d: "From 21 to 18 by the 61st Amendment (1988), first used in 1989." },
     { t: "The permitted disqualifications", d: "Non-residence, unsoundness of mind, crime, or corrupt or illegal practice. Nothing else." },
-    { t: "But voting itself is a statutory right", d: "The Supreme Court has repeatedly held the right to vote is conferred by the Representation of the People Act, 1951, not by the Constitution. The right to vote is neither a Fundamental Right nor a common-law right." },
+    { t: "But voting itself is a statutory right", d: "The right to vote comes from the Representation of the People Act, 1951. The right is neither a fundamental right nor a common-law right." },
     { t: "The related Fundamental Right", d: "The right to *know* a candidate's antecedents, such as assets, criminal cases and education, was held to flow from freedom of expression under Article 19(1)(a) in Union of India v. Association for Democratic Reforms (2002)." },
     { t: "NOTA", d: "The option of None of the Above was introduced by the Supreme Court in PUCL (2013), reasoning from the right to secrecy in casting a negative vote." }
   ],
@@ -52,10 +50,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 330 reserves seats in the Lok Sabha for Scheduled Castes and Scheduled Tribes, in proportion to their share of each State's population.",
   why: "Questions ask about reserved seats in legislatures together with the time limit in Article 334, and the 2019 amendment gave that limit a fresh date.",
   concepts: [
-    { t: "What it reserves", d: "Seats in the Lok Sabha for Scheduled Castes and Scheduled Tribes, in proportion to their share of the population." },
     { t: "The State counterpart", d: "Article 332 does the same for State Legislative Assemblies." },
     { t: "The exclusions", d: "No seats are reserved for Scheduled Castes in Assam's autonomous districts, and none in the States of Nagaland, Meghalaya, Mizoram and Arunachal Pradesh." },
-    { t: "The time limit", d: "Article 334 originally set ten years. Amendments have extended the limit every decade since. The 104th Amendment (2019) took it to 25 January 2030." },
+    { t: "The time limit", d: "Now until 25 January 2030, under the 104th Amendment (2019)." },
     { t: "Anglo-Indian nomination has ended", d: "Article 331 allowed the President to nominate two Anglo-Indians to the Lok Sabha. The 104th Amendment let that lapse in January 2020." },
     { t: "Women's reservation is not yet in force", d: "The 106th Amendment (2023) reserves one third of Lok Sabha and Assembly seats for women. The reservation takes effect only after a census and the delimitation that follows." },
     { t: "No OBC reservation in legislatures", d: "Backward classes get reservation in education and public employment, never in legislative seats." }
@@ -72,12 +69,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 335 says the claims of Scheduled Castes and Scheduled Tribes to government posts shall be taken into account, consistently with keeping the administration efficient.",
   why: "Article 335 is the efficiency clause. The 2023 paper asked it directly, and every argument about reservation in promotion turns on it.",
   concepts: [
-    { t: "What it says", d: "The claims of Scheduled Castes and Scheduled Tribes shall be taken into consideration, consistently with the maintenance of efficiency of administration, in making appointments to services and posts." },
-    { t: "Article 335 cuts both ways", d: "The article requires their claims to be considered, which supports reservation. And it subjects that to efficiency, which limits it." },
-    { t: "The 82nd Amendment (2000)", d: "The amendment added a proviso allowing the State to relax qualifying marks and lower standards of evaluation for reservation in promotion. The proviso undid a Supreme Court ruling that such relaxation offended Article 335." },
-    { t: "M. Nagaraj (2006)", d: "The Court read Article 335 as a constraint on reservation in promotion, requiring the State to show quantifiable data on backwardness, inadequate representation, and no adverse effect on efficiency." },
+    { t: "Article 335 cuts both ways", d: "The claims must be considered, but subject to efficiency." },
+    { t: "The 82nd Amendment (2000)", d: "Allowed relaxed qualifying marks and evaluation standards in promotion, undoing a Supreme Court ruling." },
+    { t: "M. Nagaraj (2006)", d: "Reservation in promotion needs data on backwardness, inadequate representation and efficiency." },
     { t: "Jarnail Singh (2018)", d: "The judgment removed the need to prove that Scheduled Castes and Tribes are backward, holding that they are presumed to be. The data requirement on inadequate representation survived." },
-    { t: "Efficiency reinterpreted", d: "In Jarnail Singh and later cases, the Court said efficiency must be understood inclusively. A representative administration is itself efficient, not a compromise on efficiency." }
+    { t: "Efficiency reinterpreted", d: "A representative administration is itself efficient." }
   ],
   seen: [
     "UPSC Pre 2023 — reservation, Article 16(4) and the maintenance of efficiency under Article 335"
@@ -91,12 +87,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 338 sets up the National Commission for Scheduled Castes, with a Chairperson, a Vice-Chairperson and three members, to investigate and report on the safeguards for Scheduled Castes.",
   why: "The three Commissions for Scheduled Castes, Scheduled Tribes and Backward Classes make a matching question that has been asked more than once, usually mixed with bodies that are *not* constitutional.",
   concepts: [
-    { t: "What it creates", d: "The National Commission for Scheduled Castes." },
     { t: "Composition", d: "A Chairperson, a Vice-Chairperson and three other members, appointed by the President by warrant under hand and seal." },
     { t: "How it became constitutional", d: "The 65th Amendment (1990) replaced a single Special Officer with a multi-member constitutional Commission. The 89th Amendment (2003) split off a separate Commission for Scheduled Tribes." },
-    { t: "Its powers", d: "While investigating a matter or a complaint, the Commission has all the powers of a civil court. The Commission can summon witnesses, require documents and receive evidence on affidavit." },
-    { t: "Consultation is mandatory", d: "The Union and every State government must consult the Commission on all major policy matters affecting Scheduled Castes." },
-    { t: "Where its reports go", d: "To the President, who lays them before each House of Parliament, along with a memorandum explaining any recommendation not accepted and the reasons." },
+    { t: "Its powers", d: "While investigating, the Commission has a civil court's powers." },
+    { t: "Consultation is mandatory", d: "The Union and every State must consult it on major policy affecting Scheduled Castes." },
+    { t: "Where its reports go", d: "To the President, who lays them before Parliament with reasons for any recommendation rejected." },
     { t: "Which bodies are not constitutional", d: "The National Human Rights Commission and the National Commission for Women are statutory. The Law Commission is an executive body constituted by government order." }
   ],
   seen: [
@@ -147,11 +142,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 340 lets the President appoint a Commission to investigate the conditions of the socially and educationally backward classes and recommend how to improve them.",
   why: "Article 340 is the constitutional source of both the Kalelkar and the Mandal Commissions. Candidates often confuse it with Article 338B.",
   concepts: [
-    { t: "What it permits", d: "The President may appoint a Commission to investigate the conditions of socially and educationally backward classes, the difficulties they face, and what should be done to remove them." },
-    { t: "The Commission is an investigating body", d: "A Commission under Article 340 is appointed for a task and then reports and dissolves. The Commission is not a standing institution." },
+    { t: "The Commission is an investigating body", d: "Appointed for one task, the Commission reports and then ends." },
     { t: "The First Backward Classes Commission", d: "Chaired by Kaka Kalelkar, appointed in 1953, reported in 1955. Its recommendations were not acted upon. The Chairman himself later disowned parts of the report." },
-    { t: "The Second Backward Classes Commission", d: "Chaired by B.P. Mandal, appointed in 1979, reported in 1980. The Commission identified 3,743 backward castes and recommended 27 per cent reservation in central government jobs." },
-    { t: "Implementation and aftermath", d: "The Mandal recommendations were implemented in 1990. In Indra Sawhney (1992) the Supreme Court upheld the 27% quota but required exclusion of the creamy layer and set a 50% overall ceiling." },
+    { t: "The Second Backward Classes Commission", d: "B.P. Mandal, appointed 1979, reported 1980. The Commission recommended 27% reservation in central jobs." },
+    { t: "Implementation and aftermath", d: "Implemented in 1990. Indra Sawhney (1992) upheld the 27% with a creamy-layer exclusion and a 50% ceiling." },
     { t: "The report goes to Parliament", d: "The President lays the Commission's report, with a memorandum on the action taken, before each House." }
   ],
   trap: "Article 340 creates a temporary investigating Commission. Article 338B creates the permanent National Commission for Backward Classes.\n\nKalelkar and Mandal came from Article 340. The standing NCBC came from a 1993 statute and then the 102nd Amendment."
@@ -179,10 +173,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 343 says the official language of the Union shall be Hindi in the Devanagari script, with the international form of Indian numerals for official purposes.",
   why: "Questions on official language are a staple of State papers and appear in UPSC matching sets. The article also answers a very common misconception.",
   concepts: [
-    { t: "What it says", d: "The official language of the Union shall be Hindi in the Devanagari script." },
     { t: "The numerals", d: "The numerals for official purposes are the international form of Indian numerals, which means 1, 2, 3, and not the Devanagari forms. Examiners love the small detail." },
     { t: "English for fifteen years", d: "English was to continue for official purposes for fifteen years from 1950, that is until 1965." },
-    { t: "What actually happened", d: "The Official Languages Act, 1963 provided that English *may* continue to be used indefinitely, in addition to Hindi. After the 1965 anti-Hindi agitations in Tamil Nadu the Act was amended in 1967 to make continuation effectively permanent." },
+    { t: "What actually happened", d: "The 1963 Act let English continue. A 1967 amendment, after the 1965 agitations, made that effectively permanent." },
     { t: "Hindi is not the national language", d: "The Constitution never uses that phrase for any language. The Constitution names an official language of the Union, which is a narrower thing." },
     { t: "The Eighth Schedule is separate", d: "The 22 languages listed there are recognised languages, relevant to Articles 344 and 351. Being in the Eighth Schedule does not make a language official." }
   ],
@@ -195,10 +188,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 348 says proceedings in the Supreme Court and the High Courts, and the authoritative texts of laws and Bills, shall be in English until Parliament decides otherwise.",
   why: "Language in the courts is a precise fact with a live policy debate behind it. The exception comes with a condition that is easy to test.",
   concepts: [
-    { t: "The default", d: "All proceedings in the Supreme Court and in every High Court shall be in English, until Parliament provides otherwise." },
-    { t: "Authoritative texts", d: "The authoritative texts of all Bills, Acts, ordinances, orders, rules, regulations and bye-laws, at both Union and State level, shall be in English." },
     { t: "The exception for High Courts", d: "The Governor of a State may, with the President's *previous consent*, authorise the use of Hindi or the State's official language in proceedings in that High Court." },
-    { t: "But not for judgments", d: "Even where that permission is given, any judgment, decree or order must still be in English, unless Parliament provides otherwise by law." },
+    { t: "But not for judgments", d: "Even with permission, judgments, decrees and orders stay in English." },
     { t: "Where it has been done", d: "Rajasthan, Uttar Pradesh, Madhya Pradesh and Bihar have permission to use Hindi in High Court proceedings. Requests from Tamil Nadu, Gujarat and others have been declined." },
     { t: "Nothing for the Supreme Court", d: "There is no equivalent provision allowing any language other than English in the Supreme Court." }
   ],

@@ -130,22 +130,20 @@ partXVIII: {
 /* ---------- Part XV: Elections ---------- */
 
 "324": {
-  simple: "Superintendence, direction and control of elections vest in an Election Commission. That covers preparation of the electoral rolls, and the conduct of all elections to Parliament, State legislatures, and the offices of President and Vice-President.\n\n" +
-    "The Commission consists of the Chief Election Commissioner and such other Commissioners as the President may fix.",
-  catch: "The Chief Election Commissioner can be removed only in the same manner and on the same grounds as a Supreme Court judge. The other Commissioners can be removed on his recommendation.\n\n" +
-    "That asymmetry has been criticised for decades.\n\n" +
-    "Anoop Baranwal (2023) directed appointment by a committee of the Prime Minister, the Leader of the Opposition and the Chief Justice, until Parliament legislated. Parliament legislated in 2023, replacing the Chief Justice with a Union Minister.",
-  note: "The Commission was a single-member body until 1989, briefly three-member, then single again, and three-member since 1993. Its plenary power under this article is the constitutional basis of the Model Code of Conduct, which has no statutory force at all."
+  simple: "The Election Commission has superintendence, direction and control of elections. Its work covers preparing the electoral rolls and conducting elections to Parliament, the State legislatures, and the offices of President and Vice-President.\n\n" +
+    "The Commission has a Chief Election Commissioner and as many other Commissioners as the President fixes.",
+  catch: "The Chief Election Commissioner can be removed only in the way a Supreme Court judge can. But the other Commissioners can be removed on the Chief's recommendation. The gap has been criticised for decades.\n\n" +
+    "Appointment has also been fought over. In Anoop Baranwal (2023), the Court said a committee of the Prime Minister, the Leader of the Opposition and the Chief Justice should choose, until Parliament made a law. Parliament's 2023 law replaced the Chief Justice with a Union Cabinet Minister, giving the government a majority on the panel."
 },
 "325": {
   simple: "There is one general electoral roll for every constituency. No one may be excluded from it, or claim inclusion in it, on grounds only of religion, race, caste or sex.",
   catch: "This is the constitutional rejection of separate electorates. It is the single most consequential break from the Government of India Act, 1935."
 },
 "326": {
-  simple: "Elections to the Lok Sabha and to every State Legislative Assembly are on the basis of adult suffrage.\n\n" +
-    "Every citizen who is eighteen or over, and not disqualified for non-residence, unsoundness of mind, crime, or corrupt or illegal practice, is entitled to be registered.",
-  catch: "The voting age was twenty-one until the 61st Amendment lowered it in 1989.\n\n" +
-    "Disqualification for 'crime' is left to ordinary law. That is how convicted prisoners come to be barred by section 62(5) of the Representation of the People Act."
+  simple: "Elections to the Lok Sabha and the State Assemblies are held on the basis of adult suffrage.\n\n" +
+    "Every citizen aged eighteen or more can register as a voter, unless disqualified for non-residence, unsoundness of mind, crime, or corrupt or illegal practice.",
+  catch: "The voting age was twenty-one until the 61st Amendment (1988) lowered it to eighteen, in time for the 1989 general election.\n\n" +
+    "The Constitution requires adult suffrage. But the individual's right to vote comes from the Representation of the People Act, 1951, so the Court calls it a statutory right. Ordinary law also fills in the disqualifications, which is how section 62(5) of the Act bars prisoners from voting."
 },
 "327": {
   simple: "Parliament may make provision by law about all matters relating to elections to Parliament and to State legislatures, including electoral rolls, delimitation, and everything needed to secure their due constitution.",
@@ -170,9 +168,9 @@ partXVIII: {
 /* ---------- Part XVI ---------- */
 
 "330": {
-  simple: "Seats are reserved in the Lok Sabha for Scheduled Castes and Scheduled Tribes, in proportion to their population in the State or Union territory concerned.",
-  catch: "This is reservation of constituencies, not of candidates.\n\n" +
-    "In a reserved seat every voter votes, but only SC or ST candidates may stand. That is why reserved seats produce representatives acceptable to the general electorate."
+  simple: "Seats in the Lok Sabha are reserved for Scheduled Castes and Scheduled Tribes, in proportion to their share of the population in each State or Union territory.",
+  catch: "The reservation is of constituencies, not of voters. In a reserved seat everyone votes, but only a Scheduled Caste or Scheduled Tribe candidate may stand. So the winner must be acceptable to the whole electorate.\n\n" +
+    "The reservation was meant to last ten years. Article 334 has been extended every decade since, most recently by the 104th Amendment (2019) to 25 January 2030."
 },
 "330A": {
   simple: "One-third of the seats reserved for Scheduled Castes and Scheduled Tribes in the Lok Sabha, and one-third of the total seats, shall be reserved for women.",
@@ -208,9 +206,9 @@ partXVIII: {
     "Two conditions must be satisfied first, a census and a delimitation, and neither has a fixed date."
 },
 "335": {
-  simple: "The claims of Scheduled Castes and Scheduled Tribes shall be taken into consideration in appointments to services and posts, consistently with the maintenance of efficiency of administration.",
-  catch: "'Consistently with the maintenance of efficiency of administration' is the phrase that has been fought over since 1950.\n\n" +
-    "The 82nd Amendment added a proviso allowing relaxation in qualifying marks and evaluation standards, which in effect defines efficiency down for this purpose."
+  simple: "The claims of Scheduled Castes and Scheduled Tribes to government posts shall be taken into account, consistently with keeping the administration efficient.",
+  catch: "The article cuts both ways. The article requires the claims to be considered, which supports reservation. But it ties them to efficiency, which limits reservation.\n\n" +
+    "The 82nd Amendment (2000) added a proviso that lets the State relax qualifying marks and evaluation standards in promotion. In M. Nagaraj (2006), though, the Court still required data showing that reservation in promotion does not harm efficiency. Later cases have said a representative administration is itself efficient."
 },
 "336": {
   simple: "This was a transitional provision giving Anglo-Indians a declining share of posts in certain central services for the first ten years.",
@@ -221,10 +219,10 @@ partXVIII: {
   catch: "Wholly spent. The grants tapered to nothing by 1960."
 },
 "338": {
-  simple: "There shall be a National Commission for Scheduled Castes, with a Chairperson, Vice-Chairperson and three other members appointed by the President.\n\n" +
-    "It investigates and monitors safeguards, inquires into complaints, advises on planning, and reports annually to the President. It has the powers of a civil court.",
-  catch: "Its reports go to the President and are laid before Parliament with an action-taken memorandum. This is the same advisory-with-publicity model as the Finance Commission.\n\n" +
-    "The Commission must be consulted on all major policy matters affecting Scheduled Castes."
+  simple: "There shall be a National Commission for Scheduled Castes. The President appoints its Chairperson, Vice-Chairperson and three other members.\n\n" +
+    "The Commission monitors the safeguards for Scheduled Castes, inquires into complaints, advises on planning, and reports to the President every year. While investigating, the Commission has the powers of a civil court.",
+  catch: "The Commission advises, and its force comes from publicity. The President lays its reports before Parliament, with a memorandum explaining any recommendation not accepted.\n\n" +
+    "The Union and every State must consult the Commission on all major policy matters affecting Scheduled Castes. The Commission became a multi-member constitutional body in 1990, and the 89th Amendment (2003) split off a separate Commission for Scheduled Tribes."
 },
 "338A": {
   simple: "Article 338A applies the same scheme to a separate National Commission for Scheduled Tribes.",
@@ -240,9 +238,9 @@ partXVIII: {
   catch: "The power to direct a State on tribal welfare schemes is unusual. It is a direction on a State subject, backed by the grants under Article 275."
 },
 "340": {
-  simple: "The President may appoint a Commission to investigate the conditions of socially and educationally backward classes, and recommend steps to improve them. The report is laid before Parliament with an action-taken memorandum.",
-  catch: "The Kalelkar Commission (1953) and the Mandal Commission (1979) were both appointed under this article.\n\n" +
-    "Mandal's recommendation of 27 per cent OBC reservation, implemented in 1990, produced Indra Sawhney."
+  simple: "The President may appoint a Commission to investigate the conditions of the socially and educationally backward classes, and recommend how to improve them. The report is laid before Parliament with a memorandum on the action taken.",
+  catch: "A Commission under Article 340 is appointed for one task, reports, and then ends. The Kalelkar Commission (1953) and the Mandal Commission (1979) were both appointed under it.\n\n" +
+    "Mandal recommended 27 per cent reservation for backward classes in central government jobs. The government implemented it in 1990, and Indra Sawhney (1992) upheld the quota with a creamy-layer exclusion and a 50 per cent ceiling."
 },
 "341": {
   simple: "The President, after consulting the Governor, may by public notification specify the castes, races or tribes deemed to be Scheduled Castes in relation to a State or Union territory. Only Parliament may add to or subtract from that list.",
@@ -262,10 +260,10 @@ partXVIII: {
 /* ---------- Part XVII: Official language ---------- */
 
 "343": {
-  simple: "The official language of the Union is Hindi in Devanagari script, with international numerals.\n\n" +
-    "English was to continue for fifteen years from 1950. Parliament may by law provide for its continued use thereafter.",
-  catch: "Parliament did so, in the Official Languages Act, 1963.\n\n" +
-    "After the anti-Hindi agitation in Madras it amended that Act in 1967, guaranteeing that English would continue until every State that had not adopted Hindi resolved otherwise. In effect, indefinitely."
+  simple: "The official language of the Union is Hindi in the Devanagari script. Official numbers use the international form of Indian numerals.\n\n" +
+    "English was to continue for fifteen years from 1950. Parliament could provide by law for English to continue after that.",
+  catch: "Parliament did so in the Official Languages Act, 1963. After the anti-Hindi agitations of 1965 in Madras, the Act was amended in 1967. English would now continue until every State that had not adopted Hindi agreed to drop it, which in effect means indefinitely.\n\n" +
+    "So Hindi is the official language of the Union, and English an additional official language by statute. The Constitution names no national language."
 },
 "344": {
   simple: "The President shall constitute a Commission on official language after five years, and again after ten.\n\n" +
@@ -285,10 +283,10 @@ partXVIII: {
   catch: "This is the route by which a language spoken by a large minority can be recognised within a State, without displacing its official language. It has been used for Urdu in several States."
 },
 "348": {
-  simple: "Proceedings in the Supreme Court and every High Court are in English, as are the authoritative texts of Bills, Acts, ordinances, orders, rules and regulations, until Parliament provides otherwise.\n\n" +
-    "A Governor may, with the President's previous consent, authorise Hindi or another State language in the High Court. That does not extend to judgments, decrees or orders.",
-  catch: "That last exclusion is why High Court judgments are still delivered in English, even in States that permit Hindi in argument.\n\n" +
-    "Several States have sought consent for Hindi judgments and been refused, on the Supreme Court's advice."
+  simple: "Proceedings in the Supreme Court and every High Court are in English, until Parliament provides otherwise. The authoritative texts of Bills, Acts, ordinances, orders, rules and regulations are in English too.\n\n" +
+    "With the President's previous consent, a Governor may allow Hindi or the State's official language in High Court proceedings. But judgments, decrees and orders must still be in English.",
+  catch: "So a High Court can hear arguments in Hindi and still deliver its judgment in English. Rajasthan, Uttar Pradesh, Madhya Pradesh and Bihar allow Hindi in High Court proceedings. Requests from Tamil Nadu, Gujarat and others have been declined.\n\n" +
+    "The Supreme Court has no such exception. Every proceeding there remains in English."
 },
 "349": {
   simple: "For fifteen years from 1950, a Bill changing the language used for the purposes in Article 348 needed the President's previous sanction. He had to consider the Language Commission's recommendation.",
