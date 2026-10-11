@@ -424,8 +424,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Reservation for Other Backward Classes in local bodies must rest on current evidence.',
-    'The 50 per cent ceiling on reservation applies to local bodies.',
     'So a State cannot carry over a flat 27 per cent quota into local bodies. The State must study each place first and stay within half the seats.'
   ],
   legacy: [

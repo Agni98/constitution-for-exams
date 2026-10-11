@@ -51,7 +51,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Pith and substance: a law is classified by its true nature, and side effects on a subject in another list do not make it invalid.',
     'So a money-lending law stays a money-lending law, even if it affects the promissory notes on which loans are given.'
   ],
   legacy: [
@@ -102,8 +101,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The taxing powers in the Seventh Schedule are separate from the powers to regulate.',
-    'How a tax is measured is different from what is taxed.',
     'So a State may tax its land and measure the tax by what the land produces, even where Parliament regulates the industry.'
   ],
   legacy: [
@@ -149,8 +146,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Repugnancy under Article 254 is limited to clashes on Concurrent List subjects.',
-    'A tax law is classified by its pith and substance, and side effects on another field do not make it invalid.',
     'So the drug makers had to bear the surcharge out of their profits, while patients still paid the controlled price.'
   ],
   legacy: [
@@ -193,8 +188,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The GST Council\'s recommendations guide the legislatures but do not bind them.',
-    'A combined supply is taxed as a whole, not split into separately taxed parts.',
     'So GST did not make the States give up their power to tax. Each legislature keeps the final say over its own GST law.'
   ],
   legacy: [
@@ -245,8 +238,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The freedom of trade under Article 301 protects the free movement of trade throughout India.',
-    'A tax that directly and immediately restricts that movement must meet the conditions of Article 304(b).',
     'So in 1960 the Court treated a tax on moving goods as a barrier to trade. Later benches narrowed this view, and in 2016 nine judges set it aside.'
   ],
   legacy: [
@@ -293,8 +284,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The right to property under Article 300A requires a public purpose and carries a right to compensation.',
-    'Laws that take away property are subject to the rule of law and to review by the courts.',
     'So property is no longer a fundamental right, but it is not unprotected. The State must show a public need and pay for what it takes.'
   ],
   legacy: [
@@ -346,8 +335,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Compensatory taxes and regulatory measures do not restrict the freedom of trade.',
-    'Taxing laws are subject to Part XIII of the Constitution.',
     'So a State could charge buses for using its roads without the President\'s permission, as long as the charge paid for the roads.'
   ],
   legacy: [
@@ -400,8 +387,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Taxes do not restrict the freedom of trade unless they discriminate against goods from other States.',
-    'The compensatory tax theory is no longer the test under Part XIII.',
     'So the question about a State tax is now simple. Does it treat goods from outside worse than local goods? If not, it is valid.'
   ],
   legacy: [
@@ -448,8 +433,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A State cannot override the decision of a water tribunal by passing its own law.',
-    'Disputes between States over river water are settled under Article 262, through tribunals set up under Parliament\'s law.',
     'So an upstream State cannot use its position on the river, or its own legislature, to keep the water from a downstream State.'
   ],
   legacy: [
@@ -495,8 +478,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Taking property under Article 300A needs a fair procedure, not just a power to take and compensation.',
-    'The seven procedural rights are the real content of the right to property.',
     'So the State cannot simply write its own name into the property records. The State must follow every step, from notice to a final decision.'
   ],
   legacy: [

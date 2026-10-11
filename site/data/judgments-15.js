@@ -59,7 +59,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'In 1986, a tribunal could replace a High Court only if it was an equally effective forum for judicial review.',
     'So the Court accepted the tribunal, but only after reshaping it to look like a court. Eleven years later, a larger bench went further.'
   ],
   legacy: [
