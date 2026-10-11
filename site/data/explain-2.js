@@ -187,13 +187,13 @@ partV: {
     "So the Vice-President's real influence depends on how the Rajya Sabha is run."
 },
 "64": {
-  simple: "The Vice-President is ex officio Chairman of the Rajya Sabha. He draws no Vice-President's salary while acting as President.",
-  catch: "He is not a member of the House he chairs. He therefore has no vote, except a casting vote to break a tie."
+  simple: "The Vice-President is, by virtue of the office, Chairman of the Rajya Sabha. While acting as President, the Vice-President does not chair the House and draws no Chairman's salary.",
+  catch: "The Chairman is not a member of the House. So the Chairman has no ordinary vote, only a casting vote to break a tie."
 },
 "65": {
-  simple: "When the office of President is vacant, or the President cannot act, the Vice-President acts as President and has all the President's powers and immunities.",
-  catch: "The Constitution says nothing about what happens if both offices fall vacant at once.\n\n" +
-    "That gap is filled by the Presidential Succession Act, 1969, under which the Chief Justice of India acts. It is a statute, not a constitutional provision."
+  simple: "When the President's office is vacant, or the President cannot act, the Vice-President acts as President, with all the President's powers and immunities.",
+  catch: "The Constitution says nothing about what happens if both offices are vacant at once.\n\n" +
+    "The President (Discharge of Functions) Act, 1969 fills the gap. Under it the Chief Justice of India acts as President. But the rule comes from a statute, not from the Constitution."
 },
 "66": {
   simple: "The Vice-President is elected by the members of both Houses of Parliament. They vote by proportional representation through the single transferable vote, in a secret ballot.\n\n" +
@@ -202,26 +202,26 @@ partV: {
     "So the Vice-President is chosen by Parliament alone."
 },
 "67": {
-  simple: "The Vice-President holds office for five years. He may resign to the President. He may be removed by a Rajya Sabha resolution passed by a majority of all its then members and agreed to by the Lok Sabha.",
-  catch: "Only fourteen days' notice is needed and no ground has to be stated.\n\n" +
-    "The resolution needs an effective majority in the Rajya Sabha, which is a lower bar than presidential impeachment."
+  simple: "The Vice-President holds office for five years, and may resign by writing to the President. The Vice-President may be removed by a Rajya Sabha resolution, passed by a majority of all its then members and agreed to by the Lok Sabha.",
+  catch: "Only fourteen days' notice is needed, and no ground has to be stated.\n\n" +
+    "So removing a Vice-President is far easier than impeaching a President, which needs two-thirds of the total membership of each House."
 },
 "68": {
-  simple: "This article fixes the timing for filling a vacancy in the office of Vice-President: before expiry of the term for a normal vacancy, and as soon as possible for a casual one.",
-  catch: "There is no provision for anyone to discharge the Vice-President's functions during a vacancy, unlike the presidency, which Article 65 always fills. The Rajya Sabha's Deputy Chairman simply presides in the meantime."
+  simple: "An election to fill the Vice-President's office must be completed before the outgoing Vice-President's term ends. A vacancy for any other reason must be filled as soon as possible.",
+  catch: "Nobody acts as Vice-President during a vacancy. The presidency, by contrast, is always filled under Article 65. In the meantime the Rajya Sabha's Deputy Chairman simply presides."
 },
 "69": {
-  simple: "The Vice-President takes his oath before the President. He swears true faith and allegiance to the Constitution and faithful discharge of duty.",
-  catch: "Compare Article 60. There is no promise here to preserve, protect and defend the Constitution, because the Vice-President has no executive charge."
+  simple: "The Vice-President takes the oath before the President. The Vice-President swears true faith and allegiance to the Constitution, and to carry out the duties of the office faithfully.",
+  catch: "Compare Article 60. The Vice-President makes no promise to preserve, protect and defend the Constitution, because the office carries no executive charge."
 },
 "70": {
-  simple: "Parliament may provide for the discharge of the President's functions in any contingency the Constitution does not cover.",
-  catch: "This is the authority for the Presidential Succession Act, 1969."
+  simple: "Parliament may provide for the President's functions to be carried out in any situation the Constitution does not cover.",
+  catch: "The President (Discharge of Functions) Act, 1969 was made under Article 70."
 },
 "71": {
-  simple: "All doubts and disputes about the election of a President or Vice-President go to the Supreme Court, and its decision is final.\n\n" +
-    "An election cannot be invalidated merely because the electoral college was incomplete, and acts done before an election is set aside remain valid.",
-  catch: "The 39th Amendment tried to move these disputes out of the courts. The 44th Amendment restored the Supreme Court's jurisdiction."
+  simple: "All doubts and disputes about the election of a President or Vice-President go to the Supreme Court, whose decision is final.\n\n" +
+    "An election cannot be set aside only because the electoral college had vacancies. And acts done before an election is set aside remain valid.",
+  catch: "The 39th Amendment (1975) tried to take these disputes away from the courts. The 44th Amendment (1978) gave them back to the Supreme Court."
 },
 "72": {
   simple: "The President may pardon a convict, or suspend, remit or commute a sentence.\n\n" +
@@ -230,8 +230,8 @@ partV: {
     "Courts will not weigh the merits again. But Epuru Sudhakar (2006) held that a decision can be struck down if it is arbitrary, made in bad faith, or based on irrelevant grounds. And Shatrughan Chauhan (2014) held that a long, unexplained delay in deciding a mercy petition is itself a ground to commute a death sentence."
 },
 "73": {
-  simple: "The Union's executive power extends to every matter on which Parliament can legislate, and to rights and jurisdiction exercisable under a treaty.",
-  catch: "It does not extend to matters where a State has executive power, unless the Constitution or a Union law says so. This is the mirror image of Article 162."
+  simple: "The executive power of the Union covers every matter on which Parliament can make laws, and the rights and powers India holds under a treaty.",
+  catch: "But the Union's executive power does not reach matters where a State has executive power, unless the Constitution or a law of Parliament says so. Article 162 sets the same rule from the State's side."
 },
 
 /* ---------- Council of Ministers ---------- */
@@ -256,9 +256,9 @@ partV: {
     "The Attorney-General is also not a full-time government lawyer, and is not a minister. Private practice is allowed, though not against the Government of India."
 },
 "77": {
-  simple: "All executive action of the Union is expressed to be taken in the President's name. An order authenticated in the prescribed manner cannot be questioned on the ground that the President did not make it.\n\n" +
-    "The President makes rules for allocating business among Ministers.",
-  catch: "This is the legal machinery of Cabinet government. The Government of India (Allocation of Business) Rules and the Transaction of Business Rules both come from clause (3)."
+  simple: "All executive action of the Union is taken in the President's name. An order signed in the prescribed way cannot be challenged on the ground that the President did not make it.\n\n" +
+    "The President makes rules dividing the government's business among the ministers.",
+  catch: "Article 77 is the legal machinery of Cabinet government. The Allocation of Business Rules and the Transaction of Business Rules both come from clause (3)."
 },
 "78": {
   simple: "The Prime Minister has three duties towards the President.\n\n" +

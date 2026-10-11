@@ -25,9 +25,9 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "So the 42nd Amendment froze the State-wise totals on 1971 figures. The 84th Amendment extended the freeze until the first census after 2026. The 87th let boundaries inside each State be redrawn on 2001 figures, and the new boundaries took effect in 2008."
 },
 "82": {
-  simple: "After every census, Parliament shall by law readjust the allocation of seats and the division of each State into constituencies.",
-  catch: "The provisos suspend the readjustment of allocation until after the first census taken after 2026.\n\n" +
-    "That is what makes delimitation one of the sharpest federal questions of the next decade."
+  simple: "After every census, Parliament shall by law readjust how Lok Sabha seats are shared among the States, and how each State is divided into constituencies.",
+  catch: "The provisos put off any change in the sharing of seats until after the first census taken after 2026.\n\n" +
+    "So delimitation will be one of the sharpest questions between the Union and the States in the coming decade."
 },
 "83": {
   simple: "The Rajya Sabha is never dissolved. One-third of its members retire every second year.\n\n" +
@@ -36,9 +36,9 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "The emergency extension has been used once. The Lok Sabha elected in 1971 was extended twice during the 1975 Emergency, and ran on into 1977."
 },
 "84": {
-  simple: "To be a member of Parliament you must be a citizen, take the prescribed oath, and be at least thirty for the Rajya Sabha or twenty-five for the Lok Sabha. Parliament may prescribe further qualifications.",
-  catch: "The Constitution sets only a floor. The disqualifications that decide most real cases are statutory.\n\n" +
-    "The main one is section 8 of the Representation of the People Act, 1951. Lily Thomas (2013) held that disqualification on conviction operates immediately, with no protection for a pending appeal."
+  simple: "A member of Parliament must be a citizen and take the prescribed oath. A member must be at least thirty for the Rajya Sabha, or twenty-five for the Lok Sabha. Parliament may add further qualifications.",
+  catch: "The Constitution sets only a floor. The disqualifications that decide most real cases come from statute, mainly section 8 of the Representation of the People Act, 1951.\n\n" +
+    "In Lily Thomas (2013) the Court held that disqualification on conviction takes effect at once. A pending appeal gives no protection."
 },
 "85": {
   simple: "The President summons each House from time to time. No more than six months may pass between the last sitting of one session and the first sitting of the next.\n\n" +
@@ -47,36 +47,38 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "So nothing in Article 85 stops sitting days from falling, and they have fallen steadily over the decades."
 },
 "86": {
-  simple: "The President may address either House or both together. He may also send messages to a House about a pending Bill or anything else, and the House must consider them with all convenient despatch.",
-  catch: "The power to send a message has never been used. The address power is exercised on the government's advice, and the address itself is written by the government."
+  simple: "The President may address either House, or both together. The President may also send a message to a House about a pending Bill or anything else, and the House must consider it promptly.",
+  catch: "The power to send a message has never been used. The power to address is used on the government's advice, and the government writes the address."
 },
 "87": {
-  simple: "The President addresses both Houses assembled together at the first session after each general election, and at the first session of each year. He sets out the reasons for summoning them.",
-  catch: "This is the Address to Parliament. It is written by the government and read by the President, and it is debated through the Motion of Thanks, which is a confidence test in disguise."
+  simple: "The President addresses both Houses together at the first session after each general election, and at the first session of each year. The address gives the reasons for summoning Parliament.",
+  catch: "The government writes the address, and the President reads it. Parliament debates it through the Motion of Thanks.\n\n" +
+    "The Motion works as a test of confidence. A government that lost the vote would be in serious trouble."
 },
 "88": {
-  simple: "Every Minister and the Attorney-General may speak and take part in the proceedings of either House, and of any committee of which they are named a member.",
-  catch: "This is what lets a Minister who sits in the Rajya Sabha pilot a Bill through the Lok Sabha.\n\n" +
-    "What he can never do is vote in a House he does not belong to, not even on his own Bill."
+  simple: "Every minister and the Attorney-General may speak and take part in the proceedings of either House, and of any committee they are named to.",
+  catch: "So a minister who sits in the Rajya Sabha can steer a Bill through the Lok Sabha.\n\n" +
+    "But a minister can never vote in a House they do not belong to, not even on their own Bill."
 },
 
 /* ---------- Officers of Parliament ---------- */
 
 "89": {
-  simple: "The Vice-President is ex officio Chairman of the Rajya Sabha. The House chooses a Deputy Chairman from among its own members.",
-  catch: "The Chairman is not a member of the House he presides over. His entire authority over it comes from this article, and he votes only to break a tie."
+  simple: "The Vice-President is, by virtue of the office, Chairman of the Rajya Sabha. The House chooses a Deputy Chairman from among its own members.",
+  catch: "The Chairman is not a member of the House. The Chairman's whole authority over the Rajya Sabha comes from Article 89, and the Chairman votes only to break a tie."
 },
 "90": {
-  simple: "The Deputy Chairman's office falls vacant on ceasing to be a member, on resignation to the Chairman, or on removal by a resolution of the House passed by a majority of all its then members after fourteen days' notice.",
-  catch: "Removal needs a majority of all the then members. That is an effective majority, and a higher bar than a simple majority of those present and voting."
+  simple: "The Deputy Chairman leaves office on ceasing to be a member, or on resigning by writing to the Chairman. The House may also remove the Deputy Chairman, by a resolution passed by a majority of all its then members after fourteen days' notice.",
+  catch: "A majority of all the then members is a higher bar than a majority of those present and voting."
 },
 "91": {
-  simple: "The Deputy Chairman performs the Chairman's duties when the office is vacant. So does a member appointed by the President, where necessary.",
-  catch: "When the Vice-President is acting as President, the Deputy Chairman runs the Rajya Sabha. That is why the office matters more than its ceremonial description suggests."
+  simple: "The Deputy Chairman does the Chairman's work while the Chairman's office is vacant. If both are unavailable, a member appointed by the President does it.",
+  catch: "When the Vice-President is acting as President, the Deputy Chairman runs the Rajya Sabha. So the office matters more than its ceremonial description suggests."
 },
 "92": {
-  simple: "When a resolution for the removal of the Chairman or Deputy Chairman is under consideration, that person cannot preside. The Chairman may still speak and vote in the proceedings, though not on the resolution itself.",
-  catch: "A presiding officer facing removal loses the chair but not the vote."
+  simple: "While a resolution to remove the Chairman or the Deputy Chairman is being considered, that person cannot preside.\n\n" +
+    "The Chairman may still speak and take part in the proceedings. But the Chairman may not vote at all while the resolution is being considered, on it or on anything else.",
+  catch: "The Lok Sabha Speaker is treated differently. Under Article 96 a Speaker facing removal may vote in the first instance, because the Speaker is a member of the House. The Chairman is not."
 },
 "93": {
   simple: "The Lok Sabha chooses two of its members as Speaker and Deputy Speaker, \"as soon as may be\". When either office falls vacant, the House chooses another member.",
