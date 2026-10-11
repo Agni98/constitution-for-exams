@@ -266,28 +266,29 @@ partVI: {
   simple: "Article 206 lets a State legislature make votes on account, votes of credit and exceptional grants, as Parliament can under Article 116."
 },
 "207": {
-  simple: "A Bill for taxation or for expenditure from the State's Consolidated Fund needs the Governor's recommendation, and cannot be introduced in the Legislative Council.",
-  catch: "A Money Bill and a Financial Bill are not the same thing. A Financial Bill needs the Governor's recommendation but leaves the Council's ordinary powers intact."
+  simple: "A Bill that includes any Money Bill matter, along with other provisions, needs the Governor's recommendation to be introduced, and cannot start in the Legislative Council.\n\n" +
+    "A Bill that would involve spending from the State's Consolidated Fund needs the Governor's recommendation before either House considers it.",
+  catch: "A Bill of either kind is a Financial Bill, not a Money Bill. So the Council keeps its ordinary powers over it, even where the Bill could not start there."
 },
 "208": {
   simple: "Each House of a State legislature may make rules for its own procedure.",
-  catch: "As at the Union level, the rules — not the Constitution — decide what business a House actually transacts."
+  catch: "As in Parliament, the rules, not the Constitution, decide what business a House actually takes up."
 },
 "209": {
-  simple: "A State legislature may by law regulate financial procedure and the timely completion of financial business, overriding the House's own rules.",
-  catch: "Almost no State has made such a law. State financial procedure runs on House rules alone."
+  simple: "A State legislature may make a law on financial procedure and on finishing financial business on time. The law would override the House's own rules.",
+  catch: "In practice, State financial procedure runs mainly on each House's own rules."
 },
 "210": {
-  simple: "Business in a State legislature is transacted in the official language of the State, in Hindi or in English. The presiding officer may permit a member's mother tongue.",
-  catch: "The English limb was to lapse after fifteen years. Most States have extended it by law."
+  simple: "A State legislature does its business in the State's official language, in Hindi or in English. The presiding officer may let a member use their mother tongue.",
+  catch: "The use of English was to end after fifteen years, unless the State legislature decided otherwise by law."
 },
 "211": {
-  simple: "No discussion may take place in a State legislature on the conduct of a judge of the Supreme Court or a High Court in the discharge of his duties.",
-  catch: "A State legislature cannot debate a judge's conduct even though it has no role in removing him. Removal is entirely Parliament's business under Article 218."
+  simple: "A State legislature may not discuss the conduct of a Supreme Court or High Court judge in carrying out judicial duties.",
+  catch: "The bar is total, because a State legislature has no part in removing a judge. Removal is entirely Parliament's business, under Article 218."
 },
 "212": {
-  simple: "The validity of proceedings in a State legislature cannot be questioned on the ground of an alleged irregularity of procedure. Its officers are not subject to a court's jurisdiction for regulating procedure.",
-  catch: "As with Article 122, 'irregularity' is not 'illegality'. Courts have entertained challenges where a proceeding was said to be unconstitutional rather than merely irregular."
+  simple: "No court may question the validity of proceedings in a State legislature on the ground of an irregularity of procedure. Nor can a court act against the legislature's officers for regulating procedure.",
+  catch: "As under Article 122, an irregularity is not the same as an illegality. Courts have heard challenges where a proceeding was said to be unconstitutional, not merely irregular."
 },
 "213": {
   simple: "Unless the State legislature is in session, the Governor may make an ordinance when immediate action is needed. The ordinance has the force of an Act of the State legislature.\n\n" +
@@ -304,56 +305,55 @@ partVI: {
     "Punjab and Haryana share one High Court. The Bombay, Madras, Calcutta and Gauhati High Courts also cover more than one State or Union territory."
 },
 "215": {
-  simple: "Every High Court is a court of record, with all the powers of such a court, including the power to punish for contempt of itself.",
-  catch: "Being a court of record means the contempt power is inherent, not statutory. The limits in the Contempt of Courts Act do not confine a High Court's own jurisdiction."
+  simple: "Every High Court is a court of record, with all the powers of such a court. The powers include punishing anyone for contempt of the Court.",
+  catch: "Because the High Court is a court of record, its power to punish contempt comes from the Constitution, not from a statute. So the limits in the Contempt of Courts Act do not confine it."
 },
 "216": {
-  simple: "A High Court consists of a Chief Justice and such other judges as the President may from time to time appoint.",
-  catch: "There is no fixed strength. The sanctioned strength of every High Court is set by executive order, which is one reason vacancies persist."
+  simple: "A High Court has a Chief Justice and as many other judges as the President appoints from time to time.",
+  catch: "The Constitution fixes no number of judges. The government sets each High Court's sanctioned strength by order, which is one reason vacancies persist."
 },
 "217": {
-  simple: "High Court judges are appointed by the President, after consultation with the Chief Justice of India, the Governor, and — for a judge other than the Chief Justice — the Chief Justice of that High Court.\n\n" +
-    "They hold office until sixty-two. The qualifications are citizenship plus ten years in judicial office, or ten years as an advocate of a High Court.",
-  catch: "The retirement age is sixty-two, three years below the Supreme Court's sixty-five. The anomaly has been criticised repeatedly and never fixed.\n\n" +
-    "The 15th Amendment raised it from sixty to sixty-two in 1963."
+  simple: "The President appoints High Court judges after consulting the Chief Justice of India and the Governor. For any judge other than the Chief Justice, the President also consults the High Court's Chief Justice.\n\n" +
+    "Judges serve until sixty-two. A judge must be a citizen with ten years in judicial office, or ten years as an advocate of a High Court.",
+  catch: "High Court judges retire at sixty-two, three years before Supreme Court judges. The 15th Amendment (1963) raised the age from sixty, and the gap with the Supreme Court has been criticised ever since."
 },
 "218": {
-  simple: "The removal provisions in Article 124 for Supreme Court judges apply to High Court judges too.",
-  catch: "Same ground, proved misbehaviour or incapacity. Same two-thirds address by both Houses of Parliament, not the State legislature.\n\n" +
-    "A State has no say in removing its own High Court's judges."
+  simple: "The rules in Article 124 for removing a Supreme Court judge apply to High Court judges too.",
+  catch: "So the ground is the same, proved misbehaviour or incapacity. The procedure is the same too, an address by both Houses of Parliament with a special majority.\n\n" +
+    "The State legislature has no say in removing its own High Court's judges."
 },
 "219": {
   simple: "Every High Court judge takes an oath before the Governor, in the form set out in the Third Schedule.",
-  catch: "The oath is taken before the Governor, but the judge owes the State government nothing. His appointment, transfer and removal are all outside the State's hands."
+  catch: "The judge takes the oath before the Governor, but owes the State government nothing. Appointment, transfer and removal are all outside the State's hands."
 },
 "220": {
-  simple: "A person who has held office as a permanent judge of a High Court may not plead or act in any court or before any authority in India. The Supreme Court and other High Courts are the exceptions.",
-  catch: "This is why retired High Court judges appear only in the Supreme Court or other High Courts, never before the court they sat in."
+  simple: "A person who has been a permanent High Court judge may not practise as a lawyer in any court or before any authority in India. The exceptions are the Supreme Court and the other High Courts.",
+  catch: "So a retired High Court judge may appear only in the Supreme Court or another High Court, never before the court where the judge sat."
 },
 "221": {
-  simple: "High Court judges' salaries are as Parliament determines. Allowances, leave and pension cannot be varied to their disadvantage after appointment.",
-  catch: "Salaries were moved from the Constitution to parliamentary law by the 54th Amendment. Judicial pay is now revised by ordinary legislation rather than by amendment."
+  simple: "High Court judges' salaries are fixed by Parliament. Their allowances, leave and pension cannot be changed to their disadvantage after appointment.",
+  catch: "The 54th Amendment (1986) moved judges' salaries out of the Constitution and into ordinary law. So judicial pay is now revised by an Act of Parliament, not by an amendment."
 },
 "222": {
-  simple: "The President may transfer a judge from one High Court to another, after consultation with the Chief Justice of India. A transferred judge receives a compensatory allowance.",
-  catch: "The transfer power was used punitively during the Emergency.\n\n" +
-    "The Second Judges Case made the Chief Justice of India's recommendation binding here too, and required consultation with the four senior-most judges."
+  simple: "The President may transfer a judge from one High Court to another, after consulting the Chief Justice of India. A transferred judge receives an allowance to make up for the move.",
+  catch: "The power to transfer was used to punish judges during the Emergency.\n\n" +
+    "The Second and Third Judges cases made the collegium's view decisive on transfers too. The Chief Justice of India must consult the four senior-most judges of the Supreme Court."
 },
 "223": {
-  simple: "When the office of Chief Justice of a High Court is vacant, or he cannot act, the President may appoint another judge of that Court to act as Chief Justice.",
-  catch: "Acting Chief Justices have on occasion held office for long periods. The Supreme Court has criticised this as leaving a High Court without settled administrative leadership."
+  simple: "When a High Court's Chief Justice's office is vacant, or the Chief Justice cannot act, the President may appoint another judge of that Court to act as Chief Justice.",
+  catch: "Some acting Chief Justices have served for long periods. The Supreme Court has criticised such delays, because they leave a High Court without settled leadership."
 },
 "224": {
-  simple: "The President may appoint additional judges for a temporary increase in business or arrears, for up to two years. He may also appoint acting judges when a permanent judge is absent.",
-  catch: "Most High Court judges are appointed as additional judges before confirmation. That gives the confirmation stage a quiet significance."
+  simple: "The President may appoint additional judges for up to two years, to deal with a temporary rise in work or a backlog. The President may also appoint an acting judge while a permanent judge is away.",
+  catch: "Most High Court judges start as additional judges and are confirmed later. So the confirmation stage matters more than it appears."
 },
 "224A": {
-  simple: "The Chief Justice of a High Court may request a retired judge of that or any other High Court to sit and act as a judge of the Court. This needs the President's previous consent and the retired judge's consent.",
-  catch: "This is the ad hoc judge provision. It was revived in Lok Prahari (2021) as a tool against pendency, and is used only sparingly."
+  simple: "With the President's consent, the Chief Justice of a High Court may ask a retired High Court judge to sit and act as a judge of the Court. The retired judge must agree.",
+  catch: "Article 224A provides for ad hoc judges. In Lok Prahari (2021) the Supreme Court revived it as a way to clear the backlog of cases, but it is still used sparingly."
 },
 "225": {
-  simple: "The jurisdiction of the High Courts, the law they administer, their powers and their existing rules of practice all continue as before the Constitution, subject to the Constitution and to legislation.",
-  catch: "The proviso removing the old revenue-matters bar means High Courts now have original jurisdiction in revenue cases too."
+  simple: "The jurisdiction of the High Courts, the law they apply, their powers and their rules of practice continue as they were before the Constitution, subject to the Constitution and to later laws.",
+  catch: "Before 1950 the High Courts could not hear revenue matters in their original jurisdiction. The proviso removes that bar, so they now can."
 },
 "226": {
   simple: "Every High Court may issue writs, including habeas corpus, mandamus, prohibition, quo warranto and certiorari. The writs can enforce fundamental rights, or serve any other purpose.\n\n" +
