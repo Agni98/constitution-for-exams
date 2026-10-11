@@ -550,3 +550,43 @@ footer.foot p { margin-bottom: 6px; }
 /* Judgment cards and a judgment's own page are in cases.css. */
 
 /* The home page has a stylesheet of its own: home.css. */
+
+/* ---------- reading text ----------
+   The prose a reader studies is set the way the Thinkers site sets its model
+   essays: Roboto Slab, a size up, with room between the lines and a softer
+   ink. Menus, labels, buttons, tags and numbers stay in the sans. The :root
+   in front of each selector lets these rules win over the sizes that the
+   later stylesheets set for each page. */
+:root .lede,
+:root .panel p, :root .panel li,
+:root .j-lede, :root .jsec p, :root .jlist li, :root .jnum li,
+:root .exam-says p, :root .exam-sec > p,
+:root .amd-what,
+:root .mq-q {
+  font-family: var(--ok-serif);
+  font-size: 17px; line-height: 1.78;
+}
+:root .panel p, :root .panel li,
+:root .jsec p, :root .jlist li, :root .jnum li,
+:root .exam-sec > p, :root .amd-what { color: var(--ok-read-ink); }
+:root .j-lede { font-size: 17.5px; line-height: 1.7; }
+:root .mq-q { font-size: 16.5px; line-height: 1.6; }
+
+/* the same face a size down, for notes, call-outs and the cards in a list */
+:root .jheld p, :root .jheld .jlist li,
+:root .exam-points li p, :root .exam-trap p,
+:root .amd-list li, :root .amd-note p, :root .amd-era-head p, :root .amd-kind p,
+:root .mq-s li, :root .mq-si p, :root .mq-ex li,
+:root .peek-says p {
+  font-family: var(--ok-serif);
+  font-size: 15.5px; line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  :root .lede,
+  :root .panel p, :root .panel li,
+  :root .j-lede, :root .jsec p, :root .jlist li, :root .jnum li,
+  :root .exam-says p, :root .exam-sec > p,
+  :root .amd-what { font-size: 16px; line-height: 1.72; }
+  :root .mq-q { font-size: 15.5px; }
+}
