@@ -548,11 +548,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 301 says trade, commerce and intercourse throughout India shall be free, subject to the rest of Part XIII.",
   why: "Freedom of trade across State borders comes up whenever entry taxes, checkposts or barriers between States are in the news.",
   concepts: [
-    { t: "What it says", d: "Trade, commerce and intercourse throughout the territory of India shall be free." },
     { t: "But heavily qualified", d: "Articles 302 to 305 immediately allow restrictions. The word \"free\" cannot be read on its own." },
     { t: "The freedom binds the State, not private parties", d: "The freedom is against legislative and executive action, not against a private business refusing to trade." },
-    { t: "Only direct restrictions are caught", d: "Atiabari Tea (1961) and Automobile Transport (1962) held that only a law that directly and immediately restricts the movement of trade is hit. Taxes that merely add to cost are not." },
-    { t: "Jindal Stainless (2016)", d: "A nine-judge bench discarded the compensatory tax doctrine that had been built on Automobile Transport, and held that a non-discriminatory tax does not by itself violate Article 301." },
+    { t: "Only direct restrictions are caught", d: "Only laws that directly and immediately restrict the movement of trade are caught." },
+    { t: "Jindal Stainless (2016)", d: "Nine judges dropped the compensatory tax doctrine. A non-discriminatory tax does not by itself breach Article 301." },
     { t: "\"Intercourse\" is wider than trade", d: "The word covers movement and dealings in general, not only commercial transactions." }
   ],
   seen: [
@@ -567,11 +566,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 302 lets Parliament restrict trade between States, or within a State, in the public interest. Articles 303 and 304 then limit what Parliament and the States may do.",
   why: "Article 302 and the two articles after it balance Article 301, and they contain a requirement of procedure that examiners like.",
   concepts: [
-    { t: "Article 302", d: "Parliament may impose restrictions on the freedom of trade in the public interest." },
-    { t: "Article 303: no preference", d: "Neither Parliament nor a State legislature may give preference to one State over another, or discriminate between States, on the basis of a trade entry in any List." },
-    { t: "The scarcity exception", d: "Parliament alone may discriminate if it declares that it is necessary to do so to deal with a situation arising from a scarcity of goods. A State cannot." },
-    { t: "Article 304(a): taxing imports", d: "A State may tax goods imported from other States, but only if similar goods produced within the State are taxed at the same rate. No discrimination." },
-    { t: "Article 304(b): reasonable restrictions", d: "A State may impose reasonable restrictions on trade in the public interest, but such a Bill needs the President's *previous* sanction before it is introduced." }
+    { t: "Article 303: no preference", d: "Neither Parliament nor a State may prefer one State over another in trade." },
+    { t: "The scarcity exception", d: "Parliament alone may discriminate, and only to deal with a scarcity of goods." },
+    { t: "Article 304(a): taxing imports", d: "A State may tax goods from other States only at the rate its own goods bear." },
+    { t: "Article 304(b): reasonable restrictions", d: "A State may impose reasonable restrictions, but the Bill needs the President's previous sanction." }
   ],
   trap: "A State Bill under Article 304(b) needs the President's previous sanction before it is introduced.\n\nBut missing that sanction does not by itself kill the Act. Article 255 says a requirement of recommendation or previous sanction is a matter of procedure only, and the Act is not invalid on that ground alone if the President later assented to it. So a fault in the order of steps can be cured, but a failure of the test of reasonableness cannot."
 },
@@ -582,9 +580,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 310 says Union civil servants hold office during the pleasure of the President, and State civil servants during the pleasure of the Governor, except as the Constitution provides.",
   why: "The doctrine of pleasure is the rule that Article 311 then cuts down, so the two are always examined together.",
   concepts: [
-    { t: "What it says", d: "Members of the defence services and civil services of the Union hold office during the pleasure of the President. State civil servants hold office during the pleasure of the Governor." },
-    { t: "Where it comes from", d: "The English common law rule that a Crown servant serves at the Crown's pleasure and can be dismissed at will." },
-    { t: "The doctrine is not absolute in India", d: "The article itself says \"except as expressly provided by this Constitution\". Article 311 is that express provision, and it is a large exception." },
+    { t: "Where it comes from", d: "English law, under which a Crown servant could be dismissed at will." },
+    { t: "The doctrine is not absolute in India", d: "The article yields to other express provisions, and Article 311 is the main one." },
     { t: "Who is outside the doctrine entirely", d: "Supreme Court and High Court judges, the Comptroller and Auditor-General, the Chief Election Commissioner, and the Chairman and members of the Union Public Service Commission. They have judge-like removal procedures instead." },
     { t: "Contractual appointments", d: "Where a person is appointed on contract, compensation may be paid for early termination, and the article expressly permits this." }
   ],
@@ -597,11 +594,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 311 says no civil servant can be dismissed by an authority lower than the one that appointed them. Nor can one be dismissed, removed or reduced in rank without an inquiry and a fair hearing.",
   why: "Article 311 protects civil servants from arbitrary dismissal. Questions ask about the three exceptions to that protection.",
   concepts: [
-    { t: "The first protection", d: "No civil servant may be dismissed or removed by an authority subordinate to the one that appointed them." },
-    { t: "The second protection", d: "No dismissal, removal or reduction in rank without an inquiry, in which the person is informed of the charges and given a reasonable opportunity to answer them." },
-    { t: "Exception one: conviction", d: "Where the person is dismissed on the ground of conduct that led to a conviction on a criminal charge, no inquiry is needed." },
-    { t: "Exception two: impracticability", d: "No inquiry is needed where the disciplinary authority records in writing that holding one is not reasonably practicable. An example is when witnesses are being intimidated." },
-    { t: "Exception three: security of the State", d: "Where the President or Governor is satisfied that an inquiry would not be expedient in the interest of the security of the State." },
+    { t: "Exception one: conviction", d: "Dismissal for conduct that led to a criminal conviction." },
+    { t: "Exception two: impracticability", d: "The authority records in writing that an inquiry is not reasonably practicable, for example when witnesses are being intimidated." },
+    { t: "Exception three: security of the State", d: "The President or Governor finds an inquiry inexpedient for the security of the State." },
     { t: "Who is covered", d: "Members of a civil service of the Union or a State, and persons holding a civil post. Defence personnel are not covered." },
     { t: "What is not covered", d: "Compulsory retirement, transfer, reversion at the end of a probation, and the termination of a temporary appointment are not \"dismissal, removal or reduction in rank\"." }
   ],
@@ -614,11 +609,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 312 lets Parliament create new All-India Services, common to the Union and the States, if the Rajya Sabha resolves by a two-thirds majority that the national interest needs it.",
   why: "The All-India Services are a distinctive feature of Indian federalism. The way to create a new one mirrors Article 249, which is instructive.",
   concepts: [
-    { t: "How a new service is created", d: "The Rajya Sabha must declare by resolution, supported by two thirds of members present and voting, that it is necessary in the national interest. Parliament may then create the service by law." },
-    { t: "Why the Rajya Sabha", d: "Because an All-India Service affects the States, and the Rajya Sabha is the House of the States. Article 249 follows the same logic." },
-    { t: "The existing services", d: "The Indian Administrative Service and the Indian Police Service were continued from before the Constitution. The Indian Forest Service was created in 1966 using this procedure." },
+    { t: "Why the Rajya Sabha", d: "The Rajya Sabha is the House of the States, as in Article 249." },
+    { t: "The existing services", d: "The IAS and IPS were continued. The Indian Forest Service came in 1966." },
     { t: "The unusual feature", d: "Officers are recruited and trained by the Union and are subject to Union disciplinary control, but they serve in the States. So the centre supplies the States' senior administrators." },
-    { t: "The all-India judicial service", d: "Article 312(2) expressly contemplates one, and says it shall not include any post inferior to that of a district judge. The service has never been created, despite repeated proposals." },
+    { t: "The all-India judicial service", d: "Contemplated by the article, for posts not below district judge, but never created." },
     { t: "The criticism", d: "States argue that officers loyal to the centre for their careers cannot be fully answerable to State governments. Supporters argue it is a unifying force." }
   ],
   seen: [
@@ -633,8 +627,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 315 says there shall be a Union Public Service Commission and a Public Service Commission for each State. Two or more States may agree to share a Joint Commission.",
   why: "The Public Service Commissions are constitutional bodies. Questions test their composition and the split between who appoints members and who removes them.",
   concepts: [
-    { t: "What it creates", d: "A Union Public Service Commission for the Union, and a Public Service Commission for each State." },
-    { t: "Joint Commissions", d: "Two or more States may ask Parliament to create a Joint State Public Service Commission for them, by law." },
+    { t: "Joint Commissions", d: "Created by a law of Parliament, after the States concerned ask." },
     { t: "The UPSC can serve a State", d: "If the Governor of a State requests and the President approves, the UPSC may perform functions for that State." },
     { t: "Who appoints", d: "The President appoints the Chairman and members of the UPSC and of a Joint Commission. The Governor appoints those of a State Commission." },
     { t: "Composition is not fixed", d: "The Constitution does not fix the number of members. The President determines it for the UPSC, and the Governor for a State Commission. About half must have held government office for at least ten years." },
@@ -649,9 +642,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 317 says only the President can remove a member of a Public Service Commission, and for misbehaviour only after an inquiry by the Supreme Court.",
   why: "The removal procedure is the sharpest fact in this group, because the authority that appoints a member is not always the one that removes.",
   concepts: [
-    { t: "Only the President can remove", d: "The rule applies to members of the UPSC, of a Joint Commission, and of any State Public Service Commission, even though a Governor appoints the last of these." },
-    { t: "Misbehaviour needs a Supreme Court inquiry", d: "The President makes the reference to the Supreme Court under Article 317 itself. Article 145 only supplies the procedure the Court follows in the inquiry. Only if the Court then reports that the member ought to be removed can the President remove them, and that report binds." },
-    { t: "The other grounds", d: "The President may remove a member who is adjudged insolvent, engages in paid employment outside their duties, or is unfit through infirmity of mind or body. No Supreme Court reference is needed for these." },
+    { t: "Only the President can remove", d: "The rule covers UPSC, Joint and State Commission members alike." },
+    { t: "Misbehaviour needs a Supreme Court inquiry", d: "The President refers the case to the Supreme Court, and the Court's report binds." },
+    { t: "The other grounds", d: "Insolvency, paid outside work or infirmity need no reference to the Court." },
     { t: "Suspension pending inquiry", d: "The President may suspend a member of the UPSC or a Joint Commission while a reference is pending. For a State Commission, the Governor may suspend." },
     { t: "What counts as misbehaviour", d: "The article defines one instance: being concerned or interested in any contract or agreement made by the Government of India or a State, or participating in its profit." }
   ],
@@ -664,10 +657,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 320 says the Public Service Commissions conduct examinations for government jobs, and must be consulted on recruitment, promotions, transfers and disciplinary matters.",
   why: "Questions ask the functions of the Public Service Commissions as a list. The catch is that their advice does not bind the government.",
   concepts: [
-    { t: "The main duty", d: "To conduct examinations for appointments to the services of the Union and of the States." },
-    { t: "What they are consulted on", d: "The Commission is consulted on methods of recruitment, on the principles for appointments, promotions and transfers, and on the suitability of candidates. The Commission is also consulted on disciplinary matters affecting civil servants, and on claims for costs and pensions arising from official duties." },
-    { t: "The advice is not binding", d: "The government may reject the Commission's advice. The point matters more than any other about Article 320." },
-    { t: "But rejection must be explained", d: "Where the government does not accept the advice, it must lay a memorandum explaining the reasons before Parliament or the State legislature. The check is political, not legal." },
+    { t: "What they are consulted on", d: "Recruitment, appointments, promotions and transfers, discipline, and claims for costs and pensions." },
+    { t: "The advice is not binding", d: "The government may reject the advice." },
+    { t: "But rejection must be explained", d: "The reasons for rejection go before the legislature. The check is political, not legal." },
     { t: "Exemptions", d: "The President or Governor may make regulations specifying matters on which the Commission need not be consulted. The regulations must be laid before the legislature." },
     { t: "The annual report", d: "Article 323 requires the Commission to present an annual report on its work, which is laid before the legislature along with a memorandum on any advice rejected." }
   ],

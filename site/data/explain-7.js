@@ -43,22 +43,20 @@ partXVIII: {
     "Most service conditions in India are governed by executive rules made under it, not by statute. Those rules yield the moment a legislature acts."
 },
 "310": {
-  simple: "Every member of the defence services and of the civil services of the Union or a State holds office during the pleasure of the President or the Governor.",
-  catch: "This is the doctrine of pleasure, inherited from the Crown.\n\n" +
-    "Here it is expressly subject to Article 311, which is what turns an absolute power into a conditional one."
+  simple: "Members of the defence services and the civil services of the Union hold office during the pleasure of the President. State civil servants hold office during the pleasure of the Governor.",
+  catch: "The rule is the doctrine of pleasure, taken from English law. A servant of the Crown could be dismissed at will.\n\n" +
+    "But in India the doctrine yields to the rest of the Constitution. Article 311 protects almost every civil servant against dismissal without an inquiry. Judges, the Comptroller and Auditor-General and some other office-holders have their own removal procedures instead."
 },
 "311": {
-  simple: "No civil servant may be dismissed or removed by an authority subordinate to the one that appointed him.\n\n" +
-    "No one may be dismissed, removed or reduced in rank except after an inquiry, in which he is informed of the charges and given a reasonable opportunity to answer them.",
-  catch: "Clause (2) has three provisos that switch the inquiry off entirely.\n\n" +
-    "They are conviction on a criminal charge; a written record by the disciplinary authority that holding an inquiry is not reasonably practicable; and satisfaction of the President or Governor that an inquiry is not expedient in the interest of the security of the State.\n\n" +
-    "The second and third are the contested ones. Courts review the reasons rather than the satisfaction."
+  simple: "A civil servant cannot be dismissed or removed by an authority below the one that made the appointment.\n\n" +
+    "Nor can a civil servant be dismissed, removed or reduced in rank without an inquiry. The person must be told the charges and given a fair chance to answer them.",
+  catch: "Three exceptions switch the inquiry off. The first is dismissal for conduct that led to a criminal conviction. The second is where the authority records in writing that an inquiry is not reasonably practicable. The third is where the President or Governor decides that an inquiry would not be expedient for the security of the State.\n\n" +
+    "The second and third exceptions are the ones fought over in court. Courts examine the reasons given, not the satisfaction itself."
 },
 "312": {
-  simple: "If the Rajya Sabha resolves by two-thirds that it is necessary in the national interest, Parliament may create All-India Services common to the Union and the States, and regulate their recruitment and conditions of service.",
-  catch: "The IAS and the Indian Police Service are deemed created under this article.\n\n" +
-    "An All-India Judicial Service is expressly contemplated by clause (3), and has never been created.\n\n" +
-    "Note again that it is the Rajya Sabha, the States' House, that must authorise it."
+  simple: "If the Rajya Sabha resolves, by two-thirds of the members present and voting, that the national interest requires it, Parliament may create new All-India Services. The services are common to the Union and the States.",
+  catch: "The Rajya Sabha must start the process, because an All-India Service affects the States and the Rajya Sabha is the House of the States. Article 249 follows the same logic.\n\n" +
+    "The IAS and the IPS existed before 1950 and continue under the article. The Indian Forest Service was created in 1966 by this procedure. An all-India judicial service is expressly contemplated, but has never been created."
 },
 "312A": {
   simple: "Parliament may vary or revoke the conditions of service of officers who came from the former Secretary of State's services. No such law may be questioned in any court.",
@@ -74,8 +72,9 @@ partXVIII: {
 },
 "315": {
   simple: "There shall be a Public Service Commission for the Union and one for each State.\n\n" +
-    "Two or more States may agree to have a Joint Commission. The Union Commission may serve a State if its Governor requests it and the President approves.",
-  catch: "A Joint Public Service Commission needs a resolution of the legislatures of the States concerned, plus Parliament's law. That is why so few exist."
+    "Two or more States may agree to share a Joint Commission. The UPSC may also serve a State, if the Governor asks and the President agrees.",
+  catch: "A State Commission is created by the Constitution. A Joint Commission needs resolutions of the State legislatures concerned and then a law of Parliament, so few have been set up.\n\n" +
+    "The appointing authority also differs. The President appoints the members of the UPSC and of a Joint Commission, and the Governor appoints those of a State Commission. But only the President can remove any of them."
 },
 "316": {
   simple: "Members of a Public Service Commission are appointed by the President for the Union or a Joint Commission, and by the Governor for a State.\n\n" +
@@ -83,10 +82,10 @@ partXVIII: {
   catch: "The requirement that half the members have government experience is meant to bring administrative knowledge in. It is criticised for making the Commissions a retirement posting."
 },
 "317": {
-  simple: "A Public Service Commission member may be removed by the President on the ground of misbehaviour, but only after the Supreme Court reports on a reference that he ought to be removed.\n\n" +
-    "He may also be removed for insolvency, for paid employment outside his duties, or for infirmity.",
-  catch: "Even a State Commission member can only be removed by the President, not the Governor, and only after a Supreme Court inquiry.\n\n" +
-    "That is stronger tenure protection than a Governor himself enjoys."
+  simple: "Only the President can remove a member of a Public Service Commission. For misbehaviour, the President must first refer the case to the Supreme Court, and can remove the member only if the Court reports that removal is justified.\n\n" +
+    "The President may also remove a member for insolvency, paid work outside the job, or infirmity of mind or body.",
+  catch: "The rule covers State Commission members too, though a Governor appoints them. So the Governor appoints, but cannot remove.\n\n" +
+    "The Supreme Court's report binds the President. Members therefore have stronger protection of tenure than a Governor does."
 },
 "318": {
   simple: "The President or the Governor may make regulations on the number of members of a Commission, its staff and their conditions of service.",
@@ -98,9 +97,9 @@ partXVIII: {
   catch: "This is a deliberate anti-inducement rule, on the same logic as the bar on the Comptroller and Auditor-General in Article 148."
 },
 "320": {
-  simple: "The Commissions conduct examinations for appointments. They advise on recruitment methods, promotions and transfers, on disciplinary matters, and on claims for costs and pensions arising out of service.",
-  catch: "The Commission's advice is advisory only. The government may depart from it.\n\n" +
-    "Under clause (3) it must then lay every case of non-acceptance before Parliament or the State legislature, with reasons."
+  simple: "The Public Service Commissions conduct examinations for government jobs. They advise on methods of recruitment, appointments, promotions and transfers, disciplinary matters, and claims for costs and pensions arising from service.",
+  catch: "The advice does not bind the government, which may reject it. But the government must then lay a memorandum before Parliament or the State legislature, explaining why.\n\n" +
+    "So the check on rejection is political, not legal."
 },
 "321": {
   simple: "Parliament or a State legislature may confer additional functions on a Public Service Commission, including for local authorities and public institutions.",

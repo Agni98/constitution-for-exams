@@ -334,14 +334,14 @@ partXIII: {
 /* ---------- Part XIII ---------- */
 
 "301": {
-  simple: "Trade, commerce and intercourse throughout the territory of India shall be free.",
-  catch: "'Free' does not mean free of all regulation.\n\n" +
-    "Atiabari and Automobile Transport established that only restrictions which directly and immediately impede the movement of trade are hit, and that compensatory taxes fall outside.\n\n" +
-    "Jindal Stainless (2016), decided by nine judges, discarded the compensatory-tax doctrine altogether and held that a non-discriminatory tax does not offend Article 301 at all."
+  simple: "Trade, commerce and intercourse throughout India shall be free. The freedom is subject to the rest of Part XIII.",
+  catch: "\"Free\" does not mean free of all regulation. In Atiabari Tea (1961) and Automobile Transport (1962), the Court held that only laws that directly and immediately restrict the movement of trade are caught. A tax that merely adds to cost is not.\n\n" +
+    "Jindal Stainless (2016) went further. Nine judges dropped the compensatory tax doctrine, and held that a tax that does not discriminate does not breach Article 301 at all."
 },
 "302": {
-  simple: "Parliament may impose restrictions on freedom of trade, commerce and intercourse between States or within a State, in the public interest.",
-  catch: "Restrictions imposed under this article are still subject to Article 303's bar on discriminating between States."
+  simple: "Parliament may restrict trade, commerce and intercourse between States, or within a State, in the public interest.",
+  catch: "Article 303 then limits Parliament and the States. Neither may prefer one State over another in trade. Only Parliament may discriminate, and only to deal with a scarcity of goods.\n\n" +
+    "Article 304 lets a State tax goods from other States, if its own goods bear the same tax. A State may also impose reasonable restrictions in the public interest, but the Bill needs the President's previous sanction."
 },
 "303": {
   simple: "Neither Parliament nor a State legislature may make a law giving preference to one State over another, or discriminating between States, by virtue of an entry relating to trade and commerce.\n\n" +
