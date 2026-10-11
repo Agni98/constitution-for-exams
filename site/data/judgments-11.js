@@ -157,8 +157,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The Houses of Parliament can expel members as part of their privileges.',
-    'Parliamentary privilege can be reviewed by the courts for illegality and unconstitutionality.',
     'So the House can throw out members who sold their questions. But the courts keep a narrow power to check that the House acted within the Constitution.'
   ],
   legacy: [
@@ -213,8 +211,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   principles: [
     'Tribunals that take over the work of courts must be independent of the government, especially in appointments and tenure.',
-    'The reach of a Money Bill under Article 110 is still to be settled by a larger bench.',
-    'So the government cannot pick and control the people who decide cases against it. The question of using a Money Bill to avoid the Rajya Sabha remains open.'
+    'So the government cannot pick and control the people who decide cases against it.'
   ],
   legacy: [
     'In Madras Bar Association v. Union of India (2020), the Court directed the government to set up a National Tribunals Commission.',
@@ -270,8 +267,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'State measures that affect privacy must pass the test of proportionality.',
-    'Aadhaar may be required for welfare benefits paid for by the State, but not for private services.',
     'So Aadhaar survived as a tool for delivering welfare, but not as a key that every bank, phone company and school could demand.'
   ],
   legacy: [
@@ -321,9 +316,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Ordinances are an emergency power, not a substitute for laws passed by the legislature.',
-    'Routinely re-making ordinances is a fraud on the Constitution.',
-    'So a government that wants a lasting law must take it to the legislature, and cannot rule by renewing ordinances.'
+    'What cannot be done directly cannot be done indirectly. The rule binds every constitutional power, not only the power to make ordinances.',
+    'So an ordinance may bridge a gap while the legislature is away, but may not become a way of governing.'
   ],
   legacy: [
     'In Krishna Kumar Singh v. State of Bihar (2017), seven judges relied on this judgment and held that re-making ordinances without placing them before the legislature is unconstitutional.'
@@ -373,8 +367,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Ordinances must be placed before the legislature, and repeated re-making is unconstitutional.',
-    'The courts can review the satisfaction behind an ordinance.',
     'So an ordinance is a bridge to a law, not a replacement for one. The legislature must get its chance to vote on it.'
   ],
   legacy: [

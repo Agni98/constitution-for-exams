@@ -64,8 +64,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The judiciary, through the Chief Justice of India acting with senior judges, has the deciding voice in appointing judges.',
-    'An appointment must agree with the opinion of the Chief Justice of India, formed with senior colleagues.',
     'So the power to choose judges moved from the government to the judges themselves. The group of senior judges who choose came to be called the collegium.'
   ],
   legacy: [
@@ -112,8 +110,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Appointments to the higher judiciary are decided by a collegium, not by the Chief Justice of India alone.',
-    'The consultation must be in writing and follow fixed rules.',
     'So the collegium took its present shape: five senior judges for the Supreme Court, recording their views in writing.'
   ],
   legacy: [
@@ -166,8 +162,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'A State can sue the Union under Article 131 whenever its legal rights or powers of government are in dispute, without showing a cause of action in the ordinary civil sense.',
-    'The Centre may inquire into charges of corruption against State ministers under the Commissions of Inquiry Act.',
     'So Karnataka won the right to come to the Court, but lost the case. The federal structure did not protect State ministers from a Central inquiry.'
   ],
   legacy: [
@@ -210,7 +204,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   principles: [
     'Article 136 gives a remedy at the Court\'s choice, not a right of appeal.',
-    'Facts on which two courts agree are rarely disturbed under Article 136.',
     'So the Supreme Court keeps itself for grave injustice and important questions, not for a third trial of the facts.'
   ],
   legacy: [
@@ -256,8 +249,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The Supreme Court can overrule its own earlier decisions, especially on the Constitution.',
-    'Before 1956, States could not tax sales between States without a law made by Parliament.',
+    'A mistaken reading of the Constitution deserves correction more readily than one of a statute, because the Constitution is so much harder to amend.',
     'So the Court\'s own past rulings bind every other court, but not the Court itself, which can correct its own mistakes.'
   ],
   legacy: [
