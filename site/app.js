@@ -1006,7 +1006,7 @@
         esc(partLabel(first.part) + ' \u00b7 ' + first.heading) + '">Article ' + esc(first.num) +
         ' &rarr;</a>' : '') + '</div></div>' +
       '<header class="art-head"><div class="eyebrow">The Constitution of India</div>' +
-      '<h1>Preamble</h1><div class="tagline">' +
+      '<h1>Preamble</h1><div class="tagline">' + prioPills(EXAM.preamble) +
       '<span class="pill red">Adopted 26 November 1949</span>' +
       '<span class="pill blue">Amended once — 42nd, 1976</span></div></header>';
 
@@ -1014,12 +1014,11 @@
       text: { html: bareHead() + '<div class="bare">' + (pre.paras || []).map(function (p) {
         return '<p class="l' + (p.lvl || 0) + '">' + bareHTML(p.t, pre.notes) + '</p>';
       }).join('') + '</div>' + fnList(pre.notes) },
-      explain: { html: ex ? explainBlock(ex) : '' },
+      explain: { html: explainPane(ex, EXAM.preamble) },
       flow: { html: diagramPane(d.flow), n: d.flow.length },
       maps: { html: diagramPane(d.mind), n: d.mind.length },
       judgments: { html: cases.length ? judgPane(cases, 'Judgments on the Preamble', 'the Preamble') : '',
                    n: cases.length },
-      exams: { html: EXAM.preamble ? examBlock(EXAM.preamble) : '' },
       mcq: { html: mcqPane('preamble'), n: (MCQ.preamble || []).length }
     });
     return s;
@@ -1367,7 +1366,7 @@
       pagerTop(nb) + '</div>';
 
     s += '<header class="art-head"><div class="eyebrow">Article ' + esc(a.num) + '</div>' +
-      '<h1>' + esc(a.heading) + '</h1><div class="tagline">' +
+      '<h1>' + esc(a.heading) + '</h1><div class="tagline">' + prioPills(examOf(a)) +
       '<span class="pill grey">' + esc(partLabel(a.part)) + '</span>' +
       (chap ? '<span class="pill grey">' + esc(chap) + '</span>' : '') +
       (a.omitted ? '<span class="pill red">Omitted / repealed</span>'
@@ -1389,12 +1388,11 @@
     var exam = examOf(a);
     s += tabbed('#/article/' + a.num, want, {
       text: { html: textPane(a) },
-      explain: { html: ex ? explainBlock(ex) : '' },
+      explain: { html: explainPane(ex, exam) },
       flow: { html: diagramPane(d.flow), n: d.flow.length },
       maps: { html: diagramPane(d.mind), n: d.mind.length },
       judgments: { html: cases.length ? judgPane(cases, 'Judgments filed under Article ' + a.num, 'Article ' + a.num) : '',
                    n: cases.length },
-      exams: { html: exam ? examBlock(exam) : '' },
       mcq: { html: mcqPane(mcqKeyOf(a)), n: (MCQ[mcqKeyOf(a)] || []).length }
     });
 
@@ -1433,13 +1431,16 @@
     { id: 'flow', label: 'Flow Charts' },
     { id: 'maps', label: 'Mind Maps' },
     { id: 'judgments', label: 'Judgments' },
-    { id: 'exams', label: 'For Exams' },
     { id: 'mcq', label: 'MCQs' }
   ];
 
   function tabbed(base, want, panes) {
     var stored = null;
     try { stored = localStorage.getItem('coi-tab'); } catch (err) { /* private mode */ }
+    // The exam note used to have a tab of its own. An old link or a saved
+    // choice opens Explain instead, at the exam part when the link asked for it.
+    if (want === 'exams') { want = 'explain'; XP_GO = 'xp-exam'; }
+    if (stored === 'exams') stored = 'explain';
     function has(id) { return !!(id && panes[id] && panes[id].html); }
     var pick = [want, stored, 'text'].filter(has)[0] ||
       (TABS.filter(function (t) { return has(t.id); })[0] || {}).id;
@@ -1468,8 +1469,9 @@
       footBar(list, pick);
   }
 
-  /* The sections of a page, in the same six places on every screen: Text,
-     Explain, Diagrams, Cases, Exam and MCQs, each with its icon. Flow charts
+  /* The sections of a page, in the same five places on every screen: Text,
+     Explain, Diagrams, Cases and MCQs, each with its icon. The exam note
+     reads inside Explain, after the plain explanation. Flow charts
      and mind maps share the Diagrams place and open one above the other. On a
      wider screen the sections are tabs above the page. On a phone they sit in
      a bar at the foot of the screen, where the thumb is. */
@@ -1479,7 +1481,6 @@
     explain: { label: 'Explain', icon: '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/>' },
     diagrams: { label: 'Diagrams', icon: '<rect x="9" y="3" width="6" height="5" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M6 16v-4h12v4"/>' },
     judgments: { label: 'Cases', icon: '<path d="M12 4v16M8 20h8M5 7h14"/><path d="M2 13l3-6 3 6a3 3 0 0 1-6 0zM16 13l3-6 3 6a3 3 0 0 1-6 0z"/>' },
-    exams: { label: 'Exam', icon: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/>' },
     mcq: { label: 'MCQs', icon: '<path d="M3.5 6.5l1.6 1.6L8 5.2M3.5 13.5l1.6 1.6L8 12.2"/><path d="M11 7h10M11 14h10M4 20h17"/>' }
   };
 
@@ -1511,6 +1512,52 @@
         '<span class="abar-ic">' + secIcon(x.icon) +
         (x.n ? '<span class="abar-ct">' + x.n + '</span>' : '') + '</span>' + esc(x.label) + '</button>';
     }).join('') + '</nav>';
+  }
+
+  /* The jump strip in Explain. A tap scrolls to the part, under the strip.
+     While the reader scrolls, the part at the top of the screen is marked. */
+  var XP_GO = '', XP_LOCK = 0;
+  function xpStrip() {
+    var s = $('#main .xp-jump');
+    return s && s.offsetParent ? s : null;
+  }
+  function xpOffset(strip) {
+    return strip ? (parseFloat(getComputedStyle(strip).top) || 0) + strip.offsetHeight + 14 : scrollPad();
+  }
+  function xpMark(id) {
+    var strip = xpStrip();
+    if (!strip) return;
+    strip.querySelectorAll('button[data-xp]').forEach(function (b) {
+      var on = b.getAttribute('data-xp') === id;
+      b.classList.toggle('on', on);
+      if (!on) { b.removeAttribute('aria-current'); return; }
+      b.setAttribute('aria-current', 'true');
+      if (b.offsetLeft < strip.scrollLeft || b.offsetLeft + b.offsetWidth > strip.scrollLeft + strip.clientWidth) {
+        strip.scrollLeft = Math.max(0, b.offsetLeft - 24);
+      }
+    });
+  }
+  function xpJump(id, smooth) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var strip = xpStrip();
+    XP_LOCK = Date.now() + (smooth ? 800 : 100);
+    var first = strip && strip.querySelector('button[data-xp]');
+    xpMark(id === 'xp-exam' && strip ? (strip.querySelector('.xp-sep + button') || first).getAttribute('data-xp') : id);
+    window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + window.scrollY - xpOffset(strip)),
+                      behavior: smooth ? 'smooth' : 'auto' });
+  }
+  function xpSpy() {
+    if (Date.now() < XP_LOCK) return;
+    var strip = xpStrip();
+    if (!strip) return;
+    var line = xpOffset(strip) + 10, cur = null;
+    strip.querySelectorAll('button[data-xp]').forEach(function (b) {
+      var el = document.getElementById(b.getAttribute('data-xp'));
+      if (el && el.getBoundingClientRect().top <= line) cur = b.getAttribute('data-xp');
+    });
+    if (!cur) { var f = strip.querySelector('button[data-xp]'); cur = f && f.getAttribute('data-xp'); }
+    xpMark(cur);
   }
 
   function showTab(id, focus) {
@@ -1547,6 +1594,7 @@
       window.scrollTo(0, Math.max(0, panes.getBoundingClientRect().top + window.scrollY - under - 14));
     }
     tabsReveal(bar);
+    if (id === 'explain') xpSpy();
     if (focus) btn.focus();
   }
 
@@ -1817,17 +1865,65 @@
   }
 
   function explainRest(ex) {
-    var s = '<div class="explain">';
-    s += ex.catch
-      ? '<div class="panel catch"><h4>&#9888; The catch</h4><p>' + para(ex.catch) + '</p></div>'
-      : '<div class="panel catch quiet"><h4>&#9888; The catch</h4><p>Nothing to flag here. This ' +
-        'article is machinery, and it works the way it reads — no proviso, exception or line of ' +
-        'cases cuts across it.</p></div>';
-    if (ex.note) s += '<div class="panel note"><h4>&#9432; Worth knowing</h4><p>' + para(ex.note) + '</p></div>';
-    return s + '</div>';
+    return '<div class="explain">' + explainParts(ex).slice(1).map(function (p) { return p.html; }).join('') +
+      '</div>';
   }
 
   function explainBlock(ex) { return explainSays(ex) + explainRest(ex); }
+
+  // The plain explanation in its parts: what it says, how it works, and what
+  // is worth knowing. With an id prefix, each part can be jumped to.
+  function explainParts(ex, pre) {
+    var id = function (k) { return pre ? ' id="' + pre + k + '"' : ''; };
+    var parts = [{ k: 'says', t: 'What it says',
+      html: '<div class="panel simple"' + id('says') + '><h4>&#9673; What it says</h4><p>' + para(ex.simple) + '</p></div>' }];
+    parts.push({ k: 'how', t: 'How it works', html: ex.catch
+      ? '<div class="panel catch"' + id('how') + '><h4>&#9881; How it works</h4><p>' + para(ex.catch) + '</p></div>'
+      : '<div class="panel catch quiet"' + id('how') + '><h4>&#9881; How it works</h4><p>The article works the ' +
+        'way it reads. No proviso, exception or line of cases cuts across it.</p></div>' });
+    if (ex.note) parts.push({ k: 'know', t: 'Worth knowing',
+      html: '<div class="panel note"' + id('know') + '><h4>&#9432; Worth knowing</h4><p>' + para(ex.note) + '</p></div>' });
+    return parts;
+  }
+
+  /* The Explain tab: the plain explanation first, then, for the provisions the
+     examiners return to, the exam note under its own heading. The exam note
+     does not repeat what it says. A strip at the top names every part, stays
+     in view while the reader scrolls, marks the part being read, and jumps to
+     any other. */
+  function explainPane(ex, exam) {
+    if (!ex && !exam) return '';
+    var top = ex ? explainParts(ex, 'xp-') : [];
+    var low = exam ? examParts(exam, false, 'xp-').filter(function (p) { return !(ex && p.k === 'says'); }) : [];
+    var jumps = top.concat(low).filter(function (p) { return p.t; });
+    var n = 0;
+    var strip = jumps.length >= 3 ? '<nav class="xp-jump" aria-label="Parts of this explanation">' +
+      jumps.map(function (p) {
+        var sep = (low.length && p === low.filter(function (q) { return q.t; })[0])
+          ? '<span class="xp-sep">For the exam</span>' : '';
+        return sep + '<button type="button" data-xp="xp-' + p.k + '"><i>' + (++n) + '</i>' + esc(p.t) + '</button>';
+      }).join('') + '</nav>' : '';
+    var s = strip;
+    if (top.length) s += '<div class="explain">' + top.map(function (p) { return p.html; }).join('') + '</div>';
+    if (low.length) {
+      s += '<section class="exam xp-exam" id="xp-exam"><header class="xp-exam-head"><h3>For the exam</h3>' +
+        '<div class="exam-head">' + examPills(exam) + '</div></header>' +
+        low.map(function (p) { return p.html; }).join('') + '</section>';
+    }
+    return s;
+  }
+
+  // In the article header: how often the examiners ask it, and whether Mains
+  // does too. A tap opens the exam part of Explain.
+  function prioPills(entry) {
+    if (!entry) return '';
+    var t = TIER[entry.tier] || TIER[3];
+    var mains = (entry.papers || []).indexOf('UPSC Mains') >= 0;
+    return '<button type="button" class="pill ' + t.pill + ' prio" data-xpgo="xp-exam" title="What the examiners ask">' +
+      esc(t.label + ' \u00b7 ' + t.blurb) + '</button>' +
+      (mains ? '<button type="button" class="pill grey prio" data-xpgo="xp-exam" title="What the examiners ask">' +
+        'Also asked in Mains</button>' : '');
+  }
   function para(t, wrap) {
     var out = esc(t).replace(/\n\n/g, '</p><p>')
       // *stress* marks the word a question turns on — "or otherwise", "only",
@@ -2261,27 +2357,35 @@
      papers it has been seen in, and where to practise it. `inSheet` adds a way
      back to the provision itself, which the article page does not need. */
   function examBody(entry, inSheet) {
+    return examParts(entry, inSheet).map(function (p) { return p.html; }).join('');
+  }
+
+  // The exam note in its parts, each with a short name for the jump strip.
+  // With an id prefix, each part can be jumped to.
+  function examParts(entry, inSheet, pre) {
     var e = EXAM_LIST.filter(function (z) { return z.x === entry; })[0];
-    var s = '';
+    var parts = [];
+    var id = function (k) { return pre ? ' id="' + pre + k + '"' : ''; };
+    var add = function (k, t, html) { parts.push({ k: k, t: t, html: html }); };
     var first = entry.why ? firstSentence(entry.why) : '';
     if (/\u2026$/.test(first)) first = '';
     var says = entry.says || first;
     var why = entry.says ? entry.why : String(entry.why || '').slice(first.length).trim();
-    if (says) s += '<div class="exam-says"><h5>What it says</h5><p>' + para(says) + '</p></div>';
-    if (why) s += '<div class="exam-sec"><h5>Why it is asked</h5>' + para(why, 'p') + '</div>';
+    if (says) add('says', 'What it says', '<div class="exam-says"' + id('says') + '><h5>What it says</h5><p>' + para(says) + '</p></div>');
+    if (why) add('why', 'Why it is asked', '<div class="exam-sec"' + id('why') + '><h5>Why it is asked</h5>' + para(why, 'p') + '</div>');
     if (entry.concepts && entry.concepts.length) {
-      s += '<div class="exam-sec"><h5>What the question tests</h5>' +
-        '<ol class="exam-points">' + entry.concepts.map(conceptLI).join('') + '</ol></div>';
+      add('tests', 'What it tests', '<div class="exam-sec"' + id('tests') + '><h5>What the question tests</h5>' +
+        '<ol class="exam-points">' + entry.concepts.map(conceptLI).join('') + '</ol></div>');
     }
-    if (entry.trap) s += '<div class="exam-trap"><h5>Where the mark is lost</h5>' +
-      para(entry.trap, 'p') + '</div>';
+    if (entry.trap) add('trap', 'Where marks are lost', '<div class="exam-trap"' + id('trap') + '><h5>Where the mark is lost</h5>' +
+      para(entry.trap, 'p') + '</div>');
     if (entry.seen && entry.seen.length) {
       var nc = citedCount(entry.seen);
-      s += '<div class="exam-sec exam-seen-sec"><h5>Seen in the papers</h5>' +
+      add('seen', 'Seen in the papers', '<div class="exam-sec exam-seen-sec"' + id('seen') + '><h5>Seen in the papers</h5>' +
         '<p class="seen-note' + (nc ? ' some' : '') + '">' + (nc
           ? nc + ' of ' + entry.seen.length + ' checked against the question paper'
           : 'Not yet checked against the question papers') + '</p>' +
-        '<ul class="exam-seen">' + entry.seen.map(sightingLI).join('') + '</ul></div>';
+        '<ul class="exam-seen">' + entry.seen.map(sightingLI).join('') + '</ul></div>');
     }
     if (e) {
       var nm = (MCQ[e.key] || []).length, nj = judgmentsFor(e.key).length;
@@ -2290,9 +2394,9 @@
         (nj ? '<a class="chip go" href="' + e.href + '/judgments">' + icon('seal') +
           'Its judgments <i>' + nj + '</i></a>' : '') +
         (inSheet ? '<a class="chip go" href="' + e.href + '">' + icon('doc') + 'Read the text</a>' : '');
-      if (go) s += '<div class="exam-go">' + go + '</div>';
+      if (go) add('go', '', '<div class="exam-go">' + go + '</div>');
     }
-    return s;
+    return parts;
   }
 
   function examBlock(entry) {
@@ -2521,8 +2625,9 @@
       (next ? '<a href="#/schedule/' + next.id + '" title="' + esc(next.title) + '">' + esc(next.name) + ' &rarr;</a>' : '') +
       '</div></div>' +
       '<header class="art-head"><div class="eyebrow">' + esc(sc.name) + '</div><h1>' + esc(sc.title) + '</h1>' +
-      (sc.articles ? '<div class="tagline"><span class="pill grey">Attached to article ' + esc(sc.articles) +
-        '</span></div>' : '') + '</header>';
+      ((sc.articles || exam) ? '<div class="tagline">' + prioPills(exam) + (sc.articles
+        ? '<span class="pill grey">Attached to article ' + esc(sc.articles) + '</span>' : '') + '</div>' : '') +
+      '</header>';
 
     var text = '';
     sc.sections.forEach(function (sec) {
@@ -2534,12 +2639,11 @@
 
     s += tabbed('#/schedule/' + id, want, {
       text: { html: text },
-      explain: { html: ex ? explainBlock(ex) : '' },
+      explain: { html: explainPane(ex, exam) },
       flow: { html: diagramPane(d.flow), n: d.flow.length },
       maps: { html: diagramPane(d.mind), n: d.mind.length },
       judgments: { html: cases.length ? judgPane(cases, 'Judgments on the ' + sc.name, 'the ' + sc.name) : '',
                    n: cases.length },
-      exams: { html: exam ? examBlock(exam) : '' },
       mcq: { html: mcqPane('sch' + id), n: (MCQ['sch' + id] || []).length }
     });
     return s;
@@ -3970,6 +4074,8 @@
       main.focus({ preventScroll: true });
     }
     tabsReveal($('#main .atabs'));
+    if (XP_GO) { var go = XP_GO; XP_GO = ''; xpJump(go, false); }
+    xpSpy();
     if (h === '#/cases') filterCases();
     if (h.indexOf('#/exam') === 0) filterExam();
     if (h.indexOf('#/amendments') === 0) wireAmend();
@@ -3993,6 +4099,12 @@
 
   function init() {
     readLoad();
+    var xpTick = false;
+    window.addEventListener('scroll', function () {
+      if (xpTick) return;
+      xpTick = true;
+      requestAnimationFrame(function () { xpTick = false; xpSpy(); });
+    }, { passive: true });
     buildSidebar();
     initNav();
 
@@ -4138,6 +4250,10 @@
         ptoggle.setAttribute('aria-expanded', show ? 'true' : 'false');
         return;
       }
+      var xpBtn = e.target.closest && e.target.closest('[data-xp]');
+      if (xpBtn) { xpJump(xpBtn.getAttribute('data-xp'), true); return; }
+      var xpGo = e.target.closest && e.target.closest('[data-xpgo]');
+      if (xpGo) { showTab('explain'); xpJump(xpGo.getAttribute('data-xpgo'), true); return; }
       var tabBtn = e.target.closest && e.target.closest('.atab[data-tab], .abar-i[data-tab]');
       if (tabBtn) { showTab(tabBtn.getAttribute('data-tab')); return; }
       // A section row on the Part page scrolls to its section.

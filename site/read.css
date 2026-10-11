@@ -391,3 +391,54 @@
 @media (prefers-reduced-motion: reduce) {
   .pt-chev { transition: none; }
 }
+
+/* ---------- Explain: the jump strip and the exam part ----------
+   The strip names the parts of Explain and stays in view under the tabs (or
+   under the header on a phone, where the tabs sit at the foot). */
+.xp-jump {
+  position: sticky; top: calc(var(--topbar-h) + 68px); z-index: 5;
+  display: flex; align-items: center; gap: 2px; overflow-x: auto; scrollbar-width: none;
+  margin: 0 0 14px; padding: 5px;
+  background: var(--bg-raise); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.xp-jump::-webkit-scrollbar { display: none; }
+.xp-jump button {
+  flex: none; display: inline-flex; align-items: center; gap: 7px;
+  height: 34px; padding: 0 12px 0 7px;
+  border: 0; border-radius: 999px; background: transparent; cursor: pointer;
+  font: 600 13px/1 var(--sans); color: var(--ink-soft); white-space: nowrap;
+}
+.xp-jump button i {
+  display: grid; place-items: center; width: 21px; height: 21px; border-radius: 50%;
+  background: var(--bg-sunk); color: var(--ink-faint);
+  font: 700 11px/1 var(--sans); font-style: normal;
+}
+.xp-jump button:hover { color: var(--head); background: var(--bg-sunk); }
+.xp-jump button.on { color: var(--accent); background: var(--accent-soft); }
+.xp-jump button.on i { background: var(--accent); color: var(--bg-raise); }
+.xp-jump button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.xp-jump .xp-sep {
+  flex: none; align-self: stretch; display: flex; align-items: center;
+  margin: 4px 4px 4px 6px; padding: 0 8px 0 12px; border-left: 1px solid var(--line);
+  font: 700 10.5px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ok-saffron-ink); white-space: nowrap;
+}
+
+.xp-exam { margin-top: 16px; }
+.xp-exam-head { margin-bottom: 14px; }
+.xp-exam-head h3 { margin: 0 0 10px; font: 600 20px/1.3 var(--serif); color: var(--head); letter-spacing: -.01em; }
+.xp-exam-head .exam-head { margin-bottom: 0; }
+
+/* the priority in the header, which opens the exam part */
+.art-head .pill.prio { border: 0; font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.art-head .pill.prio:hover { filter: brightness(.96); text-decoration: none; }
+.art-head .pill.prio:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 900px) {
+  .xp-jump { top: calc(var(--topbar-h) + 54px); }
+}
+@media (max-width: 620px) {
+  .xp-jump { top: calc(var(--topbar-h) + 6px); margin: 0 0 12px; }
+  .xp-jump button { height: 32px; font-size: 12.5px; }
+}
