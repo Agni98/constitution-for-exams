@@ -88,8 +88,10 @@ partVI: {
   catch: "The authentication rule protects an order from being challenged for its form. It does not cure a want of authority. An order made by someone with no power to make it is still void."
 },
 "167": {
-  simple: "The Chief Minister must communicate Cabinet decisions to the Governor, furnish any information he calls for, and submit for Cabinet consideration a matter decided by a single Minister if the Governor asks.",
-  catch: "This is where a Governor's information-gathering power comes from. It is often the flashpoint when a Governor asks a State government for files."
+  simple: "The Chief Minister has three duties towards the Governor.\n\n" +
+    "The Chief Minister must report all decisions of the Council of Ministers on administration and legislation. The Chief Minister must give any information on those matters that the Governor asks for. And if the Governor asks, the Chief Minister must put a decision taken by one minister alone before the whole Council.",
+  catch: "Article 167 is the Governor's main channel for learning what the State government is doing. The information also feeds the Governor's report to the President under Article 356. So disputes often start when a Governor asks a State government for files.\n\n" +
+    "But the duty is to inform, not to obey. The Governor can make the whole Council look at a decision again, but cannot make it change the decision."
 },
 
 /* ---------- The State legislature ---------- */
@@ -99,18 +101,20 @@ partVI: {
   catch: "Which States have a Council is not fixed by the Constitution. Article 169 lets Parliament create or abolish one on a State's own resolution, which is why the list has changed repeatedly."
 },
 "169": {
-  simple: "Parliament may abolish or create a Legislative Council in a State, if the Assembly passes a resolution by a majority of its total membership and two-thirds of members present and voting.\n\n" +
-    "Such a law is not deemed an amendment of the Constitution for Article 368 purposes.",
-  catch: "The Assembly's resolution is a recommendation, not a command. Parliament is not obliged to act on it, which is why Rajasthan's 2012 resolution has never been given effect."
+  simple: "Parliament may create or abolish a State's Legislative Council by law. The State's Assembly must first ask for it, by a resolution passed by a majority of its total membership and two-thirds of those present and voting.\n\n" +
+    "The law does not count as an amendment of the Constitution under Article 368.",
+  catch: "Because the law is not an amendment, Parliament passes it by a simple majority.\n\n" +
+    "But the Assembly's resolution only lets Parliament act. The resolution does not force Parliament to act. Rajasthan and Assam have passed resolutions that Parliament has never acted on."
 },
 "170": {
   simple: "A Legislative Assembly has between sixty and 500 members, chosen by direct election from territorial constituencies. Seats are allotted so that the ratio of seats to population is, as far as practicable, the same throughout the State.",
   catch: "The same 1971-census freeze that applies to the Lok Sabha applies here. The 84th Amendment extended it to the first census after 2026."
 },
 "171": {
-  simple: "A Legislative Council has no more than one-third of the Assembly's strength, and no fewer than forty members.\n\n" +
-    "One-third are elected by local authorities, one-twelfth by graduates, one-twelfth by teachers, one-third by the Assembly from outside its own membership. The rest are nominated by the Governor for literature, science, art, the co-operative movement and social service.",
-  catch: "A Council can delay a Bill but cannot block it. That, together with the odd franchise, is why several States have abolished theirs."
+  simple: "A Legislative Council can have no more than one-third of the Assembly's members, and no fewer than forty.\n\n" +
+    "One-third of its members are elected by local authorities, one-twelfth by graduates, and one-twelfth by teachers. Another third are elected by the Assembly, from people outside it. The Governor nominates the rest, for knowledge of literature, science, art, the co-operative movement and social service.",
+  catch: "The Council is a weak House. The Council can delay an ordinary Bill but cannot block it, and can hold a Money Bill for only fourteen days.\n\n" +
+    "The weakness, together with the unusual franchise, is why several States have abolished their Councils."
 },
 "172": {
   simple: "Every Legislative Assembly lasts five years from its first sitting unless dissolved sooner. During an emergency it can be extended one year at a time.\n\n" +
@@ -231,16 +235,16 @@ partVI: {
   catch: "The same question raised at the Union level in Rojer Mathew — whether that finality is reviewable — applies to States."
 },
 "200": {
-  simple: "When a Bill is presented to the Governor he has four choices. He may assent, withhold assent, return it for reconsideration if it is not a Money Bill, or reserve it for the President.\n\n" +
-    "If the House passes it again he must assent. He must reserve a Bill that would derogate from the powers of the High Court.",
-  catch: "The article sets no time limit for any of these choices, and Governors have used that silence to sit on Bills for months.\n\n" +
-    "In State of Punjab v. Principal Secretary (2023), and again in the Tamil Nadu case in 2025, the Supreme Court held that a Governor cannot withhold assent indefinitely, and read timelines into the article."
+  simple: "When a State Bill reaches the Governor, the Governor has four choices. The Governor may assent, withhold assent, return a Bill that is not a Money Bill for reconsideration, or reserve it for the President.\n\n" +
+    "If the House passes a returned Bill again, the Governor must assent. And the Governor must reserve any Bill that would weaken the position of the High Court.",
+  catch: "The article sets no time limit, and Governors have used the gap to sit on Bills for months or years. Punjab, Tamil Nadu, Kerala and Telangana all went to the Supreme Court over such delays.\n\n" +
+    "In the Punjab case (2023) and the Tamil Nadu case (2025), the Court held that a Governor cannot hold a Bill indefinitely. The Tamil Nadu judgment also read time limits into the article. The President then asked the Court, under Article 143, whether courts can set such deadlines at all."
 },
 "201": {
-  simple: "Where a Bill is reserved, the President may assent or withhold assent. He may instead direct the Governor to return it to the House for reconsideration within six months.\n\n" +
-    "Even if the House then passes it again, the President is not obliged to assent.",
-  catch: "Unlike the Governor under Article 200, the President is never compelled to assent to a reserved Bill.\n\n" +
-    "That is the sharpest single asymmetry in Centre–State legislative relations."
+  simple: "When the Governor reserves a State Bill, the President may assent or withhold assent. For a Bill that is not a Money Bill, the President may instead have it returned to the House for reconsideration within six months.\n\n" +
+    "Even if the House passes the Bill again, the President need not assent.",
+  catch: "Under Articles 111 and 200, passing a returned Bill again forces assent. Under Article 201 it does not. So the President can refuse a reserved State Bill outright and for good.\n\n" +
+    "The gap is the clearest sign that Indian federalism leans towards the Union."
 },
 "202": {
   simple: "The Governor lays an annual financial statement before the House or Houses, distinguishing charged expenditure from other expenditure.",
@@ -285,16 +289,18 @@ partVI: {
   catch: "As with Article 122, 'irregularity' is not 'illegality'. Courts have entertained challenges where a proceeding was said to be unconstitutional rather than merely irregular."
 },
 "213": {
-  simple: "The Governor may promulgate an Ordinance when the legislature is not in session and immediate action is needed. It has the force of an Act, must be laid before the legislature, and ceases six weeks after it reassembles.",
-  catch: "Three situations require the President's prior instructions: where a corresponding Bill would have needed his previous sanction, where a Bill would have had to be reserved for him, and where a corresponding Act would have been invalid without his assent.\n\n" +
-    "The Governor's ordinance power is therefore narrower than the President's."
+  simple: "Unless the State legislature is in session, the Governor may make an ordinance when immediate action is needed. The ordinance has the force of an Act of the State legislature.\n\n" +
+    "The ordinance must be laid before the legislature, and lapses six weeks after the legislature reassembles.",
+  catch: "The Governor's power is narrower than the President's in one way. In three cases the Governor needs the President's instructions first. They are where a matching Bill would have needed the President's prior sanction, would have had to be reserved for the President, or would have been invalid without the President's assent.\n\n" +
+    "Governments have abused the power too. Bihar re-made the same ordinances for years, and Krishna Kumar Singh (2017) held that re-promulgation of that kind is a fraud on the Constitution."
 },
 
 /* ---------- The High Courts ---------- */
 
 "214": {
-  simple: "There shall be a High Court for each State.",
-  catch: "Read with Article 231, which lets Parliament establish one High Court for two or more States. That is why there are fewer High Courts than States."
+  simple: "Every State shall have a High Court.",
+  catch: "Article 231 qualifies the rule. Parliament may set up one High Court for two or more States, or for States and a Union territory. So India has fewer High Courts than States.\n\n" +
+    "Punjab and Haryana share one High Court. The Bombay, Madras, Calcutta and Gauhati High Courts also cover more than one State or Union territory."
 },
 "215": {
   simple: "Every High Court is a court of record, with all the powers of such a court, including the power to punish for contempt of itself.",
@@ -349,11 +355,11 @@ partVI: {
   catch: "The proviso removing the old revenue-matters bar means High Courts now have original jurisdiction in revenue cases too."
 },
 "226": {
-  simple: "Every High Court may issue directions, orders or writs — including habeas corpus, mandamus, prohibition, quo warranto and certiorari — to any person or authority within its territory, or where the cause of action arose.\n\n" +
-    "It may do so both to enforce fundamental rights and for any other purpose.",
-  catch: "'For any other purpose' makes this wider than Article 32. A High Court will hear an ordinary legal wrong; the Supreme Court under Article 32 will not.\n\n" +
-    "Clause (2), added by the 15th Amendment, lets a High Court reach an authority sitting outside its territory if the cause of action arose within it. That is why the Delhi High Court hears so many national matters.",
-  note: "Clause (3) requires an interim order made without hearing the other side to be disposed of within two weeks of an application to vacate it. It is a 44th Amendment safeguard against ex parte stays running forever."
+  simple: "Every High Court may issue writs, including habeas corpus, mandamus, prohibition, quo warranto and certiorari. The writs can enforce fundamental rights, or serve any other purpose.\n\n" +
+    "A High Court can issue them to any person or authority within its territory. The High Court can also reach one outside its territory, if the cause of action arose within.",
+  catch: "The words \"for any other purpose\" make Article 226 wider than Article 32. A High Court will hear a case about an ordinary legal right, but the Supreme Court under Article 32 will not. But a High Court's writ runs only within its territory.\n\n" +
+    "Clause (2) eases that limit. A High Court can reach an authority outside its territory if the cause of action arose inside it. So a High Court in any State can hear a case against a Union authority based in Delhi, if the cause arose in that State.",
+  note: "Clause (3) deals with interim orders made without hearing the other side. If the other side applies to have such an order lifted, the court must decide within two weeks, or the order lapses. The 44th Amendment added the safeguard."
 },
 "226A": {
   simple: "This article barred High Courts from considering the constitutional validity of central laws.",

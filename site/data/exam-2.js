@@ -734,8 +734,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 167 makes it the Chief Minister's duty to tell the Governor about all decisions of the Council of Ministers, and to give any information the Governor asks for.",
   why: "Article 167 is the State version of Article 78, and appears in matching questions on the duties of the Chief Minister.",
   concepts: [
-    { t: "The three duties", d: "Communicate all decisions of the Council of Ministers to the Governor. Furnish any information on administration and legislation the Governor asks for. And submit for the Council's consideration any matter a single minister has decided alone, if the Governor requires it." },
-    { t: "Why it matters", d: "The duty is the Governor's only channel of information about what the State government is doing, and the basis of the Governor's report under Article 356." },
+    { t: "Why it matters", d: "The Governor's main channel of information, and a basis for a report under Article 356." },
     { t: "Article 167 imposes a duty, not a power", d: "The article imposes obligations on the Chief Minister. The article gives the Governor no power to change a decision." }
   ],
   trap: "The Governor may ask for information and may require a matter to be reconsidered by the full Council.\n\nThey cannot demand a different decision. Article 167 is an information channel, not a veto."
@@ -747,11 +746,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 169 lets Parliament create or abolish a State's Legislative Council by law, if the State Assembly asks for it in a resolution passed by a special majority.",
   why: "Creating or abolishing a Legislative Council keeps coming back in the news, as in Andhra Pradesh, Rajasthan and Assam, and the procedure is clean and testable.",
   concepts: [
-    { t: "Who does it", d: "Parliament, by law. But only if the State's own Legislative Assembly first passes a resolution asking for it." },
+    { t: "Who does it", d: "Parliament, by law, after the State Assembly asks for it." },
     { t: "The majority for the resolution", d: "A majority of the total membership of the Assembly, *and* at least two thirds of the members present and voting. The combination is called a special majority." },
-    { t: "A law under Article 169 is not a constitutional amendment", d: "Article 169 expressly says such a law is not an amendment for the purposes of Article 368. So Parliament passes it by simple majority." },
+    { t: "A law under Article 169 is not a constitutional amendment", d: "A law under Article 169 is not an amendment under Article 368, so a simple majority passes it." },
     { t: "Which States have Councils", d: "Six: Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana and Uttar Pradesh." },
-    { t: "Parliament is not obliged", d: "The Assembly resolution merely enables Parliament to act. Parliament may ignore it indefinitely, as it has with resolutions from Rajasthan and Assam." }
+    { t: "Parliament is not obliged", d: "The resolution enables Parliament but does not compel it." }
   ],
   trap: "The Assembly's resolution empowers Parliament but does not compel it.\n\nSeveral States have passed resolutions that Parliament has simply never acted on. An option saying the Council must then be created is wrong."
 },
@@ -762,7 +761,6 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 171 says a Legislative Council can have at most one-third of the Assembly's members, and no fewer than 40. Its members come from five groups: local bodies, graduates, teachers, Assembly members and the Governor's nominees.",
   why: "The composition of a Legislative Council, with its five different constituencies, is a favourite matching question.",
   concepts: [
-    { t: "The size limits", d: "Not more than one third of the Assembly's strength, and never fewer than forty members." },
     { t: "One third by local authorities", d: "Elected by members of municipalities, district boards and other local authorities in the State." },
     { t: "One twelfth by graduates", d: "Elected by graduates of three years' standing residing in the State." },
     { t: "One twelfth by teachers", d: "Elected by teachers of at least three years' standing in institutions not lower than secondary school." },
@@ -782,11 +780,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 200 says the Governor, given a Bill passed by the State legislature, may assent, withhold assent, return it for reconsideration, or reserve it for the President.",
   why: "Article 200 is what a Governor does with a Bill the State legislature has passed. The article became one of the sharpest constitutional disputes of 2023 to 2025, and the 2025 paper asked it.",
   concepts: [
-    { t: "The four options", d: "Assent to the Bill. Withhold assent. Return it for reconsideration, if it is not a Money Bill. Or reserve it for the President's consideration." },
-    { t: "The return can only happen once", d: "If the House passes the Bill again, with or without amendment, the Governor shall not withhold assent. There is no second refusal." },
+    { t: "The return can only happen once", d: "If the House passes the Bill again, the Governor must assent. There is no second refusal." },
     { t: "One compulsory reservation", d: "If a Bill would so derogate from the powers of the High Court as to endanger its constitutional position, the Governor *must* reserve it for the President." },
-    { t: "No time limit anywhere", d: "The article says the Governor shall act \"as soon as possible\", but fixes no period. The whole controversy comes from the silence." },
-    { t: "The recent disputes", d: "Punjab, Tamil Nadu, Kerala and Telangana went to the Supreme Court over Governors sitting on Bills for months or years." },
+    { t: "No time limit anywhere", d: "The article says \"as soon as possible\", but fixes no period." },
+    { t: "The recent disputes", d: "Punjab, Tamil Nadu, Kerala and Telangana sued over Bills held for months or years." },
     { t: "Where it stands", d: "In 2025 the President made a reference under Article 143 asking whether courts can impose deadlines on Governors and on the President in giving assent." }
   ],
   seen: [
@@ -802,10 +799,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 201 says the President, given a State Bill that the Governor has reserved, may assent or withhold assent. The President may ask the State legislature to reconsider it, but need not assent even if it passes again.",
   why: "Article 201 is the companion to Article 200. The article is the one place where returning a Bill and passing it again does not force assent.",
   concepts: [
-    { t: "The President's options", d: "When a Bill is reserved by the Governor, the President may assent to it or withhold assent." },
     { t: "The President may order a return", d: "If it is not a Money Bill, the President may direct the Governor to return it to the House with a message." },
     { t: "The House must act within six months", d: "The House must reconsider the Bill within six months of receiving the message. If it passes the Bill again, it goes back to the President." },
-    { t: "Even then the President need not assent", d: "The President may refuse a reserved State Bill outright and indefinitely, even after the House has passed it a second time. Do not call the power the only absolute veto in the Constitution. The President can withhold assent to a Union Bill under Article 111 too. What is unique to Article 201 is that re-passage carries no consequence: under Articles 111 and 200, passing a returned Bill again compels assent, and here it does not." }
+    { t: "Even then the President need not assent", d: "The President may refuse even after a second passage. The power to withhold exists under Article 111 too. What is unique here is that passing the Bill again forces nothing." }
   ],
   trap: "Under Articles 111 and 200 a second passage compels assent. Under Article 201 it does not.\n\nSo the centre can kill a reserved State Bill for good. The point is the strongest single argument that Indian federalism tilts toward the Union."
 },
@@ -817,10 +813,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   why: "The Governor's power to make ordinances mirrors the President's, but carries one restriction the President's does not. Mains has asked about re-promulgation directly.",
   concepts: [
     { t: "The conditions", d: "The Governor can act when the Legislative Assembly is not in session. Where the State has a Council, the Governor can act unless both Houses are in session. The Governor must also be satisfied that immediate action is needed." },
-    { t: "The extra restriction", d: "In three situations the Governor needs the President's prior instructions. The first is when a Bill with the same provisions would have needed the President's previous sanction. The second is when the Governor would have had to reserve such a Bill for the President. The third is when an Act with those provisions would have been invalid without the President's assent." },
+    { t: "The extra restriction", d: "Needed where a matching Bill would have required the President's sanction or reservation, or a matching Act the President's assent." },
     { t: "How long it lasts", d: "The ordinance must be laid before the legislature, and ceases six weeks after it reassembles, or earlier if a disapproving resolution is passed." },
     { t: "An ordinance cannot amend the Constitution", d: "Same limit as Article 123." },
-    { t: "Krishna Kumar Singh (2017)", d: "The Court struck at Bihar's practice of re-promulgating the same ordinances for years. The Court held that laying the ordinance before the House is mandatory, and that re-promulgating it again and again is a fraud on the Constitution." }
+    { t: "Krishna Kumar Singh (2017)", d: "Laying an ordinance before the House is mandatory, and repeated re-promulgation is a fraud on the Constitution." }
   ],
   seen: [
     "UPSC Mains 2022 — the Governor's ordinance-making power and re-promulgation"
@@ -834,8 +830,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 214 says there shall be a High Court for each State. Under Article 231, two or more States can share one High Court.",
   why: "High Court structure comes up as a matching question, especially the High Courts that States share.",
   concepts: [
-    { t: "What it says", d: "There shall be a High Court for each State." },
-    { t: "But States can share one", d: "Article 231 lets Parliament establish a common High Court for two or more States, or for States and a Union territory." },
+    { t: "But States can share one", d: "Article 231 lets Parliament set up one High Court for two or more States, or for States and a Union territory." },
     { t: "The shared ones", d: "Punjab and Haryana share one, as do Bombay, Madras, Calcutta and Gauhati across several States and Union territories. There are 25 High Courts for 28 States and 8 Union territories." },
     { t: "Only Parliament controls jurisdiction over Union territories", d: "Parliament may extend a High Court's jurisdiction to a Union territory or exclude it. The State cannot." },
     { t: "The High Court is not subordinate to the Supreme Court", d: "A High Court is a court of record in its own right under Article 215. Supreme Court decisions bind it under Article 141, which is a different thing from being subordinate." }
@@ -849,10 +844,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 226 lets every High Court issue writs, such as habeas corpus and mandamus, to enforce Fundamental Rights and for any other purpose, against any person or authority within its territory.",
   why: "The power of the High Courts to issue writs is wider than the Supreme Court's. The contrast between Articles 32 and 226 is the most often tested contrast in the section on the judiciary.",
   concepts: [
-    { t: "Wider in subject matter", d: "A High Court can issue writs to enforce Fundamental Rights *and for any other purpose*, which means any ordinary legal right. Article 32 covers Fundamental Rights only." },
+    { t: "Wider in subject matter", d: "Fundamental rights and any other purpose. Article 32 covers fundamental rights only." },
     { t: "Narrower in territory", d: "A High Court's writ runs within its own territorial jurisdiction. The Supreme Court's runs throughout India." },
-    { t: "The cause-of-action extension", d: "Clause (2) lets a High Court issue a writ against an authority outside its territory if the cause of action arose wholly or partly within its jurisdiction. The 15th Amendment (1963) added the rule as clause (1A), and it became clause (2) when the 42nd Amendment replaced the whole article in 1976." },
-    { t: "Article 226 is not a Fundamental Right", d: "Article 32 is itself a Fundamental Right, while Article 226 is a power of the court. In an emergency that difference matters, but not in the way it is usually put. An order under Article 359 bars enforcement of the specified Fundamental Rights in *any* court, so it reaches Article 226 petitions for those rights too. Article 226 keeps everything else, because it also runs for ordinary legal rights, and Article 32 does not." },
+    { t: "The cause-of-action extension", d: "A writ can reach an authority outside the territory if the cause of action arose within it. The rule came in 1963 and took its present place as clause (2) in 1976." },
+    { t: "Article 226 is not a Fundamental Right", d: "Article 32 is a fundamental right. Article 226 is a power of the court, and also covers ordinary legal rights." },
     { t: "The power is discretionary", d: "A High Court may refuse relief if there is an adequate alternative remedy, if there is unexplained delay, or if the petitioner comes with unclean hands. The Supreme Court under Article 32 has less room to refuse." },
     { t: "L. Chandra Kumar (1997)", d: "Judicial review by High Courts under Articles 226 and 227 is part of the basic structure and cannot be excluded, even by constitutional amendment." }
   ],
