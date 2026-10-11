@@ -217,13 +217,13 @@ partX: {
   simple: "The State legislature may provide for keeping and auditing municipal accounts."
 },
 "243ZA": {
-  simple: "Superintendence, direction and control of municipal elections vest in the same State Election Commission set up under Article 243K."
+  simple: "Municipal elections are run by the same State Election Commission that Article 243K sets up for panchayats."
 },
 "243ZB": {
-  simple: "This Part applies to Union territories, subject to modifications the President may direct."
+  simple: "Part IXA applies to the Union territories, with any changes the President directs."
 },
 "243ZC": {
-  simple: "This Part does not apply to Scheduled Areas and tribal areas. Nothing in it affects the functions of the Darjeeling Gorkha Hill Council in relation to hill areas."
+  simple: "Part IXA does not apply to Scheduled Areas and tribal areas. Nothing in it affects the Darjeeling Gorkha Hill Council's work in the hill areas."
 },
 "243ZD": {
   simple: "Every State shall set up a District Planning Committee in each district. The Committee combines the plans of the panchayats and municipalities, and prepares a draft development plan for the whole district.\n\n" +
@@ -232,67 +232,67 @@ partX: {
     "The Committee is mandatory on paper but largely dormant. Most States set it up and then plan around it."
 },
 "243ZE": {
-  simple: "Every Metropolitan area shall have a Metropolitan Planning Committee, to prepare a draft development plan for the area.\n\n" +
-    "At least two-thirds of its members must be elected by and from the elected members of the municipalities and the chairpersons of panchayats in the area.",
-  catch: "This is the only constitutional body designed for city-region planning. It is why most Indian metropolitan governance debates start by pointing at this article."
+  simple: "Every metropolitan area shall have a Metropolitan Planning Committee, which prepares a draft development plan for the area.\n\n" +
+    "At least two-thirds of its members must be elected by and from the elected members of the municipalities and the chairpersons of the panchayats in the area.",
+  catch: "The Committee is the only body in the Constitution designed to plan a whole city region. So most debates about governing India's big cities start with Article 243ZE."
 },
 "243ZF": {
-  simple: "Existing municipal laws inconsistent with this Part continue for one year from the commencement of the 74th Amendment, or until amended.\n\n" +
-    "Existing municipalities continue for their term unless dissolved sooner by a resolution of the State Assembly."
+  simple: "Municipal laws that clashed with Part IXA could continue for one year after the 74th Amendment came into force, or until amended, if sooner.\n\n" +
+    "Existing municipalities could serve out their terms, unless the State Assembly dissolved them earlier by resolution."
 },
 "243ZG": {
-  simple: "No court may question a delimitation or allotment of seats under this Part. A municipal election may be challenged only by an election petition.",
-  catch: "The bar bites once the election process has begun. It does not prevent a court from ordering that elections be held when a State has failed to hold them."
+  simple: "No court may question the drawing of municipal wards or the sharing of seats under Part IXA. A municipal election may be challenged only by an election petition.",
+  catch: "The bar applies once the election process has begun. But it does not stop a court from ordering elections when a State has failed to hold them."
 },
 
 /* ---------- Part IXB: Co-operative societies ---------- */
 
 "243ZH": {
-  simple: "Article 243ZH defines the terms used in this Part: authorised person, board, co-operative society, multi-State co-operative society, office bearer, Registrar and State Act."
+  simple: "Article 243ZH defines the terms used in Part IXB, including board, co-operative society, multi-State co-operative society, office bearer, Registrar and State Act."
 },
 "243Z-I": {
-  simple: "The State legislature may make provisions for the incorporation, regulation and winding up of co-operative societies.\n\n" +
-    "Those provisions must be based on voluntary formation, democratic member control, member economic participation and autonomous functioning."
+  simple: "The State legislature may make laws on forming, regulating and winding up co-operative societies.\n\n" +
+    "The laws must rest on four principles: voluntary formation, democratic control by members, members' economic participation, and independent working."
 },
 "243ZJ": {
-  simple: "A co-operative board may have up to twenty-one directors, with reserved seats for Scheduled Castes or Tribes and two seats for women, and a five-year term.\n\n" +
-    "Co-opted experts may not exceed two, and cannot vote in board elections.",
+  simple: "A co-operative's board may have up to twenty-one directors, and serves a five-year term. One seat goes to a Scheduled Caste or Scheduled Tribe member, and two seats to women.\n\n" +
+    "The board may co-opt at most two experts, who cannot vote in board elections.",
   catch: "This is the provision the Supreme Court found most clearly trespassed on the State List entry for co-operative societies."
 },
 "243ZK": {
-  simple: "Elections to a co-operative board must be held before the outgoing board's term expires. The State legislature must provide for those elections to be conducted by an independent authority."
+  simple: "A co-operative's board must be elected before the outgoing board's term ends. The State legislature must give the job of running the elections to an independent authority."
 },
 "243ZL": {
-  simple: "A board may not be superseded or kept under suspension for more than six months. It may not be superseded at all in a co-operative with no government shareholding, loan or guarantee. For a co-operative bank the maximum is one year.",
-  catch: "This was the heart of the amendment. It stopped State governments parking their own administrators on co-operatives indefinitely."
+  simple: "A board may not be superseded or suspended for more than six months, or one year for a co-operative bank. A board may not be superseded at all if the co-operative has no government shares, loan or guarantee.",
+  catch: "The rule was the core of the amendment. The rule stopped State governments from putting their own administrators in charge of co-operatives for years on end."
 },
 "243ZM": {
-  simple: "The accounts of every co-operative society must be audited within six months of the close of the financial year, by an auditor from a panel approved by the State government."
+  simple: "Every co-operative's accounts must be audited within six months of the end of the financial year, by an auditor from a panel the State government approves."
 },
 "243ZN": {
-  simple: "The general body meeting of every co-operative society must be convened within six months of the close of the financial year."
+  simple: "Every co-operative must hold its general body meeting within six months of the end of the financial year."
 },
 "243Z-O": {
-  simple: "Every member has a right of access to the books, information and accounts of the society. The State legislature may also provide for co-operative education and training."
+  simple: "Every member may see the co-operative's books, information and accounts. The State legislature may also provide for education and training in co-operation."
 },
 "243ZP": {
-  simple: "Every co-operative society must file returns within six months of the close of the financial year.\n\n" +
-    "These include the annual report, audited accounts, the surplus disposal plan, amended bye-laws, an election declaration, and any other information the Registrar requires."
+  simple: "Every co-operative must file returns within six months of the end of the financial year.\n\n" +
+    "The returns include the annual report, audited accounts, the plan for using any surplus, changes to the bye-laws, a declaration on elections, and anything else the Registrar asks for."
 },
 "243ZQ": {
-  simple: "The State legislature may provide for offences and penalties relating to co-operative societies, such as false returns, wilful disobedience, defiance of a summons, and failure to hand over custody."
+  simple: "The State legislature may make offences and penalties for co-operatives. Examples are filing false returns, wilfully disobeying orders, ignoring a summons, and refusing to hand over records or property."
 },
 "243ZR": {
-  simple: "This Part applies to multi-State co-operative societies, with the necessary substitutions of Union references for State ones.",
-  catch: "After the 2021 ruling this is effectively the only limb of Part IXB still standing."
+  simple: "Part IXB applies to multi-State co-operative societies, with references to the Union in place of references to the State.",
+  catch: "Since the 2021 ruling, this is in effect the only part of Part IXB still standing."
 },
 "243ZS": {
-  simple: "This Part applies to Union territories, subject to modifications the President directs."
+  simple: "Part IXB applies to the Union territories, with any changes the President directs."
 },
 "243ZT": {
-  simple: "Existing co-operative laws inconsistent with this Part continue for one year from the commencement of the 97th Amendment, or until amended.",
-  catch: "Part IXB was struck down in Union of India v. Rajendra N. Shah (2021).\n\n" +
-    "It fell not on merits, but because it dealt with a State List subject and was never ratified by half the States under the proviso to Article 368(2). The Court severed and saved only the multi-State provisions."
+  simple: "Co-operative laws that clashed with Part IXB could continue for one year after the 97th Amendment came into force, or until amended, if sooner.",
+  catch: "The Supreme Court struck Part IXB down in Union of India v. Rajendra N. Shah (2021).\n\n" +
+    "The Part fell not on its merits, but because it dealt with a State List subject and half the States never ratified it, as Article 368(2) requires. The Court saved only the provisions for multi-State co-operatives."
 },
 
 /* ---------- Part X ---------- */
