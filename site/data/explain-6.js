@@ -6,16 +6,16 @@
 Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 
 partXI: {
-  simple: "Part XI divides power between the Union and the States. Chapter I does it for legislative power, Chapter II for administrative power.\n\n" +
-    "This is where Indian federalism is actually written down. It is also where its tilt towards the Centre is visible, article after article."
+  simple: "Part XI divides power between the Union and the States. Chapter I divides the power to make laws, and Chapter II the power to govern.\n\n" +
+    "Indian federalism is written down here. And the tilt towards the Union shows in article after article."
 },
 partXII: {
   simple: "Part XII deals with money and property.\n\n" +
-    "It covers who may tax what, how tax revenue is shared, the Finance Commission and the GST Council, the Consolidated and Contingency Funds, government property, contracts, and the right to sue the State."
+    "The Part covers who may tax what, how tax revenue is shared, the Finance Commission and the GST Council, the Consolidated and Contingency Funds, government property, contracts, and suits against the government."
 },
 partXIII: {
-  simple: "Part XIII declares that trade, commerce and intercourse throughout India shall be free. This is the internal common market clause.\n\n" +
-    "The rest of the Part sets out the exceptions that Parliament and the States may carve out of it."
+  simple: "Part XIII declares that trade, commerce and intercourse throughout India shall be free. The Part makes India a single internal market.\n\n" +
+    "The rest of the Part sets out the exceptions that Parliament and the States may make."
 },
 
 /* ---------- Legislative relations ---------- */
@@ -93,9 +93,9 @@ partXIII: {
   catch: "Article 365 adds the consequence. If a State fails to follow a direction under Article 256 or 257, the President may hold that the State's government cannot be carried on under the Constitution."
 },
 "257A": {
-  simple: "This article once allowed the Union to deploy armed forces to deal with a grave law and order situation in a State.",
-  catch: "Inserted by the 42nd Amendment and repealed by the 44th in 1978.\n\n" +
-    "Public order remains a State subject. Central forces are deployed at a State's request, or under a separate law."
+  simple: "Article 257A once let the Union send armed forces into a State to deal with a grave threat to law and order.",
+  catch: "The 42nd Amendment inserted it, and the 44th repealed it in 1978.\n\n" +
+    "Public order is still a State subject. Central forces go into a State at its request, or under a separate law."
 },
 "258": {
   simple: "With a State's consent, the President may hand Union functions to the State or its officers.\n\n" +
@@ -103,8 +103,8 @@ partXIII: {
   catch: "The second route needs no consent. Parliament can simply give State officers duties under a central law, and most central laws are run on the ground in that way."
 },
 "258A": {
-  simple: "A State Governor may entrust State functions to the Union or its officers, with the Union government's consent.",
-  catch: "Added by the 7th Amendment to make the delegation two-way. The original Constitution allowed it only from Centre to State."
+  simple: "With the Union government's consent, a State's Governor may hand State functions to the Union or its officers.",
+  catch: "The 7th Amendment (1956) added the article, so that functions can pass both ways. The original Constitution allowed them to pass only from the Union to the States."
 },
 "259": {
   simple: "Article 259 once dealt with the armed forces of the former princely States, listed in Part B of the First Schedule.",
@@ -280,41 +280,40 @@ partXIII: {
     "The FRBM Act sets targets for the deficit, but it does not work as the borrowing ceiling that Article 292 has in mind."
 },
 "293": {
-  simple: "A State may borrow within India on the security of its Consolidated Fund, within limits its legislature may fix.\n\n" +
-    "It may not raise a fresh loan without the Union's consent while any part of a Union loan or guarantee to it is outstanding.",
-  catch: "Two asymmetries follow. A State cannot borrow abroad at all. And in practice every State has central debt outstanding, so central consent is a permanent requirement.\n\n" +
-    "This is the sharpest financial lever the Union holds over the States. Kerala's 2024 suit challenging borrowing limits was fought on this article."
+  simple: "A State may borrow within India on the security of its Consolidated Fund, within any limits its legislature fixes.\n\n" +
+    "But while any part of a Union loan or guarantee to the State is still outstanding, the State may not take a new loan without the Union's consent.",
+  catch: "Two consequences follow. A State cannot borrow abroad at all. And every State in practice owes the Union money, so the Union's consent is always needed.\n\n" +
+    "So borrowing is the sharpest financial lever the Union holds over the States. Kerala's suit against the Union's borrowing limits, heard in 2024, turned on Article 293."
 },
 "294": {
-  simple: "Property, assets, rights, liabilities and obligations of the former Dominion and Provinces passed to the Union and to the corresponding States when the Constitution commenced.",
-  catch: "This made the Union and the States the legal successors of the Dominion and the Provinces without a break. Pre-1950 government contracts and liabilities therefore remained enforceable."
+  simple: "When the Constitution began, the property, assets, rights, liabilities and obligations of the old Dominion and Provinces passed to the Union and to the matching States.",
+  catch: "So the Union and the States carried on from the Dominion and the Provinces without a break. Government contracts and debts from before 1950 could still be enforced."
 },
 "295": {
-  simple: "Property and liabilities of the former Part B States passed to the Union where the purpose was a Union List matter, and otherwise to the State."
+  simple: "The property and liabilities of the former princely States passed to the Union where they served a Union List purpose, and to the State otherwise."
 },
 "296": {
-  simple: "Property that would have escheated or lapsed, or come as bona vacantia for want of a rightful owner, vests in the State where it is situated, or in the Union if it is within a Union territory."
+  simple: "Property that has no rightful owner, and would once have passed to the Crown, goes to the State where it lies. Within a Union territory, it goes to the Union."
 },
 "297": {
-  simple: "All lands, minerals and other things of value underlying the ocean vest in the Union, and are held for the purposes of the Union. This covers the territorial waters, the continental shelf and the exclusive economic zone.",
-  catch: "This is the constitutional basis of the Union's offshore mineral and hydrocarbon rights, and the reason coastal States have no claim to offshore oil.\n\n" +
-    "Parliament specifies the limits by law under clause (3), added by the 40th Amendment."
+  simple: "All land, minerals and other things of value under the sea belong to the Union. The rule covers the territorial waters, the continental shelf and the exclusive economic zone.",
+  catch: "So the Union holds the rights to offshore minerals, oil and gas, and coastal States have no claim to them.\n\n" +
+    "Parliament fixes the limits of these zones by law under clause (3), which the 40th Amendment added."
 },
 "298": {
-  simple: "The executive power of the Union and of each State extends to carrying on any trade or business, acquiring, holding and disposing of property, and making contracts for any purpose.",
-  catch: "Government does not need a statute to run a business or make a contract. The executive power suffices.\n\n" +
-    "That is why so much government commercial activity rests on executive decision alone."
+  simple: "The executive power of the Union and of each State covers carrying on any trade or business, buying, holding and selling property, and making contracts for any purpose.",
+  catch: "So a government needs no statute to run a business or make a contract. Its executive power is enough, and much of its commercial activity rests on executive decisions alone."
 },
 "299": {
-  simple: "All contracts made in the exercise of executive power are expressed to be made by the President or the Governor, and executed by a person authorised by him.\n\n" +
+  simple: "Every contract made in the exercise of executive power is made in the name of the President or the Governor, and signed by a person they authorise.\n\n" +
     "Neither the President nor the Governor is personally liable on such a contract.",
-  catch: "The formalities are mandatory. A government contract not made in this form has repeatedly been held unenforceable.\n\n" +
-    "Courts allow restitution under section 70 of the Contract Act to prevent unjust enrichment."
+  catch: "The formalities are compulsory. Courts have often held that a government contract made in any other form cannot be enforced.\n\n" +
+    "But courts allow the other side to recover the value of what it supplied, under section 70 of the Contract Act, so that the government is not unjustly enriched."
 },
 "300": {
-  simple: "The Union may sue and be sued as the Government of India, and a State in the name of the State, subject to any law Parliament or a State legislature makes.",
-  catch: "Parliament has never made that law.\n\n" +
-    "The liability of the State in tort is therefore still governed by the old distinction between sovereign and non-sovereign functions, inherited from the pre-Constitution position. Courts have narrowed it steadily but never resolved it."
+  simple: "The Union may sue and be sued as the Government of India, and a State in its own name, subject to any law of Parliament or the State legislature.",
+  catch: "Parliament has never made that law. So the government's liability for wrongs still rests on an old distinction from before 1950, between sovereign and non-sovereign functions.\n\n" +
+    "The courts have narrowed the distinction steadily, but never settled it."
 },
 "300A": {
   simple: "No person shall be deprived of property except by authority of law.",
@@ -337,27 +336,27 @@ partXIII: {
     "Article 304 lets a State tax goods from other States, if its own goods bear the same tax. A State may also impose reasonable restrictions in the public interest, but the Bill needs the President's previous sanction."
 },
 "303": {
-  simple: "Neither Parliament nor a State legislature may make a law giving preference to one State over another, or discriminating between States, by virtue of an entry relating to trade and commerce.\n\n" +
-    "Parliament may do so to deal with a scarcity of goods.",
-  catch: "The non-discrimination rule binds Parliament as well as the States. The scarcity exception is the only way out, and only for the Union."
+  simple: "Neither Parliament nor a State legislature may make a law, under a trade entry in the Lists, that prefers one State over another or discriminates between States.\n\n" +
+    "Parliament may do so only to deal with a scarcity of goods.",
+  catch: "The rule against discrimination binds Parliament as well as the States. The scarcity exception is the only way out, and only the Union can use it."
 },
 "304": {
-  simple: "A State may tax goods imported from other States, so long as it taxes similar local goods the same way and does not discriminate.\n\n" +
-    "It may also impose reasonable restrictions on trade within the State in the public interest, but a Bill doing so needs the President's previous sanction.",
-  catch: "The equal-treatment requirement in clause (a) is what stops State entry taxes working as protective tariffs.\n\n" +
-    "The sanction requirement in clause (b) is mandatory. A law lacking it can be saved only by subsequent assent under Article 255."
+  simple: "A State may tax goods brought in from other States, if it taxes similar local goods the same way and does not discriminate.\n\n" +
+    "A State may also impose reasonable restrictions on trade in the public interest. But a Bill doing so needs the President's previous sanction.",
+  catch: "The equal-tax rule stops State entry taxes from working as tariffs to protect local goods.\n\n" +
+    "The sanction rule is compulsory. A law made without it can be saved only by the President's later assent, under Article 255."
 },
 "305": {
-  simple: "Existing laws, and laws providing for State monopolies, are saved from Articles 301 and 303.",
-  catch: "The State-monopoly saving was added by the 4th Amendment. It is why nationalising an industry cannot be challenged as a restriction on inter-State trade."
+  simple: "Existing laws, and laws creating State monopolies, are protected from challenge under Articles 301 and 303.",
+  catch: "The 4th Amendment (1955) added the protection for State monopolies. So nationalising an industry cannot be challenged as a restriction on trade between States."
 },
 "306": {
-  simple: "This article once let the former Part B States impose restrictions on trade.",
-  catch: "Omitted by the 7th Amendment in 1956."
+  simple: "Article 306 once let the former princely States restrict trade.",
+  catch: "The 7th Amendment omitted it in 1956."
 },
 "307": {
-  simple: "Parliament may by law appoint an authority to carry out the purposes of Articles 301 to 304, and confer powers on it.",
-  catch: "No such authority has ever been appointed. Jindal Stainless (2016) noted the vacancy, and the GST Council now performs some of what such a body might have done."
+  simple: "Parliament may by law set up an authority to carry out the purposes of Articles 301 to 304, and give it powers.",
+  catch: "No such authority has ever been set up."
 }
 
 });
