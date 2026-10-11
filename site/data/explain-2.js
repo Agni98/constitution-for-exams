@@ -112,8 +112,9 @@ partV: {
     "The Code of Criminal Procedure, 1973 ended the overlap. Judicial magistrates under the High Court now try cases. Executive magistrates under the State government handle administration."
 },
 "51": {
-  simple: "The State shall promote international peace and security, maintain just and honourable relations between nations, foster respect for international law and treaty obligations, and encourage settlement of international disputes by arbitration.",
-  catch: "Courts use this article to read international conventions into domestic law where no contrary statute exists. The Vishaka guidelines on sexual harassment were built this way."
+  simple: "The State shall promote international peace and security, and keep just and honourable relations between nations. The State shall also foster respect for international law and treaties, and encourage settling international disputes by arbitration.",
+  catch: "A treaty India signs does not become Indian law by itself. Parliament must pass a law under Article 253 to give it effect.\n\n" +
+    "But where Indian law is silent, courts use Article 51 to read international conventions in. In Vishaka (1997) the Court drew on the convention against discrimination towards women to lay down rules on sexual harassment at work."
 },
 
 /* ---------- Part IVA ---------- */
@@ -130,7 +131,8 @@ partV: {
 
 "52": {
   simple: "There shall be a President of India.",
-  catch: "Six words that make India a republic rather than a monarchy or a dominion. The head of state is elected, not inherited."
+  catch: "Article 52 creates an elected head of state. A monarch inherits the office, but a President is chosen. So India is a republic, and since 1950 it has not been a dominion under the British Crown.\n\n" +
+    "The President is the head of state, not the head of the government. The President represents the country, while the Prime Minister and the Council of Ministers run the government."
 },
 "53": {
   simple: "The executive power of the Union is vested in the President. He exercises it either directly or through officers subordinate to him. He is also the supreme commander of the defence forces.",
@@ -138,9 +140,9 @@ partV: {
     "Read with Article 74, the power belongs to the President in name and to the Council of Ministers in substance. Supreme command is likewise exercised as regulated by law."
 },
 "54": {
-  simple: "The President is elected by an electoral college. It consists of the elected members of both Houses of Parliament and the elected members of the Legislative Assemblies of the States.",
-  catch: "Only elected members count. Nominated MPs and MLAs do not vote, and members of Legislative Councils never vote.\n\n" +
-    "Delhi and Puducherry MLAs were added to the college by the 70th Amendment."
+  simple: "The President is elected by an electoral college. The college has the elected members of both Houses of Parliament and of the State Legislative Assemblies, including those of Delhi and Puducherry.",
+  catch: "Only elected members vote. Nominated members do not, and members of the Legislative Councils never do.\n\n" +
+    "The votes also carry different values. Each State's weight follows its population, and the total value of all MLA votes equals the total value of all MP votes. So an MLA from Uttar Pradesh carries more weight than an MLA from Sikkim."
 },
 "55": {
   simple: "The election must be as uniform as possible across States, and proportionate between the Union and the States.\n\n" +
@@ -170,12 +172,11 @@ partV: {
   catch: "The words 'preserve, protect and defend the Constitution' are what make 'violation of the Constitution' a meaningful ground for impeachment under Article 61."
 },
 "61": {
-  simple: "Impeachment works in two stages.\n\n" +
-    "A charge of violation of the Constitution is preferred by either House, on fourteen days' notice signed by a quarter of its members, and passed by two-thirds of the total membership of that House.\n\n" +
-    "The other House then investigates the charge, and must sustain it by two-thirds of its own total membership.",
-  catch: "The only ground is 'violation of the Constitution', which the Constitution nowhere defines.\n\n" +
-    "Nominated members may take part here, even though they cannot vote in the President's election. This is the one presidential process where they count.\n\n" +
-    "It has never been invoked."
+  simple: "Impeachment has two stages.\n\n" +
+    "First, either House brings a charge that the President has violated the Constitution. The charge needs fourteen days' written notice signed by a quarter of the House's members. The House must pass it by two-thirds of its total membership.\n\n" +
+    "Then the other House investigates the charge. The President is removed if that House also upholds it by two-thirds of its total membership.",
+  catch: "The only ground is \"violation of the Constitution\", and the Constitution never defines it. Misconduct, incompetence or illness alone is not enough. No President of India has ever faced the process.\n\n" +
+    "The bodies that elect and remove the President also differ. Nominated members of Parliament cannot vote to elect a President, but they can vote to remove one. State Assemblies elect the President, but have no part in removal."
 },
 "62": {
   simple: "An election to fill a vacancy caused by expiry of the term must be completed before the term expires. A vacancy caused by death, resignation or removal must be filled within six months.",
@@ -196,9 +197,10 @@ partV: {
     "That gap is filled by the Presidential Succession Act, 1969, under which the Chief Justice of India acts. It is a statute, not a constitutional provision."
 },
 "66": {
-  simple: "The Vice-President is elected by the members of both Houses of Parliament meeting jointly, by proportional representation with a single transferable vote and secret ballot.\n\n" +
-    "The qualifications mirror the President's, except that you must be qualified for election to the Rajya Sabha and be thirty-five or over.",
-  catch: "State legislatures play no part, unlike in the President's election. Nominated members of both Houses do vote here."
+  simple: "The Vice-President is elected by the members of both Houses of Parliament. They vote by proportional representation through the single transferable vote, in a secret ballot.\n\n" +
+    "A candidate must be a citizen, at least 35 years old, and qualified for election to the Rajya Sabha.",
+  catch: "The election differs from the President's in two ways. Nominated members of Parliament vote, and the State Assemblies play no part at all.\n\n" +
+    "So the Vice-President is chosen by Parliament alone."
 },
 "67": {
   simple: "The Vice-President holds office for five years. He may resign to the President. He may be removed by a Rajya Sabha resolution passed by a majority of all its then members and agreed to by the Lok Sabha.",
@@ -223,11 +225,10 @@ partV: {
   catch: "The 39th Amendment tried to move these disputes out of the courts. The 44th Amendment restored the Supreme Court's jurisdiction."
 },
 "72": {
-  simple: "The President may pardon, reprieve, respite or remit punishment, and may suspend or commute a sentence.\n\n" +
-    "The power covers court-martial cases, cases under Union law, and every case where the sentence is death.",
-  catch: "The power is exercised on the government's advice, not personally. It is not immune from review either.\n\n" +
-    "Courts will not sit in appeal over the merits. But Epuru Sudhakar (2006) held that a clemency decision can be struck down if it is arbitrary, made in bad faith, or based on irrelevant grounds. Shatrughan Chauhan (2014) held that inordinate delay in deciding a mercy petition is itself a ground to commute a death sentence.",
-  note: "A Governor has a parallel power under Article 161, but it does not extend to death sentences or to court-martial cases. That difference is the practical point of Article 72."
+  simple: "The President may pardon a convict, or suspend, remit or commute a sentence.\n\n" +
+    "The power covers sentences by a court martial, offences against Union laws, and every death sentence.",
+  catch: "The President acts on the government's advice. So a mercy decision is really the government's decision.\n\n" +
+    "Courts will not weigh the merits again. But Epuru Sudhakar (2006) held that a decision can be struck down if it is arbitrary, made in bad faith, or based on irrelevant grounds. And Shatrughan Chauhan (2014) held that a long, unexplained delay in deciding a mercy petition is itself a ground to commute a death sentence."
 },
 "73": {
   simple: "The Union's executive power extends to every matter on which Parliament can legislate, and to rights and jurisdiction exercisable under a treaty.",
@@ -237,18 +238,17 @@ partV: {
 /* ---------- Council of Ministers ---------- */
 
 "74": {
-  simple: "There shall be a Council of Ministers headed by the Prime Minister to aid and advise the President, and the President shall act in accordance with that advice.\n\n" +
-    "He may send the advice back once for reconsideration. He must then accept whatever comes back.",
-  catch: "'Shall act in accordance with' was put in by the 42nd Amendment. Before 1976 the text said only 'to aid and advise', and there was a live argument about whether the President could refuse.\n\n" +
-    "The one-time power to return advice came from the 44th Amendment.\n\n" +
-    "Clause (2) makes the advice itself non-justiciable. A court cannot ask what the Cabinet told the President.",
-  note: "What is left of presidential discretion is the pocket veto. Article 111 sets no time limit for assent, and President Zail Singh used that gap on the Post Office Bill in 1986."
+  simple: "A Council of Ministers, headed by the Prime Minister, aids and advises the President. The President must act on that advice.\n\n" +
+    "The President may send the advice back once for reconsideration. But the President must then accept whatever advice comes back.",
+  catch: "The binding words came later. Until 1976 the text said only that the Council would \"aid and advise\", and some argued that the President could refuse. The 42nd Amendment (1976) settled the question by adding \"shall act in accordance with such advice\". The 44th Amendment (1978) then let the President return the advice once.\n\n" +
+    "Clause (2) shields the advice itself. No court may ask what the ministers told the President. But S.R. Bommai (1994) held that the material behind a decision can still be examined.",
+  note: "The President's main remaining discretion is the pocket veto. Article 111 sets no time limit for assent. In 1986 President Zail Singh used the gap to hold back the Indian Post Office (Amendment) Bill."
 },
 "75": {
-  simple: "The Prime Minister is appointed by the President. The other Ministers are appointed on the Prime Minister's advice.\n\n" +
-    "The Council is collectively responsible to the Lok Sabha. Ministers hold office during the President's pleasure. A Minister who is not a member of either House must become one within six months.",
-  catch: "Two limits were added by the 91st Amendment. Clause (1A) caps the Council at 15 per cent of the Lok Sabha's strength. Clause (1B) bars anyone disqualified for defection from being a Minister.\n\n" +
-    "'During the President's pleasure' is read down by collective responsibility. The President cannot dismiss a Minister who retains the Prime Minister's confidence."
+  simple: "The President appoints the Prime Minister, and appoints the other ministers on the Prime Minister's advice.\n\n" +
+    "The Council of Ministers is collectively responsible to the Lok Sabha. Ministers hold office during the President's pleasure. A minister who is not a member of either House must become one within six months.",
+  catch: "Ministers hold office \"during the pleasure of the President\". But the President cannot dismiss a minister who keeps the Prime Minister's confidence. So in practice the Prime Minister decides who stays.\n\n" +
+    "The 91st Amendment (2003) added two limits. Clause (1A) caps the Council at 15 per cent of the Lok Sabha's strength, to stop large ministries being used to buy loyalty. Clause (1B) bars a member disqualified for defection from becoming a minister until re-elected."
 },
 "76": {
   simple: "The Attorney-General for India is appointed by the President from among persons qualified to be a Supreme Court judge.\n\n" +

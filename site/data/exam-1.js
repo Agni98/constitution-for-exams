@@ -737,10 +737,9 @@ preamble: {
   says: "Article 51 directs the State to promote international peace and security, keep just and honourable relations between nations, respect international law and treaties, and encourage settling disputes by arbitration.",
   why: "Article 51 is asked directly. The article also explains how international treaties reach Indian courts.",
   concepts: [
-    { t: "The four directions", d: "The State shall promote international peace and security, and maintain just and honourable relations between nations. The State shall also foster respect for international law and treaty obligations, and encourage settling international disputes by arbitration." },
-    { t: "Article 51 does not make treaties law", d: "A treaty India signs does not automatically become enforceable in India. Parliament must pass a law under Article 253 to give it domestic effect." },
-    { t: "But courts use it to fill gaps", d: "Where Indian law is silent, courts read international conventions in through Article 51. In Vishaka (1997) the Court used the international convention on discrimination against women to lay down guidelines on workplace sexual harassment." },
-    { t: "Its origin", d: "Article 51 reflects the Panchsheel principles and India's non-alignment. The article draws on the Declaration of Havana of 30 November 1939." }
+    { t: "Article 51 does not make treaties law", d: "A treaty needs a law under Article 253 before it is enforceable in India." },
+    { t: "But courts use it to fill gaps", d: "Where Indian law is silent, courts read conventions in. Vishaka (1997) built its harassment guidelines this way." },
+    { t: "Its origin", d: "Article 51 draws on the Declaration of Havana of 30 November 1939. India's later foreign policy, such as Panchsheel (1954) and non-alignment, echoed it." }
   ],
   seen: [
     "UPSC Pre 2014 — the promotion of international peace as a Directive Principle"

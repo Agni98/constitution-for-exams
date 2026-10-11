@@ -8,8 +8,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 52 says there shall be a President of India.",
   why: "Article 52 is the first article of the chapter on the Union executive. Most question sets on the President open with it.",
   concepts: [
-    { t: "What it says", d: "There shall be a President of India. The article has no other words." },
-    { t: "Head of State, not head of government", d: "The President is the ceremonial head who represents the country. The Prime Minister is the working head who actually runs the government. India copied this split from Britain." },
+    { t: "Head of State, not head of government", d: "The President is the formal head. The Prime Minister runs the government. India took the split from Britain." },
     { t: "Where the chapter runs", d: "Articles 52 to 78 cover the Union executive: the President, the Vice-President, the Council of Ministers and the Attorney-General." }
   ],
   trap: "Article 52 creates the office. Article 53 vests the executive power of the Union in it.\n\nQuestions separate the two, and ask which article does which."
@@ -21,10 +20,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 54 says the President is elected by an electoral college of the elected members of both Houses of Parliament and of the State Legislative Assemblies, including those of Delhi and Puducherry.",
   why: "Questions return again and again to who sits in the electoral college, and to the arithmetic of how much each vote is worth.",
   concepts: [
-    { t: "Who votes", d: "The elected members of both Houses of Parliament, and the elected members of the Legislative Assemblies of all the States." },
-    { t: "Who does not vote", d: "Nominated members of either House. Members of State Legislative Councils. Both are excluded, and this is the most common trap." },
+    { t: "Who does not vote", d: "Nominated members of either House, and members of the State Legislative Councils." },
     { t: "Delhi and Puducherry were added", d: "The 70th Amendment (1992) included the elected members of these two Union territory Assemblies. No other Union territory participates." },
-    { t: "Why the votes have different values", d: "The system tries to give States weight in proportion to population, and to keep the total value of MLA votes equal to the total value of MP votes. So an MLA from Uttar Pradesh carries more weight than one from Sikkim." },
+    { t: "Why the votes have different values", d: "Each State's weight follows its population. MLA votes and MP votes are equal in total value." },
     { t: "The population used is frozen at 1971", d: "The 84th Amendment fixed the 1971 census for this calculation, until the first census after 2026. So the numbers do not change even as populations grow." },
     { t: "How the counting works", d: "Proportional representation by the single transferable vote, with a secret ballot. A candidate must cross a quota, so the winner always has more than half the total value of votes." }
   ],
@@ -42,11 +40,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 61 sets out how the President can be impeached for violating the Constitution. One House brings the charge, the other investigates it, and each must pass it by two-thirds of its total membership.",
   why: "Impeachment is the only way to remove a President, and its procedure differs from every other removal in the Constitution. Questions test those differences.",
   concepts: [
-    { t: "The only ground", d: "Violation of the Constitution. No other ground exists. Incompetence, misconduct and illness are not grounds. And the Constitution does not define what violating it means." },
+    { t: "The only ground", d: "Violation of the Constitution, which is nowhere defined. No other ground exists." },
     { t: "Either House may start it", d: "Unlike a Money Bill, impeachment can begin in the Rajya Sabha or the Lok Sabha." },
     { t: "The notice requirement", d: "The charge must be preferred in a resolution signed by at least one quarter of the total members of that House, after fourteen days' written notice." },
     { t: "The majority needed", d: "Two thirds of the *total membership* of each House, not two thirds of those present and voting. The bar is much higher." },
-    { t: "Nominated members do take part", d: "They cannot vote to elect the President but they can vote to remove one. State legislatures, which do elect the President, have no role in removing them." },
+    { t: "Nominated members do take part", d: "They cannot vote to elect a President, but they can vote to remove one. State legislatures do the reverse." },
     { t: "The process is quasi-judicial", d: "The other House investigates the charge. The President has the right to appear and to be represented at that investigation." },
     { t: "Never used", d: "No President of India has ever been impeached." }
   ],
@@ -62,10 +60,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 66 says the Vice-President is elected by the members of both Houses of Parliament, by proportional representation through the single transferable vote, in a secret ballot.",
   why: "The Vice-President's election mirrors the President's, and every difference between the two can be examined.",
   concepts: [
-    { t: "Who votes", d: "Members of both Houses of Parliament vote, elected and nominated alike. Nobody else is in the electoral college." },
-    { t: "States have no role at all", d: "No State Assembly participates. The absence of the States is the sharpest contrast with the President's election." },
+    { t: "Who votes", d: "Members of both Houses, elected and nominated alike, and nobody else." },
+    { t: "States have no role at all", d: "No State Assembly takes part." },
     { t: "The method", d: "Voting is by proportional representation through the single transferable vote, by secret ballot. The President is elected with the same counting system." },
-    { t: "Qualifications", d: "Must be a citizen of India, at least 35 years old, and qualified to be elected to the Rajya Sabha. Note that the President must be qualified for the Lok Sabha instead." },
+    { t: "Qualifications", d: "The Vice-President must be qualified for the Rajya Sabha. The President must be qualified for the Lok Sabha instead." },
     { t: "How they are removed", d: "By a resolution of the Rajya Sabha passed by a majority of all its then members, and agreed to by the Lok Sabha. Fourteen days' notice is needed. No ground has to be stated." },
     { t: "The dual role", d: "The Vice-President is ex officio Chairman of the Rajya Sabha, and is not a member of it. They act as President when that office falls vacant." }
   ],
@@ -83,9 +81,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   concepts: [
     { t: "The five kinds of mercy", d: "Pardon wipes out both the conviction and the sentence. Commutation replaces a punishment with a lighter kind. Remission reduces the length without changing its kind. Respite gives a lighter sentence for a special reason such as pregnancy. Reprieve is a temporary stay, usually to allow a mercy plea." },
     { t: "Where the President's power is exclusive", d: "Punishments by court martial, offences against laws made by Parliament on Union subjects, and every case where the sentence is death." },
-    { t: "The President acts on advice", d: "The President acts on the advice of the Council of Ministers, not personally. So a mercy decision is really the government's decision." },
-    { t: "Courts can review it, but narrowly", d: "Kehar Singh (1989) and Epuru Sudhakar (2006) held the decision can be set aside if it was made without applying the mind, on irrelevant grounds, in bad faith, or arbitrarily. Courts will not sit in appeal over the merits." },
-    { t: "Delay is a ground", d: "Shatrughan Chauhan (2014) held that an unexplained and inordinate delay in deciding a mercy petition is itself a reason to commute a death sentence to life imprisonment." }
+    { t: "The President acts on advice", d: "The Council of Ministers advises, and the President acts on that advice." },
+    { t: "Courts can review it, but narrowly", d: "Kehar Singh (1989) and Epuru Sudhakar (2006) allow review for bad faith, arbitrariness, irrelevant grounds or no application of mind." },
+    { t: "Delay is a ground", d: "A long, unexplained delay in deciding a mercy petition can justify commuting a death sentence." }
   ],
   seen: [
     "UPSC Pre 2025 — the scope of the President's remission power and the limits of judicial review",
@@ -102,12 +100,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 74 says a Council of Ministers led by the Prime Minister aids and advises the President. The President must act on that advice, but may send it back once for reconsideration.",
   why: "Article 74 is the sentence that makes India a parliamentary democracy, not a presidential one. Parliament has amended it twice, in opposite directions, which gives it a clean history to test.",
   concepts: [
-    { t: "What it provides", d: "There shall be a Council of Ministers, with the Prime Minister at its head, to aid and advise the President, who shall act in accordance with that advice." },
-    { t: "Originally the wording was softer", d: "The original text said the Council was there \"to aid and advise\". The text did not say the President must follow the advice. Convention filled the gap." },
-    { t: "The 42nd Amendment made it binding", d: "In 1976 the words \"who shall, in the exercise of his functions, act in accordance with such advice\" were added, removing any doubt." },
-    { t: "The 44th Amendment added one pause", d: "In 1978 a proviso was added letting the President send the advice back once for reconsideration. If the Council sends the same or different advice back, the President must act on it." },
-    { t: "The advice cannot be questioned in court", d: "Clause (2) says no court may inquire into what advice ministers gave the President. The clause keeps Cabinet discussions confidential." },
-    { t: "But the resulting action can be", d: "S.R. Bommai (1994) held that while the advice itself is immune, the material on which a proclamation was based can be examined by a court. The shield covers the conversation, not the outcome." }
+    { t: "Originally the wording was softer", d: "The text said only \"to aid and advise\". Convention made the advice binding." },
+    { t: "The 42nd Amendment made it binding", d: "The 1976 words \"shall act in accordance with such advice\" removed any doubt." },
+    { t: "The 44th Amendment added one pause", d: "One return for reconsideration. The President must act on whatever advice comes back." },
+    { t: "The advice cannot be questioned in court", d: "No court may ask what advice the ministers gave." },
+    { t: "But the resulting action can be", d: "The material behind a proclamation can be examined, though the advice cannot." }
   ],
   seen: [
     "UPSC Pre 2020 — the essence of the parliamentary system and executive responsibility"
@@ -121,11 +118,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 75 says the President appoints the Prime Minister, and the other ministers on the Prime Minister's advice. The Council of Ministers is collectively responsible to the Lok Sabha, and can have no more than 15 per cent of its members.",
   why: "Article 75 covers how ministers are appointed, how many there can be, how long they last and to whom they answer. Every one of those clauses has been examined.",
   concepts: [
-    { t: "Appointment", d: "The President appoints the Prime Minister. The President then appoints the other ministers on the Prime Minister's advice. So in practice the Prime Minister chooses the Cabinet." },
-    { t: "The 15% cap", d: "Clause (1A), added by the 91st Amendment (2003), limits the total number of ministers to 15% of the strength of the Lok Sabha. The cap was meant to stop bloated ministries being used to buy loyalty." },
-    { t: "Defectors cannot be ministers", d: "Clause (1B), also from the 91st Amendment, bars a member disqualified for defection under the Tenth Schedule from being appointed a minister for the rest of that term." },
+    { t: "Appointment", d: "In practice the Prime Minister chooses the ministers." },
+    { t: "The 15% cap", d: "Clause (1A), added in 2003, limits ministers to 15% of the Lok Sabha's strength." },
+    { t: "Defectors cannot be ministers", d: "A member disqualified for defection cannot be a minister until the term ends or they win a fresh election." },
     { t: "Collective responsibility", d: "The Council of Ministers is collectively responsible to the House of the People. If the Lok Sabha passes a no-confidence motion, the whole ministry must resign, not just the minister at fault." },
-    { t: "Individual responsibility", d: "Ministers hold office during the pleasure of the President. In practice the Prime Minister can have any minister removed." },
+    { t: "Individual responsibility", d: "In practice the Prime Minister can have any minister removed." },
     { t: "The six-month rule", d: "A person who is not a member of either House can be made a minister, but must become a member within six months or cease to hold office." },
     { t: "Salaries are fixed by Parliament", d: "Not by the executive. The point is small, but it appears now and then." }
   ],
