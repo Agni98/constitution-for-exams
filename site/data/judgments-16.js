@@ -166,7 +166,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the end of the special status stood, even though the Court rejected one of the routes the government had used to reach it.'
   ],
   legacy: [
-    'Elections to the Legislative Assembly of Jammu and Kashmir were held in September and October 2024.'
+    'In September and October 2024 Jammu and Kashmir elected its first Assembly since 2014, and Omar Abdullah became Chief Minister that October.'
   ],
   source: 'https://indiankanoon.org/doc/77326406/'
 },
