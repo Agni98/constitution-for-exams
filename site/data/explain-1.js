@@ -39,10 +39,11 @@ partIII: {
 /* ---------- Part I ---------- */
 
 "1": {
-  simple: "India, also called Bharat, is a Union of States. Its territory consists of the States and Union territories listed in the First Schedule, together with any territory it acquires later.",
-  catch: "The word is 'Union', not 'Federation'. Ambedkar chose it deliberately.\n\n" +
-    "It signals that the States did not come together by agreement and cannot leave. There is no right of secession anywhere in the Constitution.",
-  note: "'Territory of India' is wider than 'India'. Some rights, such as those in Articles 14 and 21, belong to any person in the territory of India. Others, such as those in Article 19, belong only to citizens."
+  simple: "India, that is Bharat, is a Union of States. The territory of India is made up of the States, the Union territories, and any territory India acquires later.\n\n" +
+    "The First Schedule lists the States and the Union territories.",
+  catch: "Ambedkar chose the word \"Union\" instead of \"federation\" on purpose. India did not come about by States agreeing to join. So no State has a right to leave, and the Constitution has no right of secession.\n\n" +
+    "But the States themselves are not fixed. Parliament can create, merge, enlarge, shrink or rename them by an ordinary law under Article 3.",
+  note: "Some rights, such as those in Articles 14 and 21, belong to every person in the territory of India. Others, such as those in Article 19, belong only to citizens."
 },
 "2": {
   simple: "Parliament may admit a new State into the Union, or establish one, on whatever terms it thinks fit.",
@@ -54,11 +55,9 @@ partIII: {
   catch: "It was inserted by the 35th Amendment in 1974 and omitted a year later by the 36th, when Sikkim became a full State under Article 371F."
 },
 "3": {
-  simple: "Parliament may create a new State out of existing territory, merge States, increase or reduce a State's area, change its boundaries, or change its name. All of this is done by ordinary law.",
-  catch: "The affected State must be given a chance to express its views. Parliament is not bound by them.\n\n" +
-    "It may proceed even over a State's outright objection. Telangana was created in 2014 after the Andhra Pradesh Assembly rejected the proposal.\n\n" +
-    "This is what people mean when they call India an indestructible Union of destructible States.",
-  note: "A Bill under this article needs the President's prior recommendation, which in practice means the Union government's."
+  simple: "Parliament can form a new State, merge States, enlarge or shrink a State, change its boundaries, or change its name. Parliament does all of this by an ordinary law, passed by a simple majority.",
+  catch: "The affected State is only consulted. Its legislature gives its views, but Parliament is free to ignore them. In 2014 Parliament created Telangana although the Andhra Pradesh Assembly had rejected the proposal.\n\n" +
+    "So a State can be divided, merged or renamed without its consent. For that reason, India is called an indestructible Union of destructible States."
 },
 "4": {
   simple: "A law made under Article 2 or 3 may itself amend the First and Fourth Schedules, and make any consequential provisions needed. Doing so does not count as amending the Constitution.",
@@ -69,9 +68,9 @@ partIII: {
 /* ---------- Part II ---------- */
 
 "5": {
-  simple: "Anyone domiciled in India when the Constitution commenced became a citizen on 26 January 1950, provided they were born here, or had a parent born here, or had lived here for five years.",
-  catch: "This is a snapshot rule. It operated once, on one day, and is now spent.\n\n" +
-    "It confers nothing on anyone born later. For that you need the Citizenship Act, 1955."
+  simple: "Article 5 decided who became a citizen of India on 26 January 1950, the day the Constitution began.\n\n" +
+    "A person domiciled in India on that day became a citizen if one of three links held: birth in India, a parent born in India, or five years of living in India before that date.",
+  catch: "The rule worked once, on one day, and its work is done. So the rule gives nothing to anyone born after 1950."
 },
 "6": {
   simple: "People who migrated to India from what became Pakistan could become citizens. Those who came before 19 July 1948 became citizens automatically. Those who came later had to register.",
@@ -96,45 +95,39 @@ partIII: {
   catch: "The last five words swallow the rest. Parliament may provide for loss of citizenship by renunciation, termination or deprivation, and it has done so in the 1955 Act."
 },
 "11": {
-  simple: "Parliament may make any law it likes about acquiring and terminating citizenship, and about every other citizenship question.",
-  catch: "This is the master key to the whole Part.\n\n" +
-    "Everything contentious about Indian citizenship sits under Article 11 rather than under Articles 5 to 10: the Citizenship Act, 1955, section 6A giving effect to the Assam Accord, and the 2019 Amendment Act.\n\n" +
-    "It also means citizenship law can be changed by a simple majority."
+  simple: "Parliament can make any law about how citizenship is gained and lost, and about every other question of citizenship.",
+  catch: "Article 11 is the source of all citizenship law since 1950. The Citizenship Act, 1955, section 6A on the Assam Accord, and the 2019 amendment all rest on Article 11, not on Articles 5 to 10.\n\n" +
+    "Because Parliament acts by ordinary law, citizenship rules can be changed by a simple majority, without amending the Constitution."
 },
 
 /* ---------- Part III: general ---------- */
 
 "12": {
-  simple: "Article 12 defines who counts as 'the State' for the purposes of Part III.\n\n" +
-    "It covers the Government and Parliament of India, the government and legislature of every State, and all local and other authorities within India or under the control of the Government of India.",
-  catch: "Everything in Part III turns on this definition, because fundamental rights run against 'the State'.\n\n" +
-    "The important words are 'other authorities'. The Supreme Court has read them broadly. They cover statutory corporations. After Ajay Hasia and Pradeep Kumar Biswas they also cover any body that is functionally, financially and administratively dominated by the government.\n\n" +
-    "A genuinely private body stays outside. That is why Articles 15(2), 17, 23 and 24 matter so much: those four bind private persons as well as the State."
+  simple: "Article 12 says who counts as \"the State\" for the fundamental rights.\n\n" +
+    "The State includes the Government and Parliament of India, the government and legislature of each State, and all local and other authorities in India or under the control of the Government of India.",
+  catch: "The definition matters because most fundamental rights protect people only against the State. If a body is not the State, a person usually cannot use those rights against it.\n\n" +
+    "Most disputes are about the words \"other authorities\". The Court reads them to cover bodies that the government really runs, even when they are set up as companies or societies. But a truly private body stays outside, except where a right such as Article 15(2), 17, 23 or 24 binds private persons too."
 },
 "13": {
-  simple: "Any law that takes away or cuts down a fundamental right is void to that extent.\n\n" +
-    "This applies both to laws already in force in 1950 and to laws made afterwards. 'Law' is defined widely enough to include ordinances, orders, bye-laws, rules, regulations, notifications and even custom.",
-  catch: "Clause (4) says Article 13 does not apply to a constitutional amendment made under Article 368. It was added by the 24th Amendment in 1971, as Parliament's answer to Golak Nath.\n\n" +
-    "It worked, as a matter of text. It was then made largely beside the point by Kesavananda Bharati, which held that an amendment still cannot damage the basic structure.",
-  note: "Two doctrines live in this article. Severability: only the offending part of a law falls, if it can be cut out cleanly. Eclipse: a pre-1950 law inconsistent with a right is not dead but dormant, and revives if the right is amended away."
+  simple: "Any law that takes away or cuts down a fundamental right is void, to the extent of the conflict. The rule covers laws made before 1950 and laws made after.\n\n" +
+    "\"Law\" here includes ordinances, orders, bye-laws, rules, regulations, notifications, and even custom.",
+  catch: "Article 13 is the source of the courts' power to strike down laws that break fundamental rights.\n\n" +
+    "In Golak Nath (1967), the Court held that an amendment to the Constitution is also a \"law\" under Article 13. Parliament answered with the 24th Amendment (1971), which added clause (4): Article 13 does not apply to amendments. But Kesavananda Bharati (1973) then held that even an amendment cannot destroy the basic structure."
 },
 
 /* ---------- Right to Equality ---------- */
 
 "14": {
-  simple: "The State cannot deny any person equality before the law or the equal protection of the laws.\n\n" +
-    "It applies to everyone in India. Citizens and non-citizens, natural persons and companies alike.",
-  catch: "Equality does not mean treating everyone the same. The State may classify people, and does so constantly.\n\n" +
-    "A classification survives two tests. It must rest on a real difference between those grouped together and those left out. That difference must have a rational connection to what the law is trying to achieve.\n\n" +
-    "There is now a second route in. After E.P. Royappa and Maneka Gandhi, arbitrariness by itself violates Article 14. You no longer have to find someone comparable who was treated better.",
-  note: "The article contains two ideas from two traditions. 'Equality before law' is Dicey's: no one is above the law. 'Equal protection of the laws' is American: like should be treated alike. The Constitution takes both."
+  simple: "The State shall not deny any person equality before the law or the equal protection of the laws within India.\n\n" +
+    "The right belongs to every person, citizen or not, and to companies too.",
+  catch: "Equality under Article 14 does not mean treating everyone alike. The State may treat groups differently for a good reason, but it may never act arbitrarily.\n\n" +
+    "So the Court asks two questions. Is the line between the groups sensible? And is the action free of whim?"
 },
 "15": {
-  simple: "The State may not discriminate against any citizen only on grounds of religion, race, caste, sex or place of birth.\n\n" +
-    "Clause (2) goes further than the rest of Part III. It bars such discrimination even by private persons, in access to shops, restaurants, hotels, wells, tanks, roads and other public places.",
-  catch: "The word 'only' is the escape hatch. A law that discriminates on one of these grounds plus something else can survive.\n\n" +
-    "Clauses (3) to (6) then carve out large permitted exceptions: special provision for women and children, for socially and educationally backward classes, for admission to private educational institutions, and since 2019 for economically weaker sections.",
-  note: "Clause (4) was added by the 1st Amendment to overturn Champakam Dorairajan. Clause (5) came with the 93rd Amendment. Clause (6), the 10 per cent EWS provision, came with the 103rd and was upheld 3-2 in Janhit Abhiyan (2022)."
+  simple: "The State shall not discriminate against any citizen only on grounds of religion, race, caste, sex or place of birth.\n\n" +
+    "Clause (2) also stops anyone, including private owners, from barring citizens from shops, restaurants, hotels, wells, tanks, roads and other public places on those grounds.",
+  catch: "Two features shape how Article 15 works. First, the word \"only\" lets a law survive if it rests on one of the five grounds together with another genuine reason.\n\n" +
+    "Second, clauses (3) to (6) allow special provisions. They cover women and children, backward classes and the Scheduled Castes and Scheduled Tribes, admission to private colleges, and since 2019 the economically weaker sections. So Article 15 forbids discrimination, but lets the State help the disadvantaged."
 },
 "16": {
   simple: "Every citizen has an equal opportunity in public employment. The State may not discriminate on grounds of religion, race, caste, sex, descent, place of birth or residence.\n\n" +

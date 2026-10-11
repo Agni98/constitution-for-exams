@@ -53,11 +53,11 @@ preamble: {
   tier: 1,
   papers: ["UPSC Pre", "State PCS"],
   says: "Article 1 says India, that is Bharat, shall be a Union of States. The territory of India is made up of the States, the Union territories and any territory India acquires.",
-  why: "The word \"Union\" was chosen over \"federation\" on purpose. The choice settles a large question: no State can ever leave India.",
+  why: "Article 1 is short, and examiners test each part of it: the two names, the word \"Union\", and the three kinds of territory.",
   concepts: [
     { t: "\"India, that is Bharat, shall be a Union of States\"", d: "Both names are official and both appear in the Constitution itself. Neither is a nickname." },
-    { t: "Why \"Union\" and not \"Federation\"", d: "Ambedkar explained it in the Constituent Assembly. India is not the result of States agreeing to come together, the way the American states did. India was one country that was then divided into States for administration. So no State has a right to walk out." },
-    { t: "Indestructible union of destructible States", d: "Textbooks use this phrase for India's design. The Union cannot be broken up, but the States themselves can be redrawn, merged or renamed by Parliament under Article 3. In America it is the opposite: the states are indestructible." },
+    { t: "Why \"Union\" and not \"Federation\"", d: "India did not form by States agreeing to come together, the way the American states did. So no State has a right to walk out." },
+    { t: "Indestructible union of destructible States", d: "The Union cannot be broken up, but Parliament can redraw, merge or rename the States under Article 3. In the United States it is the opposite, because the states there cannot be destroyed." },
     { t: "Three kinds of territory", d: "The territory of India is made up of the States, the Union territories, and any territory India may acquire in future. All three are covered." },
     { t: "The First Schedule holds the actual list", d: "Article 1 does not name the States. Article 1 points to the First Schedule, which lists all the States and Union territories with their boundaries. So creating a new State changes the Schedule, not Article 1." }
   ],
@@ -75,7 +75,7 @@ preamble: {
   concepts: [
     { t: "What Parliament can do", d: "Parliament can create a new State, enlarge or shrink an existing one, change its boundaries, or change its name. All of it by an ordinary law, passed by a simple majority." },
     { t: "The President must recommend it first", d: "A Bill under Article 3 cannot even be introduced without the President's prior recommendation. In practice this means the central government must want it." },
-    { t: "The State is only consulted, not asked for permission", d: "The President refers the Bill to the affected State legislature for its views, and fixes a time limit. But Parliament is free to ignore what the State says, and free to go ahead if the State says nothing at all." },
+    { t: "The State is only consulted, not asked for permission", d: "The President sends the Bill to the State legislature for its views and fixes a time limit. Parliament may then ignore the views, or go ahead if the State says nothing." },
     { t: "No constitutional amendment is needed", d: "Redrawing States changes the First Schedule, but Article 4 says such a change is not an amendment for the purposes of Article 368. So a simple majority is enough. Many candidates find the point surprising, and examiners know it." },
     { t: "Giving territory away is different", d: "The Berubari case held that ceding Indian territory to a foreign country cannot be done under Article 3. Giving territory away needs a constitutional amendment. So the 9th Amendment (1960) and the 100th Amendment (2015, the land swap with Bangladesh) were needed." }
   ],
@@ -89,9 +89,9 @@ preamble: {
   tier: 2,
   papers: ["UPSC Pre", "State PCS"],
   says: "Article 5 says who became a citizen of India on 26 January 1950, the day the Constitution began.",
-  why: "Article 5 is the starting point of the citizenship provisions. Many candidates wrongly think it governs citizenship today. Article 5 describes only that one date, and citizenship today comes from the Citizenship Act, 1955.",
+  why: "Article 5 is the starting point of the citizenship provisions, and many candidates wrongly think it still decides who is a citizen today.",
   concepts: [
-    { t: "Who became a citizen in 1950", d: "The person needed a domicile in India on 26 January 1950. The person also needed one of three links: birth in India, a parent born in India, or five years of living in India before that date." },
+    { t: "Who became a citizen in 1950", d: "Domicile in India on 26 January 1950, plus one of three links: birth in India, a parent born in India, or five years of living in India." },
     { t: "\"Domicile\" means more than living somewhere", d: "Domicile means the place a person treats as their permanent home and intends to keep returning to. A student living abroad for years can still be domiciled in India." },
     { t: "Part II is only about that one day", d: "Articles 5 to 11 deal with who was a citizen at the commencement of the Constitution, plus migrants from and to Pakistan. Anything about acquiring or losing citizenship afterwards comes from the Citizenship Act, 1955." },
     { t: "India has single citizenship", d: "You are a citizen of India, not of India and of Maharashtra. The United States gives dual citizenship, of the federation and of the state. India deliberately did not, to hold the country together." },
@@ -110,7 +110,7 @@ preamble: {
   why: "Every question on the Citizenship Act, including the 2019 amendment, rests on Article 11. The article is short, and its point is easy to test.",
   concepts: [
     { t: "Parliament has full power", d: "Parliament may make any law about the acquisition and termination of citizenship, and about all other matters relating to citizenship." },
-    { t: "Nothing in Part II limits that power", d: "The article says so expressly. Parliament can override anything in Articles 5 to 10 by ordinary law. Parliament does not need a constitutional amendment to do so." },
+    { t: "Nothing in Part II limits that power", d: "The article says so expressly. Parliament can override Articles 5 to 10 by an ordinary law." },
     { t: "The Citizenship Act, 1955", d: "The Citizenship Act is the law Parliament made under Article 11. The Act sets out five ways to become a citizen: by birth, by descent, by registration, by naturalisation, and by incorporation of territory. The Act has been amended many times, most recently in 2019." },
     { t: "States have no say at all", d: "Citizenship is entry 17 of the Union List. No State legislature can make a law about who is or is not an Indian citizen." }
   ],
@@ -124,10 +124,10 @@ preamble: {
   tier: 1,
   papers: ["UPSC Pre", "UPSC Mains", "UPPCS Mains", "State PCS"],
   says: "Article 12 defines \"the State\" for the Fundamental Rights. The State includes Parliament and the Union government, each State's legislature and government, and all local or other authorities in India or under the Union's control.",
-  why: "Most Fundamental Rights can be enforced only against the State. So whether a body counts as the State decides whether a person can take it to court for violating a right.",
+  why: "Questions ask whether a named body, such as a bank, a university or a sports board, counts as the State. The answer decides whether a person can take that body to court for breaking a fundamental right.",
   concepts: [
     { t: "Who is clearly covered", d: "The Government and Parliament of India, the Government and legislature of every State, all local authorities such as municipalities and panchayats, and \"other authorities\" within India." },
-    { t: "\"Other authorities\" is the contested phrase", d: "The phrase is open-ended, and most of the litigation is about it. The Supreme Court has read it to cover bodies that are not obviously government but are effectively run by it." },
+    { t: "\"Other authorities\" is the contested phrase", d: "The phrase is open-ended, and most cases under Article 12 turn on it." },
     { t: "The instrumentality test", d: "A body counts as the State if it is really an instrument of government. Courts look at who owns it, who funds it, who controls it, whether it has a monopoly, and whether it performs a public function. Ajay Hasia (1981) laid out these tests." },
     { t: "Pradeep Kumar Biswas set the test that now governs", d: "In 2002 a seven-judge bench held, by 5 to 2, that CSIR is the State. The judgment replaced a loose reading of the Ajay Hasia factors with one question: is the body financially, functionally and administratively dominated by the government? The control must be particular to that body, not the general regulation government applies to everyone." },
     { t: "What about the courts themselves", d: "When a court acts administratively, for example in hiring staff, it is the State. When it decides a case, it generally is not, because a judicial order is not usually challenged as violating Fundamental Rights." },
@@ -143,14 +143,14 @@ preamble: {
   tier: 1,
   papers: ["UPSC Pre", "UPSC Mains", "State PCS"],
   says: "Article 13 says any law that takes away or cuts down a Fundamental Right is void, to the extent of the conflict.",
-  why: "Article 13 is the source of the courts' power to strike down laws. The article was also at the centre of the long fight over whether Parliament could amend away Fundamental Rights, which Kesavananda Bharati (1973) ended.",
+  why: "Two doctrines that examiners return to, eclipse and severability, come from Article 13. So does the long fight over whether Parliament could amend away the fundamental rights.",
   concepts: [
     { t: "Old laws", d: "Laws made before the Constitution are void to the extent that they conflict with Fundamental Rights. Only the offending part dies, not the whole law." },
     { t: "New laws", d: "The State shall not make any law that takes away or reduces Fundamental Rights. Any law that does is void." },
     { t: "Doctrine of eclipse", d: "A pre-Constitution law that conflicts with a Fundamental Right is not dead, only overshadowed. If the conflict is later removed by amending the Constitution, the old law revives automatically. Think of an eclipse passing." },
     { t: "Doctrine of severability", d: "If only part of a law is unconstitutional, the court removes that part and keeps the rest, provided the remainder can stand on its own and still makes sense." },
     { t: "\"Law\" is defined very widely", d: "The word \"law\" covers ordinances, orders, bye-laws, rules, regulations, notifications, and even custom and usage having the force of law. So an old discriminatory custom can be struck down." },
-    { t: "Clause (4) and the escape hatch", d: "The 24th Amendment (1971) added Article 13(4), saying a constitutional amendment is not \"law\" for this article. The clause was meant to put amendments beyond challenge. Kesavananda Bharati (1973) blunted it by inventing the basic structure doctrine." }
+    { t: "Clause (4) and the escape hatch", d: "Clause (4), added in 1971, says an amendment is not a \"law\" under Article 13. So amendments are tested against the basic structure instead." }
   ],
   seen: [
     "UPSC Pre 2023 — the First Amendment and the limits on amending Fundamental Rights",
@@ -187,8 +187,8 @@ preamble: {
   why: "Article 15 keeps changing. Two amendments in the last twenty years added new clauses, including the 10 per cent quota for economically weaker sections in 2019.",
   concepts: [
     { t: "The five forbidden grounds", d: "Religion, race, caste, sex, and place of birth. The list of five grounds is complete. Descent and residence are not on the list. They appear in Article 16 instead, which catches people out." },
-    { t: "The word \"only\" does a lot of work", d: "The ban is on discrimination on these grounds *only*. If the State discriminates on one of these grounds plus a genuine additional reason, the law may survive. The narrow reading has been used both to allow and to attack many laws." },
-    { t: "Clause (2) reaches private conduct", d: "No citizen can be denied access to shops, restaurants, hotels, public entertainment, wells, tanks, roads or bathing ghats on these grounds. Clause (2) binds private owners too, not just the State. Clause (2) is one of the few places Part III touches private behaviour." },
+    { t: "The word \"only\" does a lot of work", d: "The ban covers discrimination on these grounds only. A law that rests on one of them plus a genuine further reason may survive." },
+    { t: "Clause (2) reaches private conduct", d: "Clause (2) binds private owners of shops, restaurants, hotels and public places, not just the State. Clause (2) is one of the few places where Part III reaches private behaviour." },
     { t: "Clause (3): women and children", d: "The State may make special provisions for women and children. So reserved seats for women, maternity benefits and separate schemes for women are constitutional, not discriminatory." },
     { t: "Clause (4): backward classes", d: "The State may make special provisions for socially and educationally backward classes, and for Scheduled Castes and Scheduled Tribes. The First Amendment (1951) added clause (4), after the Champakam Dorairajan case struck down caste-based quotas in colleges." },
     { t: "Clause (5): private colleges", d: "Added by the 93rd Amendment (2005). Clause (5) lets the State require reservation in private educational institutions, including unaided ones. Minority institutions under Article 30 are excluded." },
