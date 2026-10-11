@@ -41,30 +41,29 @@ partXXII: {
   catch: "Added by the 91st Amendment in 2003, to close the loophole by which a defector, disqualified from the House, was immediately made a minister or corporation chairman."
 },
 "362": {
-  simple: "This article once required due regard to be had to the guarantees given to the Rulers of Indian States.",
-  catch: "Omitted by the 26th Amendment in 1971, along with Article 291."
+  simple: "Article 362 once required due regard for the guarantees given to the rulers of the princely States.",
+  catch: "The 26th Amendment omitted it in 1971, along with Article 291."
 },
 "363": {
-  simple: "No court has jurisdiction in a dispute arising out of a treaty, agreement, covenant, engagement, sanad or similar instrument, entered into before the Constitution by a Ruler of an Indian State.",
-  catch: "Instruments of Accession and merger agreements are therefore outside the courts altogether. That was the constitutional footing of the settlement of the princely States."
+  simple: "No court may hear a dispute arising from a treaty, agreement, covenant or similar document made before the Constitution by the ruler of a princely State.",
+  catch: "So the Instruments of Accession and the merger agreements lie wholly outside the courts. The settlement with the princely States rested on that rule."
 },
 "363A": {
   simple: "Recognition of the Rulers of Indian States is abolished. Their privy purses are abolished, and all rights, liabilities and obligations in respect of privy purses are extinguished.",
   catch: "Inserted by the 26th Amendment in 1971, after the Supreme Court in Madhav Rao Scindia (1970) struck down the presidential order that had tried to achieve the same result by executive action."
 },
 "364": {
-  simple: "The President may by notification direct that any law shall not apply, or shall apply with modifications, to a major port or aerodrome.",
-  catch: "An unusual power to switch off statutes geographically, and one used sparingly."
+  simple: "The President may, by notice, direct that a law shall not apply, or shall apply with changes, to a major port or aerodrome.",
+  catch: "The power to switch off a law in one place is unusual, and it has been used sparingly."
 },
 "365": {
-  simple: "Where a State fails to comply with a direction given by the Union under any provision of the Constitution, it is lawful for the President to hold that the government of the State cannot be carried on in accordance with the Constitution.",
-  catch: "This is the bridge from Articles 256, 257 and 353 to Article 356. A single non-compliance is deemed sufficient to found President's Rule.\n\n" +
-    "Bommai's requirement that the material be relevant applies here too, but the article itself supplies the deeming."
+  simple: "If a State fails to follow a direction given by the Union under the Constitution, the President may hold that the State's government cannot be carried on under the Constitution.",
+  catch: "Article 365 links Articles 256, 257 and 353 to Article 356. One failure to comply is enough to let the President make that finding, and the finding is a ground for President's rule.\n\n" +
+    "But Bommai's rule still applies. The material behind the finding must be relevant."
 },
 "366": {
-  simple: "Article 366 is the definitions clause. It defines thirty terms used throughout the Constitution, including 'agricultural income', 'Anglo-Indian', 'goods and services tax', 'Scheduled Castes', 'State' and 'taxation'.",
-  catch: "Read it before arguing about any of those words.\n\n" +
-    "Clause (29A), added by the 46th Amendment, extended 'sale of goods' to hire-purchase, works contracts and the supply of food in a restaurant. That one definition generated an entire branch of tax law."
+  simple: "Article 366 is the definitions clause. The article defines about thirty terms used across the Constitution, including \"agricultural income\", \"Anglo-Indian\", \"goods and services tax\", \"Scheduled Castes\", \"State\" and \"taxation\".",
+  catch: "Clause (29A), added by the 46th Amendment (1982), stretched \"sale of goods\" to cover hire-purchase, works contracts and serving food in a restaurant. The one definition produced a whole branch of tax law."
 },
 "367": {
   simple: "The General Clauses Act, 1897 applies to the interpretation of the Constitution. References to a law in force include pre-Constitution law. References to a State include a Union territory for certain purposes.",

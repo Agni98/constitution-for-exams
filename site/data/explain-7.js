@@ -12,23 +12,23 @@ partXIV: {
     "Chapter II sets up the Public Service Commissions."
 },
 partXIVA: {
-  simple: "Part XIVA covers tribunals. It was added by the 42nd Amendment, to take service disputes and certain other matters out of the ordinary courts.\n\n" +
-    "The Supreme Court has since restored High Court supervision over all of them."
+  simple: "Part XIVA covers tribunals. The 42nd Amendment added it, to move service disputes and some other matters out of the ordinary courts.\n\n" +
+    "The Supreme Court has since brought all tribunals back under the High Courts' supervision."
 },
 partXV: {
-  simple: "Part XV covers elections: the Election Commission, a single common electoral roll, adult suffrage, and the bar on courts interfering with an election once it has begun."
+  simple: "Part XV covers elections. The Part sets up the Election Commission, a single electoral roll for each constituency and adult suffrage. The Part also bars the courts from interfering with an election once it has begun."
 },
 partXVI: {
   simple: "Part XVI contains special provisions for Scheduled Castes, Scheduled Tribes, Anglo-Indians and backward classes.\n\n" +
-    "It covers reserved seats, the commissions that oversee them, and the clock that governs how long the reservation of seats lasts."
+    "The Part covers reserved seats, the commissions that watch over the safeguards, and the deadline for the reservation of seats."
 },
 partXVII: {
-  simple: "Part XVII covers language: the official language of the Union, of the States and of the courts, and the special directives on Hindi and on linguistic minorities.\n\n" +
-    "These are some of the most delicately drafted articles in the Constitution."
+  simple: "Part XVII covers language: the official language of the Union, of the States and of the courts, and special directions on Hindi and on linguistic minorities.\n\n" +
+    "The articles in the Part are among the most carefully balanced in the Constitution."
 },
 partXVIII: {
-  simple: "Part XVIII provides for three kinds of emergency — national, State and financial — and says what each does to the federal structure and to fundamental rights.\n\n" +
-    "Almost every safeguard here was written or rewritten by the 44th Amendment in 1978, in direct response to 1975."
+  simple: "Part XVIII provides for three kinds of emergency: national, State and financial. The Part says what each one does to the federal system and to fundamental rights.\n\n" +
+    "The 44th Amendment (1978) wrote or rewrote almost every safeguard in the Part, in direct response to the Emergency of 1975."
 },
 
 /* ---------- Part XIV: Services ---------- */
@@ -59,8 +59,8 @@ partXVIII: {
     "The IAS and the IPS existed before 1950 and continue under the article. The Indian Forest Service was created in 1966 by this procedure. An all-India judicial service is expressly contemplated, but has never been created."
 },
 "312A": {
-  simple: "Parliament may vary or revoke the conditions of service of officers who came from the former Secretary of State's services. No such law may be questioned in any court.",
-  catch: "Inserted by the 28th Amendment in 1972, to end the special guarantees the old Indian Civil Service officers had been given at independence."
+  simple: "Parliament may change or end the conditions of service of officers who came from the old services of the Secretary of State for India. No court may question such a law.",
+  catch: "The 28th Amendment (1972) added the article, to end the special guarantees given to former Indian Civil Service officers at independence."
 },
 "313": {
   simple: "Until other provision is made, the laws in force before the Constitution continue to apply to the services and posts they covered.",
@@ -160,9 +160,9 @@ partXVIII: {
     "But the bar does not cover steps before the election is notified, or a failure to hold an election at all."
 },
 "329A": {
-  simple: "This article placed disputes about the election of the Prime Minister and the Speaker beyond the reach of the courts.",
-  catch: "Inserted by the 39th Amendment in 1975, to protect Indira Gandhi's election.\n\n" +
-    "Struck down in Indira Nehru Gandhi v. Raj Narain (1975) as violating the basic structure of free and fair elections, and formally repealed by the 44th Amendment."
+  simple: "Article 329A put disputes over the election of the Prime Minister and the Speaker beyond the reach of the courts.",
+  catch: "The 39th Amendment added it in 1975, to protect Indira Gandhi's election.\n\n" +
+    "In Indira Nehru Gandhi v. Raj Narain (1975) the Court struck down its key clause, because free and fair elections are part of the basic structure. The 44th Amendment later repealed the article."
 },
 
 /* ---------- Part XVI ---------- */
@@ -173,9 +173,8 @@ partXVIII: {
     "The reservation was meant to last ten years. Article 334 has been extended every decade since, most recently by the 104th Amendment (2019) to 25 January 2030."
 },
 "330A": {
-  simple: "One-third of the seats reserved for Scheduled Castes and Scheduled Tribes in the Lok Sabha, and one-third of the total seats, shall be reserved for women.",
-  catch: "Inserted by the 106th Amendment in 2023. It does not operate yet.\n\n" +
-    "Article 334A makes it take effect only after a census, and the delimitation exercise that follows."
+  simple: "One-third of the Lok Sabha seats reserved for Scheduled Castes and Scheduled Tribes, and one-third of all its seats, shall be reserved for women.",
+  catch: "The 106th Amendment added the article in 2023, but it does not operate yet. Article 334A makes it wait for a census and the delimitation that follows."
 },
 "331": {
   simple: "Article 331 let the President nominate up to two Anglo-Indians to the Lok Sabha, if the community was not adequately represented.",
@@ -186,8 +185,8 @@ partXVIII: {
   catch: "In Arunachal Pradesh, Meghalaya, Mizoram, Nagaland and Tripura, special clauses fix the number of seats reserved for Scheduled Tribes. The usual population share does not apply there."
 },
 "332A": {
-  simple: "One-third of the seats reserved for Scheduled Castes and Scheduled Tribes in State Assemblies, and one-third of the total seats, shall be reserved for women.",
-  catch: "Inserted by the 106th Amendment, and subject to the same deferral in Article 334A."
+  simple: "One-third of the State Assembly seats reserved for Scheduled Castes and Scheduled Tribes, and one-third of all Assembly seats, shall be reserved for women.",
+  catch: "The 106th Amendment added the article. The same delay in Article 334A applies."
 },
 "333": {
   simple: "Article 333 let a Governor nominate one Anglo-Indian to the State's Legislative Assembly.",
@@ -200,10 +199,9 @@ partXVIII: {
     "The nomination of Anglo-Indians ran on the same clock, and was allowed to lapse in 2020."
 },
 "334A": {
-  simple: "The women's reservation under Articles 330A and 332A takes effect after the first census conducted after the 106th Amendment commenced, and after delimitation on the basis of that census.\n\n" +
-    "It then continues for fifteen years. Reserved seats rotate after each delimitation.",
-  catch: "This is the article that makes the women's reservation prospective rather than immediate.\n\n" +
-    "Two conditions must be satisfied first, a census and a delimitation, and neither has a fixed date."
+  simple: "The reservation for women under Articles 330A and 332A begins after the first census taken after the 106th Amendment, and after the delimitation based on that census.\n\n" +
+    "The reservation then lasts fifteen years. Reserved seats rotate after each delimitation.",
+  catch: "So the reservation lies in the future, not the present. Two things must happen first, a census and a delimitation, and neither has a fixed date."
 },
 "335": {
   simple: "The claims of Scheduled Castes and Scheduled Tribes to government posts shall be taken into account, consistently with keeping the administration efficient.",
@@ -300,13 +298,13 @@ partXVIII: {
   catch: "The article gives a right to be heard in one's own language, but not a right to a reply in it."
 },
 "350A": {
-  simple: "Every State and local authority shall endeavour to provide adequate facilities for instruction in the mother tongue at the primary stage, to children belonging to linguistic minority groups.",
-  catch: "Inserted by the 7th Amendment in 1956, on the States Reorganisation Commission's recommendation. It is the concession that made linguistic reorganisation politically bearable."
+  simple: "Every State and local authority shall try to provide teaching in the mother tongue at the primary stage for children of linguistic minorities.",
+  catch: "The 7th Amendment (1956) added the article, on the advice of the States Reorganisation Commission. The promise made the redrawing of States on linguistic lines easier to accept."
 },
 "350B": {
-  simple: "There shall be a Special Officer for linguistic minorities, appointed by the President, to investigate all matters relating to their safeguards.\n\n" +
-    "He reports to the President, who lays the reports before Parliament and sends them to the States concerned.",
-  catch: "The office exists, as the Commissioner for Linguistic Minorities. It has no enforcement power, only publicity."
+  simple: "The President appoints a Special Officer for linguistic minorities, to look into everything about their safeguards.\n\n" +
+    "The Officer reports to the President, who lays the reports before Parliament and sends them to the States concerned.",
+  catch: "The office exists today as the Commissioner for Linguistic Minorities. The Commissioner cannot enforce anything, and can only make problems public."
 },
 "351": {
   simple: "The Union has a duty to spread Hindi, and to develop it so that it can express every part of India's mixed culture.\n\n" +
@@ -359,8 +357,8 @@ partXVIII: {
     "The bar on suspending Articles 20 and 21 answers ADM Jabalpur (1976). By 4 to 1, the Court had held that during the Emergency nobody could challenge even an unlawful detention in court. The 44th Amendment closed that door in 1978, and Puttaswamy (2017) overruled the judgment."
 },
 "359A": {
-  simple: "This article once excluded Punjab from the application of certain emergency provisions.",
-  catch: "Inserted by the 59th Amendment in 1988 and repealed by the 63rd in 1990."
+  simple: "Article 359A once applied the emergency provisions to Punjab in a special way.",
+  catch: "The 59th Amendment inserted it in 1988, and the 63rd Amendment, which took effect in 1990, repealed it."
 },
 "360": {
   simple: "If the President is satisfied that the financial stability or credit of India, or of any part of it, is threatened, the President may declare a financial emergency.\n\n" +
