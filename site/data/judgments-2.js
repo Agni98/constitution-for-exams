@@ -25,36 +25,43 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Unanimous, 5:0',
   tags: ['Article 12', 'Article 14', 'Arbitrariness'],
   judges: 'Y.V. Chandrachud CJI, P.N. Bhagwati, V.R. Krishna Iyer, S. Murtaza Fazal Ali and A.D. Koshal',
-  summary: 'A society that is an instrumentality or agency of the Government is "the State" under Article 12. Giving one-third of the admission marks to a short interview was arbitrary.',
+  summary: 'A society that works as an arm of the government is "the State" under Article 12, so it must respect fundamental rights. Giving one-third of the admission marks to a two-minute interview was arbitrary and broke Article 14.',
+  background: [
+    'Fundamental rights protect people against "the State". Article 12 says who counts: the Union and State governments, Parliament and the State legislatures, local bodies such as municipalities, and "other authorities".',
+    'Governments often run colleges, banks and factories through companies or registered societies instead of departments. The question was whether such bodies escape the fundamental rights because of their legal form.',
+    'Article 14 promises equality before the law. In E.P. Royappa (1974), the Court had added that an arbitrary act is the opposite of equality, so arbitrariness itself breaks Article 14.',
+    'Article 32 lets a person go straight to the Supreme Court to enforce a fundamental right. Article 226 lets a person go to a High Court, for a fundamental right or for any other legal right.'
+  ],
   question: [
-    'Is a registered society that runs a government-funded engineering college "the State" under Article 12?',
-    'Was an admission process that gave one-third of the marks to an oral interview arbitrary under Article 14?'
+    'A registered society ran a government-funded engineering college. Is the society "the State" under Article 12?',
+    'The college gave one-third of the admission marks to an oral interview. Was that arbitrary, and so a breach of Article 14?'
   ],
   facts: [
     'The Regional Engineering College, Srinagar was run by a society registered under the Jammu and Kashmir Registration of Societies Act, 1898.',
-    'The Central Government and the Jammu and Kashmir Government paid for the college. They appointed members of its governing body, and their approval was needed for its rules and its spending.',
+    'The Central Government and the Jammu and Kashmir Government paid for the college. They appointed members of its governing body, and its rules and spending needed their approval.',
     'For admission in 1979-80, candidates took a written test of 100 marks and an oral interview of 50 marks.',
     'Candidates who were refused said each interview lasted only two or three minutes, and the questions were about parentage and residence. Students with lower marks in the qualifying examination got in through high interview marks.',
     'They filed writ petitions under Article 32. The society argued that it was not "the State", so no writ could be issued against it.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (5:0), judgment by Justice P.N. Bhagwati', points: [
-      'The society is "the State" under Article 12. It is an instrumentality or agency of the Central and State Governments.',
-      'What matters is not how a body was created but whether it is an instrumentality of the Government. A company or a society can be "the State" as much as a statutory corporation.',
-      'Article 14 strikes at arbitrariness. An arbitrary action denies equality.',
+    { kind: 'unanimous', label: 'All five judges agreed (5:0). Justice P.N. Bhagwati wrote the judgment', points: [
+      'The society is "the State" under Article 12, because it is an instrumentality or agency of the Central and State Governments. In plain words, it is an arm of the government.',
+      'How a body was created does not decide the question. A company or a society can be "the State" just as much as a corporation set up by a statute.',
+      'Article 14 strikes at arbitrariness. An arbitrary action by the State denies equality.',
       'Giving one-third of the total marks to an oral interview was plainly arbitrary and unreasonable.',
-      'The admissions of 1979-80 were not set aside, because 18 months had passed and the students already admitted would suffer.'
+      'But the admissions of 1979-80 were not cancelled. Eighteen months had passed, and the students already admitted would have suffered.'
     ] }
   ],
   principles: [
-    'Six tests help decide whether a body is an instrumentality of the State: Government share capital, Government money meeting almost all its expenses, a monopoly given or protected by the State, deep and pervasive State control, functions of public importance close to those of government, and a government department transferred to the body.',
-    'The tests are indicators. They are not a checklist that must be fully met.',
-    'Article 14 is not only about classification. Any arbitrary State action violates it.',
-    'The Court said that marks for an oral interview should not be more than 15 per cent of the total.'
+    'Six signs help show that a body is an arm of the government. The government holds its shares. Government money meets almost all its costs. The State gives or protects its monopoly.',
+    'The other three signs are these: deep and pervasive control by the State, work of public importance close to the work of government, and a government department handed over to the body.',
+    'The signs are indicators, not a checklist that must be fully met.',
+    'Article 14 is not only about treating like cases alike. Any arbitrary act of the State breaks it. The Court also said that interview marks should not be more than 15 per cent of the total.',
+    'So the government cannot slip out of the fundamental rights by working through a company or a society. If the body is the government in substance, the rights apply.'
   ],
   legacy: [
-    'For twenty years the Ajay Hasia tests decided which bodies could be sued for violating fundamental rights.',
-    'In Pradeep Kumar Biswas (2002), seven judges said these tests are not a rigid set of principles. The question is whether the Government dominates the body financially, functionally and administratively.'
+    'For twenty years the Ajay Hasia tests decided which bodies could be sued for breaking fundamental rights.',
+    'In Pradeep Kumar Biswas (2002), seven judges said the tests are not a rigid set of rules. The question became whether the government dominates the body in money, functions and administration.'
   ],
   source: 'https://indiankanoon.org/doc/1186368/'
 },
@@ -68,38 +75,45 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Majority 5:2',
   tags: ['Article 12', 'Other authorities'],
   judges: 'S.P. Bharucha CJI, S.S.M. Quadri, R.C. Lahoti, N. Santosh Hegde, Doraiswamy Raju, Ruma Pal and Arijit Pasayat',
-  summary: 'The Council of Scientific and Industrial Research is "the State" under Article 12. A body is "the State" if the Government dominates it financially, functionally and administratively.',
+  summary: 'The Council of Scientific and Industrial Research is "the State" under Article 12. A body is "the State" if the government dominates it in money, functions and administration.',
+  background: [
+    'Fundamental rights protect people against "the State". Article 12 says who counts: the Union and State governments, Parliament and the State legislatures, local bodies such as municipalities, and "other authorities".',
+    'In Sabhajit Tewary (1975), five judges held that the Council of Scientific and Industrial Research (CSIR) was not "the State". So its employees could not use the fundamental rights against it.',
+    'In Ajay Hasia (1980), another bench of five judges gave six signs for spotting an arm of the government. The two rulings pulled in different directions.',
+    'A bench can overrule only a smaller bench. Sabhajit Tewary had five judges, so seven judges were needed to reconsider it.'
+  ],
   question: [
-    'Is the Council of Scientific and Industrial Research (CSIR), a registered society, "the State" under Article 12?',
-    'Was Sabhajit Tewary (1975), which held that CSIR is not "the State", correctly decided?'
+    'CSIR is a registered society. Is it "the State" under Article 12?',
+    'Was Sabhajit Tewary, which said CSIR is not "the State", rightly decided?'
   ],
   facts: [
     'Pradeep Kumar Biswas and others worked at the Indian Institute of Chemical Biology, a unit of CSIR. They challenged the end of their services in the Calcutta High Court.',
-    'The High Court dismissed their writ petition as not maintainable. It followed Sabhajit Tewary (1975), where five judges had held that CSIR is not "the State".',
-    'CSIR was set up by the Government of India in 1942 and registered as a society under the Societies Registration Act, 1860.',
-    'Sabhajit Tewary had been decided by five judges, so seven judges heard the appeal.'
+    'The High Court dismissed their writ petition as not maintainable, meaning that the court could not hear it. The High Court followed Sabhajit Tewary.',
+    'The Government of India set up CSIR in 1942 and registered it as a society under the Societies Registration Act, 1860.',
+    'Because Sabhajit Tewary had five judges, seven judges heard the appeal.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority (5 judges), judgment by Justice Ruma Pal', points: [
+    { kind: 'majority', label: 'The majority of five. Justice Ruma Pal wrote the judgment', points: [
       'CSIR is "the State" under Article 12.',
-      'The question is whether, on all the facts, the body is financially, functionally and administratively dominated by or under the control of the Government.',
-      'The control must be particular to that body and must be pervasive. Ordinary regulatory control is not enough.',
-      'The Ajay Hasia tests are not a rigid set of principles.',
+      'The test is whether, on all the facts, the government dominates or controls the body in money, in functions and in administration.',
+      'The control must be special to that body and must run through it. The ordinary control that a law places on every body of its kind is not enough.',
+      'The six Ajay Hasia signs are not a rigid set of rules.',
       'Sabhajit Tewary is overruled.'
     ] },
-    { kind: 'dissent', label: 'Dissent (Justice R.C. Lahoti, for himself and Justice Doraiswamy Raju)', points: [
+    { kind: 'dissent', label: 'Justice R.C. Lahoti, with Justice Doraiswamy Raju, in dissent', points: [
       'Sabhajit Tewary should not be overruled.',
-      'An instrumentality of the Government is not the same as an "other authority" under Article 12. A registered society such as CSIR is not an authority under Article 12.'
+      'An arm of the government is not the same as an "other authority" under Article 12. A registered society such as CSIR is not an authority under Article 12.'
     ] }
   ],
   principles: [
-    'A body is "the State" if the Government dominates it in money, functions and administration.',
+    'A body is "the State" if the government dominates it in money, functions and administration.',
     'The control must be special to that body. General regulation by law does not make a body "the State".',
-    'Whether a body was set up by a statute, as a company or as a society does not settle the question by itself.'
+    'Whether a body was set up by a statute, as a company or as a society does not settle the question by itself.',
+    'So the test looks at who really runs the body, not at the form on its papers.'
   ],
   legacy: [
-    'This is now the leading test for deciding whether a body is "the State" under Article 12.',
-    'In Zee Telefilms (2005), five judges applied it and held that the BCCI is not "the State".'
+    'The case is now the leading test for deciding whether a body is "the State" under Article 12.',
+    'In Zee Telefilms (2005), five judges applied the test and held that the BCCI is not "the State".'
   ],
   source: 'https://indiankanoon.org/doc/471272/'
 },
@@ -113,36 +127,43 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Majority 3:2',
   tags: ['Article 12', 'BCCI', 'Article 226'],
   judges: 'N. Santosh Hegde, S.N. Variava, B.P. Singh, H.K. Sema and S.B. Sinha',
-  summary: 'The Board of Control for Cricket in India is not "the State" under Article 12, so a writ petition under Article 32 does not lie against it. Its public duties can still be challenged under Article 226.',
+  summary: 'The Board of Control for Cricket in India is not "the State" under Article 12, so it cannot be taken straight to the Supreme Court under Article 32. But because it does public work, it can be taken to a High Court under Article 226.',
+  background: [
+    'Fundamental rights protect people against "the State". Article 12 says who counts: the Union and State governments, Parliament and the State legislatures, local bodies such as municipalities, and "other authorities".',
+    'Article 32 lets a person go straight to the Supreme Court to enforce a fundamental right. Article 226 lets a person go to a High Court, for a fundamental right or for any other legal right.',
+    'So the two routes differ. A body that is not "the State" cannot be sued under Article 32. But a High Court can still issue orders under Article 226 to a private body that performs a public duty.',
+    'In Pradeep Kumar Biswas (2002), seven judges held that a body is "the State" if the government dominates it in money, functions and administration.'
+  ],
   question: [
-    'Is the Board of Control for Cricket in India (BCCI) "the State" under Article 12, so that a writ petition under Article 32 can be filed against it?'
+    'Is the Board of Control for Cricket in India (BCCI) "the State" under Article 12, so that a writ petition can be filed against it in the Supreme Court under Article 32?'
   ],
   facts: [
-    'In August 2004 the BCCI invited tenders for the television rights to cricket matches for four years.',
-    'Zee Telefilms made a bid. On 21 September 2004 the BCCI cancelled the whole tender process.',
-    'Zee filed a writ petition under Article 32. It said the cancellation was arbitrary and violated Article 14.',
-    'The BCCI argued that it is a private registered society and not "the State". The Court heard this as a preliminary question.'
+    'In August 2004 the BCCI invited bids for the television rights to cricket matches for four years.',
+    'Zee Telefilms made a bid. On 21 September 2004 the BCCI cancelled the whole bidding process.',
+    'Zee filed a writ petition under Article 32. Zee said the cancellation was arbitrary and broke the equality promised by Article 14.',
+    'The BCCI replied that it is a private registered society and not "the State". The Court decided that question first.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority (3 judges), judgment by Justice N. Santosh Hegde', points: [
+    { kind: 'majority', label: 'The majority of three. Justice N. Santosh Hegde wrote the judgment', points: [
       'The BCCI is not "the State" under Article 12.',
-      'It was not created by a statute. The Government holds none of its share capital and does not meet its expenses.',
-      'Its monopoly over cricket is not given or protected by the State. Any control the Government has over it is only regulatory.',
-      'So the writ petition under Article 32 is not maintainable.',
-      'Because the BCCI performs public duties, a person can still go to a High Court under Article 226, which is wider than Article 32.'
+      'No statute created the BCCI. The government holds none of its shares and does not pay its costs.',
+      'The State did not give the BCCI its monopoly over cricket and does not protect it. Whatever control the government has is only the ordinary control of regulation.',
+      'So the writ petition under Article 32 cannot be heard.',
+      'But the BCCI performs public duties. So a person can still go to a High Court under Article 226, which reaches further than Article 32.'
     ] },
-    { kind: 'dissent', label: 'Dissent (Justice S.B. Sinha, with Justice S.N. Variava)', points: [
-      'The BCCI is "the State". It controls cricket in India as a monopoly and chooses the team that represents the country.',
-      'Its functions are public functions, and the Government recognises it as the national body for cricket.'
+    { kind: 'dissent', label: 'Justice S.B. Sinha, with Justice S.N. Variava, in dissent', points: [
+      'The BCCI is "the State", because the BCCI controls cricket in India as a monopoly and chooses the team that represents the country.',
+      'Its work is public work, and the government recognises it as the national body for cricket.'
     ] }
   ],
   principles: [
-    'A body is not "the State" only because it has a monopoly or does public work.',
-    'A body that is not "the State" can still be answerable under Article 226 when it performs a public duty.'
+    'A body is not "the State" only because it holds a monopoly or does public work.',
+    'A body that is not "the State" can still answer to a High Court under Article 226 when it performs a public duty.',
+    'So the BCCI is not the government, but it is not beyond the courts either. The route to the courts runs through the High Courts.'
   ],
   legacy: [
-    'This is why sports bodies can be taken to the High Courts under Article 226 but not straight to the Supreme Court under Article 32.',
-    'In BCCI v. Cricket Association of Bihar (2015), the Supreme Court held again that the BCCI performs public functions and can be taken to court under Article 226. That case led to the Lodha Committee reforms of the BCCI.'
+    'For this reason, sports bodies can be taken to the High Courts under Article 226 but not straight to the Supreme Court under Article 32.',
+    'In BCCI v. Cricket Association of Bihar (2015), the Supreme Court held again that the BCCI performs public functions and can be taken to court under Article 226. The Bihar case led to the Lodha Committee reforms of the BCCI.'
   ],
   source: 'https://indiankanoon.org/doc/404603/'
 },
@@ -158,35 +179,39 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   status: 'partly',
   tags: ['Amending power', 'Article 13', 'Article 368'],
   judges: 'H.J. Kania CJI, M. Patanjali Sastri, B.K. Mukherjea, S.R. Das and N. Chandrasekhara Aiyar',
-  summary: 'The First Amendment was valid. A constitutional amendment made under Article 368 is not "law" under Article 13(2), so it can take away or abridge fundamental rights.',
+  summary: 'The First Amendment was valid. An amendment to the Constitution is not an ordinary "law" under Article 13(2), so Parliament could use it to change the fundamental rights.',
+  background: [
+    'After independence, the States passed laws to abolish zamindari, the system of big landlords who collected rent from cultivators. The Patna High Court struck down the Bihar law for breaking the right to property.',
+    'Parliament answered with the First Amendment in 1951. The amendment added Articles 31A and 31B and the Ninth Schedule, a list of laws protected from challenge under the fundamental rights.',
+    'Article 13(2) says the State shall not make any "law" that takes away or cuts down a fundamental right. The zamindars argued that an amendment is also such a law.',
+    'Until the first general election of 1952, the Constituent Assembly itself sat as the Provisional Parliament, with only one House. Article 379 gave it the powers of Parliament.'
+  ],
   question: [
-    'Is a constitutional amendment "law" under Article 13(2), so that it is void if it takes away or abridges fundamental rights?',
-    'Was the Constitution (First Amendment) Act, 1951 validly made?'
+    'Is an amendment to the Constitution a "law" under Article 13(2), so that it is void if it takes away or cuts down a fundamental right?',
+    'Was the First Amendment (1951) made in the proper way?'
   ],
   facts: [
-    'After independence, States passed laws to abolish zamindari. The Patna High Court struck down the Bihar law for violating fundamental rights.',
-    'Parliament passed the Constitution (First Amendment) Act, 1951. It inserted Articles 31A and 31B and the Ninth Schedule to protect land reform laws.',
-    'Zamindars filed petitions under Article 32 to challenge the Amendment.',
-    'They argued that it violated Article 13(2), that half the States should have ratified it, and that the Provisional Parliament, which had only one House, could not amend the Constitution.'
+    'The zamindars filed petitions under Article 32 to challenge the First Amendment.',
+    'They made three arguments. The amendment broke Article 13(2). Half the States should have ratified it. And the Provisional Parliament, with only one House, could not amend the Constitution.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (5:0), judgment by Justice M. Patanjali Sastri', points: [
-      '"Law" in Article 13(2) means rules made in exercise of ordinary legislative power. It does not include amendments to the Constitution made in exercise of constituent power.',
-      'So Article 13(2) does not stop an amendment under Article 368 from abridging fundamental rights.',
+    { kind: 'unanimous', label: 'All five judges agreed (5:0). Justice M. Patanjali Sastri wrote the judgment', points: [
+      '"Law" in Article 13(2) means the rules made in the ordinary work of law making. The word does not include amendments to the Constitution, which are made with the special power to amend.',
+      'So Article 13(2) does not stop an amendment under Article 368 from cutting down fundamental rights.',
       'Under Article 379, the Provisional Parliament had all the powers of Parliament, including the power to amend.',
-      'Articles 31A and 31B did not change the powers of the High Courts or the Supreme Court. So ratification by the States was not needed.',
+      'Articles 31A and 31B did not change the powers of the High Courts or the Supreme Court. So the States did not need to ratify the amendment.',
       'The petitions were dismissed.'
     ] }
   ],
   principles: [
-    'Ordinary law and constitutional amendments are different. Article 13(2) controls only ordinary law.',
-    'In 1951 the Court held that Parliament\'s power to amend under Article 368 extends to fundamental rights.'
+    'Ordinary laws and amendments to the Constitution are different things. Article 13(2) controls only ordinary laws.',
+    'So in 1951 the Court held that Parliament\'s power to amend under Article 368 reached the fundamental rights too.'
   ],
   legacy: [
     'Sajjan Singh (1964) followed this view.',
-    'In Golak Nath (1967), eleven judges overruled it by 6:5 and held that an amendment is "law" under Article 13.',
+    'In Golak Nath (1967), eleven judges overruled it by 6 votes to 5 and held that an amendment is a "law" under Article 13.',
     'The 24th Amendment (1971) added Article 13(4) and Article 368(3). They say that Article 13 does not apply to amendments made under Article 368.',
-    'In Kesavananda Bharati (1973), the Court upheld the 24th Amendment. Parliament can amend any part of the Constitution, but it cannot destroy its basic structure.'
+    'In Kesavananda Bharati (1973), the Court upheld the 24th Amendment, so the core of Shankari Prasad came back. But the Court added a limit. Parliament can amend any part of the Constitution, but it cannot destroy its basic structure.'
   ],
   source: 'https://indiankanoon.org/doc/1706770/'
 },
@@ -200,39 +225,45 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Majority 6:5',
   tags: ['Amending power', 'Article 13', 'Prospective overruling'],
   judges: 'K. Subba Rao CJI, K.N. Wanchoo, M. Hidayatullah, J.C. Shah, S.M. Sikri, R.S. Bachawat, V. Ramaswami, J.M. Shelat, V. Bhargava, G.K. Mitter and C.A. Vaidialingam',
-  summary: 'By 6:5, Parliament cannot amend the Constitution to take away or abridge fundamental rights. The ruling applied only to future amendments.',
+  summary: 'By 6 votes to 5, Parliament could not amend the Constitution to take away or cut down the fundamental rights. To avoid upsetting the past, the ruling applied only to future amendments.',
+  background: [
+    'Article 13(2) says the State shall not make any "law" that takes away or cuts down a fundamental right. Article 368 gives Parliament the power to amend the Constitution.',
+    'In Shankari Prasad (1951) and Sajjan Singh (1964), the Court held that an amendment is not such a "law". So Parliament could amend the fundamental rights.',
+    'Parliament had used that power to protect land reform. The First Amendment (1951) created the Ninth Schedule, a list of laws that cannot be challenged under the fundamental rights. The 17th Amendment (1964) added more land laws to the list.'
+  ],
   question: [
-    'Can Parliament use Article 368 to take away or abridge the fundamental rights in Part III?',
-    'Is a constitutional amendment "law" under Article 13(2)?',
-    'Were Sankari Prasad (1951) and Sajjan Singh (1964) correctly decided?'
+    'Can Parliament use Article 368 to take away or cut down the fundamental rights in Part III?',
+    'Is an amendment to the Constitution a "law" under Article 13(2)?',
+    'Were Sankari Prasad (1951) and Sajjan Singh (1964) rightly decided?'
   ],
   facts: [
-    'The family of Henry Golak Nath owned farm land in Punjab. Under the Punjab Security of Land Tenures Act, 1953, 418 standard acres of it were declared surplus.',
+    'The family of Henry Golak Nath owned farm land in Punjab. Under the Punjab Security of Land Tenures Act, 1953, 418 standard acres of it were declared surplus and could be taken. A standard acre is a unit adjusted for the quality of the land.',
     'Other petitioners challenged the Mysore Land Reforms Act.',
-    'Both Acts had been placed in the Ninth Schedule by the Constitution (Seventeenth Amendment) Act, 1964. That protected them from challenge on the ground of fundamental rights.',
-    'The petitioners challenged the Seventeenth Amendment itself. Earlier benches had upheld Parliament\'s power to amend fundamental rights, so eleven judges heard the case.'
+    'The 17th Amendment (1964) had placed both Acts in the Ninth Schedule. So the Acts could not be challenged under the fundamental rights.',
+    'The petitioners therefore challenged the 17th Amendment itself. Earlier benches had upheld Parliament\'s power to amend fundamental rights, so eleven judges heard the case.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority (6 judges): Chief Justice Subba Rao for five judges, and Justice Hidayatullah separately', points: [
-      'A constitutional amendment is "law" under Article 13(2). So an amendment that takes away or abridges fundamental rights is void.',
-      'From the date of this judgment, Parliament has no power to amend Part III to take away or abridge fundamental rights.',
-      'Chief Justice Subba Rao\'s opinion said Article 368 only lays down the procedure for amendment. The power itself comes from Parliament\'s legislative powers.',
-      'His opinion applied the doctrine of prospective overruling. Earlier amendments, including the First, Fourth and Seventeenth, remained valid.',
-      'Sankari Prasad and Sajjan Singh were overruled. Because the Seventeenth Amendment stood, the land laws stayed protected and the petitions failed.'
+    { kind: 'majority', label: 'The majority of six: Chief Justice Subba Rao for five judges, and Justice Hidayatullah separately', points: [
+      'An amendment to the Constitution is a "law" under Article 13(2). So an amendment that takes away or cuts down fundamental rights is void.',
+      'From the date of this judgment, Parliament has no power to amend Part III to take away or cut down fundamental rights.',
+      'Chief Justice Subba Rao\'s opinion said Article 368 only sets out the procedure for amending. The power itself comes from Parliament\'s ordinary power to make laws.',
+      'His opinion used prospective overruling, which means a new rule that applies only to the future. Earlier amendments, including the First, Fourth and 17th, stayed valid.',
+      'Sankari Prasad and Sajjan Singh were overruled. But the 17th Amendment still stood, so the land laws stayed protected and the petitions failed.'
     ] },
-    { kind: 'dissent', label: 'Dissent (5 judges): Justice Wanchoo for three judges, and Justices Bachawat and Ramaswami separately', points: [
+    { kind: 'dissent', label: 'The five in dissent: Justice Wanchoo for three judges, and Justices Bachawat and Ramaswami separately', points: [
       'Article 368 gives Parliament both the power and the procedure to amend any part of the Constitution, including Part III.',
-      'An amendment is not "law" under Article 13(2).',
-      'Sankari Prasad and Sajjan Singh were correctly decided.'
+      'An amendment is not a "law" under Article 13(2).',
+      'Sankari Prasad and Sajjan Singh were rightly decided.'
     ] }
   ],
   principles: [
-    'In this view, fundamental rights could not be abridged even by a constitutional amendment.',
-    'The doctrine of prospective overruling was used for the first time in India. A new rule applies only to the future, so that settled laws and decisions are not upset.'
+    'On this view, not even an amendment to the Constitution could cut down a fundamental right.',
+    'Prospective overruling was used for the first time in India. A new rule applies only to the future, so that settled laws and past decisions are not upset.',
+    'So the Court protected the fundamental rights for the future without undoing the land reforms already made.'
   ],
   legacy: [
-    'Parliament responded with the 24th Amendment (1971). It added Article 13(4) and Article 368(3), which say that Article 13 does not apply to amendments.',
-    'In Kesavananda Bharati (1973), thirteen judges overruled Golak Nath. They held that Parliament can amend fundamental rights, but it cannot destroy the basic structure of the Constitution.'
+    'Parliament replied with the 24th Amendment (1971). The amendment added Article 13(4) and Article 368(3), which say that Article 13 does not apply to amendments.',
+    'In Kesavananda Bharati (1973), thirteen judges overruled Golak Nath. They held that Parliament can amend the fundamental rights, but it cannot destroy the basic structure of the Constitution.'
   ],
   source: 'https://indiankanoon.org/doc/120358/'
 },
@@ -245,31 +276,36 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Majority 5:2',
   tags: ['Article 13(1)', 'Pre-Constitution laws'],
   judges: 'H.J. Kania CJI, S. Fazl Ali, M. Patanjali Sastri, M.C. Mahajan, B.K. Mukherjea, S.R. Das and N. Chandrasekhara Aiyar',
-  summary: 'Article 13(1) is not retrospective. A prosecution begun before 26 January 1950, for an act done before that date, can continue even though the law is inconsistent with a fundamental right.',
+  summary: 'Fundamental rights do not reach back into the past. A prosecution for an act done before 26 January 1950 could continue, even though the law behind it clashed with a fundamental right.',
+  background: [
+    'Many laws from British rule stayed in force after the Constitution began on 26 January 1950. Article 13(1) says that such a law is void to the extent that it clashes with a fundamental right.',
+    'A rule is retrospective if it reaches back to acts done before it began. The question was whether Article 13(1) did that.'
+  ],
   question: [
-    'Is Article 13(1) retrospective?',
-    'Can a prosecution begun before the Constitution came into force continue after 26 January 1950, if the law behind it is inconsistent with a fundamental right?'
+    'Does Article 13(1) reach back to acts done before 26 January 1950?',
+    'A prosecution began before the Constitution came into force, under a law that clashed with a fundamental right. Could it continue after 26 January 1950?'
   ],
   facts: [
-    'Keshavan Madhava Menon was the Secretary of the People\'s Publishing House, Bombay. In September 1949 he published a pamphlet without the authority that the Indian Press (Emergency Powers) Act, 1931 required.',
-    'He was arrested on 9 December 1949. He was prosecuted in the Court of the Chief Presidency Magistrate, Bombay.',
-    'The Constitution came into force on 26 January 1950 while the case was pending.',
-    'He argued that the 1931 Act violated the freedom of speech in Article 19(1)(a). So it was void under Article 13(1), and the prosecution could not go on.'
+    'Keshavan Madhava Menon was the Secretary of the People\'s Publishing House, Bombay. In September 1949 he published a pamphlet without the official permission that the Indian Press (Emergency Powers) Act, 1931 required.',
+    'He was arrested on 9 December 1949, and prosecuted in the Court of the Chief Presidency Magistrate, Bombay.',
+    'The Constitution came into force on 26 January 1950 while the case was still going on.',
+    'He argued that the 1931 Act broke the freedom of speech in Article 19(1)(a). So the Act was void under Article 13(1), and the prosecution could not go on.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority (5 judges), leading opinion by Justice S.R. Das', points: [
-      'Article 13(1) is not retrospective.',
-      'An existing law that is inconsistent with a fundamental right is not void from the start. It becomes ineffective only for the exercise of fundamental rights on and after 26 January 1950.',
-      'An act done before 26 January 1950 against a law that was valid at the time can still be prosecuted and punished under that law.',
+    { kind: 'majority', label: 'The majority of five. Justice S.R. Das wrote the leading opinion', points: [
+      'Article 13(1) does not reach back into the past.',
+      'An existing law that clashes with a fundamental right is not void from the start. The law stops working only against the exercise of fundamental rights from 26 January 1950.',
+      'An act done before 26 January 1950, against a law that was valid at the time, can still be prosecuted and punished under that law.',
       'The appeal was dismissed, and the prosecution could continue.'
     ] },
-    { kind: 'dissent', label: 'Dissent (Justice S. Fazl Ali, with Justice B.K. Mukherjea agreeing)', points: [
-      'A law that has become void cannot be used to frame a charge or to convict a person after the Constitution came into force, even for an earlier act.'
+    { kind: 'dissent', label: 'Justice S. Fazl Ali in dissent, with Justice B.K. Mukherjea agreeing', points: [
+      'Once a law has become void, it cannot be used after the Constitution began to frame a charge or to convict anyone, even for an earlier act.'
     ] }
   ],
   principles: [
-    'Fundamental rights operate from 26 January 1950. They do not reopen past acts.',
-    'A pre-Constitution law that is inconsistent with fundamental rights is not wiped out. It still governs what was done before the Constitution.'
+    'Fundamental rights work from 26 January 1950 onward. They do not reopen acts done before that date.',
+    'A law from before the Constitution that clashes with a fundamental right is not wiped out. The law still governs what was done before the Constitution began.',
+    'So the Constitution drew a line at 26 January 1950. The rights protect people from that day, not before it.'
   ],
   legacy: [
     'The Court built on this view in Bhikaji Narain Dhakras (1955), where it laid down the doctrine of eclipse.'
@@ -286,32 +322,38 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   bench: 5,
   result: 'Unanimous, 5:0',
   tags: ['Article 13(1)', 'Doctrine of eclipse'],
-  summary: 'A pre-Constitution law that conflicted with a fundamental right was not dead but eclipsed. When the First Amendment removed the conflict, the law became fully valid again.',
+  summary: 'A law from before the Constitution that clashed with a fundamental right was not dead, only eclipsed. When the First Amendment removed the clash, the law worked again without being passed afresh.',
+  background: [
+    'Article 13(1) says that a law from before the Constitution is void to the extent that it clashes with a fundamental right. In Keshavan Madhava Menon (1951), the Court held that such a law still governs acts done before 26 January 1950.',
+    'Article 19(1)(g) gives citizens the right to carry on any trade or business. Article 19(6) lets the State place reasonable limits on that right.',
+    'As first written, Article 19(6) did not clearly allow the State to keep a whole business to itself. The First Amendment (1951) changed that. Since then, a law can let the State run a trade as a monopoly.'
+  ],
   question: [
-    'A pre-Constitution law became inconsistent with Article 19(1)(g) in 1950. Did it become void for ever, or could it revive when a constitutional amendment removed the inconsistency?'
+    'A law made before the Constitution clashed with Article 19(1)(g) from 1950. Did the law die for ever, or could it come back to life when an amendment removed the clash?'
   ],
   facts: [
-    'The C.P. and Berar Motor Vehicles (Amendment) Act, 1947 gave the State Government wide powers over road transport. It could run bus services itself and direct that permits be given to its own undertakings.',
+    'The C.P. and Berar Motor Vehicles (Amendment) Act, 1947 gave the State Government wide powers over road transport. The government could run bus services itself and give permits to its own undertakings.',
     'The petitioners were private bus operators who had held permits for many years.',
-    'From 26 January 1950, a law that let the State shut out private operators was inconsistent with the right to carry on any business under Article 19(1)(g).',
-    'On 18 June 1951 the First Amendment changed Article 19(6). It allowed laws for State monopolies in any trade or business.',
-    'On 4 February 1955 the State issued a notification to take over certain bus routes. The operators challenged it.'
+    'From 26 January 1950, a law that let the State shut out private operators clashed with the right to carry on business under Article 19(1)(g).',
+    'On 18 June 1951 the First Amendment changed Article 19(6), allowing laws for State monopolies in any trade or business.',
+    'On 4 February 1955 the State issued an order to take over certain bus routes. The operators challenged the order.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (5:0), judgment by Acting Chief Justice S.R. Das', points: [
-      'From 26 January 1950 the 1947 Act was "eclipsed, for the time being, by the fundamental right". It was not dead. It was dormant.',
-      'The First Amendment removed "the shadow" and made the Act "free from all blemish or infirmity". From 18 June 1951 it applied fully again, without being passed again.',
-      'The eclipse applied only to citizens. The Act stayed in force against non-citizens, and for things done before the Constitution.',
-      'The notification was valid, and the petitions were dismissed.'
+    { kind: 'unanimous', label: 'All five judges agreed (5:0). Acting Chief Justice S.R. Das wrote the judgment', points: [
+      'From 26 January 1950 the 1947 Act was "eclipsed, for the time being, by the fundamental right". The Act was not dead, only asleep.',
+      'The First Amendment removed "the shadow" and made the Act "free from all blemish or infirmity". From 18 June 1951 the Act applied fully again, without being passed again.',
+      'The eclipse covered only citizens, because the right in Article 19 belongs only to citizens. The Act stayed in force against non-citizens, and for things done before the Constitution.',
+      'The order was valid, and the petitions were dismissed.'
     ] }
   ],
   principles: [
-    'This is the doctrine of eclipse. A pre-Constitution law that is inconsistent with a fundamental right is not void from the start. It is only overshadowed by the right.',
-    'If the Constitution is later amended to remove the inconsistency, the law revives by itself.'
+    'The rule is called the doctrine of eclipse. A law from before the Constitution that clashes with a fundamental right is not void from the start. The right only casts a shadow over it.',
+    'If the Constitution is later amended to remove the clash, the law comes back by itself.',
+    'So the doctrine lets an old law rest instead of dying. When the clash ends, the law works again without being passed afresh.'
   ],
   legacy: [
-    'In Deep Chand (1959) and Mahendra Lal Jaini (1962), the Court held that the doctrine does not apply to a law made after the Constitution that violates a fundamental right. Such a law is void from the start.',
-    'In State of Gujarat v. Ambica Mills (1974), the Court held that a post-Constitution law that violates a right given only to citizens is still valid against non-citizens.'
+    'In Deep Chand (1959) and Mahendra Lal Jaini (1962), the Court held that the doctrine does not save a law made after the Constitution that breaks a fundamental right. A new law of that kind is void from the start.',
+    'In State of Gujarat v. Ambica Mills (1974), the Court held that a law made after the Constitution that breaks a right given only to citizens is still valid against non-citizens.'
   ],
   source: 'https://indiankanoon.org/doc/762155/'
 },
@@ -326,34 +368,40 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Unanimous, 5:0',
   tags: ['Article 13', 'Doctrine of severability', 'Article 19(1)(g)'],
   judges: 'S.R. Das CJI, T.L. Venkatarama Aiyar, S.K. Das, P.B. Gajendragadkar and Bhuvneshwar P. Sinha',
-  summary: 'When only part of a law is invalid, the valid part survives if it can be separated. The Prize Competitions Act covered only competitions of a gambling nature, and it was valid.',
+  summary: 'When only part of a law is invalid, the valid part survives if it can be separated from the rest. The Prize Competitions Act covered only gambling competitions, so it was valid.',
+  background: [
+    'Article 13 says a law is void "to the extent" that it breaks a fundamental right. So a court may strike down only the bad part of a law and keep the rest. Separating the two is called severability.',
+    'Article 252 lets Parliament make a law on a subject that belongs to the States, if two or more State legislatures ask it to.',
+    'Prize competitions, such as crossword contests with cash prizes, were popular in the 1950s. Some depended on skill and some were a form of gambling.'
+  ],
   question: [
-    'The Prize Competitions Act, 1955 defined "prize competition" widely. Did it cover competitions of skill as well as gambling competitions?',
-    'If it did, and the part about competitions of skill was invalid, did the whole Act fail, or could the valid part be separated and saved?'
+    'The Prize Competitions Act, 1955 defined "prize competition" widely. Did the definition cover competitions of skill as well as gambling competitions?',
+    'If it did, and the part about competitions of skill was invalid, did the whole Act fail? Or could the valid part be separated and saved?'
   ],
   facts: [
-    'Several State Legislatures passed resolutions under Article 252 asking Parliament to control prize competitions. Parliament then passed the Prize Competitions Act, 1955, which came into force on 1 April 1956.',
+    'Several State legislatures passed resolutions under Article 252 asking Parliament to control prize competitions. Parliament then passed the Prize Competitions Act, 1955, which came into force on 1 April 1956.',
     'The petitioners ran prize competitions in many States. They filed petitions under Article 32.',
     'They argued that the Act\'s definition of "prize competition" covered competitions that depend on skill. Running such competitions is a business protected by Article 19(1)(g).',
-    'They said the restrictions were unreasonable, and that the Act could not be split into valid and invalid parts, so the whole of it must fall.'
+    'They said the limits were unreasonable. They also said the Act could not be split into valid and invalid parts, so the whole of it must fall.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (5:0), judgment by Justice T.L. Venkatarama Aiyar', points: [
-      'Read with its history and purpose, the Act applies only to competitions of a gambling nature. It does not apply to competitions in which success depends to a substantial degree on skill.',
-      'Even if the definition covered both kinds, the provisions could be separated, and they would be valid for gambling competitions.',
-      'Severability applies whether a law is invalid because the legislature lacked power, or because it breaks a constitutional prohibition such as a fundamental right.',
+    { kind: 'unanimous', label: 'All five judges agreed (5:0). Justice T.L. Venkatarama Aiyar wrote the judgment', points: [
+      'Read with its history and purpose, the Act applies only to competitions of a gambling nature. The Act does not apply to competitions in which success depends to a large degree on skill.',
+      'Even if the definition covered both kinds, the parts could be separated, and the Act would be valid for gambling competitions.',
+      'Severability works in both kinds of case: when a legislature had no power to pass part of a law, and when part of a law breaks a fundamental right.',
       'The petitions were dismissed with costs.'
     ] }
   ],
   principles: [
-    'The main test of severability is the intention of the legislature. Would it have passed the valid part if it had known that the rest was invalid?',
-    'If the valid part is distinct and complete in itself, it survives.',
+    'The main test is what the legislature intended. Would it have passed the valid part alone if it had known that the rest was invalid?',
+    'If the valid part is distinct and complete in itself, the valid part survives.',
     'If the valid and invalid parts form one scheme meant to work as a whole, the whole law fails.',
-    'If what is left is so thin that it is different from what the legislature passed, or it cannot be enforced without rewriting, the whole law fails.',
-    'Substance matters, not form. Valid and invalid parts can sit in the same section. The history, object, title and preamble of a law can be used to find the intention of the legislature.'
+    'If what is left is so thin that it differs from what the legislature passed, or cannot work without rewriting, the whole law fails.',
+    'Substance matters more than form. Valid and invalid parts can sit in the same section. The history, purpose, title and preamble of a law help show what the legislature intended.',
+    'So a court cuts away only the bad part of a law, as long as what remains is still the law the legislature meant to make.'
   ],
   legacy: [
-    'These rules are still the standard statement of the doctrine of severability in India.',
+    'The Chamarbaugwalla rules are still the standard statement of severability in India.',
     'Courts use them to strike down only the offending part of a law under Article 13 and keep the rest.'
   ],
   source: 'https://indiankanoon.org/doc/725224/'
