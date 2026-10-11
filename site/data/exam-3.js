@@ -166,12 +166,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 243Q says every State shall have a nagar panchayat for an area changing from rural to urban, a municipal council for a smaller urban area, and a municipal corporation for a larger one.",
   why: "The three kinds of municipality make a clean matching question, and the criteria for classifying them are often asked.",
   concepts: [
-    { t: "Nagar Panchayat", d: "A nagar panchayat is for a transitional area, a place changing from rural to urban." },
-    { t: "Municipal Council", d: "For a smaller urban area." },
-    { t: "Municipal Corporation", d: "For a larger urban area." },
-    { t: "Who decides which is which", d: "The Governor, by public notification, having regard to population, density, revenue generated for local administration, percentage of employment in non-agricultural activities, and economic importance." },
+    { t: "Who decides which is which", d: "The Governor, by notification, looking at population, density, revenue, non-farm employment and economic importance." },
     { t: "No numbers in the Constitution", d: "The Constitution gives no population figures for any of the three. Each State fixes its own thresholds." },
-    { t: "The industrial township exception", d: "The Governor may decide not to constitute a municipality in an area where municipal services are provided by an industrial establishment." },
+    { t: "The industrial township exception", d: "No municipality where an industrial establishment provides the services." },
     { t: "Part IXA", d: "Inserted by the 74th Amendment, 1992, alongside the Twelfth Schedule." }
   ],
   seen: [
@@ -186,11 +183,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 243W lets the State legislature give municipalities the powers they need to work as institutions of self-government, including on the subjects in the Twelfth Schedule.",
   why: "Article 243W is the municipal counterpart of Article 243G, and every answer on urban governance rests on it.",
   concepts: [
-    { t: "What it says", d: "The State legislature may by law endow municipalities with the powers and authority needed to function as institutions of self-government." },
-    { t: "Again the word is \"may\"", d: "The same permissive wording as for panchayats, with the same consequence: devolution depends entirely on State willingness." },
+    { t: "Again the word is \"may\"", d: "The same permissive word as for panchayats. Devolution depends on each State's willingness." },
     { t: "The Twelfth Schedule", d: "Lists 18 subjects: urban planning, regulation of land use, roads and bridges, water supply, public health and sanitation, fire services, urban forestry, slum improvement, urban poverty alleviation, and others." },
     { t: "The article also covers committees", d: "The State may endow ward committees and other committees with powers too." },
-    { t: "Why urban devolution lagged", d: "Cities generate revenue that State governments are reluctant to hand over, and parastatal bodies such as development authorities and water boards often hold the real powers." }
+    { t: "Why urban devolution lagged", d: "States hold on to urban revenue, and parastatal bodies hold the real powers." }
   ],
   seen: [
     "UPSC Mains 2023 — States' reluctance to empower urban local bodies functionally and financially",
@@ -205,10 +201,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 243ZD says every State shall set up a District Planning Committee to combine the plans of the panchayats and municipalities into a draft development plan for the whole district.",
   why: "The District Planning Committee is a small, precise fact that turns up in matching sets on urban and rural planning.",
   concepts: [
-    { t: "What it does", d: "Every State shall constitute a District Planning Committee in each district, to consolidate the plans prepared by the panchayats and the municipalities and prepare a draft development plan for the district as a whole." },
     { t: "How it is composed", d: "At least four fifths of the members must be elected by, and from among, the elected members of the district panchayat and the municipalities in the district." },
     { t: "Rural and urban balance", d: "Representation must be in proportion to the ratio between rural and urban population in the district." },
-    { t: "What the plan must consider", d: "The plan must consider matters of common interest to panchayats and municipalities. The common matters include spatial planning, sharing water and other resources, integrated infrastructure, and conservation of the environment." },
+    { t: "What the plan must consider", d: "Spatial planning, shared water and other resources, joint infrastructure, and the environment." },
     { t: "The metropolitan version", d: "Article 243ZE requires a Metropolitan Planning Committee for every metropolitan area, meaning an area with a population of ten lakh or more." }
   ],
   trap: "Four-fifths of the members must be elected. The remaining fifth may be nominated.\n\nAnd note the difference: the District Planning Committee exists in every district, while the Metropolitan Planning Committee applies only above ten lakh population."
@@ -242,10 +237,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 244A lets Parliament form an autonomous State within Assam out of certain tribal areas, with its own legislature, its own council of ministers, or both.",
   why: "The provision for an autonomous State applies to Assam alone. The article surfaces whenever a demand for an autonomous State is in the news.",
   concepts: [
-    { t: "What it permits", d: "Parliament may by law form an autonomous State within Assam, comprising some or all of the tribal areas listed in the Sixth Schedule." },
-    { t: "What that State would have", d: "Its own legislature, or its own Council of Ministers, or both, with powers Parliament defines." },
-    { t: "When it was added", d: "By the 22nd Amendment, 1969, in response to demands from the hill areas of what was then a much larger Assam." },
-    { t: "The power was never fully used", d: "Meghalaya was created as a full State instead. The provision remains the constitutional basis of demands from Bodoland and Karbi Anglong." },
+    { t: "When it was added", d: "By the 22nd Amendment (1969), after demands from Assam's hill areas." },
+    { t: "The power was never fully used", d: "Used once: Meghalaya was an autonomous State within Assam from 1970, and a full State from 1972. Bodoland and Karbi Anglong demands still rest on it." },
     { t: "Article 244A is unique to Assam", d: "No other State has an equivalent provision." }
   ],
   trap: "Article 244A applies only to Assam.\n\nAn option extending it to other north-eastern States, or treating it as a general provision for tribal areas, is wrong."
@@ -278,13 +271,12 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 246A gives Parliament and every State legislature the power to make laws on goods and services tax. Only Parliament can tax supplies that cross from one State to another.",
   why: "GST rewrote the fiscal constitution. The 101st Amendment is among the most examined recent amendments, and Article 246A is its core provision.",
   concepts: [
-    { t: "What it does", d: "Article 246A gives Parliament and every State legislature power to make laws on goods and services tax. Both can tax the same transaction." },
-    { t: "Article 246A stands outside the three Lists", d: "GST does not appear in the Union, State or Concurrent List. Article 246A is a stand-alone power that overrides Articles 246 and 254." },
+    { t: "Article 246A stands outside the three Lists", d: "GST is in none of the Lists. Article 246A overrides Articles 246 and 254." },
     { t: "Inter-State supply is the Union's alone", d: "Where a supply crosses State borders, only Parliament can tax it. The tax on such supplies is Integrated GST, under Article 269A." },
     { t: "What was subsumed", d: "Central excise, service tax, additional customs duties, State VAT, entry tax, octroi, luxury tax and entertainment tax were all folded into GST." },
-    { t: "What stayed out, and why the two are out for different reasons", d: "Alcoholic liquor for human consumption is excluded from the *definition* of GST in Article 366(12A), so it is constitutionally beyond GST altogether. The five petroleum products are crude, high speed diesel, petrol, natural gas and aviation turbine fuel. They are not excluded at all. Article 279A(5) simply leaves it to the GST Council to recommend the date from which GST will apply to them. Liquor is out for good. The petroleum products are only deferred, and bringing them in needs no amendment." },
+    { t: "What stayed out, and why the two are out for different reasons", d: "Liquor for human consumption is outside the definition of GST, so it is out for good. Five petroleum products are only deferred, until the GST Council recommends a date." },
     { t: "The Council", d: "Article 279A created the GST Council to recommend rates, exemptions and rules." },
-    { t: "Mohit Minerals (2022)", d: "The Supreme Court held the Council's recommendations are persuasive, not binding on Parliament or on any State legislature." }
+    { t: "Mohit Minerals (2022)", d: "The Council's recommendations persuade and do not bind." }
   ],
   seen: [
     "UPSC Mains 2023 — the 101st Amendment and its impact on federalism"
@@ -430,11 +422,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 269A says GST on supplies between States is charged and collected by the Union, and shared between the Union and the States as Parliament decides on the GST Council's advice.",
   why: "Integrated GST is the technical core of the 101st Amendment, and it appears in question sets on fiscal federalism.",
   concepts: [
-    { t: "What it covers", d: "Goods and services tax on supplies made in the course of inter-State trade or commerce." },
-    { t: "Who levies and collects", d: "The Government of India alone. States have no power over inter-State supply." },
+    { t: "Who levies and collects", d: "The Union alone. States have no power over supplies between States." },
     { t: "How it is shared", d: "The proceeds are apportioned between the Union and the States in the manner Parliament provides, on the GST Council's recommendation." },
     { t: "Imports count as inter-State", d: "Supply of goods or services in the course of import into India is deemed to be inter-State supply, and so attracts IGST." },
-    { t: "The State's share bypasses the Consolidated Fund", d: "The amount apportioned to a State does not form part of the Consolidated Fund of India. The Constitution makes the exception expressly." }
+    { t: "The State's share bypasses the Consolidated Fund", d: "A State's share does not form part of the Consolidated Fund of India." }
   ],
   trap: "IGST is apportioned directly, not shared through the ordinary divisible pool under Article 270.\n\nIGST needed its own article for that reason. Treating IGST as part of normal tax devolution is the error."
 },
@@ -478,13 +469,12 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 279A sets up the GST Council, chaired by the Union Finance Minister, with the finance ministers of every State. The Council recommends GST rates, exemptions and model laws.",
   why: "The GST Council is the most cited example of cooperative federalism in India. A 2022 judgment changed how it must be described, which makes older study material unreliable.",
   concepts: [
-    { t: "Who sits on it", d: "The Union Finance Minister as chairperson, the Union Minister of State for Finance or Revenue, and the Finance Minister or another nominated minister from every State." },
     { t: "How votes are weighted", d: "The Union's vote counts for one third of the total votes cast. All the States together count for two thirds." },
     { t: "The threshold", d: "A decision needs three quarters of the weighted votes of members present and voting." },
-    { t: "What that means in practice", d: "The Union alone cannot pass a decision, because one third is below three quarters. The States alone cannot either, because two thirds is also below three quarters. Neither side can act without some support from the other." },
+    { t: "What that means in practice", d: "Neither the Union alone nor the States alone reach three-quarters." },
     { t: "Quorum", d: "One half of the total number of members." },
     { t: "What it recommends", d: "Rates, exemptions, model laws, the threshold turnover for exemption, and special provisions for the north-eastern and hill States." },
-    { t: "Mohit Minerals (2022)", d: "The Supreme Court held the Council's recommendations are only persuasive. Parliament and the State legislatures both retain independent power to legislate on GST under Article 246A." }
+    { t: "Mohit Minerals (2022)", d: "The recommendations persuade. Parliament and the States keep their own power under Article 246A." }
   ],
   seen: [
     "UPSC Mains 2023 — the 101st Amendment and federalism"
@@ -521,12 +511,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 300A says no person shall be deprived of property except by authority of law.",
   why: "The 44th Amendment turned property from a Fundamental Right into an ordinary constitutional right in 1978. The change is one of the most reliably asked facts about amendments in the whole syllabus.",
   concepts: [
-    { t: "What it says", d: "No person shall be deprived of his property save by authority of law." },
-    { t: "What the 44th Amendment did", d: "In 1978 it deleted Article 19(1)(f), the right to acquire, hold and dispose of property, and deleted Article 31, the right against deprivation of property. The amendment inserted Article 300A in Part XII instead." },
+    { t: "What the 44th Amendment did", d: "Deleted Articles 19(1)(f) and 31, and inserted Article 300A in Part XII." },
     { t: "Why the location matters", d: "Part XII is not Part III. So property is now a constitutional and legal right, but not a Fundamental Right." },
-    { t: "The practical consequence", d: "You cannot go to the Supreme Court under Article 32 for a property violation. You can still go to a High Court under Article 226." },
-    { t: "Why it was done", d: "Land reform and nationalisation laws kept being struck down as violating the right to property. Removing it from Part III ended that conflict." },
-    { t: "Courts have rebuilt some protection", d: "The Supreme Court has read a requirement of fair compensation and due procedure into Article 300A, calling it a human right in Vidya Devi (2020)." },
+    { t: "The practical consequence", d: "No Article 32 petition over property. Article 226 is still open." },
+    { t: "Why it was done", d: "Land-reform and nationalisation laws kept being struck down." },
+    { t: "Courts have rebuilt some protection", d: "Fair compensation and due procedure. Vidya Devi (2020) called it a human right." },
     { t: "One place property is still fundamental", d: "Article 30(1A) protects compensation when the State acquires property of a minority educational institution." }
   ],
   seen: [

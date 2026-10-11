@@ -32,9 +32,9 @@ partXIII: {
     "When a law seems to touch more than one List, courts ask what the law is in pith and substance. If its true nature falls within the legislature's own List, an incidental touch on another List does not invalidate it. But a legislature cannot dress up a law to do indirectly what it cannot do directly."
 },
 "246A": {
-  simple: "Both Parliament and every State legislature may make laws on goods and services tax. For inter-State supply, only Parliament may legislate.",
-  catch: "This is a genuinely new kind of entry. It is simultaneous power rather than concurrent power, and it sits outside the three-list scheme altogether.\n\n" +
-    "Mohit Minerals (2022) held that the GST Council's recommendations are persuasive, not binding, on either Parliament or the States."
+  simple: "Parliament and every State legislature may make laws on goods and services tax. Only Parliament may tax supplies that cross from one State to another.",
+  catch: "GST is in none of the three Lists. Article 246A gives the Union and the States power over the same transaction at the same time, which is why a constitutional amendment was needed.\n\n" +
+    "The GST Council under Article 279A recommends rates and rules. But Mohit Minerals (2022) held that its recommendations persuade and do not bind. Parliament and the States each keep their own power."
 },
 "247": {
   simple: "Parliament may by law establish additional courts, for the better administration of laws made by Parliament, or of existing laws on a Union List matter.",
@@ -165,10 +165,10 @@ partXIII: {
     "It survives for the few goods outside GST, such as petroleum products and alcohol."
 },
 "269A": {
-  simple: "Goods and services tax on inter-State supply is levied and collected by the Government of India, and apportioned between the Union and the States on the GST Council's recommendation.\n\n" +
-    "Import of goods or services counts as inter-State supply.",
-  catch: "The apportioned State share never enters the Consolidated Fund of India. It goes straight to the States.\n\n" +
-    "That is what makes IGST constitutionally distinct from an ordinary shared central tax."
+  simple: "The Union levies and collects GST on supplies between States. The proceeds are shared between the Union and the States as Parliament provides, on the GST Council's recommendation.\n\n" +
+    "Imports count as supplies between States.",
+  catch: "The share apportioned to a State never enters the Consolidated Fund of India. The money goes straight to the State.\n\n" +
+    "So IGST is not shared through the ordinary divisible pool under Article 270. The difference is why IGST needed an article of its own."
 },
 "270": {
   simple: "The Union levies and collects the taxes in the Union List, and shares them with the States on the Finance Commission's recommendation.\n\n" +
@@ -216,12 +216,10 @@ partXIII: {
     "It is a rare instance of a constitutional officer's determination being conclusive on a question of money between the Union and the States."
 },
 "279A": {
-  simple: "The President shall constitute a Goods and Services Tax Council. It consists of the Union Finance Minister as chairperson, the Union Minister of State for Finance, and a minister from every State.\n\n" +
-    "It recommends the taxes to be subsumed, the rates, exemptions, threshold limits and model laws.\n\n" +
-    "The Union holds one-third of the votes and all the States together two-thirds. A decision needs three-quarters of the weighted votes present and voting.",
-  catch: "The voting arithmetic means neither the Centre alone nor all the States together can carry a decision.\n\n" +
-    "The Centre plus a third of the States can. The Centre alone can block anything.\n\n" +
-    "Mohit Minerals (2022) held that the Council's recommendations are recommendatory only, and do not bind Parliament or the State legislatures."
+  simple: "The President shall set up a GST Council. The Union Finance Minister chairs it. The members are the Union Minister of State for Finance and a minister from every State.\n\n" +
+    "The Council recommends which taxes GST replaces, the rates, exemptions, thresholds and model laws.",
+  catch: "The Union's vote counts for one-third of the votes cast, and all the States together for two-thirds. A decision needs three-quarters of the weighted votes present and voting.\n\n" +
+    "So neither the Union alone nor all the States together can carry a decision. The Union can block anything, but needs many States to pass anything. And Mohit Minerals (2022) held that the Council's recommendations persuade, but do not bind Parliament or the State legislatures."
 },
 "280": {
   simple: "The President sets up a Finance Commission every five years, or earlier if needed.\n\n" +
@@ -324,11 +322,11 @@ partXIII: {
     "The liability of the State in tort is therefore still governed by the old distinction between sovereign and non-sovereign functions, inherited from the pre-Constitution position. Courts have narrowed it steadily but never resolved it."
 },
 "300A": {
-  simple: "No person shall be deprived of his property save by authority of law.",
-  catch: "This is what is left of the right to property after the 44th Amendment took it out of Part III in 1978.\n\n" +
-    "Two consequences follow. It is a constitutional right, not a fundamental one, so it cannot be enforced under Article 32 — only under Article 226 or an ordinary suit. And it belongs to 'any person', which includes a company or a foreigner.\n\n" +
-    "The courts have since read a good deal back into it, requiring acquisition to be for a public purpose and on payment of compensation.",
-  note: "K.T. Plantation (2011) and Vidya Devi (2020) treat the right as a human right. Kolkata Municipal Corporation v. Bimal Kumar Shah (2024) set out seven procedural rights an acquiring authority must observe."
+  simple: "No person shall be deprived of property except by authority of law.",
+  catch: "Article 300A is what is left of the right to property. The 44th Amendment (1978) removed property from Part III, because land-reform and nationalisation laws kept being struck down.\n\n" +
+    "Property is now a constitutional right, not a fundamental one. So a person cannot go to the Supreme Court under Article 32 over property, but can go to a High Court under Article 226. And the right belongs to any person, including a company or a foreigner.\n\n" +
+    "The courts have since read protection back in. They now require a valid law, fair compensation and due procedure, and Vidya Devi (2020) called the right a human right.",
+  note: "Kolkata Municipal Corporation v. Bimal Kumar Shah (2024) set out seven procedural rights that an acquiring authority must respect."
 },
 
 /* ---------- Part XIII ---------- */

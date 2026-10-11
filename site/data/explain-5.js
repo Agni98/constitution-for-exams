@@ -173,9 +173,9 @@ partX: {
   catch: "A 'Metropolitan area' means an area with at least ten lakh people, comprising one or more districts and two or more municipalities or panchayats. It is the trigger for the Metropolitan Planning Committee under Article 243ZE."
 },
 "243Q": {
-  simple: "Every State shall constitute three kinds of urban body. A Nagar Panchayat for an area in transition from rural to urban, a Municipal Council for a smaller urban area, and a Municipal Corporation for a larger urban area.",
-  catch: "The Governor may exempt an industrial township where municipal services are provided by an industrial establishment.\n\n" +
-    "That is the provision keeping some company towns and special areas outside elected municipal government."
+  simple: "Every State shall set up three kinds of urban body. A Nagar Panchayat serves an area changing from rural to urban, a Municipal Council a smaller urban area, and a Municipal Corporation a larger one.",
+  catch: "The Governor decides which kind an area gets, by public notification. The Governor looks at population, density, local revenue, non-farm employment and economic importance. The Constitution itself sets no population figures.\n\n" +
+    "The Governor may also decide not to set up a municipality where an industrial establishment provides the municipal services. So some company towns stay outside elected municipal government."
 },
 "243R": {
   simple: "All seats in a Municipality are filled by direct election from wards.\n\n" +
@@ -201,9 +201,9 @@ partX: {
   catch: "The age floor is twenty-one, as with panchayats, not the twenty-five required for a State Assembly."
 },
 "243W": {
-  simple: "The State legislature may endow Municipalities with the powers and authority to function as institutions of self-government, including the eighteen matters in the Twelfth Schedule. It may endow Committees with responsibilities too.",
-  catch: "Permissive again, and this is why Indian cities have elected mayors with very little executive power.\n\n" +
-    "The State-appointed Municipal Commissioner runs the administration."
+  simple: "The State legislature may give municipalities the powers they need to work as institutions of self-government, including on the 18 subjects in the Twelfth Schedule. The State may give committees, such as ward committees, powers too.",
+  catch: "The word is \"may\" again, as for panchayats. So devolution to cities depends on each State's willingness.\n\n" +
+    "Cities raise revenue that States are slow to give up. Bodies such as development authorities and water boards often hold the real powers. So Indian cities have elected mayors with little executive power, and a State-appointed Municipal Commissioner runs the administration."
 },
 "243X": {
   simple: "The State legislature may authorise a Municipality to levy, collect and appropriate taxes, duties, tolls and fees. It may also assign it State revenues and provide grants-in-aid.",
@@ -226,9 +226,10 @@ partX: {
   simple: "This Part does not apply to Scheduled Areas and tribal areas. Nothing in it affects the functions of the Darjeeling Gorkha Hill Council in relation to hill areas."
 },
 "243ZD": {
-  simple: "Every State shall constitute a District Planning Committee. It consolidates the plans prepared by the panchayats and municipalities in the district, and prepares a draft development plan for the district as a whole.\n\n" +
-    "At least four-fifths of its members must be elected by and from the elected members of the district panchayat and the municipalities, in proportion to the rural and urban populations.",
-  catch: "Mandatory in terms, and largely dormant in practice. Most States constitute the Committee and then plan around it."
+  simple: "Every State shall set up a District Planning Committee in each district. The Committee combines the plans of the panchayats and municipalities, and prepares a draft development plan for the whole district.\n\n" +
+    "At least four-fifths of its members are elected by and from the elected members of the district panchayat and the municipalities, in proportion to the district's rural and urban populations.",
+  catch: "The plan must cover matters common to villages and towns, such as spatial planning, sharing water, joint infrastructure and the environment.\n\n" +
+    "The Committee is mandatory on paper but largely dormant. Most States set it up and then plan around it."
 },
 "243ZE": {
   simple: "Every Metropolitan area shall have a Metropolitan Planning Committee, to prepare a draft development plan for the area.\n\n" +
@@ -302,8 +303,9 @@ partX: {
     "The Sixth Schedule creates elected Autonomous District Councils. The Councils make laws on land, forests, inheritance and marriage, run village courts and levy some taxes. So the Sixth Schedule gives tribal people real self-government, while the Fifth leaves power with the Governor."
 },
 "244A": {
-  simple: "Parliament may by law form an autonomous State within Assam, comprising the tribal areas, with its own legislature or Council of Ministers, or both.",
-  catch: "Inserted by the 22nd Amendment in 1969 and used once, producing Meghalaya. It remains a live demand in parts of Assam."
+  simple: "Parliament may by law form an autonomous State within Assam, made up of some or all of its tribal areas. The autonomous State may have its own legislature, its own Council of Ministers, or both.",
+  catch: "The 22nd Amendment (1969) added the article, after demands from the hill areas of what was then a much larger Assam. Parliament used it once. Meghalaya became an autonomous State within Assam in 1970, and then a full State in 1972.\n\n" +
+    "The article remains the constitutional basis for demands from Bodoland and Karbi Anglong. No other State has an equivalent provision."
 }
 
 });
