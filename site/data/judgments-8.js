@@ -374,9 +374,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The essential religious practices test: a practice that is essential to a religion, judged by its own doctrines, is protected.',
-    'The State may regulate the secular activities connected with religion, but not matters of religion.',
-    'A fee must be linked to a service given. A charge that goes into general revenue is a tax.',
+    'The State\'s power over a religious institution runs through its property and administration, not through its rituals.',
     'So the State may check a Math\'s accounts, but it cannot take over its religious life or run it through its own manager.'
   ],
   legacy: [
@@ -437,8 +435,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Under Article 25(1), women have the same right as men to enter a public temple and worship.',
-    'A practice is protected only if it is essential to the religion. Keeping women of a certain age out of Sabarimala was held not to be essential.',
+    'A believer\'s right to worship in a public temple can prevail over a custom that is not essential to the faith.',
     'So in 2018 equality won over custom. But the dissent, and the review that followed, show that the balance between faith and equality is still being argued.'
   ],
   legacy: [

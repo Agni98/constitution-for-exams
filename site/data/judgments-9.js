@@ -59,8 +59,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Judgments of the Supreme Court are final. The curative petition is a rare exception.',
-    'The Court can correct its own judgment, as a matter of justice, when natural justice was broken or bias is feared.',
+    'The Court\'s inherent power to do justice can create a remedy that no statute or rule provides.',
     'So finality and justice are balanced. The door to reopen a final judgment exists, but it is narrow and heavily guarded.'
   ],
   legacy: [
@@ -113,9 +112,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Parliament\'s power to amend the Constitution is limited. Parliament cannot turn it into a power to destroy the Constitution.',
-    'The courts\' power of judicial review is part of the basic structure.',
-    'The fundamental rights and the Directive Principles must be balanced. Neither has absolute priority over the other.',
     'So the Emergency\'s attempt to put amendments beyond the courts failed. The limit set in Kesavananda Bharati protects itself.'
   ],
   legacy: [
@@ -166,8 +162,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    '24 April 1973, the date of Kesavananda Bharati, divides amendments that cannot be tested against the basic structure from those that can.',
-    'Land reform laws protected by Article 31A do not damage the basic structure.',
+    'A fixed date can separate what is settled from what stays open to challenge. The Court chose the day the basic structure test began.',
     'So the land reforms of the 1950s and 1960s were made safe for good, while everything Parliament did after 1973 stays open to the basic structure test.'
   ],
   legacy: [
@@ -219,8 +214,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Article 39(b) does not cover all private property. Each resource must be tested against the relevant factors.',
-    'When an amendment that replaced a provision of the Constitution is struck down, the original provision comes back.',
     'So the State can still use Article 31C to protect laws that share out resources. But it cannot treat every private flat or factory as community property just by saying so.'
   ],
   legacy: [
@@ -270,8 +263,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Conversion to another religion does not end a marriage made under the Hindu Marriage Act.',
-    'A change of religion cannot be used to escape the offence of bigamy.',
     'So a husband cannot change his religion to change the rules of a marriage he has already made.'
   ],
   legacy: [
@@ -322,8 +313,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The Directive Principles and the fundamental duties can support the reasonableness of a limit on a fundamental right.',
-    'A ban on one activity within a trade is a limit on the trade, not a ban on the whole trade.',
+    'Reasonableness is judged by the conditions of the time. When the facts behind an older ruling change, the answer can change too.',
     'So Quareshi\'s rule of 1958 gave way. A State may now protect all cattle, useful or not, without breaking the right to trade.'
   ],
   legacy: [
@@ -375,8 +365,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The State can require unaided private schools to help carry out its duty under Article 21A, as a reasonable limit under Article 19(6).',
-    'Article 30(1) protects unaided minority schools from such a requirement.',
     'So a poor child can claim a free seat in a private neighbourhood school, with the State paying, unless the school is a minority school.'
   ],
   legacy: [
