@@ -177,63 +177,63 @@ partVI: {
   catch: "The salaries are charged on the State's Consolidated Fund, so they are not voted on every year. Nobody can therefore use the presiding officers' pay as a lever against them."
 },
 "187": {
-  simple: "Each House of a State legislature has a separate secretarial staff. The legislature may regulate their recruitment and service conditions by law."
+  simple: "Each House of a State legislature has its own secretarial staff. The legislature may make laws on how the staff are recruited and on their conditions of service."
 },
 "188": {
-  simple: "Every member must make and subscribe the oath or affirmation in the Third Schedule, before the Governor or a person appointed by him, before taking his seat.",
-  catch: "Until the oath is taken a member cannot sit or vote, and Article 193 imposes a penalty if he does."
+  simple: "Every member must take the oath or affirmation in the Third Schedule before taking a seat. The oath is taken before the Governor, or a person the Governor appoints.",
+  catch: "Until the oath is taken, a member cannot sit or vote, and Article 193 imposes a penalty on one who does."
 },
 "189": {
-  simple: "Questions are decided by a majority of members present and voting, other than the presiding officer, who has a casting vote. The House may act despite vacancies.\n\n" +
+  simple: "Questions are decided by a majority of the members present and voting. The presiding officer does not vote, except to break a tie. A House can act even when it has vacancies.\n\n" +
     "The quorum is ten members or one-tenth of the total membership, whichever is greater.",
-  catch: "That is a very low floor, and the presiding officer need not verify it unless a member points out the absence of quorum."
+  catch: "The quorum is a very low floor. The presiding officer need not check it unless a member points out that the House lacks a quorum."
 },
 "190": {
-  simple: "No one may sit in both Houses of a State legislature, or in the legislatures of two States.\n\n" +
-    "A seat falls vacant on disqualification, on resignation, or on absence from all meetings for sixty days without permission.",
-  catch: "As in Article 101, the presiding officer may refuse a resignation that is not voluntary and genuine."
+  simple: "Nobody may sit in both Houses of a State legislature, or in the legislatures of two States.\n\n" +
+    "A seat falls vacant on disqualification, on resignation, or when a member stays away from all meetings for sixty days without permission.",
+  catch: "As under Article 101, the presiding officer may refuse a resignation that is not voluntary and genuine."
 },
 "191": {
-  simple: "The disqualifications for a State legislature are office of profit, unsound mind, undischarged insolvency, loss of citizenship, and disqualification under any law. Defection under the Tenth Schedule is added by clause (2).",
-  catch: "The Constitution leaves 'office of profit' to be defined by State law, so the exemption lists vary considerably between States."
+  simple: "A member of a State legislature is disqualified for holding an office of profit, for unsound mind, for being an undischarged insolvent, for losing citizenship, or under any law of Parliament. Clause (2) adds disqualification for defection under the Tenth Schedule.",
+  catch: "Each State legislature may declare by law which offices do not disqualify their holders. So the lists of exempt offices vary a great deal between States."
 },
 "192": {
-  simple: "A question whether a member has become subject to a disqualification is decided by the Governor. He must obtain the Election Commission's opinion and act according to it.",
-  catch: "As with the President under Article 103, the Governor is bound by that opinion. The Election Commission, not the Governor, is the real decision-maker in office-of-profit cases."
+  simple: "If a question arises whether a member is disqualified, the Governor decides it. The Governor must first get the Election Commission's opinion, and must act on it.",
+  catch: "As with the President under Article 103, the Commission's opinion binds the Governor. So in office-of-profit cases the Election Commission, not the Governor, really decides."
 },
 "193": {
-  simple: "A member who sits or votes before taking the oath, or while disqualified, is liable to a penalty of ₹500 a day, recoverable as a debt to the State.",
-  catch: "The figure has never been revised, exactly as with its Union counterpart in Article 104."
+  simple: "A member who sits or votes before taking the oath, or while disqualified, must pay ₹500 for each such day. The sum is recovered as a debt owed to the State.",
+  catch: "The figure has never changed, exactly as with the matching Union rule in Article 104."
 },
 "194": {
-  simple: "Members have freedom of speech in the State legislature, and immunity from court proceedings for anything said or any vote given. The same immunity covers publication of proceedings under the House's authority.",
-  catch: "This is the State counterpart of Article 105, and equally subject to Sita Soren (2024), which withdrew the immunity from legislators who take bribes to vote."
+  simple: "Members have freedom of speech in the State legislature. No member can be taken to court for anything said or any vote given there. The same protection covers publishing proceedings under the House's authority.",
+  catch: "Article 194 is the State version of Article 105, and Sita Soren (2024) applies to it equally. A legislator who takes a bribe to vote has no protection."
 },
 "195": {
-  simple: "Members' salaries and allowances are as the State legislature determines by law.",
-  catch: "As at the Union level, the legislature fixes its own members' pay. The Second Schedule applies only until it does."
+  simple: "Members' salaries and allowances are whatever the State legislature fixes by law.",
+  catch: "As in Parliament, the legislature fixes its own members' pay. The Second Schedule applies only until it does."
 },
 
 /* ---------- Legislative procedure in a State ---------- */
 
 "196": {
-  simple: "An ordinary Bill may originate in either House of a bicameral State legislature. A Money Bill may originate only in the Assembly.\n\n" +
-    "Bills do not lapse on prorogation. A Bill pending in the Assembly lapses on its dissolution, and so does one pending in the Council that the Assembly has already passed.",
-  catch: "The upper House cannot preserve a Bill that the electorate has, in effect, sent back."
+  simple: "In a State with two Houses, an ordinary Bill may start in either House. A Money Bill may start only in the Assembly.\n\n" +
+    "Bills do not lapse when the legislature is prorogued. A Bill pending in the Assembly lapses when the Assembly is dissolved. So does a Bill pending in the Council that the Assembly has already passed.",
+  catch: "The upper House cannot keep alive a Bill that the voters have, in effect, sent back by electing a new Assembly."
 },
 "197": {
-  simple: "Where the Council rejects a Bill passed by the Assembly, or does not pass it within three months, or amends it unacceptably, the Assembly may pass it again.\n\n" +
-    "If the Council then rejects it or lets a further month pass, the Bill is deemed passed.",
-  catch: "The Council's maximum delaying power is about four months on the first passage and one month on the second.\n\n" +
+  simple: "If the Council rejects a Bill passed by the Assembly, sits on it for three months, or amends it in a way the Assembly will not accept, the Assembly may pass it again.\n\n" +
+    "If the Council then rejects it again, or a further month passes, the Bill counts as passed.",
+  catch: "So the Council can delay an ordinary Bill by about four months at most, three on the first round and one on the second.\n\n" +
     "There is no joint sitting. The Assembly simply prevails."
 },
 "198": {
-  simple: "A Money Bill may be introduced only in the Assembly. The Council may only recommend, and must return the Bill within fourteen days. The Assembly may accept or reject those recommendations, and either way the Bill is deemed passed.",
-  catch: "The Council has no veto and no power of delay beyond fourteen days, exactly as the Rajya Sabha has none under Article 109."
+  simple: "A Money Bill may be introduced only in the Assembly. The Council may only recommend changes, and must return the Bill within fourteen days. The Assembly may accept or reject the recommendations, and either way the Bill counts as passed.",
+  catch: "The Council has no veto, and cannot delay a Money Bill beyond fourteen days. The Rajya Sabha is in the same position under Article 109."
 },
 "199": {
-  simple: "Article 199 defines a Money Bill for a State in the same terms Article 110 uses for the Union, and makes the Speaker's certificate final.",
-  catch: "The same question raised at the Union level in Rojer Mathew — whether that finality is reviewable — applies to States."
+  simple: "Article 199 defines a State Money Bill in the same terms that Article 110 uses for the Union. The Speaker's certificate that a Bill is a Money Bill is final.",
+  catch: "The question raised for Parliament in Rojer Mathew applies to the States too. A larger bench is still to decide whether courts can review that certificate."
 },
 "200": {
   simple: "When a State Bill reaches the Governor, the Governor has four choices. The Governor may assent, withhold assent, return a Bill that is not a Money Bill for reconsideration, or reserve it for the President.\n\n" +
@@ -248,22 +248,22 @@ partVI: {
     "The gap is the clearest sign that Indian federalism leans towards the Union."
 },
 "202": {
-  simple: "The Governor lays an annual financial statement before the House or Houses, distinguishing charged expenditure from other expenditure.",
-  catch: "The State budget follows the Union pattern exactly. Charged expenditure is discussed but not voted; everything else is voted as demands for grants."
+  simple: "The Governor lays an annual financial statement before the House or Houses. The statement shows charged spending separately from other spending.",
+  catch: "The State budget follows the Union pattern exactly. Charged spending is discussed but not voted on, and everything else is voted as demands for grants."
 },
 "203": {
-  simple: "Charged expenditure is not put to the vote of the Assembly. Other estimates go to it as demands for grants, which it may assent to, refuse or reduce. A demand can only be moved on the Governor's recommendation.",
-  catch: "The Governor's recommendation is needed before a demand can even be moved, which means the executive controls what the legislature may vote on."
+  simple: "Charged spending is not put to the vote of the Assembly. Other spending goes to the Assembly as demands for grants, which it may accept, refuse or reduce. A demand can be moved only on the Governor's recommendation.",
+  catch: "No demand can even be moved without the Governor's recommendation. So the government, not the legislature, decides what the legislature may vote on."
 },
 "204": {
-  simple: "An Appropriation Bill authorises withdrawal from the Consolidated Fund of the State. No amendment varying a grant is admissible, and no withdrawal is lawful except under an Appropriation Act.",
-  catch: "The Assembly may reduce a demand at the earlier stage. Once the Appropriation Bill is drawn it can only pass or reject it."
+  simple: "An Appropriation Bill authorises the government to draw money from the State's Consolidated Fund. No amendment may change a grant, and no money may be drawn except under an Appropriation Act.",
+  catch: "The Assembly may cut a demand at the earlier stage. But once the Appropriation Bill is drawn up, the Assembly can only pass or reject it."
 },
 "205": {
-  simple: "Supplementary, additional and excess grants in a State follow the Budget procedure."
+  simple: "Supplementary, additional and excess grants in a State follow the same procedure as the Budget."
 },
 "206": {
-  simple: "Article 206 provides for votes on account, votes of credit and exceptional grants in a State."
+  simple: "Article 206 lets a State legislature make votes on account, votes of credit and exceptional grants, as Parliament can under Article 116."
 },
 "207": {
   simple: "A Bill for taxation or for expenditure from the State's Consolidated Fund needs the Governor's recommendation, and cannot be introduced in the Legislative Council.",
