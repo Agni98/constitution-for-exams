@@ -210,6 +210,12 @@ it stops, how courts apply it, and the name of the doctrine if it has one. A pri
 restates the summary or a held point is left out, so many judgments have just one or two. The
 last principle always starts with "So" and states the case's central point.
 
+**Subsequent Developments (`legacy`) lists only what happened after the judgment**, in date
+order: later cases, amendments, laws and events, each with its year. A current-status fact may
+stay when nothing else on the page says it, such as an amendment never brought into force.
+General remarks such as "a leading authority" and anything that repeats another section are left
+out. A judgment with nothing left has an empty list, and the section does not appear.
+
 ## Citing a question paper
 
 Every sighting under **Seen in the papers** is one of two shapes:

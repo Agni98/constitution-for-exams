@@ -25,7 +25,9 @@
      principles how the rule works beyond the case (reach, purpose,
                 limits, method, doctrine name), never a repeat of held;
                 the last one starts with "So" and states the central point
-     legacy     what happened after the judgment
+     legacy     what happened after the judgment, in date order, each item
+                dated; no repeats of other fields; may be empty, which
+                hides the section
      source     the full text of the judgment
 
    How this batch was checked. Each entry was checked against the full text of
