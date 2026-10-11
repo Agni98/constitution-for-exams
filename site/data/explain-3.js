@@ -92,54 +92,54 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "The Speaker who stays on after dissolution is a deliberate design. So the House always has a presiding officer, even between two Lok Sabhas."
 },
 "95": {
-  simple: "The Deputy Speaker acts when the office of Speaker is vacant or the Speaker is absent. So does a member chosen by the House, where necessary.",
-  catch: "If both offices are vacant, the House chooses a member to preside, from a panel the Speaker nominates in advance. There is no automatic successor."
+  simple: "The Deputy Speaker does the Speaker's work while the Speaker's office is vacant. If both offices are vacant, a member appointed by the President does it.",
+  catch: "When the Speaker is only absent from a sitting, the Deputy Speaker presides. If the Deputy Speaker is absent too, a member from a panel that the Speaker names in advance takes the chair."
 },
 "96": {
-  simple: "A Speaker or Deputy Speaker whose removal is being considered cannot preside over that debate. He may speak and vote on it.",
-  catch: "Kihoto Hollohan, and later Nabam Rebia (2016), raised a further question: whether a Speaker facing a removal motion may decide defection petitions. The Court said he should not."
+  simple: "A Speaker or Deputy Speaker whose removal is being considered cannot preside over that sitting. The Speaker may still speak, and may vote in the first instance, though not cast a deciding vote.",
+  catch: "Nabam Rebia (2016) added a further rule. A Speaker facing a notice for removal should not decide petitions to disqualify members for defection. In 2023 the Court sent that rule to a larger bench to reconsider."
 },
 "97": {
-  simple: "The Chairman, Deputy Chairman, Speaker and Deputy Speaker are paid salaries and allowances fixed by Parliament, charged on the Consolidated Fund of India.",
-  catch: "'Charged on the Consolidated Fund' means the expenditure is not voted on by Parliament. It is a deliberate insulation from the annual budget fight."
+  simple: "The Chairman, Deputy Chairman, Speaker and Deputy Speaker receive the salaries and allowances Parliament fixes. The money is charged on the Consolidated Fund of India.",
+  catch: "Charged spending is not put to a vote in Parliament. So the presiding officers' pay is kept out of the yearly fight over the Budget."
 },
 "98": {
-  simple: "Each House has a separate secretarial staff. Parliament may regulate their recruitment and service conditions by law.",
-  catch: "Separate staff is a small but real independence guarantee. Parliament's employees are recruited by the House, not by the executive, and sit outside the ordinary civil service."
+  simple: "Each House has its own secretarial staff. Parliament may make laws on how the staff are recruited and on their conditions of service.",
+  catch: "Separate staff is a small but real guarantee of independence. Each House recruits its own employees, so the executive does not control them."
 },
 
 /* ---------- Conduct of business ---------- */
 
 "99": {
-  simple: "Every member must make and subscribe an oath or affirmation before taking his seat. It is taken before the President or a person appointed by him, in the form set out in the Third Schedule.",
-  catch: "Until you take the oath you cannot sit or vote, and Article 104 imposes a penalty if you do. A member-elect who delays the oath has no voice in the House at all."
+  simple: "Every member must take an oath or affirmation before taking a seat. The oath is taken before the President, or a person the President appoints, in the form set out in the Third Schedule.",
+  catch: "Until the oath is taken, a member cannot sit or vote, and Article 104 imposes a penalty on one who does. So a member-elect who delays the oath has no voice in the House at all."
 },
 "100": {
-  simple: "Questions are decided by a majority of members present and voting, other than the presiding officer, who has a casting vote in a tie.\n\n" +
-    "A House can act despite vacancies. The quorum is one-tenth of the total membership.",
-  catch: "One-tenth is a very low quorum, which is fifty-five members in the Lok Sabha.\n\n" +
-    "The Speaker need not count heads unless a member points out the absence of quorum."
+  simple: "Questions in a House are decided by a majority of the members present and voting. The presiding officer does not vote, except to break a tie.\n\n" +
+    "A House can act even when it has vacancies. The quorum is one-tenth of the total membership.",
+  catch: "One-tenth is a very low quorum, about fifty-five members in the Lok Sabha.\n\n" +
+    "The presiding officer need not count heads unless a member points out that the House lacks a quorum."
 },
 "101": {
-  simple: "No one may be a member of both Houses, or of Parliament and a State legislature, at the same time.\n\n" +
-    "A seat falls vacant on disqualification, on resignation, or on absence from all meetings for sixty days without permission.",
-  catch: "The Speaker or Chairman may refuse to accept a resignation that is not voluntary and genuine.\n\n" +
-    "That safeguard was added by the 33rd Amendment, after members were made to resign under duress in 1973."
+  simple: "Nobody may be a member of both Houses, or of Parliament and a State legislature, at the same time.\n\n" +
+    "A seat falls vacant on disqualification, on resignation, or when a member stays away from all meetings for sixty days without permission.",
+  catch: "The Speaker or Chairman may refuse a resignation that is not voluntary and genuine.\n\n" +
+    "The 33rd Amendment (1974) added the safeguard, after members were pressed into resigning during the agitations of that year."
 },
 "102": {
-  simple: "You are disqualified from Parliament if you hold an office of profit under the Union or a State, are of unsound mind, are an undischarged insolvent, are not a citizen or have acquired foreign citizenship, or are disqualified by any law Parliament makes.\n\n" +
+  simple: "A person is disqualified from Parliament for holding an office of profit under the Union or a State, for unsound mind, or for being an undischarged insolvent. A person is also disqualified for not being a citizen, for taking foreign citizenship, or under any law of Parliament.\n\n" +
     "Clause (2) adds disqualification for defection under the Tenth Schedule.",
-  catch: "'Office of profit' is nowhere defined.\n\n" +
-    "Parliament's habit of exempting offices retrospectively, as it did in 2006 after the Jaya Bachchan case, has made it a political instrument as much as a legal test."
+  catch: "The Constitution never defines an \"office of profit\".\n\n" +
+    "Parliament has often exempted offices with retrospective effect, as it did in 2006 after the Jaya Bachchan case. So the test has become a political tool as much as a legal one."
 },
 "103": {
-  simple: "A question whether a member has become subject to a disqualification under Article 102(1) is decided by the President. He must obtain the Election Commission's opinion and act according to it.",
-  catch: "The President is bound by the Commission's opinion. This is one of the few places where an outside body's advice binds the head of State.\n\n" +
-    "Defection disqualifications under clause (2) go to the Speaker or Chairman instead."
+  simple: "If a question arises whether a member is disqualified under Article 102(1), the President decides it. The President must first get the Election Commission's opinion, and must act on it.",
+  catch: "The Commission's opinion binds the President. Article 103 is one of the few places where an outside body's advice binds the head of State.\n\n" +
+    "Disqualification for defection, under clause (2), is decided by the Speaker or Chairman instead."
 },
 "104": {
-  simple: "A member who sits or votes before taking the oath, or while disqualified, or in breach of Article 101, is liable to a penalty of ₹500 for each day, recoverable as a debt to the Union.",
-  catch: "The figure has never been revised since 1950. The real deterrent is not the money but the disqualification that usually accompanies it."
+  simple: "A member who sits or votes before taking the oath, while disqualified, or in breach of Article 101, must pay ₹500 for each such day. The sum is recovered as a debt owed to the Union.",
+  catch: "The figure has not changed since 1950. The real deterrent is not the money but the disqualification that usually comes with it."
 },
 "105": {
   simple: "Members have freedom of speech in Parliament, subject to the Constitution and the rules of the House.\n\n" +
@@ -148,13 +148,13 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "In Sita Soren (2024) a seven-judge bench overruled that ruling. A legislator who takes a bribe can now be prosecuted, whatever Article 105 says about votes in the House."
 },
 "106": {
-  simple: "Members' salaries and allowances are as Parliament determines by law.",
-  catch: "Parliament sets its own pay, with no external body in the loop. That is the standing criticism of this article. The Salary, Allowances and Pension of Members of Parliament Act, 1954 does the work."
+  simple: "Members' salaries and allowances are whatever Parliament fixes by law.",
+  catch: "Parliament sets its own pay, with no outside body involved, and critics have long objected to that. The law is the Salary, Allowances and Pension of Members of Parliament Act, 1954."
 },
 "107": {
-  simple: "An ordinary Bill may be introduced in either House and must be passed by both.\n\n" +
-    "It does not lapse on prorogation. A Bill pending in the Lok Sabha lapses on its dissolution.",
-  catch: "A Bill pending in the Rajya Sabha, which the Lok Sabha has not yet passed, does not lapse. The Rajya Sabha's permanence is what makes that possible."
+  simple: "An ordinary Bill may start in either House, and must be passed by both.\n\n" +
+    "A Bill does not lapse when Parliament is prorogued. A Bill pending in the Lok Sabha lapses when the Lok Sabha is dissolved.",
+  catch: "But a Bill pending in the Rajya Sabha that the Lok Sabha has not yet passed does not lapse. The Rajya Sabha is never dissolved, so the Bill survives there."
 },
 "108": {
   simple: "If the two Houses disagree on an ordinary Bill, the President may call a joint sitting. The trigger is that one House rejects the Bill, the Houses disagree on amendments, or six months pass without the second House passing it.\n\n" +
@@ -190,30 +190,31 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "So a hostile majority cannot starve these offices of money by refusing a demand."
 },
 "113": {
-  simple: "Estimates of charged expenditure are not submitted to the vote of Parliament. Other estimates go to the Lok Sabha as demands for grants, which it may assent to, refuse or reduce. A demand can only be moved on the President's recommendation.",
-  catch: "Cut motions are the opposition's main instrument at this stage: policy cut, economy cut and token cut.\n\n" +
-    "In practice most demands are never discussed. The Speaker applies the guillotine and puts all outstanding demands to the vote together."
+  simple: "Charged spending is not put to the vote of Parliament. Other spending goes to the Lok Sabha as demands for grants, which it may accept, refuse or reduce. A demand can be moved only on the President's recommendation.",
+  catch: "Cut motions are the opposition's main tool at this stage. There are three kinds: a policy cut, an economy cut and a token cut.\n\n" +
+    "In practice most demands are never discussed. The Speaker applies the guillotine, and all the remaining demands are put to the vote together."
 },
 "114": {
-  simple: "After the Lok Sabha passes the demands, an Appropriation Bill authorises withdrawal from the Consolidated Fund.\n\n" +
-    "No amendment varying the amount or destination of a grant is admissible, and no money may be withdrawn except under an Appropriation Act.",
-  catch: "This is the constitutional lock on the treasury. Money leaves the Consolidated Fund only with legislative authority."
+  simple: "After the Lok Sabha passes the demands, an Appropriation Bill authorises the government to draw the money from the Consolidated Fund.\n\n" +
+    "No amendment may change the amount or purpose of a grant. And no money may be drawn except under an Appropriation Act.",
+  catch: "Article 114 is the constitutional lock on the treasury. Money leaves the Consolidated Fund only when the legislature has authorised it."
 },
 "115": {
-  simple: "Supplementary, additional and excess grants, for expenditure beyond what the Budget authorised, follow the same procedure as the Budget.",
-  catch: "An excess grant is regularised only after the Public Accounts Committee has examined it. This is the one place where money is spent first and sanctioned later."
+  simple: "Supplementary, additional and excess grants cover spending beyond what the Budget authorised. They follow the same procedure as the Budget.",
+  catch: "An excess grant is approved only after the Public Accounts Committee has examined it. So excess grants are the one case where money is spent first and sanctioned later."
 },
 "116": {
-  simple: "Article 116 provides for votes on account, which are advance money before the Budget passes; votes of credit, for unexpectedly large or indefinite demands; and exceptional grants.",
-  catch: "A vote on account normally covers two months. In an election year it covers longer, and the government presents what is popularly called an interim budget. That is this article, not a separate device."
+  simple: "Article 116 provides three devices. A vote on account gives money in advance before the Budget passes. A vote of credit meets a large or open-ended need that cannot be stated in detail. An exceptional grant covers spending outside any current service.",
+  catch: "A vote on account normally covers two months. In an election year it covers longer, and the government presents what is popularly called an interim budget. The interim budget works through Article 116, not through a separate device."
 },
 "117": {
-  simple: "A Bill for taxation or for expenditure from the Consolidated Fund cannot be introduced except on the President's recommendation. A taxation Bill cannot be introduced in the Rajya Sabha at all.",
-  catch: "This is broader than Article 110. A Financial Bill need not be a Money Bill, so the Rajya Sabha keeps its full powers over one even though it could not have introduced it."
+  simple: "A Bill that includes any matter listed in Article 110, along with other provisions, needs the President's recommendation to be introduced, and cannot start in the Rajya Sabha.\n\n" +
+    "A Bill that would involve spending from the Consolidated Fund needs the President's recommendation before either House considers it.",
+  catch: "A Bill of either kind is a Financial Bill, not a Money Bill. So the Rajya Sabha keeps its full powers over it, even where the Bill could not start there."
 },
 "118": {
-  simple: "Each House may make rules regulating its procedure and conduct of business. Until it does, the pre-Constitution rules apply. The President makes rules for joint sittings, after consulting the presiding officers.",
-  catch: "The rules, not the Constitution, decide Question Hour, Zero Hour and whether a Bill goes to a committee at all. The presiding officer interprets them finally under Article 122."
+  simple: "Each House may make rules for its own procedure and business. Until it does, the rules from before the Constitution apply. The President makes the rules for joint sittings, after consulting the presiding officers.",
+  catch: "The rules, not the Constitution, govern Question Hour, Zero Hour and whether a Bill goes to a committee at all. Under Article 122 the presiding officer's reading of the rules is final."
 },
 "119": {
   simple: "Parliament may by law regulate financial procedure and the timely completion of financial business. Such a law overrides the Houses' own rules.",
