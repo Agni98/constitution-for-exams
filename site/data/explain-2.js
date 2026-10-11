@@ -23,23 +23,24 @@ partV: {
 /* ---------- Part IV: Directive Principles ---------- */
 
 "36": {
-  simple: "In this Part, 'the State' means the same thing it meant in Article 12: governments, legislatures, and local and other authorities.",
-  catch: "Borrowing the definition matters. It means the directive principles are addressed to exactly the same bodies against which the fundamental rights are enforced."
+  simple: "In Part IV, \"the State\" means the same as in Article 12. The term covers the governments, the legislatures, and all local and other authorities.",
+  catch: "Part IV borrows the definition from Part III. So the directive principles are addressed to exactly the same bodies that the fundamental rights bind.\n\n" +
+    "But the result is weaker here. A citizen can go to court over a breach of Part III, but not over a breach of Part IV."
 },
 "37": {
-  simple: "The directive principles cannot be enforced by any court. They are nevertheless fundamental to the governance of the country, and the State has a duty to apply them in making laws.",
-  catch: "This single article is why Part IV reads like a manifesto rather than a charter.\n\n" +
-    "'Not enforceable' does not mean 'irrelevant'. Courts use the directive principles to interpret fundamental rights, to judge whether a restriction is reasonable, and to uphold laws made to give them effect."
+  simple: "No court can enforce the directive principles. But the principles are fundamental to governing the country, and the State has a duty to apply them in making laws.",
+  catch: "Article 37 is the reason Part IV reads like a set of goals, not a list of rights.\n\n" +
+    "But \"not enforceable\" does not mean \"irrelevant\". Courts use the directive principles to give content to fundamental rights, to judge whether a restriction is reasonable, and to uphold laws that put the principles into effect. The right to a clean environment, for example, came from reading Article 48A into Article 21."
 },
 "38": {
   simple: "The State shall secure a social order in which social, economic and political justice informs all national institutions. It shall also work to minimise inequalities in income, status, facilities and opportunities.",
   catch: "The second half, on minimising inequality, was added by the 44th Amendment in 1978. That is the same amendment that removed the right to property from Part III."
 },
 "39": {
-  simple: "Article 39 sets out six specific policy directions.\n\n" +
-    "Adequate means of livelihood for all. Material resources distributed to serve the common good. An economic system that does not concentrate wealth. Equal pay for equal work. Protection of the health and strength of workers and children. Opportunities for children to develop in freedom and dignity.",
-  catch: "Clauses (b) and (c) are the constitutionally armoured ones. A law made to implement them gets the protection of Article 31C.\n\n" +
-    "That is why the meaning of 'material resources of the community' has been litigated so often. In Property Owners' Association (2024), nine judges held that not every privately owned resource qualifies."
+  simple: "Article 39 gives the State six economic goals.\n\n" +
+    "Everyone should have an adequate livelihood. The community's material resources should serve the common good. Wealth should not pile up in a few hands. Men and women should get equal pay for equal work. Workers and children should not be abused. And children should be able to grow up in freedom and dignity.",
+  catch: "Clauses (b) and (c) have extra armour. A law made to carry them out is protected by Article 31C, so the law cannot be struck down for breaching Articles 14 or 19.\n\n" +
+    "So the meaning of \"material resources of the community\" decides how far the State can reach into private property. In Property Owners' Association (2024), nine judges held that not every privately owned resource counts."
 },
 "39A": {
   simple: "The State shall secure equal justice and provide free legal aid, so that no citizen is denied justice because of economic or other disability.",
@@ -47,8 +48,9 @@ partV: {
     "This is one of the directive principles that has been most effectively converted into a right. Courts read free legal aid into Article 21, and the Legal Services Authorities Act, 1987 gives it machinery."
 },
 "40": {
-  simple: "The State shall organise village panchayats and give them the powers they need to function as units of self-government.",
-  catch: "This was ignored for forty years. The 73rd Amendment in 1992 turned the directive into Part IX and made it real."
+  simple: "The State shall organise village panchayats and give them the powers they need to work as units of self-government.",
+  catch: "The Constituent Assembly was divided on village government. Gandhi wanted village republics. Ambedkar saw the village as a sink of localism, ignorance and narrow-mindedness. So the principle went into Part IV, where no court could enforce it.\n\n" +
+    "For over forty years, panchayats depended on the goodwill of each State. The 73rd Amendment (1992) then added Part IX, which made panchayats a constitutional requirement."
 },
 "41": {
   simple: "Within the limits of its economic capacity, the State shall provide for the right to work, to education, and to public assistance in unemployment, old age, sickness and disablement.",
@@ -72,19 +74,19 @@ partV: {
     "Part IXB was later cut back for want of State ratification. This directive and the fundamental right both survive."
 },
 "44": {
-  simple: "The State shall endeavour to secure for the citizens a uniform civil code throughout the territory of India.",
-  catch: "Twenty-two words that have generated more political heat than any other line in Part IV.\n\n" +
-    "It is unenforceable, so no court can order a uniform civil code into existence. Shah Bano (1985) and Sarla Mudgal (1995) both urged Parliament to act, and Parliament did not.\n\n" +
-    "Goa has always had one, inherited from Portuguese law. Uttarakhand enacted one in 2024."
+  simple: "The State shall try to secure a uniform civil code for all citizens throughout India.",
+  catch: "A civil code covers marriage, divorce, maintenance, inheritance, adoption and succession. India already has one criminal law for everyone. But these personal matters are governed by separate laws for Hindus, Muslims, Christians and Parsis.\n\n" +
+    "Article 44 cannot be enforced, so no court can order a uniform code into existence. In Shah Bano (1985) and Sarla Mudgal (1995) the Court urged Parliament to act, and Parliament did not. So a uniform code exists only where a legislature has made one, as Uttarakhand did in 2024, or where one was inherited, as in Goa."
 },
 "45": {
-  simple: "The State shall provide early childhood care and education for all children until they complete six years of age.",
-  catch: "This is the recast version of the article.\n\n" +
-    "Until 2002, Article 45 promised free and compulsory education up to fourteen. The 86th Amendment moved that promise into Article 21A as a fundamental right, and left the under-sixes here, unenforceable."
+  simple: "The State shall provide early childhood care and education for all children until they turn six.",
+  catch: "Article 45 used to say something else. Until 2002 it promised free and compulsory education for all children up to fourteen, within ten years of 1950. The deadline was missed by more than forty years.\n\n" +
+    "The 86th Amendment (2002) moved the promise for ages six to fourteen into Article 21A, as an enforceable fundamental right. Only children under six were left in Article 45, where the promise still cannot be enforced."
 },
 "46": {
-  simple: "The State shall promote with special care the educational and economic interests of Scheduled Castes, Scheduled Tribes and other weaker sections, and protect them from social injustice and exploitation.",
-  catch: "This is frequently cited as the policy justification for reservation, alongside Articles 15(4) and 16(4)."
+  simple: "The State shall take special care to promote the educational and economic interests of the weaker sections, especially the Scheduled Castes and Scheduled Tribes. The State shall also protect them from social injustice and all forms of exploitation.",
+  catch: "Article 46 is the policy reason most often given for reservation. Courts cite it, alongside Articles 15(4) and 16(4), to show that reservation and welfare schemes serve a goal the Constitution sets.\n\n" +
+    "But Article 46 creates no quota itself. The power to reserve comes from other articles. Article 46 supplies only the reason."
 },
 "47": {
   simple: "The State shall raise the level of nutrition and the standard of living, and improve public health. It shall also try to bring about prohibition of intoxicating drinks and drugs, except for medicinal purposes.",
@@ -106,7 +108,8 @@ partV: {
 },
 "50": {
   simple: "The State shall take steps to separate the judiciary from the executive in the public services.",
-  catch: "This is why the Criminal Procedure Code, 1973 split magistrates into two kinds: judicial magistrates under the High Court, and executive magistrates under the government."
+  catch: "Before independence, a District Magistrate was both an administrator and a criminal judge. The officer who ordered an arrest could also try the case.\n\n" +
+    "The Code of Criminal Procedure, 1973 ended the overlap. Judicial magistrates under the High Court now try cases. Executive magistrates under the State government handle administration."
 },
 "51": {
   simple: "The State shall promote international peace and security, maintain just and honourable relations between nations, foster respect for international law and treaty obligations, and encourage settlement of international disputes by arbitration.",

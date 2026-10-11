@@ -552,9 +552,8 @@ preamble: {
   says: "Article 36 says that in Part IV, \"the State\" has the same meaning as in Part III, under Article 12.",
   why: "Definition articles are easy material for a multiple-choice question, and Article 36 carries a small twist worth knowing.",
   concepts: [
-    { t: "What it says", d: "In Part IV, \"the State\" has the same meaning as in Part III. So the definition in Article 12 carries over." },
     { t: "Where Part IV runs", d: "Part IV runs from Article 36 to Article 51. The Part has twenty articles, not sixteen, because 39A, 43A, 43B and 48A were inserted later. They cover everything from village panchayats to international peace." },
-    { t: "Same definition, different consequence", d: "The same bodies are bound by Part IV as by Part III. But there is no court remedy for breaching Part IV, so being bound means something weaker here." }
+    { t: "Same definition, different consequence", d: "The same bodies are bound by both Parts. But Part IV has no court remedy, so being bound means less." }
   ],
   seen: [
     "UPSC Pre 2015 — where the ideal of a welfare State is located in the Constitution"
@@ -568,10 +567,10 @@ preamble: {
   says: "Article 37 says no court can enforce the Directive Principles. They are still fundamental to governing the country, and the State must apply them in making laws.",
   why: "Article 37 is asked directly and often, in almost the same form, across UPSC and State papers.",
   concepts: [
-    { t: "Not enforceable by any court", d: "You cannot go to court and force the government to build a uniform civil code or provide a living wage. There is no remedy." },
-    { t: "But fundamental in governance", d: "The same article says the principles are nevertheless fundamental in the governance of the country. They are meant to guide policy, not to be ignored." },
-    { t: "Applying them is a duty of the State", d: "The article says it shall be the duty of the State to apply these principles in making laws. So they are binding as a matter of obligation, just not as a matter of remedy." },
-    { t: "Courts use them anyway", d: "Judges read Directive Principles into Fundamental Rights to give the latter content. The right to a clean environment came from Article 48A being read into Article 21." },
+    { t: "Not enforceable by any court", d: "Nobody can go to court to force the government to adopt a uniform civil code or pay a living wage." },
+    { t: "But fundamental in governance", d: "The principles guide policy, though no court enforces them." },
+    { t: "Applying them is a duty of the State", d: "The State has a duty to apply them in making laws. The duty is real, but it has no court remedy." },
+    { t: "Courts use them anyway", d: "Courts read the principles into fundamental rights. Article 48A read into Article 21 gave the right to a clean environment." },
     { t: "Minerva Mills (1980)", d: "The Court said Parts III and IV together form the core and conscience of the Constitution, and neither may be given absolute primacy over the other." }
   ],
   seen: [
@@ -593,7 +592,7 @@ preamble: {
     { t: "Clause (c): concentration of wealth", d: "The economic system should not result in wealth and the means of production being concentrated to the common detriment." },
     { t: "Clause (d): equal pay", d: "Equal pay for equal work, for men and women alike." },
     { t: "Clauses (e) and (f): workers and children", d: "The health and strength of workers and children must not be abused, and nobody should be forced by economic necessity into work unsuited to their age or strength. Children must be given opportunities to develop in a healthy manner, with dignity, and childhood must be protected against exploitation. Clause (f) was rewritten by the 42nd Amendment." },
-    { t: "Property Owners Association (2024)", d: "A nine-judge bench held, by 8 to 1, that not every privately owned resource falls within the \"material resources of the community\" in clause (b). Whether one does depends on its nature, its scarcity, and what follows from concentrating it in private hands. The wider reading from the 1977 Ranganatha Reddy case was disapproved." }
+    { t: "Property Owners Association (2024)", d: "By 8 to 1, the Court held that a private resource counts only after looking at its nature, its scarcity, and the effect of private control. The wider reading in Ranganatha Reddy (1977) was disapproved." }
   ],
   seen: [
     "UPSC Pre 2021 — the concentration of wealth and the Directive Principles"
@@ -628,10 +627,9 @@ preamble: {
   says: "Article 40 directs the State to organise village panchayats and give them the powers they need to work as units of self-government.",
   why: "Article 40 is the Gandhian principle behind Panchayati Raj. Most answers on local government open with it, and it explains why the 73rd Amendment was needed at all.",
   concepts: [
-    { t: "What it directs", d: "The State shall organise village panchayats and give them the powers and authority needed to function as units of self-government." },
-    { t: "Why it was only a directive", d: "The Constituent Assembly was divided. Gandhi wanted village republics. Ambedkar, speaking on 4 November 1948, asked the Assembly: \"What is the village but a sink of localism, a den of ignorance, narrow-mindedness and communalism?\" The compromise was to put the principle in Part IV, where it could not be enforced." },
+    { t: "Why it was only a directive", d: "Gandhi wanted village republics, and Ambedkar distrusted the village. Putting the principle in Part IV was the compromise." },
     { t: "The committees that followed", d: "Balwant Rai Mehta (1957) recommended a three-tier system. Ashok Mehta (1978) recommended two tiers. L.M. Singhvi (1986) recommended giving panchayats constitutional status, which is what finally happened." },
-    { t: "The 73rd Amendment (1992)", d: "The amendment added Part IX and the Eleventh Schedule, making panchayats a constitutional requirement rather than a matter of State choice." },
+    { t: "The 73rd Amendment (1992)", d: "Added Part IX and the Eleventh Schedule. Panchayats became a constitutional requirement, not a State choice." },
     { t: "Article 40 still stands", d: "The amendment did not delete it. The directive remains in Part IV, and Part IX gave it machinery." }
   ],
   seen: [
@@ -662,10 +660,9 @@ preamble: {
   says: "Article 44 directs the State to try to secure a uniform civil code for citizens throughout India.",
   why: "Article 44 is the Directive Principle that essays and Mains questions take up most often. Uttarakhand's civil code of 2024 made it current again.",
   concepts: [
-    { t: "What it directs", d: "The State shall endeavour to secure for the citizens a uniform civil code throughout the territory of India." },
-    { t: "What a civil code covers", d: "Marriage, divorce, maintenance, inheritance, adoption and succession. Separate personal laws for Hindus, Muslims, Christians and Parsis now govern these matters." },
-    { t: "Criminal law is already uniform", d: "The point is worth noting. India has one criminal law for everyone. Only personal law differs by community." },
-    { t: "The Court has urged it repeatedly", d: "In Shah Bano (1985), Sarla Mudgal (1995) and John Vallamattom (2003) the Supreme Court expressed regret that Article 44 remained a dead letter. None of those observations created any obligation." },
+    { t: "What a civil code covers", d: "Marriage, divorce, maintenance, inheritance, adoption and succession." },
+    { t: "Criminal law is already uniform", d: "India has one criminal law for everyone. Only personal law differs by community." },
+    { t: "The Court has urged it repeatedly", d: "Shah Bano (1985), Sarla Mudgal (1995) and John Vallamattom (2003) all regretted the delay. None of them created an obligation." },
     { t: "Where it already exists", d: "Goa has had a common civil code since Portuguese rule. Uttarakhand enacted a Uniform Civil Code in 2024, the first State to do so after Independence." },
     { t: "The Law Commission's view", d: "In 2018 the 21st Law Commission said a uniform civil code was neither necessary nor desirable at that stage, and suggested reforming discriminatory parts of each personal law instead." }
   ],
@@ -681,10 +678,9 @@ preamble: {
   says: "Article 45 now directs the State to provide early childhood care and education for all children until they complete six years.",
   why: "Article 45 matters mainly for what it used to say. The 86th Amendment rewrote it completely, and candidates still answer with the old text.",
   concepts: [
-    { t: "What it says now", d: "The State shall endeavour to provide early childhood care and education for all children until they complete the age of six years." },
     { t: "What it said before 2002", d: "The State shall endeavour to provide free and compulsory education for all children until they complete fourteen years, within ten years of the Constitution commencing." },
-    { t: "Why it changed", d: "The 86th Amendment moved the six-to-fourteen part out of Part IV and into Part III as Article 21A, making it enforceable. What was left below age six stayed as a directive." },
-    { t: "The ten-year deadline", d: "The original article set a deadline of 1960. Article 45 was the only Directive Principle with a time limit, and the deadline was missed by more than forty years." }
+    { t: "Why it changed", d: "The 86th Amendment moved ages six to fourteen into Article 21A, where the right is enforceable." },
+    { t: "The ten-year deadline", d: "The original deadline was 1960. Article 45 was the only directive principle with a time limit." }
   ],
   trap: "Article 45 today covers only children below six.\n\nIf a question asks which article provides free and compulsory education for children aged six to fourteen, the answer is 21A, not 45. The old wording is still widely quoted in older material."
 },
@@ -695,10 +691,8 @@ preamble: {
   says: "Article 46 directs the State to promote the educational and economic interests of the weaker sections, especially the Scheduled Castes and Scheduled Tribes, and to protect them from injustice and exploitation.",
   why: "Article 46 supplies the policy reason quoted in almost every argument about reservation.",
   concepts: [
-    { t: "What it directs", d: "The State shall promote with special care the educational and economic interests of the weaker sections of the people, and in particular of the Scheduled Castes and Scheduled Tribes." },
-    { t: "And protect them", d: "Article 46 also directs the State to protect them from social injustice and all forms of exploitation." },
     { t: "\"Weaker sections\" is wider than \"backward classes\"", d: "Articles 15(4) and 16(4) speak of socially and educationally backward classes. Article 46 speaks of weaker sections generally, which can include groups outside the formal backward-class lists." },
-    { t: "How it is used", d: "Courts cite Article 46 to justify reservation and welfare schemes as constitutionally desirable, even though the directive itself cannot be enforced." }
+    { t: "How it is used", d: "Courts cite it to show that reservation and welfare schemes are constitutionally desirable." }
   ],
   trap: "Article 46 does not create any quota. Article 46 is a directive to promote interests and protect from exploitation.\n\nThe power to reserve comes from Articles 15(4), 16(4) and 335. Article 46 supplies the reason, not the power."
 },
@@ -727,9 +721,8 @@ preamble: {
   says: "Article 50 directs the State to separate the judiciary from the executive in the public services of the State.",
   why: "Candidates tend to file the separation of powers under Fundamental Rights. Article 50 shows that it sits among the Directive Principles instead.",
   concepts: [
-    { t: "What it directs", d: "The State shall take steps to separate the judiciary from the executive in the public services of the State." },
-    { t: "What the problem was", d: "Before independence, a District Magistrate was both an administrator and a criminal judge. The same officer who ordered an arrest could try the case." },
-    { t: "How it was implemented", d: "The Criminal Procedure Code, 1973 split magistrates into two: judicial magistrates under the High Court, who try cases, and executive magistrates under the State government, who handle administrative functions." },
+    { t: "What the problem was", d: "A District Magistrate could both order an arrest and try the case." },
+    { t: "How it was implemented", d: "The Code of Criminal Procedure, 1973 created judicial magistrates under the High Court and executive magistrates under the government." },
     { t: "Article 50 is only a directive", d: "No court can enforce Article 50. But it is quoted constantly in arguments about judicial independence, and the basic structure doctrine protects independence separately." }
   ],
   seen: [
