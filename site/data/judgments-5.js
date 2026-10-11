@@ -27,40 +27,47 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   status: 'partly',
   tags: ['Article 16(4)', 'OBC reservation', 'Creamy layer'],
   judges: 'M.H. Kania CJI, M.N. Venkatachaliah, S. Ratnavel Pandian, T.K. Thommen, A.M. Ahmadi, Kuldip Singh, P.B. Sawant, R.M. Sahai and B.P. Jeevan Reddy',
-  summary: '27 per cent reservation for backward classes in central government jobs was upheld. The creamy layer must be excluded, total reservation should not normally cross 50 per cent, and there can be no reservation in promotions.',
+  summary: 'Reserving 27 per cent of central government jobs for backward classes was upheld. But the better-off among them, the creamy layer, must be left out, total reservation should not normally cross 50 per cent, and there can be no reservation in promotions.',
+  background: [
+    'Article 16(1) promises equal opportunity in government jobs. Article 16(4) lets the State reserve jobs for any backward class that is not adequately represented in its services.',
+    'From the start, jobs were reserved for the Scheduled Castes and Scheduled Tribes. Other backward classes, now called the Other Backward Classes (OBCs), had no reservation in central government jobs.',
+    'In M.R. Balaji (1962), the Court had said that reservations should generally stay below 50 per cent.',
+    'In 1979 the government set up the Second Backward Classes Commission, headed by B.P. Mandal, to identify these classes and suggest measures for them.'
+  ],
   question: [
     'Was the order reserving 27 per cent of central government posts for socially and educationally backward classes valid under Article 16(4)?',
-    'Can caste be used to identify a backward class? Can economic criteria alone be used?',
-    'Is there a limit on how much can be reserved? Does reservation extend to promotions?'
+    'Can caste be used to identify a backward class? Can income or wealth alone be used?',
+    'Is there a limit on how much can be reserved? Does reservation reach promotions?'
   ],
   facts: [
-    'The Second Backward Classes Commission, headed by B.P. Mandal, reported in 1980. It recommended reservation for socially and educationally backward classes.',
-    'On 13 August 1990 the Government of India issued an office memorandum. It reserved 27 per cent of vacancies in civil posts under the Government of India for these classes.',
+    'The Mandal Commission reported in 1980, and recommended reservation for socially and educationally backward classes.',
+    'On 13 August 1990 the Government of India issued an office memorandum, a formal government order. The order reserved 27 per cent of vacancies in civil posts under the Government of India for these classes.',
     'The order led to protests across the country and was challenged in the Supreme Court.',
-    'On 25 September 1991 a new memorandum gave preference to the poorer sections within the backward classes. It also reserved another 10 per cent for other economically backward sections who were not covered by any reservation.',
+    'On 25 September 1991 a new memorandum gave preference to the poorer sections within the backward classes. The new memorandum also reserved another 10 per cent for economically backward people who were not covered by any reservation.',
     'A bench of nine judges heard the challenge.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority (6 judges): Justice B.P. Jeevan Reddy for himself, Chief Justice Kania and Justices Venkatachaliah and Ahmadi, with Justices Pandian and Sawant concurring', points: [
+    { kind: 'majority', label: 'The majority of six: Justice B.P. Jeevan Reddy for himself, Chief Justice Kania and Justices Venkatachaliah and Ahmadi, with Justices Pandian and Sawant agreeing', points: [
       'The 27 per cent reservation for socially and educationally backward classes is valid.',
-      'Caste can be used to identify a backward class. Backwardness under Article 16(4) is mainly social, and economic criteria alone cannot identify a backward class.',
-      'The creamy layer, the advanced members of a backward class, must be excluded from reservation.',
+      'Caste can be used to identify a backward class. Backwardness under Article 16(4) is mainly social, so income or wealth alone cannot identify a backward class.',
+      'The creamy layer, meaning the advanced members of a backward class, must be left out of reservation.',
       'Reservation should not normally exceed 50 per cent, except in extraordinary situations.',
       'Article 16(4) does not allow reservation in promotions.',
-      'The extra 10 per cent reservation for economically backward sections of the other classes was struck down.',
-      'Backward classes may be divided into backward and more backward classes. A permanent body was to be set up at the Centre and in the States, within four months, to examine requests for inclusion in and exclusion from the lists.'
+      'The extra 10 per cent for economically backward people of other classes was struck down.',
+      'Backward classes may be divided into backward and more backward classes. A permanent body was to be set up at the Centre and in the States, within four months, to examine requests to add names to the lists or remove them.'
     ] },
-    { kind: 'dissent', label: 'Dissent (3 judges): Justices Thommen, Kuldip Singh and Sahai', points: [
+    { kind: 'dissent', label: 'The three in dissent: Justices Thommen, Kuldip Singh and Sahai', points: [
       'Three judges dissented, each in a separate opinion.'
     ] }
   ],
   principles: [
-    'Caste can be a starting point for identifying backward classes. The test is social and educational backwardness.',
-    'Reservation has limits. The creamy layer is excluded, and total reservation should normally stay within 50 per cent.',
-    'Article 16(4) is not an exception to Article 16(1). It is a way of achieving the equality that Article 16(1) promises.'
+    'Caste can be a starting point for identifying backward classes. The real test is social and educational backwardness.',
+    'Reservation has limits. The creamy layer is left out, and total reservation should normally stay within 50 per cent.',
+    'Article 16(4) is not an exception to Article 16(1). Article 16(4) is a way of reaching the equality that Article 16(1) promises.',
+    'So the Court accepted reservation for the backward classes, but fenced it in, so that it helps those who need it most and does not swallow equal opportunity.'
   ],
   legacy: [
-    'The Government set criteria to identify the creamy layer. The income limit has been raised several times since.',
+    'The government set criteria to identify the creamy layer. The income limit has been raised several times since.',
     'Parliament set up the National Commission for Backward Classes by a law in 1993. The 102nd Amendment (2018) made it a constitutional body under Article 338B.',
     'The 77th Amendment (1995) added Article 16(4A) to allow reservation in promotion for the Scheduled Castes and Scheduled Tribes.',
     'In Janhit Abhiyan (2022), the Court upheld 10 per cent reservation for economically weaker sections and held that the 50 per cent ceiling is not inflexible.'
@@ -78,35 +85,42 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Upheld, 5:0',
   tags: ['Article 15(5)', 'OBC reservation', 'Creamy layer'],
   judges: 'K.G. Balakrishnan CJI, Arijit Pasayat, C.K. Thakker, R.V. Raveendran and Dalveer Bhandari',
-  summary: 'The 93rd Amendment and 27 per cent reservation for Other Backward Classes in central educational institutions were upheld for State-run and aided institutions. The creamy layer must be excluded.',
+  summary: 'The Court upheld the 93rd Amendment and the 27 per cent reservation for Other Backward Classes in central colleges and universities, for those run or aided by the State. The creamy layer must be left out.',
+  background: [
+    'The First Amendment (1951) added Article 15(4). The clause lets the State make special provisions for socially and educationally backward classes and for the Scheduled Castes and Scheduled Tribes.',
+    'In Indra Sawhney (1992), the Court upheld 27 per cent reservation for the Other Backward Classes (OBCs) in central government jobs, but left out their better-off members, the creamy layer.',
+    'In P.A. Inamdar (2005), seven judges held that the State could not force reservation on private colleges that take no government money, called unaided colleges.',
+    'Parliament answered with the 93rd Amendment (2005), which added Article 15(5).'
+  ],
   question: [
-    'Is the Constitution (Ninety-third Amendment) Act, 2005, which added Article 15(5), valid?',
+    'Is the 93rd Amendment (2005), which added Article 15(5), valid?',
     'Is the Central Educational Institutions (Reservation in Admission) Act, 2006, which reserved 27 per cent of seats for Other Backward Classes, valid?',
-    'Must the creamy layer be excluded from this reservation?'
+    'Must the creamy layer be left out of this reservation?'
   ],
   facts: [
-    'The 93rd Amendment (2005) added Article 15(5). It allows special provisions for socially and educationally backward classes and for the Scheduled Castes and Scheduled Tribes in admission to educational institutions, including private institutions, but not minority institutions.',
-    'Parliament then passed the Central Educational Institutions (Reservation in Admission) Act, 2006. It reserved 27 per cent of seats in central educational institutions for Other Backward Classes.',
+    'Article 15(5) allows special provisions for backward classes and for the Scheduled Castes and Scheduled Tribes in admission to educational institutions. The clause covers private institutions too, but not minority institutions.',
+    'Parliament then passed the Central Educational Institutions (Reservation in Admission) Act, 2006. The Act reserved 27 per cent of seats in central educational institutions, such as the IITs and central universities, for Other Backward Classes.',
     'Ashoka Kumar Thakur and others challenged the Amendment and the Act. They argued that caste-based reservation in higher education destroyed equality.'
   ],
   held: [
     { kind: 'majority', label: 'Upheld by all five judges, in four opinions', points: [
-      'The 93rd Amendment is valid for institutions maintained by the State and for aided institutions.',
+      'The 93rd Amendment is valid for institutions run by the State and for institutions that receive State aid.',
       'The 2006 Act and the 27 per cent reservation for Other Backward Classes are valid.',
-      'The creamy layer must be excluded from the Other Backward Classes who get the benefit.',
+      'The creamy layer must be left out of the Other Backward Classes who get the benefit.',
       'Caste can be a starting point for identifying socially and educationally backward classes.',
-      'The majority did not decide whether the Amendment is valid for private unaided institutions. That question was left open.'
+      'The majority did not decide whether the Amendment is valid for private unaided institutions. The question was left open.'
     ] },
-    { kind: 'concurring', label: 'Separate view (Justice Dalveer Bhandari)', points: [
-      'Extending reservation to private unaided institutions would destroy their autonomy and violate the basic structure. So the Amendment is invalid to that extent.'
+    { kind: 'concurring', label: 'Justice Dalveer Bhandari, in a separate view', points: [
+      'Extending reservation to private unaided institutions would destroy their freedom to run themselves and break the basic structure. So the Amendment is invalid to that extent.'
     ] }
   ],
   principles: [
-    'Article 15(5) is an enabling provision for special measures in education for backward classes.',
-    'The creamy layer rule applies to reservation for Other Backward Classes in education, as it does in public jobs.'
+    'Article 15(5) only enables the State to make special measures in education for backward classes. The clause does not force it to.',
+    'The creamy layer rule applies to reservation for Other Backward Classes in education, as it does in government jobs.',
+    'So OBC reservation moved from jobs into higher education, with the same limit: the better-off among the OBCs do not get it.'
   ],
   legacy: [
-    'In Pramati Educational and Cultural Trust v. Union of India (2014), a five-judge bench upheld Article 15(5) for private unaided institutions as well.',
+    'In Pramati Educational and Cultural Trust v. Union of India (2014), five judges upheld Article 15(5) for private unaided institutions as well.',
     'Reservation for Other Backward Classes in central educational institutions continues under the 2006 Act.'
   ],
   source: 'https://indiankanoon.org/doc/1219385/'
@@ -121,38 +135,44 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Majority 3:2',
   tags: ['103rd Amendment', 'EWS reservation', 'Basic structure'],
   judges: 'U.U. Lalit CJI, Dinesh Maheshwari, S. Ravindra Bhat, Bela M. Trivedi and J.B. Pardiwala',
-  summary: 'The 103rd Amendment was upheld. Reservation of up to 10 per cent for economically weaker sections, which excludes classes that already get reservation, does not violate the basic structure.',
+  summary: 'By 3 votes to 2, the Court upheld the 103rd Amendment. Reserving up to 10 per cent for economically weaker sections, while leaving out classes that already have reservation, does not break the basic structure.',
+  background: [
+    'Until 2019, reservation in India rested on social and educational backwardness. The Scheduled Castes, the Scheduled Tribes and the Other Backward Classes (OBCs) were its main beneficiaries.',
+    'In Indra Sawhney (1992), the Court struck down a 10 per cent reservation based only on income. The Court also said that total reservation should not normally cross 50 per cent.',
+    'The basic structure is the set of core features that Parliament cannot destroy, even by amending the Constitution. Equality is one of them.'
+  ],
   question: [
-    'Does the 103rd Amendment violate the basic structure by allowing reservation on economic criteria alone?',
-    'Does it violate the basic structure by allowing such reservation in private unaided educational institutions?',
-    'Does it violate the basic structure by excluding the Scheduled Castes, Scheduled Tribes and Other Backward Classes from this reservation?'
+    'Does the 103rd Amendment break the basic structure by allowing reservation on economic grounds alone?',
+    'Does it break the basic structure by allowing such reservation in private colleges that take no government money?',
+    'Does it break the basic structure by leaving out the Scheduled Castes, Scheduled Tribes and Other Backward Classes from this reservation?'
   ],
   facts: [
-    'The Constitution (One Hundred and Third Amendment) Act, 2019 added Articles 15(6) and 16(6).',
-    'They allow reservation of up to 10 per cent in education and public jobs for economically weaker sections of citizens. This is in addition to existing reservations.',
-    'Classes that already get reservation under Articles 15(4), 15(5) and 16(4), which include the Scheduled Castes, Scheduled Tribes and Other Backward Classes, are excluded.',
-    'Janhit Abhiyan and others challenged the Amendment. They argued that reservation cannot rest on economic criteria alone, and that the extra 10 per cent breaks the 50 per cent ceiling set in Indra Sawhney.'
+    'The 103rd Amendment (2019) added Articles 15(6) and 16(6).',
+    'The new clauses allow reservation of up to 10 per cent in education and government jobs for economically weaker sections (EWS) of citizens, on top of the existing reservations. The central government set the main test as a family income below Rs. 8 lakh a year.',
+    'Classes that already get reservation under Articles 15(4), 15(5) and 16(4) are left out. They include the Scheduled Castes, the Scheduled Tribes and the Other Backward Classes.',
+    'Janhit Abhiyan and others challenged the Amendment. They argued that reservation cannot rest on income alone, and that the extra 10 per cent breaks the 50 per cent ceiling set in Indra Sawhney.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority (3 judges): Justices Dinesh Maheshwari, Bela M. Trivedi and J.B. Pardiwala, in separate opinions', points: [
-      'Reservation based only on economic criteria does not violate the basic structure.',
-      'Allowing such reservation in private unaided educational institutions does not violate the basic structure.',
-      'Excluding the classes covered by Articles 15(4), 15(5) and 16(4) balances non-discrimination with compensatory discrimination. It does not violate the equality code.',
-      'The 50 per cent ceiling is not inflexible. So the extra 10 per cent does not violate the basic structure.',
-      'The majority judges also suggested that reservation should not go on without a time limit and should be revisited.'
+    { kind: 'majority', label: 'The majority of three: Justices Dinesh Maheshwari, Bela M. Trivedi and J.B. Pardiwala, in separate opinions', points: [
+      'Reservation based only on economic grounds does not break the basic structure.',
+      'Allowing such reservation in private unaided colleges does not break the basic structure.',
+      'Leaving out the classes covered by Articles 15(4), 15(5) and 16(4) is a fair balance. The excluded classes already get their own special help to make up for past disadvantage, and the EWS quota is for the poor among the rest.',
+      'The 50 per cent ceiling is not inflexible. So the extra 10 per cent does not break the basic structure.',
+      'The majority judges also suggested that reservation should not go on without any time limit, and should be looked at again.'
     ] },
-    { kind: 'dissent', label: 'Dissent (Justice S. Ravindra Bhat, for himself and Chief Justice U.U. Lalit)', points: [
-      'Economic criteria can be a valid basis for reservation.',
-      'But excluding the Scheduled Castes, Scheduled Tribes and Other Backward Classes from the benefit violates the equality code, which is part of the basic structure. So the Amendment is invalid.'
+    { kind: 'dissent', label: 'Justice S. Ravindra Bhat, for himself and Chief Justice U.U. Lalit, in dissent', points: [
+      'Economic weakness can be a valid basis for reservation.',
+      'But leaving out the Scheduled Castes, Scheduled Tribes and Other Backward Classes, many of whom are among the poorest, breaks the equality code, which is part of the basic structure. So the Amendment is invalid.'
     ] }
   ],
   principles: [
-    'Economic weakness alone can be a ground for special provisions in education and public jobs.',
-    'The 50 per cent ceiling set in Indra Sawhney is not inflexible.'
+    'Economic weakness alone can be a ground for special provisions in education and government jobs.',
+    'The 50 per cent ceiling set in Indra Sawhney is not inflexible.',
+    'So reservation in India now has two bases. Social and educational backwardness remains one, and poverty among those without other reservation is now the second.'
   ],
   legacy: [
     'Economically weaker sections have up to 10 per cent reservation in central government jobs and central educational institutions.',
-    'With this reservation, the total reserved share in central institutions is now above 50 per cent.'
+    'With the EWS quota added, the total reserved share in central institutions is now above 50 per cent.'
   ],
   source: 'https://indiankanoon.org/doc/98959833/'
 }
