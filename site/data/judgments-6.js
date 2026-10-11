@@ -191,8 +191,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Speech falls into three kinds: discussion, advocacy and incitement. Only incitement can be limited.',
-    'A law that limits speech must be clear. A vague law that frightens people out of speaking is void.',
+    'A vague law on speech harms even people who are never charged, because they stay silent to be safe. Courts call this the chilling effect.',
     'So people may argue for any cause online, however unpopular. The law can step in only when speech incites harm.'
   ],
   legacy: [
@@ -241,8 +240,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The internet is a way of using fundamental rights, so limits on it must meet the tests in Article 19.',
-    'Orders that limit fundamental rights must be published, give reasons and be proportionate.',
+    'Any limit on a fundamental right must be proportionate. The State must choose the least restrictive measure that will work.',
     'So the government may cut the internet in an emergency, but only for a limited time, on the record, and under regular review.'
   ],
   legacy: [
@@ -290,9 +288,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Article 20(3) protects against forced testimony, meaning what a person is made to say from their own knowledge. Article 20(3) does not stop the police from collecting physical evidence.',
-    'Fingerprints and handwriting samples can be taken from an accused.',
-    'So the line runs between the mind and the body. The police may take a person\'s fingerprints, but not force out what the person knows.'
+    'So the line runs between the mind and the body. The police may take a person\'s fingerprints, but may not force out what the person knows.'
   ],
   legacy: [
     'In Selvi (2010), the Court held that narcoanalysis, lie detector and brain mapping tests draw out testimony, so they cannot be forced on anyone.',
@@ -337,7 +333,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The right against self-incrimination protects what a person knows in the mind, not only what the person says aloud.',
     'Mental privacy is part of personal liberty under Article 21.',
     'So the State may take a suspect\'s fingerprints, but it may not reach into the suspect\'s mind without consent.'
   ],
@@ -378,8 +373,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Article 20(2) bars a second prosecution only after an earlier prosecution and punishment by a court or a judicial tribunal.',
-    'Departmental or administrative action does not bring in the protection.',
+    'Article 20(2) is narrower than the rule against double jeopardy in some other countries. A second trial is barred only after a first prosecution has ended in punishment.',
     'So a person can lose smuggled goods to the customs and still face a criminal trial for the smuggling.'
   ],
   legacy: [
@@ -426,9 +420,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Freedom of speech includes the freedom to stay silent.',
-    'A fundamental right can be limited only by law, not by an official\'s instructions.',
-    'Courts do not ask whether a religious belief is reasonable, only whether it is sincerely held.',
+    'A right can be limited only by a law. An official\'s circular, however well meant, is not enough.',
     'So respect for the anthem can be shown by standing in silence. The State cannot force children to sing against their faith.'
   ],
   legacy: [

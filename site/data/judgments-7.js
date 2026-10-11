@@ -56,8 +56,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'In 1950 the Court read Article 21 narrowly. A procedure laid down by a valid law was enough, fair or not.',
-    'The fundamental rights were read as separate compartments. A law that took away personal liberty was tested only under Articles 21 and 22.',
+    'The case stood for reading each fundamental right on its own, as if each covered a separate field. Later cases rejected that idea.',
     'So the State could detain a person by following any procedure that a law set out. Twenty-eight years later, Maneka Gandhi turned this round.'
   ],
   legacy: [
@@ -107,8 +106,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'Procedure under Article 21 must be fair, just and reasonable.',
-    'Articles 14, 19 and 21 are read together. The three are often called the "golden triangle".',
+    'Articles 14, 19 and 21 together are often called the "golden triangle".',
     'Natural justice, such as the right to be heard, can be read into a law that says nothing about it.',
     'So after 1978 the question is not only whether a law allows the State to take away liberty. The question is also whether the law and its procedure are fair.'
   ],
@@ -155,8 +153,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The right to a speedy trial is a fundamental right under Article 21.',
-    'Free legal aid for those who cannot afford a lawyer is part of a fair procedure.',
+    'A shortage of money is no defence when a fundamental right is at stake. The State must find the means to protect the right.',
     'So a poor person cannot be left in jail for years simply because the system is slow. The delay itself breaks Article 21.'
   ],
   legacy: [
@@ -205,9 +202,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     ] }
   ],
   principles: [
-    'The right to livelihood is part of the right to life under Article 21.',
-    'Fundamental rights cannot be given up.',
-    'Even a lawful eviction must follow a fair procedure.',
+    'Even a lawful power to evict must be used by a fair procedure.',
     'So the pavement dwellers had no right to stay on the pavement for ever. But the State could not throw them out without notice, a hearing and a thought for where they would go.'
   ],
   legacy: [
