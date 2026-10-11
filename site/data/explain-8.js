@@ -66,10 +66,9 @@ partXXII: {
   catch: "Clause (29A), added by the 46th Amendment (1982), stretched \"sale of goods\" to cover hire-purchase, works contracts and serving food in a restaurant. The one definition produced a whole branch of tax law."
 },
 "367": {
-  simple: "The General Clauses Act, 1897 applies to the interpretation of the Constitution. References to a law in force include pre-Constitution law. References to a State include a Union territory for certain purposes.",
-  catch: "In August 2019 this modest interpretation article did heavy work.\n\n" +
-    "C.O. 272 used it to add a clause reading 'Constituent Assembly' in Article 370(3) as 'Legislative Assembly'.\n\n" +
-    "In Re Article 370 (2023) held that this could not have been done through Article 367, but upheld the outcome under Article 370(3) directly."
+  simple: "The General Clauses Act, 1897 applies to reading the Constitution. A reference to a law in force includes a law from before the Constitution. For some purposes, a reference to a State includes a Union territory.",
+  catch: "In August 2019 this modest article was put to heavy use. A presidential order used it to read \"Constituent Assembly\" in Article 370(3) as \"Legislative Assembly\".\n\n" +
+    "In Re Article 370 (2023) held that Article 367 could not be used that way. But the Court upheld the result directly under Article 370."
 },
 
 /* ---------- Part XX ---------- */
@@ -86,8 +85,8 @@ partXXII: {
 /* ---------- Part XXI ---------- */
 
 "369": {
-  simple: "This article gave Parliament temporary power, for five years from 1950, to legislate on certain State List subjects as if they were in the Concurrent List.",
-  catch: "Wholly spent. The five-year period ended in 1955."
+  simple: "Article 369 gave Parliament a temporary power, for five years from 1950, to make laws on certain State List subjects as if they were in the Concurrent List.",
+  catch: "The article is spent. The five years ended in 1955."
 },
 "370": {
   simple: "Article 370 was a temporary provision for Jammu and Kashmir.\n\n" +
@@ -97,10 +96,10 @@ partXXII: {
     "In Re Article 370 (2023), five judges upheld all of it. They held that Jammu and Kashmir kept no internal sovereignty after accession, and that Article 370 was always temporary. The Court directed that statehood be restored and elections held."
 },
 "371": {
-  simple: "The Governors of Maharashtra and Gujarat have a special responsibility to establish development boards.\n\n" +
-    "For Maharashtra these are Vidarbha, Marathwada and the rest of the State. For Gujarat they are Saurashtra, Kutch and the rest. The article requires equitable allocation of development funds, and equitable arrangements for technical education and employment.",
-  catch: "This is the oldest of the special provisions, and the model for the rest.\n\n" +
-    "The development boards for Vidarbha and Marathwada were constituted only in 1994 and lapsed in 2020. Their revival is a live political demand."
+  simple: "The Governors of Maharashtra and Gujarat have a special responsibility to set up development boards.\n\n" +
+    "In Maharashtra the boards are for Vidarbha, Marathwada and the rest of the State. In Gujarat they are for Saurashtra, Kutch and the rest. Development funds, technical education and jobs must be shared fairly between the regions.",
+  catch: "Article 371 is the oldest of the special provisions, and the model for those that followed.\n\n" +
+    "The Maharashtra boards were set up only in 1994, and renewing them has been a recurring political issue."
 },
 "371A": {
   simple: "No Act of Parliament applies to Nagaland on four subjects unless the Nagaland Assembly agrees. They are Naga religious and social practices, Naga customary law and procedure, justice under customary law, and the ownership and transfer of land and its resources.\n\n" +
@@ -149,53 +148,82 @@ partXXII: {
     "Article 371D does something similar for Andhra Pradesh and Telangana. What Article 371J adds is a package: local reservation together with a development board and a duty of fair funding."
 },
 "372": {
-  simple: "All laws in force immediately before the Constitution continue, until altered, repealed or amended by a competent legislature.\n\n" +
-    "For three years, the President could adapt them to bring them into accord with the Constitution.",
-  catch: "This is why the Indian Penal Code of 1860, the Evidence Act of 1872 and the Contract Act of 1872 continued seamlessly.\n\n" +
-    "The Constitution changed the framework without emptying the statute book."
+  simple: "Every law in force just before the Constitution began continues until a competent legislature changes or repeals it.\n\n" +
+    "For three years, the President could adapt those laws to fit the Constitution.",
+  catch: "So the Indian Penal Code of 1860, the Evidence Act of 1872 and the Contract Act of 1872 carried on without a break. The Constitution changed the framework without emptying the statute book."
 },
 "372A": {
   simple: "This article gave the President power, until 1957, to adapt laws to bring them into accord with the Constitution as amended by the 7th Amendment.",
   catch: "Added by the 7th Amendment itself, to handle the enormous statutory consequences of States reorganisation."
 },
 "373": {
-  simple: "Until Parliament made a preventive detention law, the President could make orders on preventive detention as if the pre-Constitution provisions applied.",
-  catch: "Spent once Parliament enacted the Preventive Detention Act in 1950. It is a reminder that preventive detention was contemplated from the first day."
+  simple: "Until Parliament made a law on preventive detention, the President could make orders on it under the rules from before the Constitution.",
+  catch: "The article was spent once Parliament passed the Preventive Detention Act in 1950. Still, it shows that preventive detention was planned from the first day."
 },
 "374": {
-  simple: "Judges of the Federal Court became judges of the Supreme Court. Pending appeals were transferred to it. Appeals pending before the King in Council were disposed of as Parliament provided.",
-  catch: "This is the article that closed the Privy Council chapter. Pending appeals to the King in Council were transferred out, and the Federal Court's judges simply carried on as the Supreme Court's."
+  simple: "The judges of the Federal Court became judges of the Supreme Court, and cases pending there moved to the Supreme Court. Appeals pending before the Privy Council also passed to the Supreme Court.",
+  catch: "Article 374 closed the chapter of appeals to the Privy Council in London. The Federal Court's judges simply carried on as judges of the Supreme Court."
 },
 "375": {
-  simple: "Courts, authorities and officers continue to function, subject to the Constitution.",
-  catch: "A continuity clause. Without it, every court order, licence and appointment made before 26 January 1950 would have been open to challenge."
+  simple: "Courts, authorities and officers carry on working, subject to the Constitution.",
+  catch: "Without Article 375, every court order, licence and appointment made before 26 January 1950 would have been open to challenge."
 },
 "376": {
-  simple: "Judges of the High Courts of the Provinces became judges of the corresponding High Courts of the States.",
-  catch: "The same continuity for the High Courts. It is why several High Courts date their establishment to the nineteenth century rather than to 1950."
+  simple: "The judges of the High Courts of the Provinces became judges of the matching High Courts of the States.",
+  catch: "The High Courts carried on without a break. So several High Courts date their founding to the nineteenth century, not to 1950."
 },
 "377": {
   simple: "The Auditor-General of India became the first Comptroller and Auditor-General under the Constitution.",
-  catch: "Continuity for the audit office, which is why the CAG's institutional history runs unbroken from 1858."
+  catch: "So the audit office's history runs unbroken from colonial times."
 },
 "378": {
-  simple: "Members of the Public Service Commissions of the Provinces, and of the Federal Public Service Commission, continued in their new constitutional offices.",
+  simple: "Members of the Public Service Commissions of the Provinces, and of the Federal Public Service Commission, carried on in their new offices under the Constitution.",
   catch: "The Federal Public Service Commission became the Union Public Service Commission without a break."
 },
 "378A": {
   simple: "This article made special provision for the duration of the first Andhra Pradesh Legislative Assembly.",
   catch: "A one-off provision shortening that Assembly's term, so its elections could be synchronised after the 1956 reorganisation."
 },
-"379": { simple: "This article dealt with the provisional Parliament and its Speaker and Deputy Speaker.", catch: "Omitted by the 7th Amendment in 1956, long after the first elected Parliament had replaced the Constituent Assembly acting as the provisional Parliament." },
-"380": { simple: "This article dealt with the provisional President.", catch: "Omitted by the 7th Amendment in 1956." },
-"381": { simple: "This article dealt with the Council of Ministers of the President.", catch: "Omitted by the 7th Amendment in 1956." },
-"382": { simple: "This article dealt with the provisional legislatures for the Provinces.", catch: "Omitted by the 7th Amendment in 1956." },
-"383": { simple: "This article dealt with the Governors of Provinces.", catch: "Omitted by the 7th Amendment in 1956." },
-"384": { simple: "This article dealt with the Councils of Ministers of the Governors.", catch: "Omitted by the 7th Amendment in 1956." },
-"385": { simple: "This article dealt with the provisional legislatures of the States in Part B of the First Schedule.", catch: "Omitted by the 7th Amendment in 1956." },
-"386": { simple: "This article dealt with the Councils of Ministers of the Part B States.", catch: "Omitted by the 7th Amendment in 1956." },
-"387": { simple: "This article made special provision about the duration of the Legislative Assemblies of certain States.", catch: "Omitted by the 7th Amendment in 1956." },
-"388": { simple: "This article dealt with the filling of casual vacancies in the provisional Parliament and legislatures.", catch: "Omitted by the 7th Amendment in 1956." },
+"379": {
+  simple: "Article 379 dealt with the provisional Parliament and its Speaker and Deputy Speaker.",
+  catch: "The Constituent Assembly served as the provisional Parliament until the first elected Parliament met in 1952. The 7th Amendment omitted the article in 1956."
+},
+"380": {
+  simple: "Article 380 dealt with the provisional President.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
+"381": {
+  simple: "Article 381 dealt with the President's Council of Ministers in the provisional period.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
+"382": {
+  simple: "Article 382 dealt with the provisional legislatures of the Provinces.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
+"383": {
+  simple: "Article 383 dealt with the Governors of the Provinces in the provisional period.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
+"384": {
+  simple: "Article 384 dealt with the Governors' Councils of Ministers in the provisional period.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
+"385": {
+  simple: "Article 385 dealt with the provisional legislatures of the former princely States, listed in Part B of the First Schedule.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
+"386": {
+  simple: "Article 386 dealt with the Councils of Ministers of the former princely States in the provisional period.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
+"387": {
+  simple: "Article 387 made a special rule on how long the Legislative Assemblies of certain States would last.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
+"388": {
+  simple: "Article 388 dealt with filling casual vacancies in the provisional Parliament and legislatures.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
 "389": { simple: "This article dealt with Bills pending in the Dominion Legislature and the Provincial legislatures.", catch: "Omitted by the 7th Amendment in 1956." },
 "390": { simple: "This article dealt with money received or raised, and expenditure incurred, between the commencement of the Constitution and 31 March 1950.", catch: "Omitted by the 7th Amendment in 1956." },
 "391": { simple: "This article gave the President power to amend the First and Fourth Schedules in certain contingencies.", catch: "Omitted by the 7th Amendment in 1956." },
