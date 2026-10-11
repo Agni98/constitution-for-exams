@@ -182,13 +182,14 @@ partXIII: {
   catch: "The 80th Amendment omitted it in 2000, when all Union taxes were pooled for sharing under a rewritten Article 270."
 },
 "273": {
-  simple: "Grants are paid in lieu of the export duty on jute and jute products to Assam, Bihar, Odisha and West Bengal, charged on the Consolidated Fund of India.",
-  catch: "This is a settlement dating from Partition, which cut the jute-growing districts off from the mills. It is one of very few grants named in the Constitution itself."
+  simple: "Assam, Bihar, Odisha and West Bengal received grants in place of a share of the export duty on jute and jute products. The grants were charged on the Consolidated Fund of India.",
+  catch: "The grants were a settlement after Partition, which cut the jute-growing districts off from the mills. They were to last only while the duty lasted, and for at most ten years from 1950.\n\n" +
+    "Article 273 is one of very few grants named in the Constitution itself."
 },
 "274": {
-  simple: "A Bill affecting taxation in which States are interested cannot be introduced without the President's prior recommendation.\n\n" +
-    "That covers changing the rate of a tax assigned to States, altering the meaning of 'agricultural income', and affecting the principles of distribution.",
-  catch: "The President's recommendation here is the Union government's. The safeguard for the States is procedural, not substantive."
+  simple: "A Bill that affects taxes in which the States have an interest cannot be introduced without the President's recommendation.\n\n" +
+    "The rule covers changing the rate of a tax handed to the States, changing the meaning of \"agricultural income\", and changing the principles for sharing taxes.",
+  catch: "The President recommends on the Union government's advice. So the safeguard for the States is one of procedure, not of substance."
 },
 "275": {
   simple: "Parliament may give grants-in-aid to States that need help, charged on the Consolidated Fund of India. The grants include special grants for the welfare of Scheduled Tribes and for better administration of Scheduled Areas.",
@@ -196,21 +197,20 @@ partXIII: {
     "Most centrally sponsored schemes run on Article 282 grants. So the Union shapes priorities on State subjects through the discretionary route, and the States object."
 },
 "276": {
-  simple: "States and local authorities may tax professions, trades, callings and employments, up to ₹2,500 per person per year.",
-  catch: "The ceiling was ₹250 until the 60th Amendment raised it in 1988. It has not been revised since, so professional tax has become a trivial revenue source."
+  simple: "States and local bodies may tax professions, trades, callings and employments, up to ₹2,500 per person a year.",
+  catch: "The ceiling was ₹250 until the 60th Amendment raised it in 1988. The limit has not changed since, so the professional tax now raises little money."
 },
 "277": {
-  simple: "Taxes lawfully levied by a State or local authority immediately before the Constitution may continue to be levied, until Parliament provides otherwise.",
-  catch: "This is why certain local taxes with no place in the modern lists survived after 1950, and why abolishing them needs an Act of Parliament."
+  simple: "A tax that a State or local body was lawfully collecting just before the Constitution began may continue, until Parliament provides otherwise.",
+  catch: "So some old local taxes with no place in the present Lists survived after 1950, and ending them needs an Act of Parliament."
 },
 "278": {
-  simple: "This article once allowed agreements with the former Part B States about certain taxes and grants.",
-  catch: "Omitted by the 7th Amendment in 1956."
+  simple: "Article 278 once allowed agreements with the former princely States about certain taxes and grants.",
+  catch: "The 7th Amendment omitted it in 1956."
 },
 "279": {
-  simple: "Article 279 defines how the 'net proceeds' of a tax are calculated: proceeds less the cost of collection, certified by the Comptroller and Auditor-General.",
-  catch: "The CAG's certificate is final and not open to challenge.\n\n" +
-    "It is a rare instance of a constitutional officer's determination being conclusive on a question of money between the Union and the States."
+  simple: "Article 279 sets how the \"net proceeds\" of a tax are worked out. They are the proceeds less the cost of collection, as certified by the Comptroller and Auditor-General.",
+  catch: "The CAG's certificate is final and cannot be challenged. So on this money question between the Union and the States, a constitutional officer has the last word."
 },
 "279A": {
   simple: "The President shall set up a GST Council. The Union Finance Minister chairs it. The members are the Union Minister of State for Finance and a minister from every State.\n\n" +
@@ -225,61 +225,59 @@ partXIII: {
     "But in practice the share of taxes the Commission recommends has always been accepted. Recommendations on grants are often changed or ignored."
 },
 "281": {
-  simple: "The President must lay every Finance Commission recommendation before each House of Parliament, with an explanatory memorandum on the action taken on it.",
-  catch: "This is the accountability mechanism for advisory recommendations. The government must explain in public what it refused, and why."
+  simple: "The President must lay every recommendation of the Finance Commission before each House of Parliament, with a note explaining the action taken on it.",
+  catch: "The recommendations are only advice. But the government must explain in public what it refused, and why."
 },
 "282": {
-  simple: "The Union or a State may make any grant for any public purpose, even one outside its own legislative competence.",
-  catch: "A single sentence that carries a great deal of weight.\n\n" +
-    "It is the constitutional basis for centrally sponsored schemes on State subjects such as health, education and rural development.\n\n" +
-    "Critics call it the article by which the Union legislates through money."
+  simple: "The Union or a State may make a grant for any public purpose, even one on which it cannot make laws.",
+  catch: "The single sentence carries a great deal of weight. Article 282 is the basis of centrally sponsored schemes on State subjects such as health, education and rural development.\n\n" +
+    "So critics say the Union uses Article 282 to govern State subjects through money."
 },
 "283": {
-  simple: "Custody of the Consolidated Fund, the Contingency Fund and public account moneys, and their payment and withdrawal, are regulated by law. Until then, rules made by the President or the Governor apply.",
-  catch: "Those rules govern the treasury until the legislature legislates. In most cases it never has."
+  simple: "The law regulates the custody of the Consolidated Funds, the Contingency Funds and the public accounts, and payments into and out of them. Until a law is made, rules made by the President or the Governor apply.",
+  catch: "The rules govern the treasury until the legislature passes a law."
 },
 "284": {
-  simple: "Money received by a public servant or a court in connection with any case must be paid into the public account of the Union or of the State."
+  simple: "Money that a public servant or a court receives in connection with a case must be paid into the public account of the Union or the State."
 },
 "285": {
-  simple: "The property of the Union is exempt from all taxes imposed by a State or any authority within a State, unless Parliament provides otherwise.",
-  catch: "Municipal bodies have repeatedly tried to levy property tax on Union property and failed here.\n\n" +
-    "The exemption covers taxes, not fees for services actually rendered."
+  simple: "Union property is exempt from all taxes imposed by a State or by any authority within a State, unless Parliament provides otherwise.",
+  catch: "Municipal bodies have often tried to levy property tax on Union property, and failed under Article 285.\n\n" +
+    "But the exemption covers taxes, not fees for services actually rendered."
 },
 "286": {
   simple: "A State may not tax a supply of goods or services that takes place outside the State, or in the course of import into or export out of India.",
-  catch: "This keeps foreign trade a purely Union subject in tax terms. It is also the source of decades of litigation about where a sale 'takes place'."
+  catch: "So taxing foreign trade belongs only to the Union. The article has also caused decades of dispute about where a sale actually \"takes place\"."
 },
 "287": {
-  simple: "A State may not tax the consumption or sale of electricity consumed by the Government of India, or used in constructing, maintaining or operating a railway, unless Parliament provides otherwise.",
-  catch: "The railway exemption is why State electricity duties do not apply to traction power. It is a recurring source of dispute between States and the Railways."
+  simple: "A State may not tax electricity used by the Government of India, or used to build, maintain or run a railway, unless Parliament provides otherwise.",
+  catch: "So State electricity duty does not apply to the power that runs trains. The exemption is a recurring source of dispute between the States and the Railways."
 },
 "288": {
-  simple: "A State may not tax water or electricity stored, generated, consumed, distributed or sold by an authority established by Parliament for an inter-State river or valley, without the President's assent to the law."
+  simple: "A State may not tax water or electricity stored, generated, used or sold by a body that Parliament set up for an inter-State river or river valley. A State law that does so needs the President's assent."
 },
 "289": {
-  simple: "The property and income of a State are exempt from Union taxation.\n\n" +
-    "The Union may still tax a trade or business carried on by a State, unless Parliament declares it incidental to the ordinary functions of government.",
-  catch: "This is the mirror of Article 285, and deliberately narrower.\n\n" +
-    "The Union can reach a State's commercial activity. A State cannot reach Union property at all."
+  simple: "The property and income of a State are exempt from Union taxes.\n\n" +
+    "But the Union may tax a trade or business that a State runs, unless Parliament declares it part of the ordinary work of government.",
+  catch: "Article 289 mirrors Article 285, but is deliberately narrower. The Union can tax a State's commercial activity, but a State cannot tax Union property at all."
 },
 "290": {
-  simple: "Where an expense of a court or commission is charged on the Consolidated Fund of India but serves a State too, the cost is apportioned as the Comptroller and Auditor-General determines.",
-  catch: "His determination is final, the same conclusive role he plays under Article 279."
+  simple: "Where a court or commission's costs are charged on the Consolidated Fund of India but it also serves a State, the cost is shared as the Comptroller and Auditor-General decides.",
+  catch: "The CAG's decision is final, as under Article 279."
 },
 "290A": {
   simple: "An annual payment of ₹46.5 lakh is made to the Travancore Devaswom Fund from the Consolidated Fund of Kerala, and ₹13.5 lakh to the Devaswom Fund of Tamil Nadu.",
   catch: "This settles the covenant made when Travancore and Cochin merged. It is one of the few religious endowments named in the Constitution itself."
 },
 "291": {
-  simple: "This article once provided for the privy purses of the Rulers of the former Indian States.",
-  catch: "Omitted by the 26th Amendment in 1971, which abolished privy purses and princely privileges outright.\n\n" +
-    "An earlier presidential order attempting the same thing had been struck down in Madhav Rao Scindia (1970)."
+  simple: "Article 291 once provided for the privy purses paid to the rulers of the former princely States.",
+  catch: "The 26th Amendment omitted it in 1971, and ended the privy purses and the princes' privileges outright.\n\n" +
+    "An earlier presidential order that tried to do the same had been struck down in Madhav Rao Scindia (1970)."
 },
 "292": {
-  simple: "The Union may borrow on the security of the Consolidated Fund of India, within limits Parliament may fix.",
+  simple: "The Union may borrow on the security of the Consolidated Fund of India, within any limits Parliament fixes by law.",
   catch: "Parliament has never fixed such a limit by law.\n\n" +
-    "The FRBM Act sets fiscal targets, but it does not operate as the borrowing ceiling this article contemplates."
+    "The FRBM Act sets targets for the deficit, but it does not work as the borrowing ceiling that Article 292 has in mind."
 },
 "293": {
   simple: "A State may borrow within India on the security of its Consolidated Fund, within limits its legislature may fix.\n\n" +
