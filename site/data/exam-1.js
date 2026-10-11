@@ -204,14 +204,14 @@ preamble: {
   tier: 1,
   papers: ["UPSC Pre", "UPSC Mains", "UPPCS Mains", "State PCS"],
   says: "Article 16 guarantees every citizen equal opportunity in government jobs. Later clauses allow reservation for backward classes, Scheduled Castes, Scheduled Tribes and economically weaker sections.",
-  why: "Almost every question on reservation comes back to Article 16: quotas, the 50 per cent ceiling, the creamy layer and promotions. Parliament has amended the article again and again, usually to undo a ruling of the Supreme Court.",
+  why: "Almost every question on reservation comes back to Article 16. Examiners test the clauses, the amendments that added them, and the cases that limit them.",
   concepts: [
     { t: "The basic guarantee", d: "Every citizen gets an equal chance at any job or office under the State. No citizen can be denied one on grounds of religion, race, caste, sex, descent, place of birth or residence." },
     { t: "Clause (4): reservation in appointments", d: "The State may reserve posts for any backward class that is not adequately represented in government service. Note the two conditions: the class must be backward, and it must be under-represented." },
-    { t: "Clause (4A): reservation in promotions", d: "Added by the 77th Amendment (1995) after the Court said promotions could not be reserved. The 85th Amendment (2001) added consequential seniority, meaning a promoted person keeps the seniority gained through the quota." },
+    { t: "Clause (4A): reservation in promotions", d: "Added by the 77th Amendment (1995). The 85th Amendment (2001) added consequential seniority, so a person promoted through the quota keeps the seniority gained." },
     { t: "Clause (4B): the backlog", d: "Added by the 81st Amendment (2000). Unfilled reserved vacancies carried to the next year are counted separately, so they do not breach the 50% ceiling in that year." },
     { t: "Clause (6): economically weaker sections", d: "Added by the 103rd Amendment (2019). Up to 10% of posts may be reserved for the economically weak who are outside the caste-based quotas." },
-    { t: "Indra Sawhney (1992), the Mandal case", d: "Three holdings you must know. Reservation should not normally exceed 50%. The creamy layer, the well-off among the backward classes, must be left out. And there is no reservation in promotions, which Parliament then reversed by amendment." },
+    { t: "Indra Sawhney (1992), the Mandal case", d: "Three holdings to know: a 50% ceiling in normal cases, no quota for the creamy layer, and no reservation in promotions." },
     { t: "M. Nagaraj and Jarnail Singh", d: "Nagaraj (2006) said reservation in promotion needs proof of backwardness, inadequate representation and no loss of efficiency. Jarnail Singh (2018) removed the need to prove backwardness for Scheduled Castes and Tribes, but kept the data requirement on representation." }
   ],
   seen: [
@@ -225,12 +225,11 @@ preamble: {
   tier: 1,
   papers: ["UPSC Pre", "State PCS"],
   says: "Article 17 abolishes untouchability and forbids its practice in any form. Enforcing any disability that arises from untouchability is an offence punishable by law.",
-  why: "Article 17 is unusual in two ways. The article works against private individuals as well as the government, and it has no exceptions at all. Candidates also often file it under the wrong heading.",
+  why: "Examiners test where Article 17 sits, whom it binds, and which laws enforce it. Candidates often file it under the wrong heading.",
   concepts: [
-    { t: "What it does", d: "Untouchability is abolished and its practice in any form is forbidden. Enforcing any disability arising out of untouchability is a punishable offence." },
-    { t: "Article 17 binds private persons", d: "Most Fundamental Rights work only against the State. Article 17 works against your neighbour too. If a shopkeeper refuses service on grounds of untouchability, that is a direct violation of Article 17." },
+    { t: "Article 17 binds private persons", d: "A private person who practises untouchability breaks Article 17 directly. Most other rights bind only the State." },
     { t: "Article 17 is absolute", d: "There is no proviso, no exception, no reasonable restriction. Compare Article 19, where every freedom comes with a list of permitted restrictions." },
-    { t: "The word is never defined", d: "The Constitution does not say what untouchability means. Courts have read the word in its historical sense, as the practice tied to caste, and not as covering every social boycott." },
+    { t: "The word is never defined", d: "Courts read the word in its historical sense, tied to caste." },
     { t: "The laws that enforce it", d: "The Protection of Civil Rights Act, 1955 and the Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989. Parliament alone can make these laws, because Article 35 reserves the subject to it." }
   ],
   seen: [
@@ -249,8 +248,8 @@ preamble: {
     { t: "The State cannot confer titles", d: "No title may be granted by the State, except a military or academic distinction. So a general's rank and a professor's doctorate are fine." },
     { t: "Citizens cannot accept foreign titles", d: "An Indian citizen may not accept any title from a foreign State. A non-citizen holding an office of profit under the Indian State needs the President's consent to accept one." },
     { t: "No gifts or offices from foreign States", d: "Nobody holding an office of profit or trust under the State may accept any present, emolument or office from a foreign State without the President's consent." },
-    { t: "Why the Bharat Ratna is legal", d: "In Balaji Raghavan (1996) the Supreme Court held the national awards are decorations recognising work, not titles of nobility. So they do not violate Article 18." },
-    { t: "The condition attached", d: "Recipients may not use the award as a prefix or suffix to their name. Writing \"Padma Shri X\" on a nameplate is not permitted, though it is widely ignored." },
+    { t: "Why the Bharat Ratna is legal", d: "Balaji Raghavan (1996) held the national awards are decorations for work, not titles." },
+    { t: "The condition attached", d: "The award may not be used as a prefix or suffix to a name. The rule is widely ignored." },
     { t: "The awards have been stopped twice", d: "They were suspended from 1977 to 1980, and again from 1992 to 1995, while their constitutionality was being questioned." }
   ],
   seen: [
@@ -265,13 +264,12 @@ preamble: {
   says: "Article 19 gives every citizen six freedoms: speech and expression, peaceful assembly, association, movement, residence, and any profession or trade. The State may limit each freedom by a reasonable law.",
   why: "Article 19 is the densest article in Part III for factual questions. There are six freedoms, six clauses of restrictions, and a large body of case law.",
   concepts: [
-    { t: "The six freedoms", d: "The six are speech and expression, assembling peaceably without arms, forming associations or unions, moving freely throughout India, residing and settling anywhere in India, and practising any profession, occupation, trade or business." },
     { t: "There used to be seven", d: "The right to acquire, hold and dispose of property was the seventh freedom. The 44th Amendment (1978) deleted it and moved property to Article 300A, where it is no longer a Fundamental Right." },
-    { t: "Each freedom has its own leash", d: "Clauses (2) to (6) list what the State may restrict, and the grounds differ for each freedom. Speech can be restricted for public order. Trade can be restricted in the public interest. You cannot borrow a ground from one clause to justify restricting another freedom." },
-    { t: "The eight grounds for restricting speech", d: "The eight grounds are the sovereignty and integrity of India, security of the State, friendly relations with foreign States, public order, decency or morality, contempt of court, defamation, and incitement to an offence. Count \"decency or morality\" as one ground, because the text joins them. Counted that way, the total comes to eight. The list is closed, and \"the interests of the general public\" is not on it." },
+    { t: "Each freedom has its own leash", d: "Clauses (2) to (6) set the grounds, and they differ for each freedom." },
+    { t: "The eight grounds for restricting speech", d: "Sovereignty and integrity of India, security of the State, friendly relations with foreign States, public order, decency or morality, contempt of court, defamation, and incitement to an offence. Decency or morality counts as one. The list is closed." },
     { t: "Restrictions must be by law and reasonable", d: "The State cannot restrict a freedom by an executive order or a police instruction. A restriction needs a law, and a court can strike that law down if the restriction is unreasonable." },
     { t: "Only citizens get these rights", d: "Foreigners do not. Neither does a company, because a company is not a citizen. Its shareholders can sometimes sue in their own names." },
-    { t: "Shreya Singhal (2015)", d: "The Court struck down Section 66A of the Information Technology Act, which criminalised \"grossly offensive\" online messages. The words were too vague to be a reasonable restriction, and vagueness itself was the flaw." }
+    { t: "Shreya Singhal (2015)", d: "The Court struck down section 66A of the IT Act, which punished \"grossly offensive\" online messages, as too vague." }
   ],
   seen: [
     "UPSC Pre 2024 — Fundamental Rights, tested around Articles 15, 16 and 19",
@@ -288,11 +286,11 @@ preamble: {
   says: "Article 20 gives three protections to a person accused of a crime. A law made after an act cannot punish it, nobody can be prosecuted and punished twice for one offence, and nobody can be forced to give evidence against themselves.",
   why: "All three protections are short, precise and easy to test. Article 20 also cannot be suspended even during a national emergency, which makes it a favourite in questions on emergencies.",
   concepts: [
-    { t: "No retrospective criminal law", d: "You cannot be convicted for an act that was not a crime when you did it. And you cannot be given a heavier punishment than the law allowed at the time of the offence." },
-    { t: "No double jeopardy", d: "You cannot be prosecuted and punished twice for the same offence. The protection applies only after a person has been prosecuted and punished by a court or judicial tribunal, not after a departmental inquiry." },
-    { t: "No self-incrimination", d: "An accused person cannot be forced to be a witness against themselves. The protection covers being compelled to give oral or written testimony." },
+    { t: "No retrospective criminal law", d: "Applies to criminal conviction and punishment only." },
+    { t: "No double jeopardy", d: "Needs both a prosecution and a punishment by a court or judicial tribunal. A departmental inquiry does not count." },
+    { t: "No self-incrimination", d: "Covers forced testimony, oral or written. Fingerprints and handwriting samples are outside it." },
     { t: "Article 20 survives an emergency", d: "The 44th Amendment (1978) made Articles 20 and 21 permanently non-suspendable. Even during a national emergency, these two cannot be taken away. Every other Fundamental Right can be." },
-    { t: "Selvi (2010)", d: "The Court held that narco-analysis, polygraph tests and brain mapping conducted without consent violate the protection against self-incrimination." }
+    { t: "Selvi (2010)", d: "Narco-analysis, polygraph and brain mapping without consent violate the protection against self-incrimination." }
   ],
   trap: "The ban on retrospective laws applies only to criminal law, and only to conviction and punishment.\n\nA retrospective tax law, or a retrospective civil law, is untouched by Article 20. Also, preventive detention is not a punishment, so Article 20 does not apply to it either."
 },
@@ -301,12 +299,12 @@ preamble: {
   tier: 1,
   papers: ["UPSC Pre", "UPSC Mains", "UPPCS Mains", "State PCS"],
   says: "Article 21 says no person shall be deprived of life or personal liberty except according to procedure established by law.",
-  why: "From that one sentence the Supreme Court has built dozens of rights, such as privacy, clean air, shelter, education, a speedy trial and dignity. Article 21 is the most examined article in the Constitution, in every paper.",
+  why: "Article 21 is the most examined article in the Constitution, in every paper. Questions test the gap between its text and what the Court has read into it.",
   concepts: [
-    { t: "What the text actually says", d: "Article 21 uses the words \"procedure established by law\". So if there is a law, and the law's procedure is followed, liberty can be taken away. On its face it is a weak protection." },
-    { t: "A.K. Gopalan (1950) read it narrowly", d: "The Court said as long as Parliament passed a law and the procedure was followed, the courts would not ask whether the procedure was fair. The reading left liberty at Parliament's mercy." },
-    { t: "Maneka Gandhi (1978) changed everything", d: "The Court held the procedure must be fair, just and reasonable, not arbitrary or oppressive. In effect it read the American idea of \"due process\" into the Indian text without amending a word." },
-    { t: "Puttaswamy (2017): privacy", d: "A nine-judge bench held that privacy is a Fundamental Right, intrinsic to life and liberty under Article 21. The bench also formally overruled ADM Jabalpur, the 1976 case that had said rights could vanish in an emergency." },
+    { t: "What the text actually says", d: "Liberty can be taken away by a law, if the law's procedure is followed. On its face the protection is weak." },
+    { t: "A.K. Gopalan (1950) read it narrowly", d: "The courts would not ask whether the procedure was fair." },
+    { t: "Maneka Gandhi (1978) changed everything", d: "The procedure must be fair, just and reasonable. Due process came in by interpretation." },
+    { t: "Puttaswamy (2017): privacy", d: "A nine-judge bench held privacy a fundamental right under Article 21. The bench also overruled ADM Jabalpur (1976)." },
     { t: "The rights read into it", d: "Livelihood, shelter, health, a clean environment, education, legal aid, a speedy trial, privacy, dignity, and the right to die with dignity. None of these words appear in Article 21. All were derived from it." },
     { t: "Article 21 protects every person", d: "The word is \"person\", not \"citizen\". Foreigners have the protection of Article 21 in India." },
     { t: "Article 21 cannot be suspended", d: "After the 44th Amendment (1978), Articles 20 and 21 survive even a national emergency." }
@@ -345,12 +343,12 @@ preamble: {
   tier: 1,
   papers: ["UPSC Pre", "UPSC Mains", "State PCS"],
   says: "Article 22 gives an arrested person the right to know the grounds of arrest, to consult a lawyer, and to be produced before a magistrate within 24 hours. The same article allows preventive detention, with separate safeguards.",
-  why: "Article 22 is really two articles joined together. The first half protects people arrested in the ordinary way. The second half allows preventive detention, which means holding someone without trial because of what they might do. The contradiction inside one article is why it is examined.",
+  why: "Examiners test both halves and the contrast between them: rights on arrest, and a power to detain without trial, in the same article.",
   concepts: [
-    { t: "Rights on ordinary arrest", d: "You must be told why you are being arrested. You may consult and be defended by a lawyer of your choice. And you must be produced before a magistrate within 24 hours, excluding travel time." },
+    { t: "Rights on ordinary arrest", d: "The grounds of arrest, a lawyer of one's choice, and a magistrate within 24 hours, excluding travel time." },
     { t: "Who does not get these rights", d: "Enemy aliens, and people held under a preventive detention law. For them, the first half of Article 22 simply does not apply." },
     { t: "What preventive detention means", d: "Detaining a person to stop them doing something in the future, not to punish them for something already done. There is no charge, no trial and no conviction." },
-    { t: "The three-month limit", d: "A person cannot be held for more than three months unless an Advisory Board reports sufficient cause. The Board consists of persons who are, have been, or are qualified to be appointed as, High Court judges. The 44th Amendment would have required a serving High Court judge as Chairman, but that change was never brought into force, so the wider original wording still governs." },
+    { t: "The three-month limit", d: "No detention beyond three months unless an Advisory Board finds sufficient cause. Its members are, have been, or are qualified to be, High Court judges." },
     { t: "Who can make such laws", d: "Parliament alone, for reasons of defence, foreign affairs and the security of India. Parliament and the States both, for reasons of State security, public order and essential supplies." },
     { t: "The laws in force", d: "The National Security Act, the Conservation of Foreign Exchange and Prevention of Smuggling Activities Act, and various State laws such as the Jammu and Kashmir Public Safety Act." }
   ],
@@ -366,11 +364,10 @@ preamble: {
   says: "Article 23 bans trafficking in human beings, begar and other forms of forced labour. The State may still impose compulsory service for public purposes, such as military service.",
   why: "Article 23 is one half of the Right against Exploitation. Questions almost always test it alongside Article 24.",
   concepts: [
-    { t: "What is prohibited", d: "Traffic in human beings, begar, and other similar forms of forced labour. Any breach is a punishable offence." },
     { t: "What \"begar\" means", d: "Compelling someone to work without payment. Begar was a feudal practice in which a landlord could demand free labour from tenants." },
-    { t: "Article 23 binds private persons too", d: "Like Article 17, this right works against ordinary individuals, not only against the State. A private employer using bonded labour violates Article 23 directly." },
-    { t: "Paying below the minimum wage is forced labour", d: "In People's Union for Democratic Rights (1982) the Court held that paying a worker less than the statutory minimum wage amounts to forced labour under Article 23. The ruling widened the article enormously." },
-    { t: "The State may still compel service", d: "The article expressly allows compulsory service for public purposes, such as military conscription or social service. But the State cannot discriminate on grounds of religion, race, caste or class alone while imposing it." },
+    { t: "Article 23 binds private persons too", d: "Like Article 17, Article 23 binds private persons, not only the State." },
+    { t: "Paying below the minimum wage is forced labour", d: "In People's Union for Democratic Rights (1982), the Asiad Workers case, the Court held that paying below the minimum wage is forced labour." },
+    { t: "The State may still compel service", d: "Compulsory service for public purposes, such as military service, is allowed. Discrimination only on grounds of religion, race, caste or class is not." },
     { t: "The laws behind it", d: "The Bonded Labour System (Abolition) Act, 1976 and the Immoral Traffic (Prevention) Act, 1956." }
   ],
   seen: [

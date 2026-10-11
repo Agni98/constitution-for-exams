@@ -130,50 +130,46 @@ partIII: {
     "Second, clauses (3) to (6) allow special provisions. They cover women and children, backward classes and the Scheduled Castes and Scheduled Tribes, admission to private colleges, and since 2019 the economically weaker sections. So Article 15 forbids discrimination, but lets the State help the disadvantaged."
 },
 "16": {
-  simple: "Every citizen has an equal opportunity in public employment. The State may not discriminate on grounds of religion, race, caste, sex, descent, place of birth or residence.\n\n" +
-    "Clauses (4), (4A) and (4B) then permit reservation, in appointments and in promotion, for backward classes and for Scheduled Castes and Scheduled Tribes.",
-  catch: "Indra Sawhney (1992) set the framework that still governs. Reservation should not ordinarily exceed 50 per cent. The creamy layer must be excluded from OBC reservation. There is no reservation in promotion.\n\n" +
-    "Parliament has since reversed two of those holdings by amendment. The 77th and 85th restored reservation in promotion. The 81st changed the carry-forward rule. The 50 per cent ceiling was itself breached by the EWS quota in clause (6), and survived the challenge.",
-  note: "Reservation under clause (4) is a power the State may use, not a right a citizen can claim. No one can compel a government to make reservations. A decision not to must still be non-arbitrary."
+  simple: "Every citizen has an equal chance at jobs and offices under the State. The State may not discriminate on grounds of religion, race, caste, sex, descent, place of birth or residence.\n\n" +
+    "Clauses (4), (4A) and (4B) allow reservation in posts and promotions for backward classes, Scheduled Castes and Scheduled Tribes. Clause (6), added in 2019, allows it for the economically weaker sections.",
+  catch: "Indra Sawhney (1992), the Mandal case, set the rules that still govern reservation. The total should not normally go above 50 per cent. The creamy layer must be left out of OBC reservation. And promotions cannot be reserved.\n\n" +
+    "Parliament then undid parts of the ruling by amendment. The 77th Amendment brought back reservation in promotion for Scheduled Castes and Scheduled Tribes. The 81st let unfilled reserved posts carry forward outside the 50 per cent limit. Later the 10 per cent EWS quota took the total past 50 per cent, and the Court upheld it in 2022."
 },
 "17": {
-  simple: "Untouchability is abolished. Practising it in any form is forbidden, and enforcing any disability arising out of it is an offence punishable by law.",
-  catch: "This is one of the few fundamental rights that binds private individuals directly, not just the State. You can be prosecuted under it.\n\n" +
-    "The Constitution never defines 'untouchability'. Courts have read it as the historical caste practice, not as social exclusion in general.",
-  note: "Given effect by the Protection of Civil Rights Act, 1955 and the Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989."
+  simple: "Untouchability is abolished, and practising it in any form is forbidden. Enforcing any disability that arises from untouchability is an offence punishable by law.",
+  catch: "Most fundamental rights protect people only against the State. But Article 17 binds private persons too. A shopkeeper who refuses to serve someone on grounds of untouchability breaks Article 17 directly, and can be punished under the laws that enforce it.\n\n" +
+    "The Constitution never defines untouchability. Courts read the word in its historical sense, as the practice tied to caste, and not as every kind of social boycott."
 },
 "18": {
-  simple: "The State cannot confer titles, apart from military and academic distinctions. Citizens cannot accept titles from a foreign State.\n\n" +
-    "Anyone holding an office of profit under the State needs the President's consent before accepting a present or an office from a foreign State.",
-  catch: "The Bharat Ratna and the Padma awards were challenged as titles, and upheld in Balaji Raghavan (1996).\n\n" +
-    "They survived on a specific footing: they are awards, not titles, and they must not be used as a prefix or suffix to a name. Writing 'Padma Shri' before your name is, strictly, a misuse of the award."
+  simple: "The State cannot give titles, except military and academic distinctions. A citizen cannot accept a title from a foreign State.\n\n" +
+    "A person holding an office of profit or trust under the State needs the President's consent before accepting any present, payment or office from a foreign State.",
+  catch: "The Bharat Ratna and the Padma awards were challenged as titles. In Balaji Raghavan (1996) the Supreme Court upheld them. The awards honour work done, the Court said, and do not create a rank.\n\n" +
+    "But the Court attached a condition. A recipient must not use the award as a prefix or suffix to a name. So \"Padma Shri X\" on a nameplate is, strictly, a misuse of the award."
 },
 
 /* ---------- Right to Freedom ---------- */
 
 "19": {
-  simple: "Article 19 gives citizens six freedoms: speech and expression; assembly, peaceful and unarmed; forming associations, unions and co-operative societies; moving freely throughout India; residing and settling anywhere in India; and practising any profession or carrying on any trade or business.\n\n" +
-    "Each freedom is followed by its own clause allowing the State to impose reasonable restrictions on stated grounds.",
-  catch: "A restriction must clear two hurdles. It must be reasonable, and it must fall within the specific grounds listed for that particular freedom.\n\n" +
-    "The State cannot borrow a ground from one clause to restrict a different freedom. Reasonableness is for the court to judge, not the legislature, and the burden of justifying the restriction lies on the State.",
-  note: "The right to property was originally Article 19(1)(f). The 44th Amendment deleted it in 1978. Freedom of the press is not mentioned separately anywhere; it is read into 19(1)(a). Shreya Singhal (2015) struck down section 66A of the IT Act under this article."
+  simple: "Article 19 gives citizens six freedoms. They can speak and express themselves, assemble peacefully without arms, and form associations, unions and co-operative societies. They can move throughout India, live and settle anywhere in India, and practise any profession or trade.\n\n" +
+    "Each freedom has its own clause of limits. The State may impose reasonable restrictions on the grounds that clause lists.",
+  catch: "A restriction must pass two tests. First, the restriction must be reasonable. Second, it must rest on a ground listed for that particular freedom. The State cannot borrow a ground from one clause to limit another freedom.\n\n" +
+    "The court, not the legislature, decides whether a restriction is reasonable, and the State must justify it. In Shreya Singhal (2015) the Court struck down section 66A of the IT Act, because its words were too vague. A vague restriction cannot be a reasonable one.",
+  note: "The Constitution does not name freedom of the press. The courts read it into freedom of speech and expression under Article 19(1)(a)."
 },
 "20": {
-  simple: "Article 20 gives three protections to anyone accused of a crime.\n\n" +
-    "No conviction except for breaking a law that was in force when the act was done, and no penalty heavier than that law allowed. No prosecution and punishment for the same offence more than once. No compulsion to be a witness against yourself.",
+  simple: "Article 20 gives three protections to a person accused of a crime.\n\n" +
+    "Nobody can be convicted for an act that was not an offence when it was done, or given a heavier penalty than the law then allowed. Nobody can be prosecuted and punished twice for the same offence. And nobody can be forced to be a witness against themselves.",
   catch: "Each protection is narrower than it sounds.\n\n" +
-    "The bar on retrospective laws covers criminal liability and punishment only. It does not reach civil or tax liability, or preventive detention.\n\n" +
-    "Double jeopardy applies only where there was both a previous prosecution and a punishment, and only before a court or judicial tribunal.\n\n" +
-    "Self-incrimination covers testimonial compulsion. Kathi Kalu Oghad held that fingerprints, blood samples and specimen handwriting are outside it.",
-  note: "This article cannot be suspended even during an emergency. Article 359, as amended by the 44th Amendment, puts Articles 20 and 21 beyond the reach of a suspension order."
+    "The bar on retrospective laws covers only criminal conviction and punishment.\n\n" +
+    "The bar on double jeopardy applies only after a prosecution and a punishment by a court or judicial tribunal. A departmental inquiry does not count.\n\n" +
+    "The bar on self-incrimination covers being forced to testify. Selvi (2010) held that narco-analysis, polygraph and brain-mapping tests without consent count as forced testimony. But in Kathi Kalu Oghad (1961) the Court held that fingerprints, palm prints and specimen handwriting do not."
 },
 "21": {
   simple: "No person shall be deprived of life or personal liberty except according to procedure established by law.\n\n" +
-    "That is the whole article. Twenty-two words, and the busiest provision in the Constitution.",
-  catch: "The Constituent Assembly wrote 'procedure established by law' instead of the American 'due process of law'. The choice was deliberate, and it was meant to keep courts from asking whether a law was fair. A.K. Gopalan (1950) read it exactly that way.\n\n" +
-    "Maneka Gandhi (1978) reversed course. The procedure must be just, fair and reasonable, which imported due process through the back door.\n\n" +
-    "Everything since has been built on that reading: privacy, dignity, livelihood, a clean environment, speedy trial, death with dignity.",
-  note: "Article 21 applies to every person, not only to citizens. It cannot be suspended even in an emergency. Puttaswamy (2017), decided by nine judges, located the right to privacy here."
+    "The whole article is one sentence. Yet the courts have built more rights on it than on any other provision.",
+  catch: "The Constituent Assembly chose the words \"procedure established by law\" over the American \"due process of law\". The choice was deliberate. The framers did not want judges asking whether a law was fair. In A.K. Gopalan (1950) the Court read the article that way.\n\n" +
+    "But Maneka Gandhi (1978) changed course. The procedure must be just, fair and reasonable, the Court held. In effect, due process came in without a word of the text changing.\n\n" +
+    "Every later right under Article 21 rests on that reading. Privacy, dignity, livelihood, shelter, a clean environment and a speedy trial were all read into it."
 },
 "21A": {
   simple: "The State shall provide free and compulsory education to all children between six and fourteen, in the manner it decides by law.",
@@ -182,22 +178,20 @@ partIII: {
   note: "Inserted by the 86th Amendment in 2002 and brought into force in 2010. It is the only fundamental right created by converting a directive principle into one."
 },
 "22": {
-  simple: "Article 22 has two halves that work quite differently.\n\n" +
-    "For an ordinary arrest, you must be told the grounds, allowed to consult a lawyer of your choice, and produced before a magistrate within twenty-four hours.\n\n" +
-    "For preventive detention, none of that applies. Detention beyond three months needs an Advisory Board of persons qualified to be High Court judges, and you must be told the grounds and given the earliest opportunity to make a representation.",
-  catch: "This is the article that makes preventive detention constitutional in peacetime. Among democratic constitutions, that is unusual.\n\n" +
-    "The State may withhold facts it considers against the public interest, so the 'grounds' you receive can be thin. The National Security Act, the UAPA and COFEPOSA all rest here.",
-  note: "The 44th Amendment tried to cut the three-month period to two. That provision was never brought into force."
+  simple: "Article 22 has two halves that work differently.\n\n" +
+    "A person arrested in the ordinary way must be told the grounds of arrest. The person may consult a lawyer of their choice, and must be produced before a magistrate within 24 hours.\n\n" +
+    "The second half allows preventive detention, where none of those rights apply. Detention beyond three months needs the approval of an Advisory Board. The detained person must be told the grounds and given the earliest chance to make a representation against the order.",
+  catch: "Article 22 makes preventive detention lawful in peacetime. Few democratic constitutions allow detention without trial outside an emergency.\n\n" +
+    "The safeguards are thin. The State may hold back any facts it considers against the public interest, so the grounds given can say very little. The protection against detention without trial is therefore far weaker than the protection against arrest."
 },
 
 /* ---------- Right against Exploitation ---------- */
 
 "23": {
-  simple: "Traffic in human beings, begar and other similar forms of forced labour are prohibited. Doing any of them is an offence.",
-  catch: "This article binds private individuals as well as the State.\n\n" +
-    "Its reach was widened considerably in the Asiad Workers case (1982). Paying less than the statutory minimum wage is itself 'forced labour', because work accepted for less than the legal minimum cannot be truly voluntary.\n\n" +
-    "That reading turned an anti-slavery clause into a labour-rights clause.",
-  note: "Clause (2) allows the State to impose compulsory service for public purposes, such as military conscription. Even then it may not discriminate on grounds of religion, race, caste or class."
+  simple: "Trafficking in human beings, begar and other similar forms of forced labour are banned. Breaking the ban is an offence punishable by law.\n\n" +
+    "But the State may still require compulsory service for public purposes, such as military service. In choosing who serves, the State may not discriminate only on grounds of religion, race, caste or class.",
+  catch: "Article 23 binds private persons as well as the State. A private employer who keeps bonded labourers breaks Article 23 directly.\n\n" +
+    "The Asiad Workers case (1982) widened the article. Someone who works for less than the legal minimum wage does so only out of need, the Court held, and need is a form of force. So paying below the minimum wage is forced labour, and a clause against slavery became a clause on labour rights."
 },
 "24": {
   simple: "No child below fourteen may be employed in a factory, a mine, or any other hazardous employment.",
