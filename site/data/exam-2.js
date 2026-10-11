@@ -295,8 +295,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
     { t: "The three ways the office ends", d: "Ceasing to be a member of the House, resigning in writing to the Deputy Speaker, or being removed by a resolution of the House." },
     { t: "The majority needed", d: "The resolution needs a majority of all the *then members* of the House, an effective majority that leaves vacant seats out. Not a simple majority of those present." },
     { t: "Fourteen days' notice", d: "The resolution cannot be moved without fourteen days' advance notice of the intention to move it. The notice is compulsory." },
-    { t: "The Speaker cannot preside", d: "While a resolution for their own removal is under consideration, the Speaker steps aside from the chair. The Deputy Speaker or another member presides." },
-    { t: "But the Speaker may speak and vote", d: "They have the right to take part in the debate and to vote in the first instance, though not the casting vote. Candidates often miss the exception." }
+    { t: "The Speaker cannot preside", d: "The Speaker steps aside from the chair while the removal resolution is considered." },
+    { t: "But the Speaker may speak and vote", d: "The Speaker may speak and vote in the first instance, but has no casting vote." }
   ],
   seen: [
     "UPSC Pre 2025 — the Speaker's removal procedure and the notice requirement",
@@ -310,13 +310,13 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   tier: 1,
   papers: ["UPSC Pre", "UPSC Mains", "State PCS"],
   says: "Article 105 gives freedom of speech in Parliament. No member can be taken to court for anything said or any vote given in Parliament or its committees.",
-  why: "Article 105 protects members of Parliament for what they say and how they vote. A seven-judge bench reopened the subject in 2024 by overruling a ruling on bribery made in 1998.",
+  why: "Article 105 protects members of Parliament for what they say and how they vote. Questions test what the immunity covers, and the 2024 change on bribery.",
   concepts: [
     { t: "Freedom of speech in Parliament", d: "Subject to the Constitution and to the rules of the House, there is freedom of speech in Parliament. The freedom is not the same as the one in Article 19(1)(a), and Article 19(2) does not limit it." },
     { t: "Immunity from court proceedings", d: "No member is liable in any court for anything said or any vote given in Parliament or in a committee. Members can therefore speak without fear of being sued for defamation." },
     { t: "Publication is protected too", d: "No one is liable for publishing a report or proceedings by the authority of a House. Article 361A additionally protects faithful newspaper reports of proceedings." },
     { t: "Other privileges were never codified", d: "The article says other privileges shall be as Parliament defines by law. Parliament has never made that law, so the privileges remain those inherited from the British House of Commons." },
-    { t: "Sita Soren (2024)", d: "A seven-judge bench held that a legislator who takes a bribe to vote a certain way is not protected by Article 105. The bench overruled P.V. Narasimha Rao (1998), which had given such members immunity." },
+    { t: "Sita Soren (2024)", d: "Seven judges held that a bribe for a vote is not protected, and overruled P.V. Narasimha Rao (1998)." },
     { t: "The limit", d: "Immunity covers what is said inside the House. Repeating the same words outside carries no protection." }
   ],
   seen: [
@@ -334,7 +334,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   concepts: [
     { t: "When it can be called", d: "When one House rejects an ordinary Bill passed by the other, or the Houses disagree on amendments, or six months pass without the second House acting. The President may then summon a joint sitting." },
     { t: "Who presides", d: "The Speaker of the Lok Sabha. The Chairman of the Rajya Sabha does not preside, even though it is a joint sitting." },
-    { t: "The majority needed", d: "A simple majority of the total number of members of both Houses present and voting. Because the Lok Sabha is more than twice the size of the Rajya Sabha, it usually prevails." },
+    { t: "The majority needed", d: "A majority of the members of both Houses present and voting." },
     { t: "Two Bills can never go to a joint sitting", d: "A Money Bill, because the Rajya Sabha cannot block one anyway. And a Constitution Amendment Bill, because each House must pass it separately by a special majority." },
     { t: "The three occasions", d: "The Dowry Prohibition Bill in 1961, the Banking Service Commission (Repeal) Bill in 1978, and the Prevention of Terrorism Bill in 2002." }
   ],
@@ -352,8 +352,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   concepts: [
     { t: "A Money Bill can start only in the Lok Sabha", d: "A Money Bill cannot be introduced in the Rajya Sabha, and needs the President's prior recommendation to be introduced at all." },
     { t: "The Rajya Sabha gets fourteen days", d: "After the Lok Sabha passes it, the Bill goes to the Rajya Sabha, which must return it within fourteen days." },
-    { t: "The Rajya Sabha can only recommend", d: "The Rajya Sabha cannot reject the Bill and cannot amend it. The Rajya Sabha can only suggest changes, which the Lok Sabha is free to accept or ignore." },
-    { t: "Silence means passage", d: "If the Rajya Sabha does not return the Bill within fourteen days, it is deemed to have been passed by both Houses in the form the Lok Sabha sent it." },
+    { t: "The Rajya Sabha can only recommend", d: "The Rajya Sabha cannot reject or amend the Bill. The Rajya Sabha can only suggest changes." },
+    { t: "Silence means passage", d: "After fourteen days without a return, the Bill counts as passed in the form the Lok Sabha sent it." },
     { t: "No joint sitting", d: "There can never be a deadlock, so the mechanism is unnecessary." },
     { t: "The Speaker decides", d: "Whether a Bill is a Money Bill is decided by the Speaker of the Lok Sabha. Article 110(3) makes that decision final. Article 110(4) then requires the Speaker to endorse a certificate on the Bill." }
   ],
@@ -377,7 +377,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
     { t: "What does not make a Bill a Money Bill", d: "Imposing a fine, demanding a fee for a service rendered, or a local authority levying a tax. The article expressly leaves these out." },
     { t: "The Speaker's decision is final", d: "Two clauses, and they do different jobs. Clause (3) says that if any question arises whether a Bill is a Money Bill, the Speaker's decision on it is final. Clause (4) then requires the Speaker's certificate to be endorsed on the Bill when it goes to the Rajya Sabha and to the President. The finality is in clause (3), and the paperwork is in clause (4)." },
     { t: "The Aadhaar controversy", d: "The Aadhaar Act, 2016 was passed as a Money Bill. In Puttaswamy (Aadhaar, 2018) the majority upheld the choice. The dissent called it a fraud on the Constitution." },
-    { t: "The pending question", d: "Rojer Mathew (2019) referred to a larger bench the question of how far courts can look behind the Speaker's certificate. The larger bench has not yet decided the question." }
+    { t: "The pending question", d: "Referred to a larger bench, which has not yet decided how far courts can look behind the certificate." }
   ],
   seen: [
     "UPSC Pre 2018 — the Money Bill definition and the appropriation exclusion"
@@ -393,8 +393,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   concepts: [
     { t: "The three options", d: "Assent to the Bill. Withhold assent. Or return it for the Houses to reconsider, if it is not a Money Bill." },
     { t: "The return can only happen once", d: "If the Houses pass the Bill again, with or without amendments, the President shall not withhold assent. The power to return is called the suspensive veto." },
-    { t: "No time limit", d: "The article does not say how long the President may take before deciding. Sitting on a Bill indefinitely is called the pocket veto, borrowed by analogy from American practice." },
-    { t: "The one clear example", d: "President Zail Singh never acted on the Indian Post Office (Amendment) Bill, 1986, which would have allowed interception of post. The Bill simply died." },
+    { t: "No time limit", d: "No deadline for deciding. Sitting on a Bill indefinitely is called the pocket veto." },
+    { t: "The one clear example", d: "Zail Singh and the Indian Post Office (Amendment) Bill, 1986." },
     { t: "Money Bills cannot be returned", d: "The President can only assent or withhold assent, and by convention always assents, because the Bill was introduced on their own recommendation." }
   ],
   trap: "The pocket veto exists only because Article 111 sets no deadline.\n\nThe Constitution does not grant a pocket veto. The pocket veto is a gap the Constitution failed to close. The distinction is real, and it makes a better answer to a Mains question."
@@ -409,7 +409,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
     { t: "What it is called", d: "The Annual Financial Statement. The word \"budget\" appears nowhere in the Constitution." },
     { t: "What it must show", d: "The estimated receipts and expenditure of the Government of India for each financial year, laid before both Houses." },
     { t: "The two kinds of expenditure", d: "Expenditure *charged* on the Consolidated Fund, and other expenditure *made from* it. They must be shown separately." },
-    { t: "Charged expenditure is not voted", d: "Parliament may discuss it but cannot vote on it. The rule protects certain offices from being starved of funds by a hostile majority." },
+    { t: "Charged expenditure is not voted", d: "Parliament may discuss charged spending, but cannot vote on it." },
     { t: "What is charged", d: "The charged items include the President's pay and the expenses of the office, and the salaries of the presiding officers of both Houses. Debt charges are charged too. So are the salaries and pensions of Supreme Court judges, the pensions of High Court judges, and the salary and pension of the Comptroller and Auditor-General. Any sum needed to satisfy a judgment, decree or arbitral award is charged. Finally, a catch-all covers anything else the Constitution or Parliament declares to be charged." },
     { t: "The President lays it", d: "The President causes it to be laid before both Houses. The Finance Minister presents it on the President's behalf." }
   ],
@@ -426,12 +426,12 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 123 lets the President make an ordinance when either House of Parliament is not in session and immediate action is needed. An ordinance has the force of an Act, but lapses six weeks after Parliament reassembles.",
   why: "Questions test the conditions for an ordinance, its lifespan, and the case law that bans issuing the same ordinance again and again.",
   concepts: [
-    { t: "The two conditions", d: "Both Houses must not be in session, and the President must be satisfied that circumstances require immediate action. If even one House is sitting, no ordinance can be issued." },
+    { t: "The two conditions", d: "An ordinance can be made at any time except when both Houses are in session. So it can be made while only one House is sitting." },
     { t: "An ordinance has the force of an Act", d: "An ordinance is as good as a law of Parliament while it lasts, and is subject to the same constitutional limits. So an ordinance cannot violate Fundamental Rights." },
     { t: "How long it lasts", d: "The ordinance must be laid before both Houses when they reassemble, and ceases to operate six weeks from that reassembly. The ordinance dies earlier if both Houses pass resolutions disapproving it." },
     { t: "The maximum life", d: "Six weeks after reassembly, plus the gap before Parliament meets. Since the gap can be nearly six months under Article 85, an ordinance can survive about six and a half months." },
-    { t: "D.C. Wadhwa (1987)", d: "Bihar had re-promulgated ordinances for years without ever putting them to the legislature. The Court called this a fraud on the Constitution." },
-    { t: "Krishna Kumar Singh (2017)", d: "A seven-judge bench held that laying an ordinance before the legislature is mandatory, and that re-promulgation to keep a law alive is unconstitutional." },
+    { t: "D.C. Wadhwa (1987)", d: "Re-promulgating ordinances without putting them to the legislature is a fraud on the Constitution." },
+    { t: "Krishna Kumar Singh (2017)", d: "Laying an ordinance before the legislature is mandatory. Re-promulgation to keep a law alive is unconstitutional." },
     { t: "What it cannot do", d: "An ordinance cannot amend the Constitution." }
   ],
   seen: [

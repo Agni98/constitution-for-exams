@@ -84,9 +84,10 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "The Deputy Speaker's post also falls vacant when the House is dissolved. But the Speaker stays in office until just before the new House first meets, so the chair is never empty."
 },
 "94": {
-  simple: "The Speaker or Deputy Speaker vacates office on ceasing to be a member, on resignation, or on removal by a resolution passed by a majority of all the then members after fourteen days' notice.\n\n" +
-    "The Speaker does not vacate on dissolution. He continues until immediately before the first meeting of the new House.",
-  catch: "The continuing Speaker is a deliberate device. The House is never without a presiding officer, even between two Lok Sabhas."
+  simple: "The Speaker or Deputy Speaker leaves office on ceasing to be a member of the House, or on resigning. Either can also be removed by a resolution passed by a majority of all the then members, after fourteen days' notice.\n\n" +
+    "The Speaker does not leave office when the House is dissolved. The Speaker stays until just before the new House first meets.",
+  catch: "While a resolution to remove the Speaker is being considered, the Speaker cannot preside. But the Speaker may speak in the debate and vote in the first instance, though not cast a deciding vote.\n\n" +
+    "The Speaker who stays on after dissolution is a deliberate design. So the House always has a presiding officer, even between two Lok Sabhas."
 },
 "95": {
   simple: "The Deputy Speaker acts when the office of Speaker is vacant or the Speaker is absent. So does a member chosen by the House, where necessary.",
@@ -139,10 +140,10 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
   catch: "The figure has never been revised since 1950. The real deterrent is not the money but the disqualification that usually accompanies it."
 },
 "105": {
-  simple: "Members have freedom of speech in Parliament, subject to the Constitution and to the rules of the House.\n\n" +
-    "No member is liable in any court for anything said or any vote given in Parliament or its committees. The same immunity covers publication of proceedings under the authority of a House.",
-  catch: "This immunity is wide, and for a long time it was too wide.\n\n" +
-    "In P.V. Narasimha Rao (1998) the Court held it covered MPs who had taken bribes to vote. A seven-judge bench overruled that in Sita Soren (2024). Bribery is now prosecutable notwithstanding Article 105."
+  simple: "Members have freedom of speech in Parliament, subject to the Constitution and the rules of the House.\n\n" +
+    "No member can be taken to any court for anything said or any vote given in Parliament or its committees. Nobody is liable for publishing proceedings under the authority of a House.",
+  catch: "The immunity is wide, and for a time it was too wide. In P.V. Narasimha Rao (1998) the Court held that it protected MPs who took bribes to vote.\n\n" +
+    "In Sita Soren (2024) a seven-judge bench overruled that ruling. A legislator who takes a bribe can now be prosecuted, whatever Article 105 says about votes in the House."
 },
 "106": {
   simple: "Members' salaries and allowances are as Parliament determines by law.",
@@ -154,35 +155,37 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
   catch: "A Bill pending in the Rajya Sabha, which the Lok Sabha has not yet passed, does not lapse. The Rajya Sabha's permanence is what makes that possible."
 },
 "108": {
-  simple: "Where the two Houses disagree, the President may summon a joint sitting. The trigger is that the second House rejects the Bill, or the Houses cannot agree on amendments, or six months pass without the second House passing it.\n\n" +
-    "A joint sitting decides by a majority of members present and voting.",
-  catch: "The Lok Sabha is more than twice the size of the Rajya Sabha, so a joint sitting is effectively a Lok Sabha vote.\n\n" +
-    "It is not available for Money Bills or Constitution Amendment Bills, and it has been used only three times: in 1961, 1978 and 2002."
+  simple: "If the two Houses disagree on an ordinary Bill, the President may call a joint sitting. The trigger is that one House rejects the Bill, the Houses disagree on amendments, or six months pass without the second House passing it.\n\n" +
+    "The joint sitting decides by a majority of members present and voting.",
+  catch: "The Lok Sabha is more than twice the size of the Rajya Sabha. So a joint sitting usually goes the Lok Sabha's way.\n\n" +
+    "A joint sitting is not available for a Money Bill or a Constitution Amendment Bill. Joint sittings have been held only three times, in 1961, 1978 and 2002."
 },
 "109": {
   simple: "A Money Bill can be introduced only in the Lok Sabha.\n\n" +
-    "The Rajya Sabha must return it within fourteen days, with or without recommendations. The Lok Sabha may accept or reject those recommendations. Either way the Bill is deemed passed by both Houses.",
-  catch: "If the Rajya Sabha does nothing for fourteen days, the Bill is deemed passed anyway.\n\n" +
-    "The upper House has no veto here, and no power to delay."
+    "The Rajya Sabha must return it within fourteen days, with or without recommendations. The Lok Sabha may accept or reject the recommendations. Either way, the Bill counts as passed by both Houses.",
+  catch: "If the Rajya Sabha does nothing for fourteen days, the Bill counts as passed anyway. So the Rajya Sabha can neither block a Money Bill nor delay it for long.\n\n" +
+    "No joint sitting is ever needed for a Money Bill, because no deadlock is possible."
 },
 "110": {
-  simple: "Article 110 defines a Money Bill exhaustively. It is a Bill containing only provisions on taxes, government borrowing, the Consolidated or Contingency Fund, appropriation, expenditure charged on the Consolidated Fund, receipt or custody of money, audit of accounts, or matters incidental to those.\n\n" +
-    "The Speaker's certificate that a Bill is a Money Bill is final.",
-  catch: "Two words carry the weight: 'only', and 'final'.\n\n" +
-    "Certifying the Aadhaar Act and the 2017 Finance Act as Money Bills bypassed the Rajya Sabha. Rojer Mathew (2019) referred the question of whether the Speaker's certificate is reviewable to a larger bench, where it remains."
+  simple: "A Money Bill is a Bill that deals only with certain money matters. They are taxes, government borrowing, the Consolidated and Contingency Funds, spending from them, and the receipt, custody and audit of public money, plus matters incidental to these.\n\n" +
+    "The Speaker's decision that a Bill is a Money Bill is final.",
+  catch: "Two words carry the weight, \"only\" and \"final\". One provision outside the list takes a Bill out of the category. But the Speaker's word on the question is final.\n\n" +
+    "The Aadhaar Act, 2016 and the Finance Act, 2017 were passed as Money Bills, so the Rajya Sabha could not reject or amend them. In Rojer Mathew (2019) the Court sent the question of reviewing the Speaker's certificate to a larger bench, which has not yet decided it."
 },
 "111": {
-  simple: "When a Bill is presented, the President either assents or withholds assent. For a Bill that is not a Money Bill he may instead return it with a message asking the House to reconsider.\n\n" +
-    "If the Houses pass it again, with or without amendment, he must assent.",
-  catch: "There is no time limit anywhere in the article, either for a first decision or after reconsideration. That silence is the pocket veto."
+  simple: "When a Bill passed by Parliament reaches the President, the President may assent or withhold assent. For a Bill that is not a Money Bill, the President may instead return it for reconsideration.\n\n" +
+    "If both Houses pass the Bill again, with or without changes, the President must assent.",
+  catch: "The article sets no time limit, either for the first decision or after reconsideration. So a President can simply sit on a Bill, which is called the pocket veto.\n\n" +
+    "President Zail Singh did so with the Indian Post Office (Amendment) Bill, 1986, which would have allowed the interception of post. The Bill never became law."
 },
 
 /* ---------- Financial procedure ---------- */
 
 "112": {
-  simple: "The President lays an annual financial statement before both Houses. This is the Budget.\n\n" +
-    "It shows estimated receipts and expenditure for the year, and distinguishes expenditure charged on the Consolidated Fund from other expenditure.",
-  catch: "Charged expenditure is discussed but not voted on. It covers the President's emoluments, judges' salaries, debt service and the CAG's establishment. Everything else is voted."
+  simple: "Every financial year, the President lays an annual financial statement before both Houses. The statement is the Budget.\n\n" +
+    "The statement shows the government's estimated receipts and spending. Spending charged on the Consolidated Fund is shown apart from other spending.",
+  catch: "Charged spending can be discussed in Parliament, but not voted on. The charged items include the President's pay, the salaries of Supreme Court judges, debt charges and the salary of the Comptroller and Auditor-General.\n\n" +
+    "So a hostile majority cannot starve these offices of money by refusing a demand."
 },
 "113": {
   simple: "Estimates of charged expenditure are not submitted to the vote of Parliament. Other estimates go to the Lok Sabha as demands for grants, which it may assent to, refuse or reduce. A demand can only be moved on the President's recommendation.",
@@ -228,10 +231,10 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "Courts have held they may still intervene where a proceeding is unconstitutional rather than merely irregular. That is how the Speaker's Money Bill certificate came to be argued as reviewable."
 },
 "123": {
-  simple: "When both Houses are not in session and the President is satisfied that immediate action is needed, he may promulgate an Ordinance. It has the same force as an Act of Parliament.\n\n" +
-    "It must be laid before both Houses, and it ceases to operate six weeks after they reassemble, or earlier if both disapprove it.",
-  catch: "The satisfaction is the Council of Ministers', not the President's.\n\n" +
-    "D.C. Wadhwa (1987) condemned the Bihar practice of re-promulgating ordinances for years. Krishna Kumar Singh (2017) went further: re-promulgation without placing the ordinance before the legislature is a fraud on the Constitution, and the President's satisfaction is open to review."
+  simple: "Unless both Houses of Parliament are in session, the President may make an ordinance when immediate action is needed. An ordinance has the same force as an Act of Parliament.\n\n" +
+    "The ordinance must be laid before both Houses. The ordinance lapses six weeks after Parliament reassembles, or sooner if both Houses disapprove it.",
+  catch: "The satisfaction is really the Council of Ministers' satisfaction, not the President's own. And the courts can review it.\n\n" +
+    "Governments have abused the power. Bihar kept re-making the same ordinances for years without putting them to the legislature, and D.C. Wadhwa (1987) called that a fraud on the Constitution. Krishna Kumar Singh (2017) held that laying an ordinance before the legislature is mandatory, and that re-promulgation to keep a law alive is unconstitutional."
 },
 
 /* ---------- The Supreme Court ---------- */
