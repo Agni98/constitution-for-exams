@@ -249,17 +249,17 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "The 99th Amendment (2014) tried to replace the collegium with a National Judicial Appointments Commission. In 2015 the Court struck the amendment down, holding that judicial primacy in appointments is part of the basic structure. So the system that actually appoints judges appears nowhere in Article 124."
 },
 "124A": {
-  simple: "This article set up the National Judicial Appointments Commission: the Chief Justice, the two next senior judges, the Law Minister and two eminent persons.",
-  catch: "Inserted by the 99th Amendment in 2014 and struck down by five judges in 2015, as violating judicial independence, which is part of the basic structure.\n\n" +
-    "It is printed in the text but has no legal effect."
+  simple: "Article 124A set up the National Judicial Appointments Commission. The members were the Chief Justice, the two next senior judges, the Law Minister and two eminent persons.",
+  catch: "The 99th Amendment inserted the article in 2014. In 2015 a bench of five judges struck it down by four to one, because it breached judicial independence, which is part of the basic structure.\n\n" +
+    "The article is still printed in the text, but has no legal effect."
 },
 "124B": {
-  simple: "This article would have given the NJAC the duty of recommending appointments and transfers of judges.",
-  catch: "Struck down with Article 124A in 2015."
+  simple: "Article 124B would have given the Commission the job of recommending appointments and transfers of judges.",
+  catch: "The Court struck it down with Article 124A in 2015."
 },
 "124C": {
-  simple: "This article would have let Parliament regulate the NJAC's procedure by law.",
-  catch: "Struck down with Articles 124A and 124B in 2015."
+  simple: "Article 124C would have let Parliament regulate the Commission's procedure by law.",
+  catch: "The Court struck it down with Articles 124A and 124B in 2015."
 },
 "125": {
   simple: "Judges' salaries are fixed by Parliament. Their privileges, allowances, leave and pension cannot be changed to their disadvantage after appointment.",
@@ -293,8 +293,8 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "The forum is narrow in other ways too. Private parties cannot use it, disputes under treaties made before the Constitution are excluded, and Parliament has taken inter-State water disputes out of the courts under Article 262."
 },
 "131A": {
-  simple: "This article gave the Supreme Court exclusive jurisdiction over the constitutional validity of central laws.",
-  catch: "Inserted by the 42nd Amendment and repealed by the 43rd in 1977. It was one of the provisions that had stripped High Courts of judicial review."
+  simple: "Article 131A gave the Supreme Court sole power to decide whether central laws were constitutional.",
+  catch: "The 42nd Amendment inserted it, and the 43rd repealed it in 1977. The article was one of the changes that had taken judicial review away from the High Courts."
 },
 "132": {
   simple: "An appeal lies to the Supreme Court from any judgment of a High Court, civil, criminal or other. The High Court must certify that the case raises a substantial question of law on the meaning of the Constitution.",
@@ -365,8 +365,8 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
   catch: "There is no matching article for the High Courts. They rely instead on their power of superintendence under Article 227, and on their power to punish contempt."
 },
 "144A": {
-  simple: "This article required a bench of at least seven judges, and a two-thirds majority, to strike down a law as unconstitutional.",
-  catch: "Inserted by the 42nd Amendment and repealed by the 43rd in 1977."
+  simple: "Article 144A required at least seven judges, and a two-thirds majority, to strike down a law as unconstitutional.",
+  catch: "The 42nd Amendment inserted it, and the 43rd repealed it in 1977."
 },
 "145": {
   simple: "The Supreme Court makes rules for its own practice and procedure, with the President's approval.\n\n" +

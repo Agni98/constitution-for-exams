@@ -363,8 +363,8 @@ partVI: {
   note: "Clause (3) deals with interim orders made without hearing the other side. If the other side applies to have such an order lifted, the court must decide within two weeks, or the order lapses. The 44th Amendment added the safeguard."
 },
 "226A": {
-  simple: "This article barred High Courts from considering the constitutional validity of central laws.",
-  catch: "Inserted by the 42nd Amendment and repealed by the 43rd in 1977."
+  simple: "Article 226A barred the High Courts from deciding whether central laws were constitutional.",
+  catch: "The 42nd Amendment inserted it, and the 43rd repealed it in 1977."
 },
 "227": {
   simple: "Every High Court supervises all the courts and tribunals in its territory. The High Court may call for returns, make general rules for their practice, prescribe forms and fix fees.\n\n" +
@@ -408,8 +408,8 @@ partVI: {
     "After appointment, the High Court controls the district courts under Article 235. The design keeps the lower courts independent of the State government, as Article 50 directs."
 },
 "233A": {
-  simple: "This article validates appointments of, and judgments delivered by, certain district judges appointed irregularly before 1966.",
-  catch: "Inserted by the 20th Amendment, to save a large number of decisions after the Supreme Court found the appointments defective."
+  simple: "Article 233A validates the appointments of certain district judges made irregularly before 1966, and the judgments they gave.",
+  catch: "The Supreme Court had found the appointments defective. The 20th Amendment (1966) added the article to save the many decisions those judges had made."
 },
 "234": {
   simple: "The Governor makes appointments to the judicial service below the rank of district judge. The appointments follow rules made after consulting the State Public Service Commission and the High Court.",

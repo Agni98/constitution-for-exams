@@ -19,16 +19,16 @@ partIX: {
     "The Part requires three levels of panchayat, direct elections, five-year terms, and reserved seats for Scheduled Castes, Scheduled Tribes and women. Part IX also requires a State Election Commission and a State Finance Commission."
 },
 partIXA: {
-  simple: "Part IXA does for urban India what Part IX does for rural India. It was added by the 74th Amendment.\n\n" +
-    "It provides for three kinds of municipal body, ward committees, and district and metropolitan planning committees."
+  simple: "Part IXA does for urban India what Part IX does for rural India. The 74th Amendment added it.\n\n" +
+    "The Part provides for three kinds of municipality, ward committees, and planning committees for districts and metropolitan areas."
 },
 partIXB: {
-  simple: "Part IXB covers co-operative societies. It was added by the 97th Amendment in 2011.\n\n" +
-    "The Supreme Court held in 2021 that this Part needed ratification by half the States and had not received it. It now survives only for multi-State co-operative societies."
+  simple: "Part IXB covers co-operative societies. The 97th Amendment added it in 2011.\n\n" +
+    "In 2021 the Supreme Court held that the Part needed ratification by half the States and had not got it. The Part now survives only for co-operative societies that work in more than one State."
 },
 partX: {
-  simple: "Part X is two articles pointing at the Fifth and Sixth Schedules.\n\n" +
-    "Between them they cover how Scheduled Areas and tribal areas are administered, and the power to create an autonomous State within Assam."
+  simple: "Part X has two articles, which point to the Fifth and Sixth Schedules.\n\n" +
+    "Together they cover how Scheduled Areas and tribal areas are governed, and the power to create an autonomous State within Assam."
 },
 
 "238": {
@@ -45,9 +45,9 @@ partX: {
     "The administrator is not a Governor. The administrator acts as the President's agent, with delegated powers. So even a Union territory with an elected Assembly, such as Delhi, stays under the President's administration."
 },
 "239A": {
-  simple: "Parliament may by law create a legislature or a Council of Ministers, or both, for Puducherry. It decides whether the body is elected or partly nominated, and how it works.",
-  catch: "Such a law is expressly not an amendment of the Constitution for Article 368 purposes.\n\n" +
-    "Parliament can therefore set up or dismantle a Union territory's legislature by simple majority."
+  simple: "Parliament may by law create a legislature, a Council of Ministers, or both, for Puducherry. The law decides whether the legislature is wholly elected or partly nominated, and how it works.",
+  catch: "The law does not count as an amendment of the Constitution under Article 368. So Parliament can set up or take apart a Union territory's legislature by a simple majority.\n\n" +
+    "The Jammu and Kashmir Reorganisation Act, 2019 applied the same article to Jammu and Kashmir."
 },
 "239AA": {
   simple: "Delhi is the National Capital Territory. Its directly elected Legislative Assembly can make laws on State List and Concurrent List subjects, except public order, police and land.\n\n" +
@@ -56,12 +56,12 @@ partX: {
     "In 2018 a Constitution Bench held that the Lieutenant Governor has no general discretion, and must follow ministerial advice outside the three reserved subjects. In May 2023 another Constitution Bench gave the Delhi government control over services. But an ordinance reversed the ruling within a week, and the Government of NCT of Delhi (Amendment) Act, 2023 replaced the ordinance in August."
 },
 "239AB": {
-  simple: "The President may suspend the operation of Article 239AA and run Delhi directly, if its constitutional machinery fails. He acts on the Lieutenant Governor's report or otherwise.",
-  catch: "This is the Delhi equivalent of Article 356. It was used in 2014, when no government could be formed."
+  simple: "If government in Delhi breaks down, the President may suspend Article 239AA and run Delhi directly. The President acts on the Lieutenant Governor's report, or otherwise.",
+  catch: "Article 239AB is Delhi's version of Article 356. The President used it in 2014, when no government could be formed."
 },
 "239B": {
-  simple: "The administrator of Puducherry may promulgate ordinances when the legislature is not in session, with the President's prior instructions.",
-  catch: "This is the Union territory counterpart of Articles 123 and 213, and the only ordinance power that requires clearance before it is exercised."
+  simple: "When Puducherry's legislature is not in session, its administrator may make ordinances, but only after getting the President's instructions.",
+  catch: "Article 239B is the Union territory version of Articles 123 and 213. Unlike them, the power always needs the President's clearance first."
 },
 "240": {
   simple: "The President may make regulations for the peace, progress and good government of the Andaman and Nicobar Islands, Lakshadweep, Dadra and Nagar Haveli and Daman and Diu, and Ladakh. The power also covers Puducherry while its legislature is dissolved or suspended.\n\n" +

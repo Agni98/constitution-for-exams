@@ -65,8 +65,8 @@ partV: {
   catch: "A living wage is a higher standard than a minimum wage. No law has ever set a living wage as such."
 },
 "43A": {
-  simple: "The State shall take steps to secure the participation of workers in the management of industries.",
-  catch: "Added by the 42nd Amendment. It has produced almost no legislation."
+  simple: "The State shall take steps to give workers a share in the management of industries.",
+  catch: "The 42nd Amendment added the article. Almost no legislation has followed it."
 },
 "43B": {
   simple: "The State shall promote co-operative societies that are formed voluntarily, work independently, are controlled democratically and are managed professionally.",
