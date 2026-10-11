@@ -7,16 +7,16 @@
 Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 
 partVII: {
-  simple: "Part VII was repealed whole.\n\n" +
-    "It once governed the former princely States listed in Part B of the First Schedule. The 7th Amendment abolished the Part A / B / C / D classification in 1956 and left this Part empty."
+  simple: "Part VII was repealed in full.\n\n" +
+    "The Part once governed the former princely States, listed in Part B of the First Schedule. The 7th Amendment (1956) ended the old division of States into four classes, and Part VII was left empty."
 },
 partVIII: {
-  simple: "Part VIII covers the Union territories. Each is administered by the President through an administrator he appoints.\n\n" +
-    "Parliament is free to give any of them a legislature. Delhi and Puducherry have one, and the special arrangement for Delhi is in Article 239AA."
+  simple: "Part VIII covers the Union territories. The President governs each one through an administrator the President appoints.\n\n" +
+    "Parliament may give any Union territory a legislature. Delhi, Puducherry, and Jammu and Kashmir have one, and the special arrangement for Delhi is in Article 239AA."
 },
 partIX: {
   simple: "Part IX is the 73rd Amendment's rewrite of local self-government in rural India.\n\n" +
-    "It requires three tiers of panchayat, direct elections, five-year terms, reservation for Scheduled Castes, Scheduled Tribes and women, a State Election Commission and a State Finance Commission."
+    "The Part requires three levels of panchayat, direct elections, five-year terms, and reserved seats for Scheduled Castes, Scheduled Tribes and women. Part IX also requires a State Election Commission and a State Finance Commission."
 },
 partIXA: {
   simple: "Part IXA does for urban India what Part IX does for rural India. It was added by the 74th Amendment.\n\n" +
@@ -32,8 +32,8 @@ partX: {
 },
 
 "238": {
-  simple: "This article once applied Part VI to the States in Part B of the First Schedule, which were the former princely States.",
-  catch: "Omitted by the 7th Amendment in 1956. The article number survives in the printed text only because Article 370(1)(a) referred to it."
+  simple: "Article 238 once applied Part VI to the former princely States, listed in Part B of the First Schedule.",
+  catch: "The 7th Amendment omitted it in 1956."
 },
 
 /* ---------- Part VIII: Union territories ---------- */
@@ -64,18 +64,18 @@ partX: {
   catch: "This is the Union territory counterpart of Articles 123 and 213, and the only ordinance power that requires clearance before it is exercised."
 },
 "240": {
-  simple: "The President may make regulations for the peace, progress and good government of the Andaman and Nicobar Islands, Lakshadweep, Dadra and Nagar Haveli and Daman and Diu, Ladakh, and Puducherry.\n\n" +
-    "Such a regulation may repeal or amend an Act of Parliament as it applies there.",
-  catch: "A regulation made by the President can override an Act of Parliament in these territories.\n\n" +
-    "That is an extraordinary executive power. It exists because these territories have no legislature of their own."
+  simple: "The President may make regulations for the peace, progress and good government of the Andaman and Nicobar Islands, Lakshadweep, Dadra and Nagar Haveli and Daman and Diu, and Ladakh. The power also covers Puducherry while its legislature is dissolved or suspended.\n\n" +
+    "A regulation may repeal or amend an Act of Parliament as it applies there.",
+  catch: "So a regulation made by the President can override an Act of Parliament in these territories.\n\n" +
+    "The power is extraordinary for the executive to hold, and exists because these territories have no legislature of their own."
 },
 "241": {
-  simple: "Parliament may constitute a High Court for a Union territory, or declare any court there to be a High Court.",
-  catch: "Delhi has its own High Court under this article. Most other Union territories fall within the jurisdiction of a neighbouring State's High Court."
+  simple: "Parliament may set up a High Court for a Union territory, or declare a court there to be a High Court.",
+  catch: "Delhi has its own High Court under Article 241. Most other Union territories come under a neighbouring State's High Court."
 },
 "242": {
-  simple: "This article once made special provision for Coorg.",
-  catch: "Omitted by the 7th Amendment in 1956, when Coorg was merged into Mysore."
+  simple: "Article 242 once made special provision for Coorg.",
+  catch: "The 7th Amendment omitted it in 1956, when Coorg became part of Mysore."
 },
 
 /* ---------- Part IX: the Panchayats ---------- */

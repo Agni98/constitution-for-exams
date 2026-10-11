@@ -367,36 +367,36 @@ partVI: {
   catch: "Inserted by the 42nd Amendment and repealed by the 43rd in 1977."
 },
 "227": {
-  simple: "Every High Court has superintendence over all courts and tribunals within its territory. It may call for returns, make general rules for their practice, prescribe forms and settle fees.\n\n" +
-    "Courts and tribunals constituted under a law relating to the armed forces are excluded.",
-  catch: "This is administrative and judicial supervision combined, and unlike Article 226 it can be exercised by the Court on its own motion.\n\n" +
-    "L. Chandra Kumar (1997) held that judicial review under Articles 226 and 227 is part of the basic structure. A tribunal's decisions can never be put beyond a High Court."
+  simple: "Every High Court supervises all the courts and tribunals in its territory. The High Court may call for returns, make general rules for their practice, prescribe forms and fix fees.\n\n" +
+    "Courts and tribunals set up under laws on the armed forces are excluded.",
+  catch: "The supervision is both administrative and judicial, and the High Court may use it on its own.\n\n" +
+    "L. Chandra Kumar (1997) held that review by the High Courts under Articles 226 and 227 is part of the basic structure. So no tribunal's decision can be put beyond a High Court's reach."
 },
 "228": {
-  simple: "Where a case pending in a subordinate court involves a substantial question of law as to the interpretation of the Constitution, and deciding it is necessary to dispose of the case, the High Court withdraws the case.\n\n" +
-    "It may then decide the case entirely, or decide the question and send the case back.",
-  catch: "The second course is the usual one."
+  simple: "Sometimes a case in a lower court raises a substantial question about the meaning of the Constitution, and the case cannot be decided without answering it. The High Court then takes the case over.\n\n" +
+    "The High Court may decide the whole case, or answer the question and send the case back.",
+  catch: "Sending the case back after answering the question is the usual course."
 },
 "228A": {
-  simple: "This article prescribed a special procedure for determining the constitutional validity of State laws.",
-  catch: "Inserted by the 42nd Amendment and repealed by the 43rd in 1977."
+  simple: "Article 228A once set out a special procedure for deciding whether State laws were constitutional.",
+  catch: "The 42nd Amendment inserted it, and the 43rd repealed it in 1977."
 },
 "229": {
-  simple: "Appointments of officers and servants of a High Court are made by the Chief Justice. Their service conditions are set by his rules, subject to the Governor's approval where salaries and pensions are involved.\n\n" +
-    "The Court's administrative expenses are charged on the Consolidated Fund of the State.",
-  catch: "Control over its own staff, and a charged budget, are the administrative half of judicial independence."
+  simple: "The Chief Justice of a High Court appoints its officers and staff, and sets their conditions of service by rules. Rules on salaries and pensions need the Governor's approval.\n\n" +
+    "The Court's running costs are charged on the State's Consolidated Fund.",
+  catch: "Control over its own staff, and a budget the legislature does not vote on, are the administrative half of judicial independence."
 },
 "230": {
-  simple: "Parliament may by law extend or exclude the jurisdiction of a High Court to or from a Union territory.",
-  catch: "This is how a High Court comes to have jurisdiction over a Union territory that has no High Court of its own."
+  simple: "Parliament may by law extend a High Court's jurisdiction to a Union territory, or take it away.",
+  catch: "So a Union territory with no High Court of its own can still come under one."
 },
 "231": {
-  simple: "Parliament may by law establish a common High Court for two or more States, or for States and a Union territory.",
-  catch: "This is why there are fewer High Courts than States. The Punjab and Haryana High Court and the Gauhati High Court are the best-known examples."
+  simple: "Parliament may by law set up one High Court for two or more States, or for States and a Union territory.",
+  catch: "So India has fewer High Courts than States. The Punjab and Haryana High Court and the Gauhati High Court are the best-known shared courts."
 },
 "232": {
-  simple: "This was an earlier provision on the interpretation of this Chapter.",
-  catch: "Omitted by the 7th Amendment in 1956, when the States were reorganised."
+  simple: "Article 232 was an early provision on how to read this Chapter.",
+  catch: "The 7th Amendment omitted it in 1956, when the States were reorganised."
 },
 
 /* ---------- Subordinate courts ---------- */
@@ -412,20 +412,20 @@ partVI: {
   catch: "Inserted by the 20th Amendment, to save a large number of decisions after the Supreme Court found the appointments defective."
 },
 "234": {
-  simple: "Appointments to the judicial service other than district judges are made by the Governor, in accordance with rules made after consulting the State Public Service Commission and the High Court.",
-  catch: "Both bodies must be consulted. It is a deliberate double lock, and the Supreme Court has held that the High Court's view carries greater weight."
+  simple: "The Governor makes appointments to the judicial service below the rank of district judge. The appointments follow rules made after consulting the State Public Service Commission and the High Court.",
+  catch: "Both bodies must be consulted, a deliberate double check. The Supreme Court has held that the High Court's view carries more weight."
 },
 "235": {
-  simple: "Control over district courts and the courts subordinate to them is vested in the High Court. That includes posting, promotion and leave of persons in the judicial service below the rank of district judge.",
-  catch: "'Control' here is the constitutional foundation of judicial independence at the trial level. The executive appoints; the High Court controls."
+  simple: "The High Court controls the district courts and the courts below them. The control includes posting, promoting and granting leave to judicial officers below the rank of district judge.",
+  catch: "The High Court's control is the constitutional basis of the independence of the trial courts. The executive appoints, but the High Court controls."
 },
 "236": {
-  simple: "Article 236 defines two terms for this Chapter. 'District judge' includes a range of named judicial offices. 'Judicial service' means a service consisting exclusively of persons intended to fill the post of district judge and civil judicial posts inferior to it.",
-  catch: "The definition of judicial service is exclusive. That is why the Article 235 protection does not extend to every court employee."
+  simple: "Article 236 defines two terms for this Chapter. \"District judge\" covers a list of named judicial offices. \"Judicial service\" means a service made up only of people meant to fill the post of district judge and the civil judicial posts below it.",
+  catch: "The definition of judicial service is narrow. So the protection of Article 235 does not reach every employee of a court."
 },
 "237": {
-  simple: "The Governor may by public notification apply the provisions of this Chapter to any class of magistrates in the State.",
-  catch: "This lets a State bring executive magistrates under the High Court's control. It is the practical route to the separation of judiciary and executive that Article 50 directs."
+  simple: "The Governor may, by public notice, apply this Chapter to any class of magistrates in the State.",
+  catch: "A State can use Article 237 to bring executive magistrates under the High Court's control. Article 237 is the practical route to the separation of the judiciary from the executive that Article 50 asks for."
 }
 
 });
