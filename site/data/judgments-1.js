@@ -48,39 +48,45 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Unanimous, 9:0',
   tags: ['Right to privacy', 'Article 21'],
   judges: 'J.S. Khehar CJI, J. Chelameswar, S.A. Bobde, R.K. Agrawal, R.F. Nariman, A.M. Sapre, D.Y. Chandrachud, S.K. Kaul and S. Abdul Nazeer',
-  summary: 'The right to privacy is a fundamental right. It is part of the right to life and personal liberty under Article 21 and of the freedoms in Part III.',
+  summary: 'Privacy is a fundamental right. The Constitution does not name it, but it is part of the right to life and personal liberty in Article 21, and of the other freedoms in Part III.',
+  background: [
+    'Article 21 says that no person shall lose their life or personal liberty except by a procedure set by law. The Constitution nowhere uses the word "privacy".',
+    'In M.P. Sharma (1954), eight judges dealt with police searches of company records. They said the Constitution has no right to privacy of the kind found in the American Constitution.',
+    'In Kharak Singh (1962), six judges dealt with police visits to a suspect\'s home at night. They struck down the night visits as a breach of personal liberty. But the majority still said privacy was not a guaranteed right.',
+    'Later benches of fewer judges took a different line. In Gobind (1975) and R. Rajagopal (1994), they treated privacy as a right that the law protects.',
+    'In India a smaller bench cannot overrule a larger one. So the older rulings of eight and six judges stood in the way, and only a bigger bench could settle the question.'
+  ],
   question: [
-    'Is the right to privacy a fundamental right under the Constitution of India?',
-    'Two older judgments of larger benches said the Constitution does not protect privacy. Were they correct?'
+    'Is privacy a fundamental right under the Constitution of India?',
+    'If it is, were M.P. Sharma and Kharak Singh wrong to say that the Constitution does not protect it?'
   ],
   facts: [
-    'Justice K.S. Puttaswamy, a retired High Court judge, and others challenged the Aadhaar scheme. They argued that collecting biometric data of every resident violated their privacy.',
-    'The Union Government argued that the Constitution does not guarantee a right to privacy. It relied on M.P. Sharma (1954), decided by eight judges, and Kharak Singh (1962), decided by six judges.',
-    'Later cases decided by smaller benches, such as Gobind (1975) and R. Rajagopal (1994), had treated privacy as a protected right. Only a larger bench could settle the conflict.',
-    'In August 2015 a bench of three judges referred the question to a larger bench. The question was finally heard by nine judges.'
+    'Aadhaar gives every resident a 12-digit number linked to their fingerprints and iris scans. Justice K.S. Puttaswamy, a retired High Court judge, and others challenged the scheme. They argued that collecting such data from every resident broke their privacy.',
+    'The Union Government replied that the Constitution does not guarantee privacy at all. The Government relied on M.P. Sharma and Kharak Singh.',
+    'In August 2015 a bench of three judges sent the privacy question to a larger bench. Nine judges finally heard it, which was enough to overrule the bench of eight in M.P. Sharma.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (9:0)', points: [
-      'The right to privacy is protected as an intrinsic part of the right to life and personal liberty under Article 21. It is also part of the freedoms guaranteed by Part III.',
-      'M.P. Sharma is overruled. It had held that the Constitution does not protect privacy.',
-      'Kharak Singh is overruled to the extent that it held privacy is not a guaranteed right.',
-      'The nine judges wrote six opinions. All of them agreed on this result.'
+    { kind: 'unanimous', label: 'All nine judges agreed (9:0)', points: [
+      'Privacy is a fundamental right. The right is part of the right to life and personal liberty in Article 21, and of the freedoms in Part III.',
+      'M.P. Sharma is overruled, because it said the Constitution does not protect privacy.',
+      'Kharak Singh is overruled on the same point. Its ruling on the night visits stands.',
+      'The nine judges wrote six opinions. All six reached the same result.'
     ] },
-    { kind: 'concurring', label: 'The main opinion (Justice D.Y. Chandrachud, for four judges)', points: [
-      'Privacy is not absolute. A law that limits it must pass three tests. There must be a law. The law must pursue a legitimate aim of the State. The limit must be proportionate to that aim.',
-      'Privacy covers the body, personal information and the freedom to make personal choices.',
-      'The majority opinions in ADM Jabalpur (1976) were "seriously flawed". ADM Jabalpur is overruled.'
+    { kind: 'concurring', label: 'The main opinion, by Justice D.Y. Chandrachud for four judges', points: [
+      'Privacy is not absolute. The State may limit it, but only if three tests are met. There must be a law. The law must serve a legitimate aim of the State. And the limit must be in proportion to that aim.',
+      'Privacy covers three things: the body, personal information, and the freedom to make personal choices, such as whom to live with or what to eat.',
+      'The majority in ADM Jabalpur (1976) had held that no court could protect a detained person during the Emergency. The opinion called that view "seriously flawed" and overruled it.'
     ] }
   ],
   principles: [
-    'Privacy is a fundamental right even though the Constitution does not name it.',
-    'Dignity and personal autonomy are at the core of the fundamental rights in Part III.',
-    'The State can limit privacy only by a law that has a legitimate aim and is proportionate.',
-    'Life and personal liberty are not gifts of the Constitution. They belong to every person, and the Constitution recognises them.'
+    'A right can be fundamental even when the Constitution does not name it. Privacy is found inside the rights to life, liberty and the freedoms.',
+    'Dignity and the freedom to run one\'s own life lie at the core of Part III.',
+    'The State can limit privacy only through a law with a legitimate aim, and only as far as that aim needs.',
+    'So life and liberty are not gifts from the Constitution. Every person has them already, and the Constitution recognises them.'
   ],
   legacy: [
-    'In 2018 the Court relied on this judgment to decriminalise consensual same-sex relations in Navtej Singh Johar, and adultery in Joseph Shine.',
-    'In September 2018 a five-judge bench upheld the Aadhaar scheme in Puttaswamy (Aadhaar). It applied the privacy tests and struck down some parts of the Aadhaar law.',
+    'In 2018 the Court relied on this judgment twice. In Navtej Singh Johar it decriminalised consensual same-sex relations, and in Joseph Shine it decriminalised adultery.',
+    'In September 2018 a bench of five judges ruled on Aadhaar itself, in Puttaswamy (Aadhaar). The bench applied the privacy tests, upheld the scheme, and struck down some parts of the Aadhaar law.',
     'Justice D.Y. Chandrachud\'s opinion overruled ADM Jabalpur. His father, Justice Y.V. Chandrachud, had been one of the four majority judges in that case.',
     'The judgment shaped the debate on data protection that led to the Digital Personal Data Protection Act, 2023.'
   ],
@@ -97,36 +103,42 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Majority 4:1',
   tags: ['Emergency', 'Habeas corpus', 'Article 359'],
   judges: 'A.N. Ray CJI, H.R. Khanna, M.H. Beg, Y.V. Chandrachud and P.N. Bhagwati',
-  summary: 'During the 1975 Emergency, no detained person could go to court for habeas corpus, even against an illegal or bad-faith detention. Justice H.R. Khanna dissented.',
+  summary: 'During the 1975 Emergency, the Court held by 4 votes to 1 that a detained person could not go to court to challenge the detention, even if it was illegal or made in bad faith. Justice H.R. Khanna dissented.',
+  background: [
+    'Under Article 352, the President can declare a national Emergency. Under Article 359, the President can then suspend people\'s right to go to court to enforce chosen fundamental rights.',
+    'Article 21 protects life and personal liberty. Article 22 gives protections to people who are arrested or detained.',
+    'Habeas corpus is a court order that tells the State to bring a detained person before the court and show the legal reason for holding them. If there is none, the person goes free. Under Article 226, every High Court can issue such orders.',
+    'The Maintenance of Internal Security Act, 1971 (MISA) allowed preventive detention. The government could hold a person without trial to stop them from acting against the security of the State.'
+  ],
   question: [
-    'The President had suspended the right to move any court to enforce Articles 14, 21 and 22. While that order was in force, could a detained person still ask a High Court for a writ of habeas corpus under Article 226?',
-    'Could the detained person argue that the detention order was illegal, or was made in bad faith?'
+    'The President had suspended the right to go to any court to enforce Articles 14, 21 and 22. While that order lasted, could a detained person still ask a High Court for habeas corpus?',
+    'Could the person at least argue that the detention order was illegal, or was made in bad faith?'
   ],
   facts: [
-    'A national Emergency was proclaimed on 25 June 1975. On 27 June 1975 the President issued an order under Article 359(1). It suspended the right to move any court to enforce Articles 14, 21 and 22 while the Emergency lasted.',
-    'Many people were detained under the Maintenance of Internal Security Act, 1971 (MISA). They filed habeas corpus petitions in the High Courts.',
-    'The Government argued that these petitions could not be heard at all. Several High Courts rejected that argument, including Allahabad, Bombay (Nagpur Bench), Delhi, Karnataka, Madhya Pradesh and Punjab and Haryana.',
-    'The Government appealed to the Supreme Court. A bench of five judges heard the appeals.'
+    'A national Emergency was declared on 25 June 1975. On 27 June 1975 the President made an order under Article 359(1). The order suspended the right to go to any court to enforce Articles 14, 21 and 22 while the Emergency lasted.',
+    'Many people, including opposition leaders, were detained under MISA. They filed habeas corpus petitions in the High Courts.',
+    'The Government argued that the courts could not hear these petitions at all. Several High Courts disagreed, including Allahabad, Bombay (Nagpur Bench), Delhi, Karnataka, Madhya Pradesh and Punjab and Haryana.',
+    'The Government appealed to the Supreme Court, and a bench of five judges heard the appeals.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority (4 judges: Ray CJI, Beg, Chandrachud and Bhagwati)', points: [
-      'Because of the Presidential Order of 27 June 1975, no person has locus standi to file a writ petition under Article 226 for habeas corpus against a detention order.',
-      'This is so even if the detention is said to be illegal, made in bad faith, or not in line with MISA.',
-      'Article 21 is the only source of the right to life and personal liberty against the State. A habeas corpus petition enforces Article 21, so it is barred while the order is in force.'
+    { kind: 'majority', label: 'The majority of four: Chief Justice Ray and Justices Beg, Chandrachud and Bhagwati', points: [
+      'While the order of 27 June 1975 was in force, no detained person had the standing to ask a High Court for habeas corpus under Article 226.',
+      'The bar applied even if the detention was said to be illegal, made in bad faith, or outside what MISA allowed.',
+      'Article 21 is the only source of the right to life and liberty against the State. A habeas corpus petition enforces Article 21. So, with Article 21 suspended, the petition could not be heard.'
     ] },
-    { kind: 'dissent', label: 'Dissent (Justice H.R. Khanna)', points: [
-      'Article 21 is not the only source of the right to life and personal liberty. Even without Article 21, the State cannot take away a person\'s life or liberty without the authority of law.',
-      'The power of the High Courts to issue habeas corpus under Article 226 is part of the Constitution. No authority was given the power to suspend it during an Emergency.',
-      'He quoted Chief Justice Hughes of the United States: a dissent is "an appeal to the brooding spirit of the law, to the intelligence of a future day".'
+    { kind: 'dissent', label: 'Justice H.R. Khanna, alone in dissent', points: [
+      'Article 21 is not the only source of the right to life and liberty. Even without Article 21, the State cannot take a person\'s life or liberty unless a law allows it.',
+      'The High Courts\' power to issue habeas corpus under Article 226 is part of the Constitution. No one was given the power to suspend that power during an Emergency.',
+      'He quoted Chief Justice Hughes of the United States. A dissent, Hughes had said, is "an appeal to the brooding spirit of the law, to the intelligence of a future day".'
     ] }
   ],
   principles: [
-    'The majority read an Article 359 order very widely. Courts could not examine a detention at all while the order lasted.',
-    'Justice Khanna held that the rule of law protects life and liberty even during an Emergency.',
-    'The case shows why the power of the courts to protect personal liberty matters most when the State is most powerful.'
+    'The majority gave an Article 359 order the widest possible reach. While the order lasted, courts could not look at a detention at all.',
+    'Justice Khanna held the opposite. In his view, the rule of law protects life and liberty even during an Emergency.',
+    'So the case is remembered as a warning. The courts\' power to protect personal liberty matters most when the State is at its most powerful.'
   ],
   legacy: [
-    'The 44th Amendment (1978) changed Article 359. Since 20 June 1979, a Presidential Order cannot suspend the enforcement of Articles 20 and 21.',
+    'The 44th Amendment (1978) changed Article 359. Since 20 June 1979, a Presidential Order cannot suspend the enforcement of Articles 20 and 21, even during an Emergency.',
     'In January 1977 Justice Khanna was passed over for Chief Justice of India. Justice M.H. Beg was appointed instead, and Justice Khanna resigned.',
     'In 2011 Justice P.N. Bhagwati, one of the majority judges, said the decision was wrong and apologised for it.',
     'In Puttaswamy (2017), Justice D.Y. Chandrachud\'s opinion for four judges called the majority opinions "seriously flawed" and overruled ADM Jabalpur.'
@@ -145,36 +157,43 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   status: 'partly',
   tags: ['Maintenance', 'Section 125 CrPC', 'Uniform Civil Code'],
   judges: 'Y.V. Chandrachud CJI, D.A. Desai, O. Chinnappa Reddy, E.S. Venkataramiah and Ranganath Misra',
-  summary: 'A divorced Muslim woman who cannot maintain herself can claim maintenance from her former husband under Section 125 of the Code of Criminal Procedure.',
+  summary: 'A divorced Muslim woman who cannot support herself can claim a monthly allowance from her former husband under Section 125 of the Code of Criminal Procedure, like any other woman.',
+  background: [
+    'Section 125 of the Code of Criminal Procedure, 1973 (CrPC) protects people from destitution. A magistrate can order a man with enough means to pay a monthly allowance to his wife, children or parents if they cannot support themselves. A divorced woman who has not remarried counts as a "wife".',
+    'Marriage, divorce and inheritance in India are governed partly by personal laws, which differ by religion. Under Muslim personal law, a husband who divorces his wife must support her during the iddat, a waiting period of about three months after the divorce.',
+    'Mahr is a sum that the husband pays or promises to his wife as part of the marriage contract. Under Section 127(3)(b) of the CrPC, a maintenance order can be cancelled if the woman has received the full sum due to her on divorce under her personal law.',
+    'Article 44, one of the Directive Principles, asks the State to try to secure a uniform civil code, one set of family laws for all citizens.'
+  ],
   question: [
-    'Can a divorced Muslim woman claim maintenance from her former husband under Section 125 of the Code of Criminal Procedure, 1973?',
-    'Under Muslim personal law, the husband pays maintenance only for the iddat period after divorce. Does that end his liability under Section 125?',
-    'Is mahr (dower) a "sum payable on divorce" that frees the husband from paying maintenance under Section 127(3)(b)?'
+    'Can a divorced Muslim woman claim maintenance from her former husband under Section 125 CrPC?',
+    'Muslim personal law makes the husband pay only for the iddat period. Does that end his duty under Section 125?',
+    'Is mahr a "sum payable on divorce", so that paying it frees the husband from maintenance under Section 127(3)(b)?'
   ],
   facts: [
-    'Shah Bano married Mohd. Ahmed Khan in 1932. In 1975 he turned her out of the matrimonial home.',
-    'In April 1978 she applied to the Judicial Magistrate at Indore for maintenance under Section 125 CrPC.',
-    'On 6 November 1978 her husband divorced her by an irrevocable talaq. He said he had paid her Rs. 3,000 as mahr during the iddat period, so he owed her nothing more.',
-    'The Magistrate awarded her Rs. 25 a month. In 1980 the Madhya Pradesh High Court raised this to Rs. 179.20 a month.',
-    'The husband appealed. Two judges doubted earlier rulings, Bai Tahira (1979) and Fuzlunbi (1980), which had applied Section 125 to divorced Muslim women. So the case went to a bench of five judges.'
+    'Shah Bano married Mohd. Ahmed Khan in 1932. In 1975 he turned her out of the marital home.',
+    'In April 1978 she asked the Judicial Magistrate at Indore for maintenance under Section 125.',
+    'On 6 November 1978 her husband divorced her by an irrevocable talaq, a divorce that cannot be taken back. He said he had paid her Rs. 3,000 as mahr during the iddat, so he owed her nothing more.',
+    'The Magistrate awarded her Rs. 25 a month. In 1980 the Madhya Pradesh High Court raised the sum to Rs. 179.20 a month.',
+    'The husband appealed. Two earlier rulings, Bai Tahira (1979) and Fuzlunbi (1980), had applied Section 125 to divorced Muslim women. Two judges doubted those rulings, so the case went to a bench of five judges.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (5:0), judgment by Chief Justice Y.V. Chandrachud', points: [
-      'Section 125 is a secular provision. It applies to every wife, whatever her religion. A divorced woman who has not remarried is a "wife" for this purpose.',
-      'If a divorced Muslim woman can maintain herself, her husband\'s duty ends with the iddat period. If she cannot, she can claim maintenance under Section 125.',
-      'Mahr is paid in consideration of the marriage, not of the divorce. So it is not a "sum payable on divorce" under Section 127(3)(b).',
-      'Verses 241 and 242 of Sura II of the Quran also place a duty on the husband to provide for a divorced wife.',
-      'The appeal was dismissed. The husband was ordered to pay Rs. 10,000 as costs.'
+    { kind: 'unanimous', label: 'All five judges agreed (5:0). Chief Justice Y.V. Chandrachud wrote the judgment', points: [
+      'Section 125 is a secular provision, so it applies to every wife, whatever her religion. A divorced woman who has not remarried is a "wife" for this purpose.',
+      'If a divorced Muslim woman can support herself, the husband\'s duty ends with the iddat. But if she cannot, she can claim maintenance under Section 125.',
+      'Mahr is paid because of the marriage, not because of the divorce. So mahr is not a "sum payable on divorce" under Section 127(3)(b).',
+      'The Court added that verses 241 and 242 of Sura II of the Quran also require a husband to provide for a divorced wife.',
+      'The appeal was dismissed, and the husband was ordered to pay Rs. 10,000 as costs.'
     ] }
   ],
   principles: [
     'A general law that protects women from destitution applies to all women, whatever their personal law.',
-    'Personal law cannot defeat a statutory right that prevents destitution.',
-    'The Court said that "Article 44 of our Constitution has remained a dead letter". It said a common civil code would help national integration.'
+    'Personal law cannot defeat a right in a statute that stops a person from falling into destitution.',
+    'The Court also said that "Article 44 of our Constitution has remained a dead letter". In its view, a common civil code would help national integration.',
+    'So the case set a floor under every divorced woman. Religion decides much of family law, but not whether a woman is left without support.'
   ],
   legacy: [
     'The judgment led to political protest. In 1986 Parliament passed the Muslim Women (Protection of Rights on Divorce) Act to limit its effect.',
-    'In Danial Latifi v. Union of India (2001), a five-judge bench upheld the 1986 Act. It read the Act to require the husband to make a reasonable and fair provision for the wife\'s future, paid within the iddat period.',
+    'In Danial Latifi v. Union of India (2001), five judges upheld the 1986 Act. But they read it to require the husband to make a reasonable and fair provision for the wife\'s future, paid within the iddat period.',
     'In Mohd. Abdul Samad v. State of Telangana (2024), the Supreme Court held that the 1986 Act does not take away a divorced Muslim woman\'s right to claim maintenance under Section 125.',
     'The call for a uniform civil code under Article 44 is still debated.'
   ],
@@ -191,40 +210,45 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Majority 4:1',
   tags: ['Judicial appointments', 'Basic structure', 'Article 124A'],
   judges: 'J.S. Khehar, J. Chelameswar, Madan B. Lokur, Kurian Joseph and Adarsh Kumar Goel',
-  summary: 'The 99th Amendment and the NJAC Act were struck down because they compromised the independence of the judiciary, which is part of the basic structure. The collegium system was restored.',
+  summary: 'The Court struck down the 99th Amendment and the NJAC Act, which had given the government a say in choosing judges. The independence of the judiciary is part of the basic structure, so the collegium of senior judges came back.',
+  background: [
+    'Articles 124 and 217 say that the President appoints judges of the Supreme Court and the High Courts after "consultation" with the Chief Justice of India and other judges. In practice the government chose, after consulting the judges.',
+    'In the Second Judges case (1993), the Court held that the opinion of the Chief Justice of India must prevail, formed together with senior colleagues. Since then, judges have chosen judges through a group of senior judges called the collegium.',
+    'Critics said the collegium worked in secret, gave no reasons and kept no public record. Parliament set out to replace it.',
+    'The basic structure is the set of core features that Parliament cannot destroy, even by amending the Constitution. The Court laid down the rule in Kesavananda Bharati (1973).'
+  ],
   question: [
-    'Were the Constitution (Ninety-ninth Amendment) Act, 2014 and the National Judicial Appointments Commission Act, 2014 valid?',
-    'Did replacing the collegium with a commission that included the Law Minister and two eminent persons violate the independence of the judiciary, which is part of the basic structure?'
+    'Were the 99th Amendment (2014) and the National Judicial Appointments Commission Act (2014) valid?',
+    'The new commission included the Law Minister and two eminent persons from outside the judiciary. Did that break the independence of the judiciary, which is part of the basic structure?'
   ],
   facts: [
-    'Since the Second Judges case (1993), judges of the Supreme Court and the High Courts had been chosen by a collegium of senior judges.',
-    'In 2014 Parliament passed the 99th Amendment and the NJAC Act. The Amendment inserted Articles 124A, 124B and 124C. Both laws came into force on 13 April 2015.',
-    'The Commission had six members: the Chief Justice of India, the two next senior judges of the Supreme Court, the Union Minister of Law and Justice, and two eminent persons.',
-    'The eminent persons were to be chosen by a committee of the Prime Minister, the Chief Justice of India and the Leader of the Opposition in the Lok Sabha. One of them had to be from the Scheduled Castes, Scheduled Tribes, Other Backward Classes or minorities, or a woman.',
-    'The Commission could not recommend a person if any two members disagreed. So the Law Minister and one eminent person together could block a name.',
+    'In 2014 Parliament passed the 99th Amendment and the NJAC Act. The Amendment added Articles 124A, 124B and 124C. Both laws came into force on 13 April 2015.',
+    'The Commission had six members. They were the Chief Justice of India, the two next senior judges of the Supreme Court, the Union Minister of Law and Justice, and two eminent persons.',
+    'A committee of the Prime Minister, the Chief Justice of India and the Leader of the Opposition in the Lok Sabha would choose the two eminent persons. One of them had to be a woman, or a person from the Scheduled Castes, Scheduled Tribes, Other Backward Classes or minorities.',
+    'If any two members disagreed, the Commission could not recommend a person. So the Law Minister and one eminent person, acting together, could block any name.',
     'The Supreme Court Advocates-on-Record Association and others challenged both laws.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority (4 judges: Khehar, Lokur, Joseph and Goel)', points: [
+    { kind: 'majority', label: 'The majority of four: Justices Khehar, Lokur, Joseph and Goel', points: [
       'The 99th Amendment and the NJAC Act are unconstitutional and void.',
-      'The primacy of the judiciary in choosing judges is part of the independence of the judiciary. The independence of the judiciary is part of the basic structure.',
-      'The presence of the Law Minister, and the power of non-judicial members to block a recommendation, compromised that independence.',
-      'The collegium system that existed before the 99th Amendment is operative again.'
+      'When judges are chosen, the judiciary\'s view must prevail. The judiciary\'s primacy is part of the independence of the judiciary, and the independence of the judiciary is part of the basic structure.',
+      'The Law Minister\'s seat, and the power of members from outside the judiciary to block a name, damaged that independence.',
+      'So the collegium system that existed before the 99th Amendment works again.'
     ] },
-    { kind: 'dissent', label: 'Dissent (Justice J. Chelameswar)', points: [
+    { kind: 'dissent', label: 'Justice J. Chelameswar, alone in dissent', points: [
       'The 99th Amendment is valid.',
-      'A commission that includes people from outside the judiciary could act as a check on the collegium and make appointments more transparent.'
+      'A commission with members from outside the judiciary could check the collegium and make appointments more open.'
     ] }
   ],
   principles: [
-    'The independence of the judiciary is part of the basic structure. Even a constitutional amendment cannot take it away.',
-    'In appointments to the Supreme Court and the High Courts, the opinion of the judiciary must have primacy.',
-    'The Court accepted that the collegium system needed to become more transparent.'
+    'The independence of the judiciary is part of the basic structure. Even an amendment to the Constitution cannot take it away.',
+    'In choosing judges for the Supreme Court and the High Courts, the judiciary\'s opinion must prevail over the government\'s.',
+    'But the Court also accepted that the collegium needed to become more open. So the judgment kept the judges in charge of appointments, while asking them to do the job more transparently.'
   ],
   legacy: [
     'In November 2015 the Court heard suggestions on how to improve the collegium system.',
-    'On 16 December 2015 the Court said the Government of India could supplement the Memorandum of Procedure for appointments, in consultation with the Chief Justice of India. It named eligibility criteria, transparency, a secretariat and a way to deal with complaints.',
-    'The collegium system still decides appointments to the Supreme Court and the High Courts.',
+    'On 16 December 2015 the Court said the Government of India could add to the Memorandum of Procedure, the document that sets out how appointments are processed, in consultation with the Chief Justice of India. The Court named eligibility criteria, transparency, a secretariat and a way to deal with complaints.',
+    'The collegium still decides appointments to the Supreme Court and the High Courts.',
     'Articles 124A, 124B and 124C are still printed in the official text of the Constitution. Because of this judgment, they have no effect.'
   ],
   source: 'https://indiankanoon.org/doc/66970168/'
