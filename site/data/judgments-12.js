@@ -300,8 +300,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the company\'s money settled the claims for compensation, but it could not buy the accused freedom from trial.'
   ],
   legacy: [
-    'In 2010 a court in Bhopal convicted seven former officials of Union Carbide India Ltd. of causing death by negligence.',
     'In Supreme Court Bar Association (1998), the Court explained that Article 142 cannot be used to ignore express provisions of a law that deals with the subject.',
+    'In 2010 a court in Bhopal convicted seven former officials of Union Carbide India Ltd. of causing death by negligence.',
     'In March 2023 five judges dismissed the Union of India\'s curative petition, which asked for more compensation from the successors of Union Carbide.'
   ],
   source: 'https://indiankanoon.org/doc/27098883/'

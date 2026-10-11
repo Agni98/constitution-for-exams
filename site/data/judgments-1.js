@@ -139,8 +139,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the case is remembered as a warning. Courts matter most to personal liberty when the State is at its most powerful.'
   ],
   legacy: [
-    'The 44th Amendment (1978) changed Article 359. Since 20 June 1979, a Presidential Order cannot suspend the enforcement of Articles 20 and 21, even during an Emergency.',
     'In January 1977 Justice Khanna was passed over for Chief Justice of India. Justice M.H. Beg was appointed instead, and Justice Khanna resigned.',
+    'The 44th Amendment (1978) changed Article 359. Since 20 June 1979, a Presidential Order cannot suspend the enforcement of Articles 20 and 21, even during an Emergency.',
     'In 2011 Justice P.N. Bhagwati, one of the majority judges, said the decision was wrong and apologised for it.',
     'In Puttaswamy (2017), Justice D.Y. Chandrachud\'s opinion for four judges called the majority opinions "seriously flawed" and overruled ADM Jabalpur. His father, Justice Y.V. Chandrachud, had been one of the four majority judges in ADM Jabalpur.'
   ],

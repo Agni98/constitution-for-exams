@@ -291,8 +291,8 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the people\'s vote in Delhi decides who governs most matters. The Lieutenant Governor is not a parallel ruler.'
   ],
   legacy: [
-    'The question of control over services, meaning the civil servants, was left for later. In 2023, five judges held that the Delhi Government controls services.',
-    'Parliament amended the Government of National Capital Territory of Delhi Act in 2021 and in 2023, increasing the role of the Lieutenant Governor.'
+    'Parliament amended the Government of National Capital Territory of Delhi Act in 2021 and in 2023, increasing the role of the Lieutenant Governor.',
+    'The question of control over services, meaning the civil servants, was left for later. In 2023, five judges held that the Delhi Government controls services.'
   ],
   source: 'https://www.scobserver.in/wp-content/uploads/2021/10/NCT_Judgement_04-Jul-2018.pdf'
 },
