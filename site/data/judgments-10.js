@@ -28,36 +28,42 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Unanimous, 5:0',
   tags: ['Article 72', 'Pardon power', 'Judicial review'],
   judges: 'R.S. Pathak CJI, E.S. Venkataramiah, Ranganath Misra, M.N. Venkatachaliah and N.D. Ojha',
-  summary: 'When deciding a mercy petition under Article 72, the President can examine the evidence afresh and take a different view from the courts. The President acts on the advice of the Council of Ministers, and the petitioner has no right to an oral hearing.',
+  summary: 'When deciding a mercy petition under Article 72, the President can look at the evidence afresh and take a different view from the courts. The President acts on the advice of the ministers, and the petitioner has no right to an oral hearing.',
+  background: [
+    'Under Article 72, the President can pardon a convict, or reduce, suspend or change a sentence, including a death sentence. Article 161 gives Governors a similar power. A request to use this power is called a mercy petition.',
+    'Under Article 74(1), the President acts on the advice of the Council of Ministers. So in practice, the government decides mercy petitions.',
+    'In Maru Ram (1980), the Court held that decisions on pardon can be reviewed by the courts, but only on narrow grounds.'
+  ],
   question: [
-    'Can the President, when considering a petition under Article 72, examine the evidence and differ from the Supreme Court on guilt or sentence?',
-    'Does the petitioner have a right to an oral hearing before the President?',
-    'Can the courts review the use of the pardon power, and are guidelines needed?'
+    'When considering a mercy petition under Article 72, can the President look at the evidence and differ from the Supreme Court on guilt or sentence?',
+    'Does the petitioner have a right to be heard in person by the President?',
+    'Can the courts review how the pardon power is used, and are guidelines needed?'
   ],
   facts: [
     'Prime Minister Indira Gandhi was assassinated on 31 October 1984. Kehar Singh was convicted of conspiracy to murder her and sentenced to death.',
     'The Supreme Court dismissed Kehar Singh\'s appeal on 3 August 1988.',
-    'On 14 October 1988 Kehar Singh\'s son, Rajinder Singh, petitioned the President for a pardon under Article 72. The petition said the evidence showed that Kehar Singh was innocent, and asked that a representative be allowed to meet the President.',
-    'The Secretary to the President replied that the President could not go into the merits of a case finally decided by the Supreme Court. The decision was challenged under Article 32.'
+    'On 14 October 1988 Kehar Singh\'s son, Rajinder Singh, petitioned the President for a pardon. The petition said the evidence showed that Kehar Singh was innocent, and asked that a representative be allowed to meet the President.',
+    'The Secretary to the President replied that the President could not go into the merits of a case finally decided by the Supreme Court. The reply was challenged under Article 32.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (5:0), judgment by Chief Justice R.S. Pathak', points: [
-      'The power to pardon is part of the constitutional scheme. It is not merely a private act of grace.',
-      'The President can examine the evidence on record and reach a different conclusion from the court on guilt and on sentence. In doing so, the President acts under a constitutional power that is entirely different from judicial power.',
-      'The President exercises the power on the advice of the Council of Ministers, under Article 74(1).',
-      'The petitioner has no right to an oral hearing. The President decides how to deal with the petition and what material to consider.',
-      'No specific guidelines need be laid down, because the power under Article 72 is of the widest amplitude.',
-      'Whether the President acted within the power under Article 72 can be examined by the courts. But the order cannot be reviewed on its merits, except within the narrow limits set in Maru Ram (1980).',
-      'The President had proceeded on the wrong view that the merits could not be examined. The petition was to be treated as pending and decided afresh, and the death sentence was kept in abeyance meanwhile.'
+    { kind: 'unanimous', label: 'All five judges agreed (5:0). Chief Justice R.S. Pathak wrote the judgment', points: [
+      'The power to pardon is part of the constitutional scheme. The power is not merely a private act of kindness.',
+      'The President can examine the evidence on record and reach a different view from the court on guilt and on sentence. In doing so, the President uses a constitutional power that is entirely different from the power of a court.',
+      'The President uses the power on the advice of the Council of Ministers, under Article 74(1).',
+      'The petitioner has no right to be heard in person. The President decides how to deal with the petition and what material to consider.',
+      'No specific guidelines need be laid down, because the power under Article 72 is as wide as it can be.',
+      'The courts can check whether the President acted within the power under Article 72. But they cannot review the order on its merits, except within the narrow limits set in Maru Ram.',
+      'The President had acted on the wrong view that the merits could not be examined. So the petition was to be treated as pending and decided afresh, and the death sentence was put on hold meanwhile.'
     ] }
   ],
   principles: [
-    'The pardon power under Article 72 is a constitutional power, exercised on the advice of ministers.',
-    'The President may review the evidence and differ from the courts.',
-    'Judicial review of decisions on pardon is narrow.'
+    'The pardon power under Article 72 is a constitutional power, used on the advice of ministers.',
+    'The President may look at the evidence and differ from the courts.',
+    'The courts\' review of decisions on pardon is narrow.',
+    'So a mercy petition is a real second look at the case, not a formality. But it is a political decision, not a fresh trial.'
   ],
   legacy: [
-    'Kehar Singh\'s mercy petition was later rejected, and Kehar Singh was executed on 6 January 1989.',
+    'Kehar Singh\'s mercy petition was later rejected, and he was executed on 6 January 1989.',
     'In Epuru Sudhakar (2006), the Court set out the grounds on which an order of pardon or remission can be challenged.'
   ],
   source: 'https://indiankanoon.org/doc/1152284/'
@@ -73,33 +79,39 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Unanimous, 3:0',
   tags: ['Article 72', 'Death penalty', 'Article 21'],
   judges: 'P. Sathasivam CJI, Ranjan Gogoi and Shiva Kirti Singh',
-  summary: 'Long and unexplained delay in deciding a mercy petition is a ground to commute a death sentence to life imprisonment, in every kind of case. The death sentences of 15 convicts were commuted, and the Court laid down safeguards for prisoners on death row.',
+  summary: 'A long, unexplained delay in deciding a mercy petition is a ground to change a death sentence to life imprisonment, in every kind of case. The death sentences of 15 convicts were changed, and the Court laid down safeguards for prisoners on death row.',
+  background: [
+    'A death sentence goes through the trial court, the High Court and the Supreme Court. After that, the prisoner can send a mercy petition to the Governor and the President.',
+    'Under Article 72, the President can pardon a convict, or reduce, suspend or change a sentence, including a death sentence. Article 161 gives Governors a similar power. A request to use this power is called a mercy petition.',
+    'Article 21 protects life and personal liberty. In Sunil Batra (1978), the Court held that a prisoner under sentence of death cannot be kept in solitary confinement before his mercy petition is decided.',
+    'TADA, the Terrorist and Disruptive Activities (Prevention) Act, was an anti-terror law in force from 1985 to 1995.',
+    'A judgment is per incuriam when it was given without noticing a binding rule or an earlier binding decision. Courts do not follow a judgment on the point where it is per incuriam.'
+  ],
   question: [
-    'Can delay in deciding a mercy petition, after the death sentence has become final, be a ground to commute the sentence?',
+    'After a death sentence becomes final, can delay in deciding the mercy petition be a ground to reduce the sentence?',
     'Does this ground apply to offences under anti-terror laws such as TADA?',
     'Are mental illness and solitary confinement grounds for relief?',
-    'What procedural safeguards should protect prisoners on death row?'
+    'What safeguards should protect prisoners on death row?'
   ],
   facts: [
-    'Fifteen prisoners whose death sentences had become final filed writ petitions. Their mercy petitions had been rejected after long delays.',
-    'The longest delay in deciding a mercy petition was about 12 years.',
-    'The petitioners argued that the delay, mental illness, solitary confinement and other lapses violated Article 21.',
+    'Fifteen prisoners whose death sentences had become final filed writ petitions. Their mercy petitions had been rejected after long delays, the longest about 12 years.',
+    'The petitioners argued that the delay, mental illness, solitary confinement and other lapses broke Article 21.',
     'In Devender Pal Singh Bhullar (2013), the Court had held that delay could not help convicts in TADA cases.',
     'The People\'s Union for Democratic Rights asked the Court to lay down guidelines for dealing with mercy petitions.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (3:0), judgment by Chief Justice P. Sathasivam', points: [
-      'Article 21 protects a condemned prisoner until the very last breath. Events after the final judgment, called supervening circumstances, can justify commuting a death sentence.',
-      'Undue, inordinate and unexplained delay in deciding a mercy petition is a ground for commutation. The delay must not have been caused by the prisoner.',
-      'This ground applies to all cases, including cases under TADA. Devender Pal Singh Bhullar was per incuriam on this point.',
+    { kind: 'unanimous', label: 'All three judges agreed (3:0). Chief Justice P. Sathasivam wrote the judgment', points: [
+      'Article 21 protects a condemned prisoner until the very last breath. Events after the final judgment, called supervening circumstances, can justify changing a death sentence.',
+      'Undue, very long and unexplained delay in deciding a mercy petition is a ground to change the sentence. The prisoner must not have caused the delay.',
+      'The ground applies to all cases, including cases under TADA. Devender Pal Singh Bhullar was per incuriam on this point.',
       'A prisoner who has become insane or mentally ill, as certified by a doctor, cannot be executed.',
-      'Decisions on mercy petitions can be reviewed on limited grounds: non-application of mind, mala fides, extraneous considerations, exclusion of relevant material, or arbitrariness.',
-      'The death sentences of the 15 convicts were commuted to life imprisonment.'
+      'Decisions on mercy petitions can be reviewed on limited grounds: the decision maker did not apply their mind, acted in bad faith, relied on irrelevant matters, left out relevant material, or acted arbitrarily.',
+      'The death sentences of the 15 convicts were changed to life imprisonment.'
     ] },
     { kind: 'unanimous', label: 'Guidelines for prisoners on death row', points: [
-      'Solitary confinement of a prisoner before the mercy petition is rejected is unconstitutional, as held in Sunil Batra (1978).',
-      'The rejection of a mercy petition by the Governor or the President must be sent at once, in writing, to the prisoner and the family. The prisoner is entitled to a copy of the rejection.',
-      'There must be at least 14 days between the communication of the rejection and the date of execution. This lets the prisoner prepare, seek court remedies and meet the family.',
+      'Keeping a prisoner in solitary confinement before the mercy petition is rejected is unconstitutional, as held in Sunil Batra.',
+      'The rejection of a mercy petition must be sent at once, in writing, to the prisoner and the family. The prisoner is entitled to a copy of the rejection.',
+      'At least 14 days must pass between telling the prisoner of the rejection and the date of execution. The gap lets the prisoner prepare, go to court and meet the family.',
       'Legal aid must be provided at every stage. The jail superintendent must inform the nearest legal aid centre when a mercy petition is rejected.',
       'The Ministry of Home Affairs must call for all records at once and send its advice to the President within a reasonable time.',
       'Prisoners must be given copies of their court papers within a week, to help with mercy petitions and court remedies.',
@@ -109,10 +121,11 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   principles: [
     'The protection of Article 21 lasts until execution, so delay and mental illness after the final judgment matter.',
-    'Mercy petitions must be decided without undue delay, and prisoners on death row have procedural rights.'
+    'Mercy petitions must be decided without undue delay, and prisoners on death row have procedural rights.',
+    'So waiting for years under a death sentence is itself a punishment. When the State causes that wait, the State loses the right to carry out the execution.'
   ],
   legacy: [
-    'On 18 February 2014, relying on this judgment, the Court commuted the death sentences of three convicts in the Rajiv Gandhi assassination case because of delay.'
+    'On 18 February 2014, relying on this judgment, the Court changed the death sentences of three convicts in the Rajiv Gandhi assassination case to life imprisonment because of delay.'
   ],
   source: 'https://indiankanoon.org/doc/59968841/'
 },
@@ -127,36 +140,43 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Unanimous, 7:0',
   tags: ['Articles 74 and 163', 'Aid and advice', 'Article 311'],
   judges: 'A.N. Ray CJI, D.G. Palekar, K.K. Mathew, Y.V. Chandrachud, A. Alagiriswami, P.N. Bhagwati and V.R. Krishna Iyer',
-  summary: 'The President and the Governor are constitutional heads. They act on the aid and advice of their Council of Ministers, except where the Constitution gives the Governor a discretion. The termination orders of two probationary judicial officers were set aside.',
+  summary: 'The President and the Governor are constitutional heads. They act on the advice of their Council of Ministers, except where the Constitution gives the Governor a discretion. The orders ending the service of two judicial officers on probation were set aside.',
+  background: [
+    'India follows the British model of cabinet government. The President and the Governors are formal heads, and they act on the advice of their Council of Ministers, led by the Prime Minister or the Chief Minister (Articles 74 and 163).',
+    'In Sardari Lal (1971), the Court had held that in some matters the President must be personally satisfied before acting.',
+    'A probationer is a new employee on trial for a fixed period before being confirmed. Under Article 311, a government servant cannot be dismissed as a punishment without an inquiry in which they can defend themselves.',
+    'Under Article 235, the High Court controls the district courts and the judges below it.'
+  ],
   question: [
-    'Must the Governor be personally satisfied before removing a probationary officer, or can the Governor act on the advice of ministers?',
-    'Were the termination orders of the two probationary judicial officers really punishments, which needed an inquiry under Article 311?',
-    'Did the High Court properly exercise its control over the subordinate judiciary under Article 235?'
+    'Must the Governor be personally satisfied before removing an officer on probation, or can the Governor act on the advice of ministers?',
+    'Were the orders ending the service of two judicial officers on probation really punishments, which needed an inquiry under Article 311?',
+    'Did the High Court properly use its control over the lower judiciary under Article 235?'
   ],
   facts: [
-    'Samsher Singh and Ishwar Chand Agarwal were probationary officers in the Punjab Civil Service (Judicial Branch).',
-    'Samsher Singh\'s services were terminated on 27 April 1967. Agarwal\'s services were terminated on 15 December 1969, on the recommendation of the High Court.',
+    'Samsher Singh and Ishwar Chand Agarwal were officers on probation in the Punjab Civil Service (Judicial Branch).',
+    'Samsher Singh\'s service was ended on 27 April 1967. Agarwal\'s service was ended on 15 December 1969, on the recommendation of the High Court.',
     'In one of the cases, the High Court had asked the State Government to hold an inquiry through its Vigilance Department.',
-    'The officers argued that the orders were invalid because the Governor had not personally decided them. They relied on Sardari Lal v. Union of India (1971).'
+    'The officers argued that the orders were invalid because the Governor had not decided them personally. They relied on Sardari Lal.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority opinion by Chief Justice A.N. Ray, for himself and Justices Palekar, Mathew, Chandrachud and Alagiriswami', points: [
-      'The President and the Governor exercise their powers on the aid and advice of their Council of Ministers, except where the Constitution requires the Governor to act in discretion.',
-      'The satisfaction required by the Constitution is not the personal satisfaction of the President or the Governor. It is the satisfaction of the Council of Ministers.',
+    { kind: 'majority', label: 'The majority opinion by Chief Justice A.N. Ray, for himself and Justices Palekar, Mathew, Chandrachud and Alagiriswami', points: [
+      'The President and the Governor use their powers on the advice of their Council of Ministers, except where the Constitution requires the Governor to act in discretion.',
+      'The satisfaction that the Constitution requires is not the personal satisfaction of the President or the Governor. The satisfaction required is that of the Council of Ministers.',
       'A decision taken by a minister or an officer under the rules of business is the decision of the President or the Governor.',
       'Sardari Lal, which held that the President must be personally satisfied, is not good law.',
-      'An order terminating a probationer can be a punishment even if it is worded innocently. The Court looks at its substance. Both orders were in substance punishments made without an inquiry under Article 311, so both were set aside.',
-      'The subordinate judiciary is under the control of the High Court. The High Court failed in that duty when it asked the Government to hold an inquiry through its Vigilance Department.'
+      'An order ending a probationer\'s service can be a punishment even if it is worded innocently. The Court looks at its substance. Both orders were in substance punishments made without an inquiry under Article 311, so both were set aside.',
+      'The lower judiciary is under the control of the High Court. The High Court failed in that duty when it asked the government to hold an inquiry through its Vigilance Department.'
     ] },
-    { kind: 'concurring', label: 'Concurring opinion (Justice V.R. Krishna Iyer, for himself and Justice P.N. Bhagwati)', points: [
-      'The President is "not at all a glorified cipher". But the real functions of government are carried on by the Prime Minister and the Council of Ministers.',
+    { kind: 'concurring', label: 'Justice V.R. Krishna Iyer, for himself and Justice P.N. Bhagwati, agreeing in a separate opinion', points: [
+      'The President is "not at all a glorified cipher". But the real work of government is carried on by the Prime Minister and the Council of Ministers.',
       'The President must act on the advice of ministers, except in a narrow area. The President keeps the right to be consulted, to warn and to encourage.'
     ] }
   ],
   principles: [
     'India follows the cabinet form of government. The President and the Governors act on the advice of their ministers.',
-    'Whether a termination is a punishment depends on its substance, not its wording.',
-    'The High Court, not the executive, controls the subordinate judiciary.'
+    'Whether ending a person\'s service is a punishment depends on its substance, not its wording.',
+    'The High Court, not the government, controls the lower judiciary.',
+    'So power rests with the elected ministers, not with the formal head of State. The head of State advises and warns, but follows the ministers\' advice.'
   ],
   legacy: [
     'The 42nd Amendment (1976) amended Article 74(1) to say that the President shall act in accordance with the advice of the Council of Ministers.',
@@ -175,7 +195,14 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Majority on the main points, in six opinions',
   tags: ['Article 356', 'Floor test', 'Secularism'],
   judges: 'S. Ratnavel Pandian, A.M. Ahmadi, Kuldip Singh, J.S. Verma, P.B. Sawant, K. Ramaswamy, S.C. Agrawal, Yogeshwar Dayal and B.P. Jeevan Reddy',
-  summary: 'A proclamation of President\'s Rule under Article 356 can be reviewed by the courts. A government\'s majority must be tested on the floor of the House, and the Assembly cannot be dissolved before Parliament approves the proclamation. Secularism is a basic feature of the Constitution.',
+  summary: 'A proclamation of President\'s Rule under Article 356 can be reviewed by the courts. A government\'s majority must be tested by a vote in the House, and the Assembly cannot be dissolved before Parliament approves the proclamation. Secularism is a basic feature of the Constitution.',
+  background: [
+    'Under Article 356, if the President is satisfied that a State government cannot be carried on according to the Constitution, the President can take over the State. The State government is dismissed, and the Centre rules the State. The takeover is called President\'s Rule.',
+    'Both Houses of Parliament must approve the proclamation within two months. The Governor\'s report is usually the basis for it.',
+    'Article 74(2) says that no court may inquire into the advice that ministers gave to the President.',
+    'By 1994, Article 356 had been used more than a hundred times. The Sarkaria Commission had reported in 1988 that it was often misused to remove State governments of rival parties.',
+    'A floor test is a vote in the Assembly that shows whether the government still has the support of a majority of members.'
+  ],
   question: [
     'Can the courts review a proclamation under Article 356, and how far?',
     'Does Article 74(2) stop the courts from seeing the material behind a proclamation?',
@@ -186,32 +213,33 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'The case heard challenges to President\'s Rule in six States.',
     'In Karnataka, the government of S.R. Bommai was dismissed on 21 April 1989, after the Governor reported that it had lost its majority. No floor test was held. The Karnataka High Court dismissed Bommai\'s petition.',
     'President\'s Rule had also been imposed in Nagaland in 1988 and in Meghalaya on 11 October 1991.',
-    'After the demolition of the Babri Masjid on 6 December 1992, the governments of Madhya Pradesh, Rajasthan and Himachal Pradesh were dismissed. The Madhya Pradesh High Court quashed the proclamation for that State.'
+    'After the Babri Masjid was demolished on 6 December 1992, the governments of Madhya Pradesh, Rajasthan and Himachal Pradesh were dismissed. The Madhya Pradesh High Court quashed the proclamation for that State.'
   ],
   held: [
-    { kind: 'majority', label: 'Majority on the main points: Justice Sawant for himself and Justice Kuldip Singh, Justice Jeevan Reddy for himself and Justice Agrawal, and Justice Pandian', points: [
+    { kind: 'majority', label: 'The majority on the main points: Justice Sawant for himself and Justice Kuldip Singh, Justice Jeevan Reddy for himself and Justice Agrawal, and Justice Pandian', points: [
       'The power under Article 356 is a conditional power, not an absolute one. The President\'s satisfaction must be based on relevant material.',
-      'A proclamation can be reviewed by the courts. It can be struck down if it is mala fide or based on wholly irrelevant or extraneous grounds.',
-      'The court does not examine whether the material was correct or adequate. It examines only whether the material was relevant.',
-      'Article 74(2) bars an inquiry only into the advice given to the President. It does not bar the court from seeing the material on which the advice was based.',
-      'Whether a government has lost its majority must be tested on the floor of the House. The only exception is where all-pervasive violence makes a free vote impossible.',
-      'The Assembly can be dissolved only after both Houses of Parliament approve the proclamation. Until then it can only be kept in suspended animation.',
+      'A proclamation can be reviewed by the courts, and struck down if it was made in bad faith or on wholly irrelevant grounds.',
+      'The court does not ask whether the material was correct or enough. The court asks only whether the material was relevant.',
+      'Article 74(2) bars an inquiry only into the advice given to the President. The clause does not stop the court from seeing the material on which the advice was based.',
+      'Whether a government has lost its majority must be tested by a vote in the House. The only exception is where violence everywhere makes a free vote impossible.',
+      'The Assembly can be dissolved only after both Houses of Parliament approve the proclamation. Until then it can only be suspended, kept alive but not sitting.',
       'If the court strikes down a proclamation, it can restore the dismissed government and revive the Assembly.',
       'Secularism is a basic feature of the Constitution. A State government that pursues unsecular policies acts against the Constitution, and Article 356 can be used against it.',
       'The Karnataka and Meghalaya proclamations were unconstitutional. They were not formally struck down, because fresh elections had since been held.',
       'The proclamations for Madhya Pradesh, Rajasthan and Himachal Pradesh were valid. The judgment of the Madhya Pradesh High Court was set aside.'
     ] },
-    { kind: 'concurring', label: 'Separate opinions (Justices K. Ramaswamy and A.M. Ahmadi)', points: [
-      'Justices Ramaswamy and Ahmadi wrote separate opinions on the scope of review. Both accepted that secularism is a basic feature of the Constitution.'
+    { kind: 'concurring', label: 'Justices K. Ramaswamy and A.M. Ahmadi, in separate opinions', points: [
+      'Justices Ramaswamy and Ahmadi wrote separate opinions on how far the courts can review a proclamation. Both accepted that secularism is a basic feature of the Constitution.'
     ] },
-    { kind: 'dissent', label: 'Narrower view (Justice J.S. Verma, for himself and Justice Yogeshwar Dayal)', points: [
-      'Only the Meghalaya proclamation was open to judicial review, and it was invalid. The proclamations for Karnataka, Madhya Pradesh, Rajasthan and Himachal Pradesh were not justiciable.'
+    { kind: 'dissent', label: 'Justice J.S. Verma, for himself and Justice Yogeshwar Dayal, taking a narrower view', points: [
+      'Only the Meghalaya proclamation was open to review by the courts, and it was invalid. The proclamations for Karnataka, Madhya Pradesh, Rajasthan and Himachal Pradesh were not matters for the courts.'
     ] }
   ],
   principles: [
-    'President\'s Rule under Article 356 is subject to judicial review.',
+    'President\'s Rule under Article 356 can be reviewed by the courts.',
     'The floor of the House is the place to test a government\'s majority.',
-    'Secularism is part of the basic structure of the Constitution.'
+    'Secularism is part of the basic structure of the Constitution.',
+    'So the Centre can no longer dismiss a State government on a Governor\'s say-so. The Centre must show relevant reasons, and the majority is counted in the House.'
   ],
   legacy: [
     'The use of Article 356 fell sharply after this judgment.',
@@ -231,7 +259,13 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Unanimous, 2:0',
   tags: ['Article 175', 'Floor test', 'Governor'],
   judges: 'D.Y. Chandrachud and Hemant Gupta',
-  summary: 'A Governor can ask a government to prove its majority on the floor of the House, even while the House is in session, if there is objective material to doubt its majority. The power must not be used to topple an elected government.',
+  summary: 'A Governor can ask a government to prove its majority in the House, even while the House is sitting, if there is objective material to doubt its majority. But the power must not be used to topple an elected government.',
+  background: [
+    'A floor test is a vote in the Assembly that shows whether the government still has the support of a majority of members.',
+    'Under Article 175, the Governor can address the Assembly and send it messages. The Speaker decides whether a member\'s resignation is genuine, and decides questions of disqualification under the anti-defection law.',
+    'A no-confidence motion is the usual way for members to remove a government. Members move it in the House, and the House votes on it.',
+    'In S.R. Bommai (1994), the Court held that a government\'s majority must be tested in the House, not in the Governor\'s mind.'
+  ],
   question: [
     'Can the Governor call for a floor test while the Assembly is in session?',
     'On what material may the Governor act?',
@@ -245,17 +279,18 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'Chief Minister Kamal Nath resigned on 20 March, before the vote. The Court gave its reasons on 13 April 2020.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (2:0), judgment by Justice D.Y. Chandrachud', points: [
-      'The Governor can call on the Chief Minister to prove the government\'s majority on the floor of the House, even while the House is in session.',
-      'The Governor must act on objective material and reasons that are relevant and germane. The Governor\'s satisfaction is not immune from judicial review.',
-      'The power is not meant to destabilise or displace an elected government. Without compelling circumstances, the Governor should let the ordinary process of a no-confidence motion run its course.',
-      'Following S.R. Bommai, a government\'s majority must be decided on the floor of the House, not by the Governor\'s own assessment.',
+    { kind: 'unanimous', label: 'Both judges agreed (2:0). Justice D.Y. Chandrachud wrote the judgment', points: [
+      'The Governor can ask the Chief Minister to prove the government\'s majority in the House, even while the House is in session.',
+      'The Governor must act on objective material and on reasons that are relevant. The courts can review the Governor\'s satisfaction.',
+      'The power is not meant to unsettle or remove an elected government. Without compelling reasons, the Governor should let the ordinary process of a no-confidence motion run its course.',
+      'Following S.R. Bommai, a government\'s majority must be decided in the House, not by the Governor\'s own judgment.',
       'The Governor\'s direction did not interfere with the Speaker\'s power to decide whether resignations are voluntary and genuine, or to decide questions of disqualification.'
     ] }
   ],
   principles: [
     'A floor test is the proper way to settle a doubt about a government\'s majority.',
-    'The Governor may call for a floor test on objective material, but must not use the power to topple a government.'
+    'The Governor may call for a floor test on objective material, but must not use the power to topple a government.',
+    'So when a majority is in doubt, the House decides it quickly by a vote. Neither the Governor nor a delay by the Speaker can decide it for the members.'
   ],
   legacy: [
     'In Subhash Desai v. Principal Secretary, Governor of Maharashtra (2023), five judges held that the Governor had no objective material to call for a floor test in Maharashtra in June 2022.'
@@ -273,7 +308,13 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   result: 'Unanimous, 2:0',
   tags: ['Article 161', 'Pardon power', 'Judicial review'],
   judges: 'Arijit Pasayat and S.H. Kapadia',
-  summary: 'Orders of pardon or remission under Articles 72 and 161 can be reviewed by the courts on limited grounds. A Governor\'s order of remission, based on irrelevant and political considerations, was set aside.',
+  summary: 'Orders of pardon or remission under Articles 72 and 161 can be reviewed by the courts on limited grounds. A Governor\'s order cutting a sentence, based on irrelevant and political considerations, was set aside.',
+  background: [
+    'Under Article 72, the President can pardon a convict, or reduce, suspend or change a sentence, including a death sentence. Article 161 gives Governors a similar power. A request to use this power is called a mercy petition.',
+    'Remission means cutting short a sentence. The convict is released early, but the conviction stays.',
+    'In Kehar Singh (1988) and earlier in Maru Ram (1980), the Court held that the courts can review pardon decisions, but only on narrow grounds.',
+    'A person who asks a court or an authority for a favour must come with clean hands, which means they must disclose all the relevant facts honestly.'
+  ],
   question: [
     'Can a court review an order of remission passed by the Governor under Article 161?',
     'On what grounds can such an order be set aside?'
@@ -281,20 +322,21 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   facts: [
     'Gowru Venkata Reddy was serving a sentence of 10 years\' rigorous imprisonment in a case of killings. The petitioners were sons of people who had been killed.',
     'By an order dated 11 August 2005, the Governor of Andhra Pradesh granted Reddy remission of the sentence.',
-    'The petitioners challenged the order under Article 32. They said it rested on irrelevant material and political considerations, and that relevant facts had been kept from the Governor.'
+    'The petitioners challenged the order under Article 32. They said the order rested on irrelevant material and political considerations, and that relevant facts had been kept from the Governor.'
   ],
   held: [
-    { kind: 'unanimous', label: 'Unanimous (2:0), judgment by Justice Arijit Pasayat, with a concurring opinion by Justice S.H. Kapadia', points: [
-      'Orders under Articles 72 and 161 are subject to judicial review.',
-      'Such an order can be challenged if it was passed without application of mind, if it is mala fide, if it was passed on extraneous or wholly irrelevant considerations, if relevant material was kept out of consideration, or if it is arbitrary.',
+    { kind: 'unanimous', label: 'Both judges agreed (2:0). Justice Arijit Pasayat wrote the judgment, with a separate opinion by Justice S.H. Kapadia agreeing', points: [
+      'Orders under Articles 72 and 161 can be reviewed by the courts.',
+      'An order of pardon or remission can be challenged if the decision maker did not apply their mind, acted in bad faith, relied on irrelevant matters, left out relevant material, or acted arbitrarily.',
       'The official reports placed before the Governor relied on irrelevant matters. One described the convict as "a good Congress Worker". A police report on the likely reaction to his release changed after the government changed.',
-      'The petition for remission did not mention a criminal case pending against the convict. A person who asks for such a discretionary power to be used must come with clean hands.',
-      'Irrelevant and extraneous material had entered the decision. So the remission order was set aside, and the Government could treat the petition as pending and reconsider it.'
+      'The petition for remission did not mention a criminal case still pending against the convict. A person who asks for such a power to be used in his favour must come with clean hands.',
+      'Irrelevant material had entered the decision. So the remission order was set aside, and the government could treat the petition as pending and consider it again.'
     ] }
   ],
   principles: [
-    'The power of pardon and remission is not beyond judicial review. It must be exercised on relevant considerations.',
-    'Courts do not decide whether a pardon should be granted. They check whether the decision was lawfully made.'
+    'The power of pardon and remission is not beyond the courts. The power must be used on relevant considerations.',
+    'Courts do not decide whether a pardon should be granted. They check whether the decision was lawfully made.',
+    'So mercy cannot be handed out as a political favour. A pardon based on party loyalty can be struck down.'
   ],
   legacy: [
     'In Shatrughan Chauhan (2014), the Court applied the same grounds of review to decisions on mercy petitions.'
