@@ -20,18 +20,17 @@ preamble: {
 },
 
 partI: {
-  simple: "Part I defines India as a territorial entity. It says what India is, and how that can change.\n\n" +
-    "Four working articles cover the whole of it: the Union and its territory, admitting new States, redrawing existing ones, and the consequential machinery. " +
-    "Short as it is, this Part carries the central fact about Indian federalism — the States exist at Parliament's pleasure."
+  simple: "Part I defines India as a territory. The Part says what India is made of, and how its map can change.\n\n" +
+    "Four working articles cover the whole of it: the Union and its territory, admitting new States, redrawing existing ones, and the machinery that follows. Short as it is, Part I carries the central fact of Indian federalism. Parliament can redraw the States by an ordinary law."
 },
 partII: {
-  simple: "Part II says who became a citizen of India in 1950, including the special rules Partition made necessary.\n\n" +
-    "It deliberately stops there. Everything about citizenship after 1950 is left to Parliament, which legislated the Citizenship Act, 1955."
+  simple: "Part II says who became a citizen of India in 1950, including the special rules that Partition made necessary.\n\n" +
+    "The Part deliberately stops there. Everything about citizenship after 1950 is left to Parliament, which passed the Citizenship Act, 1955."
 },
 partIII: {
-  simple: "Part III contains the fundamental rights. These are limits on what the State may do to a person.\n\n" +
-    "Six categories survive: equality, freedom, protection against exploitation, freedom of religion, cultural and educational rights, and the right to move the courts.\n\n" +
-    "They are enforceable. Article 32 lets you go directly to the Supreme Court to enforce them, and that right is itself a fundamental right."
+  simple: "Part III contains the fundamental rights. The rights are limits on what the State may do to a person.\n\n" +
+    "Six kinds survive: equality, freedom, protection against exploitation, freedom of religion, cultural and educational rights, and the right to go to court to enforce them.\n\n" +
+    "The rights can be enforced. Article 32 lets a person go straight to the Supreme Court, and that right is itself a fundamental right."
 },
 
 /* ---------- Part I ---------- */
@@ -44,13 +43,13 @@ partIII: {
   note: "Some rights, such as those in Articles 14 and 21, belong to every person in the territory of India. Others, such as those in Article 19, belong only to citizens."
 },
 "2": {
-  simple: "Parliament may admit a new State into the Union, or establish one, on whatever terms it thinks fit.",
-  catch: "This article deals with territory that is not already part of India. Sikkim in 1975 is the example.\n\n" +
-    "Reorganising territory India already has is Article 3's job. The two are often confused and should not be."
+  simple: "Parliament may admit a new State into the Union, or set one up, on whatever terms it thinks fit.",
+  catch: "Article 2 deals with territory that is not yet part of India. Sikkim, which became a State in 1975, is the example.\n\n" +
+    "Reorganising territory that India already has is a different power, under Article 3. Candidates often confuse the two."
 },
 "2A": {
-  simple: "This slot once held the arrangement making Sikkim an associate State of India.",
-  catch: "It was inserted by the 35th Amendment in 1974 and omitted a year later by the 36th, when Sikkim became a full State under Article 371F."
+  simple: "Article 2A once held the arrangement that made Sikkim an associate State of India.",
+  catch: "The 35th Amendment inserted the article in 1974. The 36th removed it a year later, when Sikkim became a full State under Article 371F."
 },
 "3": {
   simple: "Parliament can form a new State, merge States, enlarge or shrink a State, change its boundaries, or change its name. Parliament does all of this by an ordinary law, passed by a simple majority.",
@@ -58,9 +57,9 @@ partIII: {
     "So a State can be divided, merged or renamed without its consent. For that reason, India is called an indestructible Union of destructible States."
 },
 "4": {
-  simple: "A law made under Article 2 or 3 may itself amend the First and Fourth Schedules, and make any consequential provisions needed. Doing so does not count as amending the Constitution.",
-  catch: "That last sentence is the whole point. Redrawing the map of India needs only a simple majority.\n\n" +
-    "Without it, every new State would require the special majority and State ratification that Article 368 demands."
+  simple: "A law made under Article 2 or 3 may change the First and Fourth Schedules, and make any other changes that follow from it. The law does not count as an amendment of the Constitution.",
+  catch: "The last rule is the point of the article. Because the law is not an amendment, a simple majority in Parliament can redraw the map of India.\n\n" +
+    "Without Article 4, every new State would need the special majority and the State ratification that Article 368 demands."
 },
 
 /* ---------- Part II ---------- */
@@ -71,26 +70,26 @@ partIII: {
   catch: "The rule worked once, on one day, and its work is done. So the rule gives nothing to anyone born after 1950."
 },
 "6": {
-  simple: "People who migrated to India from what became Pakistan could become citizens. Those who came before 19 July 1948 became citizens automatically. Those who came later had to register.",
-  catch: "The 19 July 1948 cut-off is the date the permit system for movement between the two countries began."
+  simple: "People who migrated to India from what became Pakistan could become citizens. People who came before 19 July 1948 became citizens automatically. People who came later had to register.",
+  catch: "The cut-off date is the day a permit system began for movement between the two countries."
 },
 "7": {
-  simple: "People who migrated from India to Pakistan after 1 March 1947 lost their claim to Indian citizenship. The exception was anyone who returned under a permit for resettlement or permanent return.",
-  catch: "This article overrides Articles 5 and 6. Someone who would otherwise have qualified under Article 5 still loses out if they made that migration."
+  simple: "People who migrated from India to Pakistan after 1 March 1947 lost their claim to Indian citizenship. The exception was anyone who came back under a permit for resettlement or permanent return.",
+  catch: "Article 7 overrides Articles 5 and 6. So a person who would otherwise have qualified under Article 5 still lost out by making that migration."
 },
 "8": {
   simple: "People of Indian origin living abroad could become citizens by registering at an Indian diplomatic mission. The test was that they, a parent or a grandparent had been born in undivided India.",
-  catch: "Registration was required. Nothing here happened automatically.\n\n" +
-    "This is the ancestral root of today's Overseas Citizen of India scheme, though OCI is a statutory status and not citizenship."
+  catch: "Nothing here happened automatically. The person had to register.\n\n" +
+    "The idea of a link through a grandparent lives on in today's Overseas Citizen of India scheme. But OCI is a status created by statute, not citizenship."
 },
 "9": {
-  simple: "Anyone who voluntarily acquired the citizenship of another country stopped being an Indian citizen.",
-  catch: "India does not permit dual citizenship, and this is where that starts.\n\n" +
-    "The word 'voluntarily' does real work. Citizenship acquired by the operation of a foreign law, without any act of your own, is a different case."
+  simple: "A person who voluntarily took the citizenship of another country stopped being an Indian citizen.",
+  catch: "India does not allow dual citizenship, and Article 9 is where the rule starts.\n\n" +
+    "The word \"voluntarily\" does real work. Citizenship that a foreign law confers on a person without any act of their own is a different case."
 },
 "10": {
-  simple: "Once you are a citizen under this Part, you remain one, subject to any law Parliament makes.",
-  catch: "The last five words swallow the rest. Parliament may provide for loss of citizenship by renunciation, termination or deprivation, and it has done so in the 1955 Act."
+  simple: "A person who is a citizen under Part II remains a citizen, subject to any law Parliament makes.",
+  catch: "The closing words matter most. Parliament may provide for the loss of citizenship by renunciation, termination or deprivation, and the Citizenship Act, 1955 does so."
 },
 "11": {
   simple: "Parliament can make any law about how citizenship is gained and lost, and about every other question of citizenship.",
@@ -211,15 +210,15 @@ partIII: {
     "The four rights are also not equally protected. Managing matters of religion, under clause (b), is limited only by public order, morality and health. But administering property, under clause (d), must be done \"in accordance with law\". So the State can regulate temple funds and endowments closely without touching the faith itself."
 },
 "27": {
-  simple: "No one can be compelled to pay a tax whose proceeds are specifically used to promote or maintain any particular religion or denomination.",
-  catch: "The bar is on a tax, not a fee.\n\n" +
-    "A charge levied for services actually rendered, such as regulating a pilgrimage or administering a shrine, is a fee and survives. That distinction has carried most State control of religious endowments."
+  simple: "Nobody can be forced to pay a tax whose proceeds are set aside to promote or maintain a particular religion or denomination.",
+  catch: "The bar is on a tax, not a fee. A charge for a service actually rendered, such as regulating a pilgrimage or running a shrine, is a fee and is allowed.\n\n" +
+    "Most State control of religious endowments rests on that difference."
 },
 "28": {
-  simple: "A school wholly maintained out of State funds may give no religious instruction at all. A school administered by the State but established under an endowment requiring religious instruction is exempt.\n\n" +
-    "In a State-recognised or State-aided school, no one may be made to attend religious instruction or worship without consent.",
-  catch: "The gradation is the point. Wholly State-funded means a total ban. Aided or merely recognised means only a right to opt out.\n\n" +
-    "Nothing here bans teaching about religions. What is regulated is religious instruction in a faith."
+  simple: "A school wholly maintained out of State funds may give no religious instruction at all. The exception is a school the State runs under an endowment or trust that requires such instruction.\n\n" +
+    "In a school the State recognises or aids, nobody may be made to attend religious instruction or worship without consent.",
+  catch: "The rule changes with the funding. A school paid for wholly by the State faces a total ban. An aided or recognised school must only let pupils opt out.\n\n" +
+    "Nothing here bans teaching about religions. What is regulated is instruction in a faith."
 },
 
 /* ---------- Cultural and Educational Rights ---------- */
@@ -240,13 +239,13 @@ partIII: {
 /* ---------- Property and saving clauses ---------- */
 
 "31": {
-  simple: "This was the old fundamental right to property. No one was to be deprived of property save by authority of law, and compulsory acquisition required compensation.",
-  catch: "It was repealed by the 44th Amendment in 1978, after nearly thirty years of collision between land reform and the courts.\n\n" +
-    "Property is now protected only by Article 300A, which is a constitutional right and not a fundamental one. The practical difference is that it cannot be enforced under Article 32."
+  simple: "Article 31 was the old fundamental right to property. Nobody could be deprived of property except by authority of law, and compulsory acquisition required compensation.",
+  catch: "The 44th Amendment repealed the article in 1978, after nearly thirty years of conflict between land reform and the courts.\n\n" +
+    "Property is now protected only by Article 300A, which is a constitutional right, not a fundamental one. So a person cannot go to the Supreme Court under Article 32 to enforce it."
 },
 "31A": {
-  simple: "Article 31A saves certain categories of law from challenge under Articles 14 and 19. The categories are acquisition of estates, taking over the management of property, amalgamating corporations, and extinguishing the rights of shareholders or managing agents.",
-  catch: "It survives even though Article 31 itself is gone.\n\n" +
+  simple: "Article 31A protects certain kinds of law from challenge under Articles 14 and 19. They are laws acquiring estates, taking over the management of property, merging companies, changing the rights of directors, shareholders or managing agents, and changing mining leases.",
+  catch: "Article 31A survives even though Article 31 itself is gone.\n\n" +
     "Two provisos matter. A State law of this kind needs the President's assent. And land within the ceiling limit that the owner personally cultivates cannot be acquired without compensation at market value."
 },
 "31B": {
@@ -260,8 +259,8 @@ partIII: {
     "In 1976 the 42nd Amendment extended the protection to laws for any directive principle. Minerva Mills (1980) struck down the extension, holding that the balance between Parts III and IV is part of the basic structure. So only the narrow version survives."
 },
 "31D": {
-  simple: "This article once saved laws against 'anti-national activities' from fundamental-rights challenge.",
-  catch: "It was inserted by the 42nd Amendment during the Emergency and repealed by the 43rd in 1977. It is one of the clearest markers of that reversal."
+  simple: "Article 31D once protected laws against \"anti-national activities\" from challenge under the fundamental rights.",
+  catch: "The 42nd Amendment inserted it during the Emergency, and the 43rd repealed it in 1977. The repeal is one of the clearest signs of how quickly the Emergency changes were reversed."
 },
 
 /* ---------- Right to Constitutional Remedies ---------- */
@@ -274,8 +273,8 @@ partIII: {
   note: "During the 1975 Emergency, the right to move any court to enforce Article 21 was suspended. ADM Jabalpur (1976) upheld the suspension, and Puttaswamy (2017) overruled ADM Jabalpur."
 },
 "32A": {
-  simple: "This article once barred the Supreme Court from considering the constitutional validity of a State law in an Article 32 proceeding.",
-  catch: "Inserted by the 42nd Amendment and repealed by the 43rd in 1977."
+  simple: "Article 32A once barred the Supreme Court from deciding whether a State law was constitutional in a case brought under Article 32.",
+  catch: "The 42nd Amendment inserted it, and the 43rd repealed it in 1977."
 },
 "33": {
   simple: "Parliament may restrict or take away the fundamental rights of the armed forces, the police, paramilitary forces and intelligence services, so that they do their duty and keep discipline. The power also covers people in telecommunication systems set up for these forces.",
@@ -283,9 +282,9 @@ partIII: {
     "The reason is discipline. The Army Act, the Navy Act and the Air Force Act limit the speech, association and assembly of service personnel. So members of the armed forces cannot form trade unions."
 },
 "34": {
-  simple: "Where martial law is in force, Parliament may indemnify anyone for acts done to maintain or restore order, and may validate sentences and punishments passed under it.",
-  catch: "The Constitution never defines martial law, and no such indemnity Act has ever been passed.\n\n" +
-    "Martial law is not the same thing as an emergency under Part XVIII. Martial law suspends the ordinary courts in an area. An emergency does not."
+  simple: "Where martial law has been in force, Parliament may by law protect anyone from liability for acts done to keep or restore order there. Parliament may also validate sentences and punishments passed under martial law.",
+  catch: "The Constitution never defines martial law, and Parliament has never passed such an Act.\n\n" +
+    "Martial law is not the same as an emergency under Part XVIII. Martial law displaces the ordinary courts in an area. An emergency does not."
 },
 "35": {
   simple: "Only Parliament may make laws under Articles 16(3), 32(3), 33 and 34. Only Parliament may set the punishment for the acts that Articles 17 and 23 make offences. A State legislature can do neither.",

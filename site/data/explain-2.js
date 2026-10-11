@@ -33,8 +33,8 @@ partV: {
     "But \"not enforceable\" does not mean \"irrelevant\". Courts use the directive principles to give content to fundamental rights, to judge whether a restriction is reasonable, and to uphold laws that put the principles into effect. The right to a clean environment, for example, came from reading Article 48A into Article 21."
 },
 "38": {
-  simple: "The State shall secure a social order in which social, economic and political justice informs all national institutions. It shall also work to minimise inequalities in income, status, facilities and opportunities.",
-  catch: "The second half, on minimising inequality, was added by the 44th Amendment in 1978. That is the same amendment that removed the right to property from Part III."
+  simple: "The State shall work for a social order in which social, economic and political justice shapes every national institution. The State shall also try to reduce inequalities of income, status, facilities and opportunities.",
+  catch: "The second rule, on reducing inequality, came with the 44th Amendment in 1978. The same amendment removed the right to property from Part III."
 },
 "39": {
   simple: "Article 39 gives the State six economic goals.\n\n" +
@@ -53,16 +53,16 @@ partV: {
     "For over forty years, panchayats depended on the goodwill of each State. The 73rd Amendment (1992) then added Part IX, which made panchayats a constitutional requirement."
 },
 "41": {
-  simple: "Within the limits of its economic capacity, the State shall provide for the right to work, to education, and to public assistance in unemployment, old age, sickness and disablement.",
-  catch: "'Within the limits of its economic capacity and development' is the qualifier that makes this a goal rather than an entitlement."
+  simple: "Within the limits of its economic capacity, the State shall provide for the right to work, to education, and to public help in unemployment, old age, sickness and disability.",
+  catch: "The words \"within the limits of its economic capacity and development\" make Article 41 a goal, not an entitlement."
 },
 "42": {
-  simple: "The State shall make provision for just and humane conditions of work, and for maternity relief.",
-  catch: "This is the basis for the Maternity Benefit Act and much protective labour legislation. Courts have also used it to read dignity at work into Article 21."
+  simple: "The State shall provide for just and humane conditions of work, and for maternity relief.",
+  catch: "Article 42 is the basis of the Maternity Benefit Act and much other law protecting workers. Courts have also used it to read dignity at work into Article 21."
 },
 "43": {
-  simple: "The State shall try to secure for all workers a living wage, decent conditions of work, a decent standard of life, and full enjoyment of leisure. It shall also promote cottage industries in rural areas.",
-  catch: "A living wage is a higher standard than a minimum wage. It has never been legislated as such."
+  simple: "The State shall try to secure for all workers a living wage, decent working conditions, a decent standard of life, and full use of leisure. The State shall also promote cottage industries in rural areas.",
+  catch: "A living wage is a higher standard than a minimum wage. No law has ever set a living wage as such."
 },
 "43A": {
   simple: "The State shall take steps to secure the participation of workers in the management of industries.",
@@ -89,13 +89,13 @@ partV: {
     "But Article 46 creates no quota itself. The power to reserve comes from other articles. Article 46 supplies only the reason."
 },
 "47": {
-  simple: "The State shall raise the level of nutrition and the standard of living, and improve public health. It shall also try to bring about prohibition of intoxicating drinks and drugs, except for medicinal purposes.",
-  catch: "The prohibition clause is the constitutional hook that State liquor bans hang on, such as Bihar's in 2016."
+  simple: "The State shall raise the level of nutrition and the standard of living, and improve public health. The State shall also try to bring about prohibition of intoxicating drinks and drugs, except for medical use.",
+  catch: "State bans on liquor, such as Bihar's in 2016, rest on the prohibition clause."
 },
 "48": {
-  simple: "The State shall organise agriculture and animal husbandry on modern and scientific lines. It shall preserve and improve breeds, and prohibit the slaughter of cows, calves and other milch and draught cattle.",
-  catch: "State cattle-slaughter laws are defended under this article read with Article 48A.\n\n" +
-    "In Mirzapur Moti Kureshi (2005) the Supreme Court upheld a total ban on cow slaughter, overruling its own earlier position."
+  simple: "The State shall organise farming and animal husbandry on modern, scientific lines. The State shall preserve and improve breeds, and ban the slaughter of cows, calves and other milch and draught cattle.",
+  catch: "States defend their laws on cattle slaughter under Article 48, read with Article 48A.\n\n" +
+    "In Mirzapur Moti Kureshi (2005) the Supreme Court upheld a total ban on cow slaughter, and overruled its own earlier position."
 },
 "48A": {
   simple: "The State shall try to protect and improve the environment, and to safeguard the country's forests and wildlife.",
@@ -104,7 +104,7 @@ partV: {
 },
 "49": {
   simple: "The State shall protect monuments, places and objects of artistic or historic interest that are declared to be of national importance.",
-  catch: "Given effect by the Ancient Monuments and Archaeological Sites and Remains Act, 1958."
+  catch: "The Ancient Monuments and Archaeological Sites and Remains Act, 1958 puts Article 49 into effect."
 },
 "50": {
   simple: "The State shall take steps to separate the judiciary from the executive in the public services.",
@@ -134,9 +134,9 @@ partV: {
     "The President is the head of state, not the head of the government. The President represents the country, while the Prime Minister and the Council of Ministers run the government."
 },
 "53": {
-  simple: "The executive power of the Union is vested in the President. He exercises it either directly or through officers subordinate to him. He is also the supreme commander of the defence forces.",
-  catch: "'Vested in the President' is a formality.\n\n" +
-    "Read with Article 74, the power belongs to the President in name and to the Council of Ministers in substance. Supreme command is likewise exercised as regulated by law."
+  simple: "The executive power of the Union is vested in the President. The President uses it directly or through officers below the President. The President is also the supreme commander of the defence forces.",
+  catch: "\"Vested in the President\" is a formality. Read with Article 74, the power belongs to the President in name and to the Council of Ministers in substance.\n\n" +
+    "Supreme command of the forces is likewise exercised as the law regulates it."
 },
 "54": {
   simple: "The President is elected by an electoral college. The college has the elected members of both Houses of Parliament and of the State Legislative Assemblies, including those of Delhi and Puducherry.",
@@ -144,31 +144,31 @@ partV: {
     "The votes also carry different values. Each State's weight follows its population, and the total value of all MLA votes equals the total value of all MP votes. So an MLA from Uttar Pradesh carries more weight than an MLA from Sikkim."
 },
 "55": {
-  simple: "The election must be as uniform as possible across States, and proportionate between the Union and the States.\n\n" +
-    "Each MLA's vote is weighted by the State's population. Each MP's vote is weighted so that all MPs together equal all MLAs together. Voting is by single transferable vote and secret ballot.",
-  catch: "'Population' still means the 1971 census figures.\n\n" +
-    "The 42nd Amendment froze them and the 84th extended the freeze until the first census after 2026. Vote values therefore do not track present-day population at all."
+  simple: "The President's election must be as uniform as possible between the States, and balanced between the Union and the States.\n\n" +
+    "Each MLA's vote is weighted by the State's population. Each MP's vote is weighted so that all MPs together equal all MLAs together. Voting is by the single transferable vote, in a secret ballot.",
+  catch: "\"Population\" here still means the 1971 census. The 42nd Amendment froze the figures, and the 84th extended the freeze until the first census after 2026.\n\n" +
+    "So the value of a vote does not follow today's population at all."
 },
 "56": {
-  simple: "The President holds office for five years. He may resign to the Vice-President, and may be removed by impeachment under Article 61. He continues in office until his successor takes over.",
-  catch: "That last clause means there is never a vacancy in the office, whatever happens to the election timetable."
+  simple: "The President holds office for five years. The President may resign by writing to the Vice-President, and may be removed by impeachment under Article 61. The President stays in office until a successor takes over.",
+  catch: "The last rule means the office is never vacant at the end of a term, whatever happens to the election timetable."
 },
 "57": {
-  simple: "A person who has held office as President is eligible for re-election.",
-  catch: "There is no term limit at all. Rajendra Prasad is the only person to have served two full terms."
+  simple: "A person who has been President may stand for election again.",
+  catch: "There is no limit on the number of terms. Rajendra Prasad is the only President to have served two full terms."
 },
 "58": {
-  simple: "To be President you must be a citizen of India, have completed thirty-five years, be qualified for election to the Lok Sabha, and hold no office of profit under the Union, a State or a local authority.",
-  catch: "The President, Vice-President, a Governor and a Minister are expressly not treated as holding an office of profit. Without that exception a sitting Vice-President could not stand."
+  simple: "A candidate for President must be a citizen of India, at least thirty-five years old, and qualified for election to the Lok Sabha. The candidate must hold no office of profit under the Union, a State or a local authority.",
+  catch: "The President, the Vice-President, a Governor and a minister are expressly treated as not holding an office of profit. Without the exception, a sitting Vice-President could not stand."
 },
 "59": {
-  simple: "The President cannot be a member of either House of Parliament or of a State legislature. If a sitting member is elected, the seat falls vacant.\n\n" +
-    "He gets a rent-free official residence and the emoluments set out in the Second Schedule, which cannot be reduced during his term.",
-  catch: "The bar on reducing emoluments is a small but real independence guarantee. It drops away during a Financial Emergency under Article 360."
+  simple: "The President cannot be a member of either House of Parliament or of a State legislature. If a sitting member is elected President, the seat falls vacant.\n\n" +
+    "The President gets a rent-free official residence and the pay set out in the Second Schedule, which cannot be cut during the term.",
+  catch: "The bar on cutting the President's pay is a small but real guarantee of independence. No government can use the President's salary as a lever."
 },
 "60": {
-  simple: "The President takes his oath before the Chief Justice of India. He swears to faithfully execute the office, to preserve, protect and defend the Constitution and the law, and to devote himself to the service and well-being of the people.",
-  catch: "The words 'preserve, protect and defend the Constitution' are what make 'violation of the Constitution' a meaningful ground for impeachment under Article 61."
+  simple: "The President takes the oath before the Chief Justice of India. The President swears to carry out the office faithfully, to preserve, protect and defend the Constitution and the law, and to serve the people of India.",
+  catch: "The promise to \"preserve, protect and defend the Constitution\" is what gives meaning to \"violation of the Constitution\", the only ground for impeachment under Article 61."
 },
 "61": {
   simple: "Impeachment has two stages.\n\n" +
@@ -178,13 +178,13 @@ partV: {
     "The bodies that elect and remove the President also differ. Nominated members of Parliament cannot vote to elect a President, but they can vote to remove one. State Assemblies elect the President, but have no part in removal."
 },
 "62": {
-  simple: "An election to fill a vacancy caused by expiry of the term must be completed before the term expires. A vacancy caused by death, resignation or removal must be filled within six months.",
-  catch: "The person elected to a casual vacancy gets a full five-year term, not the remainder of the predecessor's."
+  simple: "The election for a new President must be completed before the outgoing President's term ends. A vacancy caused by death, resignation or removal must be filled within six months.",
+  catch: "A President elected to fill such a vacancy gets a full five-year term, not the rest of the predecessor's term."
 },
 "63": {
   simple: "There shall be a Vice-President of India.",
   catch: "The office has almost no function of its own. Chairing the Rajya Sabha under Article 64 and acting as President under Article 65 are both borrowed roles.\n\n" +
-    "The Vice-President's real influence therefore depends on how he runs the House."
+    "So the Vice-President's real influence depends on how the Rajya Sabha is run."
 },
 "64": {
   simple: "The Vice-President is ex officio Chairman of the Rajya Sabha. He draws no Vice-President's salary while acting as President.",
