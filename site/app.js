@@ -1517,15 +1517,17 @@
   /* The jump strip in Explain. A tap scrolls to the part, under the strip.
      While the reader scrolls, the part at the top of the screen is marked. */
   var XP_GO = '', XP_LOCK = 0;
-  function xpStrip() {
-    var s = $('#main .xp-jump');
+  // A pop-up scrolls inside its own body; the page scrolls the window.
+  function xpBox(el) { return (el && el.closest && el.closest('.sheet-body')) || null; }
+  function xpStrip(box) {
+    var s = (box || $('#main')) && (box || $('#main')).querySelector('.xp-jump');
     return s && s.offsetParent ? s : null;
   }
   function xpOffset(strip) {
     return strip ? (parseFloat(getComputedStyle(strip).top) || 0) + strip.offsetHeight + 14 : scrollPad();
   }
-  function xpMark(id) {
-    var strip = xpStrip();
+  function xpMark(id, box) {
+    var strip = xpStrip(box);
     if (!strip) return;
     strip.querySelectorAll('button[data-xp]').forEach(function (b) {
       var on = b.getAttribute('data-xp') === id;
@@ -1540,24 +1542,35 @@
   function xpJump(id, smooth) {
     var el = document.getElementById(id);
     if (!el) return;
-    var strip = xpStrip();
+    var box = xpBox(el), strip = xpStrip(box);
     XP_LOCK = Date.now() + (smooth ? 800 : 100);
     var first = strip && strip.querySelector('button[data-xp]');
-    xpMark(id === 'xp-exam' && strip ? (strip.querySelector('.xp-sep + button') || first).getAttribute('data-xp') : id);
-    window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + window.scrollY - xpOffset(strip)),
-                      behavior: smooth ? 'smooth' : 'auto' });
+    xpMark(/exam$/.test(id) && strip ? (strip.querySelector('.xp-sep + button') || first).getAttribute('data-xp') : id, box);
+    var behavior = smooth ? 'smooth' : 'auto';
+    if (box) {
+      box.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top - box.getBoundingClientRect().top +
+        box.scrollTop - xpOffset(strip)), behavior: behavior });
+    } else {
+      window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + window.scrollY - xpOffset(strip)),
+                        behavior: behavior });
+    }
   }
-  function xpSpy() {
-    if (Date.now() < XP_LOCK) return;
-    var strip = xpStrip();
+  function xpSpyIn(box) {
+    var strip = xpStrip(box);
     if (!strip) return;
-    var line = xpOffset(strip) + 10, cur = null;
+    var line = (box ? box.getBoundingClientRect().top : 0) + xpOffset(strip) + 10, cur = null;
     strip.querySelectorAll('button[data-xp]').forEach(function (b) {
       var el = document.getElementById(b.getAttribute('data-xp'));
       if (el && el.getBoundingClientRect().top <= line) cur = b.getAttribute('data-xp');
     });
     if (!cur) { var f = strip.querySelector('button[data-xp]'); cur = f && f.getAttribute('data-xp'); }
-    xpMark(cur);
+    xpMark(cur, box);
+  }
+  function xpSpy() {
+    if (Date.now() < XP_LOCK) return;
+    xpSpyIn(null);
+    var sheet = $('.sheet-body');
+    if (sheet) xpSpyIn(sheet);
   }
 
   function showTab(id, focus) {
@@ -1891,22 +1904,23 @@
      does not repeat what it says. A strip at the top names every part, stays
      in view while the reader scrolls, marks the part being read, and jumps to
      any other. */
-  function explainPane(ex, exam) {
+  function explainPane(ex, exam, pre, inSheet) {
     if (!ex && !exam) return '';
-    var top = ex ? explainParts(ex, 'xp-') : [];
-    var low = exam ? examParts(exam, false, 'xp-').filter(function (p) { return !(ex && p.k === 'says'); }) : [];
+    pre = pre || 'xp-';
+    var top = ex ? explainParts(ex, pre) : [];
+    var low = exam ? examParts(exam, inSheet, pre).filter(function (p) { return !(ex && p.k === 'says'); }) : [];
     var jumps = top.concat(low).filter(function (p) { return p.t; });
     var n = 0;
     var strip = jumps.length >= 3 ? '<nav class="xp-jump" aria-label="Parts of this explanation">' +
       jumps.map(function (p) {
         var sep = (low.length && p === low.filter(function (q) { return q.t; })[0])
           ? '<span class="xp-sep">For the exam</span>' : '';
-        return sep + '<button type="button" data-xp="xp-' + p.k + '"><i>' + (++n) + '</i>' + esc(p.t) + '</button>';
+        return sep + '<button type="button" data-xp="' + pre + p.k + '"><i>' + (++n) + '</i>' + esc(p.t) + '</button>';
       }).join('') + '</nav>' : '';
     var s = strip;
     if (top.length) s += '<div class="explain">' + top.map(function (p) { return p.html; }).join('') + '</div>';
     if (low.length) {
-      s += '<section class="exam xp-exam" id="xp-exam"><header class="xp-exam-head"><h3>For the exam</h3>' +
+      s += '<section class="exam xp-exam" id="' + pre + 'exam"><header class="xp-exam-head"><h3>For the exam</h3>' +
         '<div class="exam-head">' + examPills(exam) + '</div></header>' +
         low.map(function (p) { return p.html; }).join('') + '</section>';
     }
@@ -1915,13 +1929,14 @@
 
   // In the article header: how often the examiners ask it, and whether Mains
   // does too. A tap opens the exam part of Explain.
-  function prioPills(entry) {
+  function prioPills(entry, target) {
     if (!entry) return '';
+    target = target || 'xp-exam';
     var t = TIER[entry.tier] || TIER[3];
     var mains = (entry.papers || []).indexOf('UPSC Mains') >= 0;
-    return '<button type="button" class="pill ' + t.pill + ' prio" data-xpgo="xp-exam" title="What the examiners ask">' +
+    return '<button type="button" class="pill ' + t.pill + ' prio" data-xpgo="' + target + '" title="What the examiners ask">' +
       esc(t.label + ' \u00b7 ' + t.blurb) + '</button>' +
-      (mains ? '<button type="button" class="pill grey prio" data-xpgo="xp-exam" title="What the examiners ask">' +
+      (mains ? '<button type="button" class="pill grey prio" data-xpgo="' + target + '" title="What the examiners ask">' +
         'Also asked in Mains</button>' : '');
   }
   function para(t, wrap) {
@@ -2414,9 +2429,11 @@
       '<div class="sheet-head">' +
       '<a class="cc-where" href="' + e.href + '">' + esc(e.label) + ' &rarr;</a>' +
       '<h2 id="sheetName">' + esc(e.sub) + '</h2>' +
-      '<div class="case-meta">' + examPills(e.x) + '</div>' +
+      '<div class="case-meta">' + prioPills(e.x, 'xs-exam') + '</div>' +
       '</div>' +
-      examBody(e.x, true) +
+      // The same reading as the Explain tab: the plain explanation, then the
+      // exam note under For the exam.
+      explainPane(EXPLAIN[key] || null, e.x, 'xs-', true) +
       '<div class="sheet-foot"><a class="chip" href="' + e.href + '">Read ' +
       esc(e.label) + ' in full &rarr;</a>' +
       '<button class="chip" type="button" data-close="1">Close</button></div>');
@@ -4100,11 +4117,11 @@
   function init() {
     readLoad();
     var xpTick = false;
-    window.addEventListener('scroll', function () {
+    document.addEventListener('scroll', function () {
       if (xpTick) return;
       xpTick = true;
       requestAnimationFrame(function () { xpTick = false; xpSpy(); });
-    }, { passive: true });
+    }, { passive: true, capture: true });
     buildSidebar();
     initNav();
 
@@ -4253,7 +4270,11 @@
       var xpBtn = e.target.closest && e.target.closest('[data-xp]');
       if (xpBtn) { xpJump(xpBtn.getAttribute('data-xp'), true); return; }
       var xpGo = e.target.closest && e.target.closest('[data-xpgo]');
-      if (xpGo) { showTab('explain'); xpJump(xpGo.getAttribute('data-xpgo'), true); return; }
+      if (xpGo) {
+        if (!xpBox(xpGo)) showTab('explain');
+        xpJump(xpGo.getAttribute('data-xpgo'), true);
+        return;
+      }
       var tabBtn = e.target.closest && e.target.closest('.atab[data-tab], .abar-i[data-tab]');
       if (tabBtn) { showTab(tabBtn.getAttribute('data-tab')); return; }
       // A section row on the Part page scrolls to its section.
