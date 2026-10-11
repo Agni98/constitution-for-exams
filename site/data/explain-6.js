@@ -154,8 +154,8 @@ partXIII: {
   catch: "The 101st Amendment removed the duties on medicinal and toilet preparations, which GST absorbed. Only stamp duties are left."
 },
 "268A": {
-  simple: "This article once provided for service tax, levied by the Union and collected and appropriated by the Union and the States.",
-  catch: "Inserted by the 88th Amendment in 2003 and omitted by the 101st in 2016, when GST replaced service tax."
+  simple: "Article 268A once provided for a service tax, levied by the Union and collected and kept by the Union and the States.",
+  catch: "The 88th Amendment inserted it in 2003. The 101st omitted it in 2016, when GST replaced service tax."
 },
 "269": {
   simple: "Taxes on the sale or consignment of goods between States are levied and collected by the Union, but handed to the States. The money never enters the Consolidated Fund of India.",
@@ -266,8 +266,8 @@ partXIII: {
   catch: "The CAG's decision is final, as under Article 279."
 },
 "290A": {
-  simple: "An annual payment of ₹46.5 lakh is made to the Travancore Devaswom Fund from the Consolidated Fund of Kerala, and ₹13.5 lakh to the Devaswom Fund of Tamil Nadu.",
-  catch: "This settles the covenant made when Travancore and Cochin merged. It is one of the few religious endowments named in the Constitution itself."
+  simple: "Every year, ₹46.5 lakh is paid from Kerala's Consolidated Fund to the Travancore Devaswom Fund, and ₹13.5 lakh from Tamil Nadu's to its Devaswom Fund.",
+  catch: "The payments honour a promise made when Travancore and Cochin merged. They are among the very few religious endowments named in the Constitution itself."
 },
 "291": {
   simple: "Article 291 once provided for the privy purses paid to the rulers of the former princely States.",

@@ -34,13 +34,13 @@ partXVIII: {
 /* ---------- Part XIV: Services ---------- */
 
 "308": {
-  simple: "In this Part, 'State' does not include Jammu and Kashmir.",
-  catch: "Spent after the 2019 reorganisation."
+  simple: "In Part XIV, \"State\" does not include Jammu and Kashmir.",
+  catch: "The exclusion has no effect since the 2019 reorganisation."
 },
 "309": {
-  simple: "Parliament or a State legislature may regulate the recruitment and conditions of service of persons serving the Union or a State. Until they do, the President or the Governor may make rules.",
-  catch: "The proviso is doing almost all the work.\n\n" +
-    "Most service conditions in India are governed by executive rules made under it, not by statute. Those rules yield the moment a legislature acts."
+  simple: "Parliament or a State legislature may regulate how people serving the Union or a State are recruited, and their conditions of service. Until they do, the President or the Governor may make rules.",
+  catch: "The proviso does almost all the work. Most conditions of service in India come from rules the executive makes under it, not from statute.\n\n" +
+    "But the rules give way as soon as a legislature passes a law on the subject."
 },
 "310": {
   simple: "Members of the defence services and the civil services of the Union hold office during the pleasure of the President. State civil servants hold office during the pleasure of the Governor.",
@@ -63,12 +63,12 @@ partXVIII: {
   catch: "Inserted by the 28th Amendment in 1972, to end the special guarantees the old Indian Civil Service officers had been given at independence."
 },
 "313": {
-  simple: "Until other provision is made, the laws in force before the Constitution continue to apply to the services and posts they applied to.",
-  catch: "A transitional provision that has quietly become permanent in places. Some service rules still trace their authority to pre-1950 regulations continued by this article."
+  simple: "Until other provision is made, the laws in force before the Constitution continue to apply to the services and posts they covered.",
+  catch: "A transitional rule has become lasting in places. Some service rules still trace their authority to pre-1950 regulations kept alive by Article 313."
 },
 "314": {
-  simple: "This article once protected the conditions of service of persons appointed by the Secretary of State for India.",
-  catch: "Omitted by the 28th Amendment in 1972, and replaced by Article 312A."
+  simple: "Article 314 once protected the conditions of service of officers appointed by the Secretary of State for India.",
+  catch: "The 28th Amendment omitted it in 1972, and Article 312A took its place."
 },
 "315": {
   simple: "There shall be a Public Service Commission for the Union and one for each State.\n\n" +
@@ -77,9 +77,9 @@ partXVIII: {
     "The appointing authority also differs. The President appoints the members of the UPSC and of a Joint Commission, and the Governor appoints those of a State Commission. But only the President can remove any of them."
 },
 "316": {
-  simple: "Members of a Public Service Commission are appointed by the President for the Union or a Joint Commission, and by the Governor for a State.\n\n" +
-    "At least half must be people who have held office under the Government for at least ten years. They serve six years, or until sixty-five for the Union and sixty-two for a State, whichever is earlier.",
-  catch: "The requirement that half the members have government experience is meant to bring administrative knowledge in. It is criticised for making the Commissions a retirement posting."
+  simple: "The President appoints the members of the UPSC and of a Joint Commission. The Governor appoints the members of a State Commission.\n\n" +
+    "About half the members must have held office under the government for at least ten years. Members serve six years, or until sixty-five for the UPSC and sixty-two for a State Commission, if sooner.",
+  catch: "The rule on government experience is meant to bring knowledge of administration into the Commissions. But critics say it turns membership into a posting for retired officials."
 },
 "317": {
   simple: "Only the President can remove a member of a Public Service Commission. For misbehaviour, the President must first refer the case to the Supreme Court, and can remove the member only if the Court reports that removal is justified.\n\n" +
@@ -88,13 +88,13 @@ partXVIII: {
     "The Supreme Court's report binds the President. Members therefore have stronger protection of tenure than a Governor does."
 },
 "318": {
-  simple: "The President or the Governor may make regulations on the number of members of a Commission, its staff and their conditions of service.",
-  catch: "The staff and conditions of a Public Service Commission are settled by the executive, not by the Commission. It is a gap in its otherwise strong independence."
+  simple: "The President or the Governor may make regulations on the number of a Commission's members, its staff and their conditions of service.",
+  catch: "So the executive, not the Commission, settles the Commission's staff and their terms. The arrangement is a gap in the Commission's otherwise strong independence."
 },
 "319": {
-  simple: "There are bars on employment after leaving a Commission.\n\n" +
-    "The UPSC Chairman is barred from any further government employment. A State Commission's Chairman may become UPSC Chairman or a member, or a State Commission's Chairman elsewhere, and nothing else.",
-  catch: "This is a deliberate anti-inducement rule, on the same logic as the bar on the Comptroller and Auditor-General in Article 148."
+  simple: "Members who leave a Commission face limits on later jobs.\n\n" +
+    "The UPSC Chairman may take no further government job. A State Commission's Chairman may become Chairman or a member of the UPSC, or Chairman of another State's Commission, and nothing else.",
+  catch: "The limits remove any reason to please the government in the hope of a later job. The same logic bars the Comptroller and Auditor-General under Article 148."
 },
 "320": {
   simple: "The Public Service Commissions conduct examinations for government jobs. They advise on methods of recruitment, appointments, promotions and transfers, disciplinary matters, and claims for costs and pensions arising from service.",
@@ -102,16 +102,16 @@ partXVIII: {
     "So the check on rejection is political, not legal."
 },
 "321": {
-  simple: "Parliament or a State legislature may confer additional functions on a Public Service Commission, including for local authorities and public institutions.",
-  catch: "Rarely used. Most recruitment for local bodies and public institutions is done by separate selection boards."
+  simple: "Parliament or a State legislature may give a Public Service Commission extra functions, including for local bodies and public institutions.",
+  catch: "The power is rarely used. Separate selection boards do most of the hiring for local bodies and public institutions."
 },
 "322": {
-  simple: "The expenses of a Public Service Commission, including salaries and pensions, are charged on the Consolidated Fund of India or of the State.",
-  catch: "Charged expenditure again. The Commission's budget is not put to an annual vote, so it cannot be squeezed by the government it advises."
+  simple: "A Public Service Commission's costs, including salaries and pensions, are charged on the Consolidated Fund of India or of the State.",
+  catch: "The Commission's budget is not put to a vote every year. So the government it advises cannot squeeze it."
 },
 "323": {
-  simple: "Each Commission presents an annual report to the President or the Governor, who lays it before the legislature with a memorandum explaining any case where the Commission's advice was not accepted.",
-  catch: "The obligation to explain every departure in public is the only real sanction behind advice that is otherwise not binding."
+  simple: "Each Commission presents a yearly report to the President or the Governor. The report is laid before the legislature, with a note explaining every case where the government did not accept the Commission's advice.",
+  catch: "The advice does not bind the government. So the duty to explain every rejection in public is the only real force behind it."
 },
 
 /* ---------- Part XIVA: Tribunals ---------- */
@@ -136,8 +136,8 @@ partXVIII: {
     "Appointment has also been fought over. In Anoop Baranwal (2023), the Court said a committee of the Prime Minister, the Leader of the Opposition and the Chief Justice should choose, until Parliament made a law. Parliament's 2023 law replaced the Chief Justice with a Union Cabinet Minister, giving the government a majority on the panel."
 },
 "325": {
-  simple: "There is one general electoral roll for every constituency. No one may be excluded from it, or claim inclusion in it, on grounds only of religion, race, caste or sex.",
-  catch: "This is the constitutional rejection of separate electorates. It is the single most consequential break from the Government of India Act, 1935."
+  simple: "Every constituency has one general electoral roll. Nobody may be left off it, or claim a place on a special roll, on grounds only of religion, race, caste or sex.",
+  catch: "Article 325 rejects separate electorates. Colonial rule had divided voters by community, and the Constitution ended that."
 },
 "326": {
   simple: "Elections to the Lok Sabha and the State Assemblies are held on the basis of adult suffrage.\n\n" +
@@ -146,18 +146,18 @@ partXVIII: {
     "The Constitution requires adult suffrage. But the individual's right to vote comes from the Representation of the People Act, 1951, so the Court calls it a statutory right. Ordinary law also fills in the disqualifications, which is how section 62(5) of the Act bars prisoners from voting."
 },
 "327": {
-  simple: "Parliament may make provision by law about all matters relating to elections to Parliament and to State legislatures, including electoral rolls, delimitation, and everything needed to secure their due constitution.",
-  catch: "The Representation of the People Acts of 1950 and 1951 are made under this article."
+  simple: "Parliament may make laws on every matter relating to elections to Parliament and the State legislatures, including electoral rolls and the drawing of constituencies.",
+  catch: "The Representation of the People Acts of 1950 and 1951 were made under Article 327."
 },
 "328": {
-  simple: "A State legislature may make provision about elections to its own Houses, so far as Parliament has not.",
-  catch: "A residual power. It operates only where Parliament has not already legislated, and Parliament has legislated comprehensively."
+  simple: "A State legislature may make laws on elections to its own Houses, so far as Parliament has not.",
+  catch: "The power works only where Parliament has not already made a law. Parliament has covered almost the whole field."
 },
 "329": {
-  simple: "No court may question the validity of a law relating to the delimitation of constituencies or the allotment of seats.\n\n" +
-    "No election to Parliament or a State legislature may be called in question except by an election petition, presented to the authority and in the manner a law provides.",
-  catch: "The bar operates once the election process has begun, and until it ends. A court will not stop an election midway.\n\n" +
-    "It does not bar review of the process before the notification, nor of a refusal to hold an election at all."
+  simple: "No court may question a law on drawing constituencies or sharing seats.\n\n" +
+    "An election to Parliament or a State legislature may be challenged only by an election petition, presented in the way a law provides.",
+  catch: "The bar applies from the start of the election process to its end. So a court will not stop an election halfway.\n\n" +
+    "But the bar does not cover steps before the election is notified, or a failure to hold an election at all."
 },
 "329A": {
   simple: "This article placed disputes about the election of the Prime Minister and the Speaker beyond the reach of the courts.",
@@ -178,12 +178,12 @@ partXVIII: {
     "Article 334A makes it take effect only after a census, and the delimitation exercise that follows."
 },
 "331": {
-  simple: "This article once allowed the President to nominate up to two Anglo-Indians to the Lok Sabha, if the community was not adequately represented.",
-  catch: "The power lapsed on 25 January 2020, when the 104th Amendment declined to extend it. The article survives in the text but has no continuing effect."
+  simple: "Article 331 let the President nominate up to two Anglo-Indians to the Lok Sabha, if the community was not adequately represented.",
+  catch: "The power lapsed on 25 January 2020, because the 104th Amendment did not extend it. The article is still in the text, but has no effect."
 },
 "332": {
-  simple: "Seats are reserved in every State Legislative Assembly for Scheduled Castes and Scheduled Tribes, in proportion to their population. There are special arrangements for the North-Eastern States.",
-  catch: "The North-Eastern arrangements are exceptions to the proportionality rule. In Nagaland, Meghalaya, Mizoram and Arunachal Pradesh, reservation follows the accords rather than the census."
+  simple: "Seats in every State Legislative Assembly are reserved for Scheduled Castes and Scheduled Tribes, in proportion to their population. Some north-eastern States have special arrangements.",
+  catch: "In Arunachal Pradesh, Meghalaya, Mizoram, Nagaland and Tripura, special clauses fix the number of seats reserved for Scheduled Tribes. The usual population share does not apply there."
 },
 "332A": {
   simple: "One-third of the seats reserved for Scheduled Castes and Scheduled Tribes in State Assemblies, and one-third of the total seats, shall be reserved for women.",
