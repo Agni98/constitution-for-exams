@@ -7,19 +7,19 @@
 Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 
 partXIX: {
-  simple: "Part XIX holds what did not fit elsewhere.\n\n" +
-    "It covers the immunity of the President and Governors, the definitions clause, and the article that turns a State's failure to obey a Union direction into a ground for President's Rule."
+  simple: "Part XIX holds provisions that did not fit elsewhere.\n\n" +
+    "The Part covers the immunity of the President and the Governors, the definitions clause, and the article that makes a State's failure to obey a Union direction a ground for President's rule."
 },
 partXX: {
-  simple: "Part XX is one article. It says how the Constitution changes itself.\n\n" +
-    "It also carries, by judicial construction, a limit on that power which the article itself does not mention."
+  simple: "Part XX has one article, which says how the Constitution is amended.\n\n" +
+    "The courts have also read into the article a limit it does not mention: an amendment cannot destroy the basic structure."
 },
 partXXI: {
-  simple: "Part XXI is labelled temporary and transitional. Most of it has turned out to be permanent.\n\n" +
-    "It holds the special arrangements for eleven States in Articles 371 to 371J, the continuance of pre-Constitution laws, and Article 370, which was temporary for seventy years."
+  simple: "Part XXI is headed temporary, transitional and special. Much of it has turned out to be permanent.\n\n" +
+    "The Part holds the special arrangements for about a dozen States in Articles 371 to 371J, the continuance of laws from before the Constitution, and Article 370, which stayed \"temporary\" for seventy years."
 },
 partXXII: {
-  simple: "Part XXII is the last four articles. What the Constitution is called, when it came into force, the authoritative Hindi text, and what it repealed."
+  simple: "Part XXII has the last four articles. They give the Constitution's name, the date it came into force, the authoritative Hindi text, and the laws it repealed."
 },
 
 /* ---------- Part XIX ---------- */
@@ -31,14 +31,14 @@ partXXII: {
     "Rameshwar Prasad (2006) confirmed the point. The Court examined a Governor's report for bad faith, while the Governor stayed personally immune."
 },
 "361A": {
-  simple: "No one is liable in civil or criminal proceedings for publishing a substantially true report of proceedings of either House of Parliament or of a State legislature.\n\n" +
-    "The exceptions are a publication proved to have been made with malice, and a report of a secret sitting.",
-  catch: "Inserted by the 44th Amendment in 1978, restoring a press protection that had been repealed in 1976.\n\n" +
-    "It protects the reporter, not the legislator. The legislator's protection is in Articles 105 and 194."
+  simple: "Nobody may be sued or prosecuted for publishing a substantially true report of proceedings in Parliament or a State legislature.\n\n" +
+    "The exceptions are a report proved to be published with malice, and a report of a secret sitting.",
+  catch: "The 44th Amendment (1978) added the article, and so restored a protection for the press that had been repealed in 1976, during the Emergency.\n\n" +
+    "Article 361A protects the reporter, not the legislator. The legislator's protection is in Articles 105 and 194."
 },
 "361B": {
-  simple: "A member disqualified for defection under the Tenth Schedule cannot hold any remunerative political post, until his term expires or he is re-elected.",
-  catch: "Added by the 91st Amendment in 2003, to close the loophole by which a defector, disqualified from the House, was immediately made a minister or corporation chairman."
+  simple: "A member disqualified for defection under the Tenth Schedule cannot hold any paid political post until the term ends or the member is re-elected.",
+  catch: "The 91st Amendment (2003) added the article. The article closed a loophole: a defector who lost the seat was often made a minister or the chairman of a public body at once."
 },
 "362": {
   simple: "Article 362 once required due regard for the guarantees given to the rulers of the princely States.",
@@ -49,8 +49,8 @@ partXXII: {
   catch: "So the Instruments of Accession and the merger agreements lie wholly outside the courts. The settlement with the princely States rested on that rule."
 },
 "363A": {
-  simple: "Recognition of the Rulers of Indian States is abolished. Their privy purses are abolished, and all rights, liabilities and obligations in respect of privy purses are extinguished.",
-  catch: "Inserted by the 26th Amendment in 1971, after the Supreme Court in Madhav Rao Scindia (1970) struck down the presidential order that had tried to achieve the same result by executive action."
+  simple: "The rulers of the former princely States are no longer recognised. Their privy purses are abolished, and every right and duty attached to the privy purses is extinguished.",
+  catch: "The 26th Amendment (1971) added the article. In Madhav Rao Scindia (1970) the Supreme Court had struck down a presidential order that tried to do the same by executive action."
 },
 "364": {
   simple: "The President may, by notice, direct that a law shall not apply, or shall apply with changes, to a major port or aerodrome.",
@@ -108,22 +108,22 @@ partXXII: {
     "The 13th Amendment (1962) added the article as part of the settlement that created Nagaland. Unlike Article 370, Article 371A is not temporary. No presidential order can end it, and removing it would need a constitutional amendment."
 },
 "371B": {
-  simple: "The President may provide for a committee of the Assam Legislative Assembly, consisting of members elected from the tribal areas.",
-  catch: "The committee provided for here is the constitutional ancestor of the autonomous council arrangements that eventually produced Meghalaya under Article 244A."
+  simple: "The President may provide for a committee of the Assam Legislative Assembly, made up of members elected from the tribal areas.",
+  catch: "The 22nd Amendment (1969) added the article, together with Article 244A. The arrangements for the hill areas that followed led to the creation of Meghalaya."
 },
 "371C": {
-  simple: "The President may provide for a committee of the Manipur Assembly, consisting of members elected from the hill areas. He may also direct that the Governor has special responsibility for their administration.",
-  catch: "The Hill Areas Committee of the Manipur Assembly exists under this article. Its role in legislation affecting the hill districts is a recurring point of contention."
+  simple: "The President may provide for a committee of the Manipur Assembly, made up of members elected from the hill areas. The President may also give the Governor special responsibility for governing those areas.",
+  catch: "The Hill Areas Committee of the Manipur Assembly exists under Article 371C. Its role in laws affecting the hill districts is a recurring point of dispute."
 },
 "371D": {
-  simple: "The President may provide for equitable opportunities in public employment and education for people of different parts of Andhra Pradesh and Telangana.\n\n" +
-    "That includes local cadres, direct recruitment on a local basis, and an Administrative Tribunal to decide service disputes.",
-  catch: "Inserted by the 32nd Amendment in 1973, after the Jai Andhra and Telangana agitations.\n\n" +
-    "Its local cadre and local candidate machinery survived the 2014 bifurcation and applies to both successor States."
+  simple: "The President may provide for fair opportunities in public jobs and education for people from different parts of Andhra Pradesh and Telangana.\n\n" +
+    "The means include local cadres, local recruitment, and an Administrative Tribunal for service disputes.",
+  catch: "The 32nd Amendment (1973) added the article, after the Jai Andhra and Telangana agitations.\n\n" +
+    "The local cadres and local recruitment survived the division of the State in 2014, and apply to both successor States."
 },
 "371E": {
-  simple: "Parliament may by law provide for the establishment of a Central University in Andhra Pradesh.",
-  catch: "This is the only article in the Constitution that authorises the creation of one named university. It produced the University of Hyderabad in 1974."
+  simple: "Parliament may by law set up a central university in Andhra Pradesh.",
+  catch: "Article 371E is the only article that provides for one named university. The University of Hyderabad was set up under it in 1974."
 },
 "371F": {
   simple: "Article 371F contains the special provisions for Sikkim.\n\n" +
@@ -224,24 +224,33 @@ partXXII: {
   simple: "Article 388 dealt with filling casual vacancies in the provisional Parliament and legislatures.",
   catch: "The 7th Amendment omitted it in 1956."
 },
-"389": { simple: "This article dealt with Bills pending in the Dominion Legislature and the Provincial legislatures.", catch: "Omitted by the 7th Amendment in 1956." },
-"390": { simple: "This article dealt with money received or raised, and expenditure incurred, between the commencement of the Constitution and 31 March 1950.", catch: "Omitted by the 7th Amendment in 1956." },
-"391": { simple: "This article gave the President power to amend the First and Fourth Schedules in certain contingencies.", catch: "Omitted by the 7th Amendment in 1956." },
+"389": {
+  simple: "Article 389 dealt with Bills pending in the Dominion and Provincial legislatures.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
+"390": {
+  simple: "Article 390 dealt with money received, raised or spent between the start of the Constitution and 31 March 1950.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
+"391": {
+  simple: "Article 391 let the President amend the First and Fourth Schedules in certain situations.",
+  catch: "The 7th Amendment omitted it in 1956."
+},
 "392": {
-  simple: "The President may by order remove any difficulty arising in the transition from the Government of India Act, 1935 to the Constitution, including by adapting the Act itself.",
-  catch: "A removal-of-difficulties clause with constitutional force. It was spent by the time the first Parliament was constituted."
+  simple: "The President may by order remove any difficulty in the change-over from the Government of India Act, 1935 to the Constitution, including by adapting the Act itself.",
+  catch: "The power to remove difficulties had the force of the Constitution itself, and was spent by the time the first Parliament met."
 },
 
 /* ---------- Part XXII ---------- */
 
 "393": {
-  simple: "This Constitution may be called the Constitution of India.",
-  catch: "The shortest article in the Constitution, and the only one whose entire content is a name."
+  simple: "The Constitution's name is the Constitution of India.",
+  catch: "Article 393 does nothing but give the Constitution its name."
 },
 "394": {
-  simple: "Articles 5 to 9, 60, 324, 366, 367, 379 to 391, 392 and this article came into force on 26 November 1949. The rest came into force on 26 January 1950, which is the date the Constitution refers to as its commencement.",
-  catch: "The Constitution was adopted on 26 November 1949 and commenced on 26 January 1950. That date was chosen because the Congress had declared Purna Swaraj on 26 January 1930.\n\n" +
-    "The articles brought into force early are the ones needed to elect a President and hold elections at all."
+  simple: "Articles 5 to 9, 60, 324, 366, 367, 379, 380, 388, 391, 392 and 393, and Article 394 itself, came into force on 26 November 1949. The rest came into force on 26 January 1950, the date the Constitution calls its commencement.",
+  catch: "The Constitution was adopted on 26 November 1949 and began on 26 January 1950. The Congress had declared Purna Swaraj on 26 January 1930, so that date was chosen.\n\n" +
+    "The articles that came into force early were the ones needed for the change-over, such as citizenship, elections and the provisional arrangements."
 },
 "394A": {
   simple: "The President shall publish an authoritative text of the Constitution in Hindi, incorporating all amendments. That text has the same meaning as the English text.\n\n" +
@@ -250,9 +259,9 @@ partXXII: {
     "Where the two texts differ, clause (3) gives the President power to bring the Hindi text into conformity. The English text therefore remains the reference in practice."
 },
 "395": {
-  simple: "The Indian Independence Act, 1947 and the Government of India Act, 1935 are repealed, together with all their amending and supplementing enactments. The Abolition of Privy Council Jurisdiction Act, 1949 is not repealed.",
-  catch: "The last article of the Constitution, and the one that ends British legal authority in India.\n\n" +
-    "The Privy Council abolition Act is preserved because repealing it would have revived the jurisdiction it abolished."
+  simple: "The Indian Independence Act, 1947 and the Government of India Act, 1935 are repealed, with all the laws amending them. The Abolition of Privy Council Jurisdiction Act, 1949 is not repealed.",
+  catch: "Article 395 is the last article of the Constitution, and the one that ends British legal authority in India.\n\n" +
+    "The Act ending appeals to the Privy Council was kept, so that those appeals stayed ended."
 },
 
 /* ---------- Schedules ---------- */
