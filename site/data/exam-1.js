@@ -34,8 +34,8 @@ preamble: {
     { t: "Secular", d: "The State has no religion of its own and treats all religions equally. Secularism here is not hostility to religion. The State keeps an equal distance from every religion, so it can fund a temple, a mosque and a church alike." },
     { t: "Democratic and Republic", d: "Democratic means the people choose the government by voting. Republic means the head of State is elected, not born into the job. India has a President who is elected, not a king or queen." },
     { t: "The 42nd Amendment added three words", d: "\"Socialist\" and \"Secular\" were added to the description of India, and \"Integrity\" to the word \"unity\". The 42nd Amendment made the change in 1976, during the Emergency. Everything else in the Preamble is original." },
-    { t: "Is the Preamble part of the Constitution?", d: "Yes, today. In 1960 the Berubari case said it was not part of the Constitution, only a key to the makers' intentions. In 1973 Kesavananda Bharati reversed that and held it is part of the Constitution. The thirteen years between the two cases are themselves a favourite question." },
-    { t: "Can it be amended?", d: "Yes. The Preamble has been amended once, in 1976. But because it is part of the Constitution, Article 368 applies to it, which means its basic features cannot be destroyed even by amendment." },
+    { t: "Is the Preamble part of the Constitution?", d: "Berubari (1960) said no. Kesavananda Bharati (1973) said yes, and the thirteen years between are themselves a favourite question." },
+    { t: "Can it be amended?", d: "Amended once, in 1976. Article 368 applies, so its basic features cannot be destroyed." },
     { t: "Dates that get confused", d: "The Constituent Assembly adopted the Constitution on 26 November 1949. The Constitution came into force on 26 January 1950. The Preamble carries the first date, and Republic Day marks the second." }
   ],
   seen: [
@@ -326,9 +326,8 @@ preamble: {
   says: "Article 21A says the State shall provide free and compulsory education to all children aged six to fourteen, in the way a law decides.",
   why: "Article 21A is the only Fundamental Right added to Part III after the Constitution was written, and the fact alone makes it examinable.",
   concepts: [
-    { t: "What it guarantees", d: "The State shall provide free and compulsory education to all children between the ages of six and fourteen, in the manner the State decides by law." },
     { t: "The 86th Amendment (2002) did three things", d: "The amendment inserted Article 21A. The amendment rewrote Article 45, which now covers early childhood care for children below six. And it added a new Fundamental Duty in Article 51A(k), obliging parents to provide education." },
-    { t: "The Court got there first", d: "In Unni Krishnan (1993) the Supreme Court had already read a right to education into Article 21. The amendment nine years later put it in the text." },
+    { t: "The Court got there first", d: "Unni Krishnan (1993) read the right into Article 21 first." },
     { t: "The Right to Education Act, 2009", d: "The Act is the law that gives effect to the right. The Act sets teacher qualifications and bans capitation fees and screening interviews. A 2019 amendment lets States hold a child back in Class 5 and Class 8 after a re-examination." },
     { t: "The 25% rule", d: "Private unaided schools must keep a quarter of their entry-level seats for children from weaker sections, with the State reimbursing the cost. Upheld in Society for Unaided Private Schools (2012)." },
     { t: "Minority schools are exempt", d: "Pramati (2014) held that the Right to Education Act does not apply to minority educational institutions, because that would cut into their rights under Article 30." }
@@ -466,11 +465,10 @@ preamble: {
   says: "Article 31B says no law placed in the Ninth Schedule is void for violating a Fundamental Right, even if a court has already struck it down.",
   why: "Article 31B is the article behind the Ninth Schedule, the list of laws meant to be beyond challenge. Recent papers have asked it directly, and it carries a major judgment, I.R. Coelho (2007).",
   concepts: [
-    { t: "What it does", d: "Any Act placed in the Ninth Schedule is protected from being struck down for violating any Fundamental Right." },
-    { t: "Why it exists", d: "The First Amendment (1951) inserted Article 31B to shield land-reform laws from challenges by landlords. The Schedule started with 13 laws." },
+    { t: "Why it exists", d: "Land-reform laws, shielded by the First Amendment (1951). The Schedule began with 13 laws." },
     { t: "The Schedule grew far beyond land reform", d: "There are now over 280 entries, including laws on reservation, mining and trade regulation, many with nothing to do with land." },
-    { t: "The protection is retrospective", d: "Even a law already declared void by a court revives once it is placed in the Ninth Schedule. Article 31B gives wider protection than Article 31A." },
-    { t: "I.R. Coelho (2007)", d: "A nine-judge bench held that any law added to the Ninth Schedule after 24 April 1973, the date of the Kesavananda judgment, can be tested against the basic structure of the Constitution. The Schedule is no longer an absolute shield." },
+    { t: "The protection is retrospective", d: "Even a law already declared void revives once placed in the Schedule." },
+    { t: "I.R. Coelho (2007)", d: "Laws added after 24 April 1973 can be tested against the basic structure." },
     { t: "How a law gets in", d: "Only by a constitutional amendment under Article 368, since it means adding to a Schedule of the Constitution." }
   ],
   seen: [
@@ -486,10 +484,10 @@ preamble: {
   says: "Article 31C protects a law made to carry out Article 39(b) or (c), on sharing the community's resources and preventing concentration of wealth, from challenge under Article 14 or Article 19.",
   why: "Article 31C is where the clash between Fundamental Rights and Directive Principles was written into the text. Parliament widened the article, and the Supreme Court cut it back.",
   concepts: [
-    { t: "What it originally did", d: "Inserted by the 25th Amendment (1971). A law made to carry out Article 39(b) or 39(c) could not be challenged under Article 14 or Article 19. The two clauses deal with sharing material resources for the common good and preventing concentration of wealth." },
-    { t: "The part struck down at once", d: "The original clause also said no court could even ask whether a law really gave effect to those principles. Kesavananda Bharati (1973) struck that sentence down, because it removed judicial review." },
-    { t: "The 42nd Amendment widened it", d: "In 1976 the protection was extended to laws implementing *any* directive principle, not just Articles 39(b) and (c). The change made almost any law immune." },
-    { t: "Minerva Mills (1980) cut it back", d: "The Court struck down the widening. The Court held that Parts III and IV must be balanced, and that giving one absolute priority over the other destroys the harmony of the Constitution. The harmony is itself part of the basic structure." },
+    { t: "What it originally did", d: "Added by the 25th Amendment (1971), for laws under Articles 39(b) and (c)." },
+    { t: "The part struck down at once", d: "Kesavananda struck down the bar on courts asking whether a law served those principles." },
+    { t: "The 42nd Amendment widened it", d: "The 42nd Amendment extended it to laws for any directive principle." },
+    { t: "Minerva Mills (1980) cut it back", d: "Struck down the extension. The balance between Parts III and IV is part of the basic structure." },
     { t: "Where it stands now", d: "The original, narrow version survives, protecting only laws under Articles 39(b) and (c). Property Owners Association (2024) revisited how far Article 39(b) itself reaches, holding that not every privately owned resource falls within the \"material resources of the community\"." }
   ],
   trap: "There are two versions of Article 31C and only one is alive.\n\nThe wide version from the 42nd Amendment is dead. The narrow version limited to Articles 39(b) and (c) still stands. Questions often quote the wide version as if it were current."
@@ -606,12 +604,11 @@ preamble: {
   says: "Article 39A directs the State to make sure the legal system promotes justice on equal terms, and to give free legal aid so that no citizen loses justice because of poverty or any other disability.",
   why: "Article 39A comes up in Mains through Lok Adalats and the legal services authorities. Prelims asks it as one of the additions made by the 42nd Amendment.",
   concepts: [
-    { t: "What it directs", d: "The State must secure that the legal system promotes justice on the basis of equal opportunity, and must provide free legal aid so that no citizen is denied justice because they cannot afford it." },
     { t: "When it was added", d: "By the 42nd Amendment, 1976, along with Articles 43A and 48A." },
-    { t: "The law that implements it", d: "The Legal Services Authorities Act, 1987. The Act created NALSA at the national level, State Legal Services Authorities, and District Legal Services Authorities." },
+    { t: "The law that implements it", d: "The Legal Services Authorities Act, 1987 created NALSA, State authorities and District authorities." },
     { t: "Who qualifies for free legal aid", d: "Members of Scheduled Castes and Scheduled Tribes, women, children, victims of trafficking, persons with disabilities, industrial workmen, people in custody, and anyone below a prescribed income limit." },
     { t: "Lok Adalats", d: "Forums where disputes are settled by compromise. An award has the force of a civil court decree and cannot be appealed, because the parties agreed to it. There is no court fee, and fee already paid is refunded." },
-    { t: "Hussainara Khatoon (1979)", d: "The Court held that free legal aid is part of the right to a fair procedure under Article 21. So a directive that no court could enforce became a right that courts do enforce." }
+    { t: "Hussainara Khatoon (1979)", d: "Free legal aid is part of a fair procedure under Article 21." }
   ],
   seen: [
     "UPSC Mains 2023 — free legal aid eligibility and the role of NALSA",
@@ -645,10 +642,9 @@ preamble: {
   says: "Article 43B directs the State to promote co-operative societies: their voluntary formation, independent working, democratic control and professional management.",
   why: "Co-operative societies entered the Constitution in 2011, and the Supreme Court struck down part of that amendment ten years later. The story is compact and fits a question neatly.",
   concepts: [
-    { t: "What it directs", d: "The State shall promote voluntary formation, autonomous functioning, democratic control and professional management of co-operative societies." },
-    { t: "The 97th Amendment (2011) did three things", d: "The amendment added Article 43B to Part IV. The amendment added \"co-operative societies\" to the freedom of association in Article 19(1)(c). And it added a whole new Part IXB with detailed rules for running co-operatives." },
-    { t: "Why Part IXB was struck down", d: "Co-operative societies are a State List subject. Changing the powers of the States needs ratification by at least half the State legislatures under Article 368. Parliament never obtained it." },
-    { t: "Rajendra N. Shah (2021)", d: "The Supreme Court struck down Part IXB as it applies to co-operative societies within a State, for want of that ratification. Part IXB survives only for multi-State co-operative societies, which are a Union subject." },
+    { t: "The 97th Amendment (2011) did three things", d: "Article 43B, co-operatives in Article 19(1)(c), and Part IXB." },
+    { t: "Why Part IXB was struck down", d: "Co-operatives are a State subject, and half the States never ratified." },
+    { t: "Rajendra N. Shah (2021)", d: "Part IXB struck down for co-operatives within a State. The Part survives for multi-State societies." },
     { t: "What survived", d: "Article 43B and the addition to Article 19(1)(c) both stand. Only Part IXB fell, and only partly." }
   ],
   trap: "The 97th Amendment was not struck down as a whole.\n\nTwo of its three changes survive. Only Part IXB fell, and even that survives for multi-State societies. Options that say the whole amendment was invalidated are wrong."
@@ -703,10 +699,9 @@ preamble: {
   says: "Article 48A directs the State to protect and improve the environment and to safeguard the forests and wildlife of the country.",
   why: "Environmental protection is one of the strongest Mains themes in polity. Article 48A is half of the pair that examiners always quote, with the citizen's duty in Article 51A(g).",
   concepts: [
-    { t: "What it directs", d: "The State shall endeavour to protect and improve the environment, and to safeguard the forests and wildlife of the country." },
-    { t: "When it was added", d: "By the 42nd Amendment, 1976, following the 1972 Stockholm Conference on the Human Environment." },
+    { t: "When it was added", d: "By the 42nd Amendment (1976), after the 1972 Stockholm Conference." },
     { t: "Its twin is a Fundamental Duty", d: "Article 51A(g) requires every citizen to protect and improve the natural environment and to have compassion for living creatures. Both came from the same amendment. One binds the State, one binds the citizen." },
-    { t: "How the courts used it", d: "In Subhash Kumar (1991) and the M.C. Mehta cases, the Court read Articles 48A and 51A(g) into Article 21 to create an enforceable right to a clean and healthy environment." },
+    { t: "How the courts used it", d: "Read into Article 21 in Subhash Kumar (1991) and the M.C. Mehta cases." },
     { t: "The doctrines that grew from it", d: "The polluter pays principle, the precautionary principle, and the public trust doctrine were all imported by the Supreme Court using this reasoning." }
   ],
   seen: [

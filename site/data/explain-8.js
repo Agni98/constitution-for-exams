@@ -91,12 +91,11 @@ partXXII: {
   catch: "Wholly spent. The five-year period ended in 1955."
 },
 "370": {
-  simple: "Article 370 was the temporary provision for Jammu and Kashmir.\n\n" +
-    "Parliament's power to legislate for the State was limited to defence, foreign affairs and communications, unless the State concurred. The rest of the Constitution applied only as the President specified by order, with the State's concurrence.\n\n" +
+  simple: "Article 370 was a temporary provision for Jammu and Kashmir.\n\n" +
+    "Parliament could make laws for the State only on defence, foreign affairs and communications, unless the State agreed. The rest of the Constitution applied only as the President ordered, with the State's agreement.\n\n" +
     "Clause (3) let the President declare the article inoperative, on the recommendation of the State's Constituent Assembly.",
-  catch: "On 5 August 2019, C.O. 272 applied the whole Constitution to the State. C.O. 273 then declared that all clauses of Article 370 cease to operate, leaving only the sentence that the Constitution applies in full. The State was reorganised into two Union territories.\n\n" +
-    "In Re Article 370 (2023) upheld all of it. The Court held that Article 370 was always a temporary provision, that Jammu and Kashmir retained no internal sovereignty on accession, and directed that statehood be restored and elections held.",
-  note: "Article 35A was never a separate article of the Constitution as enacted. It was inserted into the text by a presidential order in 1954, and it fell away with the 2019 orders. It let the State define its permanent residents and give them special rights."
+  catch: "The State's Constituent Assembly dissolved in 1957 without making that recommendation. So in August 2019, a presidential order used Article 367 to read \"Constituent Assembly\" as \"Legislative Assembly\". The State was under President's rule, so Parliament acted for the Assembly. A second order then declared that the clauses of Article 370 cease to operate.\n\n" +
+    "In Re Article 370 (2023), five judges upheld all of it. They held that Jammu and Kashmir kept no internal sovereignty after accession, and that Article 370 was always temporary. The Court directed that statehood be restored and elections held."
 },
 "371": {
   simple: "The Governors of Maharashtra and Gujarat have a special responsibility to establish development boards.\n\n" +

@@ -359,13 +359,12 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 370 gave Jammu and Kashmir a special status, limiting Parliament's power to make laws for the State. The President declared it inoperative in 2019, and the Supreme Court upheld the step in 2023.",
   why: "The abrogation of 2019 and the judgment of 2023 that upheld it made Article 370 the most current constitutional question of the decade.",
   concepts: [
-    { t: "What it did", d: "Article 370 gave Jammu and Kashmir a special status. Parliament could make laws for the State only on the matters in the Instrument of Accession, which were defence, foreign affairs and communications. Anything else needed the State government's agreement." },
     { t: "The heading mattered", d: "The article was headed \"Temporary provisions with respect to the State of Jammu and Kashmir\", and sat in Part XXI among temporary and transitional provisions." },
-    { t: "How it was to end", d: "Clause (3) said the President could declare it inoperative, but only on the recommendation of the State's Constituent Assembly. The Constituent Assembly dissolved in 1957 without making such a recommendation." },
-    { t: "How that obstacle was got around in 2019", d: "Constitutional Order 272 used Article 367, the interpretation article, to read \"Constituent Assembly\" as \"Legislative Assembly\". The State was then under President's rule, so Parliament acted in place of the Assembly." },
+    { t: "How it was to end", d: "On the recommendation of the State's Constituent Assembly, which dissolved in 1957 without making one." },
+    { t: "How that obstacle was got around in 2019", d: "Constitutional Order 272 used Article 367 to read \"Constituent Assembly\" as \"Legislative Assembly\"." },
     { t: "What followed", d: "The Jammu and Kashmir Reorganisation Act, 2019 split the State into two Union territories. Jammu and Kashmir has a legislature, and Ladakh does not." },
     { t: "Article 35A went too", d: "Article 35A had been added by a presidential order of 1954. The article let the State define permanent residents and give them special rights in property and employment." },
-    { t: "In Re Article 370 (2023)", d: "A five-judge bench unanimously upheld the abrogation. The bench held that Jammu and Kashmir kept no sovereignty after accession, that Article 370 was always a temporary provision, and that the President could act after the Constituent Assembly ceased to exist." },
+    { t: "In Re Article 370 (2023)", d: "Five judges unanimously upheld the abrogation. Jammu and Kashmir kept no sovereignty after accession." },
     { t: "One direction the Court gave", d: "Statehood must be restored at the earliest, and elections to the Assembly held. Elections were held in 2024." }
   ],
   trap: "Article 370 has not been deleted from the Constitution.\n\nThe article is still printed in the text, made inoperative by a presidential order under clause (3). So the litigation was about the *procedure* used, not about whether the article could ever be ended."

@@ -10,15 +10,13 @@
 Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 
 preamble: {
-  simple: "The Preamble is the Constitution's statement of purpose. It answers four questions.\n\n" +
+  simple: "The Preamble is the Constitution's statement of purpose, and it answers four questions.\n\n" +
     "Who is giving India this Constitution? The people of India themselves, not a monarch and not a colonial parliament.\n\n" +
     "What kind of state is India to be? Sovereign, socialist, secular, democratic, and a republic.\n\n" +
     "What is that state for? Justice, liberty, equality and fraternity.\n\n" +
-    "When was it adopted? 26 November 1949.",
-  catch: "The Preamble grants no power and creates no right. You cannot go to court because fraternity has not been secured.\n\n" +
-    "Its legal work is interpretive. Where a provision is capable of more than one meaning, courts read it in the light of the Preamble.\n\n" +
-    "Its status took two attempts to settle. Berubari (1960) held that the Preamble was not part of the Constitution. Kesavananda Bharati (1973) reversed that. The Preamble is part of the Constitution, and the basic features it declares cannot be amended away.",
-  note: "The words 'SOCIALIST', 'SECULAR' and 'and integrity' were inserted by the 42nd Amendment in 1976, during the Emergency. That is the only time the Preamble has ever been amended."
+    "When was the Constitution adopted? 26 November 1949.",
+  catch: "The Preamble grants no power and creates no right. Nobody can go to court because fraternity has not been secured. But where a provision can mean more than one thing, courts read it in the light of the Preamble.\n\n" +
+    "The Preamble's status took two attempts to settle. Berubari (1960) held that it was not part of the Constitution. Kesavananda Bharati (1973) reversed that. The Preamble is part of the Constitution, so it can be amended, but its basic features cannot be destroyed."
 },
 
 partI: {
@@ -172,10 +170,9 @@ partIII: {
     "Every later right under Article 21 rests on that reading. Privacy, dignity, livelihood, shelter, a clean environment and a speedy trial were all read into it."
 },
 "21A": {
-  simple: "The State shall provide free and compulsory education to all children between six and fourteen, in the manner it decides by law.",
-  catch: "This is a right that the State must satisfy by providing, and the law it points to carries the substance. That law is the Right to Education Act, 2009.\n\n" +
-    "Note where it starts and stops. Children under six were left to the recast Article 45, which is only a directive principle and cannot be enforced.",
-  note: "Inserted by the 86th Amendment in 2002 and brought into force in 2010. It is the only fundamental right created by converting a directive principle into one."
+  simple: "The State shall provide free and compulsory education to all children aged six to fourteen, in the way the State decides by law.",
+  catch: "The 86th Amendment (2002) added Article 21A, and the article came into force in 2010 with the Right to Education Act, 2009. The Act carries the detail of the right.\n\n" +
+    "The Court had got there first. In Unni Krishnan (1993) it read a right to education into Article 21. The amendment put the right in the text, and moved children under six to Article 45, where the promise still cannot be enforced."
 },
 "22": {
   simple: "Article 22 has two halves that work differently.\n\n" +
@@ -253,16 +250,14 @@ partIII: {
     "Two provisos matter. A State law of this kind needs the President's assent. And land within the ceiling limit that the owner personally cultivates cannot be acquired without compensation at market value."
 },
 "31B": {
-  simple: "Any Act placed in the Ninth Schedule is immune from challenge on the ground that it violates a fundamental right. The immunity operates retrospectively.",
-  catch: "I.R. Coelho (2007) closed this door part of the way.\n\n" +
-    "Any law added to the Ninth Schedule after 24 April 1973, the date of Kesavananda, can still be challenged if it damages the basic structure.\n\n" +
-    "The Schedule now holds around 284 entries, most of them land-reform laws."
+  simple: "A law placed in the Ninth Schedule cannot be struck down for breaching a fundamental right. The protection is retrospective, so even a law a court has already struck down revives.",
+  catch: "The First Amendment (1951) created the Ninth Schedule to shield land-reform laws from landlords' challenges. The Schedule began with 13 laws and now holds over 280, many of them unrelated to land.\n\n" +
+    "I.R. Coelho (2007) limited the shield. A law added after 24 April 1973, the date of Kesavananda, can still be struck down if it damages the basic structure."
 },
 "31C": {
-  simple: "A law made to give effect to the directive principles in Article 39(b) and (c) is saved from challenge under Articles 14 and 19. Those two principles concern the equitable distribution of material resources and the prevention of concentrated wealth.",
-  catch: "The 42nd Amendment tried to extend this protection to all directive principles.\n\n" +
-    "Minerva Mills (1980) struck that extension down, holding that the balance between Parts III and IV is itself a basic feature. Only the original version, covering 39(b) and (c), stands.\n\n" +
-    "A further clause barring courts from asking whether a law really gives effect to those principles had already been struck down in Kesavananda."
+  simple: "A law made to carry out Article 39(b) or (c) cannot be challenged under Article 14 or Article 19. The two clauses deal with sharing the community's material resources and preventing concentration of wealth.",
+  catch: "The 25th Amendment (1971) added the article. Its original version also said no court could ask whether a law really served those principles. Kesavananda Bharati (1973) struck that sentence down.\n\n" +
+    "In 1976 the 42nd Amendment extended the protection to laws for any directive principle. Minerva Mills (1980) struck down the extension, holding that the balance between Parts III and IV is part of the basic structure. So only the narrow version survives."
 },
 "31D": {
   simple: "This article once saved laws against 'anti-national activities' from fundamental-rights challenge.",

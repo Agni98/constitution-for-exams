@@ -43,9 +43,9 @@ partV: {
     "So the meaning of \"material resources of the community\" decides how far the State can reach into private property. In Property Owners' Association (2024), nine judges held that not every privately owned resource counts."
 },
 "39A": {
-  simple: "The State shall secure equal justice and provide free legal aid, so that no citizen is denied justice because of economic or other disability.",
-  catch: "Inserted by the 42nd Amendment.\n\n" +
-    "This is one of the directive principles that has been most effectively converted into a right. Courts read free legal aid into Article 21, and the Legal Services Authorities Act, 1987 gives it machinery."
+  simple: "The State shall make sure the legal system delivers justice on equal terms. The State shall provide free legal aid, so that no citizen is denied justice because of poverty or any other disability.",
+  catch: "The 42nd Amendment (1976) added Article 39A. Few directive principles have become so real.\n\n" +
+    "In Hussainara Khatoon (1979) the Court held that free legal aid is part of a fair procedure under Article 21. The Legal Services Authorities Act, 1987 then gave the right its machinery, through national, State and District authorities and Lok Adalats."
 },
 "40": {
   simple: "The State shall organise village panchayats and give them the powers they need to work as units of self-government.",
@@ -69,9 +69,9 @@ partV: {
   catch: "Added by the 42nd Amendment. It has produced almost no legislation."
 },
 "43B": {
-  simple: "The State shall promote the voluntary formation, autonomous functioning, democratic control and professional management of co-operative societies.",
-  catch: "Added by the 97th Amendment in 2011, alongside Part IXB and the co-operative limb of Article 19(1)(c).\n\n" +
-    "Part IXB was later cut back for want of State ratification. This directive and the fundamental right both survive."
+  simple: "The State shall promote co-operative societies that are formed voluntarily, work independently, are controlled democratically and are managed professionally.",
+  catch: "The 97th Amendment (2011) added Article 43B, added co-operative societies to Article 19(1)(c), and inserted a new Part IXB.\n\n" +
+    "But co-operatives are a State subject, and Part IXB never got the ratification of half the States that Article 368 requires. In Rajendra N. Shah (2021) the Court struck Part IXB down for co-operatives within a State. Article 43B and the change to Article 19(1)(c) survive."
 },
 "44": {
   simple: "The State shall try to secure a uniform civil code for all citizens throughout India.",
@@ -98,9 +98,9 @@ partV: {
     "In Mirzapur Moti Kureshi (2005) the Supreme Court upheld a total ban on cow slaughter, overruling its own earlier position."
 },
 "48A": {
-  simple: "The State shall endeavour to protect and improve the environment, and to safeguard the forests and wild life of the country.",
-  catch: "Added by the 42nd Amendment.\n\n" +
-    "Read together with Article 51A(g), it is the constitutional footing on which courts built the right to a clean environment under Article 21."
+  simple: "The State shall try to protect and improve the environment, and to safeguard the country's forests and wildlife.",
+  catch: "The 42nd Amendment (1976) added Article 48A after the 1972 Stockholm Conference. The same amendment added Article 51A(g), the citizen's duty to protect the environment.\n\n" +
+    "Courts read the two together into Article 21. In Subhash Kumar (1991) and the M.C. Mehta cases, the Court found an enforceable right to a clean environment. The polluter pays principle and the precautionary principle followed from the same reasoning."
 },
 "49": {
   simple: "The State shall protect monuments, places and objects of artistic or historic interest that are declared to be of national importance.",
