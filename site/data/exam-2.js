@@ -145,8 +145,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
     { t: "The duties", d: "To advise the Government of India on legal matters, and to perform other legal duties the President assigns." },
     { t: "Rights in Parliament", d: "The Attorney-General may speak in either House, in any joint sitting, and in any parliamentary committee of which they are a member. They have no right to vote." },
     { t: "Right of audience", d: "They can appear before any court in India. No other lawyer has so wide a right." },
-    { t: "Tenure", d: "There is no fixed term and no removal procedure in the Constitution. They hold office during the President's pleasure, and conventionally resign when the government changes." },
-    { t: "Not a full-time government lawyer", d: "The Attorney-General may take private practice. They may not advise against the Government of India, nor defend an accused in a criminal case without permission." },
+    { t: "Tenure", d: "No fixed term and no removal procedure. The office is held during the President's pleasure." },
+    { t: "Not a full-time government lawyer", d: "Private practice is allowed, but not against the Government of India, and not defending an accused without permission." },
     { t: "The Solicitor-General is different", d: "The Constitution does not create the Solicitor-General's office. The Solicitor-General and the Additional Solicitors-General assist the Attorney-General but have no right to address Parliament." }
   ],
   seen: [
@@ -162,9 +162,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 78 makes it the Prime Minister's duty to tell the President about all decisions of the Council of Ministers, and to give any information the President asks for. If the President asks, the Prime Minister must also put a single minister's decision before the full Council.",
   why: "Article 78 makes the Prime Minister the link between the government and the head of State. UPPCS asks about the duty directly.",
   concepts: [
-    { t: "The three duties", d: "Communicate all decisions of the Council of Ministers to the President. Furnish any information about administration and legislation the President asks for. And if the President requires, place before the Council any matter that a single minister has decided alone." },
-    { t: "Why it matters", d: "The President has no independent machinery of government. Article 78 is the only channel through which they learn what the executive is doing." },
-    { t: "The limit of the President's power here", d: "The President may require a matter to be considered by the whole Council. They cannot require the decision to be reversed." },
+    { t: "Why it matters", d: "Article 78 is the President's main channel for learning what the executive does." },
+    { t: "The limit of the President's power here", d: "The President can require reconsideration by the whole Council, but not a different decision." },
     { t: "The duty reinforces the Prime Minister's primacy", d: "The Prime Minister is the sole formal channel between the President and the Council of Ministers. No individual minister has that access as of right." }
   ],
   seen: [
@@ -179,9 +178,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 79 says Parliament consists of the President and two Houses, the Council of States and the House of the People.",
   why: "The definition of Parliament includes the President, and nearly every question on Article 79 turns on that inclusion.",
   concepts: [
-    { t: "What Parliament consists of", d: "The President, the Council of States (Rajya Sabha) and the House of the People (Lok Sabha). Three components, not two." },
-    { t: "The President is part of Parliament", d: "Even though they sit in neither House and never attend a debate. So a Bill is not law until the President assents." },
-    { t: "The contrast with America", d: "The American President is wholly outside Congress and is not part of the legislature. Comparison questions turn on this difference." },
+    { t: "What Parliament consists of", d: "The President, the Rajya Sabha and the Lok Sabha. Three parts, not two." },
+    { t: "The President is part of Parliament", d: "The President sits in neither House, but a Bill is not law until the President assents." },
+    { t: "The contrast with America", d: "The American President is wholly outside Congress." },
     { t: "The names", d: "Council of States and House of the People are the constitutional names. Rajya Sabha and Lok Sabha were adopted by the Houses themselves in 1954." }
   ],
   seen: [
@@ -198,10 +197,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   concepts: [
     { t: "The maximum strength", d: "250 members. Up to 238 represent the States and Union territories, and 12 are nominated by the President. The actual strength today is 245." },
     { t: "Who the nominated members are", d: "People with special knowledge or practical experience in literature, science, art and social service. They can vote in the Vice-President's election but not the President's." },
-    { t: "How State representatives are chosen", d: "Elected by the elected members of the State Legislative Assembly, by proportional representation with a single transferable vote. Members of a Legislative Council do not vote." },
-    { t: "Representation is not equal", d: "Unlike the American Senate, where every state gets two seats, India allots seats roughly by population. Uttar Pradesh has 31 seats, and Sikkim has one." },
+    { t: "How State representatives are chosen", d: "Elected members of the State Assembly vote. Members of a Legislative Council do not." },
+    { t: "Representation is not equal", d: "Seats follow population roughly. Uttar Pradesh has 31, and Sikkim has one." },
     { t: "Where the allocation is written", d: "The Fourth Schedule of the Constitution." },
-    { t: "The residence rule was dropped", d: "Until 2003 a candidate had to be ordinarily resident in the State they sought to represent. An amendment to the Representation of the People Act removed the requirement, and the Supreme Court upheld the change in Kuldip Nayar (2006)." },
+    { t: "The residence rule was dropped", d: "Dropped by an amendment to the Representation of the People Act in 2003, and upheld in Kuldip Nayar (2006)." },
     { t: "The Rajya Sabha never dissolves", d: "The Rajya Sabha is a permanent House. One third of its members retire every second year." },
     { t: "The six-year term is not in the Constitution", d: "Article 83(1) fixes the retirement of one third every second year, but says it happens \"in accordance with the provisions made in that behalf by Parliament by law\". The six-year term itself comes from the Representation of the People Act, 1951. Compare the Lok Sabha, whose five years Article 83(2) states outright." }
   ],
@@ -221,8 +220,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   concepts: [
     { t: "The maximum strength", d: "Not more than 530 members from the States and not more than 20 from the Union territories. The present strength is 543." },
     { t: "The two rules of allotment", d: "Seats are allotted to each State in proportion to its population, as far as practicable. And within a State, constituencies must have roughly equal populations." },
-    { t: "The population freeze", d: "The 42nd Amendment froze the allocation on the 1971 census. The 84th and 87th Amendments extended the freeze until the first census after 2026." },
-    { t: "Why it was frozen", d: "States that had successfully controlled population growth would have lost seats to States that had not. Freezing removed that penalty." },
+    { t: "The population freeze", d: "The 42nd Amendment froze the allocation on 1971 figures. The 84th extended the freeze until the first census after 2026." },
+    { t: "Why it was frozen", d: "States that controlled population growth would otherwise have lost seats." },
     { t: "Readjustment inside a State still happened", d: "The Delimitation Commission of 2002 redrew constituency boundaries within States using the 2001 census, without changing how many seats each State had." },
     { t: "Anglo-Indian nomination has ended", d: "Article 331 allowed the President to nominate two Anglo-Indians. The 104th Amendment (2019) let that provision lapse in January 2020." }
   ],
@@ -239,10 +238,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   why: "Article 83 covers how long each House lasts, including the extension of the Lok Sabha in an emergency. The rules on extension are precise and easy to test.",
   concepts: [
     { t: "The Lok Sabha", d: "Five years from the date of its first sitting, unless dissolved earlier. Dissolution can happen at any time." },
-    { t: "The Rajya Sabha", d: "The Rajya Sabha is never dissolved. One-third of its members retire every second year. The article leaves the actual term to \"provisions made in that behalf by Parliament by law\". The six years come from the Representation of the People Act, 1951, not from Article 83." },
-    { t: "Extension during an emergency", d: "While a Proclamation of Emergency is in operation, Parliament may extend the life of the Lok Sabha by one year at a time. There is no limit on how many times." },
-    { t: "The hard stop", d: "Any such extension ends six months after the emergency ceases to operate. So the House cannot survive long past the crisis." },
-    { t: "An extension has happened once", d: "The Lok Sabha elected in 1971 was extended twice during the 1975 Emergency, running to 1977." }
+    { t: "The Rajya Sabha", d: "Never dissolved. One-third retire every second year. The six-year term comes from the Representation of the People Act, 1951, not from Article 83." },
+    { t: "Extension during an emergency", d: "One year at a time, with no limit on how many times." },
+    { t: "The hard stop", d: "Every extension ends six months after the emergency ends." },
+    { t: "An extension has happened once", d: "The Lok Sabha elected in 1971, during the 1975 Emergency." }
   ],
   seen: [
     "UPSC Pre 2024 — the lapse of Bills on dissolution and prorogation"
@@ -256,8 +255,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 85 says the President shall summon each House from time to time, and no more than six months shall pass between two sessions. The President may also prorogue the Houses and dissolve the Lok Sabha.",
   why: "Questions quote the six-month rule almost word for word, and many candidates misremember what it actually requires.",
   concepts: [
-    { t: "The six-month rule", d: "There must not be a gap of more than six months between the last sitting of one session and the first sitting of the next. The President summons the House accordingly." },
-    { t: "What that does not mean", d: "The rule does not require three sessions a year, and it fixes no minimum number of sitting days. The three sessions are a convention, not a rule." },
+    { t: "What that does not mean", d: "No rule of three sessions a year, and no minimum number of sitting days. The three sessions are a convention." },
     { t: "Adjournment", d: "Suspends work for a short period, done by the presiding officer. Adjournment sine die means ending a sitting without setting a date to resume." },
     { t: "Prorogation", d: "Ends a session. Done by the President. Pending Bills do not lapse on prorogation, but pending notices do." },
     { t: "Dissolution", d: "Ends the life of the Lok Sabha itself. Only the Lok Sabha can be dissolved. Most pending Bills lapse." },
@@ -276,9 +274,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 93 says the Lok Sabha shall choose two of its members as Speaker and Deputy Speaker, as soon as may be.",
   why: "Questions test the rules on electing the two, and the unusual rule that keeps the Speaker in office after the House is dissolved.",
   concepts: [
-    { t: "What it requires", d: "The Lok Sabha shall, as soon as may be, choose two of its members to be Speaker and Deputy Speaker. When either office falls vacant, the House shall choose another member." },
-    { t: "No time limit for the Deputy Speaker", d: "The words \"as soon as may be\" fix no deadline. So the post has been left vacant for long periods, most recently for the whole of the seventeenth Lok Sabha." },
-    { t: "The Speaker outlives the House", d: "On dissolution the Speaker does not vacate office. They continue until immediately before the first meeting of the newly elected House. No other office survives dissolution in this way." },
+    { t: "No time limit for the Deputy Speaker", d: "\"As soon as may be\" fixes no deadline. The post was vacant through the seventeenth Lok Sabha." },
+    { t: "The Speaker outlives the House", d: "On dissolution the Speaker stays in office until just before the new House first meets." },
     { t: "The Deputy Speaker does not", d: "The Deputy Speaker's post falls vacant when the House is dissolved." },
     { t: "Convention on party", d: "By convention the Deputy Speaker is offered to the opposition, though nothing in the Constitution requires it." }
   ],

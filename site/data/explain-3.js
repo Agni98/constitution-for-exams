@@ -8,22 +8,21 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 /* ---------- Parliament: composition ---------- */
 
 "79": {
-  simple: "Parliament consists of the President and two Houses: the Council of States, called the Rajya Sabha, and the House of the People, called the Lok Sabha.",
-  catch: "The President is part of Parliament, though he sits in neither House.\n\n" +
-    "That is why a Bill is not law until he assents, and why he summons, prorogues and dissolves."
+  simple: "Parliament consists of the President and two Houses. The Houses are the Council of States, or Rajya Sabha, and the House of the People, or Lok Sabha.",
+  catch: "The President is part of Parliament, though the President sits in neither House. The American President, by contrast, stands wholly outside Congress.\n\n" +
+    "So a Bill becomes law only when the President assents. The President also summons and prorogues the Houses, and dissolves the Lok Sabha."
 },
 "80": {
-  simple: "The Rajya Sabha has up to 238 representatives of the States and Union territories, plus twelve members nominated by the President.\n\n" +
-    "The representatives are elected by the elected members of State Assemblies, by proportional representation with a single transferable vote. The nominated members are chosen for special knowledge or practical experience in literature, science, art and social service.",
-  catch: "Seats are allotted by the Fourth Schedule and are not strictly proportional to population. Small States are over-represented relative to their numbers.\n\n" +
-    "The requirement that a candidate be ordinarily resident in the State he represents was removed by statute in 2003, and that removal was upheld in Kuldip Nayar (2006)."
+  simple: "The Rajya Sabha has up to 238 members representing the States and Union territories, and twelve members nominated by the President.\n\n" +
+    "The elected members of each State Assembly choose that State's members, by proportional representation through the single transferable vote. The President nominates people with special knowledge or practical experience in literature, science, art and social service.",
+  catch: "Seats are allotted in the Fourth Schedule, roughly by population. Uttar Pradesh has 31 seats and Sikkim has one. So, unlike the American Senate, the House of the States does not treat the States equally.\n\n" +
+    "Until 2003 a candidate had to live in the State they sought to represent. An amendment to the Representation of the People Act dropped the rule, and the Court upheld the change in Kuldip Nayar (2006)."
 },
 "81": {
-  simple: "The Lok Sabha has up to 530 members from the States and up to twenty from Union territories, chosen by direct election from territorial constituencies.\n\n" +
-    "Seats are allotted so that the ratio of seats to population is, as far as practicable, the same for every State.",
-  catch: "'Population' means the 1971 census.\n\n" +
-    "The 42nd Amendment froze it. The 84th extended the freeze to the first census after 2026. The 87th allowed only boundary redrawing on 2001 figures.\n\n" +
-    "The result is that southern States which controlled population growth have not yet lost seats for it."
+  simple: "The Lok Sabha has up to 530 members from the States and up to 20 from the Union territories. All are directly elected from territorial constituencies.\n\n" +
+    "Seats are shared so that each State's ratio of seats to population is, as far as practicable, the same.",
+  catch: "\"Population\" here still means the 1971 census. Without a freeze, States that had slowed their population growth would have lost seats to States that had not.\n\n" +
+    "So the 42nd Amendment froze the State-wise totals on 1971 figures. The 84th Amendment extended the freeze until the first census after 2026. The 87th let boundaries inside each State be redrawn on 2001 figures, and the new boundaries took effect in 2008."
 },
 "82": {
   simple: "After every census, Parliament shall by law readjust the allocation of seats and the division of each State into constituencies.",
@@ -32,9 +31,9 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 },
 "83": {
   simple: "The Rajya Sabha is never dissolved. One-third of its members retire every second year.\n\n" +
-    "The Lok Sabha lasts five years from its first sitting and then expires automatically. While a Proclamation of Emergency is in force it can be extended one year at a time, and no more than six months after the emergency ends.",
-  catch: "The 42nd Amendment stretched the Lok Sabha term to six years. The 44th put it back to five.\n\n" +
-    "The House elected in 1971 was extended twice under the emergency proviso and sat for nearly six years."
+    "The Lok Sabha lasts five years from its first sitting, unless dissolved sooner. During an emergency, Parliament may extend its life by a year at a time. But any extension ends six months after the emergency ends.",
+  catch: "The 42nd Amendment (1976) stretched the Lok Sabha's term to six years. The 44th Amendment (1978) brought it back to five.\n\n" +
+    "The emergency extension has been used once. The Lok Sabha elected in 1971 was extended twice during the 1975 Emergency, and ran on into 1977."
 },
 "84": {
   simple: "To be a member of Parliament you must be a citizen, take the prescribed oath, and be at least thirty for the Rajya Sabha or twenty-five for the Lok Sabha. Parliament may prescribe further qualifications.",
@@ -42,9 +41,10 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
     "The main one is section 8 of the Representation of the People Act, 1951. Lily Thomas (2013) held that disqualification on conviction operates immediately, with no protection for a pending appeal."
 },
 "85": {
-  simple: "The President summons each House so that no more than six months pass between the last sitting of one session and the first of the next. He may also prorogue the Houses, and dissolve the Lok Sabha.",
-  catch: "The Constitution fixes a maximum gap, not a minimum number of sitting days.\n\n" +
-    "Nothing here obliges Parliament to sit for any particular length of time, which is why sitting days have fallen steadily."
+  simple: "The President summons each House from time to time. No more than six months may pass between the last sitting of one session and the first sitting of the next.\n\n" +
+    "The President may also prorogue the Houses, and dissolve the Lok Sabha.",
+  catch: "The rule fixes only a maximum gap between sessions. The rule does not require three sessions a year, or any minimum number of sitting days. The three sessions are a convention.\n\n" +
+    "So nothing in Article 85 stops sitting days from falling, and they have fallen steadily over the decades."
 },
 "86": {
   simple: "The President may address either House or both together. He may also send messages to a House about a pending Bill or anything else, and the House must consider them with all convenient despatch.",
@@ -79,8 +79,9 @@ Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
   catch: "A presiding officer facing removal loses the chair but not the vote."
 },
 "93": {
-  simple: "The Lok Sabha chooses a Speaker and a Deputy Speaker from among its members, and fills those offices again as they fall vacant.",
-  catch: "The Constitution sets no deadline for electing a Deputy Speaker. That is how the post stayed vacant for the whole of the seventeenth Lok Sabha."
+  simple: "The Lok Sabha chooses two of its members as Speaker and Deputy Speaker, \"as soon as may be\". When either office falls vacant, the House chooses another member.",
+  catch: "The words \"as soon as may be\" set no deadline. So the Deputy Speaker's post can stay empty for years, and it stayed empty through the whole of the seventeenth Lok Sabha.\n\n" +
+    "The Deputy Speaker's post also falls vacant when the House is dissolved. But the Speaker stays in office until just before the new House first meets, so the chair is never empty."
 },
 "94": {
   simple: "The Speaker or Deputy Speaker vacates office on ceasing to be a member, on resignation, or on removal by a resolution passed by a majority of all the then members after fourteen days' notice.\n\n" +

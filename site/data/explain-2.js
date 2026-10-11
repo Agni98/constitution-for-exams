@@ -251,10 +251,10 @@ partV: {
     "The 91st Amendment (2003) added two limits. Clause (1A) caps the Council at 15 per cent of the Lok Sabha's strength, to stop large ministries being used to buy loyalty. Clause (1B) bars a member disqualified for defection from becoming a minister until re-elected."
 },
 "76": {
-  simple: "The Attorney-General for India is appointed by the President from among persons qualified to be a Supreme Court judge.\n\n" +
-    "He is the government's chief legal adviser, has a right of audience in all courts, and may speak in either House of Parliament without a vote.",
-  catch: "He holds office during the President's pleasure, with no fixed term.\n\n" +
-    "Unlike his British counterpart he is not a member of the Cabinet, and he may take private clients, though not against the government."
+  simple: "The President appoints the Attorney-General for India. The person must be qualified to be a Supreme Court judge.\n\n" +
+    "The Attorney-General advises the Government of India on legal matters and may appear in any court in India. The Attorney-General may also speak in either House of Parliament, but cannot vote.",
+  catch: "The office has no fixed term and no removal procedure. The Attorney-General holds office during the President's pleasure, and by convention resigns when the government changes.\n\n" +
+    "The Attorney-General is also not a full-time government lawyer, and is not a minister. Private practice is allowed, though not against the Government of India."
 },
 "77": {
   simple: "All executive action of the Union is expressed to be taken in the President's name. An order authenticated in the prescribed manner cannot be questioned on the ground that the President did not make it.\n\n" +
@@ -262,8 +262,10 @@ partV: {
   catch: "This is the legal machinery of Cabinet government. The Government of India (Allocation of Business) Rules and the Transaction of Business Rules both come from clause (3)."
 },
 "78": {
-  simple: "The Prime Minister must communicate all Cabinet decisions on administration and legislation to the President, furnish any information the President calls for, and submit for Cabinet consideration any matter a Minister has decided alone if the President asks.",
-  catch: "This is the President's only real information right. It is the constitutional hook for the convention that the President must be kept informed."
+  simple: "The Prime Minister has three duties towards the President.\n\n" +
+    "The Prime Minister must report all decisions of the Council of Ministers on administration and legislation. The Prime Minister must give any information on those matters that the President asks for. And if the President asks, the Prime Minister must put a decision taken by one minister alone before the whole Council.",
+  catch: "The President has no machinery of government of their own. So Article 78 is the main way the President learns what the government is doing.\n\n" +
+    "But the right is to know, not to decide. The President can make the whole Council look at a minister's decision again, but cannot make it change the decision."
 }
 
 });
