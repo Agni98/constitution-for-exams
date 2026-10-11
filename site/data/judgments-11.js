@@ -110,7 +110,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the protection for a legislator\'s vote does not protect a vote that was sold.'
   ],
   legacy: [
-    'The prosecution against Sita Soren was allowed to go ahead.'
+
   ],
   source: 'https://indiankanoon.org/doc/193599726/'
 },

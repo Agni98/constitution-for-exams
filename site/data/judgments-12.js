@@ -113,7 +113,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the collegium took its present shape: five senior judges for the Supreme Court, recording their views in writing.'
   ],
   legacy: [
-    'The collegium system described in this opinion still governs appointments to the higher judiciary.',
     'In 2015 the Court struck down the National Judicial Appointments Commission, and the system continued.'
   ],
   source: 'https://indiankanoon.org/doc/543658/'
@@ -165,7 +164,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So Karnataka won the right to come to the Court, but lost the case. The federal structure did not protect State ministers from a Central inquiry.'
   ],
   legacy: [
-    'The case remains the leading authority on suits between the Union and the States under Article 131.'
+
   ],
   source: 'https://indiankanoon.org/doc/184521/'
 },
@@ -347,7 +346,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So even the Court\'s widest power works inside the law, not above it.'
   ],
   legacy: [
-    'The limits on Article 142 stated here are cited whenever the Court is asked to use that power against a law.'
+
   ],
   source: 'https://indiankanoon.org/doc/1666530/'
 },

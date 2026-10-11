@@ -206,8 +206,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So in 1981 the government won the power to choose judges. But the case also opened the courts to public interest litigation and to open government.'
   ],
   legacy: [
-    'In the Second Judges Case (1993), nine judges overruled this judgment on whose opinion prevails. The final word on appointments went to the Chief Justice of India, acting with senior judges.',
-    'Its rulings on who can bring a case, and on open government, remain important for public interest litigation.'
+    'In the Second Judges Case (1993), nine judges overruled this judgment on whose opinion prevails. The final word on appointments went to the Chief Justice of India, acting with senior judges.'
   ],
   source: 'https://indiankanoon.org/doc/1294854/'
 },
@@ -259,7 +258,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the government can dismiss without inquiry in these three narrow cases. But it must still record its reasons, and the penalty must still fit the facts.'
   ],
   legacy: [
-    'The judgment remains the leading authority on dismissal without inquiry under the second proviso to Article 311(2).'
+
   ],
   source: 'https://indiankanoon.org/doc/1134697/'
 },

@@ -58,7 +58,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   legacy: [
     'Romesh Thappar, and Brij Bhushan v. State of Delhi decided the same day, led to the First Amendment in 1951.',
-    'The First Amendment added "public order", "friendly relations with foreign States" and "incitement to an offence" as grounds in Article 19(2). The amendment also added the word "reasonable" before "restrictions".'
+    'The First Amendment (1951) added "public order", "friendly relations with foreign States" and "incitement to an offence" as grounds in Article 19(2). The amendment also added the word "reasonable" before "restrictions".'
   ],
   source: 'https://indiankanoon.org/doc/456839/'
 },
@@ -194,8 +194,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So people may argue for any cause online, however unpopular. The law can step in only when speech incites harm.'
   ],
   legacy: [
-    'Police in several States kept registering cases under Section 66A after it was struck down. In 2022 the Supreme Court directed that no one be prosecuted under it and that pending cases be dropped.',
-    'The line between advocacy and incitement is now used across free speech cases.'
+    'Police in several States kept registering cases under Section 66A after it was struck down. In 2022 the Supreme Court directed that no one be prosecuted under it and that pending cases be dropped.'
   ],
   source: 'https://indiankanoon.org/doc/110813550/'
 },
@@ -336,7 +335,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the State may take a suspect\'s fingerprints, but it may not reach into the suspect\'s mind without consent.'
   ],
   legacy: [
-    'Courts have since refused to order these tests on an unwilling accused.'
+
   ],
   source: 'https://indiankanoon.org/doc/338008/'
 },

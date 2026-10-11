@@ -64,7 +64,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   ],
   legacy: [
     'Curative petitions are now provided for in the Supreme Court Rules, 2013.',
-    'Curative petitions have been filed in many major cases, including the Bhopal gas leak case and death penalty cases. Very few have succeeded.'
+    'Curative petitions have been tried in many major cases. In 2023 five judges dismissed the Union\'s curative petition in the Bhopal gas case, and very few have ever succeeded.'
   ],
   source: 'https://indiankanoon.org/doc/123456797/'
 },

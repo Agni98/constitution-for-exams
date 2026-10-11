@@ -152,9 +152,9 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the judgment\'s core point against endless delay survived. But five judges rejected its time limits and its deemed approval seven months later.'
   ],
   legacy: [
-    'The President then referred questions on these issues to the Supreme Court under Article 143.',
+    'In May 2025 the President referred questions on these issues to the Supreme Court under Article 143.',
     'On 20 November 2025 five judges, in an advisory opinion, disagreed with this judgment. They held that the Governor has discretion under Article 200, that courts cannot set time limits for the Governor or the President, and that there is no deemed assent.',
-    'The advisory opinion accepted that long, unexplained and endless inaction by a Governor can face limited review by the courts.'
+    'But the advisory opinion accepted that long, unexplained and endless inaction by a Governor can face limited review by the courts.'
   ],
   source: 'https://www.scobserver.in/wp-content/uploads/2025/04/Supreme-Court-Judgement_-State-of-Tamil-Nadu-v-Governor-of-Tamil-Nadu.pdf'
 },
@@ -245,7 +245,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the High Court\'s door stays open where the problem is serious. The other remedy is a rule of convenience, not a lock.'
   ],
   legacy: [
-    'The four exceptions stated here are applied in most cases where a writ petition is opposed because another remedy exists.'
+
   ],
   source: 'https://indiankanoon.org/doc/1885496/'
 },

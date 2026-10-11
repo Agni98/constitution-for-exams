@@ -194,8 +194,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   legacy: [
     'The judgment led to political protest. In 1986 Parliament passed the Muslim Women (Protection of Rights on Divorce) Act to limit its effect.',
     'In Danial Latifi v. Union of India (2001), five judges upheld the 1986 Act. But they read it to require the husband to make a reasonable and fair provision for the wife\'s future, paid within the iddat period.',
-    'In Mohd. Abdul Samad v. State of Telangana (2024), the Supreme Court held that the 1986 Act does not take away a divorced Muslim woman\'s right to claim maintenance under Section 125.',
-    'The call for a uniform civil code under Article 44 is still debated.'
+    'In Mohd. Abdul Samad v. State of Telangana (2024), the Supreme Court held that the 1986 Act does not take away a divorced Muslim woman\'s right to claim maintenance under Section 125.'
   ],
   source: 'https://indiankanoon.org/doc/823221/'
 },

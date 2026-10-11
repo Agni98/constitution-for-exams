@@ -232,7 +232,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So the Centre can no longer dismiss a State government on a Governor\'s say-so. The Centre must show relevant reasons, and the majority is counted in the House.'
   ],
   legacy: [
-    'The use of Article 356 fell sharply after this judgment.',
+    'After 1994 the use of Article 356 fell sharply.',
     'In Rameshwar Prasad v. Union of India (2006), the Court applied these principles and held the dissolution of the Bihar Assembly in 2005 unconstitutional.',
     'In Shivraj Singh Chouhan (2020), the Court relied on the floor test rule laid down here.'
   ],

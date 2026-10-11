@@ -377,7 +377,7 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   legacy: [
     'In S.P. Mittal v. Union of India (1983), its definition of a religious denomination was developed into a three-part test. The Court applied that test in Sabarimala (2018).',
     'In Durgah Committee (1961), the Court added that practices based on superstition may not be protected.',
-    'The reach of the essential religious practices test is one of the questions referred to a nine-judge bench in the Sabarimala review.'
+    'In 2020 the reach of the essential religious practices test was among the questions framed for a nine-judge bench in the Sabarimala review.'
   ],
   source: 'https://indiankanoon.org/doc/1430396/'
 },
@@ -438,9 +438,9 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
   legacy: [
     'On 14 November 2019, five judges kept the review petitions pending by 3 votes to 2 and sent wider questions to a larger bench. Justices Nariman and Chandrachud dissented. The 2018 judgment was not stayed.',
     'On 10 February 2020, nine judges led by Chief Justice S.A. Bobde held that a question could be referred in review proceedings, and framed the questions to be decided.',
-    'The referred questions include the reach of the essential religious practices test, the meaning of constitutional morality, and how Articles 25 and 26 relate.',
+    'The questions framed in 2020 include the reach of the essential religious practices test, the meaning of constitutional morality, and how Articles 25 and 26 relate.',
     'A nine-judge bench led by Chief Justice Surya Kant heard the reference from 7 April 2026. The bench reserved judgment on 14 May 2026.',
-    'The reference also affects other cases, such as the entry of Muslim women into mosques, the rights of Parsi women married outside the community, and female genital mutilation among Dawoodi Bohras.'
+    'The 2019 reference also affects other cases, such as the entry of Muslim women into mosques, the rights of Parsi women married outside the community, and female genital mutilation among Dawoodi Bohras.'
   ],
   source: 'https://indiankanoon.org/doc/163639357/'
 }

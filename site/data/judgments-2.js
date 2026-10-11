@@ -159,7 +159,6 @@ Object.assign(window.COI_JUDGMENTS = window.COI_JUDGMENTS || {}, {
     'So a body can stay outside Article 12 and still answer in court for the way it does public work.'
   ],
   legacy: [
-    'For this reason, sports bodies can be taken to the High Courts under Article 226 but not straight to the Supreme Court under Article 32.',
     'In BCCI v. Cricket Association of Bihar (2015), the Supreme Court held again that the BCCI performs public functions and can be taken to court under Article 226. The Bihar case led to the Lodha Committee reforms of the BCCI.'
   ],
   source: 'https://indiankanoon.org/doc/404603/'
