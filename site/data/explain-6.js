@@ -60,10 +60,9 @@ partXIII: {
   catch: "Note the word 'inoperative', not 'void'. The State law goes dormant and comes back automatically."
 },
 "252": {
-  simple: "If two or more States pass resolutions asking Parliament to legislate on a State List matter, Parliament may do so. The law then applies to those States, and to any other State that later adopts it.",
-  catch: "This is consent-based, so it is real co-operative federalism.\n\n" +
-    "It has a sting. A State cannot afterwards amend or repeal that law itself; only Parliament can.\n\n" +
-    "The Prize Competitions Act, the Urban Land Ceiling Act and the Transplantation of Human Organs Act all came this way."
+  simple: "If two or more State legislatures pass resolutions asking for it, Parliament may make a law on a State List subject for them. Any other State can adopt the law later by its own resolution.",
+  catch: "The route rests on consent, so it is co-operative federalism at work. The Wildlife (Protection) Act, 1972 and the Water (Prevention and Control of Pollution) Act, 1974 were made this way.\n\n" +
+    "But consent has a cost. Once a State has asked, its own legislature can no longer amend or repeal the Act. Only Parliament can."
 },
 "253": {
   simple: "Parliament may make any law to implement an international treaty, agreement or convention, or a decision of an international body, notwithstanding the division of legislative powers.",
@@ -71,10 +70,10 @@ partXIII: {
     "The Environment (Protection) Act, 1986 was enacted under this article, following the Stockholm Conference."
 },
 "254": {
-  simple: "Where a State law conflicts with a Parliamentary law on a Concurrent List matter, the Parliamentary law prevails and the State law is void to the extent of the repugnancy.\n\n" +
-    "The exception is a State law that was reserved for and received the President's assent. That law prevails in that State.",
-  catch: "The presidential assent route is not permanent.\n\n" +
-    "The proviso to clause (2) lets Parliament legislate again on the same matter at any time, and override the State law once more."
+  simple: "When a State law on a Concurrent List subject conflicts with a law of Parliament, Parliament's law prevails. The State law is void to the extent of the conflict.\n\n" +
+    "But a State law that was reserved for the President and received assent prevails in that State.",
+  catch: "A conflict needs more than a difference in detail. Obeying one law must mean disobeying the other, or Parliament must have covered the whole field so fully that no room is left.\n\n" +
+    "The State's win under clause (2) is also not permanent. Parliament may later pass a fresh law on the same subject and override the State law again."
 },
 "255": {
   simple: "A requirement of recommendation or previous sanction is a matter of procedure only. An Act is not invalid for want of it, if it received the necessary assent.",
@@ -84,9 +83,9 @@ partXIII: {
 /* ---------- Administrative relations ---------- */
 
 "256": {
-  simple: "A State must exercise its executive power so as to ensure compliance with laws made by Parliament. The Union may give a State such directions as appear necessary for that purpose.",
-  catch: "Read this with Article 365. A failure to comply with a direction under this article is deemed to be a failure of constitutional machinery.\n\n" +
-    "That is how an administrative direction becomes a route to President's Rule."
+  simple: "Every State must use its executive power so that the laws of Parliament are obeyed. The Union may give a State any directions needed for that purpose.",
+  catch: "The power matters because of what follows a refusal. Under Article 365, if a State fails to follow a Union direction, the President may hold that the State's government cannot be carried on under the Constitution.\n\n" +
+    "The finding is a ground for President's rule under Article 356. So a direction under Article 256 can become a route to President's rule."
 },
 "257": {
   simple: "A State's executive power must not impede the Union's.\n\n" +
@@ -127,9 +126,9 @@ partXIII: {
     "The ouster is not absolute in practice. The Supreme Court has heard appeals from tribunal awards under Article 136, and decided questions about a tribunal's constitution, while declining to reopen the merits."
 },
 "263": {
-  simple: "The President may establish an Inter-State Council, to inquire into and advise on disputes between States, and to investigate and discuss subjects of common interest.",
-  catch: "It sat unused for forty years. The Sarkaria Commission pressed for it, and the Council was finally constituted in 1990. It still meets rarely.\n\n" +
-    "This is the Constitution's designated forum for co-operative federalism, and the least used."
+  simple: "The President may set up an Inter-State Council. The Council inquires into disputes between States, discusses subjects of common interest, and recommends better coordination of policy.",
+  catch: "The Council only advises. The Council cannot decide a dispute or bind anyone, unlike the Supreme Court under Article 131.\n\n" +
+    "The power lay unused for forty years. The Sarkaria Commission pressed for a Council, and the President set one up in 1990. The Council still meets rarely, though it is the Constitution's own forum for co-operative federalism."
 },
 
 /* ---------- Part XII: Finance ---------- */
@@ -143,10 +142,10 @@ partXIII: {
     "'Law' means an Act of the legislature. An executive order or a circular will not do, and countless tax notifications have fallen on that ground."
 },
 "266": {
-  simple: "All revenues received by the Government of India, all loans it raises, and all money it receives in repayment of loans form the Consolidated Fund of India. The same applies to a State.\n\n" +
-    "Other public money received goes to the public account. No money may be withdrawn from a Consolidated Fund except as the Constitution provides.",
-  catch: "The public account is not subject to appropriation.\n\n" +
-    "Provident funds, small savings and deposits sit there, and government can operate it without Parliament's vote."
+  simple: "All revenue the Government of India receives, all loans it raises, and all loan repayments it receives form the Consolidated Fund of India. Each State has a Consolidated Fund on the same pattern.\n\n" +
+    "All other public money goes into the Public Account. Money can leave a Consolidated Fund only as the Constitution provides.",
+  catch: "The Public Account holds money that the government keeps for others, such as provident funds, small savings and deposits. The government is only a banker or trustee for that money.\n\n" +
+    "So money can be paid out of the Public Account without a vote in Parliament. Money in the Consolidated Fund needs an Appropriation Act first."
 },
 "267": {
   simple: "Parliament may establish a Contingency Fund of India, placed at the President's disposal, to meet unforeseen expenditure pending authorisation by Parliament. A State legislature may do the same.",
@@ -172,10 +171,10 @@ partXIII: {
     "That is what makes IGST constitutionally distinct from an ordinary shared central tax."
 },
 "270": {
-  simple: "All taxes and duties in the Union List are levied and collected by the Union, and distributed between the Union and the States on the Finance Commission's recommendation.\n\n" +
-    "Those in Articles 268, 269 and 269A are excluded, and so are surcharges and cesses.",
-  catch: "Surcharges and cesses are expressly outside the divisible pool.\n\n" +
-    "Their rising share of central revenue is the most persistent State grievance in Indian fiscal federalism."
+  simple: "The Union levies and collects the taxes in the Union List, and shares them with the States on the Finance Commission's recommendation.\n\n" +
+    "Taxes under Articles 268, 269 and 269A are left out, and so are cesses and surcharges.",
+  catch: "Cesses and surcharges never enter the divisible pool, the money the Union shares. Their share of central revenue has grown a great deal.\n\n" +
+    "So the States receive well below the headline share of total central taxes. The gap is the States' most persistent fiscal grievance."
 },
 "271": {
   simple: "Parliament may at any time increase any of the duties or taxes in Articles 269 and 270 by a surcharge for Union purposes. The whole proceeds form part of the Consolidated Fund of India.",
@@ -195,9 +194,9 @@ partXIII: {
   catch: "The President's recommendation here is the Union government's. The safeguard for the States is procedural, not substantive."
 },
 "275": {
-  simple: "The Union pays grants-in-aid to States in need of assistance, charged on the Consolidated Fund of India. These include specific grants for the welfare of Scheduled Tribes and the administration of Scheduled Areas.",
-  catch: "These are statutory grants made on the Finance Commission's recommendation.\n\n" +
-    "They are distinct from the discretionary grants under Article 282, and it is Article 282 that most central schemes actually run on."
+  simple: "Parliament may give grants-in-aid to States that need help, charged on the Consolidated Fund of India. The grants include special grants for the welfare of Scheduled Tribes and for better administration of Scheduled Areas.",
+  catch: "Article 275 grants follow the Finance Commission's advice, and Parliament does not vote on them. Article 282 is different. Under it, the Union may make a grant for any public purpose, at its discretion.\n\n" +
+    "Most centrally sponsored schemes run on Article 282 grants. So the Union shapes priorities on State subjects through the discretionary route, and the States object."
 },
 "276": {
   simple: "States and local authorities may tax professions, trades, callings and employments, up to ₹2,500 per person per year.",
@@ -225,10 +224,10 @@ partXIII: {
     "Mohit Minerals (2022) held that the Council's recommendations are recommendatory only, and do not bind Parliament or the State legislatures."
 },
 "280": {
-  simple: "The President shall constitute a Finance Commission every fifth year, or earlier if he considers it necessary.\n\n" +
-    "It recommends the distribution of taxes between the Union and the States, the principles governing grants-in-aid, and measures to augment State funds to supplement the resources of panchayats and municipalities.",
-  catch: "The recommendations are advisory.\n\n" +
-    "In practice the tax-devolution recommendation is accepted almost without exception, while grant recommendations are treated far more freely."
+  simple: "The President sets up a Finance Commission every five years, or earlier if needed.\n\n" +
+    "The Commission recommends how tax money is shared between the Union and the States, and among the States. The Commission also sets the principles for grants-in-aid, and suggests ways to help States fund their panchayats and municipalities.",
+  catch: "The recommendations are only advice. The government must lay them before Parliament, with a note on the action taken.\n\n" +
+    "But in practice the share of taxes the Commission recommends has always been accepted. Recommendations on grants are often changed or ignored."
 },
 "281": {
   simple: "The President must lay every Finance Commission recommendation before each House of Parliament, with an explanatory memorandum on the action taken on it.",

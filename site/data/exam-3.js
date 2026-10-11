@@ -355,9 +355,7 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 252 lets Parliament make a law on a State subject for two or more States whose legislatures ask for it. Any other State can adopt the law later by its own resolution.",
   why: "Legislation by consent is the one route by which States hand power upward of their own will. Questions ask about its unusual consequence.",
   concepts: [
-    { t: "How it starts", d: "Two or more State legislatures pass resolutions asking Parliament to legislate on a State List subject for them." },
-    { t: "Where the Act applies", d: "Only to the States that consented, and to any State that adopts it later by resolution." },
-    { t: "The consequence States often miss", d: "Once a State consents, its own legislature can no longer amend or repeal that Act on that subject. Only Parliament can." },
+    { t: "The consequence States often miss", d: "The consenting State's legislature can no longer amend or repeal the Act. Only Parliament can." },
     { t: "The examples", d: "The Wildlife (Protection) Act, 1972, the Urban Land (Ceiling and Regulation) Act, 1976, the Water (Prevention and Control of Pollution) Act, 1974, and the Transplantation of Human Organs Act, 1994." },
     { t: "Why it matters", d: "Article 252 shows that Indian federalism has a cooperative route as well as a coercive one, which is useful in a Mains answer." }
   ],
@@ -370,11 +368,10 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 254 says that when a State law clashes with a Union law on a Concurrent List subject, the Union law prevails. A State law reserved for the President and given assent prevails in that State, until Parliament legislates again.",
   why: "Article 254 decides what happens when a Union law and a State law collide on a Concurrent subject. Questions apply it to a case rather than ask for a definition.",
   concepts: [
-    { t: "The general rule", d: "If a State law on a Concurrent subject conflicts with a Union law, the Union law prevails and the State law is void to the extent of the conflict." },
-    { t: "The exception in clause (2)", d: "If the State law was reserved for the President's consideration and received their assent, the State law prevails *in that State*." },
-    { t: "But Parliament can still override", d: "Even after presidential assent, Parliament may later pass a fresh law on the subject that overrides the State law again. The State's victory is never permanent." },
-    { t: "What counts as repugnancy", d: "There must be a direct conflict that cannot be reconciled, where obeying one law means disobeying the other. A mere difference in detail is not enough." },
-    { t: "The occupied field doctrine", d: "If Parliament has legislated so comprehensively that it clearly intended to cover the whole subject, a State law on the same ground is void even without a direct clash." },
+    { t: "The exception in clause (2)", d: "A State law reserved and given assent prevails in that State." },
+    { t: "But Parliament can still override", d: "Parliament may later pass a fresh law that overrides the State law again." },
+    { t: "What counts as repugnancy", d: "A direct clash that cannot be reconciled. A difference in detail is not enough." },
+    { t: "The occupied field doctrine", d: "If Parliament has covered the whole subject, a State law on it is void even without a direct clash." },
     { t: "The rule applies to the State List too", d: "Where Parliament validly legislates on a State subject under Articles 249, 250, 252 or 356, the same rule of Union primacy applies." }
   ],
   trap: "Presidential assent under Article 254(2) gives the State law priority only within that State, and only until Parliament legislates again.\n\nThe assent is a temporary shield, not a permanent win. The farm laws debate turned on exactly this mechanism."
@@ -386,11 +383,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 256 says each State must use its executive power to comply with the laws of Parliament, and the Union may give the State directions for that purpose.",
   why: "The 2023 paper asked about the Union's power to direct a State. The power also sits behind every discussion of President's rule.",
   concepts: [
-    { t: "What it requires of States", d: "Every State must exercise its executive power so as to ensure compliance with the laws made by Parliament and any existing laws applying in that State." },
-    { t: "The Union's power", d: "The Union executive may give directions to a State that appear necessary for that purpose." },
     { t: "Article 257 goes further", d: "The Union may direct a State not to impede Union executive power, and may direct it on the construction and maintenance of means of communication of national or military importance, and on protecting railways." },
-    { t: "What happens if a State refuses", d: "Article 365 covers a State that fails to follow a direction. The President may then hold that the State's government cannot be carried on according to the Constitution." },
-    { t: "Which opens the door to Article 356", d: "The finding is the trigger for President's rule. Articles 256, 257 and 365 together form the chain." }
+    { t: "What happens if a State refuses", d: "Under Article 365 the President may then hold that the State's constitutional machinery has failed." },
+    { t: "Which opens the door to Article 356", d: "Articles 256, 257, 365 and 356 form one chain." }
   ],
   seen: [
     "UPSC Pre 2023 — the central government's duty and its power to direct States"
@@ -404,10 +399,8 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 263 lets the President set up an Inter-State Council to inquire into disputes between States, discuss subjects of common interest, and recommend better coordination of policy.",
   why: "The 2025 paper asked about the Inter-State Council. The Council anchors any answer on cooperative federalism, and it belongs to a set of bodies whose constitutional status candidates confuse.",
   concepts: [
-    { t: "What it permits", d: "The President may establish an Inter-State Council if it appears that the public interest would be served by it." },
-    { t: "What it does", d: "Inquires into and advises on disputes between States, investigates subjects of common interest to the Union and the States, and makes recommendations for better coordination of policy." },
-    { t: "The Council is advisory only", d: "The Council cannot decide a dispute or bind anyone. Contrast Article 131, where the Supreme Court actually adjudicates." },
-    { t: "When it was set up", d: "In 1990, by presidential order, on the recommendation of the Sarkaria Commission. The Council came forty years after the Constitution." },
+    { t: "The Council is advisory only", d: "The Council cannot decide a dispute or bind anyone. Under Article 131 the Supreme Court actually decides." },
+    { t: "When it was set up", d: "Set up in 1990 by presidential order, on the Sarkaria Commission's advice." },
     { t: "Its composition", d: "The Prime Minister as chairman, all Chief Ministers, Chief Ministers or administrators of Union territories, and six Union Ministers nominated by the Prime Minister." },
     { t: "Zonal Councils are different", d: "Zonal Councils are statutory, created by the States Reorganisation Act, 1956, and not by the Constitution. There are five, plus the North Eastern Council under a separate 1971 Act." },
     { t: "NITI Aayog is neither", d: "NITI Aayog was created by an executive resolution of the Cabinet in 2015. NITI Aayog is neither constitutional nor statutory, just like the Planning Commission before it." }
@@ -426,10 +419,9 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 266 creates the Consolidated Fund of India and of each State, into which all government revenue and loans go. Public Accounts hold all other money the government receives.",
   why: "The government's funds are a standard matching question, and the three funds are almost always asked together.",
   concepts: [
-    { t: "The Consolidated Fund of India", d: "All revenues the government receives, all loans it raises, and all money it recovers from loans repaid. The Consolidated Fund is the main account." },
     { t: "How money leaves it", d: "Nothing can be withdrawn except by law, which means an appropriation Act passed by Parliament." },
-    { t: "The Public Account", d: "Money where the government is only a banker or trustee, not the owner: provident funds, small savings, remittances, deposits." },
-    { t: "The key difference", d: "Withdrawals from the Public Account need no parliamentary appropriation, because the money is not the government's to begin with. The government only holds the money for someone else." },
+    { t: "The Public Account", d: "Provident funds, small savings, remittances and deposits, held as banker or trustee." },
+    { t: "The key difference", d: "No appropriation is needed, because the money is not the government's." },
     { t: "The Contingency Fund", d: "A separate fund under Article 267, held by the President, for unforeseen expenditure. The Contingency Fund is an imprest, and Parliament must make up what is spent from it afterwards." },
     { t: "States have all three", d: "Each State has its own Consolidated Fund, Public Account and Contingency Fund on the same pattern." }
   ],
@@ -460,17 +452,16 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 270 says most taxes the Union levies are shared between the Union and the States, in the shares the Finance Commission recommends. Cesses and surcharges are not shared.",
   why: "Article 270 creates the divisible pool, the money the centre shares with the States. Every question on the Finance Commission comes back to it.",
   concepts: [
-    { t: "What it provides", d: "All taxes and duties in the Union List are levied and collected by the Union, and then distributed between the Union and the States." },
     { t: "Who decides the share", d: "The President, by order, on the recommendation of the Finance Commission." },
-    { t: "The current share", d: "The 15th Finance Commission recommended 41% of the divisible pool for the States, for 2021 to 2026. The share was 42 per cent under the 14th Finance Commission, and fell by one point when Jammu and Kashmir became a Union territory." },
-    { t: "Cesses and surcharges are excluded", d: "Article 271 lets the Union levy a surcharge on any tax for its own purposes. Cesses and surcharges do not enter the divisible pool at all." },
-    { t: "Why that matters", d: "The Union's share of cesses and surcharges has grown substantially, which means the States' effective share of total central taxes is well below 41%. The gap is the States' main fiscal grievance." },
+    { t: "The 15th Commission's share", d: "41% of the divisible pool for 2021 to 2026. The 14th Commission's share was 42%, and one point fell away when Jammu and Kashmir became a Union territory." },
+    { t: "Cesses and surcharges are excluded", d: "Article 271 lets the Union levy surcharges for its own use. Cesses and surcharges stay outside the pool." },
+    { t: "Why that matters", d: "Their growth means the States' effective share is well below the headline figure." },
     { t: "The 80th Amendment", d: "The amendment created the single divisible pool in 2000, on the 10th Finance Commission's recommendation. Before that, different taxes were shared under different rules." }
   ],
   seen: [
     "UPSC Pre 2025 — the 15th Finance Commission and tax-sharing formulas"
   ],
-  trap: "Cesses and surcharges sit outside the divisible pool entirely.\n\nSo the headline 41% overstates what States actually receive. The gap is the strongest fact to use in an answer on fiscal federalism."
+  trap: "Cesses and surcharges sit outside the divisible pool entirely.\n\nSo the headline share overstates what States actually receive. The gap is the strongest fact to use in an answer on fiscal federalism."
 },
 
 "275": {
@@ -479,7 +470,6 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 275 lets Parliament give grants-in-aid from the Consolidated Fund of India to States in need of help, including grants for tribal welfare and for developing Scheduled Areas.",
   why: "Questions always contrast the grants under Article 275, which a law of Parliament provides, with the discretionary grants under Article 282, and ask about the two together.",
   concepts: [
-    { t: "What Article 275 provides", d: "Grants-in-aid from the Union to States that Parliament determines to be in need of assistance." },
     { t: "They are charged", d: "Grants under Article 275 are charged on the Consolidated Fund of India, so Parliament does not vote on them." },
     { t: "Special grants for tribal welfare", d: "Specific grants to meet the cost of schemes for the welfare of Scheduled Tribes and for raising the level of administration in Scheduled Areas." },
     { t: "Given on Finance Commission advice", d: "The sums and the principles are recommended by the Finance Commission." },
@@ -515,12 +505,11 @@ Object.assign(window.COI_EXAM = window.COI_EXAM || {}, {
   says: "Article 280 says the President shall set up a Finance Commission every five years. The Commission recommends how tax money is shared between the Union and the States, and among the States.",
   why: "The Finance Commission is asked in some form nearly every year. Prelims asks about its composition and status, and Mains about what its recommendations mean for the States.",
   concepts: [
-    { t: "When it is constituted", d: "By the President, every fifth year or earlier if the President thinks it necessary." },
     { t: "Composition", d: "A chairman and four other members, all appointed by the President. Parliament prescribes their qualifications by law." },
-    { t: "The three core functions", d: "First, the Commission recommends how net tax proceeds are shared between the Union and the States, and among the States. Second, the Commission lays down the principles for grants-in-aid from the Consolidated Fund of India. Third, the Commission recommends ways to add to State funds so that States can support their panchayats and municipalities." },
+    { t: "The three core functions", d: "Sharing tax proceeds, setting principles for grants-in-aid, and helping States fund their local bodies." },
     { t: "The local-government function was added later", d: "By the 73rd and 74th Amendments in 1992." },
-    { t: "The recommendations are not binding", d: "They are advisory. The government must lay each recommendation, with an explanatory memorandum on the action taken, before both Houses of Parliament." },
-    { t: "In practice", d: "The tax-devolution recommendation has always been accepted. Grant recommendations are frequently modified or ignored." },
+    { t: "The recommendations are not binding", d: "Advisory. Each recommendation is laid before Parliament with a note on the action taken." },
+    { t: "In practice", d: "The tax share has always been accepted. Grant recommendations are often changed." },
     { t: "The 15th Commission", d: "Chaired by N.K. Singh, it reported for 2021 to 2026, recommending 41% devolution and using the 2011 census rather than 1971." }
   ],
   seen: [
