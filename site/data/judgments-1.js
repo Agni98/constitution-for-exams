@@ -22,7 +22,9 @@
      facts      short points, in order
      held       blocks of { kind, label, points }
                 kind: unanimous | majority | plurality | concurring | dissent
-     principles the rules of law the case stands for
+     principles how the rule works beyond the case (reach, purpose,
+                limits, method, doctrine name), never a repeat of held;
+                the last one starts with "So" and states the central point
      legacy     what happened after the judgment
      source     the full text of the judgment
 

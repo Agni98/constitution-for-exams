@@ -200,9 +200,15 @@ The full page for each of the 125 landmark judgments comes from `site/data/judgm
 `judgments-17.js`; the fields are listed at the top of `judgments-1.js`. Every page opens with
 **The Story Before the Case** (the `background` field), so that a reader who does not know the
 earlier cases or amendments can follow it. Each article, amendment, writ or legal term is
-explained in plain words where it first appears, and the Key Principles end on the case's
-central point. New text follows the same rules as the rest of the site: no sentence over 35
-words, no semicolons or dashes, and no sentence opening with a bare This, That or It.
+explained in plain words where it first appears. New text follows the same rules as the rest
+of the site: no sentence over 35 words, no semicolons or dashes, and no sentence opening with a
+bare This, That or It.
+
+**Held and Key Principles do different jobs.** What the Court Held says what was decided in the
+case. Key Principles says how the rule works beyond it: how far it reaches, what it is for, where
+it stops, how courts apply it, and the name of the doctrine if it has one. A principle that only
+restates the summary or a held point is left out, so many judgments have just one or two. The
+last principle always starts with "So" and states the case's central point.
 
 ## Citing a question paper
 
