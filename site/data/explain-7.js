@@ -8,7 +8,7 @@
 Object.assign(window.COI_EXPLAIN = window.COI_EXPLAIN || {}, {
 
 partXIV: {
-  simple: "Part XIV covers the public services: who may recruit, on what terms, and what protection a civil servant has before being dismissed.\n\n" +
+  simple: "Part XIV covers the public services: who may recruit, on what terms, and what protection a civil servant has against dismissal.\n\n" +
     "Chapter II sets up the Public Service Commissions."
 },
 partXIVA: {
@@ -190,14 +190,14 @@ partXVIII: {
   catch: "Inserted by the 106th Amendment, and subject to the same deferral in Article 334A."
 },
 "333": {
-  simple: "This article once allowed a Governor to nominate one Anglo-Indian to a State Legislative Assembly.",
-  catch: "Lapsed on 25 January 2020, along with Article 331."
+  simple: "Article 333 let a Governor nominate one Anglo-Indian to the State's Legislative Assembly.",
+  catch: "The power lapsed on 25 January 2020, along with the one in Article 331."
 },
 "334": {
-  simple: "The reservation of seats for Scheduled Castes and Scheduled Tribes in the Lok Sabha and State Assemblies ceases eighty years after the commencement of the Constitution, which is 25 January 2030.\n\n" +
-    "Representation continues until the then existing House is dissolved.",
-  catch: "The original period was ten years. It has been extended by amendment every decade since: the 8th, 23rd, 45th, 62nd, 79th, 95th and 104th.\n\n" +
-    "The Anglo-Indian nomination shared this clock and was allowed to lapse in 2020."
+  simple: "The reserved seats for Scheduled Castes and Scheduled Tribes in the Lok Sabha and the State Assemblies end eighty years after the Constitution began, on 25 January 2030.\n\n" +
+    "Members already elected serve until their House is dissolved.",
+  catch: "The original period was ten years. Amendments have extended it every decade since: the 8th, 23rd, 45th, 62nd, 79th, 95th and 104th.\n\n" +
+    "The nomination of Anglo-Indians ran on the same clock, and was allowed to lapse in 2020."
 },
 "334A": {
   simple: "The women's reservation under Articles 330A and 332A takes effect after the first census conducted after the 106th Amendment commenced, and after delimitation on the basis of that census.\n\n" +
@@ -211,12 +211,12 @@ partXVIII: {
     "The 82nd Amendment (2000) added a proviso that lets the State relax qualifying marks and evaluation standards in promotion. In M. Nagaraj (2006), though, the Court still required data showing that reservation in promotion does not harm efficiency. Later cases have said a representative administration is itself efficient."
 },
 "336": {
-  simple: "This was a transitional provision giving Anglo-Indians a declining share of posts in certain central services for the first ten years.",
-  catch: "Wholly spent. The period expired in 1960."
+  simple: "Article 336 was a temporary rule that gave Anglo-Indians a shrinking share of posts in certain central services for the first ten years.",
+  catch: "The article is spent. The period ended in 1960."
 },
 "337": {
-  simple: "This was a transitional provision continuing educational grants to the Anglo-Indian community on a declining scale for the first ten years, conditional on at least forty per cent of annual admissions being open to other communities.",
-  catch: "Wholly spent. The grants tapered to nothing by 1960."
+  simple: "Article 337 was a temporary rule that continued education grants to the Anglo-Indian community on a falling scale for the first ten years. The condition was that at least forty per cent of yearly admissions be open to other communities.",
+  catch: "The article is spent. The grants ran out by 1960."
 },
 "338": {
   simple: "There shall be a National Commission for Scheduled Castes. The President appoints its Chairperson, Vice-Chairperson and three other members.\n\n" +
@@ -236,8 +236,8 @@ partXVIII: {
 },
 "339": {
   simple: "The President may appoint a Commission to report on the administration of Scheduled Areas and the welfare of Scheduled Tribes.\n\n" +
-    "The Union's executive power extends to giving a State directions on schemes for their welfare.",
-  catch: "The power to direct a State on tribal welfare schemes is unusual. It is a direction on a State subject, backed by the grants under Article 275."
+    "The Union's executive power covers directing a State on schemes for their welfare.",
+  catch: "A power to direct a State on a State subject is unusual. The grants under Article 275 give the Union's directions financial weight."
 },
 "340": {
   simple: "The President may appoint a Commission to investigate the conditions of the socially and educationally backward classes, and recommend how to improve them. The report is laid before Parliament with a memorandum on the action taken.",
@@ -245,13 +245,13 @@ partXVIII: {
     "Mandal recommended 27 per cent reservation for backward classes in central government jobs. The government implemented it in 1990, and Indra Sawhney (1992) upheld the quota with a creamy-layer exclusion and a 50 per cent ceiling."
 },
 "341": {
-  simple: "The President, after consulting the Governor, may by public notification specify the castes, races or tribes deemed to be Scheduled Castes in relation to a State or Union territory. Only Parliament may add to or subtract from that list.",
-  catch: "A caste can be a Scheduled Caste in one State and not in another. The list is State-specific, so migration does not carry the status with it.\n\n" +
-    "The Presidential Order of 1950 limits Scheduled Caste status to Hindus, Sikhs and Buddhists. That restriction is under continuing challenge."
+  simple: "The President, after consulting the Governor, may by public notice list the castes, races or tribes treated as Scheduled Castes in a State or Union territory. Only Parliament may change the list.",
+  catch: "The lists are State by State. So a caste can be a Scheduled Caste in one State and not in another, and a person who moves does not carry the status along.\n\n" +
+    "The Presidential Order of 1950 limits Scheduled Caste status to Hindus, Sikhs and Buddhists. The limit faces a continuing challenge in court."
 },
 "342": {
-  simple: "Article 342 applies the same scheme to specifying Scheduled Tribes.",
-  catch: "Unlike Scheduled Castes, Scheduled Tribe status carries no religious restriction."
+  simple: "Article 342 uses the same method to list the Scheduled Tribes.",
+  catch: "Unlike Scheduled Caste status, Scheduled Tribe status carries no condition of religion."
 },
 "342A": {
   simple: "The President, after consulting the Governor, specifies the socially and educationally backward classes for the central list. Only Parliament may change that list.\n\n" +
@@ -269,21 +269,21 @@ partXVIII: {
     "So Hindi is the official language of the Union, and English an additional official language by statute. The Constitution names no national language."
 },
 "344": {
-  simple: "The President shall constitute a Commission on official language after five years, and again after ten.\n\n" +
-    "A Committee of thirty Members of Parliament examines its recommendations and reports to the President.",
-  catch: "The Commission was constituted in 1955 and the Committee reported in 1959. Neither has been constituted since, so this machinery is effectively dormant."
+  simple: "The President shall set up a Commission on official language five years after the Constitution began, and again after ten.\n\n" +
+    "A committee of thirty members of Parliament examines the Commission's recommendations and reports to the President.",
+  catch: "The first Commission was set up in 1955, and the committee reported in 1959. No second Commission has been set up, so the machinery lies dormant."
 },
 "345": {
-  simple: "A State legislature may adopt any language in use in the State, or Hindi, as its official language. Until it does, English continues.",
-  catch: "A State may adopt more than one official language, and several have. Adopting one does not displace English for the purposes of Article 348."
+  simple: "A State legislature may adopt Hindi, or any language used in the State, as its official language. Until it does, English continues.",
+  catch: "A State may adopt more than one official language, and several have. But adopting one does not replace English for the purposes of Article 348."
 },
 "346": {
-  simple: "The language authorised for official purposes of the Union is the language of communication between States, and between a State and the Union. Two States may agree to use Hindi between themselves.",
-  catch: "Two States can agree to correspond in Hindi, but no State can require another to do so. Inter-State correspondence otherwise stays in the Union's official language."
+  simple: "The Union's official language is the language for communication between States, and between a State and the Union. Two States may agree to use Hindi between themselves.",
+  catch: "Two States can agree to write to each other in Hindi. But no State can require another to do so."
 },
 "347": {
-  simple: "On a demand from a substantial proportion of a State's population, the President may direct that a language be officially recognised throughout that State, or in any part of it.",
-  catch: "This is the route by which a language spoken by a large minority can be recognised within a State, without displacing its official language. It has been used for Urdu in several States."
+  simple: "If a substantial share of a State's people demands it, the President may direct that a language they speak be officially recognised in the State, or in part of it.",
+  catch: "So a language spoken by a large minority can gain recognition in a State, without displacing the State's official language."
 },
 "348": {
   simple: "Proceedings in the Supreme Court and every High Court are in English, until Parliament provides otherwise. The authoritative texts of Bills, Acts, ordinances, orders, rules and regulations are in English too.\n\n" +
@@ -292,12 +292,12 @@ partXVIII: {
     "The Supreme Court has no such exception. Every proceeding there remains in English."
 },
 "349": {
-  simple: "For fifteen years from 1950, a Bill changing the language used for the purposes in Article 348 needed the President's previous sanction. He had to consider the Language Commission's recommendation.",
-  catch: "Wholly spent. The fifteen-year period ended in 1965."
+  simple: "For fifteen years from 1950, a Bill changing the language used for the purposes of Article 348 needed the President's previous sanction. The President had to consider the Language Commission's recommendations first.",
+  catch: "The article is spent. The fifteen years ended in 1965."
 },
 "350": {
-  simple: "Every person may submit a representation for redress of a grievance to any officer or authority of the Union or a State, in any language used in the Union or in that State.",
-  catch: "It is a right to be heard in your own language, but not a right to a reply in it. It is one of the least-used provisions in the Constitution."
+  simple: "Every person may present a complaint to any officer or authority of the Union or a State, in any language used in the Union or in that State.",
+  catch: "The article gives a right to be heard in one's own language, but not a right to a reply in it."
 },
 "350A": {
   simple: "Every State and local authority shall endeavour to provide adequate facilities for instruction in the mother tongue at the primary stage, to children belonging to linguistic minority groups.",
@@ -309,9 +309,9 @@ partXVIII: {
   catch: "The office exists, as the Commissioner for Linguistic Minorities. It has no enforcement power, only publicity."
 },
 "351": {
-  simple: "It is the Union's duty to promote the spread of Hindi, and to develop it so that it may serve as a medium of expression for all the elements of India's composite culture.\n\n" +
-    "Its vocabulary is to be drawn primarily from Sanskrit and secondarily from other languages.",
-  catch: "This is a directive to the Union, not a right or a restriction. It is the only place where the Constitution takes a view on how a language should be built."
+  simple: "The Union has a duty to spread Hindi, and to develop it so that it can express every part of India's mixed culture.\n\n" +
+    "Hindi is to draw its words mainly from Sanskrit, and also from other languages.",
+  catch: "Article 351 directs the Union, and creates no right and no restriction. Article 351 is also the only place where the Constitution says how a language should be built."
 },
 
 /* ---------- Part XVIII: Emergency ---------- */
@@ -323,13 +323,13 @@ partXVIII: {
     "Now the ground is the narrower \"armed rebellion\". The majority is special, and the Cabinet must advise in writing. And one-tenth of the Lok Sabha's members can force a special sitting, where a simple majority can end the emergency."
 },
 "353": {
-  simple: "While a Proclamation of Emergency is in operation, the Union's executive power extends to giving a State any direction it thinks fit. Parliament's legislative power extends to State List matters, including conferring powers and duties on the Union and its officers.",
-  catch: "The federal structure effectively converts to a unitary one for the duration.\n\n" +
-    "Where the Proclamation covers only part of India, this reach may still extend to any State if the security of India as a whole is threatened."
+  simple: "While a national emergency is in force, the Union may give any State any direction it thinks fit. Parliament may make laws on State List subjects, including laws giving powers and duties to the Union and its officers.",
+  catch: "So for the length of the emergency, the federal system works much like a unitary one.\n\n" +
+    "Even where the emergency covers only part of India, these powers may reach any State if events there threaten the security of India."
 },
 "354": {
-  simple: "While an emergency is in operation, the President may by order modify the operation of Articles 268 to 279, which are the tax-sharing provisions. The modification lasts until the end of the financial year in which the Proclamation ceases.",
-  catch: "The Union can therefore redirect the States' share of taxes to itself during an emergency. Every such order must be laid before both Houses."
+  simple: "During a national emergency, the President may by order change how Articles 268 to 279, the rules for sharing taxes, operate. The change lasts until the end of the financial year in which the emergency ends.",
+  catch: "So during an emergency the Union can keep the States' share of taxes for itself. Every such order must be laid before both Houses."
 },
 "355": {
   simple: "The Union has a duty to protect every State against external aggression and internal disturbance. The Union must also make sure that every State is governed according to the Constitution.",
@@ -343,8 +343,8 @@ partXVIII: {
     "After Bommai, the proclamation is open to judicial review, and the material behind it must be relevant. A ministry's majority must be tested on the floor of the House, not judged by the Governor. The Assembly cannot be dissolved before Parliament approves the proclamation. And if the proclamation is struck down, the dismissed government returns."
 },
 "357": {
-  simple: "When Parliament takes over a State legislature's powers under Article 356, it may confer them on the President and authorise him to delegate them. It may also sanction expenditure from the State's Consolidated Fund pending parliamentary approval.",
-  catch: "This is how a State is actually governed during President's Rule: by presidential order, with the State budget passed by Parliament."
+  simple: "When Parliament takes over a State legislature's powers under Article 356, it may give them to the President and let the President delegate them. Parliament may also allow spending from the State's Consolidated Fund until it approves the spending.",
+  catch: "So during President's rule a State is governed by presidential orders, and Parliament passes the State's budget."
 },
 "358": {
   simple: "During a national emergency declared on the ground of war or external aggression, Article 19 is suspended. The State may make laws or take action that Article 19 would otherwise forbid.\n\n" +
