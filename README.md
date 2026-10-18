@@ -1,90 +1,71 @@
 # The Constitution of India — bare act, indexed and explained
 
-A local, offline single-page site carrying the **full official text** of the Constitution of
-India, arranged exactly as the Constitution arranges itself — 26 Parts, 506 article entries,
-12 Schedules — with a plain-language reading and **the catch** under every article, plus
-mind maps and flow diagrams for the processes that are hard to hold in your head.
+The **full official text** of the Constitution of India, arranged exactly as the Constitution
+arranges itself — 26 Parts, 506 article entries, 12 Schedules — with a plain-language reading
+under every article, the landmark judgments, all 106 amendments, exam notes, an MCQ bank and
+hand-drawn mind maps.
 
-Live at **https://constitution.okayupsc.com**, published by Cloudflare Pages from `site/` on every push
-to `main`. The old GitHub Pages address forwards there.
-
-## Opening it
-
-Double-click **`Open the Constitution.bat`**. It starts the local server and opens your
-browser. Keep the console window open while you read; closing it stops the server.
-
-Or double-click **`site/index.html`** directly. No server, no install — every data file ships
-as a `.js` file precisely so that `file://` works.
-
-Or from a terminal:
-
-```bash
-python constitution/site/serve.py
-```
-
-Then open <http://localhost:8770>.
-
-**If the page will not load.** `localhost:8770` only answers while the server is running, so
-start it with the `.bat` (or the command above) before using that address. If the page opens
-but comes up blank or half-drawn, the browser is holding an old copy — press **Ctrl+Shift+R**.
-When the data genuinely fails to load, the page now says so and names the likely cause instead
-of showing you nothing.
+**<https://constitution.okayupsc.com>** — Cloudflare Pages publishes `site/` on every push to
+`main`.
 
 ## What is in it
 
-| View | What it gives you |
+| | |
 |---|---|
-| **Home** | A hero with its own search and six example queries, and four ways in beneath it (articles, mind maps, judgments, amendments). Then twelve topic tiles — Fundamental Rights, Parliament, Federalism, Emergency and the rest — each opening where its articles begin, with ranges read from the data; the revision list by tier; the Preamble, 26 Parts and Schedules as a carousel; and one line from Ambedkar's speech of 25 November 1949. The photograph of the old Parliament House is by Kuldeep Maruvada, from Wikimedia Commons, under CC BY-SA 4.0. It is credited on the photo, on the About page and in `LICENSE` |
-| **Menu bar** | Six menus across the top of every page: All Articles, Important Articles, Mind Maps, Judgments, Amendments, Schedules. Each opens with what it has for the page you are on first — reading Article 324, Mind Maps offers Part XV's map, Judgments lists the four cases filed under 324, Amendments names the two that changed it. Maps, judgments, amendments and exam notes open over the page, so a look-up does not cost you your place. Below 1200px the menus take a second row of the header. The search sits behind the icon at the right of the header, and opens on a click or the / key |
-| **Preamble** | Bare text, the 42nd Amendment footnotes, and a mind map of what it is doing |
-| **All Parts** | 26 Parts, I to XXII including IVA, IXA, IXB and XIVA — and VII, repealed whole |
-| **Article page** | A breadcrumb (Home, Part, Chapter, group), previous and next, the heading and its pills. For a provision on the priority list, the first pills say how often the examiners ask it and whether Mains asks it too, and a tap opens the exam part of Explain. Under them, up to five sections sort the readings into kinds, each with its icon: **Text** (the text as printed, the articles and Schedules it refers to, the amendments that changed it, and its footnotes, with reading settings for the text's size and style, kept in the browser. The Readable style adds space between the lines and shortens the line), **Explain** (what it says, how it works and worth knowing, then, for the 159 provisions on the priority list, the exam note under **For the exam**: why it is asked, what the question tests, where the mark is lost and where it was seen in the papers. A strip at the top names each part, stays in view under the tabs, marks the part being read and jumps to any other), **Diagrams** (every flow chart and mind map for the article, its section or its Part, the flow charts first), **Cases** and **MCQs**. A section with nothing in it is left out. On a wider screen the sections are tabs above the page. In a narrow column the tabs close up, and then drop their icons, so all five stay in view. On a phone, 620px wide and under, they sit in a bar at the foot of the screen, where the thumb is. The choice is remembered from one article to the next, and the address names it, so `#/article/21/judgments` opens on the judgments. An old link to the Exam tab, such as `#/article/21/exams`, opens Explain at For the exam. The Preamble and every Schedule use the same tabs |
-| **Part page** | The whole Part, on one page, in the order the Constitution prints it. The left panel is the Part tree: its Chapters, and the group headings inside them. Clicking a section scrolls to it, and scrolling marks where you are. `#/part/V/13` opens at the Union Judiciary |
-| **The Part tree** | The left panel on a Part page and on every article in it: Part, then Chapter, then group heading, then article. The Chapter you are in is open, the others are folded, and the article you are reading is marked. On a phone it folds into a Contents button. Previous and next run through the **whole document**, not one Part. The only two ends are the Preamble, before article 1, and the Schedules, after article 395 |
-| **Cross-references** | Every article and amendment named on a page opens **in place**. Reading article 368 and hit the 24th Amendment? Click it and what it did, when it commenced and which articles it touched unfold under the line, without losing your place |
-| **Schedules** | All twelve, including the three legislative Lists and the 22 languages |
-| **Amendments** | All 106 at `#/amendments`, in six periods with what was happening in each, oldest or newest first. Each one opens to what it changed in plain words, the changes one by one for the largest, the background, what the courts did with it and links to those judgments, when it came into force and the articles and Schedules it touched. Above the list: how an amendment is passed under Article 368, a search box (a number, a year, `article 21` for that article alone, or any word), and filters for the 25 the exam returns to most, the 6 the courts struck down in whole or part, and ten topics, which become a drop-down on a phone. `#/amendments/42` opens the page with the 42nd unfolded. The text is in `data/amendmeta.js`, written to the same plain-English rules as the model paragraphs |
-| **Landmark judgments** | 125 judgments, each on its own page at `#/judgment/<id>`, with previous and next. A judgment rewritten in full reads as: what it decided in one line, the constitutional question, the facts, what the Court held (the majority, any concurring opinion and any dissent, each in its own box), the key principles and what happened next, with the bench, the date, the citation and a link to the full text. The index is a filterable card grid, and every article's Cases section lists the cards filed under it. A card there opens its judgment in a drawer on the right of the page, with Back, previous and next, so the reader never leaves the article. A click with a modifier key still opens the full page |
-| **What the examiners ask** | 150 articles, the Preamble and eight Schedules at `#/exam`, ranked in three tiers. Four tier cards (Core, Recurs, Worth holding, All) filter the list, and so does whether UPSC Mains asks a provision too, since every one is a Prelims topic. A search box takes an article number or any word. The list reads by priority or by Part. Each row gives the provision's number, heading and one line on what it says, and opens the note in a drawer. A note runs in six parts: what it says, why it is asked, the numbered points a question tests, where the mark is lost, the papers it has been seen in (marked as not yet checked against the papers until a citation exists), and links to practise its MCQs and read its judgments. The same note sits under Exam on every article page. The text is in `data/exam-1.js` to `exam-4.js`, written to the plain-English rules, and the About page says where the notes come from and how many sightings are cited |
-| **MCQ Bank** | 870 statement-based questions in the Civil Services prelims format, on every article in force, the Preamble and all twelve Schedules. Core provisions carry five, Recurs three, Worth holding two and every other article one. The home page carries the bank: its four tiers, and an index of the Preamble, every Part and the Schedules with their article ranges and counts. `#/mcq` is the same index on a page of its own. `#/mcq/1`, `#/mcq/2`, `#/mcq/3` and `#/mcq/0` hold every question of one tier, under the heading of each Part in turn. `#/mcq/part/III` holds one Part's questions in print order, each article tagged with its tier, with a row of its articles to jump to and the Parts on either side. Each article's MCQs section holds its own set. Clicking an option locks the question and shows the answer, with every statement marked correct or incorrect and the reason. A progress bar stays in view, and **Start again** clears a set. The Important Articles menu links to all of them |
-| **Mind maps & flows** | 46 hand-drawn diagrams. A short Part gets one map for the whole of it — Part III's six categories of rights fit on a page. A long one gets a map per section instead, drawn where that section is read, and carried into every article of that section. Every Part also gets one generated from the data |
-| **About & sources** | What the site is and is not, where the text came from, what has been verified, the licence, and how to report an error |
+| **Bare text** | Every article as printed, footnote markers intact, with the articles and Schedules it refers to and the amendments that changed it |
+| **Explain** | What it says, how it works and worth knowing. For the 159 provisions on the priority list, the exam note follows under **For the exam** |
+| **Landmark judgments** | 125, each on its own page: the story before the case, the constitutional question, the facts, the majority and every separate opinion, the key principles and what followed |
+| **Amendments** | All 106, in six periods, each with what it changed in plain words, its background, what the courts did with it and when it came into force |
+| **What the examiners ask** | The 159 provisions ranked in three tiers, with why each is asked, the points a question tests and where the mark is lost |
+| **MCQ Bank** | 870 statement-based questions in the Civil Services prelims format, each statement marked true or false with the reason |
+| **Mind maps & flows** | Hand-drawn diagrams for the processes that are hard to hold in your head, one per Part or per section, plus one generated for every Part |
+| **Search** | Article numbers and headings, the bare text, the Schedules, the explanations, the judgments and the exam notes. `/` focuses it |
 
-The list of all 26 Parts is a drawer behind the **☰** button on every page. The Part tree folds away with the chevron in its header, and the choice is remembered.
+An article page sorts its readings into tabs — Text, Explain, Diagrams, Cases, MCQs — and leaves
+out a tab with nothing in it. The Part tree runs down the left. Every article and amendment named
+on a page opens **in place**, so a look-up does not cost you your place.
 
-Search (`/` to focus) covers article numbers and headings, the bare text, the Schedules, the
-plain-language explanations, the landmark judgments and the exam notes. Typing `21` jumps to
-Article 21; `habeas corpus` finds Articles 32 and 226; `kesavananda` finds Article 368; `kihoto`
-finds the Tenth Schedule; `creamy layer` finds Articles 15, 16 and 340.
+Addresses are stable: `#/article/21/judgments`, `#/part/V/13`, `#/amendments/42`,
+`#/judgment/<id>`, `#/exam`, `#/mcq/part/III`.
 
 ## What is verified, and what is written here
 
-Two kinds of writing sit on the site and they are not worth the same. They are told apart
-by how they are set, rather than by a badge on every heading.
+Two kinds of writing sit on the site and they are not worth the same. They are told apart by how
+they are set, rather than by a badge on every heading.
 
 | How it is set | What it is |
 |---|---|
 | Serif, unboxed, footnote markers intact | Reproduced from the official PDF and machine-checked against it — the bare text of every article, the Schedules, and the amendment footnotes |
-| Anything in a panel | Commentary written for this site — the plain-language readings, the catch, judgment summaries, exam notes and diagrams |
+| Anything in a panel | Commentary written for this site — the plain-language readings, judgment summaries, exam notes and diagrams |
 
-The distinction matters and the site states it rather than blurring it. The full
-account, including what the audit does **not** establish, is on the About page and in
-`build/FACTCHECK.md`.
+**The audit.** Every judgment summary, exam entry and concept explanation has been read line by
+line, with eight mechanical cross-checks run against the verified text: article references,
+amendment years, verbatim quotations, stated counts against the lists that follow, quantities
+against the article text, case years against the judgments dataset, and a sweep for claims
+repeated across entries that had diverged. A fourth phase audited the extraction itself, after a
+reader's screenshot showed the 106th Amendment dated to 1991. A parser fault repeats silently
+across hundreds of entries where a prose fault sits in one place. **55 corrections** were made in
+all, and `build/FACTCHECK.md` records each one with the source that settled it, including what
+the audit does **not** establish.
 
-**The audit.** Every judgment summary, exam entry and concept explanation has been read
-line by line, with eight mechanical cross-checks run against the verified text
-— article references, amendment years, verbatim quotations, stated counts against the
-lists that follow, quantities against the article text, case years against the judgments
-dataset, and a sweep for claims repeated across entries that had diverged. A fourth
-phase audited the extraction itself after a reader's screenshot showed the 106th
-Amendment dated to 1991 — a parser fault repeats silently across hundreds of entries
-where a prose fault sits in one place. **55 corrections** were made in all.
-`build/FACTCHECK.md` records each one with the source that settled it.
+Where the source is genuinely ambiguous the site says so rather than choosing. An amendment whose
+provisions commenced on different dates reads *"Commenced in stages"* and asserts no single date.
+One whose date has not been notified reads *"Passed, not yet in force"*.
 
-Where the source is genuinely ambiguous the site now says so rather than choosing. An
-amendment whose provisions commenced on different dates reads *"Commenced in stages"* and
-asserts no single date; one whose date has not been notified reads *"Passed, not yet in
-force"*.
+## The source
+
+**The Constitution of India, as on 1st May 2024**, published by the Legislative Department,
+Ministry of Law and Justice, Government of India — updated to the Constitution (One Hundred and
+Sixth Amendment) Act, 2023.
+
+<https://cdnbbsr.s3waas.gov.in/s380537a945c7aaa788ccfcdf1b99b5d8f/uploads/2024/07/20240716890312078.pdf>
+
+The 106th is still the most recent amendment actually enacted, so this is the Constitution as it
+currently stands. Later Amendment Bills have not become law.
+
+A superscript number in the text is the official footnote recording which Amendment Act inserted
+or substituted that passage. `***` marks words omitted by an amendment, again as the official
+text prints them.
 
 ## Licensing
 
@@ -97,28 +78,12 @@ Four kinds of material, four sets of terms — set out in full in `LICENSE`.
 | The code and build scripts | MIT |
 | The home page photograph | CC BY-SA 4.0. Taken by Kuldeep Maruvada, from Wikimedia Commons, cropped and resized |
 
-This project is not produced by, endorsed by or affiliated with the UPSC, any State
-Public Service Commission, the Legislative Department, or any government body.
-
-## The source
-
-**The Constitution of India, as on 1st May 2024**, published by the Legislative Department,
-Ministry of Law and Justice, Government of India — updated to the Constitution (One Hundred
-and Sixth Amendment) Act, 2023.
-
-<https://cdnbbsr.s3waas.gov.in/s380537a945c7aaa788ccfcdf1b99b5d8f/uploads/2024/07/20240716890312078.pdf>
-
-The 106th is still the most recent amendment actually enacted, so this is the Constitution as
-it currently stands. Later Amendment Bills have not become law.
-
-The bare text is reproduced exactly as printed, footnote markers and all. A superscript number
-in the text is the official footnote recording which Amendment Act inserted or substituted that
-passage — hover it to read the note, or scroll to the *Amendment history* section. `***` marks
-words omitted by an amendment, again as the official text prints them.
+This project is not produced by, endorsed by or affiliated with the UPSC, any State Public Service
+Commission, the Legislative Department, or any government body.
 
 ## Rebuilding the data
 
-Everything under `site/data/` except the explanation files is generated from the PDF:
+Everything under `site/data/` except the hand-written files is generated from the PDF:
 
 ```bash
 cd constitution/build && python parse_toc.py && python parse_body.py && python build_data.py && python parse_schedules.py && python build_amendments.py && python export_site.py
@@ -134,21 +99,25 @@ cd constitution/build && python parse_toc.py && python parse_body.py && python b
 | `export_site.py` | Writes the `window.X = {...}` data files and builds the cross-reference index |
 | `verify.py` | Checks the result against the raw PDF text |
 
-`python verify.py` currently reports:
+`python verify.py` passes: 99.0% of body characters accounted for, 60 of 60 sampled articles
+matching the source verbatim, no article carrying the next one's heading. The 1.0% not accounted
+for is Part and Chapter banners and the group sub-headings, which are held in the structure
+rather than in any article's text.
 
-```
-coverage: 405981 of 409946 body characters accounted for (99.0%)
-fidelity: 60 of 60 sampled articles matched the source verbatim
-bleed:    0 articles contain the next article's heading
-RESULT:   PASS
-```
+## House style
 
-The 1.0% not accounted for is Part and Chapter banners and the group sub-headings, which are held
-in the structure rather than in any article's text.
+Every word written for this site follows the same rules. No sentence over 35 words. No semicolons
+or dashes. No sentence opening with a bare This, That, It, These, Those or Such. Say the thing
+plainly before qualifying it, give concrete examples, signpost a contrast with "But", and end each
+section on its central point.
+
+**Each thing is said once.** Where two sections could carry the same fact, it belongs to one of
+them, and the others leave it out.
 
 ## Editing the explanations
 
-`site/data/explain-1.js` … `explain-8.js` hold one entry per article, split by Part:
+`site/data/explain-1.js` … `explain-8.js`, one entry per article, split by Part. Part-level
+entries are keyed `partIII`, schedule-level ones `schVII`.
 
 ```js
 "21": {
@@ -158,24 +127,16 @@ in the structure rather than in any article's text.
 },
 ```
 
-Part-level entries are keyed `partIII`, schedule-level ones `schVII`.
-
-The three fields render as What it says, How it works and Worth knowing.
-
-**Each thing is said once.** `simple` gives the plain meaning. `catch` tells the story: the
-exception, the amendment or the line of cases that changes how the article works. It is told
-here and nowhere else. `note` holds only what neither of the others nor the exam note carries,
-and is left out when nothing is left. Most of the 159 priority provisions have no `note`.
-
-**House style.** Short declarative sentences, none over 35 words, one idea each. No semicolons
-or dashes, and no sentence that opens with a bare This, That, It, These, Those or Such. Say the
-thing plainly before qualifying it, signpost a contrast with "But", and end each section on its
-central point. A `\n\n` inside the string becomes a paragraph on the page.
+The three fields render as What it says, How it works and Worth knowing. `simple` gives the plain
+meaning. `catch` tells the story: the exception, the amendment or the line of cases that changes
+how the article works, told here and nowhere else. `note` holds only what neither of the others
+nor the exam note carries, and is left out when nothing is left. Most of the 159 priority
+provisions have no `note`. A `\n\n` inside a string becomes a paragraph on the page.
 
 ## Editing the landmark judgments
 
-`site/data/cases-1.js` … `cases-4.js`, keyed the same way — by article number, or `preamble`,
-or `schX`. A key holds an array, newest last:
+`site/data/cases-1.js` … `cases-4.js` hold the short card for each case, keyed by article number,
+or `preamble`, or `schX`. A key holds an array, newest last:
 
 ```js
 "21": [
@@ -190,68 +151,29 @@ or `schX`. A key holds an array, newest last:
 ]
 ```
 
-A case may appear under more than one article — Kesavananda sits under the Preamble and under
-Article 368, Bommai under the Preamble, Article 75 and Article 356. The counts on the overview
-page and in the Judgments menu de-duplicate by case name, so adding a cross-listing does not inflate
-them. Any `Article 21`-style reference inside these fields is auto-linked, and the whole text
-is included in search.
+A case may appear under more than one article. Kesavananda sits under the Preamble and under
+Article 368, Bommai under the Preamble, Article 75 and Article 356. The counts de-duplicate by
+case name, so a cross-listing does not inflate them.
 
-The full page for each of the 125 landmark judgments comes from `site/data/judgments-1.js` …
-`judgments-17.js`; the fields are listed at the top of `judgments-1.js`. Every page opens with
+The full page for each of the 125 judgments comes from `site/data/judgments-1.js` …
+`judgments-17.js`, and the fields are listed at the top of `judgments-1.js`. Every page opens with
 **The Story Before the Case** (the `background` field), so that a reader who does not know the
 earlier cases or amendments can follow it. Each article, amendment, writ or legal term is
-explained in plain words where it first appears. New text follows the same rules as the rest
-of the site: no sentence over 35 words, no semicolons or dashes, and no sentence opening with a
-bare This, That or It.
+explained in plain words where it first appears.
 
-**Held and Key Principles do different jobs.** What the Court Held says what was decided in the
-case. Key Principles says how the rule works beyond it: how far it reaches, what it is for, where
-it stops, how courts apply it, and the name of the doctrine if it has one. A principle that only
-restates the summary or a held point is left out, so many judgments have just one or two. The
-last principle always starts with "So" and states the case's central point.
-
-**Subsequent Developments (`legacy`) lists only what happened after the judgment**, in date
-order: later cases, amendments, laws and events, each with its year. A current-status fact may
-stay when nothing else on the page says it, such as an amendment never brought into force.
-General remarks such as "a leading authority" and anything that repeats another section are left
-out. A judgment with nothing left has an empty list, and the section does not appear.
-
-## Citing a question paper
-
-Every sighting under **Seen in the papers** is one of two shapes:
-
-```js
-"UPSC Pre 2021 — birth-based citizenship"                    // uncited
-{ s: "UPSC Pre 2021 — birth-based citizenship",              // cited
-  p: "CSP-2021-GS1", q: "42" }
-```
-
-`p` is a key in `site/data/papers.js`, which holds the paper's name and its URL once
-rather than on every sighting that mentions it. The heading of each block prints the
-count — *0 of 6 cited* — and the note at `#/exam` prints the total, both counted from the
-data as the page is drawn, so neither can drift from what is actually there.
-
-**The registry ships empty, and that is deliberate.** Every sighting in the dataset was
-written from recollection of the papers rather than transcribed from them. A citation
-generated from that same recollection would be worth nothing: it would make an unverified
-claim look verified, which is worse than leaving it plainly unverified. A citation belongs
-in the file once somebody has opened the actual paper and read the question. Papers are at
-<https://upsc.gov.in/examinations/previous-question-papers>.
-
-```bash
-python constitution/build/check_citations.py
-```
-
-reports coverage and **fails** on a citation nobody could follow — a paper key with no
-entry in the registry, an entry with no usable URL, or a cited sighting with no text. It
-does not check that a citation is *correct*; nothing automated can. A paper key that has
-no URL yet still renders, as plain text rather than a dead link.
+**Held, Key Principles and Subsequent Developments do different jobs.** What the Court Held says
+what was decided in the case. Key Principles says how the rule works beyond it: how far it
+reaches, what it is for, where it stops, how courts apply it, and the name of the doctrine if it
+has one. The last principle starts with "So" and states the case's central point. Subsequent
+Developments (`legacy`) lists only what happened afterwards, in date order, each item with its
+year. Anything that would restate another section is left out, so many judgments have one or two
+principles and some have no developments at all. An empty `legacy` hides that section.
 
 ## Editing what the examiners ask
 
-`site/data/exam-1.js` … `exam-4.js`, keyed by article number, or `preamble`, or `schX`. One
-entry per key. It renders in the Explain tab under **For the exam**, after the explanation.
-Clicking a row at `#/exam` opens the same reading as a panel, explanation first:
+`site/data/exam-1.js` … `exam-4.js`, keyed by article number, or `preamble`, or `schX`. One entry
+per key. It renders in the Explain tab under **For the exam**, and clicking a row at `#/exam`
+opens the same reading as a panel.
 
 ```js
 "356": {
@@ -268,32 +190,49 @@ otherwise\" mean the centre does not need a Governor's report at all." },
 },
 ```
 
-**House style for `concepts`.** `t` is the point, three to seven words. `d` gives the testable
-fact in one or two short sentences. The story behind it belongs in the explanation's `catch`,
-so a point does not retell it, and a point that only repeats What it says is dropped. `why`
-gives the exam angle, not the story. The same writing rules apply as for the explanations.
+`tier`, `why` and `concepts` are required, and adding a key is all it takes: the row at `#/exam`
+and the block on that article follow from the data. In a concept, `t` is the point in three to seven words
+and `d` gives the testable fact in one or two short sentences. The story behind it belongs in the
+explanation's `catch`, and a point that only repeats What it says is dropped. `why` gives the exam
+angle, not the story.
 
-`\n\n` inside `why` or `trap` becomes a paragraph break. `*stress*` marks the single word a
-question turns on — “only”, “or otherwise”, “total membership” — and renders as coloured
-bold, not italics. Any `Article 21`-style reference is auto-linked, and every field is
-included in search.
-
-`tier`, `why` and `concepts` are the required fields. Adding a key adds a row to `#/exam` and a
-block to that article; nothing else needs touching. A concept written as a plain string still
-renders, as the point with no explanation after it.
+`*stress*` marks the single word a question turns on — "only", "or otherwise", "total membership"
+— and renders as coloured bold. Any `Article 21`-style reference is auto-linked, and every field
+is included in search.
 
 **Where the ranking comes from.** Published previous-year-paper compilations for the UPSC Civil
 Services Prelims (1995–2025) and Mains General Studies Paper II (2013–2024), UPPSC / UPPCS Mains
 (2015–2025), and the polity sections of other State PSC papers. The commissions do not tag their
-own questions by article, so the mapping from a question to an article is editorial — a `seen`
-line records that the year's paper carried a question on that subject, not a numbered question.
+own questions by article, so the mapping from a question to an article is editorial. A `seen` line
+records that the year's paper carried a question on that subject, not a numbered question.
+
+### Citing a question paper
+
+Every sighting under **Seen in the papers** is one of two shapes:
+
+```js
+"UPSC Pre 2021 — birth-based citizenship"                    // uncited
+{ s: "UPSC Pre 2021 — birth-based citizenship",              // cited
+  p: "CSP-2021-GS1", q: "42" }
+```
+
+`p` is a key in `site/data/papers.js`, which holds each paper's name and URL once rather than on
+every sighting. The page prints the count of cited sightings, counted from the data as it is
+drawn, so it cannot drift from what is there.
+
+**The registry ships empty, and that is deliberate.** Every sighting was written from recollection
+of the papers rather than transcribed from them. A citation generated from that same recollection
+would be worth nothing, because it would make an unverified claim look verified. A citation
+belongs in the file once somebody has opened the actual paper and read the question. Papers are at
+<https://upsc.gov.in/examinations/previous-question-papers>.
+`python constitution/build/check_citations.py` reports coverage and **fails** on a citation nobody
+could follow. It cannot check that a citation is correct, and nothing automated can.
 
 ## Editing the MCQs
 
-`site/data/mcq-1.js` … `mcq-15.js`, split by Part and keyed the same way as the exam notes: by
-article number, or `preamble`, or `schX`. A key holds an array of questions. A question stores
-only its statements, each marked true or false with the reason. `app.js` builds the options
-and the answer from those marks, so an answer key can never disagree with its explanation.
+`site/data/mcq-1.js` … `mcq-15.js`, split by Part and keyed like the exam notes. A question stores
+only its statements, each marked true or false with the reason. `app.js` builds the options and
+the answer from those marks, so an answer key can never disagree with its explanation.
 
 ```js
 "356": [
@@ -316,29 +255,26 @@ and the answer from those marks, so an answer key can never disagree with its ex
 
 `note` is optional and prints under the explanation. `a` replaces the closing line for a list of
 items rather than statements, in the form the papers use: *Consider the following: … How many of
-the above are grounds in Article 19(2)?* The explanation then marks each item rather than each
-statement. The statements of `w`, `n` and `p`
-questions are shown in a fixed shuffled order, so the correct option does not sit in the same
-place every time. Statement-I and Statement-II keep their order.
+the above are grounds in Article 19(2)?*
 
 **House style.** The stem names the subject in words, not only an article number: *Consider the
 following statements about a sitting of the Rajya Sabha at which a resolution to remove the
 Vice-President is under consideration*. Every statement stands on its own and names its own
-subject. A statement never leans on another with "such", "it" or "that power", because the
-statements are shown in a shuffled order. Each statement is one fact that a reader who knows the
-article can mark true or false. A false statement is false for one plain reason, and the reason says what is
-actually the case. No double negatives, and no statement that turns on a single tricky word.
-The number of questions on a key follows its tier in the exam notes: five for Core, three for
-Recurs, two for Worth holding and one for any other article in force.
+subject, because `w`, `n` and `p` statements are shown in a fixed shuffled order. A statement
+never leans on another with "such", "it" or "that power". Each one is a single fact that a reader
+who knows the article can mark true or false, and a false statement is false for one plain reason
+that says what is actually the case. No double negatives, and no statement that turns on a single
+tricky word. The number of questions on a key follows its tier: five for Core, three for Recurs,
+two for Worth holding and one for any other article in force.
 
 ## Editing the diagrams
 
-`site/data/maps.js`, keyed by article number (`"368"`), Part (`partIII`), Schedule (`schX`)
-or `preamble`. A key may hold one diagram or an array of them.
+`site/data/maps.js`, keyed by article number (`"368"`), Part (`partIII`), Schedule (`schX`) or
+`preamble`. A key may hold one diagram or an array of them.
 
-`site/data/maps-part.js` holds the maps drawn for **one section** of a Part rather than the
-whole of it. The key is `part` + the Part numeral + `.` + the chapter numeral + `:` + the
-section's name, exactly as `partSections()` in `app.js` builds it:
+`site/data/maps-part.js` holds the maps drawn for **one section** of a Part rather than the whole
+of it. The key is `part` + the Part numeral + `.` + the chapter numeral + `:` + the section's
+name, exactly as `partSections()` in `app.js` builds it:
 
 ```js
 'partV.IV:The Union Judiciary': { ... }      // Part V, chapter IV
@@ -346,9 +282,8 @@ section's name, exactly as `partSections()` in `app.js` builds it:
 'partIII:Right to Equality': { ... }         // no chapter numeral - Part III has no chapters
 ```
 
-The chapter numeral is in the key because Part VI has a section called *General* in chapter
-I and another in chapter III. A whole-Part key (`partIII`, `partXVII`) still works and its
-map is drawn above the panels, which is the right shape when one diagram covers the Part.
+The chapter numeral is in the key because Part VI has a section called *General* in chapter I and
+another in chapter III. A whole-Part key still works, and its map is drawn above the panels.
 
 ```js
 // vertical flow chart; jumps are drawn down the right margin
@@ -360,22 +295,10 @@ map is drawn above the panels, which is the right shape when one diagram covers 
 { type: 'mind', title, caption, root: { label, href, children: [...] } }
 ```
 
-Both are laid out and drawn as inline SVG by `app.js` — no libraries, and they inherit the
-light/dark theme automatically.
-
-A mind map centres its root box in the full height of the tree, which on a tall map leaves a
-column of nothing beside the first few hundred pixels. Where the heading immediately above
-already names the diagram — a section panel, the strip on an article page — the root is
-dropped and the branches start at the top left. `diagrams(spec, compact)` is the switch; a
-Part-level or article-level map keeps its root, because there the root is the only thing
-naming it.
-
-Labels are never truncated. Box widths are measured from the real text metrics of the longest
-label in each column (via a canvas `measureText`), so a column of long article headings gets
-the width it needs and a column of short ones stays narrow; anything that still does not fit
-on one line simply takes more lines, and the tidy-tree pass gives every subtree the height it
-asks for. A map wider than the reading column scrolls inside its own box rather than pushing
-the page sideways.
+Both are laid out and drawn as inline SVG by `app.js`, with no libraries, and they inherit the
+light and dark themes. Labels are never truncated: box widths are measured from the real text
+metrics of the longest label in each column, and anything that still does not fit takes more
+lines.
 
 ## Files
 
@@ -383,13 +306,16 @@ the page sideways.
 constitution/
   source/     the downloaded PDFs and the extracted plain text
   build/      the parsers, the intermediate JSON, and verify.py
-  site/       the website — open index.html
+  site/       the website
     data/     generated data + hand-written explanations, judgments, diagrams, exam
               notes and MCQs; papers.js is the registry a citation points into
 ```
 
+Every data file ships as a `.js` file that assigns to `window`, so the site runs from the file
+system with no server and no build step.
+
 `site/okay-ui.css` is the look this site shares with okayupsc.com and the Thinkers site: the
 colours in light and dark, the two typefaces, the corners and shadows, and the navy OkayUPSC bar
-at the top of the page. `site/fonts/` holds the Roboto Slab files it loads. `site/styles.css` maps this site's own colour names onto it. The master
-copy of both lives in the okayupsc repo, and `node tools/sync-ui.js` there copies them here, so
-edit them there and not in this repo.
+at the top of the page. `site/fonts/` holds the Roboto Slab files it loads, and `site/styles.css`
+maps this site's own colour names onto it. The master copy lives in the okayupsc repo, where
+`node tools/sync-ui.js` copies it here, so edit it there and not in this repo.
